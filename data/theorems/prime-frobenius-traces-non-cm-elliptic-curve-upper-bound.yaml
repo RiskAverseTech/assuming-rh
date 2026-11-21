@@ -1,0 +1,48 @@
+id: prime-frobenius-traces-non-cm-elliptic-curve-upper-bound
+title: Upper bound with explicit constant for primes p where |a_p(E)| is prime, E a non-CM elliptic curve
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication and let N_E be its conductor. The number of primes
+  p <= x not dividing N_E for which |a_p(E)| is a prime is at most
+  (6 + o(1)) C(E) x / (log x)^2, where C(E) is the explicit constant in
+  the conjecture of Cojocaru and Jones that this count is asymptotic to
+  C(E) x / (log x)^2.
+statement_formal: |
+  \#\{p \le x : p \nmid N_E,\ |a_p(E)| \text{ is prime}\} \le (6+o(1))\, C(E)\, \frac{x}{(\log x)^2}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta functions
+  of the division fields Q(E[m]) and of certain subfields J_{E,m} of them,
+  used through an effective Chebotarev density theorem; these fields are
+  not abelian over Q. The paper states the theorem more generally: if
+  these zeta functions have no zeros with real part above theta, for some
+  1/2 <= theta < 1, the constant 6 becomes 3/(1 - theta). It sharpens the
+  earlier bound O_E(x / (log x)^2) with unspecified constant from Lane's
+  thesis. Under the same hypothesis the paper also proves lower bounds of
+  the same order for the number of primes where |a_p(E)| has at most 4
+  distinct prime factors, or at most 5 prime factors counted with
+  multiplicity (Theorem 3).
+sources:
+  - authors: A. C. Cojocaru, M. Meyer
+    title: Non-CM elliptic curves with infinitely many almost prime Frobenius traces
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2207.08322
+    hypothesis_location: Theorem 1 (case theta = 1/2, equation (14))
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The theorem statement says the hypothesis is 'for Dedekind zeta functions' without listing the fields; the fields Q(E[m]) and J_{E,m} are taken from the proofs (Sections 4 onward).
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, frobenius-traces, sieve-methods, chebotarev]
+added: 2026-11-21

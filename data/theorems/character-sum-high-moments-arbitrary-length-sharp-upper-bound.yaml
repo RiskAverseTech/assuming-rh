@@ -1,0 +1,46 @@
+id: character-sum-high-moments-arbitrary-length-sharp-upper-bound
+title: Sharp upper bound for high moments of Dirichlet character sums of arbitrary length
+field: analytic-number-theory
+statement_plain: >
+  Fix a real number k > 2 and let q be a large integer. Let S_k(q, y) be
+  the sum, over primitive Dirichlet characters chi mod q, of
+  |sum_{n <= y} chi(n)|^(2k). If 2 <= y <= q^(1/2) then
+  S_k(q, y) << phi(q) y^k (log y)^((k-1)^2), and if q^(1/2) < y <= q then
+  S_k(q, y) << phi(q) y^k (log(2q/y))^((k-1)^2). The implied constants
+  depend only on k.
+statement_formal: |
+  \sum_{\chi \in X_q^*}\Bigl|\sum_{n\le y}\chi(n)\Bigr|^{2k} \ll_k \varphi(q)\,y^{k}(\log y)^{(k-1)^2}\ \ (2\le y\le q^{1/2}), \qquad \ll_k \varphi(q)\,y^{k}\Bigl(\log\frac{2q}{y}\Bigr)^{(k-1)^2}\ \ (q^{1/2}<y\le q)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for L(s, chi) for every
+  Dirichlet character chi mod q. The same paper proves, under the same
+  hypothesis, a sharp upper bound for shifted moments of Dirichlet
+  L-functions at the central line (Theorem 1) and the bounds
+  phi(q) q^(k/2) (log q)^((k-1)^2) and phi(q) q^(3k/2) (log q)^((k-1)^2)
+  for the 2k-th moments of theta functions theta(1, chi) over even and odd
+  primitive characters, k > 2 (Theorem 2); these remove a factor
+  (log q)^eps from results of Munsch. The dataset entry
+  quadratic-character-sum-moments-sharp-upper-bound concerns the family of
+  quadratic characters.
+sources:
+  - authors: B. Szabó
+    title: High moments of theta functions and character sums
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.14561
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper has three conditional theorems; Theorem 3 was chosen as the headline because it is the most self-contained. Theorems 1 and 2 are only summarized in the status note.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, moments, dirichlet-l-functions]
+added: 2026-11-21

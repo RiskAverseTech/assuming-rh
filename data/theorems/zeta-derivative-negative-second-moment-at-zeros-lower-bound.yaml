@@ -1,0 +1,40 @@
+id: zeta-derivative-negative-second-moment-at-zeros-lower-bound
+title: Lower bound for the sum of 1/|zeta'(rho)|^2 over zeros, half of Gonek's conjectured value
+field: analytic-number-theory
+statement_plain: >
+  For any fixed eps > 0 and all sufficiently large T, the sum of
+  1/|zeta'(rho)|^2 over the non-trivial zeros rho = 1/2 + i gamma of the
+  Riemann zeta function with 0 < gamma <= T is at least
+  (3/(2 pi^3) - eps) T.
+statement_formal: |
+  \sum_{0<\gamma\le T}\frac{1}{|\zeta'(\rho)|^{2}} \ge \left(\frac{3}{2\pi^{3}}-\varepsilon\right)T
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is that all zeros of the Riemann zeta function are
+  simple; without it the terms 1/zeta'(rho) are not defined. It is not a
+  Riemann Hypothesis and is not covered. Gonek conjectured that the sum is
+  asymptotic to (3/pi^3) T, so this bound is half the conjectured size.
+  The dataset entry
+  negative-discrete-second-moment-dirichlet-l-functions-lower-bound is the
+  analog for Dirichlet L-functions.
+sources:
+  - authors: M. B. Milinovich, N. Ng
+    title: A note on a conjecture of Gonek
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1106.1160
+    hypothesis_location: Theorem (Section 1, equation (1.3))
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, zeta-derivative, discrete-moments, simple-zeros]
+added: 2026-11-21

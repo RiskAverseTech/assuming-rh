@@ -1,0 +1,44 @@
+id: iterated-argument-sn-second-moment-second-order-term
+title: Second moment of the iterated argument function S_n(t) with second-order term
+field: analytic-number-theory
+statement_plain: >
+  Let S(t) = (1/pi) arg zeta(1/2 + it) and let S_n be its n-th iterated
+  antiderivative (with the standard constants of integration), n >= 1.
+  Then int_0^T |S_n(t)|^2 dt = (C_n / (2 pi^2)) T
+  + (T / (2 pi^2 (log T)^(2n))) [ int_1^infinity F(alpha) / alpha^(2n+2)
+  d alpha - 1/(2n) ] + O(T sqrt(log log T) / (log T)^(2n + 1/2)), where
+  C_n is the sum over m >= 2 of Lambda(m)^2 / (m (log m)^(2n+2)) and
+  F(alpha) = F(alpha, T) is Montgomery's pair correlation function.
+statement_formal: |
+  \int_0^T |S_n(t)|^2\,dt = \frac{C_n}{2\pi^2}T + \frac{T}{2\pi^2(\log T)^{2n}}\left[\int_1^\infty\frac{F(\alpha)}{\alpha^{2n+2}}\,d\alpha - \frac{1}{2n}\right] + O\left(\frac{T\sqrt{\log\log T}}{(\log T)^{2n+1/2}}\right), \qquad C_n = \sum_{m=2}^{\infty}\frac{\Lambda(m)^2}{m(\log m)^{2n+2}}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This extends to n >= 1 a formula of Goldston for the second moment of
+  S(t), and refines the error terms in the asymptotic formulas of Selberg
+  (n = 1) and Fujii (n >= 2). The paper notes that the bracketed integral
+  lies between 2/3^(2n+3) - eps and (8/3) zeta(2n + 2) + eps for large T,
+  so the second-order term has size T / (log T)^(2n). Corollary 2 of the
+  paper adds the Strong Pair Correlation Conjecture to evaluate the
+  integral; that corollary is not part of this entry.
+sources:
+  - authors: A. Chirre, E. Quesada-Herrera
+    title: The second moment of $S_n(t)$ on the Riemann hypothesis
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.08503
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The second-order term still contains the pair correlation function F(alpha, T), which is not evaluated; the formula is exact only in that sense.
+lean:
+  proved: false
+  path: null
+tags: [argument-of-zeta, second-moment, pair-correlation]
+added: 2026-11-21

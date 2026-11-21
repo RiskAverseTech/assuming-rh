@@ -1,0 +1,44 @@
+id: large-values-derivatives-quadratic-dirichlet-l-functions-central-point
+title: Large central values of derivatives of quadratic Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer l >= 0. As X grows, the maximum of
+  (-1)^l L^(l)(1/2, chi_d), the l-th derivative at the central point, over
+  square-free d = 1 mod 4 with X < d <= 2X is at least
+  exp((1 + o(1)) sqrt(log X logloglog X / loglog X)).
+statement_formal: |
+  \max_{\substack{X<d\le 2X \\ d \text{ square-free},\ d\equiv 1 \,(\mathrm{mod}\, 4)}} (-1)^{\ell} L^{(\ell)}\left(\tfrac12,\chi_d\right) \ge \exp\left((1+o(1))\sqrt{\frac{\log X\,\log\log\log X}{\log\log X}}\right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  For l = 0 this sharpens the dataset entry
+  large-values-quadratic-dirichlet-l-functions-central-point (Darbar and
+  Maiti), raising the constant in the exponent from 1/2 to 1; the paper
+  attributes the constant 1 for l = 0 to an earlier preprint and presents
+  its own contribution as the same scale for every fixed derivative order.
+  It is a corollary of a comparison with GCD sums (Theorem 1). The paper
+  says the hypothesis enters through an estimate for sums of chi_d(n) over
+  discriminants d (Lemma 1), which involves real Dirichlet characters of
+  conductor dividing 8 n_0. Further theorems of the paper treat the range
+  1/2 < sigma <= 1.
+sources:
+  - authors: Z. Dong, R. Wang, W. Wang, H. Zhang, S. Zhao
+    title: Large values of derivatives of quadratic Dirichlet $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.24958
+    hypothesis_location: Corollary 1 (from Theorem 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes GRH without a formal definition. The reading that only Dirichlet L-functions of real characters are needed comes from the introduction and Lemma 1; the rest of the proof was not checked line by line for other uses.
+lean:
+  proved: false
+  path: null
+tags: [l-function-values, quadratic-characters, resonance-method, derivatives]
+added: 2026-11-21

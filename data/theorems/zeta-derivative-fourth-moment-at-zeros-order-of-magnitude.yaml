@@ -1,0 +1,42 @@
+id: zeta-derivative-fourth-moment-at-zeros-order-of-magnitude
+title: Fourth moment of zeta'(rho) over the zeros has order T (log T)^9, with explicit constants
+field: analytic-number-theory
+statement_plain: >
+  Let J_2(T) be the sum of |zeta'(rho)|^4 over the non-trivial zeros rho of
+  the Riemann zeta function with imaginary part in (0, T], and let
+  L = log(T / 2 pi). Then
+  (c_1 / pi^3) T L^9 (1 + O(log L / L)) <= J_2(T)
+  <= (c_2 / pi^3) T L^9 (1 + O(log L / L)), where
+  c_1 = (sqrt(a) - sqrt(b))^2 = 0.0000687... and
+  c_2 = (sqrt(a) + sqrt(b))^2 = 0.0051561... with a = 61/60480 and
+  b = 97/60480.
+statement_formal: |
+  \frac{c_1}{\pi^3}TL^9\left(1+O\left(\frac{\log L}{L}\right)\right) \le \sum_{0<\gamma\le T}|\zeta'(\rho)|^4 \le \frac{c_2}{\pi^3}TL^9\left(1+O\left(\frac{\log L}{L}\right)\right), \qquad c_{1,2} = \left(\sqrt{\tfrac{61}{60480}} \mp \sqrt{\tfrac{97}{60480}}\right)^2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The random matrix conjecture of Hughes, Keating and O'Connell predicts
+  the asymptotic J_2(T) ~ (1/(2880 pi^3)) T L^9, and 1/2880 = 0.0003472...
+  lies between c_1 and c_2. The paper says only Theorem 1 depends on the
+  Riemann Hypothesis. The dataset entry
+  zeta-derivative-moments-at-zeros-upper-bound gives upper bounds for all
+  moments with an extra factor (log T)^eps.
+sources:
+  - authors: N. Ng
+    title: The fourth moment of ζ^{'}(ρ)
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0310382
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, zeta-derivative, discrete-moments]
+added: 2026-11-21
