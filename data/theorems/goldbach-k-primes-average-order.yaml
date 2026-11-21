@@ -1,0 +1,39 @@
+id: goldbach-k-primes-average-order
+title: Average number of representations as a sum of k primes with error X^(k-1) log^3 X
+field: additive-number-theory
+statement_plain: >
+  Let G_k(n) be the number of ways to write n as a sum of k positive
+  integers, each way weighted by the product of the von Mangoldt function at
+  the summands. For k >= 2 and X >= k, the sum of G_k(n) over n <= X equals
+  X^k/k! + H_k(X) + O_k(X^(k-1) (log X)^3), where H_k(X) is the sum over the
+  nontrivial zeros rho of zeta of
+  -k X^(rho + k - 1) / (rho (rho + 1) ... (rho + k - 1)).
+statement_formal: |
+  \sum_{n\le X}G_k(n)=\frac{X^{k}}{k!}-k\sum_{\rho}\frac{X^{\rho+k-1}}{\rho(\rho+1)\cdots(\rho+k-1)}+O_k\!\left(X^{k-1}\log^{3}X\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The case k = 2 is due to Languasco and Zaccagnini. The paper also proves
+  that RH is equivalent to the weaker estimate
+  S_k(X) = X^k/k! + O(X^(k - 1/2 + eps)) for every eps > 0 (Theorem 1.4).
+sources:
+  - authors: T. T. Nguyen
+    title: Goldbach Representations with several primes
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2409.13368
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The proof is by induction on k from the case k = 2, which is a theorem of Languasco and Zaccagnini quoted from the literature."
+    - "The paper also proves (Theorem 1.4) that RH is equivalent to S_k(X) = X^k/k! + O(X^(k - 1/2 + eps)) for every eps > 0. This entry records the sharper conditional asymptotic instead."
+lean:
+  proved: false
+  path: null
+tags: [goldbach, average-order, explicit-formula]
+added: 2026-11-21

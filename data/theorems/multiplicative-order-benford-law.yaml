@@ -1,0 +1,39 @@
+id: multiplicative-order-benford-law
+title: Benford's law for the multiplicative order of a modulo n
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer a with |a| > 1 and let l_a(n) be the multiplicative order of
+  a modulo n. For each fixed nonzero real theta, the sum of l_a(n)^(i theta)
+  over n <= x coprime to a is o(x) as x tends to infinity. Consequently the
+  orders l_a(n) obey Benford's leading digit law, with densities taken
+  relative to the n coprime to a.
+statement_formal: |
+  \sum_{\substack{n\le x\\ \gcd(n,a)=1}}\ell_a(n)^{i\theta}=o(x)\qquad(x\to\infty)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper says that by GRH it means the Riemann Hypothesis for Dedekind
+  zeta functions. The hypothesis enters through a lemma of Li and Pomerance
+  on primes p for which a is an r-th power residue, a Hooley-type argument
+  over Kummer fields, which are not abelian over the rationals. The analogous
+  result for Carmichael's lambda function (Theorem 1.3) is unconditional.
+sources:
+  - authors: P. Pollack
+    title: Two problems on the distribution of Carmichael's lambda function
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.14043
+    hypothesis_location: "Theorem 1.4, via Lemma 6.7"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper states its hypothesis as the Riemann Hypothesis for Dedekind zeta functions without naming the fields. The GRH input is Lemma 6.7, quoted from Li and Pomerance, about primes p = 1 mod r with a^((p-1)/r) = 1 mod p, which is a Kummer field condition; the exact fields were not checked in that reference."
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, benford-law, kummer-fields]
+added: 2026-11-21

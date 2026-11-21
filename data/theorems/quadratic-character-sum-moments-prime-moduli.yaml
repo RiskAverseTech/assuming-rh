@@ -1,0 +1,37 @@
+id: quadratic-character-sum-moments-prime-moduli
+title: Moments of quadratic character sums over prime moduli
+field: analytic-number-theory
+statement_plain: >
+  Let chi^(8p) be the quadratic character given by the Kronecker symbol
+  (8p / .). For real m >= 2, large X and Y and any eps > 0, the sum over odd
+  primes p <= X of (log p) |sum_{n <= Y} chi^(8p)(n)|^(2m) is at most a
+  constant times X Y^m (log X)^(2m^2 - m + 1 + eps).
+statement_formal: |
+  \sum_{\substack{p\le X\\ (p,2)=1}}\log p\,\left|\sum_{n\le Y}\chi^{(8p)}(n)\right|^{2m}\ll X\,Y^{m}(\log X)^{2m^{2}-m+1+\varepsilon}\qquad(m\ge 2)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is the case k = 2 of Theorem 1.3, stated in the paper as (1.6). It is
+  deduced from conditional upper bounds for shifted moments of the quadratic
+  Dirichlet L-functions L(s, chi^(8p)) (Theorem 1.1).
+sources:
+  - authors: Y. Zhao
+    title: Bounds for moments of quadratic Dirichlet character sums of prime moduli
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.19151
+    hypothesis_location: "Theorem 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper writes only GRH. Its lemmas use bounds for quadratic Dirichlet L-functions and a prime sum of chi^(8p)(c) with error X^(1/2+eps), which for square c needs RH for zeta, so RH is listed as well."
+    - "The entry states the special case k = 2 given as (1.6); the general Theorem 1.3 has an exponent R(m, k, eps) defined as a maximum of three expressions."
+lean:
+  proved: false
+  path: null
+tags: [character-sums, quadratic-characters, moments]
+added: 2026-11-21

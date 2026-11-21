@@ -1,0 +1,37 @@
+id: squarefree-variance-short-intervals-rh-equivalence
+title: Near-optimal variance bound for squarefree integers in all short intervals
+field: analytic-number-theory
+statement_plain: >
+  For every eps in (0, 1/100), every 1 <= H <= X^(1 - eps) and every
+  delta > 0, the mean square over x in [X, 2X] of the number of squarefree
+  integers in (x, x + H] minus 6H/pi^2 is at most a constant, depending on
+  eps and delta, times H^(1/2 + delta).
+statement_formal: |
+  \frac{1}{X}\int_{X}^{2X}\left|\sum_{x<m\le x+H}\mu^{2}(m)-\frac{6H}{\pi^{2}}\right|^{2}dx\ll_{\varepsilon,\delta}H^{1/2+\delta}
+  \quad\text{for all } 1\le H\le X^{1-\varepsilon},\ \delta>0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The paper proves both directions
+  (Section 8). Unconditionally it proves an asymptotic for the same variance
+  for H <= X^(6/11 - eps), and for H <= X^(2/3 - eps) under the Lindelof
+  Hypothesis.
+sources:
+  - authors: O. Gorodetsky, K. Matomaki, M. Radziwill, B. Rodgers
+    title: On the variance of squarefree integers in short intervals and arithmetic progressions
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.04060
+    hypothesis_location: "Theorem 3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [squarefree-numbers, short-intervals, rh-equivalent]
+added: 2026-11-21

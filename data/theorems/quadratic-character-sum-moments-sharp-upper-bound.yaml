@@ -1,0 +1,38 @@
+id: quadratic-character-sum-moments-sharp-upper-bound
+title: Sharp upper bound for integer moments of smoothed quadratic character sums
+field: analytic-number-theory
+statement_plain: >
+  Let W be a non-negative smooth function with compact support in the
+  positive reals. For any integer k >= 2 and large X and Y, the sum over
+  fundamental discriminants 0 < d <= X of the k-th power of
+  |sum_n chi_d(n) W(n/Y)| is at most a constant times
+  X Y^(k/2) (log X)^(k(k-1)/2).
+statement_formal: |
+  \sum\nolimits^{*}_{0<d\le X}\left|\sum_{n\ge 1}\chi_d(n)\,W\!\left(\tfrac{n}{Y}\right)\right|^{k}\ll X\,Y^{k/2}(\log X)^{k(k-1)/2}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper proves an unconditional lower bound of the same order for even k
+  in the range X^eps << Y << X^(2/3 - alpha) (Theorem 1), so the bound is
+  sharp there. A matching conditional upper bound for moments of quadratic
+  theta functions is Theorem 7 of the same paper.
+sources:
+  - authors: M. Munsch, Y. Toma
+    title: Bounds for moments of quadratic character sums and theta functions
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2503.05269
+    hypothesis_location: "Theorem 4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper writes only GRH. The input is a bound of Gao and Zhao for shifted moments of quadratic Dirichlet L-functions (Proposition 16); whether RH for zeta is also needed there was not checked."
+lean:
+  proved: false
+  path: null
+tags: [character-sums, quadratic-characters, moments]
+added: 2026-11-21
