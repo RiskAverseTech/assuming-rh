@@ -1,0 +1,41 @@
+id: novak-primes-counting-bound
+title: Upper bound for the number of Novak primes
+field: analytic-number-theory
+statement_plain: >
+  A Novak number is a positive integer N dividing 2^N + 1, and a Novak prime
+  is a prime dividing at least one Novak number. The number of Novak primes
+  up to x is O(x log log x / (log x)^2).
+statement_formal: |
+  \pi_N(x) \ll \frac{x \ln\ln x}{(\ln x)^2}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper only says "Generalized Riemann Hypothesis" and uses it through
+  one lemma (Lemma 3, quoted from Kurlberg and Pomerance) saying that few
+  primes p have small multiplicative order of g modulo p. The classification
+  as a hypothesis on Dedekind zeta functions of Kummer-type fields follows
+  the usual shape of such order results and is not stated in this paper.
+sources:
+  - authors: A. Kalmynin
+    title: On Novak numbers
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1611.00417
+    hypothesis_location: Theorem 5 (via Lemma 3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: low
+  open_questions:
+    - >-
+      The paper does not say which L-functions its Generalized Riemann Hypothesis covers. The only use is Lemma 3, cited from Kurlberg and Pomerance (Algebra Number Theory 7, 2013). That source was not available here; it should be checked whether it needs the hypothesis for Dedekind zeta functions of the fields Q(zeta_n, g^(1/n)), as assumed in this entry.
+    - >-
+      The implied constant is not explicit.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [novak-numbers, multiplicative-order, prime-counting]
+added: 2026-11-21

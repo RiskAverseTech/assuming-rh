@@ -1,0 +1,33 @@
+id: elite-primes-counting-bound
+title: Upper bound for the number of elite primes
+field: analytic-number-theory
+statement_plain: >
+  A prime p is elite if all sufficiently large Fermat numbers
+  F_n = 2^(2^n) + 1 are quadratic nonresidues modulo p. The number E(x) of
+  elite primes up to x is O(x^(3/4) (log x)^(1/2)).
+statement_formal: |
+  E(x) = O\bigl(x^{3/4} (\log x)^{1/2}\bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: A. Taheri, A. Saleh
+    title: On the number of elite primes
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.19610
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The implied constant is not explicit. The GRH input is Lemma 4.1, a bound for sums of a non-principal Dirichlet character over primes; the principal character (Riemann zeta) does not seem to be needed for Theorem 1.2, but the full proof in Section 4 was not checked line by line.
+lean:
+  proved: false
+  path: null
+tags: [elite-primes, fermat-numbers, character-sums]
+added: 2026-11-21

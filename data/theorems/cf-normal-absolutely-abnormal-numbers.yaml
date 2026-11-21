@@ -1,0 +1,38 @@
+id: cf-normal-absolutely-abnormal-numbers
+title: Continued fraction normal numbers that are normal to no integer base
+field: analytic-number-theory
+statement_plain: >
+  The set of real numbers in [0,1) that are normal with respect to the
+  continued fraction expansion but are not normal to any integer base b at
+  least 2 is dense and uncountable.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper says only "Generalized Riemann Hypothesis". It is used once,
+  through a theorem of Lenstra on primes in an arithmetic progression that
+  have a given integer as a primitive root. The paper does not say which
+  L-functions are meant; results of this Artin primitive root type are
+  recorded here as needing Dedekind zeta functions of Kummer-type fields.
+sources:
+  - authors: J. Vandehey
+    title: Absolutely abnormal, continued fraction normal numbers
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1512.00337
+    hypothesis_location: Theorem 1.1 (via Theorem 2.1 and Corollary 2.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its Generalized Riemann Hypothesis. The classification as ERH-Dedekind rests on the cited theorem of Lenstra (Invent. Math. 42, 1977, Theorem 8.3) being of Hooley type; that source was not available here.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [normal-numbers, continued-fractions, primitive-roots]
+added: 2026-11-21

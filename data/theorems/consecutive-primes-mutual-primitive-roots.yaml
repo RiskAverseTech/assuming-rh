@@ -1,0 +1,39 @@
+id: consecutive-primes-mutual-primitive-roots
+title: Bounded runs of consecutive primes that are primitive roots of each other
+field: analytic-number-theory
+statement_plain: >
+  For every positive integer m there is a constant C_m such that for
+  infinitely many n the consecutive primes p_n, ..., p_(n+m) lie in an
+  interval of length at most C_m and each of them is a primitive root modulo
+  each of the others.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper writes only "GRH". Its proof uses, through a result of Pollack,
+  an effective Chebotarev density theorem to count primes p with
+  g^((p-1)/q) = 1 mod p, which concerns Kummer-type fields that are not
+  abelian over the rationals. The entry therefore records the hypothesis as
+  one on Dedekind zeta functions; the paper itself does not spell this out.
+sources:
+  - authors: H. Pan, Z.-W. Sun
+    title: Consecutive primes and Legendre symbols
+    year: 2019
+    venue: Acta Arith. 190 (2019), no. 3, 209-220
+    url: https://arxiv.org/abs/1406.5951
+    hypothesis_location: Theorem 1.11
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its GRH. The use is in Section 3 via Pollack's bounded gaps paper and an effective Chebotarev density theorem. The exact family of fields and L-functions should be confirmed in Pollack (Algebra Number Theory 8, 2014), which was not available here.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [primitive-roots, bounded-gaps, consecutive-primes]
+added: 2026-11-21

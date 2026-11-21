@@ -1,0 +1,41 @@
+id: dedekind-zeta-residue-explicit-bounds
+title: Explicit bounds for the residue of the Dedekind zeta function at 1
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field other than Q, of degree n and discriminant D, and
+  let L = log log |D|. The residue kappa_K at s = 1 of the Dedekind zeta
+  function of K is at least (zeta(n) / (2 e^gamma)) exp(-3/L) / L and at most
+  (2 e^gamma)^(n-1) exp((11 - 3n)/(4L)) L^(n-1).
+statement_formal: |
+  \frac{\zeta(n_K)}{2e^{\gamma}}\,\frac{\exp\bigl(-\frac{3}{\ln\ln|\Delta_K|}\bigr)}{\ln\ln|\Delta_K|} \le \kappa_K \le (2e^{\gamma})^{n_K-1} \exp\Bigl(\frac{11-3n_K}{4\ln\ln|\Delta_K|}\Bigr) (\ln\ln|\Delta_K|)^{n_K-1}
+hypotheses_required: [RH, ERH-Dedekind]
+status: partial
+status_note: >
+  The theorem assumes GRH for the Dedekind zeta functions of K and of Q.
+  When K is abelian over the rationals its zeta function is a product of the
+  Riemann zeta function and Dirichlet L-functions, so that case is covered.
+  This includes the paper's corollary for imaginary quadratic fields, a
+  lower bound for the class number. For a general number field the bounds
+  stay conditional.
+sources:
+  - authors: S. R. Garcia, L. Grenie, E. S. Lee, G. Molteni
+    title: Bounds for the residue of Dedekind zeta functions under GRH and applications
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.14257
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The statement was read from the theorem as printed; the paper states no lower limit on |D| beyond K being different from Q, and this was not checked against the proof.
+lean:
+  proved: false
+  path: null
+related: [littlewood-l1-chi-bounds]
+tags: [dedekind-zeta, residue, class-number, explicit-bounds]
+added: 2026-11-21

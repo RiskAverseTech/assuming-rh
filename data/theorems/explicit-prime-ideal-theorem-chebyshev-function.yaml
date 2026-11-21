@@ -1,0 +1,42 @@
+id: explicit-prime-ideal-theorem-chebyshev-function
+title: Explicit prime ideal theorem for the Chebyshev function of a number field
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field of degree n with absolute discriminant D, and let
+  psi_K(x) be the sum of log N(p) over prime ideal powers of norm at most x.
+  For all x at least 100, |psi_K(x) - x| is at most
+  sqrt(x) [ (log x / (2 pi) + 2) log D + ((log x)^2 / (8 pi) + 2) n ].
+statement_formal: |
+  |\psi_K(x) - x| \le \sqrt{x}\,\Bigl[\Bigl(\frac{\log x}{2\pi} + 2\Bigr)\log\Delta_K + \Bigl(\frac{\log^2 x}{8\pi} + 2\Bigr) n_K\Bigr] \quad \text{for } x \ge 100
+hypotheses_required: [ERH-Dedekind]
+status: partial
+status_note: >
+  The hypothesis is that the Dedekind zeta function of K has no zeros with
+  real part above 1/2. When K is abelian over the rationals (for example
+  quadratic or cyclotomic) this zeta function is a product of the Riemann
+  zeta function and Dirichlet L-functions, so that case is covered. For a
+  general number field the bound stays conditional.
+sources:
+  - authors: L. Grenie, G. Molteni
+    title: Explicit versions of the prime ideal theorem for Dedekind zeta functions under GRH
+    year: 2015
+    venue: Math. Comp. (to appear, as stated on the arXiv version)
+    url: https://arxiv.org/abs/1312.4463
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper defines GRH for the Dedekind zeta function in the introduction, in the sentence about Lagarias and Odlyzko; it was assumed that the tag (GRH) on Corollary 1.2 means the same hypothesis for the field K only.
+    - >-
+      The final journal reference was not printed in the text and should be filled in.
+lean:
+  proved: false
+  path: null
+related: [effective-chebotarev]
+tags: [prime-ideal-theorem, dedekind-zeta, explicit-bounds]
+added: 2026-11-21
