@@ -1,0 +1,52 @@
+id: point-counting-modular-curve-x1-polynomial-time
+title: Counting points on the modular curve X_1(n) over F_p in polynomial time
+field: computational-number-theory
+statement_plain: >
+  For a prime level n and a prime p, there is a probabilistic algorithm
+  that, given a plane model of the modular curve X_1(n), computes the number
+  of points of X_1(n) over the field with p elements in
+  O(n^(delta + 56 + eps) (log p)^(9 + eps)) bit operations, where delta is
+  an absolute constant and eps is any positive real number.
+statement_formal: |
+  \#X_1(n)(\mathbb{F}_p) \text{ is computable in } O\!\left(n^{\delta+56+\varepsilon}\,(\log p)^{9+\varepsilon}\right) \text{ bit operations}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is used for the running time. The algorithm recovers the
+  characteristic polynomial of Frobenius on the Jacobian J_1(n) from mod l
+  Galois representations attached to newforms f of weight 2 and level n,
+  and needs many prime ideals of small norm (polynomial in n) in the
+  coefficient field Q_f of each newform. These are supplied by an effective
+  prime ideal theorem (Theorem 2.1, credited to Weinberger, and Corollary
+  2.2) for number fields "for which GRH holds", that is, by the Riemann
+  hypothesis for the Dedekind zeta functions of the fields Q_f. Those fields
+  are not abelian over the rationals in general. The constant delta
+  measures the heights of the points of the two-dimensional Galois
+  representation spaces and is not made explicit. The paper notes that a
+  polynomial-time algorithm was already known under the same hypothesis by
+  work of Edixhoven, Couveignes and others and of Bruin; its contribution
+  is the explicit exponents.
+sources:
+  - authors: J. Zeng
+    title: Computing points on modular curves over finite fields
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1305.4505
+    hypothesis_location: "Theorem 1.1, through Theorem 2.1 and Corollary 2.2 in Section 2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The waiting_on value single-field-zeta is used because the hypothesis is the Riemann hypothesis for the Dedekind zeta functions of the Hecke coefficient fields Q_f of the newforms of level n. These fields are not named in the statement itself, so a reviewer may prefer galois-extensions. The status is still-conditional and not partial because no named special case is covered.
+    - >-
+      The paper calls its complexity estimate "very rough" and the algorithm relies on cited results for computing Galois representations (Edixhoven and Couveignes, Bruin); whether those cited results use the hypothesis in any further way was not checked.
+lean:
+  proved: false
+  path: null
+tags: [modular-curves, point-counting, algorithms]
+added: 2026-11-21

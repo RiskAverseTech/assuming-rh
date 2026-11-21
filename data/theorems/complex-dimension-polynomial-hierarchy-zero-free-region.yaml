@@ -1,0 +1,53 @@
+id: complex-dimension-polynomial-hierarchy-zero-free-region
+title: Dimension of complex algebraic sets in the polynomial hierarchy from a zero-free region for Dedekind zeta functions
+field: complexity-theory
+statement_plain: >
+  Deciding whether the complex zero set of a system of polynomials with
+  integer coefficients has dimension at least D is in the class P^(NP^NP).
+  In particular, deciding whether such a system has a complex root is in
+  that class.
+statement_formal: |
+  \mathrm{DIM}_{\mathbb{C}} \in \mathsf{P}^{\mathsf{NP}^{\mathsf{NP}}}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The point of the paper is that less than the Riemann hypothesis is enough.
+  It proves the statement from its Modular Root Hypothesis (a lower bound
+  for the number of primes p up to x modulo which an irreducible integer
+  polynomial has a root), which it derives from its Minimalist Dedekind Zero
+  Hypothesis: for some constant C > 4, every Dedekind zeta function of a
+  number field K of degree d and discriminant of absolute value Delta is
+  zero-free in a region of the shape
+  beta >= 1 - 1/((log(d log(3 Delta)))^C log(|gamma| + 2)). The Riemann
+  hypothesis for all Dedekind zeta functions (the paper's GRH) implies both,
+  which is how the entry is coded. Under that full hypothesis Koiran had
+  already placed the problem in the smaller class AM (see the entry
+  nullstellensatz-polynomial-hierarchy); this entry records the weaker
+  hypothesis, not a stronger conclusion. The number fields involved are
+  attached to arbitrary polynomial systems and are not abelian in general.
+sources:
+  - authors: J. M. Rojas, Y. Zhu
+    title: Dedekind Zeta Zeroes and Faster Complex Dimension Computation
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1803.04104
+    hypothesis_location: "Theorem 2, with the hypotheses MRH, GRH and MDZH stated in Section 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The hypothesis actually needed (a zero-free region near the line Re(s) = 1 for all Dedekind zeta functions, or the still weaker Modular Root Hypothesis) is strictly weaker than any code in the taxonomy. ERH-Dedekind is the nearest code. A reviewer should decide whether this needs its own treatment, as for the entry three-sphere-recognition-in-conp.
+    - >-
+      Read as a consequence of the full Riemann hypothesis for Dedekind zeta functions, the conclusion is weaker than Koiran's. A reviewer may decide the entry is not worth keeping separately from nullstellensatz-polynomial-hierarchy.
+    - >-
+      The zero-free region was checked against the PDF (page 3). The hypothesis also has two further clauses not repeated in status_note: the region is restricted to |gamma| >= 1/(1 + 4 log Delta), and there are to be no real zeros in the interval (1 - (log(d log(3 Delta)))^(-C), 1).
+lean:
+  proved: false
+  path: null
+tags: [nullstellensatz, polynomial-hierarchy, zero-free-regions]
+added: 2026-11-21

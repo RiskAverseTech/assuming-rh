@@ -1,0 +1,44 @@
+id: integer-factoring-in-ppa-and-pwpp
+title: Integer factoring is in the search classes PPA and PPP
+field: complexity-theory
+statement_plain: >
+  The search problem of finding a nontrivial divisor of a composite integer
+  lies in the class PPA and in the class PWPP, which is contained in PPP. It
+  is equivalent, under deterministic polynomial-time many-one reductions, to
+  the problem FacRoot of the paper (given n and a with Jacobi symbol 1, find
+  a square root of a modulo n or a nontrivial divisor of n). Computing the
+  full prime factorization is in PPA as well.
+statement_formal: |
+  \mathrm{Factoring} \in \mathsf{PPA} \cap \mathsf{PWPP}, \qquad \mathsf{PWPP} \subseteq \mathsf{PPP}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper proves without any hypothesis that factoring reduces to these
+  classes by randomized polynomial-time reductions (Theorem 3.7). The
+  hypothesis is used only to make the reductions deterministic, and only for
+  quadratic Dirichlet characters: by a theorem of Bach refining Ankeny, a
+  nonprincipal quadratic character modulo n takes a value different from 1
+  at some a below 2 (ln n)^2 (the paper's Theorem 2.5). The paper states
+  this special case explicitly and calls it GRH_q. Compare the entries
+  least-quadratic-nonresidue and deterministic-square-roots-mod-p.
+sources:
+  - authors: E. Jeřábek
+    title: Integer factoring and modular square roots
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1207.5220
+    hypothesis_location: "Theorem 3.8, through Theorem 2.5 (Bach's bound); the hypothesis is defined just before Theorem 2.5"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year given is that of the arXiv version read (v3, 2015); the paper was first posted in 2012 and a journal reference is not printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [integer-factoring, search-problems, quadratic-residues]
+added: 2026-11-21

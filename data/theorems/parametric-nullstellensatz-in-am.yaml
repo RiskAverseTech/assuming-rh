@@ -1,0 +1,45 @@
+id: parametric-nullstellensatz-in-am
+title: The parametric Hilbert Nullstellensatz is in AM
+field: complexity-theory
+statement_plain: >
+  Deciding whether a system of polynomials whose coefficients are rational
+  functions in parameters x_1, ..., x_m over the rationals has a common
+  zero in the algebraic closure of the function field Q(x_1, ..., x_m) is
+  in the complexity class AM.
+statement_formal: |
+  \mathrm{HNP} \in \mathsf{AM}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  This extends Koiran's theorem for systems with rational coefficients (see
+  the entry nullstellensatz-polynomial-hierarchy) to systems with parameters.
+  The new part of the proof is a randomized polynomial-time reduction to
+  Koiran's problem by substituting random integers for the parameters, and
+  that reduction is unconditional. The hypothesis enters only through
+  Koiran's AM protocol, which counts the primes modulo which a system is
+  satisfiable and so needs an effective Chebotarev estimate for number
+  fields that are not abelian in general. The paper itself writes only
+  "GRH". This theorem is the one cited in the entry
+  schubert-vanishing-in-am-and-coam.
+sources:
+  - authors: R. Ait El Manssour, N. Balaji, K. Nosan, M. Shirmohammadi, J. Worrell
+    title: A parametric version of the Hilbert Nullstellensatz
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2408.13027
+    hypothesis_location: "Theorem 1 (proved in Section 3.4), through Koiran's AM protocol for the Hilbert Nullstellensatz"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not say which L-functions its GRH covers. ERH-Dedekind is taken from the classification of Koiran's theorem in the existing entry nullstellensatz-polynomial-hierarchy, on which this result depends entirely.
+lean:
+  proved: false
+  path: null
+tags: [nullstellensatz, arthur-merlin, polynomial-hierarchy]
+added: 2026-11-21
