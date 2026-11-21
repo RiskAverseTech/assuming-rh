@@ -50,6 +50,15 @@ ${tried.map(([t, d]) => `  <dt>${esc(t)}</dt><dd>${d}</dd>`).join('\n')}
 </ul>
 <p>On 21 November 2026 the Lean and Mathlib communities issued a joint statement that the statement and the proof of the Riemann Hypothesis in that library are correct. That is a statement about the formal proof. Understanding why the argument works is separate work, and it has only begun. The current status and its sources are on the <a href="about.html#proof-status">method page</a>.</p>
 
+<h2 id="maps">Maps of the proof itself</h2>
+<p>This site maps what follows from the result. Others are mapping the proof. These are independent projects, listed here because they answer the questions this page cannot.</p>
+<ul>
+  <li><a href="https://nasqret.github.io/riemann-proof-atlas/" rel="noopener">Riemann proof atlas</a>, by Bartosz Naskręcki. An interactive map of the Lean declarations in the formalization and how they relate, with links to the source code.</li>
+  <li><a href="https://github.com/leanprover-community/riemann-hypothesis" rel="noopener">The Lean code</a>, as maintained by the Lean community.</li>
+  <li><a href="https://math.mit.edu/~drew/grh/" rel="noopener">Verification results</a>, collected by Andrew Sutherland: which proof checkers were run and what they reported.</li>
+</ul>
+<p class="muted">Descriptions follow each project's own announcement. This site has not reviewed them.</p>
+
 <h2 id="sources">Sources for this page</h2>
 <ul>
   <li>B. Riemann, <cite>Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse</cite>, 1859.</li>
