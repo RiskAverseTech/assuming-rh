@@ -1,0 +1,49 @@
+id: long-prime-dirichlet-polynomials-gaussian-moments
+title: Gaussian moments of long weighted Dirichlet polynomials over primes
+field: analytic-number-theory
+statement_plain: >
+  Let V_X be a bounded even real function supported in [-log X, log X] whose
+  Fourier transform satisfies the paper's decay conditions (ii), with a
+  parameter m >= 2, and (iii). For X <= T^(2m), every positive integer k and
+  fixed 0 < theta < 1/100, the 2k-th moment over T <= t <= 2T of the
+  Dirichlet polynomial sum over n <= X of
+  Lambda(n) V_X(log n) / (n^(1/2 + it) log n) equals k! T times the k-th
+  power of the sum over primes p <= T^(theta/k) of V_X(log p)^2 / p, with an
+  error O(T (Ck)^(4k) (log log T)^(k - 1/2)) for an absolute constant C.
+statement_formal: |
+  \int_T^{2T} \left|\sum_{n \le X} \frac{\Lambda(n) V_X(\log n)}{n^{1/2+it}\log n}\right|^{2k} dt = k!\, T \left(\sum_{p \le T^{\theta/k}} \frac{V_X(\log p)^2}{p}\right)^{k} + O\!\left(T (Ck)^{4k} (\log\log T)^{k-1/2}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No existing entry concerns mean values of long Dirichlet polynomials. The
+  conditions on the weight V_X are conditions on the object, not unproven
+  hypotheses; the paper's model weight is the triangular weight
+  1 - |x| / log X on [-log X, log X]. The same theorem gives the analogous
+  formula for the real and imaginary parts with half-integer k. The paper's
+  Theorem 2, on the mean square of the weighted sum of Lambda(n) / n^(1/2 + it),
+  is also proved under the Riemann Hypothesis alone but has a main term
+  involving Montgomery's pair correlation function, and is not recorded
+  here.
+sources:
+  - authors: W. Heap
+    title: Conditional mean values of long Dirichlet polynomials
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2201.02108
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement depends on the technical conditions (i) to (iii) on the
+      weight V_X, which are only summarized in statement_plain. A reviewer
+      may prefer to state the result for the triangular weight only.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-polynomials, mean-values, primes, zeta-function]
+added: 2026-11-21

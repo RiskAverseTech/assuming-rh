@@ -1,0 +1,38 @@
+id: argument-of-zeta-large-values-very-short-intervals
+title: Large positive and negative values of S(t) in very short intervals
+field: analytic-number-theory
+statement_plain: >
+  Let S(t) = (1/pi) arg zeta(1/2 + it). Fix an integer m >= 2, let T be large
+  in terms of m, and let
+  2 (2m log log T)^(1/(2m)) / log log log log T <= H <= sqrt(log log T).
+  Then on the interval T - H <= t <= T + 2H both S(t) and -S(t) take a value
+  at least (1/(50 pi)) sqrt(log H) / (8m log log H)^m.
+statement_formal: |
+  \sup_{T-H \le t \le T+2H} \{\pm S(t)\} \ge \frac{1}{50\pi} \frac{\sqrt{\log H}}{(8m \log\log H)^m}, \qquad \frac{2(2m\log\log T)^{1/(2m)}}{\log\log\log\log T} \le H \le \sqrt{\log\log T}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is a lower bound for the size of S(t) on intervals shorter than
+  sqrt(log log T); the paper presents it as the analog, for shorter
+  intervals, of a theorem of Boyarinov for
+  sqrt(log log T) < H <= (log T)(log log T)^(-3/2). It complements the upper
+  bounds for S(t) in the entry explicit-s-s1-zeta-critical-line-bounds.
+sources:
+  - authors: M. A. Korolev
+    title: Upper and lower bounds for the function S(t) on the short intervals
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1302.0352
+    hypothesis_location: Theorem (the unnumbered main theorem on page 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, argument-of-zeta, short-intervals]
+added: 2026-11-21
