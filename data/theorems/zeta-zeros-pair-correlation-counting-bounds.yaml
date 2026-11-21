@@ -1,0 +1,44 @@
+id: zeta-zeros-pair-correlation-counting-bounds
+title: Upper and lower bounds for the pair correlation count of zeta zeros
+field: analytic-number-theory
+statement_plain: >
+  Let N(T) be the number of nontrivial zeros of the zeta function with
+  ordinate in (0, T], and N(T, beta) the number of pairs of such ordinates
+  gamma, gamma' with 0 < gamma' - gamma <= 2 pi beta / log T. Then for beta
+  with beta sqrt(log log T / log T) tending to 0 and T sufficiently large,
+  N(T, beta)/N(T) lies between beta - 7/6 + 1/(2 pi^2 beta) + O(1/beta^2) + o(1)
+  and beta + 1/(2 pi^2 beta) + O(1/beta^2) + o(1).
+statement_formal: |
+  \beta - \frac{7}{6} + \frac{1}{2\pi^2\beta} + O\!\left(\frac{1}{\beta^2}\right) + o(1) \le \frac{N(T,\beta)}{N(T)} \le \beta + \frac{1}{2\pi^2\beta} + O\!\left(\frac{1}{\beta^2}\right) + o(1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Corollary 9 of the paper, which needs no assumption beyond the
+  Riemann Hypothesis. The paper proves sharper statements under an extra
+  assumption that almost all zeros are simple (condition (1.11)): then the
+  lower bound improves to beta - 1 + 1/(2 pi^2 beta) + O(1/beta^2), and
+  N(T, 0.606894) >> N(T) (Theorem 7). Those results are not recorded here.
+  The paper also has an analogue for Dirichlet L-functions (Theorem 18).
+sources:
+  - authors: E. Carneiro, V. Chandee, F. Littmann, M. B. Milinovich
+    title: Hilbert spaces and the pair correlation of zeros of the Riemann zeta-function
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1406.5462
+    hypothesis_location: Corollary 9 (from Theorems 1, 2 and 8)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's main contribution is the optimal majorants and minorants (Theorems 2 to 5); I recorded Corollary 9 because it is the cleanest explicit statement that needs only the Riemann Hypothesis. A reviewer may prefer Theorem 1 with Theorem 2.
+    - >-
+      The constants in the formula were read from the extracted text (7/6 and 1/(2 pi^2 beta)) and are consistent with Theorem 2 and the bound N*(T) <= (4/3 + o(1)) N(T) used in the proof.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, pair-correlation, beurling-selberg]
+added: 2026-11-21

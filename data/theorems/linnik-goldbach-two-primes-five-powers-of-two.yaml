@@ -1,0 +1,41 @@
+id: linnik-goldbach-two-primes-five-powers-of-two
+title: Large even integers as two primes plus at most 5 powers of 2
+field: additive-number-theory
+statement_plain: >
+  Every sufficiently large even integer is the sum of two primes and at most
+  5 powers of 2.
+statement_formal: |
+  N = p_1 + p_2 + 2^{\nu_1} + \cdots + 2^{\nu_k}, \quad 0 \le k \le 5, \quad \text{for every sufficiently large even } N
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This sharpens the conditional result with 7 powers of 2 recorded in the
+  entry linnik-goldbach-two-primes-seven-powers-of-two; the paper reports
+  that Johnston and Trudgian had reached 6 powers under the same hypothesis.
+  The same paper proves unconditionally that 6 powers of 2 suffice (Theorem
+  1.1). The hypothesis enters through the choice of major arcs (Lemma 4.4,
+  following Pintz and Ruzsa).
+sources:
+  - authors: H. Li, Z. Liu
+    title: 6 powers of 2 in the Linnik-Goldbach problem
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.15784
+    hypothesis_location: Theorem 1.2 (hypothesis used in Lemma 4.4 and Section 7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH refers to. The classification as Dirichlet L-functions rests on where it is used: Lemma 4.4, which enlarges the major arcs of the circle method to denominators up to about N^(1/2) following Pintz and Ruzsa. The cited paper of Pintz and Ruzsa was not read.
+    - >-
+      The paper is a recent preprint; the proof was not checked.
+lean:
+  proved: false
+  path: null
+related: [linnik-goldbach-two-primes-seven-powers-of-two]
+tags: [goldbach, powers-of-two, circle-method]
+added: 2026-11-21

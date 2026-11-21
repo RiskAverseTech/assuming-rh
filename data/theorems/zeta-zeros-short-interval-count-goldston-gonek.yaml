@@ -1,0 +1,38 @@
+id: zeta-zeros-short-interval-count-goldston-gonek
+title: Zeros of zeta in short intervals with constant 1/2
+field: analytic-number-theory
+statement_plain: >
+  Let N(t) be the number of zeros of the zeta function with ordinate in
+  (0, t]. For large t and 0 < h <= sqrt(t), the difference between
+  N(t + h) - N(t) and (h / (2 pi)) log(t / (2 pi)) is at most
+  (1/2 + o(1)) log t / log log t in absolute value.
+statement_formal: |
+  \left| N(t+h) - N(t) - \frac{h}{2\pi}\log\frac{t}{2\pi} \right| \le \left(\frac{1}{2} + o(1)\right)\frac{\log t}{\log\log t} \qquad (0 < h \le \sqrt{t})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper deduces that |S(t)| <= (1/2 + o(1)) log t / log log t (Theorem 2),
+  that the multiplicity of a zero 1/2 + i gamma is at most
+  (1/2 + o(1)) log gamma / log log gamma, and that consecutive ordinates
+  gamma < gamma' satisfy gamma' - gamma <= (pi / log log gamma) (1 + o(1))
+  (Corollary 1). The bound for S(t) was later improved to constant 1/4, as
+  recorded in the entry iterated-argument-sn-bounds.
+sources:
+  - authors: D. A. Goldston, S. M. Gonek
+    title: A note on S(t) and the zeros of the Riemann zeta-function
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0511092
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, argument-of-zeta, zero-multiplicity]
+added: 2026-11-21
