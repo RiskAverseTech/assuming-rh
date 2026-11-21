@@ -1,0 +1,46 @@
+id: twisted-quadratic-character-sums-prime-modulus-moments
+title: Moments of Hecke eigenvalue sums twisted by quadratic characters of prime modulus
+field: analytic-number-theory
+statement_plain: >
+  Let f be a fixed holomorphic Hecke eigenform of weight divisible by 4 for
+  SL_2(Z) with normalized eigenvalues lambda_f(n), and W a smooth non-negative
+  compactly supported weight. For every integer m >= 4 and large Y <= X, the
+  sum over odd primes p <= X of (log p) times the m-th power of
+  |sum_n chi_8p(n) lambda_f(n) W(n/Y)| is O(X Y^(m/2) (log X)^(m(m-3)/2)).
+  For even m >= 4 and X^eps << Y << X^(1-alpha) the same quantity is also
+  bounded below by a constant times X Y^(m/2) (log X)^(m(m-3)/2).
+statement_formal: |
+  \sum_{2 < p \le X} (\log p) \left| \sum_{n \ge 1} \chi_{8p}(n) \lambda_f(n) W\!\left(\tfrac{n}{Y}\right) \right|^{m} \ll X Y^{m/2} (\log X)^{m(m-3)/2}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper writes only "GRH" in its theorems. The proof uses it for the
+  twisted modular L-functions L(s, f x chi_8p) for all odd primes p (Lemma
+  2.7 and the shifted moment bounds of Section 2.5), for quadratic Dirichlet
+  characters when summing chi_8p(n) over primes p (Lemmas 2.3 and 2.4, which
+  also use the prime number theorem under RH), and for the symmetric square
+  L-function of f in one range of Lemma 2.2. The same paper also has a
+  weaker bound for the unsmoothed moments valid for all real m >= 4
+  (Theorem 1.1).
+sources:
+  - authors: P. Gao, Y. Zhao
+    title: Bounds for moments of twisted quadratic characters of prime modulus
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2608.05961
+    hypothesis_location: Theorems 1.2 and 1.3; the hypothesis is made precise in Lemma 2.7
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The list of L-functions is read off from the lemmas, since the main theorems say only 'assuming the truth of GRH'.
+lean:
+  proved: false
+  path: null
+tags: [moments, character-sums, modular-forms, quadratic-twists]
+added: 2026-11-21

@@ -1,0 +1,50 @@
+id: shifted-moments-dedekind-zeta-sharp-lower-bound
+title: Sharp lower bound for shifted moments of Dedekind zeta functions
+field: analytic-number-theory
+statement_plain: >
+  Let K_1, ..., K_r be fixed number fields and a_1, ..., a_r fixed positive
+  real exponents. For large T and real shifts b_j with |b_j| <= T/2, the
+  integral over t in [T, 2T] of the product of |zeta_{K_j}(1/2 + i(t + b_j))|^{a_j}
+  is at least a constant times T B(T, b, a), where B is an explicit product of
+  Dedekind zeta values near the 1-line. In particular the 2k-th moment of
+  zeta_K on the critical line is >> T (log T)^{rho_K k^2}, where rho_K is the
+  number of double cosets H\G/H for G = Gal(L/Q), H = Gal(L/K) and L the
+  Galois closure of K.
+statement_formal: |
+  \int_T^{2T} \left|\zeta_K\!\left(\tfrac12 + it\right)\right|^{2k} dt \gg_{K,k} T (\log T)^{\rho_K k^2}, \qquad \rho_K = |H \backslash G / H|
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is GRH for the Dedekind zeta function of L, the compositum
+  of the Galois closures of the K_j. When all the K_j are abelian over the
+  rationals, L is abelian and its zeta function is a product of the Riemann
+  zeta function and Dirichlet L-functions, so that case is covered. For other
+  fields (for example a non-Galois cubic field, where L has group S_3) the
+  bound stays conditional. The formal statement shown is Corollary 3, the
+  unshifted single-field case of Theorem 1. The paper says the matching upper
+  bound, under the same hypothesis, is in an earlier paper by the same
+  authors, so the order of magnitude is determined.
+sources:
+  - authors: B. Durkan, N. Karak, K. Mahatab
+    title: Sharp lower bounds for shifted moments of Dedekind zeta functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.01101
+    hypothesis_location: Theorem 1 (and Corollaries 2 to 5); used through Lemma 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The correlation factor B(T, b, a) of Theorem 1 is described only in words in the plain statement; its definition is equations (1.1) and (1.2) of the paper.
+    - >-
+      The waiting_on code single-field-zeta is used for the single Galois field L; galois-extensions would be an alternative reading.
+lean:
+  proved: false
+  path: null
+tags: [moments, dedekind-zeta, shifted-moments]
+added: 2026-11-21

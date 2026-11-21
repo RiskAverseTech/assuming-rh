@@ -1,0 +1,42 @@
+id: integral-of-log-zeta-critical-line-dense
+title: Values of the integral of log zeta along the critical line are dense in the complex plane
+field: analytic-number-theory
+statement_plain: >
+  The set of values of the integral from 0 to t of log zeta(1/2 + iu) du, as t
+  ranges over [0, infinity), is dense in the complex plane. The same holds
+  for the m-times iterated integrals eta_m(1/2 + it) for every m >= 2.
+statement_formal: |
+  \overline{\left\{ \int_0^t \log\zeta\!\left(\tfrac12 + iu\right) du \;:\; t \in [0,\infty) \right\}} = \mathbb{C}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  For the single integral (m = 1) the paper proves denseness from the Riemann
+  Hypothesis; more generally, for 1/2 <= sigma < 1, it follows if zeta has
+  only finitely many zeros with real part greater than sigma. For each m >= 2
+  the paper proves an equivalence: the set of values eta_m(sigma + it), t >= 0,
+  is dense in the complex plane if and only if zeta has no zero with real part
+  greater than sigma. At sigma = 1/2 this says that denseness of the m-times
+  iterated integral on the critical line is equivalent to RH. The analogous
+  iterated integrals along horizontal lines are shown to be dense without any
+  hypothesis (Theorem 2).
+sources:
+  - authors: K. Endo, S. Inoue
+    title: "On the value-distribution of iterated integrals of the logarithm of the Riemann zeta-function I: denseness"
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2004.00823
+    hypothesis_location: Theorem 1 (with sigma = 1/2) and the paragraph after it
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The iterated integral eta_m includes an additive normalizing constant c_m(sigma), defined in the paper's introduction; it is not written out in the entry.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, value-distribution, rh-equivalence]
+added: 2026-11-21

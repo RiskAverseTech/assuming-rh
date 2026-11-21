@@ -1,0 +1,53 @@
+id: low-lying-zeros-centered-moments-level-averaged-family
+title: Centered moments of the one-level density for holomorphic newforms averaged over the level
+field: analytic-number-theory
+statement_plain: >
+  For holomorphic newforms f of fixed even weight k >= 4 and level q, with
+  harmonic weights and an extra smooth average over levels q of size Q, the
+  n-th centered moment of the one-level densities of low-lying zeros, for
+  even Schwartz test functions Phi_1, ..., Phi_n whose Fourier transforms are
+  supported in (-sigma_i, sigma_i), agrees with the Katz-Sarnak prediction
+  as Q tends to infinity, provided that the sum of the sigma_j over j != i is
+  at most 3/2 for every i and that for every partition of the indices into
+  sets A and B one of the sums (sum over A) + 3 (sum over B) or
+  3 (sum over A) + (sum over B) of the sigma values is at most 4. One may
+  take all sigma_i = min(3/(2(n-1)), 4/(2n - [n odd])). For n = 3 this
+  improves the support from 2/3 to 3/4.
+statement_formal: |
+  M(\Phi_1,\dots,\Phi_n) = \frac{\mathbf{1}_{2 \mid n}}{(n/2)!} \sum_{\tau \in S_n} \prod_{i=1}^{n/2} \int_{-\infty}^{\infty} |u|\, \widehat{\Phi}_{\tau(2i-1)}(u)\, \widehat{\Phi}_{\tau(2i)}(u)\, du
+hypotheses_required: [RH, GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes the Riemann Hypothesis and GRH for L(s, f),
+  L(s, sym^2 f) and Dirichlet L-functions. Lemma 2.12 further specifies GRH
+  for L(s, f) with f a primitive holomorphic or Maass Hecke eigenform, which
+  arise from the Petersson and Kuznetsov formulas. The forms have weight
+  k >= 4 and the symmetric squares are GL(3) L-functions, so none of the
+  automorphic part is covered. The result generalizes the one-level density
+  theorem of Baluyot, Chandee and Li (support up to 4) to n-th centered
+  moments, and as a corollary gives the two-level density for supports
+  sigma_1 = 3/2 and sigma_2 = 5/6.
+sources:
+  - authors: T. Cheek, P. Gilman, K. Jaber, S. J. Miller, M.-H. Tome
+    title: On the Density of Low Lying Zeros of a Large Family of Automorphic $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2408.09050
+    hypothesis_location: Theorem 1.1 (and Corollary 1.2); see also Lemma 2.12
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The formula (1.12) is garbled in the text extraction; the formal statement is my reconstruction of it (sum over permutations of products of n/2 integrals of |u| times two Fourier transforms, zero for odd n) and should be compared with the PDF.
+    - >-
+      The last author's surname is printed with accents (Tome with an acute accent on the e); it is written here in plain ASCII.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, modular-forms]
+added: 2026-11-21

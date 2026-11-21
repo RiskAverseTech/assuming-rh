@@ -1,0 +1,55 @@
+id: andre-oort-products-of-modular-curves
+title: The Andre-Oort conjecture for products of modular curves
+field: arithmetic-geometry
+statement_plain: >
+  Let Sigma be any set of special (CM) points in a finite product of modular
+  curves. Then every irreducible component of the Zariski closure of Sigma is
+  a special subvariety, that is, it is cut out by fixing some coordinates to
+  be CM points and imposing isogeny relations between other coordinates.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, RH]
+status: proved-otherwise
+status_note: >
+  Now known without any hypothesis: this is a case of the Andre-Oort
+  conjecture, which Pila, Shankar and Tsimerman report proving in full
+  generality (2021). What follows describes the earlier conditional proof.
+  The hypothesis in the paper is "GRH for imaginary quadratic fields". It is
+  used for class number lower bounds and for the effective Chebotarev theorem
+  of Lagarias, Montgomery and Odlyzko applied to a compositum M of quadratic
+  fields, to find small primes that split in M. Such a field M is abelian
+  over the rationals, so its Dedekind zeta function is a product of the
+  Riemann zeta function and quadratic Dirichlet L-functions. The paper also
+  proves the statement without any hypothesis when Sigma lies in a single
+  isogeny class (Theorem 1.3), and notes that Andre had proved the case of a
+  product of two modular curves unconditionally.
+sources:
+  - authors: B. Edixhoven
+    title: Special points on products of modular curves
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0302138
+    hypothesis_location: Theorem 1.2; used in Sections 6 and 7 (Proposition 6.1 and Lemma 7.1)
+    role: conditional-proof
+  - authors: J. Pila, A. N. Shankar, J. Tsimerman (with an appendix by H. Esnault and M. Groechenig)
+    title: Canonical Heights on Shimura Varieties and the André-Oort Conjecture
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.08788
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of the Pila, Shankar and Tsimerman paper, which says it proves the Andre-Oort conjecture in full generality. Only the abstract was read, and its publication status was not checked.
+    - >-
+      Proposition 6.1 is applied to composita of the CM fields, which contain real quadratic subfields as well; these are still abelian over Q, so the classification does not change, but the paper's phrase 'GRH for imaginary quadratic fields' is slightly narrower than what Proposition 6.1 literally asks of M.
+    - >-
+      The year is that of the arXiv version on disk (v2, October 2004); no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [andre-oort, modular-curves, complex-multiplication]
+added: 2026-11-21

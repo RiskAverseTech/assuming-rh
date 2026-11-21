@@ -1,0 +1,47 @@
+id: genus-2-curves-jacobian-square-cm-elliptic-curve-46
+title: Exactly 46 genus-2 curves with field of moduli Q have Jacobian the square of a CM elliptic curve
+field: arithmetic-geometry
+statement_plain: >
+  There are exactly 46 genus-2 curves (up to isomorphism over the algebraic
+  numbers) with field of moduli Q whose Jacobian is isomorphic to the square
+  of an elliptic curve with complex multiplication by a maximal order.
+  Exactly 13 of them can be defined over Q.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, RH]
+status: unlocked
+status_note: >
+  The paper finds the 46 curves, and equations for the 13 defined over Q,
+  without any hypothesis. The Generalized Riemann Hypothesis is used only for
+  completeness of the list: the class group of the CM order must have
+  exponent at most 2, and the paper quotes Louboutin (1990) for the fact that
+  under the hypothesis such imaginary quadratic fields have discriminant at
+  most 2 * 10^7 in absolute value, which leaves 65 fundamental discriminants.
+  This concerns imaginary quadratic fields only, so the L-functions are the
+  Riemann zeta function and quadratic Dirichlet L-functions. See the existing
+  entry idoneal-numbers-complete for Weinberger's result on the same class
+  group problem under a weaker hypothesis.
+sources:
+  - authors: A. Gelin, E. W. Howe, C. Ritzenthaler
+    title: Principally polarized squares of elliptic curves with field of moduli equal to Q
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1806.03826
+    hypothesis_location: "Section 1 (Main Contributions) and Section 2 (after Proposition 2.1, via Louboutin's bound); also the captions of Tables 1 and 4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Louboutin's 1990 paper was not read; the code assumes his hypothesis is for the L-functions of imaginary quadratic fields, as the title cited in the paper suggests.
+    - >-
+      The result is not stated as a numbered theorem; it is taken from the abstract, the Main Contributions paragraph and the end of Section 3.
+    - >-
+      The first author's surname is printed with an accent (Gelin with an acute accent on the e); it is written here in plain ASCII.
+lean:
+  proved: false
+  path: null
+tags: [genus-2-curves, complex-multiplication, class-groups]
+added: 2026-11-21

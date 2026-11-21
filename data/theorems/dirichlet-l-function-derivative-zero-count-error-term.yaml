@@ -1,0 +1,44 @@
+id: dirichlet-l-function-derivative-zero-count-error-term
+title: Number of zeros of the derivative of a Dirichlet L-function with a sharper error term
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character modulo q > 1, let m be the
+  smallest prime not dividing q, and let N_1(T, chi) count the zeros of
+  L'(s, chi) with positive real part and imaginary part at most T in absolute
+  value. Then for T >= 2, N_1(T, chi) = (T/pi) log(qT / (2 m pi)) - T/pi
+  + O(m^(1/2) log(qT) / (log log(qT))^(1/2) + m^(1/2) log q).
+statement_formal: |
+  N_1(T,\chi) = \frac{T}{\pi}\log\frac{qT}{2m\pi} - \frac{T}{\pi} + O\!\left(\frac{m^{1/2}\log(qT)}{(\log\log(qT))^{1/2}} + m^{1/2}\log q\right)
+hypotheses_required: [GRH-Dirichlet, RH]
+status: unlocked
+status_note: >
+  The paper defines the generalized Riemann hypothesis as the statement that
+  both zeta(s) and L(s, chi) have all their nontrivial zeros on the critical
+  line. The result extends to Dirichlet L-functions Akatsuka's theorem for
+  the zeros of zeta'(s) under the Riemann Hypothesis; the unconditional
+  results it sharpens have error term O(log T). The same paper also gives,
+  under the same hypothesis, an asymptotic formula for the sum of
+  (beta' - 1/2) over the zeros beta' + i gamma' of L'(s, chi) with
+  |gamma'| <= T, with error
+  O(m^(1/2) (log log(qT))^2 + m log log(qT) + m^(1/2) log q) (Theorem 1.1).
+sources:
+  - authors: A. I. Suriajaya
+    title: Two estimates on the distribution of zeros of the first derivative of Dirichlet L-functions under the generalized Riemann hypothesis
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1503.05701
+    hypothesis_location: Theorem 1.2 (and Theorem 1.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The proof probably needs the hypothesis only for the one L-function L(s, chi); RH is listed because the paper's definition of the hypothesis includes zeta.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, zeros-of-derivatives, zero-counting]
+added: 2026-11-21

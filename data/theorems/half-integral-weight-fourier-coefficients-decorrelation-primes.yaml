@@ -1,0 +1,53 @@
+id: half-integral-weight-fourier-coefficients-decorrelation-primes
+title: Decorrelation at primes of Fourier coefficients of distinct half-integral weight modular forms
+field: analytic-number-theory
+statement_plain: >
+  Let g_1, ..., g_m be pairwise distinct Hecke eigenforms in Kohnen plus
+  spaces of half-integral weight, with Fourier coefficients c_i(n). Then the
+  average over primes p in [X, 2X] in a suitable residue class, weighted by
+  log p, of the product |c_1(p)| ... |c_m(p)| is O((log X)^(-m/8)). For m = 2
+  this gives a Selberg orthogonality statement: the sum of c_1(p) c_2(p) over
+  such primes is o(X / log X).
+statement_formal: |
+  \frac{1}{X} \sum_{\substack{X \le p \le 2X \\ p \equiv \sigma a \ (\mathrm{mod}\ N_0)}} \log p \prod_{i=1}^{m} |c_i(p)| \ll_{g_1,\dots,g_m} (\log X)^{-m/8}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes GRH for L(s, sym^2 f_i), L(s, f_i x chi_{sigma p}) and
+  L(s, chi_{sigma p}), where f_i is the Shimura lift of g_i (a Hecke
+  eigenform of integral weight 2 k_i and level N_i) and p runs over the
+  primes in the sum. The quadratic Dirichlet L-functions are covered; the
+  twisted modular L-functions and symmetric squares are not. The result
+  follows from a bound for mixed moments of central values of prime
+  quadratic twists (Theorem 3.1) combined with the Kohnen-Zagier formula.
+  Here N_0 is the least common multiple of 8 and the levels, and a is a
+  residue class with a = 1 mod 4 coprime to N_0. The other applications in
+  the paper (to automorphic periods and to Tate-Shafarevich groups) need
+  further assumptions such as the Ramanujan conjecture for Maass forms or
+  the Birch and Swinnerton-Dyer conjecture and are not part of this entry.
+sources:
+  - authors: S. Hua
+    title: Selberg orthogonality for half-integral weight modular forms
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.07734
+    hypothesis_location: Theorem 1.1 (deduced from Theorem 3.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The proof of the underlying Theorem 3.1 is a three-line reduction to two papers of Gao and Zhao, so the list of L-functions is taken from the theorem statement and could not be checked against a full proof.
+    - >-
+      Theorem 1.1 does not define the sign sigma or the normalization of the coefficients c_i(p); sigma is fixed as plus or minus 1 in Theorem 3.1.
+    - >-
+      The abstract mentions the Generalized Ramanujan Conjecture as an assumption; for holomorphic forms it is known, so no extra assumption is recorded for this theorem.
+lean:
+  proved: false
+  path: null
+tags: [half-integral-weight, modular-forms, quadratic-twists]
+added: 2026-11-21

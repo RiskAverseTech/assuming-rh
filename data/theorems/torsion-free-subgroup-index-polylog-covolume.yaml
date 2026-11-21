@@ -1,0 +1,47 @@
+id: torsion-free-subgroup-index-polylog-covolume
+title: Arithmetic lattices have torsion-free normal subgroups of index polylogarithmic in the covolume
+field: algebraic-number-theory
+statement_plain: >
+  Let Gamma be an arithmetic lattice of covolume v in a semi-simple Lie group
+  H, and let eps > 0. Then Gamma contains a torsion-free normal subgroup Delta
+  with index [Gamma : Delta] <= c (log v)^((2 + eps) dim H), where c depends
+  only on H and eps.
+statement_formal: |
+  [\Gamma : \Delta] \le c(H,\varepsilon)\, (\log v)^{(2+\varepsilon)\dim H}
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper says only "GRH". It is used once, in Lemma 2.1, to find a prime
+  ideal of small norm in the number field k over which the lattice is
+  defined, through the explicit error term in the prime ideal theorem for k
+  from Grenie and Molteni (2019). So the hypothesis is the Riemann Hypothesis
+  for the Dedekind zeta function of k. Lattices whose field of definition k
+  is abelian over the rationals are covered; for general k the bound stays
+  conditional. Without the hypothesis the paper proves the weaker bound
+  v^(c dim H) (Theorem 1.3), and it shows the conditional bound is almost
+  optimal by constructing lattices with torsion elements of order about
+  log v / log log v.
+sources:
+  - authors: T. Gelander, R. Slutsky
+    title: A Quantitative Selberg's Lemma
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2311.15976
+    hypothesis_location: Theorem 1.2, through Lemma 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never defines GRH. The code is inferred from the single place it is used (the prime ideal count for k cited from Grenie and Molteni, Cor. 1.4); that cited result was not read.
+    - >-
+      The dataset has no group theory field; algebraic-number-theory was chosen as the closest.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-groups, lattices, torsion-free-subgroups]
+added: 2026-11-21

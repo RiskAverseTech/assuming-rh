@@ -1,0 +1,52 @@
+id: conjugacy-width-anisotropic-spin-arithmetic-groups
+title: Finite conjugacy width in anisotropic S-arithmetic spin groups of degree at least 17
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field, S a finite set of places of K containing all
+  archimedean places and at least one non-archimedean place, f an anisotropic
+  quadratic form on K^n with n >= 17, and Gamma an S-arithmetic subgroup of
+  Spin_f(K). Then every generalized conjugacy class in Gamma (the class of an
+  element, the class of its inverse, and the identity) has finite width, with
+  an explicit uniform bound in terms of the widths at the real places where f
+  is definite.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper says "the Generalized Riemann Hypothesis" without defining it.
+  It states that the hypothesis enters at one point, through a variant of
+  Artin's primitive root conjecture taken from Lenstra (1977): for a Galois
+  extension F/E, a primitive unit gamma and an integer M, the primes P of E
+  with prescribed Frobenius class in F/E and with the index of gamma modulo P
+  dividing M have positive density (Theorem 5.4.4). That result is proved by
+  Hooley's method and needs the Riemann Hypothesis for Dedekind zeta
+  functions of Kummer-type fields, which are not abelian over the rationals.
+  The theorem has a second case (S-adelically split forms with trivial
+  S-congruence kernel) that is not restated here. The authors conjecture that
+  the result holds unconditionally.
+sources:
+  - authors: N. Avni, C. Meiri
+    title: Conjugacy width in uniform higher rank arithmetic groups
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2304.13173
+    hypothesis_location: Theorem 1.1.1; used through Theorem 5.4.4 and Lemmas 5.4.5 and 5.4.6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The exact fields whose zeta functions are needed are those of Lenstra's 1977 paper, which was not read; the code follows the standard reading of Lenstra's hypothesis.
+    - >-
+      The title printed in the text is 'Conjugacy width in uniform higher rank arithmetic groups'; the metadata file gives a longer title ending 'of orthogonal type'. The printed title is used.
+    - >-
+      The dataset has no group theory field; algebraic-number-theory was chosen as the closest.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-groups, conjugacy-width, artin-conjecture]
+added: 2026-11-21

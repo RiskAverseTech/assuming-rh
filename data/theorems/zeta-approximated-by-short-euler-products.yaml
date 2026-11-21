@@ -1,0 +1,42 @@
+id: zeta-approximated-by-short-euler-products
+title: The zeta function is approximated by short Euler products to the right of the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let s = sigma + it, tau = |t| + 2, and let P_X(s) = exp(sum over n <= X^2 of
+  Lambda_X(n) / (n^s log n)) be the weighted Euler product truncated at X^2,
+  where Lambda_X(n) = Lambda(n) for n <= X and Lambda(n)(2 - log n / log X)
+  for X < n <= X^2. If C > 1, 2 <= X <= t^2, |s - 1| >= 1/10 and
+  1/2 + C log log(2 tau) / log X <= sigma <= 1, then
+  zeta(s) = P_X(s) (1 + O((log t)^((1 - C)/2))).
+statement_formal: |
+  \zeta(s) = P_X(s)\left(1 + O\!\left((\log t)^{(1-C)/2}\right)\right), \qquad \tfrac12 + \frac{C \log\log 2\tau}{\log X} \le \sigma \le 1, \quad 2 \le X \le t^2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper also proves a partial converse without any hypothesis: if the
+  approximation holds for 2 <= X <= t^2 in the stated region, then zeta has at
+  most finitely many zeros to the right of the curve
+  sigma = 1/2 + C log log(2 tau) / log X. The paper goes on to build model
+  functions zeta_X(s) and shows, assuming the Riemann Hypothesis, that their
+  zeros converge to the zeros of zeta as X grows.
+sources:
+  - authors: S. M. Gonek
+    title: Finite Euler products and the Riemann Hypothesis
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/0704.3448
+    hypothesis_location: Theorem 3.5 (from Theorems 3.3 and 3.4)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The lower bound in |s - 1| >= 1/10 is partly garbled in the text extraction (it prints as '10' with a '1' on the line above); 1/10 is the reading used.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, euler-products]
+added: 2026-11-21
