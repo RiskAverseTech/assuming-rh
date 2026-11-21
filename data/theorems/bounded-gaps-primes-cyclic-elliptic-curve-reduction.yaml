@@ -1,0 +1,41 @@
+id: bounded-gaps-primes-cyclic-elliptic-curve-reduction
+title: Bounded gaps between primes where an elliptic curve has cyclic reduction
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals with an irrational 2-torsion
+  point, and let m be a natural number. Then there are infinitely many runs of
+  m consecutive primes p_1 < ... < p_m such that the group E(F_p) is cyclic
+  for each of them and p_m - p_1 <= rad(Delta_E) exp(C m), where rad(Delta_E)
+  is the product of the primes of bad reduction and C is an absolute constant.
+statement_formal: |
+  p_m - p_1 \le \operatorname{rad}(\Delta_E)\cdot \exp(C'' m), \qquad E(\mathbb{F}_{p_i}) \text{ cyclic for } i = 1,\dots,m
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used through the effective Chebotarev density theorem of
+  Lagarias and Odlyzko, applied to the division fields Q(E[l]) of the curve,
+  which are in general not abelian over the rationals. The paper proves the
+  statement unconditionally when E has complex multiplication. The companion
+  result on primitive roots in the same paper (Theorem 1.1) is unconditional.
+sources:
+  - authors: R. C. Baker, P. Pollack
+    title: Bounded gaps between primes with a given primitive root, II
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1407.7186
+    hypothesis_location: Theorem 1.2 (hypothesis used in Proposition 4.2 and Section 5.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Status could arguably be partial because the complex multiplication case is proved unconditionally in the paper; I chose still-conditional because that case does not come from the Dirichlet hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, bounded-gaps, cyclic-reduction, effective-chebotarev]
+added: 2026-11-21

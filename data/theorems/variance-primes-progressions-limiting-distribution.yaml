@@ -1,0 +1,48 @@
+id: variance-primes-progressions-limiting-distribution
+title: Limiting distribution of the variance of primes in progressions modulo q
+field: analytic-number-theory
+statement_plain: >
+  Let V(x; q) be the sum over reduced residues a modulo q of
+  (psi(x; q, a) - psi(x, chi_0)/phi(q))^2. For fixed q, the quantity
+  phi(q) V(x; q) / x has a limiting logarithmic distribution as x tends to
+  infinity, equal to the distribution of an explicit random variable H_q
+  built from the zeros of the Dirichlet L-functions modulo q. The mean of H_q
+  is phi(q) log q (1 + O(log log q / log q)) and its variance is
+  2 phi(q) (log q)^2 (1 + O(1 / log log q)).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Linear Independence hypothesis LI: for each q
+  the non-negative imaginary parts of the zeros of the Dirichlet L-functions
+  modulo q are linearly independent over the rationals. It is needed to
+  identify the limiting distribution with that of H_q (Proposition 1.8). The
+  estimates for the mean and variance of H_q (Theorem 1.2) and for its large
+  deviations (Theorem 1.4) need only the Riemann Hypothesis for Dirichlet
+  L-functions, but they are statements about a random variable defined from
+  the zeros, not about primes.
+sources:
+  - authors: D. Fiorilli
+    title: The distribution of the variance of primes in arithmetic progressions
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1301.5663
+    hypothesis_location: Proposition 1.8 (with Theorem 1.2 for the mean and variance)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The entry combines Proposition 1.8 (needs GRH and LI) with the mean and variance from Theorem 1.2 (needs GRH only). A reviewer may prefer to record only one of them.
+    - >-
+      The paper's main purpose is to support a conjecture (Hooley's conjecture V(x; q) ~ x log q down to q around log log x); that conjecture is not proved and is not part of this entry.
+lean:
+  proved: false
+  path: null
+related: [chebyshev-bias]
+tags: [primes-in-arithmetic-progressions, variance, limiting-distribution, linear-independence]
+added: 2026-11-21

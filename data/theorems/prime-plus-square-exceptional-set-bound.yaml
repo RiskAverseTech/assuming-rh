@@ -1,0 +1,36 @@
+id: prime-plus-square-exceptional-set-bound
+title: Exceptional set for sums of a prime and a square
+field: additive-number-theory
+statement_plain: >
+  Let E(x) be the number of positive integers up to x that are neither a
+  square nor the sum of a prime and a square. Then
+  E(x) << x^(1/2) (log x)^(3/2) (log log x)^4 for x at least 4.
+statement_formal: |
+  E(x) \ll x^{1/2} (\log x)^{3/2} (\log\log x)^{4}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Hardy and Littlewood conjectured that E(x) is bounded. The paper reports
+  earlier conditional bounds with (log x)^4 (Mikawa) and (log x)^(3 + eps)
+  (Perelli and Zaccagnini) in place of (log x)^(3/2).
+sources:
+  - authors: Y. Suzuki
+    title: A remark on the conditional estimate for the sum of a prime and a square
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.04711
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes 'Generalized Riemann Hypothesis (GRH)' without naming the L-functions. The proof is a circle method argument whose conditional input (Lemma 1, after Languasco and Perelli) is a mean square estimate for the prime generating function near fractions a/q, which is where zeros of Dirichlet L-functions modulo q (and of zeta, for q = 1) enter; the cited sources were not read.
+lean:
+  proved: false
+  path: null
+tags: [hardy-littlewood, circle-method, exceptional-set, primes-and-squares]
+added: 2026-11-21

@@ -1,0 +1,42 @@
+id: least-prime-in-progression-fourier-optimization-eight-ninths
+title: Least prime in an arithmetic progression below (8/9) (phi(q) log q)^2
+field: analytic-number-theory
+statement_plain: >
+  Let P(a, q) be the least prime congruent to a modulo q, where gcd(a, q) = 1.
+  Then the lim sup, as q tends to infinity, of P(a, q) / (phi(q) log q)^2 is
+  at most C(3)^(-2), which is less than 8/9. Here C(3) is the value of an
+  explicit Fourier optimization problem defined in the paper.
+statement_formal: |
+  \limsup_{q\to\infty} \frac{P(a,q)}{(\varphi(q)\log q)^2} \le C(3)^{-2} < \frac{8}{9} \qquad (\gcd(a,q)=1)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This sharpens, for large q, the bound P(a, q) <= (phi(q) log q)^2 of
+  Lamzouri, Li and Soundararajan recorded in the entry
+  least-prime-in-arithmetic-progression; the proof uses that earlier bound as
+  an input. The paper also shows C(3)^(-2) > 0.8859, so the constant is
+  close to the limit of the method. The same paper proves that the least
+  quadratic non-residue modulo a prime p is at most (0.7615 + o(1)) (log p)^2
+  (Theorem 1), which is the subject of a separate entry.
+sources:
+  - authors: E. Carneiro, M. B. Milinovich, E. Quesada-Herrera, A. P. Ramos
+    title: Fourier optimization, the least quadratic non-residue, and the least prime in an arithmetic progression
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2404.08380
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The theorem is stated as a lim sup in q without saying in words that it is uniform in the residue class a; the proof treats an arbitrary a coprime to q with error terms that do not depend on a, so the statement is recorded as printed.
+lean:
+  proved: false
+  path: null
+related: [least-prime-in-arithmetic-progression, least-quadratic-nonresidue-fourier-optimization]
+tags: [primes-in-arithmetic-progressions, least-prime, fourier-optimization]
+added: 2026-11-21

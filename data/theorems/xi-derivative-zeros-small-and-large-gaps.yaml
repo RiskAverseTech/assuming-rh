@@ -1,0 +1,36 @@
+id: xi-derivative-zeros-small-and-large-gaps
+title: Small and large gaps between zeros of the derivative of the Riemann xi-function
+field: analytic-number-theory
+statement_plain: >
+  Write the zeros of xi'(s) as 1/2 + i gamma_1 and, for consecutive ordinates
+  gamma_1 <= gamma_1', let delta(gamma_1) = (gamma_1' - gamma_1) log(gamma_1) / (2 pi)
+  be the normalized gap, which is 1 on average. Then the lim inf of
+  delta(gamma_1) is less than 0.7203 and the lim sup is greater than 1.5.
+statement_formal: |
+  \liminf_{\gamma_1} \delta(\gamma_1) < 0.7203 \quad\text{and}\quad \limsup_{\gamma_1} \delta(\gamma_1) > 1.5, \qquad \delta(\gamma_1) = (\gamma_1' - \gamma_1)\,\frac{\log \gamma_1}{2\pi}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The Riemann Hypothesis is what places the zeros of xi'(s) on the critical
+  line, so that the gaps are defined as above. The same paper proves
+  (Theorem 2) that a positive proportion of the normalized gaps are less than
+  0.796 and a positive proportion are greater than 1.18.
+sources:
+  - authors: H. M. Bui
+    title: Gaps between zeros of the derivative of the Riemann ξ-function
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0903.4006
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, xi-function, zero-spacing]
+added: 2026-11-21
