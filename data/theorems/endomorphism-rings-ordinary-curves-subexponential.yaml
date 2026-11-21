@@ -1,0 +1,44 @@
+id: endomorphism-rings-ordinary-curves-subexponential
+title: Computing endomorphism rings of ordinary elliptic curves in subexponential time
+field: computational-number-theory
+statement_plain: >
+  The endomorphism ring of an ordinary elliptic curve over F_q can be
+  computed by a probabilistic algorithm, with failure probability o(1), in
+  time L(q)^(1+o(1)) + L(q)^(1/sqrt(2)+o(1)), where
+  L(x) = exp(sqrt(log x log log x)) and the first term only accounts for
+  factoring the discriminant of the Frobenius order.
+statement_formal: |
+  L(q)^{1+o(1)} + L(q)^{1/\sqrt2+o(1)}, \qquad L(x)=\exp\sqrt{\log x\,\log\log x}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The hypothesis is used for the running time and failure probability of the
+  search for relations in class groups of imaginary quadratic orders: Bach's
+  bound for generators of the class group, and the theorem of Jao, Miller and
+  Venkatesan on near-uniform distribution of short products of small primes
+  in the class group (Theorem 6.1 of the paper). Both concern L-functions of
+  class group characters. The paper says the output can be verified
+  unconditionally by a certification method from earlier work.
+sources:
+  - authors: G. Bisson
+    title: Computing endomorphism rings of elliptic curves under the GRH
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1101.4323
+    hypothesis_location: "Theorem 5.3, through Proposition 5.2, Theorem 6.1 and Proposition 6.4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes only GRH. The classification as Hecke L-functions comes from the tools it cites (Bach's generator bound and Corollary 1.3 of Jao, Miller and Venkatesan for class groups of imaginary quadratic orders).
+lean:
+  proved: false
+  path: null
+related: [isogeny-graphs-ordinary-elliptic-curves-expanders]
+tags: [algorithms, elliptic-curves, endomorphism-rings, class-groups]
+added: 2026-11-21

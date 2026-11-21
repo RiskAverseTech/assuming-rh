@@ -1,0 +1,55 @@
+id: supersingular-endring-maxorder-equivalence
+title: The supersingular endomorphism ring and maximal order problems are equivalent
+field: complexity-theory
+statement_plain: >
+  For supersingular elliptic curves, the problem of computing a basis of the
+  endomorphism ring (EndRing) and the problem of finding a maximal order of
+  the quaternion algebra isomorphic to the endomorphism ring (MaxOrder) are
+  equivalent under probabilistic polynomial time reductions. They are also
+  equivalent to the isogeny problem, the one endomorphism problem and the
+  problem of computing the lattice of all isogenies between two curves.
+statement_formal: null
+hypotheses_required: [GRH-Hecke]
+status: proved-otherwise
+status_note: >
+  The reductions between EndRing and MaxOrder were known earlier only under
+  the generalized Riemann hypothesis, by Wesolowski (FOCS 2021), following a
+  heuristic equivalence of Eisenträger, Hallgren, Lauter, Morrison and Petit.
+  Herlédan Le Merdy and Wesolowski prove the equivalence with no hypothesis
+  (Theorem 1). They say the earlier reductions needed the hypothesis to
+  provably avoid hard factorizations and for the distribution of numbers
+  represented by quadratic forms. One link stays conditional: the paper says
+  the reduction from the l-isogeny path problem to the other problems is
+  still known only under the hypothesis, and its average-case Theorem 2
+  needs the hypothesis in two named cases.
+sources:
+  - authors: B. Wesolowski
+    title: The supersingular isogeny path and endomorphism ring problems are equivalent
+    year: 2022
+    venue: "62nd Annual Symposium on Foundations of Computer Science (FOCS 2021), 1100-1111"
+    hypothesis_location: "Not read for this entry; cited by Herlédan Le Merdy and Wesolowski as assuming the generalized Riemann hypothesis"
+    role: conditional-proof
+  - authors: A. Herlédan Le Merdy, B. Wesolowski
+    title: Unconditional foundations for supersingular isogeny-based cryptography
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2502.17010
+    hypothesis_location: Theorem 1 (no hypothesis)
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The earlier conditional paper was not read. The paper read says only GRH; the code GRH-Hecke is a cautious guess based on its remark that the hypothesis governs the distribution of integers represented by quadratic forms, not something it states.
+    - >-
+      The year is that of the arXiv version read (v2, 2026); the first version is from 2025.
+    - >-
+      Part of Theorem 1 (the reductions between EndRing, OneEnd and Isogeny) is credited by the paper to Page and Wesolowski, whose paper is the source of the entry supersingular-endomorphism-ring-sqrt-p-algorithm in this batch.
+lean:
+  proved: false
+  path: null
+tags: [supersingular-curves, endomorphism-rings, isogenies, cryptography]
+added: 2026-11-21

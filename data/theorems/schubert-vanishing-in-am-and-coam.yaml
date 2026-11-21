@@ -1,0 +1,44 @@
+id: schubert-vanishing-in-am-and-coam
+title: Vanishing of Schubert coefficients is in AM and coAM
+field: complexity-theory
+statement_plain: >
+  The problem of deciding whether a Schubert coefficient (a structure
+  constant for the product of two Schubert polynomials) is zero lies in the
+  complexity class AM intersected with coAM.
+statement_formal: |
+  \mathrm{SchubertVanishing} \in \mathsf{AM} \cap \mathsf{coAM}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The proof reduces the problem and its complement to the parametric Hilbert
+  Nullstellensatz, which is in AM under the hypothesis by a theorem of
+  Ait El Manssour, Balaji, Nosan, Shirmohammadi and Worrell extending
+  Koiran's theorem (see the entry nullstellensatz-polynomial-hierarchy). The
+  hypothesis enters only through that cited theorem; Koiran's argument needs
+  small primes modulo which a polynomial system is solvable, obtained from
+  an effective Chebotarev estimate for general number fields. The membership
+  in coAM is from an earlier paper of the same authors; the membership in AM
+  is new here.
+sources:
+  - authors: I. Pak, C. Robichaux
+    title: Vanishing of Schubert coefficients is in ${\sf AM}\cap {\sf coAM}$ assuming the GRH
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2504.03004
+    hypothesis_location: "Theorem 1.1, through Theorem 3.1 (cited) and Lemma 3.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper defines GRH loosely as the statement that all nontrivial zeros of L-functions L(s, chi_k) have real part 1/2. The code ERH-Dedekind follows the existing classification of Koiran's theorem, on which the cited parametric result is said to build; the cited paper was not read.
+lean:
+  proved: false
+  path: null
+related: [nullstellensatz-polynomial-hierarchy]
+tags: [schubert-calculus, complexity, arthur-merlin, chebotarev]
+added: 2026-11-21

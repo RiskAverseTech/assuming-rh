@@ -1,0 +1,44 @@
+id: quadratic-form-from-genus-polynomial-time
+title: Generating a quadratic form in a given genus in polynomial time
+field: computational-number-theory
+statement_plain: >
+  Given a description (a valid symbol) of a non-empty genus of integral
+  quadratic forms in n variables with determinant d, a randomized algorithm
+  outputs a quadratic form in that genus with constant probability, in time
+  polynomial in n and log d.
+statement_formal: |
+  \text{time } \mathrm{poly}(n, \log d)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used for the running time, in two places: a
+  quantitative form of Dirichlet's theorem (the paper's Theorem 3: among the
+  integers a + zq up to q^3 a proportion of order 1/log of them are prime),
+  used to sample a prime in a prescribed residue class, and the bound
+  3 (ln p)^2 / 2 for the least quadratic non-residue modulo p. Both concern
+  Dirichlet L-functions only.
+sources:
+  - authors: C. Dubey, T. Holenstein
+    title: Generating a Quadratic Forms from a Given Genus
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1409.6913
+    hypothesis_location: "Theorem 33, through Theorem 23 (Section 7.7) and Theorem 3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 33 itself does not mention the hypothesis; the abstract does, and the proof of Theorem 23 uses it. The paper writes GRH in some places and ERH in others without defining either.
+    - >-
+      The year is that of the arXiv version read (v2, 2015); the first version is from 2014.
+    - >-
+      The two uses found (primes in arithmetic progressions and least quadratic non-residue) were located by searching the text for the hypothesis; a reviewer should confirm that the cited subroutines (for example from earlier work of the same authors) bring in nothing more.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, quadratic-forms, lattices]
+added: 2026-11-21

@@ -1,0 +1,44 @@
+id: sum-of-square-roots-slp-one-dimensional-reduction
+title: Sum of square roots for straight line programs reduces to the one-dimensional case
+field: complexity-theory
+statement_plain: >
+  Consider the problem: given straight line programs computing positive
+  integers a_1, ..., a_n and signs delta_i in {-1, 1}, decide whether the
+  signed sum of the square roots sqrt(a_i) is zero. There is a randomized
+  polynomial time Turing reduction from this problem to its special case in
+  which the square roots sqrt(a_1), ..., sqrt(a_n) are promised to span a
+  one-dimensional space over the rationals.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used in the randomized test of whether an integer a
+  given by a straight line program of size t (so a can be as large as
+  2^(2^t)) is a perfect square: reduce a modulo a random prime of polynomial
+  bit length and test whether it is a square. That enough small primes detect
+  a non-square is shown with the effective Chebotarev density theorem (Serre's
+  version) applied to the splitting field of X^2 - a, a quadratic field. The
+  zeta function of a quadratic field is the Riemann zeta function times a
+  Dirichlet L-function of a quadratic character, so only covered hypotheses
+  are needed.
+sources:
+  - authors: L. Gaillard, G. Jindal
+    title: On the Order of Power Series and the Sum of Square Roots Problem
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2304.13605
+    hypothesis_location: "Theorem 11, through Lemma 14 in Section 4.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only GRH. The reduction to RH and one quadratic Dirichlet L-function is this draft's reading of Lemma 14, which the paper says follows from Serre's Theorem 4 for the splitting field of X^2 - a; a reviewer should confirm that no other step of the proof of Theorem 11 uses the hypothesis for a larger field.
+lean:
+  proved: false
+  path: null
+tags: [sum-of-square-roots, straight-line-programs, complexity, chebotarev]
+added: 2026-11-21
