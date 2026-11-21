@@ -1,0 +1,44 @@
+id: li-coefficients-asymptotic-growth
+title: Asymptotic growth of the Li coefficients
+field: analytic-number-theory
+statement_plain: >
+  Let lambda_n be the sum over the nontrivial zeros rho of the Riemann zeta
+  function (grouped in pairs rho, 1 - rho) of 1 - (1 - 1/rho)^n. Then as n
+  tends to infinity, lambda_n = (1/2) n (log n - 1 + gamma - log 2 pi) + o(n),
+  where gamma is Euler's constant.
+statement_formal: |
+  \lambda_n = \tfrac12\, n\left(\log n - 1 + \gamma - \log 2\pi\right) + o(n) \quad (n \to \infty), \qquad \lambda_n = \sum_{\rho}\left[1 - \left(1 - \tfrac{1}{\rho}\right)^{n}\right]
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The paper's theorem is a dichotomy: the
+  displayed tempered growth holds if and only if RH is true, and otherwise
+  lambda_n oscillates with exponentially growing amplitude. The paper notes
+  that the formula under RH had been displayed by Keiper and proved in an
+  unpublished argument of Oesterlé, and that the converse is also implied by
+  results of Bombieri and Lagarias. The paper indicates analogous asymptotics
+  for more general zeta and L-functions; this entry records only the Riemann
+  zeta case.
+sources:
+  - authors: A. Voros
+    title: Sharpenings of Li's criterion for the Riemann Hypothesis
+    year: 2006
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0506326
+    hypothesis_location: Theorem (asymptotic criterion for the Riemann Hypothesis), equation (17)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's main derivation uses a saddle-point evaluation presented with limited rigour; the RH-true direction is also given by a real-analytic argument attributed to Oesterlé. A reviewer should confirm that both directions count as proved.
+    - >-
+      The paper writes the asymptotic as "mod o(n)"; it is recorded here as an o(n) error term.
+lean:
+  proved: false
+  path: null
+tags: [li-criterion, zeta-zeros, equivalent-to-rh]
+added: 2026-11-21

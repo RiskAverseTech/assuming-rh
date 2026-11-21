@@ -1,0 +1,36 @@
+id: dedekind-psi-primorial-lower-bound
+title: Lower bound for the Dedekind psi function at primorials
+field: analytic-number-theory
+statement_plain: >
+  Let Psi(n) = n times the product of (1 + 1/p) over the primes p dividing n
+  be the Dedekind psi function, and let N_n be the product of the first n
+  primes. Then Psi(N_n) / (N_n log log N_n) > e^gamma / zeta(2) for every
+  n at least 3, where gamma is Euler's constant.
+statement_formal: |
+  \frac{\Psi(N_n)}{N_n \log\log N_n} > \frac{e^{\gamma}}{\zeta(2)} \qquad (n \ge 3), \qquad \Psi(m) = m\prod_{p \mid m}\left(1 + \frac{1}{p}\right), \quad N_n = \prod_{k=1}^{n} p_k
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. Theorem 1 gives the inequality under RH
+  and Theorem 2 gives the equivalence. The proof reduces to Nicolas's theorem
+  on the Euler totient function at primorials.
+sources:
+  - authors: P. Solé, M. Planat
+    title: Extreme values of the Dedekind Psi function
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1011.1825
+    hypothesis_location: Theorem 1 (inequality under RH) and Theorem 2 (equivalence)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [robin-inequality]
+tags: [dedekind-psi-function, primorials, equivalent-to-rh]
+added: 2026-11-21
