@@ -10,7 +10,7 @@ statement_formal: |
 hypotheses_required: [RH, GRH-Dirichlet]
 status: proved-otherwise
 status_note: >
-  McGown proved this in 2012 assuming GRH for Dirichlet L-functions. Bagger,
+  McGown proved this assuming GRH for Dirichlet L-functions. Bagger,
   Booker, Kerr, McGown, Starichkova and Trudgian have since proved it
   without any hypothesis (arXiv 2507.05862), by new explicit bounds for
   cubic non-residues and further computation. In McGown's paper a footnote
