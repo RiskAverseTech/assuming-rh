@@ -1,0 +1,44 @@
+id: odd-order-character-sums-granville-soundararajan-bound
+title: Maximal sums of odd order characters beat the Montgomery-Vaughan bound
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character modulo q of odd order g, and let
+  M(chi) be the maximum over x of |sum_{n <= x} chi(n)|. Then M(chi) is at
+  most a constant depending on g times
+  sqrt(q) (log log q)^(1 - delta_g/2 + o(1)), where
+  delta_g = 1 - (g/pi) sin(pi/g).
+statement_formal: |
+  M(\chi) \ll_g \sqrt{q}\,(\log\log q)^{1-\frac{\delta_g}{2}+o(1)}, \qquad \delta_g = 1-\frac{g}{\pi}\sin\frac{\pi}{g}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This improves, for characters of odd order, the bound
+  M(chi) << sqrt(q) log log q of Montgomery and Vaughan, which holds for all
+  primitive characters under the same hypothesis. The paper's footnote says
+  the hypothesis is needed for all Dirichlet L-functions, not only for
+  L(s, chi). The unconditional analogue in the same paper (Theorem 1) has
+  log q in place of log log q. The paper also shows under the hypothesis that
+  M(chi) >> sqrt(q) (log log q)^(1 - delta_g - o(1)) for some primitive
+  characters of odd order g with arbitrarily large q.
+sources:
+  - authors: A. Granville, K. Soundararajan
+    title: "Large character sums: pretentious characters and the Polya-Vinogradov theorem"
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0503113
+    hypothesis_location: Theorem 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The dataset already has two sharper later bounds for odd order characters (the entries listed under related). This entry records the original, weaker exponent 1 - delta_g/2; a reviewer may prefer to merge it into those entries.
+lean:
+  proved: false
+  path: null
+related: [odd-order-character-sums-sharp-bound, odd-order-character-sums-polya-vinogradov-improvement]
+tags: [character-sums, polya-vinogradov, dirichlet-characters]
+added: 2026-11-21

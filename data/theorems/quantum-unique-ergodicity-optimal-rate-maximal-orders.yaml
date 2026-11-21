@@ -1,0 +1,55 @@
+id: quantum-unique-ergodicity-optimal-rate-maximal-orders
+title: Quantum unique ergodicity with optimal rate on arithmetic hyperbolic surfaces
+field: analytic-number-theory
+statement_plain: >
+  Let X be the quotient of the upper half plane by the norm one units of a
+  maximal order in an indefinite quaternion algebra over Q (for the split
+  algebra, X is the modular surface). Let psi_j be the L^2-normalized
+  Hecke-Maass eigenforms on X with Laplace eigenvalues lambda_j, and mu_j the
+  measure |psi_j|^2 dx dy / y^2. Then for smooth compactly supported f, the
+  integral of f against mu_j differs from its integral against the
+  normalized uniform measure mu_0 by
+  O(lambda_j^(-1/4 + eps) ||f||), where ||f|| is the Sobolev norm of order
+  1/2. This is the quantitative form of quantum unique ergodicity
+  conjectured by Luo and Sarnak.
+statement_formal: |
+  \int_X f\,d\mu_j - \int_X f\,d\mu_0 \ll_{\varepsilon} \lambda_j^{-\frac14+\varepsilon}\,\|f\|_{L^{2,1/2}}
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+status_note: >
+  The theorem is stated under a Lindelof-type bound, with a parameter a
+  between 0 and 1, for the central values of the triple product L-functions
+  L(1/2, rho_j x rho_j x rho_j') of the eigenforms (and
+  L(1/2, rho_j x rho_j x rho_E) with unitary Eisenstein series when the
+  algebra is split). The entry records the case a = 0, which the paper says
+  follows from the Grand Riemann Hypothesis for these L-functions; they are
+  automorphic L-functions of degree 8 and are not covered. The paper says
+  any a < 1 already gives quantum unique ergodicity without the optimal
+  rate, and that the exponent -1/4 cannot be lowered.
+sources:
+  - authors: T. C. Watson
+    title: Rankin triple products and quantum chaos
+    year: 2008
+    venue: PhD thesis, Princeton University, 2002 (revised 2008)
+    url: https://arxiv.org/abs/0810.0425
+    hypothesis_location: Theorem 4 and Corollary 1 in Chapter 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem's literal hypothesis is a Lindelof-type bound for central values of triple product L-functions, not a Riemann Hypothesis; the paper says the Grand Riemann Hypothesis implies it with a = 0. A reviewer should decide whether such a result belongs in the dataset.
+    - >-
+      RH is listed because for the modular surface the hypothesis includes the Eisenstein case, whose triple product L-function should factor through the Riemann zeta function and a symmetric square L-function. This factorization is my reading, not a statement quoted from the paper.
+    - >-
+      Quantum unique ergodicity without a rate may since have been proved unconditionally for these surfaces by other methods (work of Lindenstrauss and of Soundararajan, from memory). The paper does not say so, so the entry does not use it; the optimal rate recorded here would in any case remain conditional. Please check.
+    - >-
+      The exact normalization of mu_0 and the constant's dependence on X were read from the extracted text of Theorem 4 and Corollary 1, not from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [quantum-chaos, maass-forms, triple-product-l-functions]
+added: 2026-11-21

@@ -1,0 +1,48 @@
+id: bounded-elementary-generation-sl2-s-integers
+title: Bounded elementary generation of SL_2 over S-integers with infinitely many units
+field: algebraic-number-theory
+statement_plain: >
+  Let O be the ring of S-integers in a number field k and suppose the unit
+  group of O is infinite. Then every matrix in SL_2(O) is a product of at most
+  9 elementary matrices.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: proved-otherwise
+status_note: >
+  Cooke and Weinberger (1975) proved this, with the same bound 9, assuming
+  what the cited paper calls a suitable form of the Generalized Riemann
+  Hypothesis. Morgan, Rapinchuk and Sury (arXiv 1708.09262) prove it
+  unconditionally, using only standard results such as Artin reciprocity and
+  the Chebotarev density theorem. They also note an earlier unconditional
+  proof by Carter, Keller and Paige (written up by Morris) that gives no
+  explicit bound. The code ERH-Dedekind for the Cooke and Weinberger
+  hypothesis is a cautious guess and was not checked against their paper.
+sources:
+  - authors: G. Cooke, P. J. Weinberger
+    title: On the construction of division chains in algebraic number rings, with applications to SL_2
+    year: 1975
+    venue: Comm. Algebra 3, 481-524
+    role: conditional-proof
+  - authors: A. V. Morgan, A. S. Rapinchuk, B. Sury
+    title: Bounded generation of SL_2 over rings of S-integers with infinitely many units
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1708.09262
+    hypothesis_location: Theorem 1.1 (unconditional; the conditional history is in the paragraph after it)
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Which L-functions Cooke and Weinberger need is not stated in the paper read; it says only "a suitable form of the Generalized Riemann Hypothesis". Their paper was not available. ERH-Dedekind was chosen because results of Artin primitive root type over number fields are usually proved with Dedekind zeta functions of Kummer-type extensions; a reviewer should confirm this from the 1975 paper. The status proved-otherwise does not depend on this choice.
+    - >-
+      The Cooke and Weinberger citation details were copied from the reference list of the paper read, where the title's remaining words and page range are as printed there.
+lean:
+  proved: false
+  path: null
+related: [euclidean-number-rings]
+tags: [bounded-generation, special-linear-group, s-integers]
+added: 2026-11-21

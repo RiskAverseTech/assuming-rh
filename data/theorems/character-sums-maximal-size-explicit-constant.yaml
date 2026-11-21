@@ -1,0 +1,39 @@
+id: character-sums-maximal-size-explicit-constant
+title: Character sums are at most (2 e^gamma / pi + o(1)) sqrt(q) log log q
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character modulo q. Then for every x,
+  |sum_{n <= x} chi(n)| is at most (2 e^gamma / pi + o(1)) sqrt(q) log log q.
+  Further, every sum of chi(n) over an interval x <= n <= x + y is at most
+  (4 e^gamma / (pi sqrt(3)) + o(1)) sqrt(q) log log q in absolute value.
+  Here gamma is the Euler-Mascheroni constant.
+statement_formal: |
+  \Bigl|\sum_{n\le x}\chi(n)\Bigr| \le \Bigl(\frac{2e^{\gamma}}{\pi}+o(1)\Bigr)\sqrt{q}\,\log\log q, \qquad \Bigl|\sum_{x\le n\le x+y}\chi(n)\Bigr| \le \Bigl(\frac{4e^{\gamma}}{\pi\sqrt{3}}+o(1)\Bigr)\sqrt{q}\,\log\log q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This makes explicit the constant in the bound
+  M(chi) << sqrt(q) log log q of Montgomery and Vaughan. The paper notes that
+  it differs from Paley's lower bound (e^gamma / pi + o(1)) sqrt(q) log log q,
+  valid for infinitely many quadratic characters, by only a factor of 2. The
+  paper's footnote says the hypothesis is needed for all Dirichlet
+  L-functions, not only for L(s, chi).
+sources:
+  - authors: A. Granville, K. Soundararajan
+    title: "Large character sums: pretentious characters and the Polya-Vinogradov theorem"
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0503113
+    hypothesis_location: Theorem 6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [character-sums, polya-vinogradov, dirichlet-characters]
+added: 2026-11-21

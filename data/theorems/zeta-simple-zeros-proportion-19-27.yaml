@@ -1,0 +1,38 @@
+id: zeta-simple-zeros-proportion-19-27
+title: At least 19/27 of the zeros of the Riemann zeta-function are simple
+field: analytic-number-theory
+statement_plain: >
+  Let N(T) count the zeros of the Riemann zeta-function with imaginary part
+  in (0, T), with multiplicity, and let N*(T) count those that are simple.
+  Then the lower limit of N*(T) / N(T) as T tends to infinity is at least
+  19/27. As a corollary, the proportion of distinct zeros is at least
+  0.84665.
+statement_formal: |
+  \kappa^{*} := \liminf_{T\to\infty}\frac{N^{*}(T)}{N(T)} \ \ge\ \frac{19}{27}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Conrey, Ghosh and Gonek had proved the same bound assuming RH together
+  with the Generalised Lindelof Hypothesis. This paper removes the second
+  assumption, so only RH for the Riemann zeta-function is needed.
+sources:
+  - authors: H. M. Bui, D. R. Heath-Brown
+    title: On simple zeros of the Riemann zeta-function
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1302.5018
+    hypothesis_location: "Theorem (Section 1) and its Corollary"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Dirichlet characters appear in the proof, but the paper says it avoids assuming GRH for them (Section 2) and that the identity for S_2 is the only place RH is needed. This was read from the paper's own remarks; the proof was not checked line by line.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, simple-zeros, mollifier-method]
+added: 2026-11-21
