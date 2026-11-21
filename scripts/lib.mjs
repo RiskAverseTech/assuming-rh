@@ -113,6 +113,11 @@ export function validateEntry(entry, fileName, taxonomy, knownIds = null, waitin
     }
   }
 
+  // Results submitted by their own authors start at low confidence.
+  if (entry.author_submitted && entry.review.state === 'ai-classified' && entry.review.confidence !== 'low') {
+    errors.push('author_submitted entries must have review.confidence "low" until someone independent has checked them');
+  }
+
   // Review state consistency.
   const r = entry.review;
   if (r.state === 'ai-classified' && (!blank(r.checked_by) || !blank(r.checked_on))) {

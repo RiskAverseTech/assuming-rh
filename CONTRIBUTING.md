@@ -37,6 +37,19 @@ npm test
 - Cite the original paper. Fill in `hypothesis_location` (the theorem or section where the hypothesis is used) when you know it.
 - Put every doubt in `review.open_questions`. An honest open question is better than a confident guess.
 
+## Contributing your own result
+
+You may add a result of your own. If its source is not yet refereed or is your own preprint, add this block to the entry so readers can see that:
+
+```yaml
+author_submitted:
+  by: your name or GitHub handle
+  source_standing: self-published      # or preprint-by-contributor
+  note: null
+```
+
+Such entries are labeled "Author-submitted, unrefereed", are left out of the headline counts, and must use `confidence: low` until someone independent has checked them. Please do not put the hypothesis in `statement_plain` (write the result, not "Assume RH"). The block is removed once the source appears in a refereed venue or an independent expert has checked the entry.
+
 ## Review states
 
 - `ai-classified`: drafted by an AI system, not checked by a human. `checked_by` and `checked_on` stay `null`.
