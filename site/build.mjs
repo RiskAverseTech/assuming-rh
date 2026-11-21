@@ -362,8 +362,8 @@ function buildAbout() {
 
 <h2 id="meaning">What this does and does not mean</h2>
 <ul>
-  <li><strong>Checked by a machine is not the same as understood by people.</strong> The proof is reported to
-  have been checked step by step by computer. No account of the argument that mathematicians can read,
+  <li><strong>Checked by a machine is not the same as understood by people.</strong> Several independent proof
+  checkers have accepted the formal proof. No account of the argument that mathematicians can read,
   follow and explain has been reviewed. Until one has, the result is not accepted, and this site treats it
   as a claim.</li>
   <li><strong>This list depends on the theorem being true, not on the proof being readable.</strong> A result
