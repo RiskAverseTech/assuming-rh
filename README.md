@@ -20,7 +20,7 @@ If you see a mistake, please tell us. Every entry on the site has a "suggest a c
 
 ## What this does and does not mean
 
-- **Checked by a machine is not the same as understood by people.** The proof is reported to have been checked step by step by computer. No account of the argument that mathematicians can read, follow and explain has been reviewed. Until one has, the result is not accepted, and this project treats it as a claim.
+- **Checked by a machine is not the same as understood by people.** Several independent proof checkers have accepted the formal proof. No account of the argument that mathematicians can read, follow and explain has been reviewed. Until one has, the result is not accepted, and this project treats it as a claim.
 - **This list depends on the theorem being true, not on the proof being readable.** A result that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.
 - **This project does not judge the proof.** It does not assess, endorse or add evidence for it. It records what would follow, and what would not.
 
@@ -34,7 +34,7 @@ An open dataset and a static website that answer that question, one theorem at a
 
 **Everything here is provisional.**
 
-1. **The proof is claimed, not accepted.** On 20 November 2026 Levent Alpöge released a Lean 4 formalization claiming a proof of the Riemann Hypothesis (RH) and of the Generalized Riemann Hypothesis for Dirichlet L-functions. Machine checks have been reported. The mathematical community has not accepted the result. Every "unlocked" label holds only if it is accepted. The current status, its sources and the date it was last updated are in [`data/meta/proof-status.yaml`](data/meta/proof-status.yaml), and the site shows them in a banner on every page.
+1. **The proof is claimed, not accepted.** On 20 November 2026 Levent Alpöge released a Lean 4 formalization claiming a proof of the Riemann Hypothesis (RH) and of the Generalized Riemann Hypothesis for Dirichlet L-functions. Several independent proof checkers have accepted it. The mathematical community has not accepted the result. Every "unlocked" label holds only if it is accepted. The current status, its sources and the date it was last updated are in [`data/meta/proof-status.yaml`](data/meta/proof-status.yaml), and the site shows them in a banner on every page.
 2. **Every entry carries a review state.** `ai-classified` means an AI system drafted the entry and no human expert has checked it. `human-checked` means a named person checked it against the primary source. `lean-verified` means the implication is formalized in Lean. At the moment every entry is `ai-classified`. Treat them as drafts.
 3. **Corrections are wanted.** Every entry page links to a prefilled "suggest a correction" issue. See [CONTRIBUTING.md](CONTRIBUTING.md).
 4. **Sources are cited on every entry**, with the place in the paper where the hypothesis is invoked when that is known. Where it is not yet recorded, the entry says so.

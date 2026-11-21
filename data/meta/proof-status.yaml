@@ -1,14 +1,14 @@
 # Verification status of the proof every "unlocked" label depends on.
 # The site banner and the method page read this file. Update last_updated
 # whenever anything here changes.
-status: Claimed. Machine checks reported. Not yet accepted by the mathematical community.
+status: Claimed. Checked by several independent proof checkers. Not yet accepted by the mathematical community.
 headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
 summary: >
   On 20 November 2026 Levent Alpöge released a proof, written in a form that
   computers can check, of the Riemann Hypothesis and of its extension to
-  Dirichlet L-functions. Independent computer checks have been reported and
-  at least one more was still running when this was written. No account of
-  the proof has been reviewed and published by mathematicians.
+  Dirichlet L-functions. Several independent proof checkers have since
+  accepted it. No account of the argument has been reviewed and published by
+  mathematicians.
 last_updated: 2026-11-21
 claims:
   - The Riemann Hypothesis, stated with Mathlib's own definition.
@@ -16,23 +16,32 @@ claims:
   - Nothing is claimed for Dedekind zeta functions, Hecke, Artin or automorphic L-functions.
 caveats:
   - >
-    A formal proof checked by the Lean kernel shows that the formal statement
-    follows from the axioms. Whether the formal statement says what
-    mathematicians mean by the hypothesis is a separate, human question.
-    The headline statements are short and use Mathlib definitions.
+    A formal proof accepted by a proof checker shows that the formal
+    statement follows from the axioms. Whether the formal statement says
+    what mathematicians mean by the hypothesis is a separate, human
+    question. The headline statements are short and use Mathlib definitions,
+    and participants in the public discussion were still talking through
+    that question on 21 November 2026.
   - >
-    One public third-party check had passed its source scan but had not
-    finished building the proof on 21 November 2026. Press reports say other
-    independent kernel checks have passed. This project has not run a check
-    of its own.
+    The checks reported in the public discussion on the Lean community chat
+    include the standard Lean build, a statement comparison and axiom check,
+    and acceptance by several independently written checkers (among them
+    nanoda and con-leche). This project has not run a check of its own.
+  - >
+    Checked by machine is not the same as understood. No human-readable
+    account of the argument has been reviewed.
   - >
     The released archive carries no licence file, so it is not reused or
-    redistributed here.
+    redistributed here. The same point was raised in the public discussion
+    and had not been answered when this was written.
   - >
-    The entries in this file were gathered by an AI research pass on
-    21 November 2026 and have not yet been re-read by a human. Sources
-    marked "reported" were seen only as search summaries.
+    This file was compiled by an AI system from the sources below and has
+    not yet been re-read by a human. Sources marked "reported" were seen
+    only as search summaries.
 sources:
+  - label: "Lean community chat, public thread on the proof, including the checker results (read directly)"
+    url: https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/Discussion.3A.20Alp.C3.B6ge.20Proves.20the.20Riemann.20Hypothesis
+    accessed: 2026-11-21
   - label: "Third-party mirror of the Lean archive, with the headline statements (read directly)"
     url: https://github.com/CocoSgt/riemann-hypothesis-lean
     accessed: 2026-11-21
