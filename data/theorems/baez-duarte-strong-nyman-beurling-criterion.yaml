@@ -1,0 +1,41 @@
+id: baez-duarte-strong-nyman-beurling-criterion
+title: Baez-Duarte criterion (strong Nyman-Beurling criterion)
+field: analytic-number-theory
+statement_plain: >
+  In the Hilbert space L^2 of the positive half-line with measure dt / t^2,
+  the indicator function chi of [1, infinity) belongs to the closure of the
+  linear span of the functions e_k(t) = {t/k}, k = 1, 2, 3, ..., where {u}
+  is the fractional part of u.
+statement_formal: |
+  \chi_{[1,\infty)} \in \overline{\operatorname{span}}\,\{\, e_k : k \ge 1 \,\} \ \text{ in } L^2\!\left((0,\infty),\, t^{-2}\,dt\right), \qquad e_k(t) = \{t/k\}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The equivalence is due to L. Baez-Duarte
+  (2003), strengthening the Nyman-Beurling criterion; the cited paper is
+  mainly expository and recalls it as Proposition 10 together with six
+  equivalent variants. Its own contribution (Proposition 13, following
+  Weingartner's formulation) is the restatement nu = mu, where nu is the
+  arithmetical function attached to the orthogonal projection of chi on the
+  closure of the span of the e_k and mu is the Mobius function.
+sources:
+  - authors: M. Balazard
+    title: An arithmetical function related to Baez-Duarte's criterion for the Riemann hypothesis
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1812.04309
+    hypothesis_location: Proposition 10
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The cited paper re-states an equivalence due to Baez-Duarte (reference [2] of the paper) rather than proving it; the original proof was not read.
+lean:
+  proved: false
+  path: null
+tags: [riemann-hypothesis-equivalent, nyman-beurling, hilbert-space]
+added: 2026-11-21

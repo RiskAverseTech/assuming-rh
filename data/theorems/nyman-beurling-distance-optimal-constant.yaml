@@ -1,0 +1,38 @@
+id: nyman-beurling-distance-optimal-constant
+title: Optimal Dirichlet polynomials in the Nyman-Beurling-Baez-Duarte criterion
+field: analytic-number-theory
+statement_plain: >
+  Let V_N(s) be the sum over n up to N of (1 - log n / log N) mu(n) n^(-s).
+  Then (1/(2 pi)) times the integral over real t of
+  |1 - zeta(1/2 + it) V_N(1/2 + it)|^2 / (1/4 + t^2) is asymptotic to
+  (2 + gamma - log(4 pi)) / log N as N tends to infinity, where gamma is
+  Euler's constant. This matches Burnol's lower bound for the
+  Nyman-Beurling-Baez-Duarte distance.
+statement_formal: |
+  \frac{1}{2\pi}\int_{-\infty}^{\infty} \left|1 - \zeta V_N\!\left(\tfrac12 + it\right)\right|^2 \frac{dt}{\tfrac14 + t^2} \sim \frac{2 + \gamma - \log 4\pi}{\log N}, \qquad V_N(s) = \sum_{n=1}^{N} \left(1 - \frac{\log n}{\log N}\right) \frac{\mu(n)}{n^s}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  Besides RH the theorem assumes that the sum of 1/|zeta'(rho)|^2 over zeros
+  rho with |Im rho| <= T is O(T^(3/2 - delta)) for some delta > 0. The paper
+  notes that this condition implicitly assumes that all zeros of zeta are
+  simple. Neither the bound nor simplicity of the zeros follows from RH.
+sources:
+  - authors: S. Bettin, J. B. Conrey, D. W. Farmer
+    title: An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1211.5191
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [nyman-beurling, zeta-derivative-at-zeros, simple-zeros]
+added: 2026-11-21
