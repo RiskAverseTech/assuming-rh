@@ -120,7 +120,7 @@ Later the same day: Weinberger's 1973 paper on class group exponents was read (s
 
 ## Update: papers supplied by Jaz
 
-Six more papers were read from PDFs supplied by hand (Bach 1990, Hafner and McCurley 1989, Belabas, Diaz y Diaz and Friedman 2008, Schoenfeld 1976, Shoup 1992, Koiran 1996, and the 1997 Goldbach paper). The PDFs are kept outside the repository.
+Seven more papers were read from PDFs supplied by hand (Bach 1990, Hafner and McCurley 1989, Belabas, Diaz y Diaz and Friedman 2008, Schoenfeld 1976, Shoup 1992, Koiran 1996, and the 1997 Goldbach paper). The PDFs are kept outside the repository.
 
 | Entry | Result |
 |---|---|
@@ -132,4 +132,4 @@ Six more papers were read from PDFs supplied by hand (Bach 1990, Hafner and McCu
 | Koiran | The journal version proves RP^NP, the second level of the polynomial hierarchy, not AM. Entry retitled and its id changed to `nullstellensatz-polynomial-hierarchy`. The hypothesis enters through effective Chebotarev, as classified. |
 | Ternary Goldbach | The 1997 paper defines GRH as all Dirichlet L-functions. Confirmed. |
 
-No status changed. One entry was retitled and several statements were tightened. 14 of 31 entries have now been compared with at least one of their primary sources. All remain `ai-classified`.
+No status changed. One entry was retitled and several statements were tightened. 13 of 31 entries have now been compared with at least one of their primary sources. All remain `ai-classified`.
