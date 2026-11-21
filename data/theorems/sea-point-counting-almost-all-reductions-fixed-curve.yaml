@@ -1,0 +1,49 @@
+id: sea-point-counting-almost-all-reductions-fixed-curve
+title: Schoof-Elkies-Atkin runs in (log p)^(4+o(1)) time for almost all reductions of a fixed elliptic curve
+field: computational-number-theory
+statement_plain: >
+  Let E be an elliptic curve over Q without complex multiplication. For
+  every P >= 3, the Schoof-Elkies-Atkin algorithm computes the number of
+  points of the reduction of E modulo p in (log p)^(4+o(1)) expected time
+  for all primes p in [P, 2P] except at most O(P (log log P)^2 / (log P)^2)
+  of them. Behind this is a count of Elkies primes: for nu = 1, 2 the
+  number of primes p in [P, 2P] with fewer than a third of the primes in
+  [L, 2L] being Elkies (or Atkin) primes is
+  O(P (log L)^nu / (L^nu log P) + L^(6 nu) P^(1/2) log P).
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used for the distribution statement (Theorem 1 and
+  Corollary 2) through the effective Chebotarev density theorem in the
+  division fields Q(E[m]) of the curve, both directly (Lemma 7) and via a
+  quoted bound of Cojocaru and David for sums of Jacobi symbols of
+  Frobenius discriminants. It is also used for the running time of the
+  algorithm that computes modular polynomials (see the entry
+  modular-polynomials-isogeny-volcanoes), on which the stated complexity
+  of the Elkies steps relies. The algorithm is of Las Vegas type, so its
+  output is always correct. The paper adds that without any averaging the
+  worst-case running time under the hypothesis is only known to be
+  (log p)^(8+o(1)).
+sources:
+  - authors: I. E. Shparlinski, A. V. Sutherland
+    title: On the distribution of Atkin and Elkies primes for reductions of elliptic curves on average
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1404.0399
+    hypothesis_location: Theorem 1, Corollary 2 and Corollary 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH'. The code ERH-Dedekind reflects that the proofs go through effective Chebotarev in the GL2-type division fields Q(E[m]) (following Lagarias-Odlyzko, David-Wu and Cojocaru-David) and through the modular polynomial algorithm of Broker, Lauter and Sutherland; the cited papers were not read to see whether some of them also assume Artin's conjecture or GRH for Artin L-functions.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, point-counting, elkies-primes, effective-chebotarev]
+added: 2026-11-21

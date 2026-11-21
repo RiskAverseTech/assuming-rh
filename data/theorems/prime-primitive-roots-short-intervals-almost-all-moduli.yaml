@@ -1,0 +1,43 @@
+id: prime-primitive-roots-short-intervals-almost-all-moduli
+title: Prime primitive roots in short intervals for almost all prime moduli
+field: analytic-number-theory
+statement_plain: >
+  For every delta > 0 and almost every prime q in [Q, 2Q], the number of
+  primes in the interval [x, x + x^(1/2 + delta)] that are primitive roots
+  modulo q is asymptotic to (phi(q-1)/(q-1)) x^(1/2 + delta) / log x,
+  provided Q is at most x^(2/3 - epsilon). The modulus q may be larger than
+  the length of the interval.
+statement_formal: |
+  \#\{\, p \in [x, x + x^{1/2+\delta}] : p \text{ prime, a primitive root mod } q \,\} \sim \frac{\varphi(q-1)}{q-1}\,\frac{x^{1/2+\delta}}{\log x} \quad \text{for almost all primes } q \in [Q, 2Q],\ x \ge Q^{3/2+\theta}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The proof expands the indicator of primitive roots modulo q in Dirichlet
+  characters modulo q and uses the hypothesis for the Dirichlet series
+  sum Lambda(n) chi(n) n^(-s) with chi non-principal modulo q, together
+  with the Riemann Hypothesis for the count of primes in the short
+  interval. Theorem 1.1 as printed bounds the number of exceptional primes
+  q in [Q, 2Q] by O(Q^(11/12)), for delta <= 1/3, theta <= 1/4 and
+  x >= Q^(3/2 + theta), and gives a companion statement for the sum of the
+  Mobius function over such primes.
+sources:
+  - authors: D. S. Ramana, O. Ramaré
+    title: A Variant of the Truncated Perron's Formula and Primitive Roots
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1703.00261
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement follows the abstract. Theorem 1.1 as printed reads 'delta <= 1/3 and theta <= 1/4' with an exceptional set of O(Q^(11/12)) primes, without saying delta and theta are positive or how the exceptional set depends on them; the exact quantifiers should be checked against the proof or a published version.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, short-intervals, perron-formula]
+added: 2026-11-21

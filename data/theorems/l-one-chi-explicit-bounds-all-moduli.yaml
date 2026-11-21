@@ -1,0 +1,48 @@
+id: l-one-chi-explicit-bounds-all-moduli
+title: Explicit Littlewood-type bounds for |L(1, chi)| for every modulus q >= 3
+field: analytic-number-theory
+statement_plain: >
+  For every integer q >= 3 and every non-principal primitive Dirichlet
+  character chi modulo q,
+  |L(1, chi)| <= 2 e^gamma (log log q - log 2 + 1/2 + 1/log log q) and
+  1/|L(1, chi)| <= (12 e^gamma / pi^2) (log log q - log 2 + 1/2
+  + 1/log log q + 14 log log q / log q). As a corollary the class number
+  h(-q) of the imaginary quadratic field of discriminant -q satisfies the
+  corresponding explicit upper and lower bounds for every q >= 5.
+statement_formal: |
+  \begin{aligned}
+  |L(1,\chi)| &\le 2e^{\gamma}\left(\log\log q - \log 2 + \frac{1}{2} + \frac{1}{\log\log q}\right), \\
+  \frac{1}{|L(1,\chi)|} &\le \frac{12e^{\gamma}}{\pi^{2}}\left(\log\log q - \log 2 + \frac{1}{2} + \frac{1}{\log\log q} + \frac{14\log\log q}{\log q}\right)
+  \end{aligned}
+  \qquad (q \ge 3)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This extends the explicit bounds of Lamzouri, Li and Soundararajan, who
+  proved the same two inequalities for q >= 10^10, to all q >= 3: the
+  argument is pushed down to q >= 404 and the remaining moduli are checked
+  by computer (together with an earlier computation for prime q up to
+  10^7). It is an explicit form of the entry littlewood-l1-chi-bounds. The
+  lemmas quoted from Lamzouri, Li and Soundararajan use the Riemann
+  Hypothesis for zeta and for L(s, chi) only.
+sources:
+  - authors: A. Languasco, T. S. Trudgian
+    title: Uniform effective estimates for |L(1,χ)|
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2011.08348
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Part of the range (small q) rests on numerical verification reported in the paper and in an earlier paper of Languasco; this was not re-checked.
+lean:
+  proved: false
+  path: null
+tags: [l-functions, explicit-bounds, class-numbers, special-values]
+added: 2026-11-21

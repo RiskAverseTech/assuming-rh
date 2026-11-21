@@ -1,0 +1,40 @@
+id: zeta-derivative-negative-moments-at-zeros-lower-bound
+title: Lower bounds for all negative discrete moments of zeta'(rho)
+field: analytic-number-theory
+statement_plain: >
+  Let J_k(T) be the sum of |zeta'(rho)|^(2k) over the non-trivial zeros rho
+  of the Riemann zeta function with 0 < Im(rho) <= T. For every real k < 0
+  and all large T, J_k(T) is at least a positive constant (depending on k)
+  times T (log T)^((k+1)^2).
+statement_formal: |
+  J_k(T) = \sum_{0 < \Im(\rho) \le T} |\zeta'(\rho)|^{2k} \gg_k T (\log T)^{(k+1)^2} \qquad (k < 0)
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is that all zeros of the Riemann zeta function are
+  simple, which is needed even to define J_k(T) for negative k and does not
+  follow from the Riemann Hypothesis. This extends the lower bounds of Heap,
+  Li and Zhao from rational k < 0 to all real k < 0. The paper remarks that
+  the bound is expected to be sharp only for k >= -3/2. Upper bounds for
+  non-negative k are in the entry
+  zeta-derivative-moments-at-zeros-upper-bound.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Lower bounds for negative moments of ζ'(ρ)
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.06922
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, zeta-zeros, simple-zeros]
+added: 2026-11-21

@@ -1,0 +1,46 @@
+id: zeta-large-values-near-zeros-count
+title: Number of zeta zeros with a large value of zeta within O(1/log T)
+field: analytic-number-theory
+statement_plain: >
+  For k = 1 or 2, let Z_k(T; U) be the set of ordinates gamma in [T, 2T] of
+  zeros of the Riemann zeta function such that the maximum of
+  log |zeta(1/2 + i gamma + i u)| over |u| <= 1/log T differs from
+  k log log T by less than U. Then for every
+  U >= 5 k^3 log log T / sqrt(log log log T),
+  the size of Z_k(T; U) lies between constant multiples of
+  e^(-2kU) T (log T)^(1 - k^2) and e^(2kU) T (log T)^(1 - k^2). Informally,
+  T (log T)^(1 - k^2 + o(1)) zeros up to T have a value of zeta of size
+  (log T)^(k + o(1)) within O(1/log T) of them.
+statement_formal: |
+  e^{-2kU} \ll \frac{\# Z_k(T;U)}{T(\log T)^{1-k^2}} \ll e^{2kU}, \qquad Z_k(T;U) = \Bigl\{ \gamma \in [T,2T] : \zeta(\tfrac12 + i\gamma) = 0,\ \Bigl| \max_{|u| \le 1/\log T} \log|\zeta(\tfrac12 + i\gamma + iu)| - k \log\log T \Bigr| < U \Bigr\}, \quad k = 1, 2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper first proves unconditionally a weighted one-level density
+  formula for the zeros of zeta, with weight |zeta(1/2 + it)|^(2k), for
+  k = 1 and (for test functions with Fourier support in (-1/2, 1/2)) for
+  k = 2. The Riemann Hypothesis is then used to pass from that formula to
+  the count of zeros above (Theorem 1.3 and Corollary 1.4). For k = 1 the
+  paper notes the range can be widened to
+  U >= sqrt(log log T log log log T).
+sources:
+  - authors: S. Bettin, A. Fazzari
+    title: A weighted one-level density of the non-trivial zeros of the Riemann zeta-function
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.08421
+    hypothesis_location: Corollary 1.4 (via Theorem 1.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The lower limit for U and the absolute value in the definition of Z_k(T; U) are garbled in the extracted text and were read from page 3 of the PDF.
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, zeta-zeros, one-level-density, large-values]
+added: 2026-11-21

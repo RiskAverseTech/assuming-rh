@@ -1,0 +1,41 @@
+id: waring-two-squares-three-biquadrates
+title: Large integers in suitable congruence classes are sums of two squares and three biquadrates
+field: additive-number-theory
+statement_plain: >
+  Every sufficiently large natural number n with 8 not dividing n, n not
+  congruent to 2 mod 3 and n not congruent to 14 mod 16 is a sum of two
+  squares and three fourth powers. With one further k-th power added (any
+  fixed k), every sufficiently large natural number is represented.
+statement_formal: |
+  n = x_1^2 + x_2^2 + x_3^4 + x_4^4 + x_5^4 \qquad (n \text{ large},\ 8 \nmid n,\ n \not\equiv 2 \bmod 3,\ n \not\equiv 14 \bmod 16)
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Elliott-Halberstam Conjecture on the average
+  distribution of primes in arithmetic progressions to moduli up to
+  x^(1 - epsilon), which no Riemann Hypothesis gives. The Riemann
+  Hypothesis is assumed only for the two real Dirichlet L-functions
+  L(s, chi_{2n}) and L(s, chi_{-2n}), with chi_D the Kronecker symbol
+  (D/.); that part is covered. The paper also proves unconditionally that
+  the expected asymptotic formula holds for all n up to X outside an
+  exceptional set of size O(X^(1/2 + epsilon)).
+sources:
+  - authors: J. B. Friedlander, T. D. Wooley
+    title: "On Waring's problem: two squares and three biquadrates"
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1211.1823
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [waring-problem, mixed-powers, elliott-halberstam, sieve-methods]
+added: 2026-11-21
