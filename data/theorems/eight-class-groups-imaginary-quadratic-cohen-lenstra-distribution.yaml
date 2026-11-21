@@ -1,0 +1,48 @@
+id: eight-class-groups-imaginary-quadratic-cohen-lenstra-distribution
+title: Distribution of 8-class groups of imaginary quadratic fields
+field: algebraic-number-theory
+statement_plain: >
+  For negative squarefree d let K_d = Q(sqrt(d)). Fix m >= j >= 0. Among the
+  d with |d| < N for which 2 Cl K_d [4] is isomorphic to (Z/2Z)^m, the
+  proportion for which 2 Cl K_d [8] is isomorphic to
+  (Z/2Z)^(m-j) + (Z/4Z)^j tends, as N tends to infinity, to the proportion
+  of m x m matrices over the field with two elements that have corank j.
+  This is the distribution predicted by the Cohen-Lenstra heuristic as
+  extended by Gerth.
+statement_formal: |
+  \lim_{N\to\infty} \frac{\#\{-N < d < 0 \text{ squarefree} : 2\,\mathrm{Cl}\,K_d[8] \cong (\mathbb{Z}/2\mathbb{Z})^{m-j} \oplus (\mathbb{Z}/4\mathbb{Z})^{j}\}}{\#\{-N < d < 0 \text{ squarefree} : 2\,\mathrm{Cl}\,K_d[4] \cong (\mathbb{Z}/2\mathbb{Z})^{m}\}} = \frac{\#\{M \in M_m(\mathbb{F}_2) : \operatorname{corank}(M) = j\}}{\# M_m(\mathbb{F}_2)}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper's Assumption 4.1 is the Riemann hypothesis for the Dedekind zeta
+  function of every finite Galois extension K of the rationals whose Galois
+  group is a metabelian 2-group; it is used through an effective Chebotarev
+  density theorem in governing fields, which are not abelian in general.
+  Under the same assumption Theorem 4.3 of the paper gives the analogous
+  distribution of 4-Selmer groups in the quadratic twist family of an
+  elliptic curve over Q with full rational 2-torsion and no rational cyclic
+  subgroup of order four.
+sources:
+  - authors: A. Smith
+    title: Governing fields and statistics for 4-Selmer groups and 8-class groups
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1607.07860
+    hypothesis_location: "Theorem 4.2 (under Assumption 4.1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The author's later work on 2^infinity-Selmer groups and class groups may establish this distribution without the hypothesis. That is not stated in this paper and was not checked, so the status is left as still-conditional; a reviewer should check whether proved-otherwise applies.
+    - >-
+      Only Theorem 4.2 (class groups) is recorded as the statement; Theorem 4.3 (4-Selmer groups) is mentioned in the note.
+lean:
+  proved: false
+  path: null
+tags: [class-groups, cohen-lenstra, governing-fields]
+added: 2026-11-21

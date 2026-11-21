@@ -1,0 +1,44 @@
+id: zeta-derivative-discrete-mean-square-lower-order-terms
+title: Discrete mean square of zeta'(rho) over the zeros with all lower-order terms
+field: analytic-number-theory
+statement_plain: >
+  Let Z(t) be Hardy's Z-function. For all sufficiently large T, the sum of
+  |Z'(gamma)|^2 over the zeros 0 < gamma <= T of Z(t), counted with
+  multiplicity (which equals the sum of |zeta'(rho)|^2 over the zeros rho of
+  zeta with ordinate in (0, T]), is
+  (1/(24 pi)) T log^4(T/2pi) + ((2 gamma_0 - 1)/(6 pi)) T log^3(T/2pi)
+  + a_1 T log^2(T/2pi) + a_2 T log(T/2pi) + a_3 T + O(T^(3/4) log^(7/2) T),
+  where gamma_0 is Euler's constant and a_1, a_2, a_3 are constants
+  expressible by the Stieltjes constants.
+statement_formal: |
+  \sum_{0<\gamma\le T} |Z'(\gamma)|^2 = \frac{1}{24\pi}\,T\log^4\frac{T}{2\pi} + \frac{2\gamma_0-1}{6\pi}\,T\log^3\frac{T}{2\pi} + a_1 T\log^2\frac{T}{2\pi} + a_2 T\log\frac{T}{2\pi} + a_3 T + O\!\left(T^{3/4}\log^{7/2} T\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens Gonek's 1984 asymptotic, which had only the leading term and an
+  error O(T log^3 T). The paper itself notes that Milinovich obtained this
+  result in his 2008 PhD thesis with a better error term, working with
+  zeta'(s) instead of Z'(t).
+sources:
+  - authors: H. Kobayashi
+    title: On the discrete mean of the derivative of Hardy's Z-function
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1811.04530
+    hypothesis_location: Theorem 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says Milinovich's 2008 thesis has the same formula with a better error term; that thesis was not read, so the sharper error term is not recorded here.
+    - >-
+      The constants a_1, a_2, a_3 are not written out in the theorem statement.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, discrete-moments, hardy-z-function]
+added: 2026-11-21

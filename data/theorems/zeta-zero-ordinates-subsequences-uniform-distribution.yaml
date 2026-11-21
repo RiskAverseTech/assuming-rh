@@ -1,0 +1,43 @@
+id: zeta-zero-ordinates-subsequences-uniform-distribution
+title: Uniform distribution modulo one of zeta zero ordinates selected by the size of the derivative
+field: analytic-number-theory
+statement_plain: >
+  Let a < b be fixed real numbers (or functions of T with
+  max(|a|, |b|) << (log log log T)^(1/2 - epsilon) and the Gaussian integral
+  over [a, b] bounded below). Let Gamma_[a,b] be the increasing sequence of
+  positive ordinates gamma of zeta zeros for which
+  log(|zeta^(m)(1/2 + i gamma)| / (log gamma)^m) / sqrt((1/2) log log gamma)
+  lies in [a, b], where m is the multiplicity of the zero. Then Gamma_[a,b]
+  is uniformly distributed modulo one, and the same holds for the subsequence
+  coming from simple zeros only.
+statement_formal: null
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Besides RH the theorem assumes the spacing Hypothesis H_delta for some
+  0 < delta <= 1: there is M > 0 such that, uniformly for 0 < lambda < 1,
+  the proportion of ordinates 0 < gamma <= T whose gap to the next ordinate
+  is at most lambda / log T has lim sup at most M lambda^delta. The paper
+  notes that H_1 follows from Montgomery's pair correlation conjecture.
+sources:
+  - authors: F. Çiçek, S. M. Gonek
+    title: The Uniform Distribution Modulo One of Certain Subsequences of Ordinates of Zeros of the Zeta Function
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.10119
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Theorems 1.3 and 1.4 of the paper (equidistribution of gamma log T / 2 pi) need a further conjecture of Gonek on sums of x^(i gamma); they are not recorded here.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, uniform-distribution, zero-spacing]
+added: 2026-11-21

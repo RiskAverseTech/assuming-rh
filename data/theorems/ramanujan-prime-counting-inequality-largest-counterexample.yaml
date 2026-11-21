@@ -1,0 +1,38 @@
+id: ramanujan-prime-counting-inequality-largest-counterexample
+title: Ramanujan's inequality for the prime counting function holds beyond 38358837682
+field: analytic-number-theory
+statement_plain: >
+  The inequality pi(x)^2 < (e x / log x) pi(x / e) holds for every integer
+  x > 38358837682, and it fails at x = 38358837682, which is therefore the
+  largest integer counterexample.
+statement_formal: |
+  \pi(x)^2 < \frac{e\,x}{\log x}\,\pi\!\left(\frac{x}{e}\right) \quad \text{for every integer } x > 38\,358\,837\,682, \text{ and the inequality fails at } x = 38\,358\,837\,682
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Ramanujan proved the inequality for all sufficiently large x. The same
+  paper shows unconditionally that it holds for x >= exp(9658). Under RH,
+  Hassani had earlier shown it for x >= 138766146692471228; this paper
+  lowers the threshold to 1.15 * 10^16 using Schoenfeld's conditional bound
+  and checks the remaining range by computation.
+sources:
+  - authors: A. W. Dudek, D. J. Platt
+    title: On Solving a Curious Inequality of Ramanujan
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1407.1901
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The result depends on a computer check of the range below 1.15 * 10^16, which was not independently verified here.
+lean:
+  proved: false
+  path: null
+tags: [prime-counting, ramanujan-inequality, explicit-bounds]
+added: 2026-11-21

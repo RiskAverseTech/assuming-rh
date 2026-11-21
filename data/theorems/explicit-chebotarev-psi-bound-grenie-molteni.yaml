@@ -1,0 +1,49 @@
+id: explicit-chebotarev-psi-bound-grenie-molteni
+title: Explicit Chebotarev density theorem with Schoenfeld-type constants
+field: algebraic-number-theory
+statement_plain: >
+  Let L/K be a Galois extension of number fields with group G, let C be a
+  conjugacy class of G, let Delta_L be the absolute discriminant of L and n_L
+  its degree. Let psi_C(x) be the sum of the von Mangoldt function of K over
+  unramified prime power ideals of norm at most x whose Artin symbol is C.
+  Then for every x >= 1,
+  |(|G|/|C|) psi_C(x) - x| <= sqrt(x) [ (log x / (2 pi) + 2) log Delta_L
+  + (log^2 x / (8 pi) + 2) n_L ].
+statement_formal: |
+  \left|\frac{|G|}{|C|}\,\psi_C(x) - x\right| \le \sqrt{x}\left[\left(\frac{\log x}{2\pi} + 2\right)\log\Delta_L + \left(\frac{\log^2 x}{8\pi} + 2\right) n_L\right] \qquad (x \ge 1)
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [galois-extensions]
+status_note: >
+  An explicit form of the Lagarias-Odlyzko theorem (entry
+  effective-chebotarev) with all constants given; it halves the leading
+  coefficients in a bound announced by Oesterle. The hypothesis is the
+  Riemann hypothesis for Dedekind zeta functions; the proof applies it to
+  Hecke L-functions of cyclic subextensions L/E, which divide the Dedekind
+  zeta function of L. Unlocked only when L is abelian over the rationals,
+  where that zeta function is a product of Dirichlet L-functions. For
+  non-abelian L it stays conditional. A corollary gives the matching bound
+  for the prime ideal counting function pi_C(x) for x >= 2.
+sources:
+  - authors: L. Grenié, G. Molteni
+    title: An explicit Chebotarev density theorem under GRH
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1709.07609
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Marked partial to match the existing entry effective-chebotarev (abelian L over Q is covered). A reviewer may prefer still-conditional.
+    - >-
+      The text thanks a referee but prints no journal reference, so the venue is given as Preprint.
+lean:
+  proved: false
+  path: null
+tags: [chebotarev, prime-ideals, explicit-bounds]
+added: 2026-11-21

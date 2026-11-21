@@ -1,0 +1,42 @@
+id: goldbach-average-oscillation-term-size
+title: Size of the oscillating term in the average number of Goldbach representations
+field: additive-number-theory
+statement_plain: >
+  Let G(x) be the real part of the sum over zeta zero ordinates gamma > 0 of
+  x^(i gamma) / ((1/2 + i gamma)(3/2 + i gamma)); this is the function for
+  which the sum of R(n) over n <= x equals x^2/2 - 4 x^(3/2) G(x) plus a
+  smaller error, where R(n) is the sum of Lambda(a) Lambda(b) over a + b = n.
+  Then G(x) < -0.020932 for an unbounded sequence of x, G(x) > 0.020927 for
+  an unbounded sequence of x, and |G(x)| < 0.023059 for all x > 0.
+statement_formal: |
+  G(x) = \Re \sum_{\gamma>0} \frac{x^{i\gamma}}{\left(\tfrac12+i\gamma\right)\left(\tfrac32+i\gamma\right)}: \qquad \liminf_{x\to\infty} G(x) \le -0.020932, \quad \limsup_{x\to\infty} G(x) \ge 0.020927, \quad |G(x)| < 0.023059 \ \text{ for all } x > 0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The same theorem also shows that if the ordinates of the first 10 zeta
+  zeros in the upper half-plane are linearly independent over the rationals,
+  the oscillation bounds improve to G(x) < -0.022978 and G(x) > 0.022978
+  infinitely often; that part needs the extra assumption and is not the
+  statement recorded here. The formula for the sum of R(n) is the one in
+  entry goldbach-average-explicit-formula-error-n-log-cubed.
+sources:
+  - authors: M. J. Mossinghoff, T. S. Trudgian
+    title: The size of oscillations in the Goldbach conjecture
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.14742
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The formal statement writes 'holds for an unbounded sequence of x' as a non-strict lim inf / lim sup inequality; the paper's wording is the unbounded-sequence form.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, zeta-zeros, oscillations]
+added: 2026-11-21

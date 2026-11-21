@@ -1,0 +1,35 @@
+id: mean-square-pnt-error-limsup-0-8603
+title: Mean square of the error term in the prime number theorem with constant 0.8603
+field: analytic-number-theory
+statement_plain: >
+  Let I(X) be the integral from X to 2X of (psi(x) - x)^2, where psi is the
+  Chebyshev function. Then I(X) <= 0.8603 X^2 for all sufficiently large X.
+statement_formal: |
+  I(X) = \int_X^{2X} \left(\psi(x) - x\right)^2 dx \le 0.8603\,X^2 \qquad \text{for all sufficiently large } X
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Cramer proved under RH that I(X) <= c X^2 for some constant c; this paper
+  gives the explicit constant, proving and improving a claim of Pintz that
+  c = 1 is admissible. The paper notes that if RH is false then I(X)/X^2 is
+  unbounded. The companion lower bound I(X) >= X^2 / 5374 for large X is
+  unconditional.
+sources:
+  - authors: R. P. Brent, D. J. Platt, T. S. Trudgian
+    title: The mean square of the error term in the prime number theorem
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2008.06140
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [prime-number-theorem, mean-square, explicit-bounds]
+added: 2026-11-21

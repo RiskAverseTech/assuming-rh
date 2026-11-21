@@ -1,0 +1,39 @@
+id: zeta-maximum-very-short-intervals-triple-log
+title: Large values of zeta on critical-line segments of triple-logarithmic length
+field: analytic-number-theory
+statement_plain: >
+  Let F(T; H) be the maximum of |zeta(1/2 + it)| over |t - T| <= H, and fix
+  epsilon with 0 < epsilon < 0.1. Then for all T >= T_1(epsilon) and all
+  H >= (log log log T)^(1 + epsilon),
+  F(T; H) >= exp(0.5 exp((log log H)^(0.5 epsilon))).
+statement_formal: |
+  F(T;H) = \max_{|t-T|\le H}\left|\zeta\!\left(\tfrac12+it\right)\right| \ge \exp\!\left(0.5\, e^{(\ln\ln H)^{0.5\varepsilon}}\right) \qquad \left(T \ge T_1(\varepsilon),\ H \ge (\ln\ln\ln T)^{1+\varepsilon}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Theorem 4 of the paper. Under RH the paper also proves stronger
+  bounds on longer segments: F(T; H) >= exp((ln H)^(gamma - epsilon)) with
+  gamma = 0.4686... for H >= (ln ln ln T)^2 (Theorem 3), and
+  F(T; H) >= exp(0.05 sqrt(ln H) / (2m ln ln H)^m) for
+  (ln ln T)^(1/(2m)) <= H <= ln ln T (Theorem 1).
+sources:
+  - authors: M. A. Korolev
+    title: On the large values of the Riemann zeta-function on the critical line - II
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1412.6340
+    hypothesis_location: Theorem 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper has four conditional theorems; Theorem 4 was chosen because it reaches the shortest segments, as highlighted in the abstract. The formulas were read from the PDF because the text extraction is garbled.
+lean:
+  proved: false
+  path: null
+tags: [zeta-large-values, short-intervals, critical-line]
+added: 2026-11-21

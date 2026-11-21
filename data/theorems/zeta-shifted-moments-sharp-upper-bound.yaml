@@ -1,0 +1,41 @@
+id: zeta-shifted-moments-sharp-upper-bound
+title: Sharp upper bound for shifted moments of the Riemann zeta function (Chandee's conjecture)
+field: analytic-number-theory
+statement_plain: >
+  Let k >= 1 be real and let alpha_1, alpha_2 be real functions of T with
+  |alpha_1|, |alpha_2| <= 0.5 T and |alpha_1 + alpha_2| <= T^0.6. Then for
+  T sufficiently large, the integral over 0 <= t <= T of
+  |zeta(1/2 + i(t + alpha_1))|^k |zeta(1/2 + i(t + alpha_2))|^k is at most a
+  constant depending on k times T (log T)^(k^2/2) F^(k^2/2), where
+  F = min(1/|alpha_1 - alpha_2|, log T) if |alpha_1 - alpha_2| <= 1/100 and
+  F = log(2 + |alpha_1 - alpha_2|) otherwise.
+statement_formal: |
+  \int_0^T \left|\zeta\!\left(\tfrac12 + i(t+\alpha_1)\right)\right|^{k} \left|\zeta\!\left(\tfrac12 + i(t+\alpha_2)\right)\right|^{k} dt \ll_k T(\log T)^{k^2/2}\, \mathcal{F}(T,\alpha_1,\alpha_2)^{k^2/2}, \qquad \mathcal{F} = \begin{cases} \min\left\{\dfrac{1}{|\alpha_1-\alpha_2|}, \log T\right\} & |\alpha_1-\alpha_2| \le \tfrac{1}{100} \\ \log(2+|\alpha_1-\alpha_2|) & |\alpha_1-\alpha_2| > \tfrac{1}{100} \end{cases}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens the two-shift case of Chandee's bound (entry
+  zeta-shifted-moments-upper-bound-chandee) by removing the (log T)^epsilon
+  factor, and contains Harper's sharp moment bound (entry
+  zeta-moments-sharp-upper-bound-harper) as the case alpha_1 = alpha_2 = 0.
+  Together with Chandee's unconditional lower bound this establishes
+  Chandee's conjecture on the order of magnitude of these shifted moments.
+sources:
+  - authors: N. Ng, Q. Shen, P.-J. Wong
+    title: Shifted moments of the Riemann zeta function
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2206.03350
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, shifted-moments, upper-bounds]
+added: 2026-11-21
