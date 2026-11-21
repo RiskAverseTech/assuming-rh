@@ -18,6 +18,12 @@ This project is a list of those "if... then" results. For each one it answers a 
 
 If you see a mistake, please tell us. Every entry on the site has a "suggest a correction" link.
 
+## What this does and does not mean
+
+- **Checked by a machine is not the same as understood by people.** The proof is reported to have been checked step by step by computer. No account of the argument that mathematicians can read, follow and explain has been reviewed. Until one has, the result is not accepted, and this project treats it as a claim.
+- **This list depends on the theorem being true, not on the proof being readable.** A result that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.
+- **This project does not judge the proof.** It does not assess, endorse or add evidence for it. It records what would follow, and what would not.
+
 ## For mathematicians
 
 > Which theorems that were proved "assuming the Riemann Hypothesis" (or a generalized version) are now unconditional, which are still waiting, and exactly which hypothesis does each one need?

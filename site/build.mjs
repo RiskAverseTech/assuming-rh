@@ -360,6 +360,23 @@ function buildAbout() {
 </dl>
 <p>If the proof is withdrawn or a gap is found, every "unlocked" and "partly unlocked" label on this site reverts to "conditional". Entries marked "proved otherwise" do not depend on it.</p>
 
+<h2 id="meaning">What this does and does not mean</h2>
+<ul>
+  <li><strong>Checked by a machine is not the same as understood by people.</strong> The proof is reported to
+  have been checked step by step by computer. No account of the argument that mathematicians can read,
+  follow and explain has been reviewed. Until one has, the result is not accepted, and this site treats it
+  as a claim.</li>
+  <li><strong>This list depends on the theorem being true, not on the proof being readable.</strong> A result
+  that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the
+  hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.</li>
+  <li><strong>This site does not judge the proof.</strong> It does not assess, endorse or add evidence for it.
+  It records what would follow, and what would not.</li>
+  <li><strong>"Unlocked" is a statement about logic.</strong> It says that every hypothesis a result needs is
+  among those the proof claims. It does not say the result is now a theorem.</li>
+  <li><strong>The site is about the mathematics.</strong> How the proof was found is not its subject. Entries
+  drafted by an AI system are labelled as drafts because that is what they are.</li>
+</ul>
+
 <h2 id="taxonomy">The hypothesis taxonomy</h2>
 <p>Papers say "assuming GRH" loosely. The exact variant decides whether a result is unlocked, so every entry lists its hypotheses with these codes.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Hypothesis taxonomy">
