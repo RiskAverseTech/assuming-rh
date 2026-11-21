@@ -1,0 +1,41 @@
+id: sums-of-three-nonunit-squares-classification
+title: "Every sum of three squares is a sum of three nonunit squares, with 20 exceptions"
+field: analytic-number-theory
+statement_plain: >
+  Call a square nonunit if it is the square of an integer other than 1 and -1.
+  Every positive integer that is a sum of three integer squares is a sum of
+  three nonunit squares, except for n = 1, 2, 3, 5, 6, 10, 11, 14, 19, 21, 26,
+  30, 35, 37, 42, 46, 51, 91, 163 and 235. As a consequence, every positive
+  integer is a sum of three nonzero triangular numbers except 1, 2, 4, 6, 11,
+  20 and 29.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The paper states its hypothesis in Theorem 3.2: GRH for all Dirichlet
+  L-functions and for the Hasse-Weil L-functions of all quadratic twists of
+  the elliptic curve y^2 + xy + y = x^3 + x^2 - 3x + 1. It is needed only for
+  integers congruent to 2 or 3 modulo 5; the paper proves the classification
+  for n congruent to 0, 1 or 4 modulo 5 without any hypothesis. The method is
+  that of Ono and Soundararajan, with Chandee's explicit bounds. The elliptic
+  curve part is not covered.
+sources:
+  - authors: "D. Kim, J. Lee, B.-K. Oh"
+    title: "A sum of three nonunit squares of integers"
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1909.04982
+    hypothesis_location: "Theorem 3.9 (hypothesis stated in Theorem 3.2)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [ternary-quadratic-forms, sums-of-squares, triangular-numbers]
+added: 2026-11-21

@@ -1,0 +1,39 @@
+id: even-integers-prime-plus-almost-prime-31-factors
+title: "Every even integer is a prime plus a number with at most 31 prime factors"
+field: additive-number-theory
+statement_plain: >
+  Every even integer N >= 4 can be written as the sum of a prime and a number
+  with at most 31 prime factors, counted with multiplicity.
+statement_formal: |
+  N\ge 4\ \text{even}\;\Longrightarrow\;N=p+m,\quad p\ \text{prime},\ \Omega(m)\le 31
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The same paper proves the statement unconditionally with 395 in place of 31
+  (Theorem 1.3). The hypothesis is used for explicit error terms for primes in
+  arithmetic progressions, obtained from results of Grenie and Molteni applied
+  to the cyclotomic field of q-th roots of unity, whose zeta function is a
+  product of Dirichlet L-functions. The paper notes that the full strength of
+  GRH is not required: better knowledge of the zeros of Dirichlet L-functions
+  would bring the unconditional result toward 31.
+sources:
+  - authors: "D. R. Johnston, V. V. Starichkova"
+    title: "Some explicit results on the sum of a prime and an almost prime"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.01229
+    hypothesis_location: "Theorem 1.4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "Theorem 1.4 writes only GRH. Section 5 applies it to primes in arithmetic progressions; the principal character case (the Riemann zeta function) is included in that, and RH is covered either way."
+    - "The text on disk is arXiv version 3, dated 2025; the year given is that of the first arXiv posting."
+lean:
+  proved: false
+  path: null
+tags: [goldbach, almost-primes, sieve-methods, explicit-bounds]
+added: 2026-11-21

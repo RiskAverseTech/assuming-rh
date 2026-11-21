@@ -1,0 +1,42 @@
+id: prime-races-three-or-more-competitors-bias-size
+title: "Maximal bias in prime number races with three or more competitors"
+field: analytic-number-theory
+statement_plain: >
+  Fix r >= 3. For distinct reduced residue classes a_1, ..., a_r modulo q, let
+  delta be the logarithmic density of the set of x with pi(x; q, a_1) > pi(x;
+  q, a_2) > ... > pi(x; q, a_r), and let Delta_r(q) be the maximum of |delta -
+  1/r!| over all such r-tuples. Then for large q, Delta_r(q) is bounded above
+  and below by constant multiples (depending on r) of 1/log q. This contrasts
+  with r = 2, where the maximal bias is q^(-1/2+o(1)).
+statement_formal: |
+  \Delta_r(q):=\max_{(a_1,\dots,a_r)}\left|\delta_{q;a_1,\dots,a_r}-\frac{1}{r!}\right|\asymp_r\frac{1}{\log q}\qquad(r\ge 3)
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Grand Simplicity Hypothesis: the imaginary parts
+  of the zeros of all Dirichlet L-functions attached to primitive characters
+  modulo q are linearly independent over the rationals. It is not covered. The
+  Riemann Hypothesis part concerns Dirichlet L-functions only. The same paper
+  derives an asymptotic formula for the densities (Theorem 1) and shows that
+  races among three or more squares, or non-squares, can be biased for large q
+  (Theorem B), under the same two assumptions.
+sources:
+  - authors: "Y. Lamzouri"
+    title: "Prime number races with three or more competitors"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1101.0836
+    hypothesis_location: "Theorem A"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [prime-races, chebyshev-bias, linear-independence]
+added: 2026-11-21

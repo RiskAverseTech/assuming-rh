@@ -1,0 +1,45 @@
+id: congruence-subgroup-growth-sl2-s-integers
+title: "Exact congruence subgroup growth constant for SL_2 over rings of S-integers"
+field: algebraic-number-theory
+statement_plain: >
+  Let k be a number field, S a finite set of primes and O_S the ring of
+  S-integers. Let C_n be the number of congruence subgroups of SL_2(O_S) of
+  index at most n. Then log C_n divided by (log n)^2 / log log n tends to (3 -
+  2 sqrt(2))/4 as n tends to infinity, the same value as for SL_2(Z) and
+  independent of the field.
+statement_formal: |
+  \lim_{n\to\infty}\frac{\log C_n(\mathrm{SL}_2(\mathcal{O}_S))}{(\log n)^2/\log\log n}=\frac{3-2\sqrt2}{4}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes GRH for k and for all cyclotomic extensions k(zeta_l) with
+  l a rational prime. It is needed only for the lower bound, through a
+  Chebotarev-type count of primes in a Galois extension K and its cyclotomic
+  extensions K(zeta_l) (Theorem 4.1). The paper proves the result
+  unconditionally for k = Q (Theorem 2, using Bombieri-Vinogradov) and
+  whenever k lies in a Galois extension K of Q whose group has an abelian
+  subgroup of index at most 4, or with [K : Q] < 42 (Theorem 4). So the
+  abelian case, which is the case the covered hypotheses would reach, is
+  already unconditional.
+sources:
+  - authors: "D. Goldfeld, A. Lubotzky, L. Pyber"
+    title: "Counting congruence subroups"
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0406249
+    hypothesis_location: "Theorem 3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The introduction describes the hypothesis as GRH for Hecke and Artin L-functions, while Theorems 3 and 4.1 phrase it as GRH for the fields k (or K) and their cyclotomic extensions. It is coded here as the Dedekind zeta functions of those fields; if the proof needs individual Artin L-functions the code GRH-Artin should be added."
+    - "The title is kept as printed in the metadata, including the spelling 'subroups'."
+lean:
+  proved: false
+  path: null
+tags: [congruence-subgroups, subgroup-growth, chebotarev]
+added: 2026-11-21

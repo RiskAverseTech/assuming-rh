@@ -1,0 +1,42 @@
+id: sums-of-k-primes-explicit-formula-k-at-least-5
+title: "Explicit formula for the number of representations as a sum of k >= 5 primes"
+field: additive-number-theory
+statement_plain: >
+  Let k >= 5 be fixed and let R_k(n) be the number of ways to write n as a sum
+  of k positive integers, weighted by the product of the von Mangoldt function
+  at the summands. For all sufficiently large n, R_k(n) equals the main term
+  n^(k-1) S_k(n)/(k-1)!, minus an explicit secondary term given by a sum over
+  the non-trivial zeros of all Dirichlet L-functions, plus an error
+  O(n^(k-7/4) (log n)^(k-1)). For k >= 6 the exponent 7/4 can be replaced by
+  2, and for k >= 7 the power of log n can also be replaced by (log n)^2.
+statement_formal: |
+  R_k(n)=\frac{n^{k-1}}{(k-1)!}\mathfrak{S}_k(n)-k\sum_{q=1}^{\infty}\frac{\mu(q)^{k-1}}{\varphi(q)^{k}}\sum_{\chi \bmod q}c_\chi(-n)\,\tau(\chi)\sum_{\rho}\frac{n^{\rho+k-2}}{\rho(\rho+1)\cdots(\rho+k-2)}+O\!\left(n^{k-7/4}\log^{k-1}n\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here S_k(n) is the singular series, c_chi(m) is the sum over a mod q of
+  chi(a) e(am/q), tau(chi) is the Gauss sum, and rho runs over the non-trivial
+  zeros of L(s, chi). The paper assumes GRH for every Dirichlet L-function
+  L(s, chi), chi mod q, and remarks that only moduli q <= n^(1/2)/2 are really
+  needed. The result sharpens by logarithmic factors the error terms of
+  Friedlander and Goldston.
+sources:
+  - authors: "A. Languasco, A. Zaccagnini"
+    title: "Sums of many primes"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1101.3489
+    hypothesis_location: "Theorem (Section 1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The formula is transcribed from extracted text; the placement of the complex conjugate on the character in c_chi(-n) tau(chi) could not be read reliably and should be checked against the PDF."
+lean:
+  proved: false
+  path: null
+tags: [goldbach, circle-method, explicit-formula]
+added: 2026-11-21

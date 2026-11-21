@@ -1,0 +1,42 @@
+id: nonvanishing-quadratic-twists-modular-l-functions-moduli-8p
+title: "Positive proportion of non-vanishing for quadratic twists of a modular L-function by 8p"
+field: analytic-number-theory
+statement_plain: >
+  Let f be a holomorphic Hecke eigenform of weight kappa divisible by 4 for
+  the full modular group, and let chi_{8p} be the Kronecker symbol of 8p. Then
+  L(1/2, f x chi_{8p}) is non-zero for infinitely many odd primes p. More
+  precisely, the sum of log p over primes 2 < p <= X with non-zero central
+  value is at least a positive constant times the sum of log p over all primes
+  2 < p <= X.
+statement_formal: |
+  \sum_{\substack{2<p\le X\\ L(1/2,\,f\otimes\chi_{8p})\neq 0}}\log p\;\gg\;\sum_{2<p\le X}\log p
+hypotheses_required: [RH, GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper uses the hypothesis for the Riemann zeta function, for Dirichlet
+  L-functions (sums of chi(p) log p over primes, and L(s, chi_{8d}) in Lemma
+  2.8), for the twisted modular L-functions L(s, f x chi_{8d}) and for the
+  symmetric square L-function L(s, sym^2 f) (Proposition 3.2). The form f has
+  level one and weight divisible by 4, so it is not a weight 2 form and its
+  twists are not covered.
+sources:
+  - authors: "P. Gao, L. Zhao"
+    title: "Non-vanishing of quadratic twists of modular $L$-functions of prime-related moduli"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2205.01824
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "Theorem 1.1 writes only GRH. The list of L-functions is collected from Lemma 2.8, Proposition 2.6 and Proposition 3.2; there may be further L-functions used through cited results."
+lean:
+  proved: false
+  path: null
+tags: [non-vanishing, quadratic-twists, modular-l-functions]
+added: 2026-11-21
