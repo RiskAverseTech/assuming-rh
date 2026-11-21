@@ -1,0 +1,33 @@
+id: pnt-short-intervals-explicit-lee
+title: "Explicit error in the prime number theorem in short intervals"
+field: analytic-number-theory
+statement_plain: >
+  For x at least e^20 and sqrt(x) log x <= h <= x^(3/4), the number
+  psi(x + h) - psi(x) differs from h by less than
+  ((1/pi) log(h / (sqrt(x) log x)) + L + 1.022 / log x) sqrt(x) log x,
+  where L = 1.54262... is an explicit constant. A similar bound with 1.046
+  in place of 1.022 holds for theta.
+statement_formal: |
+  |\psi(x+h) - \psi(x) - h| < \left( \frac{1}{\pi}\log\frac{h}{\sqrt{x}\,\log x} + L + \frac{1.022}{\log x} \right)\sqrt{x}\,\log x, \quad L = 1.54262\ldots, \quad x \ge e^{20},\ \sqrt{x}\,\log x \le h \le x^{3/4}
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "E. S. Lee"
+    title: "On the error in the prime number theorem in short intervals"
+    year: 2026
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2403.11814
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes, short-intervals, explicit-bounds]
+added: 2026-11-21

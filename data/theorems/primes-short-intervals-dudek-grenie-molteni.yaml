@@ -1,0 +1,35 @@
+id: primes-short-intervals-dudek-grenie-molteni
+title: "Primes in explicit short intervals around x"
+field: analytic-number-theory
+statement_plain: >
+  Let x be at least 2 and c = 1/2 + 2/log x. Then there is a prime in
+  the interval (x - c sqrt(x) log x, x + c sqrt(x) log x), and there are at
+  least sqrt(x) primes in
+  (x - (c+1) sqrt(x) log x, x + (c+1) sqrt(x) log x).
+statement_formal: |
+  \text{For all } x \ge 2 \text{ and } c = \tfrac12 + \tfrac{2}{\log x} \text{ there is a prime } p \text{ with } |p - x| < c\,\sqrt{x}\,\log x
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "A. W. Dudek, L. Greni\u00e9, G. Molteni"
+    title: "Primes in explicit short intervals on RH"
+    year: 2015
+    venue: "Int. J. Number Theory (to appear)"
+    url: https://arxiv.org/abs/1503.05403
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The text only says 'To appear in Int. J. Number Theory. 2015'; the final volume, pages and year of the journal version are not printed in the paper and should be filled in by a reviewer.
+lean:
+  proved: false
+  path: null
+related: [dudek-primes-short-intervals]
+tags: [primes, prime-gaps, short-intervals, explicit-bounds]
+added: 2026-11-21

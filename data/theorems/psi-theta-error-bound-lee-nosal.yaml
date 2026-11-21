@@ -1,0 +1,32 @@
+id: psi-theta-error-bound-lee-nosal
+title: "Explicit bounds for psi(x) - x and theta(x) - x with a log log saving"
+field: analytic-number-theory
+statement_plain: >
+  The Chebyshev function psi(x) differs from x by at most
+  sqrt(x) log x (log x - log log x) / (8 pi) for every x at least 101, and
+  the same bound holds for theta(x) - x for every x at least 2657.
+statement_formal: |
+  |\psi(x) - x| \le \frac{\sqrt{x}\,\log x\,(\log x - \log\log x)}{8\pi} \quad \text{for all } x \ge 101
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "E. S. Lee, P. Nosal"
+    title: "Sharper bounds for the error in the prime number theorem assuming the Riemann Hypothesis"
+    year: 2025
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2312.05628
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [schoenfeld-prime-counting-error]
+tags: [primes, prime-number-theorem, explicit-bounds]
+added: 2026-11-21
