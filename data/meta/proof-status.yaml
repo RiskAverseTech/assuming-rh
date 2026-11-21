@@ -1,15 +1,16 @@
 # Verification status of the proof every "unlocked" label depends on.
 # The site banner and the method page read this file. Update last_updated
 # whenever anything here changes.
-status: Claimed. The formal proof has been checked by many independent proof checkers. Not yet accepted by the mathematical community.
-headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
+status: Formal proof verified by the Lean community. The argument has not yet been understood or reviewed by mathematicians.
+headline: The Lean community has verified a formal proof of the Riemann Hypothesis. The argument has not yet been understood or reviewed by mathematicians.
 summary: >
   On 20 November 2026 Levent Alpöge released a proof, written in a form that
   computers can check, of the Riemann Hypothesis and of its extension to
-  Dirichlet L-functions. The Lean community has checked it with many
-  independent proof checkers, including formally verified ones, and all
-  accept it. No account of the argument has been reviewed and published by
-  mathematicians.
+  Dirichlet L-functions. On 21 November the Lean and Mathlib communities,
+  endorsed by the Lean FRO and the Mathlib Initiative, issued a joint
+  statement certifying that both the statement and the proof of the Riemann
+  Hypothesis are correct. No account of the argument that mathematicians can
+  read has been reviewed.
 last_updated: 2026-11-21
 claims:
   - The Riemann Hypothesis, stated with Mathlib's own definition.
@@ -17,31 +18,29 @@ claims:
   - Nothing is claimed for Dedekind zeta functions, Hecke, Artin or automorphic L-functions.
 caveats:
   - >
-    A formal proof accepted by a proof checker shows that the formal
-    statement follows from the axioms. The headline statements are short and
-    use Mathlib definitions, and the community compared them with an
-    independent statement in two ways. Whether the argument is understood is
-    a separate, human question.
-  - >
-    The checks reported in the public discussion include the standard Lean
-    build, a statement comparison and axiom check, and acceptance by many
-    independently written checkers, among them the three formally verified
-    ones. One long bundled run was still in progress on 21 November 2026.
-    This project has not run a check of its own.
+    The joint statement certifies the Riemann Hypothesis itself: the
+    statement is Mathlib's own, vetted by experts, and the proof was compared
+    against it with two independent tools and checked by several proof
+    checkers, two of which are formally verified. The statement does not
+    mention the extension to Dirichlet L-functions. In the public discussion
+    the same tools were reported to accept those theorems as well, but they
+    are stated with definitions written by the author and have had less
+    scrutiny. Entries that need GRH for Dirichlet L-functions rest on that
+    part.
   - >
     Checked by machine is not the same as understood. No human-readable
-    account of the argument has been reviewed. Participants expect that to
-    take a long time.
+    account of the argument has been reviewed. The joint statement itself
+    looks forward to work by mathematicians to explain the new ideas.
   - >
     The released archive carried no license file. On 21 November 2026 a
     maintainer reported that the author is preparing one. Until it appears,
     the code is not reused or redistributed here.
   - >
-    This file was compiled by an AI system from the sources below and has
-    not yet been re-read by a human. Sources marked "not read directly" were
-    seen only as search summaries or as links in the discussion.
+    This project has not run a check of its own. This file was compiled by
+    an AI system from the sources below. Sources marked "not read directly"
+    were seen only as search summaries or as links in the discussion.
 sources:
-  - label: "Lean community announcement on the verification process (linked in the discussion, not read directly)"
+  - label: "Lean verification of the Riemann Hypothesis: joint statement by the Lean and Mathlib communities, endorsed by the Lean FRO and the Mathlib Initiative (text supplied by the maintainer and read in full)"
     url: https://leanprover-community.github.io/blog/posts/riemann-hypothesis/
     accessed: 2026-11-21
   - label: "Community copy of the Lean code"

@@ -4,7 +4,7 @@
 
 Mathematicians have a famous unsolved problem called the Riemann Hypothesis. Over more than a century they have proved hundreds of results that start with "if the Riemann Hypothesis is true, then...". Those results have been waiting for someone to prove the "if" part.
 
-In November 2026 a proof was announced. Computers have checked it. Mathematicians have not yet agreed that it is right.
+In November 2026 a proof was announced, written so that computers can check it. The check has been done and certified. Mathematicians have not yet read and understood the argument.
 
 This project is a list of those "if... then" results. For each one it answers a simple question: **would the announced proof finish this result, or does the result need something more?**
 
@@ -12,7 +12,7 @@ This project is a list of those "if... then" results. For each one it answers a 
 
 ## Three things to know before you trust anything here
 
-1. **The proof might be wrong.** If it is, nothing on this list becomes true because of it.
+1. **The proof is verified by computer, not yet understood by people.** If a problem is ever found, nothing on this list becomes true because of it.
 2. **An AI wrote every entry, and no expert has checked them yet.** Each entry says so. Treat every label as a draft.
 3. **The list is incomplete.** If a result is not here, that tells you nothing about it.
 
@@ -20,7 +20,7 @@ If you see a mistake, please tell us. Every entry on the site has a "suggest a c
 
 ## What this does and does not mean
 
-- **Checked by a machine is not the same as understood by people.** Several independent proof checkers have accepted the formal proof. No account of the argument that mathematicians can read, follow and explain has been reviewed. Until one has, the result is not accepted, and this project treats it as a claim.
+- **Checked by a machine is not the same as understood by people.** The formal proof has been verified, and that verification certified by the Lean community. No account of the argument that mathematicians can read, follow and explain has been reviewed. Until one has, this project says "verified", not "understood".
 - **This list depends on the theorem being true, not on the proof being readable.** A result that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.
 - **This project does not judge the proof.** It does not assess, endorse or add evidence for it. It records what would follow, and what would not.
 
@@ -34,7 +34,7 @@ An open dataset and a static website that answer that question, one theorem at a
 
 **Everything here is provisional.**
 
-1. **The proof is claimed, not accepted.** On 20 November 2026 Levent Alpöge released a Lean 4 formalization claiming a proof of the Riemann Hypothesis (RH) and of the Generalized Riemann Hypothesis for Dirichlet L-functions. The Lean community has checked it with many independent proof checkers, and all accept it. The mathematical community has not accepted the result. Every "unlocked" label holds only if it is accepted. The current status, its sources and the date it was last updated are in [`data/meta/proof-status.yaml`](data/meta/proof-status.yaml), and the site shows them in a banner on every page.
+1. **The formal proof is verified. The argument is not yet understood.** On 20 November 2026 Levent Alpöge released a Lean 4 formalization of a proof of the Riemann Hypothesis (RH) and of the Generalized Riemann Hypothesis for Dirichlet L-functions. On 21 November the Lean and Mathlib communities issued a joint statement, endorsed by the Lean FRO and the Mathlib Initiative, certifying that the statement and the proof of RH are correct. That statement does not mention the Dirichlet part, which the same tools were reported to accept in the public discussion. No human-readable account of the argument has been reviewed. Every "unlocked" label rests on that proof. The current status, its sources and the date it was last updated are in [`data/meta/proof-status.yaml`](data/meta/proof-status.yaml), and the site shows them in a banner on every page.
 2. **Every entry carries a review state.** `ai-classified` means an AI system drafted the entry and no human expert has checked it. `human-checked` means a named person checked it against the primary source. `lean-verified` means the implication is formalized in Lean. At the moment every entry is `ai-classified`. Treat them as drafts.
 3. **Corrections are wanted.** Every entry page links to a prefilled "suggest a correction" issue. See [CONTRIBUTING.md](CONTRIBUTING.md).
 4. **Sources are cited on every entry**, with the place in the paper where the hypothesis is invoked when that is known. Where it is not yet recorded, the entry says so.
@@ -69,7 +69,7 @@ One trap worth knowing: a result about the class group of a quadratic field usua
 
 | Status | Meaning |
 |---|---|
-| `unlocked` | Every required hypothesis is covered. Unconditional if the claimed proof is accepted. |
+| `unlocked` | Every required hypothesis is covered. Follows from the announced proof. |
 | `partial` | Unlocked in a named special case only. The note says which. |
 | `still-conditional` | Needs at least one hypothesis that is not covered. |
 | `proved-otherwise` | Was conditional, later proved unconditionally by other means. |

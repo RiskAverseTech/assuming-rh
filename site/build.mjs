@@ -29,23 +29,23 @@ const byId = Object.fromEntries(entries.map((e) => [e.id, e]));
 const STATUS = {
   unlocked: {
     label: 'Unlocked',
-    short: 'Unconditional if the claimed proof is accepted.',
-    long: 'Every hypothesis this result needs is covered by the claimed proof. It becomes unconditional if, and only if, that proof is accepted.',
+    short: 'Follows from the announced proof.',
+    long: 'Every hypothesis this result needs is covered by the announced proof. It follows from that proof, and stands or falls with it.',
   },
   partial: {
     label: 'Partly unlocked',
     short: 'Unlocked in a special case only.',
-    long: 'Part of this result is covered by the claimed proof and part is not. The note below says which part.',
+    long: 'Part of this result is covered by the announced proof and part is not. The note below says which part.',
   },
   'still-conditional': {
     label: 'Still conditional',
-    short: 'Needs a hypothesis the claimed proof does not cover.',
-    long: 'This result needs at least one hypothesis that the claimed proof does not cover. It stays conditional.',
+    short: 'Needs a hypothesis the announced proof does not cover.',
+    long: 'This result needs at least one hypothesis that the announced proof does not cover. It stays conditional.',
   },
   'proved-otherwise': {
     label: 'Proved otherwise',
     short: 'Was conditional, later proved without any Riemann Hypothesis.',
-    long: 'This result was first proved under a Riemann Hypothesis and was later proved unconditionally by other means. It does not depend on the claimed proof.',
+    long: 'This result was first proved under a Riemann Hypothesis and was later proved unconditionally by other means. It does not depend on the announced proof.',
   },
 };
 const STATUS_ORDER = ['unlocked', 'partial', 'still-conditional', 'proved-otherwise'];
@@ -102,7 +102,7 @@ function banner() {
   <div class="wrap">
     <strong class="banner-tag">Provisional</strong>
     <p><strong>${esc(proof.headline)}</strong> ${rich(proof.summary)}
-    Every "unlocked" label on this site holds only if that proof is accepted.
+    Every "unlocked" label on this site rests on that proof.
     <span class="banner-date">Proof status last updated ${fmtDate(proof.last_updated)}.</span>
     <a href="about.html#proof-status">Details</a></p>
   </div>
@@ -181,8 +181,8 @@ function buildHome() {
   <h1>${esc(cfg.tagline)}</h1>
   <p class="lede">Mathematicians have a famous unsolved problem called the Riemann Hypothesis. Over more
   than a century they have proved hundreds of results that start with "if the Riemann Hypothesis is true,
-  then...". In November 2026 a proof was announced. Computers have checked it. Mathematicians have not yet
-  agreed that it is right.</p>
+  then...". In November 2026 a proof was announced, written so that computers can check it. The
+  check has been done and certified. Mathematicians have not yet read and understood the argument.</p>
   <p class="lede">This site lists those "if... then" results. For each one it answers a simple question:
   <strong>would the announced proof finish this result, or does it need something more?</strong></p>
   <p>The hypothesis comes in several strengths, and the announced proof covers the two most basic
@@ -191,7 +191,7 @@ function buildHome() {
   <div class="trust" role="note" aria-labelledby="trust-h">
     <h2 id="trust-h">Three things to know before you trust anything here</h2>
     <ol>
-      <li><strong>The proof might be wrong.</strong> If it is, nothing on this list becomes true because of it.</li>
+      <li><strong>The proof is verified by computer, not yet understood by people.</strong> If a problem is ever found, nothing on this list becomes true because of it.</li>
       <li><strong>An AI wrote every entry, and no expert has checked them yet.</strong> Each entry says so. Treat every label as a draft.</li>
       <li><strong>The list is incomplete.</strong> If a result is not here, that tells you nothing about it.</li>
     </ol>
@@ -292,8 +292,8 @@ Hypothesis codes are explained on the <a href="about.html#taxonomy">method page<
 function whyHtml(e) {
   const notFully = e.hypotheses_required.filter((c) => hyp[c].covered !== 'yes');
   let auto = '';
-  if (e.status === 'unlocked') auto = `Every hypothesis listed above (${e.hypotheses_required.join(', ')}) is covered by the claimed proof.`;
-  else if (e.status === 'still-conditional') auto = `Not covered by the claimed proof: ${notFully.join(', ')}.`;
+  if (e.status === 'unlocked') auto = `Every hypothesis listed above (${e.hypotheses_required.join(', ')}) is covered by the announced proof.`;
+  else if (e.status === 'still-conditional') auto = `Not covered by the announced proof: ${notFully.join(', ')}.`;
   else if (e.status === 'partial') auto = `Not covered in general: ${notFully.join(', ')}.`;
   else auto = `The hypotheses above belong to the earlier conditional proof and are no longer needed.`;
   return `<p>${STATUS[e.status].long}</p><p>${auto}</p>${e.status_note ? `<p class="note"><strong>Note.</strong> ${rich(e.status_note)}</p>` : ''}`;
@@ -388,10 +388,10 @@ function buildAbout() {
 
 <h2 id="meaning">What this does and does not mean</h2>
 <ul>
-  <li><strong>Checked by a machine is not the same as understood by people.</strong> Several independent proof
-  checkers have accepted the formal proof. No account of the argument that mathematicians can read,
-  follow and explain has been reviewed. Until one has, the result is not accepted, and this site treats it
-  as a claim.</li>
+  <li><strong>Checked by a machine is not the same as understood by people.</strong> The formal proof has been
+  verified, and that verification certified by the Lean community. No account of the argument that mathematicians can read,
+  follow and explain has been reviewed. Until one has, this site says
+  "verified", not "understood".</li>
   <li><strong>This list depends on the theorem being true, not on the proof being readable.</strong> A result
   that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the
   hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.</li>
@@ -471,7 +471,7 @@ function buildWaiting() {
   page({
     file: 'waiting.html',
     title: 'Still waiting',
-    description: 'Entries the claimed proof does not finish, grouped by what would have to be proved next.',
+    description: 'Entries the announced proof does not finish, grouped by what would have to be proved next.',
     body: `
 <h1>What is still waiting, and on what</h1>
 <p class="lede">The announced proof covers the two most basic versions of the Riemann Hypothesis. ${open.length} of the
