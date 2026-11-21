@@ -1,0 +1,39 @@
+id: goldbach-average-explicit-formula-error-n-log-cubed
+title: Average of Goldbach representations with a sum over zeros and error N log^3 N
+field: additive-number-theory
+statement_plain: >
+  Let R(n) be the sum of Lambda(h1) Lambda(h2) over all h1 + h2 = n. Then for
+  N at least 2, the sum of R(n) over n up to N equals N^2 / 2 minus twice the
+  sum of N^(rho+1) / (rho (rho+1)) over the nontrivial zeros rho of the
+  Riemann zeta function, with an error O(N log^3 N).
+statement_formal: |
+  \sum_{n=1}^{N} R(n) = \frac{N^2}{2} - 2\sum_{\rho} \frac{N^{\rho+1}}{\rho(\rho+1)} + O\!\left(N \log^3 N\right) \quad (N \ge 2), \qquad R(n) = \sum_{h_1 + h_2 = n} \Lambda(h_1)\Lambda(h_2)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the entry goldbach-average-equivalent-to-rh, which has the
+  weaker error term O(x^(3/2 + epsilon)) and no sum over zeros. The paper
+  reports earlier error terms O((N log N)^(4/3)) by Fujii and O(N log^5 N)
+  by Bhowmik and Schlage-Puchta, who also showed the error is
+  Omega(N log log N). The same paper gives the analogue for sums of k primes
+  with error O(N^(k-1) log^k N) (Theorem 3) and a short interval version
+  (Theorem 4).
+sources:
+  - authors: A. Languasco, A. Zaccagnini
+    title: The number of Goldbach representations of an integer
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1011.3198
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [goldbach, mean-values, zeta-zeros]
+added: 2026-11-21

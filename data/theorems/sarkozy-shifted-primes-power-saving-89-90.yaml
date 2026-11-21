@@ -1,0 +1,40 @@
+id: sarkozy-shifted-primes-power-saving-89-90
+title: Sets with no differences of the form p + 1 have size at most N^(89/90 + o(1))
+field: additive-number-theory
+statement_plain: >
+  If A is a subset of {1, ..., N} and no two elements of A differ by p + 1
+  for a prime p, then A has at most N^(89/90 + o(1)) elements.
+statement_formal: |
+  A \subseteq \{1, \dots, N\}, \quad (A - A) \cap \{p + 1 : p \text{ prime}\} = \emptyset \quad \Longrightarrow \quad |A| \ll N^{\frac{89}{90} + o(1)}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  No earlier entry covers this problem. The hypothesis is used only in
+  Lemma 3.1, through the bound sqrt(X) (log(rX))^2 for sums of Lambda(n)
+  chi(n) over Dirichlet characters modulo r; the principal character needs
+  RH for the zeta function, so RH is listed as well. The paper says its
+  method works equally for p - 1. It reports that Green proved an
+  unconditional bound N^(1 - c) with an unspecified c, that Thorner and Zaman
+  have the unconditional bound N^(1 - 1/10^18), and that an unpublished paper
+  of Green reaches the exponent 11/12 + o(1) under GRH.
+sources:
+  - authors: Q. Gu, M. Q. Nguyên
+    title: "An explicit power-saving bound for Sárközy's Theorem on shifted primes, assuming GRH"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.14471
+    hypothesis_location: Theorem 1.1 (hypothesis used in Lemma 3.1 via Lemma A.6)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper is a recent preprint and its proof was not checked. By its own account the exponent 89/90 is weaker than the 11/12 of an unpublished paper of Green under the same hypothesis, which was not read.
+lean:
+  proved: false
+  path: null
+tags: [shifted-primes, difference-sets, circle-method]
+added: 2026-11-21

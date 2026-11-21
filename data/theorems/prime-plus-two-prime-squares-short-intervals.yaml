@@ -1,0 +1,40 @@
+id: prime-plus-two-prime-squares-short-intervals
+title: Sums of a prime and two squares of primes in short intervals
+field: additive-number-theory
+statement_plain: >
+  Let r(n) be the sum of log p1 log p2 log p3 over all representations
+  n = p1 + p2^2 + p3^2 with p1, p2, p3 prime, and let L = log N. Then the sum
+  of r(n) over N < n <= N + H equals (pi/4) H N
+  + O(H^(1/2) N L^2 + H N^(3/4) L^3 + H^2 L^(3/2)) as N tends to infinity,
+  uniformly for H with H / L^4 tending to infinity and H = o(N L^(-3/2)). In
+  particular there is an effective constant C such that every interval
+  [N, N + H] with H at least C (log N)^4 contains an integer that is the sum
+  of a prime and two squares of primes.
+statement_formal: |
+  \sum_{n=N+1}^{N+H} r(n) = \frac{\pi}{4} H N + O\!\left(H^{1/2} N (\log N)^2 + H N^{3/4} (\log N)^3 + H^2 (\log N)^{3/2}\right), \qquad r(n) = \sum_{p_1 + p_2^2 + p_3^2 = n} \log p_1 \log p_2 \log p_3
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No earlier entry covers this problem. The paper says its method gives the
+  asymptotic formula unconditionally only for H at least N^(7/12 + epsilon).
+sources:
+  - authors: A. Languasco, A. Zaccagnini
+    title: Sum of one prime and two squares of primes in short intervals
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1406.3441
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The consequence about every interval [N, N + H] with H at least C (log N)^4 is stated in the abstract and in a remark after Theorem 1, not as a numbered theorem; the remark gives the upper range H = o(N (log N)^(-3/2)).
+lean:
+  proved: false
+  path: null
+tags: [waring-goldbach, short-intervals, circle-method]
+added: 2026-11-21

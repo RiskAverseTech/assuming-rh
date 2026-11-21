@@ -1,0 +1,42 @@
+id: smooth-numbers-in-sqrt-length-intervals
+title: Smooth numbers in intervals of length about sqrt(x)
+field: analytic-number-theory
+statement_plain: >
+  Let Psi(x, y) count the integers up to x all of whose prime factors are
+  below y, and let rho be the Dickman function. There is an absolute constant
+  B such that for all large x and all y = x^(1/u) with
+  exp(5 sqrt(log x log log x)) <= y <= x, taking z = B u sqrt(x) / rho(u/2),
+  the interval from x to x + z contains at least a constant (depending on
+  epsilon) times z x^(-epsilon) integers with all prime factors below y. In
+  particular, for every epsilon > 0 there is C(epsilon) such that for all
+  large x the interval [x, x + C(epsilon) sqrt(x)] contains an integer all of
+  whose prime factors are less than x^epsilon.
+statement_formal: |
+  \Psi(x+z, y) - \Psi(x, y) \gg_{\epsilon} z\, x^{-\epsilon}, \qquad z = \frac{B\,u\,\sqrt{x}}{\rho(u/2)}, \quad y = x^{1/u}, \quad x \ge y \ge \exp\!\left(5\sqrt{\log x \,\log\log x}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No earlier entry covers smooth numbers in short intervals. The paper says
+  this improves a result of Xuan, who under the same hypothesis needed
+  intervals of length sqrt(x) (log x)^(1 + epsilon).
+sources:
+  - authors: K. Soundararajan
+    title: Smooth numbers in short intervals
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1009.1591
+    hypothesis_location: Theorem (the paper's only theorem, unnumbered)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The text extraction of the theorem is garbled; the ranges were read from the PDF, which prints the upper range as x >= y.
+lean:
+  proved: false
+  path: null
+tags: [smooth-numbers, short-intervals]
+added: 2026-11-21

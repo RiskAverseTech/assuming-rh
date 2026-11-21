@@ -1,0 +1,39 @@
+id: prime-plus-square-short-interval-average
+title: Average number of representations as a prime plus a square in short intervals
+field: additive-number-theory
+statement_plain: >
+  Let r'(n) be the sum of log p over all representations n = p + m^2 with p
+  prime. Then the sum of r'(n) over N < n <= N + H equals H N^(1/2)
+  + O(N^(3/4) (log N)^2 + H^(3/2) (log N)^(3/2) + H N^(1/3) log N) as N tends
+  to infinity, uniformly for H with H / (N^(1/4) (log N)^2) tending to
+  infinity and H = o(N / (log N)^3).
+statement_formal: |
+  \sum_{n=N+1}^{N+H} r'_{1,2}(n) = H N^{1/2} + O\!\left(N^{3/4} (\log N)^2 + H^{3/2} (\log N)^{3/2} + H N^{1/3} \log N\right), \qquad r'_{1,2}(n) = \sum_{p + m^2 = n} \log p
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This concerns the same additive problem as the entry
+  prime-plus-square-exceptional-set-bound but is a different result: an
+  asymptotic formula on average over a short interval, which needs only the
+  zeta function. The same paper proves the analogue for a prime plus a prime
+  square, for H between N^(1/4) (log N)^3 and o(N) (Theorem 3), and
+  unconditional versions in longer intervals (Theorems 2 and 4).
+sources:
+  - authors: A. Languasco, A. Zaccagnini
+    title: "Short intervals asymptotic formulae for binary problems with primes and powers, I: density 3/2"
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.02271
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes, short-intervals, circle-method]
+added: 2026-11-21
