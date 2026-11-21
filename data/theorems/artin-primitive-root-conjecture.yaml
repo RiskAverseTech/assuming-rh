@@ -18,6 +18,7 @@ sources:
     title: On Artin's conjecture
     year: 1967
     venue: J. Reine Angew. Math. 225, 209-220
+    doi: 10.1515/crll.1967.225.209
     role: conditional-proof
 related: [euclidean-number-rings]
 review:

@@ -15,6 +15,7 @@ sources:
     title: An elementary problem equivalent to the Riemann hypothesis
     year: 2002
     venue: Amer. Math. Monthly 109, 534-543
+    doi: 10.1080/00029890.2002.11919883
     role: conditional-proof
 related: [robin-inequality]
 review:

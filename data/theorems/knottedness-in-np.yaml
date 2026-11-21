@@ -17,23 +17,24 @@ sources:
     title: Knottedness is in NP, modulo GRH
     year: 2014
     venue: Adv. Math. 256, 493-506
+    doi: 10.1016/j.aim.2014.01.007
     url: https://arxiv.org/abs/1112.0845
+    hypothesis_location: "Theorem 3.2, an effective Chebotarev estimate credited to Lagarias and Odlyzko and to Weinberger"
     role: conditional-proof
   - authors: M. Lackenby
     title: The efficient certification of knottedness and Thurston norm
     year: 2021
     venue: Adv. Math. 387, 107796
     doi: 10.1016/j.aim.2021.107796
+    hypothesis_location: Theorem 1.1 (no hypothesis)
     role: unconditional-proof
 related: [nullstellensatz-in-am]
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
-  open_questions:
-    - >-
-      Kuperberg's own statement of the hypothesis has not been read. The variant is inferred from Lackenby's survey, which names the results of Koiran, Lagarias and Odlyzko, and Weinberger as the tools.
+  confidence: high
+  open_questions: []
 lean:
   proved: false
   path: null

@@ -17,6 +17,7 @@ sources:
     title: Hilbert's Nullstellensatz is in the polynomial hierarchy
     year: 1996
     venue: J. Complexity 12, 273-286
+    doi: 10.1006/jcom.1996.0019
     role: conditional-proof
 related: [effective-chebotarev, knottedness-in-np]
 review:

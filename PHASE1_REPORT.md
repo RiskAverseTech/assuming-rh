@@ -94,3 +94,24 @@ Other things found along the way:
 4. Whether to announce on the Lean Zulip and offer the dataset to the effort there. The search on 21 November found no dedicated catalogue. The nearest thing is a single-author GitHub issue tracking downstream targets of the proof (`1337isnot1337/solved-conjectures`, issue 80). Worth a look before launch. The Zulip itself could not be read from here.
 5. Whether commits should carry an AI co-author line after all.
 6. Whether to allow network access to arxiv.org and ams.org so the VERIFY items can be checked against the papers before anything is published.
+
+## Update, 21 November 2026: first primary-source pass
+
+After network access to arXiv, EuDML and Crossref was allowed, seven papers were read in their arXiv versions and the entries were checked against the theorems themselves.
+
+| Entry | Checked against | Result |
+|---|---|---|
+| Explicit primes in short intervals | Dudek, Theorem 2. Carneiro, Milinovich and Soundararajan, Theorem 5 | Confirmed as stated. |
+| Least quadratic non-residue | Lamzouri, Li and Soundararajan, Corollary 1.1 | The (log q)^2 bound is for **prime** q at least 5. Note corrected. |
+| Least prime in an arithmetic progression | Same paper, Corollary 1.2 | Confirmed: q > 3. |
+| Explicit Chen's theorem | Bordignon and Starichkova, Theorem 3 | Confirmed. The paper does not define which L-functions its GRH covers. |
+| Knottedness is in NP | Kuperberg, Theorem 3.2. Lackenby, Theorem 1.1 | Confirmed: Kuperberg's hypothesis enters through an effective Chebotarev estimate. Lackenby is unconditional. |
+| Ternary Goldbach | Helfgott, Main Theorem | Confirmed. |
+
+No classification changed in this pass. One statement was corrected (the range in the non-residue refinement).
+
+Also done: 16 more DOIs confirmed through Crossref and added (31 distinct DOIs in the dataset now), and the full CC BY 4.0 legal text added to `LICENSE-DATA`.
+
+Still not read, because the sites refuse automated downloads or are not on the allowed list: every paper hosted only by the AMS (Bach 1990, Shoup 1992, Hafner and McCurley 1989, Schoenfeld 1976, the 1997 Goldbach paper), Weinberger's two 1973 papers, and everything at Springer, Elsevier and SIAM. The two reclassified entries (Bach, Hafner and McCurley) are in this group, so their open questions stand.
+
+All 31 entries remain `ai-classified`. Reading a paper by machine does not make an entry `human-checked`.

@@ -32,7 +32,9 @@ review:
   confidence: high
   open_questions:
     - >-
-      Helfgott's proof was accepted for Annals of Mathematics Studies in 2015. Whether the book is in print has not been confirmed.
+      Helfgott's Main Theorem was read in the arXiv version. His proof was accepted for Annals of Mathematics Studies in 2015. Whether the book is in print has not been confirmed.
+    - >-
+      The 1997 paper of Deshouillers, Effinger, te Riele and Zinoviev has not been read directly.
 lean:
   proved: false
   path: null

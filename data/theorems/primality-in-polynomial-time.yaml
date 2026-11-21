@@ -18,6 +18,7 @@ sources:
     title: Riemann's hypothesis and tests for primality
     year: 1976
     venue: J. Comput. System Sci. 13, 300-317
+    doi: 10.1016/S0022-0000(76)80043-8
     role: conditional-proof
   - authors: M. Agrawal, N. Kayal, N. Saxena
     title: PRIMES is in P

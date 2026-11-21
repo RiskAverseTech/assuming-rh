@@ -17,6 +17,7 @@ sources:
     title: On the Riemann hypothesis and the difference between primes
     year: 2015
     venue: Int. J. Number Theory 11, 771-778
+    doi: 10.1142/S1793042115500426
     url: https://arxiv.org/abs/1402.6417
     hypothesis_location: Theorem 2
     role: conditional-proof
@@ -25,18 +26,15 @@ sources:
     year: 2019
     venue: Comment. Math. Helv. 94, 533-568
     doi: 10.4171/CMH/467
+    hypothesis_location: Theorem 5
     role: refinement
 related: [cramer-prime-gap-bound]
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
-  open_questions:
-    - >-
-      Checked against search summaries of the arXiv abstract only. Theorem 2 of the paper has not been read directly, and the DOI is not confirmed.
-    - >-
-      The constant 22/25 of Carneiro, Milinovich and Soundararajan is taken from papers that cite it, not from the paper itself.
+  confidence: high
+  open_questions: []
 lean:
   proved: false
   path: null

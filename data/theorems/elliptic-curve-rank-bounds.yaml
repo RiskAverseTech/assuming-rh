@@ -23,6 +23,7 @@ sources:
     title: The average rank of elliptic curves I
     year: 1992
     venue: Invent. Math. 109, 445-472
+    doi: 10.1007/BF01232033
     role: conditional-proof
 review:
   state: ai-classified

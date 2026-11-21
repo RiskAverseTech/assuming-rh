@@ -18,6 +18,7 @@ sources:
     title: A divisor problem
     year: 1930
     venue: Rend. Circ. Mat. Palermo 54, 414-429
+    doi: 10.1007/BF03021203
     role: conditional-proof
   - authors: Yu. V. Linnik
     title: The Dispersion Method in Binary Additive Problems
@@ -28,6 +29,7 @@ sources:
     title: Footnote to the Titchmarsh-Linnik divisor problem
     year: 1967
     venue: Proc. Amer. Math. Soc. 18, 187-188
+    doi: 10.1090/S0002-9939-1967-0204379-6
     role: unconditional-proof
 review:
   state: ai-classified
@@ -36,7 +38,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      Titchmarsh's 1930 paper was not found by search. Its citation is from memory.
+      Titchmarsh's 1930 paper has not been read. That its hypothesis concerns Dirichlet L-functions is taken from later papers that describe it.
 lean:
   proved: false
   path: null

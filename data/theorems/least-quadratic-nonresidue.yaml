@@ -12,12 +12,13 @@ hypotheses_required: [GRH-Dirichlet]
 status: unlocked
 status_note: >
   Ankeny proved O((log p)^2). Bach gave the constant 2. Lamzouri, Li and
-  Soundararajan later improved it to (log q)^2 for q at least 5.
+  Soundararajan later improved it to (log q)^2 for prime q at least 5.
 sources:
   - authors: N. C. Ankeny
     title: The least quadratic non residue
     year: 1952
     venue: Ann. of Math. 55, 65-72
+    doi: 10.2307/1969420
     role: conditional-proof
   - authors: E. Bach
     title: Explicit bounds for primality testing and related problems
@@ -40,7 +41,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      The range in Lamzouri, Li and Soundararajan (prime q at least 5, or all q at least 5) was reported inconsistently by citing papers and must be checked in Corollary 1.1.
+      Corollary 1.1 of Lamzouri, Li and Soundararajan was read in the arXiv version. Bach's theorem with the constant 2 has not been read directly.
 lean:
   proved: false
   path: null

@@ -18,11 +18,13 @@ sources:
     title: On Euclidean rings of algebraic integers
     year: 1973
     venue: Proc. Sympos. Pure Math. 24, Amer. Math. Soc., 321-332
+    doi: 10.1090/pspum/024/0337902
     role: conditional-proof
   - authors: M. Harper, M. R. Murty
     title: Euclidean rings of algebraic integers
     year: 2004
     venue: Canad. J. Math. 56, 71-76
+    doi: 10.4153/CJM-2004-004-5
     role: unconditional-proof
 related: [artin-primitive-root-conjecture]
 review:

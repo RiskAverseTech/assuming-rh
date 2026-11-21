@@ -20,6 +20,7 @@ sources:
     venue: Ramanujan J. 64, 1213-1242
     doi: 10.1007/s11139-024-00866-x
     url: https://arxiv.org/abs/2211.08844
+    hypothesis_location: Theorem 3
     role: conditional-proof
 related: [ternary-goldbach]
 review:
@@ -29,7 +30,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      The statement is from the abstract. That the paper's GRH means Dirichlet L-functions is inferred from the method and a secondary source, not from the paper's own definition.
+      Theorem 3 was read in the arXiv version. The paper does not spell out which L-functions its GRH covers. It uses GRH through the prime number theorem in arithmetic progressions and to rule out Siegel zeros, both of which concern Dirichlet L-functions.
 lean:
   proved: false
   path: null

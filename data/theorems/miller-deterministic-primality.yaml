@@ -19,6 +19,7 @@ sources:
     title: Riemann's hypothesis and tests for primality
     year: 1976
     venue: J. Comput. System Sci. 13, 300-317
+    doi: 10.1016/S0022-0000(76)80043-8
     role: conditional-proof
   - authors: E. Bach
     title: Explicit bounds for primality testing and related problems

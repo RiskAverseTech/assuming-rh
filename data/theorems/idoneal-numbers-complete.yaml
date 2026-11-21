@@ -18,6 +18,7 @@ sources:
     title: Exponents of the class groups of complex quadratic fields
     year: 1973
     venue: Acta Arith. 22, 117-124
+    doi: 10.4064/aa-22-2-117-124
     url: https://eudml.org/doc/205148
     role: conditional-proof
 related: [no-siegel-zeros]

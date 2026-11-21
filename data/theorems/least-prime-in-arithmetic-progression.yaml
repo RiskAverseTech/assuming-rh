@@ -30,10 +30,10 @@ review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
+  confidence: high
   open_questions:
     - >-
-      Corollary 1.2 is quoted as reported by two citing papers. It has not been read in the paper itself.
+      Corollary 1.2 was read in the arXiv version, which already includes the correction. The published corrigendum itself was not read.
 lean:
   proved: false
   path: null
