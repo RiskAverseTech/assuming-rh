@@ -8,11 +8,15 @@ statement_formal: null
 hypotheses_required: [GRH-Dirichlet]
 status: unlocked
 status_note: >
-  Unconditionally, Weinberger showed there is at most one further fundamental
-  discriminant with class group of exponent at most 2, which leaves at most
-  two more idoneal numbers. The common claim "at most one more" is a
-  misstatement. The conditional proof needs only the L-functions of real
-  Dirichlet characters, and only the absence of a zero very close to 1.
+  Weinberger's Theorem 1 has two parts. Without any hypothesis, there is at
+  most one imaginary quadratic field of discriminant -d with d > 5460 whose
+  class group has exponent 2. This leaves at most two more idoneal numbers,
+  and the common claim "at most one more" is a misstatement. Under the
+  hypothesis that the L-function of the Kronecker symbol of -d has no real
+  zero s with 1 - 1/(4 log d) <= s < 1, for every d above 2 * 10^11, there is
+  no such field, and Euler's list is complete. That hypothesis concerns real
+  Dirichlet characters only and is much weaker than GRH for Dirichlet
+  L-functions, which implies it.
 sources:
   - authors: P. J. Weinberger
     title: Exponents of the class groups of complex quadratic fields
@@ -20,16 +24,20 @@ sources:
     venue: Acta Arith. 22, 117-124
     doi: 10.4064/aa-22-2-117-124
     url: https://eudml.org/doc/205148
+    hypothesis_location: Theorem 1 (and Lemma 4)
     role: conditional-proof
 related: [no-siegel-zeros]
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
+  confidence: high
   open_questions:
     - >-
-      Weinberger's exact conditional hypothesis (which zero-free region, for which characters) has not been read in the paper. Secondary sources say it concerns real Dirichlet characters only.
+      Theorem 1 was read in the paper. The paper speaks of fields with class
+      group of exponent 2 and says these are "essentially" Euler's idoneal
+      numbers. The step from Theorem 1 to "exactly 65 idoneal numbers" is
+      taken from later surveys, not from the paper.
 lean:
   proved: false
   path: null

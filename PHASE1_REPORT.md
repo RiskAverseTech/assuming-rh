@@ -115,3 +115,5 @@ Also done: 16 more DOIs confirmed through Crossref and added (31 distinct DOIs i
 Still not read, because the sites refuse automated downloads or are not on the allowed list: every paper hosted only by the AMS (Bach 1990, Shoup 1992, Hafner and McCurley 1989, Schoenfeld 1976, the 1997 Goldbach paper), Weinberger's two 1973 papers, and everything at Springer, Elsevier and SIAM. The two reclassified entries (Bach, Hafner and McCurley) are in this group, so their open questions stand.
 
 All 31 entries remain `ai-classified`. Reading a paper by machine does not make an entry `human-checked`.
+
+Later the same day: Weinberger's 1973 paper on class group exponents was read (scanned copy linked from EuDML). Its Theorem 1 confirms the idoneal entry. The hypothesis is explicit: no real zero s with 1 - 1/(4 log d) <= s < 1 for the L-function of the Kronecker symbol of -d, for d above 2 * 10^11. Real Dirichlet characters only. The entry now quotes it.
