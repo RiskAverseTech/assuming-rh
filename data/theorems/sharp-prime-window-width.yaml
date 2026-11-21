@@ -2,7 +2,7 @@ id: sharp-prime-window-width
 title: A sharp width for weighted sums over ordinary primes
 field: analytic-number-theory
 statement_plain: >-
-  Assume RH. At every real scale y > 0 and every width b at or above the critical value, the weighted sum of log p over the primes between y and b²y is strictly less than b(b−1)y log b. The critical value lies strictly between 1.50342897722316 and 1.50342897722317.
+  At every real scale y > 0 and every width b at or above the critical value, the weighted sum of log p over the primes between y and b²y is strictly less than b(b−1)y log b. The critical value lies strictly between 1.50342897722316 and 1.50342897722317.
 statement_formal: |
   \begin{gathered}
   W_b(t)=\begin{cases}
@@ -27,11 +27,15 @@ sources:
     url: https://github.com/leecrossley/prime-window-all-widths/blob/7e612821f7aabdb644c97cecc4c5bf13359fd73e/PROOF.md
     hypothesis_location: 'Opening statement of PROOF.md. "The zero mass" defines the critical width. "Passing to every width" extends the inequality to all larger widths.'
     role: conditional-proof
+author_submitted:
+  by: leecrossley
+  source_standing: self-published
+  note: null
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: high
+  confidence: low
   open_questions: []
 lean:
   proved: false

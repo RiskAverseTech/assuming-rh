@@ -1,6 +1,18 @@
 {
   "name": "Assuming RH",
-  "tagline": "Which theorems proved assuming the Riemann Hypothesis are now unconditional?",
+  "tagline": "Which theorems proved assuming the Riemann Hypothesis would the announced proof settle?",
   "repo_url": "https://github.com/RiskAverseTech/assuming-rh",
-  "credit": "Jaz"
+  "credit": "Jaz",
+  "site_url": "https://riskaversetech.github.io/assuming-rh/",
+  "share_description": "An open, provisional map of which theorems proved assuming the Riemann Hypothesis the announced proof would settle, and which need more.",
+  "highlights": [
+    "miller-deterministic-primality",
+    "schoenfeld-prime-counting-error",
+    "robin-inequality",
+    "least-prime-in-arithmetic-progression",
+    "artin-primitive-root-conjecture",
+    "bach-class-group-generators",
+    "isogeny-graphs-ordinary-elliptic-curves-expanders",
+    "ternary-goldbach"
+  ]
 }

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below, and keep each entry's review state with it."
+title: "Assuming RH: a map of theorems conditional on the Riemann Hypothesis"
+type: dataset
+authors:
+  - name: "Jaz"
+repository-code: "https://github.com/RiskAverseTech/assuming-rh"
+url: "https://riskaversetech.github.io/assuming-rh/"
+license: CC-BY-4.0
+date-released: 2026-11-21
+abstract: >-
+  An open dataset recording, for theorems proved assuming the Riemann
+  Hypothesis or a generalization, exactly which hypothesis each proof uses,
+  and whether the proof announced in November 2026 would make the result
+  unconditional. Entries are drafted by an AI system and labeled with their
+  review state.
+keywords:
+  - Riemann Hypothesis
+  - generalized Riemann hypothesis
+  - number theory
+  - conditional theorems

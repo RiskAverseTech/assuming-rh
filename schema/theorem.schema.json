@@ -144,6 +144,7 @@
               "conditional-proof",
               "unconditional-proof",
               "refinement",
+              "formalization",
               "survey",
               null
             ]
@@ -253,6 +254,34 @@
           "higher-automorphic",
           "extra-assumption"
         ]
+      }
+    },
+    "author_submitted": {
+      "description": "Present only when the entry was contributed by an author of its source and that source is not refereed or on arXiv. Such entries are shown with a separate label and are left out of the headline counts.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "by",
+        "source_standing"
+      ],
+      "properties": {
+        "by": {
+          "description": "Name or GitHub handle of the contributor.",
+          "type": "string",
+          "minLength": 1
+        },
+        "source_standing": {
+          "enum": [
+            "self-published",
+            "preprint-by-contributor"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     }
   }

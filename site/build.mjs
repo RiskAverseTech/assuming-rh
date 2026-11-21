@@ -78,6 +78,7 @@ function rich(text) {
 const statusBadge = (e) =>
   `<span class="badge status-${e.status}${e.review.state === 'ai-classified' ? ' draft' : ''}">${STATUS[e.status].label}</span>`;
 const reviewBadge = (e) => `<span class="badge review-${e.review.state}">${REVIEW[e.review.state].label}</span>`;
+const authorBadge = (e) => (e.author_submitted ? ' <span class="badge author-sub">Author-submitted, unrefereed</span>' : '');
 const hypChip = (code) => `<span class="chip cov-${hyp[code].covered}" title="${esc(hyp[code].name)}: ${COVERED[hyp[code].covered]}">${code}</span>`;
 const fmtDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number);
@@ -90,9 +91,9 @@ function correctionUrl(e) {
 function sourceHtml(s) {
   const link = s.doi ? `https://doi.org/${s.doi}` : s.url;
   const title = link ? `<a href="${esc(link)}" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
-  const roles = { 'conditional-proof': 'Conditional proof', 'unconditional-proof': 'Unconditional proof', refinement: 'Refinement', survey: 'Survey or reference' };
+  const roles = { 'conditional-proof': 'Conditional proof', 'unconditional-proof': 'Unconditional proof', refinement: 'Refinement', formalization: 'Formalization', survey: 'Survey or reference' };
   return `<li>${s.role ? `<span class="role">${roles[s.role]}</span> ` : ''}${esc(s.authors)} (${s.year}). <cite>${title}</cite>.${s.venue ? ' ' + esc(s.venue) + '.' : ''}${s.doi ? ` <span class="doi">doi:${esc(s.doi)}</span>` : ''}` +
-    `<div class="where">${s.hypothesis_location ? 'Hypothesis used at: ' + esc(s.hypothesis_location) : 'Where the hypothesis is invoked: not yet recorded.'}</div></li>`;
+    `<div class="where">${s.role === 'formalization' ? (s.hypothesis_location ? esc(s.hypothesis_location) : '') : (s.hypothesis_location ? 'Hypothesis used at: ' + esc(s.hypothesis_location) : 'Where the hypothesis is invoked: not yet recorded.')}</div></li>`;
 }
 
 // ---------- layout ----------
@@ -119,6 +120,16 @@ function page({ file, title, description, body, math = false }) {
 <title>${esc(title)}${title === cfg.name ? '' : ' | ' + esc(cfg.name)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="author" content="${esc(cfg.credit)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(cfg.name)}">
+<meta property="og:title" content="${esc(title === cfg.name ? cfg.name + ': ' + cfg.tagline : title + ' | ' + cfg.name)}">
+<meta property="og:description" content="${esc(file === 'index.html' ? cfg.share_description : description)}">
+<meta property="og:url" content="${esc(cfg.site_url + (file === 'index.html' ? '' : file))}">
+<meta property="og:image" content="${esc(cfg.site_url)}assets/share-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Assuming RH: which theorems proved assuming the Riemann Hypothesis would the announced proof settle, and which need more?">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="assets/style.css">
@@ -157,7 +168,9 @@ ${body}
 
 // ---------- pages ----------
 function buildHome() {
-  const counts = Object.fromEntries(STATUS_ORDER.map((s) => [s, entries.filter((e) => e.status === s).length]));
+  const counted = entries.filter((e) => !e.author_submitted);
+  const authorSub = entries.length - counted.length;
+  const counts = Object.fromEntries(STATUS_ORDER.map((s) => [s, counted.filter((e) => e.status === s).length]));
   const unchecked = entries.filter((e) => e.review.state === 'ai-classified').length;
   page({
     file: 'index.html',
@@ -201,8 +214,16 @@ function buildHome() {
       <span class="count-label">${STATUS[s].label}</span>
       <span class="count-desc">${STATUS[s].short}</span></a></li>`).join('\n    ')}
   </ul>
+  ${authorSub ? `<p class="muted">${authorSub} more ${authorSub === 1 ? 'entry is an unrefereed result' : 'entries are unrefereed results'} submitted by ${authorSub === 1 ? 'its author' : 'their authors'}. ${authorSub === 1 ? 'It is' : 'They are'} labeled and not included in the counts above. <a href="about.html#author-submitted">What that means</a>.</p>` : ''}
   <p class="muted">${unchecked} of ${entries.length} entries are AI-classified and not yet checked by a human expert.
   <a href="about.html#review-states">What the review states mean</a>.</p>
+</section>
+<section aria-labelledby="known-h">
+  <h2 id="known-h">Some well-known results at a glance</h2>
+  <ul class="known">
+    ${(cfg.highlights || []).filter((id) => byId[id]).map((id) => { const e = byId[id]; const st = e.statement_plain.trim().replace(/\s+/g, ' '); const cut = st.length > 150 ? st.slice(0, st.lastIndexOf(' ', 150)) + ' ...' : st; return `<li class="status-${e.status}"><a href="theorems/${e.id}.html"><span class="known-title">${esc(e.title)}</span><span class="known-st">${esc(cut)}</span></a><span class="known-badge">${statusBadge(e)}</span></li>`; }).join('\n    ')}
+  </ul>
+  <p class="muted">A small selection. <a href="browse.html">Browse all ${entries.length} entries</a> or see <a href="waiting.html">what is still waiting</a>.</p>
 </section>
 <section aria-labelledby="start-h">
   <h2 id="start-h">Where to start</h2>
@@ -226,7 +247,7 @@ function buildBrowse() {
       const hay = [e.title, e.statement_plain, e.tags.join(' '), e.sources.map((s) => s.authors + ' ' + s.year).join(' '), e.hypotheses_required.join(' ')].join(' ').toLowerCase();
       return `<tr data-status="${e.status}" data-hyps="${e.hypotheses_required.join(' ')}" data-field="${e.field}" data-review="${e.review.state}" data-search="${esc(hay)}">
       <th scope="row" data-sort="${esc(e.title.toLowerCase())}"><a href="theorems/${e.id}.html">${esc(e.title)}</a></th>
-      <td data-sort="${STATUS_ORDER.indexOf(e.status)}">${statusBadge(e)}</td>
+      <td data-sort="${STATUS_ORDER.indexOf(e.status)}">${statusBadge(e)}${authorBadge(e)}</td>
       <td data-sort="${esc(e.hypotheses_required.join(' '))}">${e.hypotheses_required.map(hypChip).join(' ')}</td>
       <td data-sort="${e.field}">${FIELD(e.field)}</td>
       <td data-sort="${Object.keys(REVIEW).indexOf(e.review.state)}">${reviewBadge(e)}</td>
@@ -290,7 +311,8 @@ function buildEntry(e) {
 <article class="entry">
   <header>
     <h1>${esc(e.title)}</h1>
-    <p class="badges">${statusBadge(e)} ${reviewBadge(e)} <span class="field">${FIELD(e.field)}</span></p>
+    <p class="badges">${statusBadge(e)} ${reviewBadge(e)}${authorBadge(e)} <span class="field">${FIELD(e.field)}</span></p>
+    ${e.author_submitted ? `<p class="notice"><strong>Submitted by its author and not refereed.</strong> This result was contributed by ${esc(e.author_submitted.by)}, an author of the source cited below. The source has not been through peer review, and nobody independent has checked it for this site. It is not included in the site's headline counts.${e.author_submitted.note ? ' ' + esc(e.author_submitted.note) : ''}</p>` : ''}
     ${r.state === 'ai-classified' ? `<p class="notice"><strong>Not yet human-checked.</strong> ${REVIEW[r.state].long}</p>` : ''}
   </header>
 
@@ -403,6 +425,15 @@ function buildAbout() {
 <dl class="defs">
   ${Object.keys(REVIEW).map((r) => `<dt><span class="badge review-${r}">${REVIEW[r].label}</span></dt><dd>${REVIEW[r].long}</dd>`).join('\n  ')}
 </dl>
+
+<h2 id="author-submitted">Results submitted by their authors</h2>
+<p>Most entries cite a refereed paper or an arXiv preprint by someone other than the person who added the entry. Sometimes an author contributes their own new result, with a source that has not been refereed. Those entries are welcome, and they are kept apart:</p>
+<ul>
+  <li>They carry the label "Author-submitted, unrefereed" wherever they appear.</li>
+  <li>They are left out of the counts on the home page.</li>
+  <li>Their confidence is recorded as low until someone independent has checked them.</li>
+</ul>
+<p>The label is removed when the source is published in a refereed venue or an independent expert has checked the entry.</p>
 
 <h2 id="how">How entries are classified</h2>
 <ol>
@@ -537,7 +568,7 @@ function buildData() {
 // ---------- run ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets', 'katex'), { recursive: true });
-for (const f of ['style.css', 'app.js']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
+for (const f of ['style.css', 'app.js', 'share-card.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
 const kdist = path.join(ROOT, 'node_modules', 'katex', 'dist');
 fs.copyFileSync(path.join(kdist, 'katex.min.css'), path.join(OUT, 'assets', 'katex', 'katex.min.css'));
 fs.cpSync(path.join(kdist, 'fonts'), path.join(OUT, 'assets', 'katex', 'fonts'), { recursive: true, filter: (src) => !/\.(ttf|woff)$/.test(src) });

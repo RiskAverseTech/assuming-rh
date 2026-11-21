@@ -140,3 +140,10 @@ table.waiting th[scope="row"] { font-weight: 600; min-width: 15rem; }
 table.waiting .num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .count-inline { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0.05rem 0.5rem; vertical-align: middle; }
 .wait-list { padding-left: 1.1rem; } .wait-list li { margin: 0.35rem 0; max-width: 52rem; }
+.badge.author-sub { background: transparent; border: 1px solid var(--part-ink); color: var(--part-ink); }
+.known { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 0.75rem; }
+.known li { max-width: none; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--c); border-radius: 8px; padding: 0.75rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.known li.status-unlocked { --c: var(--ok-ink); } .known li.status-partial { --c: var(--part-ink); } .known li.status-still-conditional { --c: var(--cond-ink); } .known li.status-proved-otherwise { --c: var(--other-ink); }
+.known a { text-decoration: none; color: inherit; display: block; } .known a:hover .known-title { text-decoration: underline; }
+.known-title { display: block; font-weight: 700; } .known-st { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.known-badge { margin-top: auto; }

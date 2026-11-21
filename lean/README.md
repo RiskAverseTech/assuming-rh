@@ -8,6 +8,6 @@ Planned first targets, because they are short:
 - `least-quadratic-nonresidue`
 - `deterministic-square-roots-mod-p`
 
-Nothing will be added until the license and stability of the upstream formalization are clear. As of 21 November 2026 the released archive carries no license file, so it cannot be imported or redistributed here.
+Proofs of the form "RH implies X" need only Mathlib's statement of the Riemann Hypothesis, so they can be written without importing the proof itself. Importing the proof waits on its license: as of 21 November 2026 the released archive carried none, and the author was reported to be preparing one.
 
 When a corollary lands, the entry's `lean.proved` and `lean.path` fields point to it and its review state can move to `lean-verified`.
