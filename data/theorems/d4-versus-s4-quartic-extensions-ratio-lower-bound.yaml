@@ -1,0 +1,49 @@
+id: d4-versus-s4-quartic-extensions-ratio-lower-bound
+title: Lower bound for the ratio of D_4 to S_4 quartic extensions of a number field
+field: algebraic-number-theory
+statement_plain: >
+  Let F be a number field of degree d and discriminant D_F, and let
+  N(X; G) count quartic extensions K/F with relative discriminant of norm
+  below X whose Galois closure has group G. Then the limit as X tends to
+  infinity of N(X; D_4) / N(X; S_4) is at least a constant depending only on
+  d times (#Cl_F[2] - 1) / (log log |D_F|)^d, where Cl_F[2] is the 2-torsion of
+  the class group of F.
+statement_formal: |
+  \lim_{X \to \infty} \frac{N_4^F(X; D_4)}{N_4^F(X; S_4)} \gg_d \frac{\#\mathrm{Cl}_F[2] - 1}{(\log\log |D_F|)^{d}}
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper says the assumption of GRH is used for a lower bound on the
+  residue of Dedekind zeta functions: it bounds the residue of zeta_F from
+  above and the residues of zeta_L from below, for the #Cl_F[2] - 1
+  unramified quadratic extensions L of F. The covered special case is F
+  quadratic (Corollary 2.3, with 2^omega(D_F) / (log log |D_F|)^2 on the
+  right): there the unramified quadratic extensions L are multiquadratic
+  fields, abelian over the rationals, so only Dirichlet L-functions are
+  involved. For general F the fields F and L are not abelian and the bound
+  stays conditional. The paper itself removes the hypothesis for 100 percent
+  of quadratic fields, with a slightly different bound (Theorem 1.1).
+sources:
+  - authors: M. Friedrichsen, D. Keliher
+    title: Comparing the density of D_4 and S_4 quartic extensions of number fields
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/1910.06388
+    hypothesis_location: Theorem 1.3 (proved in Section 2 from the residue bounds (2.4))
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper cites the residue bounds (2.4) from another source ('see e.g. [CK]') without saying exactly which L-functions that source assumes GRH for; Dedekind zeta functions are assumed here.
+    - >-
+      The claim that the quadratic case needs only Dirichlet L-functions is my own deduction (unramified quadratic extensions of a quadratic field are genus fields); the paper does not state it. Corollary 2.3 for class groups with trivial 2-torsion uses extensions ramified at 2, which was not checked.
+lean:
+  proved: false
+  path: null
+tags: [quartic-fields, field-counting, dedekind-zeta]
+added: 2026-11-21

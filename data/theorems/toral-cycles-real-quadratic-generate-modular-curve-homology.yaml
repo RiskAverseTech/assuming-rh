@@ -1,0 +1,45 @@
+id: toral-cycles-real-quadratic-generate-modular-curve-homology
+title: Toral cycles of any real quadratic field generate the homology of modular curves
+field: arithmetic-geometry
+statement_plain: >
+  Let Gamma be a congruence subgroup of SL_2(Z) and E any real quadratic
+  field. Then the E-toral cycles (closed geodesics attached to elements of
+  E not in Q) generate the first homology H_1(X(Gamma), C) of the
+  compactified modular curve.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper defines "GRH" as the generalized Riemann hypothesis for those
+  number fields needed in Lenstra's 1977 theorem on Artin's conjecture. In
+  the application (Section 7) these are Kummer extensions E(zeta_l, W^(1/l))
+  of the real quadratic field E, where W is a finite index subgroup of the
+  units, together with cyclotomic extensions of E. These fields are not
+  abelian over the rationals. The hypothesis gives infinitely many split
+  primes p in a progression for which W surjects onto the units modulo a
+  prime above p (Theorem 7.3). The paper has integral refinements under the
+  same hypothesis, for example that the connecting map psi is onto the
+  cuspidal Steinberg homology for Gamma_1(N) (Theorem 8.4), and the authors
+  conjecture these results hold unconditionally.
+sources:
+  - authors: A. Ash, D. Yasaki
+    title: Steinberg homology, modular forms, and real quadratic fields
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.01257
+    hypothesis_location: Theorem 12.7, via Theorem 9.3 and Theorem 7.3 (Lenstra's theorem)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The precise definition of an E-toral cycle is in Section 12 of the paper; the parenthetical description in the plain statement is a paraphrase.
+lean:
+  proved: false
+  path: null
+tags: [modular-curves, real-quadratic-fields, artin-conjecture]
+added: 2026-11-21

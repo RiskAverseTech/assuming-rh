@@ -1,0 +1,46 @@
+id: fourth-moment-quadratic-hecke-l-functions-gaussian-field
+title: Asymptotic formula for the fourth moment of quadratic Hecke L-functions over the Gaussian field
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and let chi_{(1+i)^5 d} be the quadratic Hecke character
+  attached to an odd square-free d in Z[i]. The sum of
+  |L(1/2, chi_{(1+i)^5 d})|^4 over odd square-free d with norm at most X equals
+  C X (log X)^10 + O(X (log X)^(9.5 + eps)), where
+  C = pi a_4 (pi/4)^10 / (2^7 3^4 5^2 7 zeta_K(2)) and a_4 is an explicit
+  Euler product over primes of Z[i].
+statement_formal: |
+  \sum\nolimits^{*}_{\substack{(d,2)=1 \\ N(d) \le X}} \left|L\!\left(\tfrac12, \chi_{(1+i)^5 d}\right)\right|^4 = \frac{\pi a_4}{2^7 \cdot 3^4 \cdot 5^2 \cdot 7 \cdot \zeta_K(2)} \left(\frac{\pi}{4}\right)^{10} X (\log X)^{10} + O\!\left(X (\log X)^{9.5+\varepsilon}\right)
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper assumes GRH for zeta_K(s) with K = Q(i) and for the Hecke
+  L-functions L(s, chi_{(1+i)^5 d}) for all odd square-free d in Z[i]. The
+  first is the product of the Riemann zeta function and the Dirichlet
+  L-function of the character modulo 4, so it is covered. The second family
+  consists of L-functions of quadratic residue symbols over Q(i), which are
+  Hecke characters of Q(i) and in general not Dirichlet characters, so the
+  result stays conditional. Under the same hypothesis the paper bounds all
+  positive real moments by X (log X)^(k(k+1)/2 + eps) (Corollary 1.3), and it
+  proves the matching lower bound for the fourth moment unconditionally
+  (Theorem 1.6). It is the Gaussian field analog of Shen's fourth moment for
+  quadratic Dirichlet L-functions.
+sources:
+  - authors: P. Gao
+    title: The fourth moment of central values of quadratic Hecke $L$-functions in the Gaussian field
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2004.12528
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [moments, hecke-l-functions, gaussian-field]
+added: 2026-11-21
