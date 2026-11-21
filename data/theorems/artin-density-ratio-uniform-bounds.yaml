@@ -1,0 +1,47 @@
+id: artin-density-ratio-uniform-bounds
+title: Uniform bounds for the ratio of the Artin primitive root density to the Artin constant
+field: analytic-number-theory
+statement_plain: >
+  Let a be a rational number other than 0, 1, -1 that is not a square, let
+  tau be the largest integer such that a is a tau-th power of a rational,
+  and let A(tau) be the corresponding Artin constant. The set of primes p
+  for which a is a primitive root has a density dens(a) satisfying
+  2/3 <= dens(a)/A(tau) <= 2, and 84/85 <= dens(a)/A(1) <= 6/5 when tau = 1.
+  The bounds are attained (for example by a = -15 and a = -3 when tau = 1),
+  so the largest Artin density over the rationals is dens(-3) = (6/5) A(1).
+statement_formal: |
+  \frac{2}{3}\le\frac{\operatorname{dens}(\alpha)}{A(\tau)}\le 2,\qquad A(\tau)=\prod_{\ell\mid\tau}\left(1-\frac{1}{\ell-1}\right)\prod_{\ell\nmid\tau}\left(1-\frac{1}{\ell(\ell-1)}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The inequalities are derived unconditionally from Hooley's explicit
+  formula for the density. The hypothesis is needed only so that this
+  formula is the actual density of the set of primes, which is Hooley's
+  conditional theorem recorded in the entry artin-primitive-root-conjecture
+  and uses Dedekind zeta functions of Kummer fields. The paper also proves
+  upper and lower bounds depending only on K for a general number field K
+  (Theorem 5.1 and Corollary 5.3), assuming the Extended Riemann Hypothesis
+  for zeta functions of number fields. Theorem 2.1 of the paper gives finer
+  lower bounds depending on the prime factors of tau.
+sources:
+  - authors: A. Perucca, I. E. Shparlinski
+    title: "Uniform bounds for the density in Artin's conjecture on primitive roots"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2401.11589
+    hypothesis_location: "Theorem 2.1; Section 2 assumes GRH throughout"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Without the hypothesis the theorem is still a true statement about Hooley's formula; only its reading as a density of primes is conditional. A reviewer may want to decide whether this deserves an entry separate from artin-primitive-root-conjecture.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, densities]
+added: 2026-11-21

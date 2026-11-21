@@ -8,15 +8,15 @@ statement_plain: >
 statement_formal: |
   K/\mathbb{Q} \text{ Galois cubic and norm-Euclidean} \iff \Delta_K = f^2,\ f \in \{7, 9, 13, 19, 31, 37, 43, 61, 67, 103, 109, 127, 157\}
 hypotheses_required: [RH, GRH-Dirichlet]
-status: unlocked
+status: proved-otherwise
 status_note: >
-  The paper defines GRH as the statement for every Dirichlet L-function, and
-  a footnote says that for this theorem it suffices to assume RH and GRH for
-  Dirichlet L-functions of cubic characters. Where the proof assumes GRH for
-  the Dedekind zeta function of the cubic field, the paper notes that this
-  follows from the Dirichlet case, since the field is abelian over the
-  rationals. That the thirteen listed fields are norm-Euclidean is
-  unconditional; the hypothesis is used to exclude all other fields.
+  McGown proved this assuming GRH for Dirichlet L-functions. Bagger,
+  Booker, Kerr, McGown, Starichkova and Trudgian have since proved it
+  without any hypothesis (arXiv 2507.05862), by new explicit bounds for
+  cubic non-residues and further computation. In McGown's paper a footnote
+  says it suffices to assume RH and GRH for Dirichlet L-functions of cubic
+  characters. That the thirteen listed fields are norm-Euclidean was already
+  unconditional; the hypothesis was used to exclude all other fields.
 sources:
   - authors: K. J. McGown
     title: Norm-Euclidean Galois fields and the Generalized Riemann Hypothesis
@@ -25,6 +25,12 @@ sources:
     url: https://arxiv.org/abs/1102.2043
     hypothesis_location: Theorem 1.1
     role: conditional-proof
+  - authors: G. K. Bagger, A. R. Booker, B. Kerr, K. J. McGown, V. Starichkova, T. Trudgian
+    title: The determination of norm-Euclidean cyclic cubic fields
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2507.05862
+    role: unconditional-proof
 review:
   state: ai-classified
   checked_by: null
@@ -32,7 +38,7 @@ review:
   confidence: high
   open_questions:
     - >-
-      The proof combines the conditional conductor bound with earlier computations (Theorem 1.2 of the paper, from another paper of the same author); those computations were not checked here.
+      The unconditional proof is a preprint. Its abstract was read; the proof was not checked.
 lean:
   proved: false
   path: null

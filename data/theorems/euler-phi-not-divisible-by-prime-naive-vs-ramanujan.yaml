@@ -1,0 +1,46 @@
+id: euler-phi-not-divisible-by-prime-naive-vs-ramanujan
+title: Integers n with phi(n) not divisible by a prime q, naive versus Ramanujan type approximation
+field: analytic-number-theory
+statement_plain: >
+  For an odd prime q let E_q(x) be the number of n <= x such that q does not
+  divide Euler's phi(n). It is known that E_q(x) is asymptotic to
+  e(q) x / (log x)^(1/(q-1)). Compare the naive approximation
+  e(q) x / (log x)^(1/(q-1)) with the Ramanujan type approximation, e(q)
+  times the integral from 2 to x of dt / (log t)^(1/(q-1)). For q <= 67 the
+  Ramanujan type approximation is asymptotically better, and for every
+  prime q > 67 the naive approximation is asymptotically better.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used only through bounds of Ihara for the
+  Euler-Kronecker constant of the cyclotomic field Q(zeta_q), which assume
+  the Riemann Hypothesis for the Dedekind zeta function of that field
+  (Proposition 2 and inequality (30) of the paper). That zeta function is the
+  product of the Riemann zeta function and the Dirichlet L-functions of the
+  characters modulo q, so RH and GRH for Dirichlet L-functions suffice. The
+  asymptotic expansion of E_q(x) itself (Theorem 2 of the paper) is
+  unconditional.
+sources:
+  - authors: P. Moree
+    title: "Values of the Euler phi function not divisible by a prescribed odd prime"
+    year: 2006
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0611509
+    hypothesis_location: "Theorem 3, proved in Section 5.7 from Proposition 2 (Ihara)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Ihara's paper was not read. The paper under review writes only GRH; that Ihara's hypothesis concerns the Dedekind zeta function of the field in question (here Q(zeta_q)) is inferred from the way his bounds are specialized to K(q) in Proposition 2.
+    - >-
+      The proof of Theorem 3 also uses numerical evaluation of constants for the primes q below 419; this was not checked.
+lean:
+  proved: false
+  path: null
+tags: [euler-phi, euler-kronecker-constants, cyclotomic-fields]
+added: 2026-11-21
