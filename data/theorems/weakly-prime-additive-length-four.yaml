@@ -1,0 +1,44 @@
+id: weakly-prime-additive-length-four
+title: Weakly prime-additive numbers of length 4 divisible by any given integer
+field: additive-number-theory
+statement_plain: >
+  A positive integer n is weakly prime-additive if it has at least two
+  distinct prime divisors and is a sum of positive powers of distinct prime
+  divisors of n; its length is the least number of terms in such a sum. For
+  every positive integer m there are infinitely many weakly prime-additive
+  numbers of length 4 that are divisible by m.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The theorem is stated under an assumption (*): in certain arithmetic
+  progressions a mod f there is a prime having a prescribed odd prime g as a
+  primitive root. The paper derives (*) from "GRH" through a theorem of Moree
+  on primes in arithmetic progressions with a prescribed primitive root, and
+  notes that (*) is much weaker than GRH. The paper does not say which
+  L-functions are meant; results of this Artin primitive root type are
+  recorded here as needing Dedekind zeta functions of Kummer-type fields.
+sources:
+  - authors: W. H. Leung
+    title: On the weakly prime-additive numbers with length 4
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/1903.10668
+    hypothesis_location: Theorem 1 (assumption (*), which follows from GRH by Corollary 6.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem assumes (*) and not GRH directly. Whether (*) could be reached from a weaker or covered hypothesis is not addressed in the paper.
+    - >-
+      The paper does not define GRH. The classification as ERH-Dedekind rests on the cited theorem of Moree (Funct. Approx. Comment. Math. 39, 2008) being of Hooley type; that source was not available here.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [prime-additive-numbers, primitive-roots, artin-conjecture]
+added: 2026-11-21
