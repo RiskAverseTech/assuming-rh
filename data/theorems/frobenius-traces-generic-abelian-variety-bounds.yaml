@@ -1,0 +1,49 @@
+id: frobenius-traces-generic-abelian-variety-bounds
+title: Upper bounds for primes with a given Frobenius trace on a generic abelian variety
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an abelian variety over the rationals of dimension g such that
+  for every sufficiently large prime l the image of the mod l Galois
+  representation is GSp_2g(Z/lZ). Let pi_A(x, t) be the number of primes p
+  up to x whose Frobenius trace on A equals t. Then for all sufficiently
+  large x, pi_A(x, 0) = O(x^(1 - 1/(2g^2+g+1)) / (log x)^(1 - 2/(2g^2+g+1)))
+  and, for t nonzero,
+  pi_A(x, t) = O(x^(1 - 1/(2g^2+g+2)) / (log x)^(1 - 2/(2g^2+g+2))), with
+  implied constants depending on A.
+statement_formal: |
+  \pi_A(x,0) \ll_A \frac{x^{1-\frac{1}{2g^2+g+1}}}{(\log x)^{1-\frac{2}{2g^2+g+1}}}, \qquad \pi_A(x,t) \ll_A \frac{x^{1-\frac{1}{2g^2+g+2}}}{(\log x)^{1-\frac{2}{2g^2+g+2}}} \ \ (t \ne 0)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes GRH for Dedekind zeta functions of number fields,
+  used through effective Chebotarev theorems in subextensions of the
+  division fields of A, which are not abelian over the rationals. For
+  g = 1 the bounds are those in lang-trotter-upper-bounds-zywina. The entry
+  frobenius-traces-products-non-cm-elliptic-curves is the companion result
+  by the same authors for products of elliptic curves, where the Galois
+  image is smaller and the exponents differ. For g at least 2 the paper says
+  this improves earlier bounds of Cojocaru, Davis, Silverberg and Stange.
+  It also gives sharper bounds if Artin's holomorphy conjecture and a pair
+  correlation conjecture are assumed as well (Theorem 2).
+sources:
+  - authors: A. C. Cojocaru, T. Wang
+    title: Bounds for the distribution of the Frobenius traces associated to a generic abelian variety
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2207.02913
+    hypothesis_location: Theorem 1 (GRH is defined in the notation section)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year is that of the arXiv version on disk (v2, April 2026); the paper was first posted in 2022.
+lean:
+  proved: false
+  path: null
+tags: [abelian-varieties, frobenius-traces, lang-trotter, chebotarev]
+added: 2026-11-21

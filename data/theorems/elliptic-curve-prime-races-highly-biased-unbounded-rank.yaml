@@ -1,0 +1,50 @@
+id: elliptic-curve-prime-races-highly-biased-unbounded-rank
+title: Large analytic ranks give arbitrarily biased elliptic curve prime number races
+field: analytic-number-theory
+statement_plain: >
+  For an elliptic curve E over the rationals let S(t) be minus the sum of
+  a_p(E) / sqrt(p) over primes p up to t, and consider the lower and upper
+  logarithmic densities of the set of t with S(t) >= 0. Suppose that the
+  analytic rank of E divided by sqrt(log N_E) is unbounded as E varies
+  (N_E is the conductor). Then for every epsilon > 0 there is an elliptic
+  curve whose lower logarithmic density exceeds 1 - epsilon, while its upper
+  logarithmic density is less than 1.
+statement_formal: |
+  \limsup_{N_E \to \infty} \frac{r_{\mathrm{an}}(E)}{\sqrt{\log N_E}} = \infty \ \Longrightarrow\ \forall \epsilon > 0\ \exists E_\epsilon:\ 1 - \epsilon < \underline{\delta}(E_\epsilon) \le \overline{\delta}(E_\epsilon) < 1
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [modular-form-l-functions, extra-assumption]
+status_note: >
+  The Riemann Hypothesis is assumed for the L-functions L(E, s) of elliptic
+  curves over the rationals (the paper's ECRH). The extra assumptions are
+  Bounded Multiplicity (the non-real zeros of every L(E, s) have
+  multiplicity at most an absolute constant) and the paper's Conjecture 1.1
+  that analytic ranks grow faster than sqrt(log N_E) along some sequence,
+  which is written here as the premise of the statement. The paper remarks
+  that the hypotheses are needed only along such a sequence of curves. This
+  is the elliptic curve analog of the races in chebyshev-bias, and it does
+  not need Linear Independence. A converse (Theorem 1.5) is proved under a
+  linear independence hypothesis.
+sources:
+  - authors: D. Fiorilli
+    title: Elliptic curves of unbounded rank and Chebyshev's bias
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1304.8011
+    hypothesis_location: Theorem 1.2 (ECRH and BM are defined just before it)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The result is an implication whose premise (Conjecture 1.1 on ranks) is itself open; it is recorded as part of the statement and also flagged under PLUS-EXTRA together with Bounded Multiplicity.
+    - >-
+      In the extracted text the bars on the lower and upper densities are lost; the reading "lower density above 1 - epsilon, upper density below 1" follows the paper's definitions.
+lean:
+  proved: false
+  path: null
+tags: [prime-races, elliptic-curves, analytic-rank, chebyshev-bias]
+added: 2026-11-21

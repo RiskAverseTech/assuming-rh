@@ -1,0 +1,48 @@
+id: split-reductions-abelian-surface-bound-41-42
+title: Primes of split reduction for an abelian surface with trivial endomorphism ring, bound x^(41/42)
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an absolutely simple abelian surface over a number field K whose
+  geometric endomorphism ring is Z. Let pi_{A,split}(x) be the number of
+  primes of K of norm at most x, of good reduction, at which the reduction
+  of A is isogenous to a product of elliptic curves. Then for all
+  sufficiently large x, pi_{A,split}(x) = O(x^(41/42) (log x)^(1/21)), with
+  the implied constant depending on A and K.
+statement_formal: |
+  \pi_{A,\text{split}}(x) \ll_{A,K} x^{41/42}(\log x)^{1/21}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper's GRH is the Riemann Hypothesis for Dedekind zeta functions of
+  number fields. It is used through effective Chebotarev theorems in
+  subextensions of the division fields of A, which are not abelian. This
+  improves the exponent 51/52 that follows from the large sieve bounds of
+  Achter and Zywina. The same paper proves
+  x^(11/12) / (log x)^(2/3) for real multiplication and
+  x^(2/3) (log x)^(1/3) for complex multiplication (Theorems 2 and 3, with
+  extra conditions), and sharper bounds if Artin's holomorphy conjecture and
+  a pair correlation conjecture are also assumed. The dataset had no entry
+  on split reductions; frobenius-fields-abelian-varieties-power-saving is
+  a related but different count.
+sources:
+  - authors: T. Wang
+    title: Distribution of primes of split reductions for abelian surfaces
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2205.15199
+    hypothesis_location: Theorem 1 (i) (GRH is defined in the notation section)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The abstract prints the bound as x^(41/42) log x while Theorem 1 (i) has x^(41/42) (log x)^(1/21); the entry follows the theorem.
+lean:
+  proved: false
+  path: null
+tags: [abelian-surfaces, split-reductions, chebotarev]
+added: 2026-11-21
