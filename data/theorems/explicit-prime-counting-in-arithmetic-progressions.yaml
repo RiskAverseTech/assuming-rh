@@ -1,0 +1,38 @@
+id: explicit-prime-counting-in-arithmetic-progressions
+title: Explicit error term for the number of primes in an arithmetic progression
+field: analytic-number-theory
+statement_plain: >
+  For integers a and q with gcd(a, q) = 1 and q >= 3, and real x >= q, the
+  number pi(x; q, a) of primes up to x congruent to a modulo q differs from
+  li(x)/phi(q) by at most (1/(8 pi phi(q)) + 1/(6 pi)) sqrt(x) log x +
+  (0.184 log q + 12969.946) sqrt(x) - 237.934.
+statement_formal: |
+  \left|\pi(x;q,a) - \frac{\mathrm{li}(x)}{\varphi(q)}\right| \le \left(\frac{1}{8\pi\varphi(q)} + \frac{1}{6\pi}\right)\sqrt{x}\,\log x + (0.184\log q + 12969.946)\sqrt{x} - 237.934
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is Corollary 2, a simplified form of Theorem 1 of the paper. The
+  paper defines its hypothesis for Dirichlet L-functions. The underlying
+  Theorem 3 needs it only for characters modulo q and modulo the divisors of
+  q, and the principal character is handled through the Riemann zeta
+  function.
+sources:
+  - authors: A.-M. Ernvall-Hytönen, N. Palojärvi
+    title: "Explicit bound for the number of primes in arithmetic progressions assuming the Generalized Riemann Hypothesis"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2003.01925
+    hypothesis_location: "Corollary 2, a simplification of Theorem 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [primes-in-arithmetic-progressions-error]
+tags: [primes-in-arithmetic-progressions, explicit-bounds]
+added: 2026-11-21

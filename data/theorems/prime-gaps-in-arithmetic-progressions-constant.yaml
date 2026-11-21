@@ -1,0 +1,40 @@
+id: prime-gaps-in-arithmetic-progressions-constant
+title: Asymptotic gaps between primes in an arithmetic progression
+field: analytic-number-theory
+statement_plain: >
+  Let q >= 3 and b >= 1 be coprime, and let p_n be the n-th prime congruent
+  to b modulo q. Then the limsup of (p_{n+1} - p_n) / (sqrt(p_n) log p_n) is
+  less than 0.8531 phi(q). Equivalently, for fixed q and all sufficiently
+  large x, the interval (x, x + 0.8531 phi(q) sqrt(x) log x] contains a
+  prime congruent to b modulo q.
+statement_formal: |
+  \limsup_{n\to\infty} \frac{p_{n+1,q,b} - p_{n,q,b}}{\sqrt{p_{n,q,b}}\,\log p_{n,q,b}} < 0.8531\,\varphi(q)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The result is asymptotic: the threshold beyond which it holds depends on q
+  and is not made explicit. The proof uses a Guinand-Weil explicit formula
+  summed over all Dirichlet characters modulo q, with the principal
+  character handled by the explicit formula for the Riemann zeta function.
+sources:
+  - authors: A. Chirre, V. J. Pereira Júnior, D. de Laat
+    title: "Primes in arithmetic progressions and semidefinite programming"
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2005.02393
+    hypothesis_location: "Theorem 1 and Corollary 2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper names the generalized Riemann hypothesis without defining it. It is read here as the hypothesis for the Dirichlet L-functions modulo q, which are the only L-functions in the explicit formula of Lemma 3.
+lean:
+  proved: false
+  path: null
+related: [least-prime-in-arithmetic-progression]
+tags: [primes-in-arithmetic-progressions, prime-gaps]
+added: 2026-11-21

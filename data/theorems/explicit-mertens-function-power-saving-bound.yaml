@@ -1,0 +1,41 @@
+id: explicit-mertens-function-power-saving-bound
+title: Explicit power-saving bound for the Mertens function valid for all x
+field: analytic-number-theory
+statement_plain: >
+  For every x >= 1 the Mertens function M(x), the sum of mu(n) for n <= x,
+  satisfies |M(x)| <= 555.71 x^0.99 + 1.94 * 10^14 x^0.98. The sum m(x) of
+  mu(n)/n for n <= x satisfies |m(x)| <= 56126.71 x^(-0.01) + 9.894 * 10^15
+  x^(-0.02).
+statement_formal: |
+  |M(x)| \le 555.71\,x^{0.99} + 1.94\cdot 10^{14}\,x^{0.98} \qquad (x \ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This entry records only Theorem 2, the application to the Mertens
+  function, which assumes the Riemann Hypothesis for the zeta function
+  alone. The main theorem of the paper (Theorem 1) is stated for the Selberg
+  class of functions with a polynomial Euler product, with explicit
+  corollaries for the Riemann zeta function, Dirichlet L-functions and
+  Dedekind zeta functions. Those are not part of this entry. The paper notes
+  that the bound on M(x) improves on the trivial estimate |M(x)| <= x only
+  when x >= 10^714.4.
+sources:
+  - authors: A. Simonič
+    title: "Estimates for L-functions in the critical strip under GRH with effective applications"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2201.10771
+    hypothesis_location: "Theorem 2, which follows from Theorem 5"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [mertens-function-bound]
+tags: [mertens-function, mobius-function, explicit-bounds]
+added: 2026-11-21

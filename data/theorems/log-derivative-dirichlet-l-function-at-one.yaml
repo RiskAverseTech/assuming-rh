@@ -1,0 +1,34 @@
+id: log-derivative-dirichlet-l-function-at-one
+title: Explicit bound for the logarithmic derivative of a Dirichlet L-function at s = 1
+field: analytic-number-theory
+statement_plain: >
+  For a primitive Dirichlet character chi modulo q >= 10^30, |(L'/L)(1,
+  chi)| <= 2 log log q - 0.4989 + 5.91 (log log q)^2 / log q. For q >=
+  10^153 this gives |(L'/L)(1, chi)| <= 2 log log q.
+statement_formal: |
+  \left|\frac{L'}{L}(1,\chi)\right| \le 2\log\log q - 0.4989 + 5.91\,\frac{(\log\log q)^2}{\log q} \qquad (q \ge 10^{30})
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says this improves a 2009 result of Ihara, Murty and Shimura,
+  also conditional on GRH. The same paper proves an analogous bound for the
+  Riemann zeta function on the line Re s = 1 under RH (Theorem 5).
+sources:
+  - authors: A. Chirre, M. V. Hagen, A. Simonič
+    title: "Conditional estimates for the logarithmic derivative of Dirichlet L-functions"
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2206.00819
+    hypothesis_location: "Theorem 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, logarithmic-derivative, explicit-bounds]
+added: 2026-11-21

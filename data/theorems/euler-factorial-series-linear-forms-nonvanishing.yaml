@@ -1,0 +1,47 @@
+id: euler-factorial-series-linear-forms-nonvanishing
+title: Non-vanishing of linear forms in p-adic values of Euler's factorial series
+field: analytic-number-theory
+statement_plain: >
+  Let F_p(t) be the p-adic sum of n! t^n over n >= 0. Let k >= 1 and m >= 3,
+  let R be the set of primes in at least k phi(m)/(k+1) reduced residue
+  classes modulo m, and let lambda_0, ..., lambda_k be integers that are not
+  all zero. If nonzero integers alpha_1, ..., alpha_k satisfy c_2 < (k e^(1
+  + 6.550 phi(m)) m^phi(m))^(-k), where c_2 = 2^k (max |alpha_j|)^k times
+  the product over p in R of (max |alpha_i|_p)^(k+1), then lambda_0 +
+  lambda_1 F_p(alpha_1) + ... + lambda_k F_p(alpha_k) is nonzero for some
+  prime p in R.
+statement_formal: |
+  c_2 := 2^k \Bigl(\max_{j} |\alpha_j|\Bigr)^{k} \prod_{p \in R} \Bigl(\max_{i} |\alpha_i|_p\Bigr)^{k+1} < \left(k\,e^{1+6.550\,\varphi(m)}\,m^{\varphi(m)}\right)^{-k} \ \Longrightarrow\ \exists\, p \in R:\ \lambda_0 + \sum_{j=1}^{k} \lambda_j F_p(\alpha_j) \ne 0
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes RH and the Riemann hypothesis for the Dedekind zeta
+  function of the m-th cyclotomic field only. A cyclotomic field is abelian
+  over the rationals, so its Dedekind zeta function is a product of
+  Dirichlet L-functions, so the
+  whole result is covered. The entry therefore lists the
+  hypothesis as GRH for Dirichlet L-functions, although the paper works with
+  the Dedekind form.
+sources:
+  - authors: N. Palojärvi
+    title: "Explicit results for Euler's factorial series in arithmetic progressions under GRH"
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.00294
+    hypothesis_location: "Theorem 2.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's hypothesis is RH plus GRH for the m-th cyclotomic Dedekind zeta function. Since that zeta function factors into Dirichlet L-functions, this entry records the hypothesis as RH and GRH-Dirichlet. A reviewer should confirm that reading.
+    - >-
+      Theorems 2.5 and 2.8 of the paper give p-adic lower bounds under the same hypothesis. Theorem 2.8 also uses a cited GRH result on primes in short intervals in arithmetic progressions (Lemma 4.15). They are not recorded here.
+lean:
+  proved: false
+  path: null
+tags: [p-adic, euler-factorial-series, primes-in-arithmetic-progressions]
+added: 2026-11-21
