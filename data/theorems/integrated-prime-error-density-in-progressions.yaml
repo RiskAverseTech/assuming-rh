@@ -37,6 +37,11 @@ sources:
     doi: 10.1007/s40993-025-00640-y
     url: https://arxiv.org/html/2411.18903v2#S8
     hypothesis_location: Section 8, equation (35) and Table 1
+  - authors: Lee Crossley
+    title: Zhao’s Table 1
+    year: 2026
+    url: https://github.com/leecrossley/integrated-prime-errors-mod-11/blob/82c766df1ce58db765570d20fdf9de0386fa8c27/evidence/table1-comparison.md
+    hypothesis_location: Prime squares and the comparison of the two thresholds under GRH
 author_submitted:
   by: leecrossley
   source_standing: preprint-by-contributor
@@ -47,7 +52,7 @@ review:
   checked_on: null
   confidence: low
   open_questions:
-    - Zhao’s Table 1 gives eventual negativity for five classes modulo 11 and five modulo 22. Crossley’s Theorem 1 gives positive excursions in all ten. The difference calls for an independent check of the two arguments.
+    - Zhao’s Table 1 gives eventual negativity for five classes modulo 11 and five modulo 22. Crossley’s comparison recovers all 63 printed pairs and one extra pair through modulus 120 using the prime-square coefficient from (33), three times the one for (35). The code used for Table 1 would show whether that explains the discrepancy.
 lean:
   proved: false
   path: null
