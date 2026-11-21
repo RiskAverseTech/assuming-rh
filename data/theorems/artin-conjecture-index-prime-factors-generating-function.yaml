@@ -1,0 +1,49 @@
+id: artin-conjecture-index-prime-factors-generating-function
+title: Generating function for the number of prime factors of the index of a modulo p
+field: analytic-number-theory
+statement_plain: >
+  Let a be a rational number that is not a perfect power, and let z be a
+  complex number with |z| at most 1. The average over primes p up to x of
+  z^omega((p-1)/ord_p(a)) equals F_a(z) times the product over primes q of
+  (1 + (z-1)/(q(q-1))), up to an error O(x log log x / (log x)^2). Here
+  F_a(z) is 1 unless the discriminant d(a) of Q(sqrt(a)) is 1 modulo 4, in
+  which case it is 1 plus the product over q dividing 2d(a) of
+  (z-1)/(z + q^2 - q - 1). Setting z = 0 recovers Artin's primitive root
+  density.
+statement_formal: |
+  \frac{1}{\pi(x)}\sum_{\substack{p\le x\\ \nu_p(a)=0}} z^{\omega((p-1)/\operatorname{ord}_p(a))}
+  = F_a(z)\prod_{q}\left(1+\frac{z-1}{q(q-1)}\right)+O\!\left(\frac{x\log\log x}{(\log x)^2}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper describes the hypothesis, as in Hooley's proof, as the
+  generalized Riemann hypothesis for the Dedekind zeta functions of the
+  cyclotomic-Kummer extensions Q(a^(1/l), zeta_(ml)). It is used in Theorem
+  3.4 through Lang's conditional effective prime ideal theorem for these
+  fields, which are not abelian over the rationals. The paper proves
+  analogous formulas for two other statistics (Theorems 1.10 and 1.12) and
+  general versions for all rational a other than -1, 0, 1 (Theorems 5.4, 5.7
+  and 5.9).
+sources:
+  - authors: L. Goldmakher, G. Martin, P. Péringuey
+    title: Refinements of Artin's primitive root conjecture
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2502.19601
+    hypothesis_location: Theorem 1.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The error term is printed as O(x log log x / (log x)^2) on the right of an average normalised by 1/pi(x); this is copied as printed and the normalisation should be checked by a reviewer.
+    - >-
+      The definition of F_a(z) was read from the text extraction of page 3 and should be checked against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, multiplicative-order, kummer-fields]
+added: 2026-11-21

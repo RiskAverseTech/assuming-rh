@@ -1,0 +1,44 @@
+id: power-generator-period-normal-order
+title: Normal order of the period of the power generator
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer e at least 2, and let lambda(n) be Carmichael's function.
+  The multiplicative order of e modulo the largest divisor of lambda(n)
+  coprime to e equals n exp(-(1 + o(1)) (log log n)^2 log log log n) as n
+  tends to infinity through a set of integers of asymptotic density 1. This
+  quantity is the largest possible period of the power generator
+  u -> u^e modulo n.
+statement_formal: |
+  \operatorname{ord}^*(e,\lambda(n)) = n\cdot\exp\!\left(-(1+o(1))(\log\log n)^2\log\log\log n\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper's footnote says that GRH means the Riemann hypothesis for
+  L-functions associated with certain Kummer extensions. It is used, as in
+  Hooley's work, to count primes p for which a prime q divides the index
+  (p-1)/ord(e,p) (Theorem 23), which concerns the fields Q(zeta_q, e^(1/q)),
+  not abelian over the rationals. The paper has further results under the
+  same hypothesis: ord*(e, p-1) > p^(1-epsilon) for almost all primes p
+  (Theorem 2), and the analogue for products of two primes (Theorem 3).
+sources:
+  - authors: P. Kurlberg, C. Pomerance
+    title: On the period of the linear congruential and power generators
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0405120
+    hypothesis_location: Theorem 27 (announced after Theorem 4 in the introduction)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The footnote says "L-functions associated with certain Kummer extensions" without saying whether these are Dedekind zeta functions or Artin L-functions of the extensions. ERH-Dedekind is chosen because the bound used is a count of primes splitting completely, as in Hooley; the status is still-conditional under either reading.
+lean:
+  proved: false
+  path: null
+related: [novak-primes-counting-bound]
+tags: [multiplicative-order, pseudorandom-generators, kummer-fields]
+added: 2026-11-21

@@ -1,0 +1,44 @@
+id: serre-open-image-explicit-conductor-bound
+title: Explicit bound for the largest non-surjective prime of an elliptic curve
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication and with conductor N_E. The mod l Galois representation of
+  E is surjective for every prime l greater than
+  964 log rad(2 N_E) + 5760, where rad(n) is the product of the primes
+  dividing n.
+statement_formal: |
+  c(E)\le 964\log\operatorname{rad}(2N_E)+5760
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper says the hypothesis is GRH for Dedekind zeta functions. It is
+  used through the effective Chebotarev density theorem of Lagarias and
+  Odlyzko for Galois number fields that arise from torsion points of
+  elliptic curves; these fields are not abelian over the rationals. The key
+  step is Theorem 2, a conditional bound for the least prime p with
+  a_p(E_1) different from a_p(E_2) for non-isogenous curves.
+sources:
+  - authors: J. Mayle, T. Wang
+    title: On the effective version of Serre's open image theorem
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.08656
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The exact family of number fields to which the effective Chebotarev theorem is applied was not traced in detail; the paper states the hypothesis for Dedekind zeta functions in general.
+    - >-
+      The year 2024 is the date of the arXiv version (v3) read here; the first version is from 2021.
+lean:
+  proved: false
+  path: null
+related: [effective-chebotarev]
+tags: [elliptic-curves, galois-representations, chebotarev]
+added: 2026-11-21

@@ -1,0 +1,42 @@
+id: shifted-exponentials-almost-always-composite
+title: Shifted exponentials a^n - b are composite for almost all n
+field: analytic-number-theory
+statement_plain: >
+  Let a > 1 and b be integers. The set of positive integers n for which
+  a^n - b is composite has natural density 1. In particular 2^n + 5 is
+  composite for almost all n.
+statement_formal: null
+hypotheses_required: [GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  The extra assumption is the paper's Hypothesis 1.2, a Brun-Titchmarsh type
+  estimate on average for primes p congruent to 1 modulo m for which
+  b a^(-r) is a perfect m'-th power modulo p. The paper shows that it
+  follows from a pair correlation conjecture for Kummer-type extensions
+  (Theorem 1.9). The Riemann hypothesis is assumed for every Artin
+  L-function associated with a Kummer-type extension
+  Q(zeta, a_1^(1/m_1), ..., a_k^(1/m_k)). Under the same two assumptions the
+  paper also shows that a^n - b has at least c log log n distinct prime
+  factors for almost all n (Theorem 1.6) and that a^p - b is composite for
+  almost all primes p when (a, b) is not (2, 1) (Theorem 1.7).
+sources:
+  - authors: O. Järviniemi, J. Teräväinen
+    title: Composite values of shifted exponentials
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2010.01789
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year 2023 is the date of the arXiv version (v2) read here; the first version is from 2020.
+lean:
+  proved: false
+  path: null
+tags: [shifted-exponentials, kummer-fields, pair-correlation]
+added: 2026-11-21

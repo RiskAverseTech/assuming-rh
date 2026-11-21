@@ -1,0 +1,45 @@
+id: index-map-preimages-finite-or-positive-density
+title: Preimages of the index map for Artin-type problems are finite or have positive density
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field, let W_1, ..., W_n be finitely generated subgroups
+  of positive rank of the multiplicative group of K, and fix a finite Galois
+  extension F of K and a union C of conjugacy classes of its Galois group.
+  Consider the map sending a prime of K, unramified in F and with Frobenius
+  in C, to the tuple of indices of the reductions of the W_i in the
+  multiplicative group of the residue field. The preimage of any non-empty
+  set of tuples of positive integers is either finite or has a positive
+  natural density.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper writes only "GRH" and says it is needed because the proof of
+  Theorem 4.1 uses an effective Chebotarev density theorem (citing Lagarias
+  and Odlyzko, and Serre), following Lenstra and Hooley. The fields involved
+  are Kummer extensions of K obtained by adjoining roots of unity and roots
+  of elements of the W_i, which are in general not abelian over the
+  rationals. The Main Theorem has two further conditional parts: the image
+  of the index map is computable, and a criterion for which tuples lie in
+  the image when F = K.
+sources:
+  - authors: O. Järviniemi, A. Perucca
+    title: Unified treatment of Artin-type problems
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2202.11329
+    hypothesis_location: Main Theorem part (i), proved as Theorem 4.1 and Remark 4.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its GRH. ERH-Dedekind for the Kummer extensions of K is inferred from the use of the effective Chebotarev density theorem; the exact family of fields should be confirmed in Section 4.
+lean:
+  proved: false
+  path: null
+tags: [artin-conjecture, kummer-fields, chebotarev]
+added: 2026-11-21

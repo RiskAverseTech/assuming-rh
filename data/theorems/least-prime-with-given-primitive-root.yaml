@@ -1,0 +1,41 @@
+id: least-prime-with-given-primitive-root
+title: Least prime having a given integer as a primitive root
+field: analytic-number-theory
+statement_plain: >
+  Let g be an integer with |g| > 1 that is not a square, and let p_g be the
+  least prime for which g is a primitive root. Then p_g = O((log 2|g|)^19),
+  with an absolute implied constant.
+statement_formal: |
+  p_g \ll \log^{19}(2|g|)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper defines GRH as the Riemann Hypothesis for all Dedekind zeta
+  functions of number fields. It is used through a conditional Chebotarev
+  density theorem for the Kummer fields Q(zeta_d, g^(1/d)) (Lemma 3.1),
+  which are not abelian over the rationals. The same paper proves, under the
+  same hypothesis, a uniform Artin asymptotic (Theorem 1.1): the number of
+  primes up to x with primitive root g is A(g) pi(x) (1 + O(log log x / log x
+  + log log 2|g| / log x)) for x at least max(x_0, (log 2|g|)^3).
+sources:
+  - authors: K. Fan, P. Pollack
+    title: Counting primes with a given primitive root, uniformly
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2505.05601
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper has two headline conditional theorems. This entry records Theorem 1.2 (the explicit exponent 19) and mentions Theorem 1.1 in the status note; a reviewer may prefer a separate entry for Theorem 1.1.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [primitive-roots, artin-conjecture, least-prime, kummer-fields]
+added: 2026-11-21
