@@ -1,0 +1,46 @@
+id: linnik-sphere-lattice-points-variance-bound
+title: Variance of lattice points on the sphere in small random spherical caps
+field: analytic-number-theory
+statement_plain: >
+  Let n be squarefree and not 7 mod 8, let N_n be the number of integer
+  solutions of x^2 + y^2 + z^2 = n, and project these points to the unit
+  sphere. Let Omega_R be a spherical cap of area sigma(Omega_R) = N_n^(-delta)
+  for a fixed delta in (0, 1), and let Z(n; g Omega_R) be the number of
+  projected points in the rotated cap. Then the average over rotations g in
+  SO(3) of (Z(n; g Omega_R) - (sigma(Omega_R) / (4 pi)) N_n)^2 is at most
+  c sigma(Omega_R) N_n for an absolute constant c.
+statement_formal: |
+  \int_{SO(3)} \left( Z(n; g\Omega_R) - \frac{\sigma(\Omega_R)}{\sigma(S^2)}\,N_n \right)^{2} d\mu(g) \le c\,\sigma(\Omega_R)\,N_n
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes the "Grand Riemann Hypothesis for GL(2)/Q and Dirichlet
+  L-functions". The L-functions that appear are L(s, f) and L(s, f x chi_{-n})
+  for holomorphic Hecke cusp forms f of weight 2m + 2 on Gamma_0(2), and the
+  quadratic Dirichlet L-function L(s, chi_{-n}). The bound is of the order
+  conjectured by Bourgain, Rudnick and Sarnak, who had obtained
+  n^epsilon sigma(Omega_R) N_n under the Generalized Lindelof Hypothesis.
+sources:
+  - authors: A. Shubin
+    title: Variance estimates in Linnik's problem
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2108.00726
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      For small m the proof quotes conditional lower bounds for L(1, Sym^2 f) from another paper (Section 3). The theorem's stated hypothesis names only GL(2)/Q and Dirichlet L-functions, so it is unclear whether a Riemann Hypothesis for the symmetric square L-function is also being used; either way the code is GRH-automorphic.
+    - >-
+      The forms have weight 2m + 2 with m large, so the waiting family is higher-automorphic and not the weight 2 family.
+lean:
+  proved: false
+  path: null
+tags: [lattice-points, linnik-problem, moments-of-l-functions]
+added: 2026-11-21

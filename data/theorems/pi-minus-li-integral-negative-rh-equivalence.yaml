@@ -1,0 +1,38 @@
+id: pi-minus-li-integral-negative-rh-equivalence
+title: The integral of pi(t) - li(t) is negative for all x > 2
+field: analytic-number-theory
+statement_plain: >
+  For every x > 2, the integral from 2 to x of pi(t) - li(t) is negative,
+  where pi is the prime counting function and li is the logarithmic
+  integral. Likewise, for every x > 2 the integral from 2 to x of
+  theta(t) - t is negative, where theta is the Chebyshev function.
+statement_formal: |
+  \int_2^x \left(\pi(t) - \operatorname{li}(t)\right) dt < 0 \quad \text{and} \quad \int_2^x \left(\theta(t) - t\right) dt < 0 \qquad \text{for all } x > 2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. Each of the two inequalities (for all
+  x > 2) is proved equivalent to RH in Theorems 1.1 and 1.2. The paper says
+  this makes explicit a claim of Pintz (1991), who asserted the equivalence
+  with the first inequality for x beyond some unspecified x_0.
+sources:
+  - authors: D. R. Johnston
+    title: On the average value of π(t) − li(t)
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2201.06184
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The equivalence for sufficiently large x was claimed earlier by Pintz (1991); this paper supplies the explicit range x > 2.
+lean:
+  proved: false
+  path: null
+tags: [prime-counting, rh-equivalence, logarithmic-integral]
+added: 2026-11-21

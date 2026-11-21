@@ -1,0 +1,37 @@
+id: prime-times-kth-power-counting-error
+title: Counting products of a prime and a k-th power with square-root error
+field: analytic-number-theory
+statement_plain: >
+  For k >= 2 let C_k(x) be the number of pairs (p, m), p prime and m a
+  positive integer, with p m^k <= x. Then
+  C_2(x) = zeta(2) li(x) + O(sqrt(x) log^2 x), and for every k >= 3,
+  C_k(x) = zeta(k) li(x) + O(sqrt(x) log x).
+statement_formal: |
+  C_2(x) = \zeta(2)\operatorname{li}(x) + O\!\left(x^{1/2}\log^2 x\right), \qquad C_k(x) = \zeta(k)\operatorname{li}(x) + O\!\left(x^{1/2}\log x\right) \quad (k \ge 3), \qquad C_k(x) = \sum_{p m^k \le x} 1
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the same paper gets the error
+  O(x exp(-c (log x)^(3/5) / (log log x)^(1/5))). Under RH it also deduces
+  the asymptotic for C_k(x + h) - C_k(x) whenever
+  h / (sqrt(x) log^A x) tends to infinity, with A = 2 for k = 2 and A = 1
+  for k >= 3.
+sources:
+  - authors: A. W. Dudek
+    title: On the Distribution of Products of Primes and Powers
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1506.02854
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes, counting-functions, short-intervals]
+added: 2026-11-21
