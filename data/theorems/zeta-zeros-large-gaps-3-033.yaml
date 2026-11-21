@@ -1,0 +1,42 @@
+id: zeta-zeros-large-gaps-3-033
+title: Gaps between zeta zeros larger than 3.033 times the average
+field: analytic-number-theory
+statement_plain: >
+  Let gamma <= gamma' be consecutive ordinates of zeros of the Riemann zeta
+  function and let lambda be the lim sup of (gamma' - gamma) log(gamma) / (2 pi).
+  Then lambda > 3.033. So infinitely often two consecutive zeros are more
+  than 3.033 times the average spacing apart.
+statement_formal: |
+  \lambda = \limsup_{\gamma} \, (\gamma' - \gamma)\frac{\log\gamma}{2\pi} > 3.033
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  No earlier entry covers large gaps between zeta zeros; the entry
+  zeta-zeros-small-gaps-0-50895 treats small gaps. The paper assumes "GRH"
+  without a formal definition. In the proof the hypothesis is applied to
+  functions built from the von Mangoldt function in residue classes modulo
+  k, that is, to Dirichlet L-functions, in order to evaluate a discrete mean
+  value over the zeros. According to the paper, Ng had proved lambda > 3
+  under the same hypothesis. Remark 2.2 of the paper suggests the result
+  might hold on RH alone.
+sources:
+  - authors: H. M. Bui
+    title: Large gaps between consecutive zeros of the Riemann zeta-function
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/0903.4007
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions: 
+    - "The paper writes GRH without defining it. The proof (Lemma 4.3) uses it for Dirichlet series over n congruent to a modulo k, which points to Dirichlet L-functions; a reviewer should confirm no other L-functions are involved."
+    - "Later papers cite lambda > 3.072 under GRH (Feng and Wu), so the constant has been improved."
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-gaps, large-gaps]
+added: 2026-11-21

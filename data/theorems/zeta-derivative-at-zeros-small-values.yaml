@@ -1,0 +1,41 @@
+id: zeta-derivative-at-zeros-small-values
+title: Small values of zeta'(rho) by the resonance method
+field: analytic-number-theory
+statement_plain: >
+  Let rho = 1/2 + i gamma run over the non-trivial zeros of the Riemann zeta
+  function. For every positive epsilon and c = sqrt(2/3) - epsilon, there are
+  infinitely many zeros with
+  |zeta'(rho)| << exp( -c sqrt( log|gamma| / log log|gamma| ) ).
+statement_formal: |
+  |\zeta'(\rho)| \ll \exp\!\left( -c_3 \sqrt{\frac{\log|\gamma|}{\log\log|\gamma|}} \right) \text{ for infinitely many } \gamma, \quad c_3 = \sqrt{\tfrac{2}{3}} - \epsilon
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is a different statement from the entry
+  zeta-derivative-moments-at-zeros-upper-bound, which bounds moments of
+  zeta'(rho) from above. The same paper proves under RH alone (Theorem 1)
+  that for each A > 0, |zeta'(rho)| >> (log|gamma|)^A for infinitely many
+  gamma. Its Theorem 2 gives the stronger large values
+  |zeta'(rho)| >> exp( c sqrt( log|gamma| / log log|gamma| ) ) with
+  c = 1/sqrt(2) - epsilon, but assumes in addition a "large zero-free region
+  conjecture" for Dirichlet L-functions; that result is not recorded here.
+sources:
+  - authors: N. Ng
+    title: Extreme values of ζ'(ρ)
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/0706.1765
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions: 
+    - "Theorem 3 is stated under the Riemann hypothesis only, and the introduction says the Dirichlet L-function assumption is needed only for Theorem 2. The proof of Theorem 3 was not read line by line to confirm that no Dirichlet L-function input enters."
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zeta-derivative, extreme-values]
+added: 2026-11-21

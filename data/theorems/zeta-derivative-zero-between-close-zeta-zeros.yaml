@@ -1,0 +1,43 @@
+id: zeta-derivative-zero-between-close-zeta-zeros
+title: A zero of zeta' in a small box between two close zeros of zeta
+field: analytic-number-theory
+statement_plain: >
+  There is an absolute constant c > 0 such that for every v < c the
+  following holds. Let gamma < gamma+ be ordinates of two consecutive zeros
+  of zeta on the critical line, with gamma large and
+  gamma+ - gamma < v / log(gamma). Then the box
+  1/2 < Re(s) < 1/2 + v^2 / (4 log gamma), gamma <= Im(s) <= gamma+ contains
+  exactly one zero of zeta'(s), and that zero is not on the boundary.
+statement_formal: |
+  \gamma^{+} - \gamma < \frac{v}{\log\gamma} \;\Longrightarrow\; \#\left\{ \rho' : \zeta'(\rho') = 0,\ \tfrac12 < \mathrm{Re}\,\rho' < \tfrac12 + \frac{v^2}{4\log\gamma},\ \gamma \le \mathrm{Im}\,\rho' \le \gamma^{+} \right\} = 1
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No earlier entry concerns the zeros of zeta'(s); the entry
+  zeta-zeros-small-gaps-0-50895 concerns how small the gaps between zeta
+  zeros can be. From this theorem the paper deduces (Theorem 1) that
+  m(v / (2 pi)) <= m'(v^2) for all v < c, where m and m' are the lower
+  densities of small normalized gaps between zeta zeros and of zeros of
+  zeta' close to the critical line; this is one direction of a conjecture
+  of Radziwill. Theorem 3 of the paper shows under RH that
+  gamma+ - gamma << sqrt( (beta' - 1/2) log gamma' ) for a zero
+  beta' + i gamma' of zeta' with beta' > 1/2 and gamma <= gamma' < gamma+.
+sources:
+  - authors: F. Ge
+    title: The distribution of zeros of ζ'(s) and gaps between zeros of ζ(s)
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1510.04359
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-derivative, zeta-zeros, zero-gaps]
+added: 2026-11-21

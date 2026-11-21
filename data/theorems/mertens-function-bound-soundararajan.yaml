@@ -1,0 +1,38 @@
+id: mertens-function-bound-soundararajan
+title: Mertens function bound with exponent (log x)^(1/2) (log log x)^14
+field: analytic-number-theory
+statement_plain: >
+  Let M(x) be the sum of the Mobius function mu(n) over n <= x. For large x,
+  M(x) is O( sqrt(x) exp( (log x)^(1/2) (log log x)^14 ) ).
+statement_formal: |
+  M(x) = \sum_{n \le x} \mu(n) \ll \sqrt{x}\, \exp\!\left( (\log x)^{1/2} (\log\log x)^{14} \right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the bound M(x) = O(x^(1/2 + epsilon)) recorded in the entry
+  mertens-function-bound. According to the paper, the previous best
+  conditional bound was sqrt(x) exp(C (log x)^(39/61)), due to Maier and
+  Montgomery. The explicit entries explicit-mertens-function-bound and
+  explicit-mertens-function-power-saving-bound give bounds with explicit
+  constants but of weaker order. The main ingredient (Theorem 2 of the
+  paper) bounds how often an interval [t - h, t + h] contains unusually many
+  ordinates of zeros of zeta.
+sources:
+  - authors: K. Soundararajan
+    title: Partial sums of the Möbius function
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0705.0723
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, mertens-function, zeta-zeros]
+added: 2026-11-21

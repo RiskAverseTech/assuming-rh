@@ -1,0 +1,37 @@
+id: zeta-moments-sharp-upper-bound-harper
+title: Sharp upper bounds for moments of the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  For every fixed k >= 0 and all large T, the integral of
+  |zeta(1/2 + it)|^(2k) over T <= t <= 2T is at most a constant times
+  T (log T)^(k^2), where the constant depends only on k.
+statement_formal: |
+  \int_T^{2T} \left|\zeta\!\left(\tfrac12 + it\right)\right|^{2k} dt \ll_k T(\log T)^{k^2}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the upper bound T (log T)^(k^2 + epsilon) of Soundararajan
+  recorded in the entry zeta-moments-near-sharp-upper-bound, by removing the
+  epsilon. The paper notes the bound is sharp up to the constant, since
+  matching lower bounds are known (unconditionally for k >= 1 by Radziwill
+  and Soundararajan, and under RH for all k >= 0 by Ramachandra and
+  Heath-Brown), and that the cases k = 0, 1, 2 are known unconditionally.
+sources:
+  - authors: A. J. Harper
+    title: Sharp conditional bounds for moments of the Riemann zeta function
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1305.4618
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, critical-line]
+added: 2026-11-21

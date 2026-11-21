@@ -1,0 +1,39 @@
+id: zeta-derivative-zero-count-error-term
+title: Counting zeros of zeta' with error O(log T / log log T)
+field: analytic-number-theory
+statement_plain: >
+  Let N_1(T) be the number of non-real zeros of zeta'(s) with imaginary part
+  in (0, T]. Then N_1(T) = (T / (2 pi)) log(T / (4 pi e)) + O(log T / log log T)
+  as T tends to infinity.
+statement_formal: |
+  N_1(T) = \frac{T}{2\pi}\log\frac{T}{4\pi e} + O\!\left( \frac{\log T}{\log\log T} \right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No earlier entry counts the zeros of zeta'(s). The error term matches
+  Littlewood's conditional error term for the zero count N(T) of zeta
+  itself (compare the entry zeta-zeros-short-interval-count-goldston-gonek).
+  According to the paper, Berndt proved the formula unconditionally with
+  error O(log T), and Akatsuka proved it under RH with error
+  O(log T / sqrt(log log T)). Theorem 2 of the paper shows under RH that if
+  the error term for N(T) is O(Phi(T)) then the error term for N_1(T) is
+  O(max(Phi(2T), sqrt(log T) log log T)).
+sources:
+  - authors: F. Ge
+    title: The number of zeros of ζ'(s)
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1512.06419
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-derivative, zero-counting]
+added: 2026-11-21
