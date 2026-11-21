@@ -1,0 +1,49 @@
+id: mertens-constant-in-arithmetic-progressions
+title: Explicit estimate for the Mertens constant of an arithmetic progression
+field: analytic-number-theory
+statement_plain: >
+  Let q >= 3 and let 1 <= l <= q with l coprime to q. Let M(q, l) be the
+  constant in Mertens' second theorem for primes congruent to l modulo q, so
+  that the sum of 1/p over such primes p <= x is (log log x)/phi(q) + M(q,
+  l) + O(1/log x). Then |M(q, l) - d/l| <= 43.95 (log q)/sqrt(q), where d =
+  1 if l is prime and d = 0 otherwise.
+statement_formal: |
+  \left| M(q,\ell) - \frac{\delta_\ell}{\ell} \right| \le \frac{43.95\,\log q}{\sqrt{q}} \qquad (q \ge 3), \qquad \delta_\ell = 1 \text{ if } \ell \text{ is prime, } 0 \text{ otherwise}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes GRH without a definition. Its proof uses the hypothesis
+  through an explicit Chebotarev estimate of Grenie and Molteni, stated
+  under GRH for Dedekind zeta functions and applied to the cyclotomic field
+  of q-th roots of unity over the rationals, and to the rationals
+  themselves. A cyclotomic field is abelian over the rationals, so its
+  Dedekind zeta function is a product of Dirichlet L-functions, so the
+  whole result is covered. The entry therefore lists the
+  hypothesis as GRH for Dirichlet L-functions, although the paper works with
+  the Dedekind form. A
+  sharper statement with explicit functions of q is Theorem 1.1 of the
+  paper.
+sources:
+  - authors: D. Keliher, E. S. Lee
+    title: "On the constants in Mertens' theorems for primes in arithmetic progressions"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2306.09981
+    hypothesis_location: "Corollary 1.2, deduced from Theorem 1.1. The hypothesis enters through Theorem 2.1 and Theorem 2.2 in Section 2.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The proof only needs the hypothesis for the Dedekind zeta function of the q-th cyclotomic field and for the Riemann zeta function. Since the cyclotomic zeta function factors into Dirichlet L-functions, this entry records the hypothesis as RH and GRH-Dirichlet. A reviewer should confirm that reading.
+    - >-
+      The paper does not define GRH. The reading above comes from Section 2.1.
+lean:
+  proved: false
+  path: null
+related: [primes-in-arithmetic-progressions-error]
+tags: [mertens-theorems, primes-in-arithmetic-progressions, explicit-bounds]
+added: 2026-11-21

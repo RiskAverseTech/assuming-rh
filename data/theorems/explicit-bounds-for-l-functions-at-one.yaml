@@ -1,0 +1,47 @@
+id: explicit-bounds-for-l-functions-at-one
+title: Explicit bounds for L-functions at s = 1 in terms of the analytic conductor
+field: analytic-number-theory
+statement_plain: >
+  Let L(s, f) be an L-function of degree d with analytic conductor C(f), in
+  a class that includes L-functions of cuspidal automorphic forms on GL(n).
+  If log C(f) >= 23 d, then |L(1, f)| <= 2^d e^(d gamma) (y^d + (d/2)
+  y^(d-1) + (d K(d)/4) y^(d-2)), where y = log log C(f) - log(2d) and K(d) =
+  2.31 + (22.59/d)(e^(0.31 d) - 1 - 0.31 d). The paper also gives a matching
+  explicit upper bound for 1/|L(1, f)|.
+statement_formal: |
+  |L(1,f)| \le 2^d e^{d\gamma}\left( y^d + \frac{d}{2}\,y^{d-1} + \frac{d\,K(d)}{4}\,y^{d-2} \right), \qquad y = \log\log C(f) - \log 2d, \quad \log C(f) \ge 23d
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  The extra assumption is the Ramanujan-Petersson conjecture for L(s, f),
+  and the Riemann hypothesis is assumed for L(s, f) itself. The paper notes
+  that Ramanujan-Petersson is known for Hecke cusp forms of weight k >= 1 by
+  Deligne and Deligne-Serre (Corollary 1.2), so that degree 2 case needs
+  only the Riemann hypothesis for L(s, f), which is still not covered. For
+  degree 1 the paper remarks that the theorem essentially recovers the bound
+  of Lamzouri, Li and Soundararajan for primitive Dirichlet characters,
+  which needs only GRH for Dirichlet L-functions. That special case is not
+  what this entry records.
+sources:
+  - authors: A. Lumley
+    title: "Explicit bounds for L-functions on the edge of the critical strip"
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1804.09850
+    hypothesis_location: "Theorem 2.1 (upper bound) and Theorem 2.2 (lower bound)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem is stated for an axiomatically defined class of L-functions, not only automorphic ones. The code GRH-automorphic is the closest available code.
+    - >-
+      Should the degree 1 case for Dirichlet characters be split out as a separate unlocked entry, or is it already covered by an entry on the Lamzouri, Li and Soundararajan bound?
+lean:
+  proved: false
+  path: null
+tags: [l-functions, explicit-bounds, special-values]
+added: 2026-11-21

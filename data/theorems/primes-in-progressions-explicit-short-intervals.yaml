@@ -1,0 +1,40 @@
+id: primes-in-progressions-explicit-short-intervals
+title: Explicit short intervals containing primes in arithmetic progressions
+field: analytic-number-theory
+statement_plain: >
+  Let q >= 3, let a be coprime to q, and let x >= (8 phi(q) log q log log
+  q)^2. Then there is a prime p congruent to a modulo q with |p - x| < h,
+  for any h >= phi(q) ((1/2) log(q^2 x) + 15) sqrt(x).
+statement_formal: |
+  \exists\, p \equiv a \!\!\pmod q \text{ prime with } |p - x| < h \quad \text{whenever } h \ge \varphi(q)\left(\tfrac12\log(q^2x) + 15\right)\sqrt{x}, \ \ x \ge \bigl(8\varphi(q)\log q\,\log\log q\bigr)^2
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is the first half of Theorem 1.2. The same theorem also gives at
+  least sqrt(x) such primes under a slightly larger h, and Theorems 1.1 and
+  1.3 of the paper give variants with other constants and ranges. The proof
+  works with the L-functions of all characters modulo q, through their
+  inducing primitive characters, which includes the Riemann zeta function
+  for the principal character.
+sources:
+  - authors: A. W. Dudek, L. Grenié, G. Molteni
+    title: "Explicit short intervals for primes in arithmetic progressions on GRH"
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1606.08616
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes GRH without a formal definition. It is read here as the hypothesis for L(s, chi) for the characters chi modulo q, which are the only L-functions in the proof.
+lean:
+  proved: false
+  path: null
+related: [least-prime-in-arithmetic-progression]
+tags: [primes-in-arithmetic-progressions, short-intervals, explicit-bounds]
+added: 2026-11-21

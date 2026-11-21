@@ -1,0 +1,40 @@
+id: grosswald-conjecture-least-primitive-root
+title: Grosswald's conjecture on the least primitive root
+field: analytic-number-theory
+statement_plain: >
+  The least primitive root g(p) modulo a prime p satisfies g(p) < sqrt(p) -
+  2 for all primes p > 409. The least prime primitive root modulo p is also
+  less than sqrt(p) - 2 for all primes p > 2791.
+statement_formal: |
+  g(p) < \sqrt{p} - 2 \ \text{ for all primes } p > 409, \qquad \hat g(p) < \sqrt{p} - 2 \ \text{ for all primes } p > 2791
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says that the bound on g(p) was already known without any
+  hypothesis for 409 < p <= 2.5 * 10^15 and for p > 3.38 * 10^71, by Cohen,
+  Oliveira e Silva and Trudgian. The hypothesis is used for the remaining
+  primes. The proof rests on Lemma 1 (after Bach), which bounds a smoothed
+  sum of the von Mangoldt function and its twists by non-principal Dirichlet
+  characters modulo p.
+sources:
+  - authors: K. McGown, E. Treviño, T. Trudgian
+    title: "Resolving Grosswald's conjecture on GRH"
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1508.05182
+    hypothesis_location: "Theorem 1, proved from Theorem 2 and Theorem 3, which use Lemma 1 on Dirichlet characters modulo p"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes GRH without defining it. The classification as zeta plus Dirichlet L-functions is read off Lemma 1, which is quoted from Bach and whose proof is not reproduced in the paper.
+lean:
+  proved: false
+  path: null
+related: [shoup-least-primitive-root]
+tags: [primitive-roots, explicit-bounds]
+added: 2026-11-21
