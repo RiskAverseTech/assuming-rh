@@ -1,0 +1,41 @@
+id: zeta-shifted-moments-upper-bound-chandee
+title: Upper bounds for shifted moments of the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let k_1, ..., k_m be positive real numbers and let alpha_1, ..., alpha_m be
+  distinct real shifts, possibly depending on T, with alpha_i = O(log T) and
+  |alpha_i - alpha_j| = O(1). Then for every epsilon > 0 and all large T, the
+  integral over 0 <= t <= T of the product of |zeta(1/2 + it + i alpha_j)|^(2 k_j)
+  is at most a constant times T (log T)^(k_1^2 + ... + k_m^2 + epsilon) times
+  the product over i < j of min(1 / |alpha_i - alpha_j|, log T)^(2 k_i k_j).
+statement_formal: |
+  \int_0^T \prod_{j=1}^m \left|\zeta\!\left(\tfrac12 + it + i\alpha_j\right)\right|^{2k_j} dt \ll_{k,\epsilon} T(\log T)^{k_1^2 + \cdots + k_m^2 + \epsilon} \prod_{i<j} \left(\min\left\{\frac{1}{|\alpha_i - \alpha_j|}, \log T\right\}\right)^{2k_i k_j}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This generalizes the bound of Soundararajan recorded in the entry
+  zeta-moments-near-sharp-upper-bound (the case of a single shift) to
+  products of shifted values. The paper also assumes that the limits of
+  alpha_i log T and of (alpha_i - alpha_j) log T exist or are infinite. The
+  entries shifted-moments-dirichlet-l-functions-lower-bound and
+  shifted-moments-quadratic-dirichlet-l-functions-upper-bound concern
+  analogous shifted moments for Dirichlet L-functions.
+sources:
+  - authors: V. Chandee
+    title: On the correlation of shifted values of the Riemann zeta function
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0910.0664
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, shifted-moments]
+added: 2026-11-21

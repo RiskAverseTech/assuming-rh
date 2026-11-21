@@ -1,0 +1,37 @@
+id: zeta-moments-short-intervals-near-sharp-upper-bound
+title: Near-sharp upper bounds for moments of the Riemann zeta function in short intervals
+field: analytic-number-theory
+statement_plain: >
+  Fix k > 0 and 0 < theta <= 1, and let H = T^theta. Then the integral of
+  |zeta(1/2 + it)|^(2k) over T <= t <= T + H is at most a constant times
+  H (log T)^(k^2 (1 + O(1 / log log log T))).
+statement_formal: |
+  \int_T^{T+H} \left|\zeta\!\left(\tfrac12 + it\right)\right|^{2k} dt \ll H (\log T)^{k^2\left(1 + O(1/\log\log\log T)\right)}, \qquad H = T^{\theta},\ 0 < \theta \le 1
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This extends the bound T (log T)^(k^2 + epsilon) of Soundararajan for the
+  long interval, recorded in the entry zeta-moments-near-sharp-upper-bound,
+  to short intervals of length T^theta, and makes the epsilon explicit. For
+  H = T it is weaker than the bound in the entry
+  zeta-moments-sharp-upper-bound-harper, which has no extra factor in the
+  exponent but is stated only for the interval from T to 2T.
+sources:
+  - authors: A. Ivić
+    title: On the moments of the Riemann zeta-function in short intervals
+    year: 2009
+    venue: Hardy-Ramanujan J. 32 (2009), 4-23
+    url: https://arxiv.org/abs/0807.1181
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, short-intervals]
+added: 2026-11-21

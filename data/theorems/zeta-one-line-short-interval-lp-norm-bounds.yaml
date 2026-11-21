@@ -1,0 +1,40 @@
+id: zeta-one-line-short-interval-lp-norm-bounds
+title: Growth of integrals of powers of zeta on the line Re s = 1 over intervals of fixed length
+field: analytic-number-theory
+statement_plain: >
+  For every fixed delta > 0, the integrals of |zeta(1 + it)| and of
+  1 / |zeta(1 + it)| over T <= t <= T + delta are O(log log log T). For every
+  fixed p > 1, the integrals of |zeta(1 + it)|^p and of |zeta(1 + it)|^(-p)
+  over the same interval are O((log log log T) (log log T)^(p - 1)).
+statement_formal: |
+  \int_T^{T+\delta} |\zeta(1+it)|^{\pm 1}\, dt = O(\log\log\log T), \qquad \int_T^{T+\delta} |\zeta(1+it)|^{\pm p}\, dt = O\!\left(\log\log\log T\,(\log\log T)^{p-1}\right) \quad (p > 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The hypothesis enters through Littlewood's conditional bounds
+  zeta(1 + it) << log log t and 1 / zeta(1 + it) << log log t; the entry
+  zeta-one-line-explicit-bound-chirre-molero records an explicit pointwise
+  bound of that kind, and this entry is the corresponding statement for
+  integrals over short intervals. The paper proves unconditionally that the
+  first bound is sharp (an Omega(log log log T) result) and that the second
+  is sharp up to the factor log log log T, and it also gives weaker
+  unconditional upper bounds.
+sources:
+  - authors: J. Andersson
+    title: On the growth of the L^p norm of the Riemann zeta-function on the line Re(s) = 1
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2107.14748
+    hypothesis_location: Theorem 4 and Theorem 6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, one-line, short-intervals, moments]
+added: 2026-11-21

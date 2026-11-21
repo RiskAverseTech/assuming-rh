@@ -1,0 +1,39 @@
+id: zeta-discrete-mean-square-over-zero-ordinates
+title: Discrete mean square of zeta shifted by the imaginary parts of its zeros, right of the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let s = sigma + it with sigma > 1/2 fixed, and let A > 0. Then there is
+  eta = eta(A) > 0 such that, for |t| <= T^A, the sum of |zeta(s + i gamma)|^2
+  over the zero ordinates 0 < gamma <= T equals
+  zeta(2 sigma) (T / (2 pi)) log(T / (2 pi e))
+  + zeta(2 sigma) Re((zeta'/zeta)(s + 1/2)) T / pi + O(T^(1 - eta)).
+statement_formal: |
+  \sum_{0 < \gamma \le T} |\zeta(s + i\gamma)|^2 = \zeta(2\sigma)\frac{T}{2\pi}\log\frac{T}{2\pi e} + \zeta(2\sigma)\,\Re\!\left(\frac{\zeta'}{\zeta}\left(s + \tfrac12\right)\right)\frac{T}{\pi} + O_{\sigma,A}\!\left(T^{1-\eta}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No existing entry treats this discrete mean square of zeta itself; the
+  entries zeta-derivative-moments-at-zeros-upper-bound and
+  zeta-derivative-at-zeros-small-values concern the derivative of zeta at
+  the zeros. The paper also proves, under the same hypothesis, the bound
+  T log T + |t|^epsilon uniformly in t (Theorem 2), and discusses analogs
+  for Dirichlet L-functions, which are not recorded here.
+sources:
+  - authors: R. Garunkštis, A. Laurinčikas
+    title: Discrete mean square of the Riemann zeta-function over imaginary parts of its zeros
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1608.08493
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, zeros, discrete-moments]
+added: 2026-11-21
