@@ -1,0 +1,43 @@
+id: zeta-large-values-triple-log-length-segments
+title: Arbitrarily large values of zeta on critical-line segments of length about log log log T
+field: analytic-number-theory
+statement_plain: >
+  For every fixed constant A there are constants c_0 = c_0(A) > 0 and
+  T_0 = T_0(A) such that for every T > T_0 the interval (T - H, T + H) with
+  H = (1/pi) log log log T + c_0 contains a point t with
+  |zeta(1/2 + it)| > A.
+statement_formal: |
+  \max_{|t-T|\le H} \left|\zeta\left(\tfrac12+it\right)\right| > A, \qquad H = \frac{1}{\pi}\log\log\log T + c_0(A), \quad T > T_0(A)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper presents this as a conditional solution of a problem of
+  Karatsuba, who asked for the maximum of |zeta(1/2 + it)| over |t - T| <= H
+  to be at least 1 for H as small as log log log T. The same paper proves,
+  also under the Riemann Hypothesis, that S(t) = (1/pi) arg zeta(1/2 + it)
+  takes values above 3 and below -3 on segments of length
+  0.8 log log log T + c_0 (Corollary to Theorem 3), with consequences for
+  Gram's law. The dataset entry
+  argument-of-zeta-large-values-very-short-intervals records a related
+  result of the same author from a different paper.
+sources:
+  - authors: M. A. Korolev
+    title: On the large values of the Riemann zeta-function on short segments of the critical line
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1404.6649
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The extracted text of Theorem 1 prints the interval length as (1/pi) ln ln ln T + c and omits the absolute value bars; the entry reads these as c_0 and |zeta(1/2 + it)|, following the definition of F(T; H) in the introduction.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, large-values, short-intervals]
+added: 2026-11-21

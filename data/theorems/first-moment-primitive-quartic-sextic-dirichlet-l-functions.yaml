@@ -1,0 +1,48 @@
+id: first-moment-primitive-quartic-sextic-dirichlet-l-functions
+title: Smoothed first moments of primitive quartic and sextic Dirichlet L-functions with power-saving error
+field: analytic-number-theory
+statement_plain: >
+  Let j be 4 or 6. Sum L(1/2, chi) Phi(q/Q) over all moduli q > 1 coprime
+  to j and all Dirichlet characters chi mod q of exact order j whose
+  nontrivial powers chi^k, 1 <= k < j, are all primitive mod q, where Phi
+  is smooth and compactly supported in the positive reals. The sum equals
+  C_j Phi^(1) Q + O(Q^(theta_j + eps)) with theta_4 = 49/58 and
+  theta_6 = 23/26, where Phi^(1) is the integral of Phi and C_4, C_6 are
+  explicit positive constants.
+statement_formal: |
+  \sum_{\substack{q>1 \\ (q,j)=1}}\ \sum\nolimits^{*}_{\substack{\chi \bmod q \\ \chi^j=\chi_0}} L\left(\tfrac12,\chi\right)\Phi\left(\frac{q}{Q}\right) = C_j\,\widehat{\Phi}(1)\,Q + O_{\Phi,\varepsilon}\left(Q^{\theta_j+\varepsilon}\right), \qquad \theta_4=\frac{49}{58},\quad \theta_6=\frac{23}{26}
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The hypothesis is the Generalized Riemann Hypothesis for Dirichlet
+  L-functions and for finite order Hecke L-functions over K_4 = Q(i) (for
+  j = 4) and K_6 = Q(sqrt(-3)) (for j = 6); the Hecke characters come from
+  quartic and sextic residue symbols. The paper remarks that it suffices
+  to assume it for the characters and their powers used in the proof. The
+  Hecke part is not covered. The result sharpens the error terms
+  O(Q^(9/10 + eps)) and O(Q^(13/14 + eps)) that Gao and Zhao obtained under
+  the generalized Lindelof hypothesis, with the same main-term constants.
+sources:
+  - authors: Z. Hong
+    title: Improved first moments of primitive quartic and sextic Dirichlet $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.01452
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The constants C_4 and C_6 are defined in equations (3.46) and (4.32) of the paper and are not reproduced here.
+    - >-
+      Whether the Hecke L-functions used could be rewritten as Dirichlet L-functions was not checked; the theorem itself lists Hecke L-functions over K_j as a separate hypothesis, so the cautious code is kept.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, first-moment, quartic-characters, sextic-characters]
+added: 2026-11-21

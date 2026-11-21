@@ -1,0 +1,49 @@
+id: zeta-zeros-pair-correlation-bogomolny-keating-smooth-test-functions
+title: Pair correlation of zeta zeros matches the Bogomolny-Keating prediction for band-limited test functions
+field: analytic-number-theory
+statement_plain: >
+  Fix eps > 0 and a test function omega whose Fourier transform is smooth
+  and compactly supported. Then, uniformly for |alpha| < 1 - eps and for
+  any delta < eps/2, the average (1/T) sum over pairs of distinct zero
+  ordinates 0 < gamma, gamma' <= T of
+  omega(gamma - gamma') e(alpha (log T / 2 pi)(gamma - gamma')) equals the
+  integral of omega(u) e(alpha (log T / 2 pi) u) against the density
+  (1/T) int_0^T [ (log(t / 2 pi) / 2 pi)^2 + Q_t(u) ] dt, up to an error
+  O(T^(-delta)). Here e(x) = exp(2 pi i x) and Q_t(u) is the explicit
+  function of Bogomolny and Keating, built from (zeta'/zeta)'(1 + iu),
+  zeta(1 + iu) zeta(1 - iu) (t / 2 pi)^(-iu) and two Euler products.
+statement_formal: |
+  \frac{1}{T}\sum_{0<\gamma\ne\gamma'\le T}\omega(\gamma-\gamma')\, e\left(\alpha\tfrac{\log T}{2\pi}(\gamma-\gamma')\right) = O_\delta\left(T^{-\delta}\right) + \int_{\mathbb{R}}\omega(u)\, e\left(\alpha\tfrac{\log T}{2\pi}u\right)\left[\frac{1}{T}\int_0^T\left(\left(\frac{\log(t/2\pi)}{2\pi}\right)^{2}+Q_t(u)\right)dt\right]du
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This refines Montgomery's pair correlation theorem, which under the same
+  hypothesis and for the same kind of test functions matches the pair
+  correlation to the GUE prediction with a larger error term. The
+  restriction |alpha| < 1 means only the diagonal terms of the
+  Bogomolny-Keating formula are detected. Zeros are counted with
+  multiplicity. The full definition of Q_t(u) is in the paper after
+  Theorem 1.3.
+sources:
+  - authors: B. Rodgers
+    title: Macroscopic pair correlation of the Riemann zeroes for smooth test functions
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1203.3275
+    hypothesis_location: Theorem 1.4 (the Riemann Hypothesis is assumed from the introduction onward)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The function Q_t(u) is described in words and not reproduced in full; a reader needs the paper for its exact definition.
+    - >-
+      The formula was transcribed from extracted text in which the display is spread over several lines.
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, pair-correlation, random-matrix-theory]
+added: 2026-11-21

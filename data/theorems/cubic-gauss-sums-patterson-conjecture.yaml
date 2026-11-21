@@ -1,0 +1,46 @@
+id: cubic-gauss-sums-patterson-conjecture
+title: Patterson's conjecture on the bias of cubic Gauss sums over primes
+field: analytic-number-theory
+statement_plain: >
+  For a prime p congruent to 1 mod 3 let S_p be the sum of
+  exp(2 pi i n^3 / p) over n mod p. For every smooth function W with
+  compact support in the positive reals, the sum over primes
+  p = 1 mod 3 of (S_p / (2 sqrt(p))) W(p / X) is asymptotic to
+  ((2 pi)^(2/3) / (3 Gamma(2/3))) (int_0^infinity W(x) x^(-1/6) dx)
+  X^(5/6) / log X as X tends to infinity.
+statement_formal: |
+  \sum_{p\equiv 1 \,(\mathrm{mod}\, 3)}\frac{S_p}{2\sqrt{p}}\,W\left(\frac{p}{X}\right) \sim \frac{(2\pi)^{2/3}}{3\,\Gamma(\tfrac23)}\int_0^\infty W(x)\,x^{-1/6}\,dx\cdot\frac{X^{5/6}}{\log X}, \qquad S_p = \sum_{n=1}^{p} e^{2\pi i n^3/p}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The hypothesis is the Generalized Riemann Hypothesis for Hecke
+  L-functions over Q(omega), omega a primitive cube root of unity; in the
+  lemmas it is phrased as the Riemann Hypothesis for the Dedekind zeta
+  function of Q(omega) twisted by Grossencharacters. These are not
+  Dirichlet L-functions. The theorem confirms, in smoothed form, a
+  conjecture of Patterson from 1978 explaining a bias first observed by
+  Kummer; Heath-Brown had proved the upper bound X^(5/6 + eps)
+  unconditionally. Under the same hypothesis the paper shows that
+  Heath-Brown's cubic large sieve is sharp up to factors X^(o(1)).
+sources:
+  - authors: A. Dunn, M. Radziwiłł
+    title: "Bias in cubic Gauss sums: Patterson's conjecture"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.07463
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The waiting_on family power-residue-characters is the closest fit: the proof uses cubic residue characters over Q(omega) and also Hecke Grossencharacters of infinite order, which that family does not name explicitly.
+lean:
+  proved: false
+  path: null
+tags: [gauss-sums, cubic-characters, kummer-conjecture]
+added: 2026-11-21

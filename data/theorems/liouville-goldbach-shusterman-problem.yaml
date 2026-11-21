@@ -1,0 +1,39 @@
+id: liouville-goldbach-shusterman-problem
+title: Every large even integer is a sum of two integers with Liouville function equal to -1
+field: additive-number-theory
+statement_plain: >
+  Let lambda be the Liouville function. There is an effectively computable
+  N_0 such that every even integer N >= N_0 can be written as N = a + b
+  with 1 <= a, b < N and lambda(a) = lambda(b) = -1.
+statement_formal: |
+  \forall\, N \ge N_0 \text{ even}\quad \exists\, a, b \ge 1:\quad a+b=N,\qquad \lambda(a)=\lambda(b)=-1
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This conditionally answers, for large N, a problem of Shusterman that is
+  a weaker analog of the binary Goldbach problem. It follows from a
+  quantitative result in the same paper: for every prime N and each sign
+  pattern (e_1, e_2), the number of n < N with
+  (lambda(n), lambda(N - n)) = (e_1, e_2) is
+  >> N exp(-C (log log N)^6) (Proposition 1.4). The paper remarks that the
+  full hypothesis is not needed: a zero-free region of width
+  1/(log N)^c up to height (log N)^3, with c < 3/50, would suffice.
+sources:
+  - authors: A. P. Mangerel
+    title: On Shusterman's Goldbach-type problem for sign patterns of the Liouville function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.17199
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [liouville-function, goldbach-type-problems, sign-patterns]
+added: 2026-11-21

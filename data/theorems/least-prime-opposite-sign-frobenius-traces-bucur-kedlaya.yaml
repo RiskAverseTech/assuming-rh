@@ -1,0 +1,52 @@
+id: least-prime-opposite-sign-frobenius-traces-bucur-kedlaya
+title: A prime of norm O((log N)^2 (log log 2N)^2) where two elliptic curves have Frobenius traces of opposite sign
+field: arithmetic-geometry
+statement_plain: >
+  Let E_1 and E_2 be elliptic curves over a number field K, neither with
+  complex multiplication and not isogenous over the algebraic closure of Q,
+  and let N be the product of their absolute conductors. Then there is a
+  prime ideal p of K not dividing N, with norm
+  O([K:Q]^2 (log N)^2 (log log 2N)^2), at which the Frobenius traces
+  a_p(E_1) and a_p(E_2) are nonzero and of opposite sign. The implied
+  constant is absolute and effectively computable.
+statement_formal: |
+  \exists\, \mathfrak{p} \nmid N:\quad a_{\mathfrak{p}}(E_1)\, a_{\mathfrak{p}}(E_2) < 0, \qquad \mathrm{Norm}(\mathfrak{p}) = O\left([K:\mathbb{Q}]^2 (\log N)^2 (\log\log 2N)^2\right)
+hypotheses_required: [GRH-automorphic, ERH-Dedekind, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, single-field-zeta, extra-assumption]
+status_note: >
+  The theorem assumes Conjecture 1.1 of the paper for all the L-functions
+  L(s, Sym^i E_1 x Sym^j E_2) with i, j = 0, 1, 2, ...: these are the
+  Rankin-Selberg products of symmetric power L-functions of the two curves
+  over K (for i = j = 0 this is the Dedekind zeta function of K).
+  Conjecture 1.1 has three parts: analytic continuation to an entire
+  function of order 1 after removing the poles, the functional equation,
+  and the Riemann Hypothesis. The extra assumption recorded here is the
+  analytic continuation and functional equation, which the paper says are
+  known when K is totally real (by potential automorphy) but which are
+  assumed in general. The dataset entry
+  least-prime-frobenius-traces-opposite-sign (Chen, Park and Swaminathan)
+  sharpens this bound for semistable curves over Q using only i, j <= 2.
+sources:
+  - authors: A. Bucur, K. S. Kedlaya
+    title: An application of the effective Sato-Tate conjecture
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1301.0139
+    hypothesis_location: Theorem 4.3 (hypotheses as in Theorem 4.1; Conjecture 1.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      PLUS-EXTRA is listed for the analytic continuation and functional equation parts of Conjecture 1.1. Over a totally real K the paper says these are known, so for such K the entry needs only the Riemann Hypothesis part; a reviewer may prefer to drop PLUS-EXTRA.
+    - >-
+      ERH-Dedekind is listed because the case i = j = 0 is the Dedekind zeta function of K; for K = Q this is the Riemann zeta function.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, frobenius-traces, least-prime, sato-tate]
+added: 2026-11-21
