@@ -1,0 +1,38 @@
+id: prime-geodesic-theorem-short-intervals-modular-surface
+title: "Prime geodesic theorem for the modular surface in short intervals"
+field: analytic-number-theory
+statement_plain: >
+  Let pi_Gamma(x) count the primitive hyperbolic conjugacy classes of the
+  modular group with norm at most x (the prime geodesics of the modular
+  surface), and let Psi_Gamma be the corresponding weighted count. For x^(1/2)
+  (log x)^(2+eps) <= h <= x, one has pi_Gamma(x + h) - pi_Gamma(x) ~ h / log x
+  and Psi_Gamma(x + h) - Psi_Gamma(x) ~ h.
+statement_formal: |
+  \pi_\Gamma(x+h)-\pi_\Gamma(x)\sim\frac{h}{\log x},\qquad \Psi_\Gamma(x+h)-\Psi_\Gamma(x)\sim h\qquad\bigl(x^{1/2}(\log x)^{2+\varepsilon}\le h\le x\bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes the Generalized Riemann Hypothesis for quadratic Dirichlet
+  L-functions only. It is used to approximate L(1, chi_D) by a short Euler
+  product for the discriminants n^2 - 4, which appear through the class number
+  formula. The paper's other main result, the error term x^(25/36+eps) in the
+  prime geodesic theorem, is unconditional.
+sources:
+  - authors: "K. Soundararajan, M. P. Young"
+    title: "The Prime Geodesic Theorem"
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1011.5486
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [prime-geodesic-theorem, short-intervals, quadratic-characters]
+added: 2026-11-21

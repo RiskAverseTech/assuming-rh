@@ -1,0 +1,43 @@
+id: mersenne-divisors-reciprocal-sum-by-order-of-two
+title: "Average of the reciprocal sum of odd numbers with a given multiplicative order of 2"
+field: analytic-number-theory
+statement_plain: >
+  For odd d let l(d) be the multiplicative order of 2 modulo d, and let E(m)
+  be the sum of 1/d over odd d with l(d) = m. Then the sum of E(m) over m <= x
+  is (1/2 + o(1)) log x as x tends to infinity. Equivalently, the sum of 1/d
+  over all d dividing 2^n - 1 for some n <= x is asymptotic to (1/2) log x.
+statement_formal: |
+  \sum_{m\le x}E(m)=\sum_{\ell(d)\le x}\frac1d=\Bigl(\frac12+o(1)\Bigr)\log x,\qquad E(m)=\sum_{\ell(d)=m}\frac1d
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper says that by GRH it always means the Riemann Hypothesis for
+  Dedekind zeta functions. For this theorem the hypothesis enters through a
+  theorem of Kurlberg (the order of 2 modulo n exceeds n^(1-eps) for almost
+  all odd n), which belongs to the Hooley-type family using Kummer fields. The
+  statement confirms a conjecture of Pomerance. The same paper has two further
+  results (Theorems 1.1 and 1.2, the maximal order of the reciprocal sum of
+  prime divisors and of divisors of 2^n - 1 for n <= x) that need in addition
+  a weak form of the Elliott-Halberstam Conjecture; they are not part of this
+  entry.
+sources:
+  - authors: "Z. Engberg, P. Pollack"
+    title: "The reciprocal sum of divisors of Mersenne numbers"
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.02373
+    hypothesis_location: "Theorem 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The kummer-fields label is inferred: the paper says Dedekind zeta functions but does not list the fields. The cited theorems of Kurlberg and of Kurlberg and Pomerance were not read."
+lean:
+  proved: false
+  path: null
+tags: [mersenne-numbers, multiplicative-order, divisor-sums]
+added: 2026-11-21

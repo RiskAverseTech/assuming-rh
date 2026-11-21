@@ -1,0 +1,47 @@
+id: value-distribution-twisted-modular-l-functions-m-function
+title: "Equidistribution of log L and L'/L of Dirichlet twists of a modular form"
+field: analytic-number-theory
+statement_plain: >
+  Let f be a primitive cusp form of weight k and level N, fix s with real part
+  sigma > 1/2, and let the script-L of f x chi at s denote either log L(f x
+  chi, s) or (L'/L)(f x chi, s). As m runs over primes, the average over
+  Dirichlet characters chi modulo m of Phi applied to this value converges to
+  the integral of Phi against an explicit density function M_sigma on the
+  complex plane. Here Phi is any continuous function of at most exponential
+  growth, or the characteristic function of a bounded set or of the complement
+  of a bounded set.
+statement_formal: |
+  \lim_{\substack{m\to\infty\\ m\ \text{prime}}}\frac{1}{|\Gamma_m|}\sum_{\chi\in\Gamma_m}\Phi\bigl(\mathfrak{L}(f\otimes\chi,s)\bigr)=\int_{\mathbb{C}}M_\sigma(w)\,\Phi(w)\,|dw|
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes GRH for the L-functions L(f x chi, s) of the twists of a
+  primitive cusp form f of arbitrary weight k and level N by Dirichlet
+  characters chi of prime conductor m. Gamma_m is the group of Dirichlet
+  characters modulo m, |dw| is dx dy / (2 pi), and M_sigma is the inverse
+  Fourier transform of the function defined by the Dirichlet series in the
+  paper's Theorem 3.1. The paper remarks that the result should hold
+  unconditionally for sigma > 1. A companion result (Theorem 5.1) for the
+  harmonic average over forms of prime level assumes GRH for L(f, s).
+sources:
+  - authors: "P. Lebacque, A. Zykin"
+    title: "On M-functions associated with modular forms"
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1702.07610
+    hypothesis_location: "Theorem 4.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The density M_sigma is defined in the paper through a Dirichlet series with coefficients depending on f; it is not written out here."
+    - "For weight 2 forms the L-functions would fall under modular-form-l-functions, but the theorem is stated for general weight, so higher-automorphic is used."
+lean:
+  proved: false
+  path: null
+tags: [value-distribution, modular-l-functions, m-functions]
+added: 2026-11-21

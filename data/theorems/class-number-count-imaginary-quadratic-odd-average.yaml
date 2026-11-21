@@ -1,0 +1,40 @@
+id: class-number-count-imaginary-quadratic-odd-average
+title: "Average number of imaginary quadratic fields with a given odd class number"
+field: analytic-number-theory
+statement_plain: >
+  Let F(h) be the number of imaginary quadratic fields with class number h.
+  For any eps > 0, the sum of F(h) over odd h <= H equals (15/4) H^2 / log H +
+  O(H^2 (log H)^(-3/2+eps)) as H tends to infinity.
+statement_formal: |
+  \sum_{\substack{h\le H\\ h\ \text{odd}}}\mathcal{F}(h)=\frac{15}{4}\cdot\frac{H^2}{\log H}+O\!\left(H^2(\log H)^{-3/2+\varepsilon}\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states the hypothesis it uses as the Generalized Riemann
+  Hypothesis for Dedekind zeta functions of quadratic number fields
+  (Proposition 3.1 and Corollary 3.2). Such a zeta function is the product of
+  the Riemann zeta function and a quadratic Dirichlet L-function, so the
+  hypothesis is covered. The result is the analogue for odd class numbers of
+  Soundararajan's average order of F(h). The paper also reports computations
+  of F(h) for odd h up to 10^6 that are conditional on GRH; they are not part
+  of this entry.
+sources:
+  - authors: "S. Holmin, N. Jones, P. Kurlberg, C. McLeman, K. L. Petersen"
+    title: "Missing class groups and class number statistics for imaginary quadratic fields"
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1510.04387
+    hypothesis_location: "Theorem 1.5"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "Theorem 1.5 and Theorem 3.3 write only 'the Generalized Riemann Hypothesis'. The reading that quadratic Dirichlet L-functions and zeta suffice is taken from Proposition 3.1 and Corollary 3.2 and from the use of L(1, chi_q) in Section 3; the full proof in Section 4 was not checked line by line for other L-functions."
+lean:
+  proved: false
+  path: null
+tags: [class-numbers, imaginary-quadratic-fields, quadratic-characters]
+added: 2026-11-21

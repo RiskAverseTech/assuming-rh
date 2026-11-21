@@ -1,0 +1,45 @@
+id: moments-symmetric-square-l-functions-order-of-magnitude
+title: "Order of magnitude of moments of symmetric square L-functions in the weight aspect"
+field: analytic-number-theory
+statement_plain: >
+  Let H_kappa be the set of holomorphic Hecke eigenforms of level one and
+  weight kappa. For every real k >= 0, the harmonically weighted sum over f in
+  H_kappa of |L(1/2, sym^2 f)|^(2k) has order of magnitude (log
+  kappa)^(k(2k+1)) as kappa grows: it is bounded above and below by constant
+  multiples of that quantity.
+statement_formal: |
+  \sum_{f\in H_\kappa}\omega_f^{-1}\,\bigl|L(\tfrac12,\mathrm{sym}^2 f)\bigr|^{2k}\asymp_k(\log\kappa)^{k(2k+1)}\qquad(k\ge 0)
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper names the L-functions: the symmetric square L-functions L(s, sym^2
+  f) of level one Hecke eigenforms, and, for the key upper bound on log
+  |L(1/2, sym^2 f)| (Lemma 2.10), also the symmetric square and exterior
+  square L-functions of the lift of sym^2 f. The Riemann zeta function enters
+  through the prime number theorem under RH. None of the automorphic
+  L-functions is covered. The lower bound for k >= 1/2 is proved
+  unconditionally in the same paper (Theorem 1.1); the hypothesis is needed
+  for the lower bound when 0 <= k < 1/2 and for the upper bound for all k
+  (Theorem 1.2).
+sources:
+  - authors: "P. Gao"
+    title: "Bounds for moments of symmetric square $L$-functions"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2209.13882
+    hypothesis_location: "Theorem 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The introduction writes only GRH. The list of L-functions is taken from Lemmas 2.9 and 2.10 and Propositions 6.2 and 6.3; whether every one of them is needed for both the upper and the lower bound was not traced through the whole proof."
+    - "The proof of the upper bound (Theorem 1.2) is omitted in the paper and said to be a variant of the proof of Proposition 3.4."
+lean:
+  proved: false
+  path: null
+tags: [moments, symmetric-square-l-functions, central-values]
+added: 2026-11-21

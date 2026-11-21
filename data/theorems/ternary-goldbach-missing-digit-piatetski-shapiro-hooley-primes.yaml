@@ -1,0 +1,41 @@
+id: ternary-goldbach-missing-digit-piatetski-shapiro-hooley-primes
+title: "Ternary Goldbach with a missing-digit prime, a Piatetski-Shapiro prime and a prime of the form x^2 + y^2 + 1"
+field: additive-number-theory
+statement_plain: >
+  Let gamma* = 8/9 + (2/3) log(10/9)/log 10 (about 0.919), fix gamma_0 with
+  gamma* < gamma_0 <= 1, put c_0 = 1/gamma_0 and fix a digit a_0 in {0, ...,
+  9}. Then every sufficiently large odd integer N_0 is a sum p_1 + p_2 + p_3
+  of three primes, where the decimal expansion of p_1 does not contain the
+  digit a_0, p_2 is a Piatetski-Shapiro prime of the form [n^(c_0)], and p_3
+  is of the form x^2 + y^2 + 1.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This modifies the authors' earlier conditional theorem (two Piatetski-
+  Shapiro primes and one missing-digit prime) by replacing one Piatetski-
+  Shapiro prime with a prime of the form x^2 + y^2 + 1. The paper writes only
+  GRH and does not define it; the hypothesis is applied to exponential sums
+  over primes at rationals a/q and to sums over primes in arithmetic
+  progressions, which are governed by Dirichlet L-functions.
+sources:
+  - authors: "H. Maier, M. Th. Rassias"
+    title: "The ternary Goldbach problem with a prime with a missing digit and primes of special types"
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2108.13132
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper never defines GRH. The reading that only Dirichlet L-functions are used rests on where the hypothesis is applied (Lemma 5.1, the proof of the lemma after Lemma 5.2, and sums over primes congruent to 1 mod d) and on results quoted from the authors' earlier paper, which was not read."
+    - "Theorem 1.2 as printed omits the missing-digit condition on p_1 and writes 'gamma* <= 1'; the statement here follows the abstract, which says p_1 has no digit a_0 and gamma* < gamma_0 <= 1."
+lean:
+  proved: false
+  path: null
+tags: [goldbach, piatetski-shapiro-primes, missing-digits, circle-method]
+added: 2026-11-21

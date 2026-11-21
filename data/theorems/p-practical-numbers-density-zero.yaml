@@ -1,0 +1,38 @@
+id: p-practical-numbers-density-zero
+title: "Integers n for which x^n - 1 has divisors of every degree over F_p have density zero"
+field: analytic-number-theory
+statement_plain: >
+  Fix a prime p. Call n p-practical if x^n - 1 has a divisor in F_p[x] of
+  every degree from 1 to n, and let F_p(X) be the number of p-practical n <=
+  X. Then F_p(X) = O(X sqrt(log log X / log X)). In particular the p-practical
+  numbers have asymptotic density 0.
+statement_formal: |
+  F_p(X)=O\!\left(X\sqrt{\frac{\log\log X}{\log X}}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper says it uses a version of the Generalized Riemann Hypothesis for
+  Kummerian fields, and that the dependence arises from a lemma of Li and
+  Pomerance (Lemma 2.4).
+sources:
+  - authors: "L. Thompson"
+    title: "On the divisors of x^n-1 in F_p[x]"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1111.5403
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The formula in Theorem 1.2 is garbled in the extracted text; the bound X sqrt(log log X / log X) was reconstructed from the end of the proof (choice of theta in Section 4) and should be checked against the PDF."
+    - "The paper says 'Kummerian fields' without naming the L-functions; ERH-Dedekind is the usual reading for Hooley-type arguments."
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, cyclotomic-polynomials, finite-fields]
+added: 2026-11-21
