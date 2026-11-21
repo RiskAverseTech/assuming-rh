@@ -1,0 +1,41 @@
+id: nyman-criterion-constant-function
+title: Nyman's criterion on the closed span of fractional part functions
+field: analytic-number-theory
+statement_plain: >
+  For 0 < alpha < 1 let rho_alpha(t) = {alpha/t} - alpha {1/t}, where {u} is
+  the fractional part of u. Let NB be the closed subspace of L^2((0,1), dt)
+  spanned by the functions rho_alpha. Then the constant function 1 belongs to
+  NB, and so NB is all of L^2((0,1), dt).
+statement_formal: |
+  \mathbf{1} \in \overline{\operatorname{span}}_{L^2(0,1)}\{\rho_\alpha : 0 < \alpha < 1\}, \qquad \rho_\alpha(t) = \left\{\frac{\alpha}{t}\right\} - \alpha\left\{\frac{1}{t}\right\}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The equivalence is due to B. Nyman
+  (1950), with an extension to L^p by A. Beurling (1955). The cited note
+  re-proves it and refines it unconditionally: the norm of the orthogonal
+  projection of 1 onto NB equals the product of |(1 - rho)/rho| over the
+  zeros rho of zeta with real part greater than 1/2 (Theorem 1.2).
+sources:
+  - authors: J.-F. Burnol
+    title: A note on Nyman's equivalent formulation of the Riemann Hypothesis
+    year: 2001
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9910055
+    hypothesis_location: Theorem 1.1 (Nyman), re-proved in Section 2 together with Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The equivalence is Nyman's (1950); this paper only re-proves it, and its own new result (Theorem 1.2) is unconditional. A maintainer may prefer to cite Nyman's thesis or the Balazard-Saias exposition as the primary source.
+    - >-
+      The formula for rho_alpha was read from the PDF because the braces are lost in the text extraction.
+lean:
+  proved: false
+  path: null
+tags: [nyman-beurling, hilbert-space, equivalent-to-rh]
+added: 2026-11-21

@@ -1,0 +1,45 @@
+id: nyman-beurling-mobius-integral-approximation
+title: Convergence of Mobius-weighted fractional part integrals to the truncated logarithm
+field: analytic-number-theory
+statement_plain: >
+  Let rho(x) be the fractional part of x, M the summatory function of the
+  Mobius function, and lambda(x) = log x for 0 < x <= 1 and 0 for x > 1. Put
+  G_n(x) = integral over theta from 1/n to 1 of M(1/theta) rho(theta/x)
+  d theta / theta. Then the L^r norm of G_n - lambda tends to 0 as n tends to
+  infinity, for every r in (1, 2).
+statement_formal: |
+  \lim_{n\to\infty} \lVert G_n - \lambda \rVert_{L^r(0,\infty)} = 0 \quad (1 < r < 2), \qquad G_n(x) = \int_{1/n}^{1} M\!\left(\tfrac{1}{\theta}\right) \rho\!\left(\tfrac{\theta}{x}\right) \frac{d\theta}{\theta}, \quad \lambda(x) = \chi_{(0,1]}(x)\log x
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. It is the case p = 2 of Theorem 3.2.
+  Part (c) of that theorem shows that if zeta(s) has no zeros with real part
+  above 1/p then G_n tends to lambda in L^r for all r in (1, p). Part (d)
+  shows that convergence in L^p implies no zeros with real part at least
+  1/p; applied to every r below 2 this gives the converse. The theorem is
+  stated for all p in (1, infinity) and only the zeta function is involved.
+sources:
+  - authors: L. Báez-Duarte
+    title: Arithmetical Aspects of Beurling's Real Variable Reformulation of the Riemann Hypothesis
+    year: 2000
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0011254
+    hypothesis_location: Theorem 3.2 (c) and (d), stated in the introduction as Theorem B
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper states the two implications (c) and (d) for general p and does not itself write the case p = 2 as an equivalence with RH; the equivalence recorded here combines (c) with (d) applied to each r in (1, 2).
+    - >-
+      The norm is taken on (0, infinity) following equation (3.11); the formal statement's choice of interval should be confirmed.
+    - >-
+      Equation (1.20) writes the upper limit of the integral as infinity and the abstract writes 1; they agree because M(1/theta) = 0 for theta > 1.
+lean:
+  proved: false
+  path: null
+tags: [nyman-beurling, mobius-function, equivalent-to-rh]
+added: 2026-11-21

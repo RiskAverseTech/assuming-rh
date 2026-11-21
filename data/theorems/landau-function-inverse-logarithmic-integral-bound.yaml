@@ -1,0 +1,39 @@
+id: landau-function-inverse-logarithmic-integral-bound
+title: Landau's function is bounded by the inverse logarithmic integral
+field: analytic-number-theory
+statement_plain: >
+  Let g(n) be Landau's function, the maximal order of an element of the
+  symmetric group on n letters, and let li^{-1} be the inverse function of
+  the logarithmic integral. Then log g(n) < sqrt(li^{-1}(n)) for every n at
+  least 1.
+statement_formal: |
+  \log g(n) < \sqrt{\operatorname{li}^{-1}(n)} \qquad (n \ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. It is point (i) of Theorem 1.1, and
+  Corollary 1.3 states that each of the six points of Theorem 1.1 is
+  equivalent to the Riemann hypothesis. The other points give explicit
+  two-sided bounds for the normalized difference and are not part of this
+  entry.
+sources:
+  - authors: M. Deléglise, J.-L. Nicolas
+    title: The Landau function and the Riemann hypothesis
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1907.07664
+    hypothesis_location: Theorem 1.1 (i) and Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The square root sign is partly lost in the text extraction of the abstract; the statement follows Theorem 1.1 (i) and inequality (1.8), where the square root is visible.
+lean:
+  proved: false
+  path: null
+tags: [landau-function, symmetric-group, equivalent-to-rh]
+added: 2026-11-21
