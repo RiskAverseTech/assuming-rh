@@ -1,0 +1,43 @@
+id: cyclotomic-identity-testing-in-bpp
+title: Cyclotomic identity testing is in BPP
+field: complexity-theory
+statement_plain: >
+  The cyclotomic identity testing problem is in BPP. The problem is: given
+  an algebraic circuit for a polynomial f(x_1, ..., x_k) and integers n and
+  e_1, ..., e_k written in binary, decide whether f vanishes at the point
+  (zeta_n^e_1, ..., zeta_n^e_k), where zeta_n is a primitive complex n-th
+  root of unity.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used for the running time and success probability of the
+  randomized algorithm: a random number below 2^(5s) congruent to 1 modulo n
+  must be prime with probability at least 1/(6s), which the paper gets from
+  the conditional estimate for primes in an arithmetic progression. That
+  estimate needs Dirichlet L-functions modulo n only. The same theorem shows
+  unconditionally that the problem is in coNP. Theorem 4 of the paper, a
+  deterministic polynomial-time algorithm for a restricted class, uses a
+  conditional bound on generators of the unit group modulo n and is not part
+  of this entry.
+sources:
+  - authors: N. Balaji, S. Perifel, M. Shirmohammadi, J. Worrell
+    title: Cyclotomic identity testing and applications
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.13179
+    hypothesis_location: "Theorem 1, through Theorem 6 and Proposition 9"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes GRH without defining it. The classification rests on the only place it is used in the proof of Theorem 1, which is the estimate for primes in arithmetic progressions quoted from Davenport's book (Theorem 6).
+lean:
+  proved: false
+  path: null
+tags: [algorithms, identity-testing, primes-in-arithmetic-progressions]
+added: 2026-11-21

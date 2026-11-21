@@ -1,0 +1,48 @@
+id: polynomial-factoring-cross-balance-test
+title: Deterministic factoring of polynomials that are not cross balanced
+field: computational-number-theory
+statement_plain: >
+  Let f be a monic, square-free, completely splitting polynomial of degree n
+  over the prime field F_p, and let G_1, ..., G_k be the directed graphs on
+  the roots of f that the algorithm builds from k deterministically chosen
+  auxiliary polynomials. If some G_l is not regular, a nontrivial factor of f
+  is found in deterministic time l (n log p)^O(1). If all G_l are regular and
+  G_l differs from G_(l-1) for at least ceil(log_2 n) values of l, then f is
+  factored in time k (n log p)^O(1).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+status_note: >
+  Classified cautiously. The paper assumes ERH throughout and does not define
+  it or say where it enters. The graphs are defined through Gao's square root
+  algorithm, which needs a primitive 2^e-th root of unity in F_p, that is a
+  quadratic non-residue modulo p, and that needs Dirichlet L-functions only.
+  The last step of the second claim cites Lemma 9 of Evdokimov (1994) to turn
+  a nontrivial endomorphism into a factor, and this draft could not confirm
+  which hypothesis that lemma uses. The Hecke code is listed for that reason.
+  This extends Gao's square balance test and is a different result from the
+  entry deterministic-polynomial-factoring.
+sources:
+  - authors: C. Saha
+    title: Factoring polynomials over finite fields using balance test
+    year: 2008
+    venue: "Symposium on Theoretical Aspects of Computer Science 2008 (Bordeaux), 609-620"
+    url: https://arxiv.org/abs/0802.2838
+    hypothesis_location: "Theorem 1.1, with ERH assumed globally in the Introduction"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: low
+  open_questions:
+    - >-
+      The paper never says which L-functions its ERH covers. If Lemma 9 of Evdokimov (1994) needs only non-residues in the prime field F_p, the codes should be GRH-Dirichlet alone and the status unlocked.
+    - >-
+      The first claim of Theorem 1.1 (some graph is not regular) appears to use only Gao's square root algorithm in F_p and so may already be unlocked on its own. This was inferred, not stated in the paper.
+lean:
+  proved: false
+  path: null
+related: [deterministic-polynomial-factoring]
+tags: [algorithms, polynomial-factoring, finite-fields]
+added: 2026-11-21

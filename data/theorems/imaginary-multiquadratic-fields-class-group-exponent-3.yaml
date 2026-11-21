@@ -1,0 +1,47 @@
+id: imaginary-multiquadratic-fields-class-group-exponent-3
+title: Complete list of imaginary multiquadratic fields with class group of exponent 3
+field: algebraic-number-theory
+statement_plain: >
+  The imaginary biquadratic fields whose class group has exponent 3 are
+  exactly the 163, 122, 32 and 1 known fields with class group C_3, C_3^2,
+  C_3^3 and C_3^4, and the imaginary triquadratic fields with this property
+  are exactly the 23, 29, 7 and 1 known fields with these class groups.
+  There are no further such fields.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The existence of the listed fields is unconditional; the hypothesis is
+  needed only for completeness of the list. It enters in two ways, both
+  about imaginary quadratic fields: the cited classification of imaginary
+  quadratic fields with class group of exponent 3 (Elsenhans, Klueners and
+  Nicolae), and a bound of Bach and Sorenson for the least prime that splits
+  in a quadratic field of discriminant D. A prime splits in a quadratic
+  field exactly when a quadratic Dirichlet character takes the value 1, so
+  Dirichlet L-functions (and the zeta function) suffice. Theorem 2 of the
+  paper gives the analogous complete list for exponent 5.
+sources:
+  - authors: J. Klüners, T. Komatsu
+    title: Imaginary multiquadratic number fields with class group of exponent 3 and 5
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2004.03308
+    hypothesis_location: "Theorem 1 (3); the hypothesis is used in Sections 3 to 6 through Theorems 21 and 26"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define ERH. The codes are this draft's reading of how the cited results are used: Bach and Sorenson's bound for the least split prime is applied only to quadratic fields, and the cited classification of Elsenhans, Klueners and Nicolae was not read.
+    - >-
+      RH is listed next to GRH-Dirichlet because the cited bounds work with the Dedekind zeta function of a quadratic field, which is the Riemann zeta function times a quadratic Dirichlet L-function.
+    - >-
+      This is a classification theorem that depends on computer searches, not an algorithm paper.
+lean:
+  proved: false
+  path: null
+tags: [class-groups, quadratic-fields, classification]
+added: 2026-11-21

@@ -1,0 +1,43 @@
+id: class-group-unit-group-subexponential-all-number-fields
+title: Provable subexponential computation of class groups and unit groups of arbitrary number fields
+field: computational-number-theory
+statement_plain: >
+  There is a probabilistic algorithm which, given a number field K of degree
+  n and discriminant D with an LLL-reduced basis of its ring of integers,
+  computes the ideal class group and a compact representation of a
+  fundamental system of units. Its expected running time is polynomial in the
+  input length, in L_|D|(1/2), in L_(n^n)(2/3) and in
+  min(rho_K, L_|D|(2/3 + o(1))), where rho_K is the residue at 1 of the
+  Dedekind zeta function of K and L_x(a) = exp(O((log x)^a (log log x)^(1-a))).
+statement_formal: null
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+status_note: >
+  The paper states that its Extended Riemann Hypothesis means the Riemann
+  Hypothesis for Hecke L-functions. Its closing discussion says the random
+  walk theorem on Arakelov ray class groups needs it for all Hecke characters
+  of K, and that other steps use the Riemann Hypothesis for the Dedekind zeta
+  function of K (the case of the trivial character) for prime ideal counts.
+  The hypothesis is used for the running time analysis.
+sources:
+  - authors: K. de Boer, A. Pellet-Mary, B. Wesolowski
+    title: Rigorous methods for computational number theory
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.01588
+    hypothesis_location: "Theorem 1.3 (restated as Theorem 12.1), with the hypothesis defined in Section 2.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Only the Hecke code is listed, following the paper's own definition. The Dedekind zeta function of K is the trivial-character case and could be listed as ERH-Dedekind as well; the status is the same either way.
+lean:
+  proved: false
+  path: null
+related: [hafner-mccurley-class-groups, bach-class-group-generators]
+tags: [algorithms, class-groups, unit-groups]
+added: 2026-11-21

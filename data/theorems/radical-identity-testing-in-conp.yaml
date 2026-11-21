@@ -1,0 +1,47 @@
+id: radical-identity-testing-in-conp
+title: Radical identity testing is in coNP
+field: complexity-theory
+statement_plain: >
+  The radical identity testing problem is in coNP. The problem is: given an
+  algebraic circuit for an integer polynomial f(x_1, ..., x_k) and
+  nonnegative integers a_1, ..., a_k and d_1, ..., d_k written in binary,
+  decide whether f vanishes at the real radicals a_1^(1/d_1), ...,
+  a_k^(1/d_k).
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The hypothesis is used for correctness of the coNP procedure: an effective
+  Chebotarev density theorem (Lagarias and Odlyzko, Serre) must supply enough
+  primes of polynomial bit length that split completely in the splitting
+  field K of the product of the polynomials x^d_i - a_i. This field contains
+  roots of unity and radicals and is in general not abelian over the
+  rationals, so its Dedekind zeta function is not a product of Dirichlet
+  L-functions. The paper's second result, that the special case with square
+  roots of odd primes (2-RIT) is in coRP, uses only primes in an arithmetic
+  progression and so needs Dirichlet L-functions only. That result is not
+  part of this entry.
+sources:
+  - authors: N. Balaji, K. Nosan, M. Shirmohammadi, J. Worrell
+    title: Identity testing for radical expressions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2202.07961
+    hypothesis_location: "Theorem 1, through Proposition 5 and Lemma 9"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes GRH without defining it. The code ERH-Dedekind is this draft's reading of the effective Chebotarev bound for completely split primes in a Galois field K (Proposition 5); the cited sources state it under the Riemann Hypothesis for the Dedekind zeta function of K.
+    - >-
+      Theorem 2 of the paper (2-RIT in coRP) looks unlocked and could be a separate entry.
+lean:
+  proved: false
+  path: null
+related: [effective-chebotarev]
+tags: [algorithms, identity-testing, chebotarev]
+added: 2026-11-21

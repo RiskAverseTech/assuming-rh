@@ -1,0 +1,46 @@
+id: supersingular-inseparable-endomorphism-sqrt-p
+title: Computing an inseparable endomorphism of a supersingular elliptic curve in about sqrt(p) time
+field: computational-number-theory
+statement_plain: >
+  For a prime l in {2, 3, 5}, an integer d in {1, 2}, a prime p > 4d and a
+  supersingular elliptic curve E over the field with p^2 elements, there is
+  a randomized algorithm (random non-backtracking walks in the l-isogeny
+  graph until a curve d-isogenous to its Frobenius conjugate is reached)
+  that outputs an inseparable endomorphism of E and terminates in expected
+  O(p^(1/2) (log p)^2 (log log p)^3) bit operations.
+statement_formal: |
+  O\!\left(p^{1/2}(\log p)^2(\log\log p)^3\right) \text{ expected bit operations}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The output is correct unconditionally. The hypothesis is used only for the
+  expected running time, through Proposition 4.2: the number of target
+  curves is bounded below by the class number of Q(sqrt(-pd)), and
+  Littlewood's conditional lower bound gives a class number of order at
+  least sqrt(p) / log log p. That bound concerns the L-function of a
+  quadratic Dirichlet character. The paper's later Theorem 5.5, which
+  computes the whole endomorphism ring, also relies on conditional results of
+  other authors (Wesolowski and others) and is not part of this entry.
+sources:
+  - authors: J. Fuselier, A. Iezzi, M. Kozek, T. Morrison, C. Namoijam
+    title: Computing supersingular endomorphism rings using inseparable endomorphisms
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2306.03051
+    hypothesis_location: "Proposition 4.5, using Proposition 4.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes GRH without defining it. In the proof of Proposition 4.5 the only use found, apart from a remark on precomputing modular polynomials for constant l that the proof says it ignores, is Littlewood's class number bound in Proposition 4.2. A reviewer should confirm no other step depends on a wider hypothesis.
+    - >-
+      The mixing bound for the random walk (Proposition 4.1) is quoted from another paper and was taken to be unconditional, as the text presents it.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, elliptic-curves, isogenies, class-numbers]
+added: 2026-11-21
