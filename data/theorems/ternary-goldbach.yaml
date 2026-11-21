@@ -17,6 +17,7 @@ sources:
     year: 1997
     venue: Electron. Res. Announc. Amer. Math. Soc. 3, 99-104
     doi: 10.1090/S1079-6762-97-00031-0
+    hypothesis_location: "Section 1, where GRH is defined as the statement for all Dirichlet L-functions, and the main Theorem"
     role: conditional-proof
   - authors: H. A. Helfgott
     title: The ternary Goldbach conjecture is true
@@ -32,9 +33,7 @@ review:
   confidence: high
   open_questions:
     - >-
-      Helfgott's Main Theorem was read in the arXiv version. His proof was accepted for Annals of Mathematics Studies in 2015. Whether the book is in print has not been confirmed.
-    - >-
-      The 1997 paper of Deshouillers, Effinger, te Riele and Zinoviev has not been read directly.
+      Both papers were read. Helfgott's proof was accepted for Annals of Mathematics Studies in 2015. Whether the book is in print has not been confirmed.
 lean:
   proved: false
   path: null

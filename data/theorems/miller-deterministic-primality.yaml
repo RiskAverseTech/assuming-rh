@@ -26,6 +26,7 @@ sources:
     year: 1990
     venue: Math. Comp. 55, 355-380
     doi: 10.1090/S0025-5718-1990-1023756-8
+    hypothesis_location: "Theorem 2 and the remarks after Theorem 3"
     role: refinement
 related: [least-quadratic-nonresidue, primality-in-polynomial-time]
 review:
@@ -35,7 +36,7 @@ review:
   confidence: high
   open_questions:
     - >-
-      Bach's abstract was seen in search summaries. The theorem itself has not been re-read in the paper.
+      Bach's paper was read. Miller's 1976 paper was not.
 lean:
   proved: false
   path: null

@@ -15,15 +15,14 @@ sources:
     year: 1976
     venue: Math. Comp. 30, 337-360
     doi: 10.1090/S0025-5718-1976-0457374-X
+    hypothesis_location: "Corollary 1, inequality (6.18)"
     role: conditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
   confidence: high
-  open_questions:
-    - >-
-      The constant and the range x >= 2657 are quoted from memory of Schoenfeld's Corollary 1 and have not been re-read in the paper.
+  open_questions: []
 lean:
   proved: false
   path: null

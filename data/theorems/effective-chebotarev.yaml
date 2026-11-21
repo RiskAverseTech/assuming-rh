@@ -22,7 +22,7 @@ sources:
     year: 1977
     venue: "Algebraic Number Fields (Durham 1975), Academic Press, 409-464"
     role: conditional-proof
-related: [primes-in-arithmetic-progressions-error, nullstellensatz-in-am]
+related: [primes-in-arithmetic-progressions-error, nullstellensatz-polynomial-hierarchy]
 review:
   state: ai-classified
   checked_by: null

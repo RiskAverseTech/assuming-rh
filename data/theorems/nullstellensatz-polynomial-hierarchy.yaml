@@ -1,10 +1,11 @@
-id: nullstellensatz-in-am
-title: Hilbert's Nullstellensatz is in the complexity class AM
+id: nullstellensatz-polynomial-hierarchy
+title: Hilbert's Nullstellensatz is in the polynomial hierarchy
 field: complexity-theory
 statement_plain: >
   Deciding whether a system of polynomial equations with integer
-  coefficients has a solution over the complex numbers is in the class AM,
-  and so in the second level of the polynomial hierarchy.
+  coefficients has a solution over the complex numbers is in the second
+  level of the polynomial hierarchy. More precisely it is in the class
+  RP^NP, and in the class AM according to a revised version of the paper.
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
@@ -18,6 +19,7 @@ sources:
     year: 1996
     venue: J. Complexity 12, 273-286
     doi: 10.1006/jcom.1996.0019
+    hypothesis_location: "Theorem 9 in Section 5, which rests on the effective Chebotarev theorem of Lagarias and Odlyzko. The main result is Theorem 2."
     role: conditional-proof
 related: [effective-chebotarev, knottedness-in-np]
 review:
@@ -27,7 +29,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      Whether the journal version states AM or only the second level of the polynomial hierarchy has not been checked. AM may appear only in the revised technical report.
+      The journal version was read. It proves membership in RP^NP. The stronger AM statement is attributed by Kuperberg to the DIMACS technical report version, which was not read.
 lean:
   proved: false
   path: null

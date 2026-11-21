@@ -28,7 +28,7 @@ sources:
     doi: 10.1016/j.aim.2021.107796
     hypothesis_location: Theorem 1.1 (no hypothesis)
     role: unconditional-proof
-related: [nullstellensatz-in-am]
+related: [nullstellensatz-polynomial-hierarchy]
 review:
   state: ai-classified
   checked_by: null

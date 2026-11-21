@@ -4,44 +4,45 @@ field: algebraic-number-theory
 statement_plain: >
   The ideal class group of a number field with discriminant D is generated
   by the prime ideals of norm at most 12 (log |D|)^2. For quadratic fields
-  the constant 12 can be replaced by 6.
+  the bound improves to norm less than 6 (log |D|)^2.
 statement_formal: |
   \mathrm{Cl}(K) = \bigl\langle\, [\mathfrak{p}] : N\mathfrak{p} \le 12\,(\log|\Delta_K|)^2 \,\bigr\rangle
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
 status_note: >
   This differs from the first expectation that the quadratic case would be
-  unlocked. The proof takes a non-trivial character of the class group and
-  needs the Riemann Hypothesis for its Hecke L-function. For a quadratic
-  field, a class group character of order above 2 is not a Dirichlet
-  character: its L-function is a two-dimensional dihedral Artin L-function
-  over the rationals. Only the genus characters reduce to Dirichlet
-  L-functions, which controls the class group modulo squares and nothing
-  more. So the bound stays conditional even for quadratic fields.
+  unlocked. Bach defines his hypothesis as the statement that all Hecke
+  L-functions are zero-free to the right of the line Re(s) = 1/2, and the
+  proof applies it to a non-trivial character of the class group. For a
+  quadratic field, a class group character of order above 2 is not a
+  Dirichlet character: its L-function is a two-dimensional dihedral Artin
+  L-function over the rationals. Only the genus characters reduce to
+  Dirichlet L-functions, which controls the class group modulo squares and
+  nothing more. So the bound stays conditional even for quadratic fields.
 sources:
   - authors: E. Bach
     title: Explicit bounds for primality testing and related problems
     year: 1990
     venue: Math. Comp. 55, 355-380
     doi: 10.1090/S0025-5718-1990-1023756-8
+    hypothesis_location: "Section 3 defines ERH as the statement for all Hecke L-functions. The bound is Theorem 4 and the remarks that follow it."
     role: conditional-proof
   - authors: K. Belabas, F. Diaz y Diaz, E. Friedman
     title: Small generators of the ideal class group
     year: 2008
     venue: Math. Comp. 77, 1185-1197
     doi: 10.1090/S0025-5718-07-02003-0
+    hypothesis_location: "Introduction: the hypothesis controls a sum over zeros of an L-function of a class group character and a sum over zeros of the Dedekind zeta function"
     role: refinement
 related: [hafner-mccurley-class-groups]
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
+  confidence: high
   open_questions:
     - >-
-      Bach's own definition of ERH and the statement of his class group theorem have not been read directly. The classification follows the mathematics of the proof and the hypothesis as restated by Belabas, Diaz y Diaz and Friedman (2008).
-    - >-
-      The constant 6 for quadratic fields is widely quoted but was not confirmed in this pass.
+      Bach's definition of ERH and the class group statement were read in the paper. The step from 'the proof uses class group characters' to 'not covered for quadratic fields' is this project's own reading and should be confirmed by a number theorist.
 lean:
   proved: false
   path: null

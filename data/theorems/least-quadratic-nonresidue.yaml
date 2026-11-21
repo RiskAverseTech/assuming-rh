@@ -25,6 +25,7 @@ sources:
     year: 1990
     venue: Math. Comp. 55, 355-380
     doi: 10.1090/S0025-5718-1990-1023756-8
+    hypothesis_location: Theorem 2
     role: refinement
   - authors: Y. Lamzouri, X. Li, K. Soundararajan
     title: Conditional bounds for the least quadratic non-residue and related problems
@@ -38,10 +39,10 @@ review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
+  confidence: high
   open_questions:
     - >-
-      Corollary 1.1 of Lamzouri, Li and Soundararajan was read in the arXiv version. Bach's theorem with the constant 2 has not been read directly.
+      Bach's Theorem 2 and Corollary 1.1 of Lamzouri, Li and Soundararajan were read. Ankeny's 1952 paper was not.
 lean:
   proved: false
   path: null

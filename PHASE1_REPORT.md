@@ -117,3 +117,19 @@ Still not read, because the sites refuse automated downloads or are not on the a
 All 31 entries remain `ai-classified`. Reading a paper by machine does not make an entry `human-checked`.
 
 Later the same day: Weinberger's 1973 paper on class group exponents was read (scanned copy linked from EuDML). Its Theorem 1 confirms the idoneal entry. The hypothesis is explicit: no real zero s with 1 - 1/(4 log d) <= s < 1 for the L-function of the Kronecker symbol of -d, for d above 2 * 10^11. Real Dirichlet characters only. The entry now quotes it.
+
+## Update: papers supplied by Jaz
+
+Six more papers were read from PDFs supplied by hand (Bach 1990, Hafner and McCurley 1989, Belabas, Diaz y Diaz and Friedman 2008, Schoenfeld 1976, Shoup 1992, Koiran 1996, and the 1997 Goldbach paper). The PDFs are kept outside the repository.
+
+| Entry | Result |
+|---|---|
+| Bach's class group bound | **Reclassification confirmed.** Bach defines ERH as "all Hecke L-functions are zero-free in the half-plane Re(s) > 1/2". The 12 and 6 constants are as stated. Belabas, Diaz y Diaz and Friedman describe the same proof as using zeros of an L-function of a class group character. |
+| Hafner and McCurley | Reclassification supported. The hypothesis enters through a generator bound quoted from Schoof, the quadratic case of Bach's bound. The paper does not define its ERH, so confidence is medium. |
+| Miller test, least quadratic non-residue | Bach's Theorem 2 confirmed: constant 2. |
+| Schoenfeld | Corollary 1, inequality (6.18), confirmed with the range x >= 2657. |
+| Shoup | Theorem 1.3 confirmed, and its proof uses Dirichlet characters only. A second result in the same paper (primitive roots in the field with p^2 elements) uses characters of a quadratic field and is not covered. |
+| Koiran | The journal version proves RP^NP, the second level of the polynomial hierarchy, not AM. Entry retitled and its id changed to `nullstellensatz-polynomial-hierarchy`. The hypothesis enters through effective Chebotarev, as classified. |
+| Ternary Goldbach | The 1997 paper defines GRH as all Dirichlet L-functions. Confirmed. |
+
+No status changed. One entry was retitled and several statements were tightened. 14 of 31 entries have now been compared with at least one of their primary sources. All remain `ai-classified`.
