@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import katex from 'katex';
 import { ROOT, validateDir, loadTaxonomy, loadProofStatus, loadWaiting } from '../scripts/lib.mjs';
+import { problemPage } from './pages/problem.mjs';
 
 const SITE = path.join(ROOT, 'site');
 const OUT = path.join(ROOT, 'dist');
@@ -109,7 +110,7 @@ function banner() {
 </aside>`;
 }
 function page({ file, title, description, body, math = false }) {
-  const nav = [['index.html', 'Home'], ['browse.html', 'Browse'], ['waiting.html', 'Still waiting'], ['about.html', 'Method'], ['data.html', 'Data']];
+  const nav = [['index.html', 'Home'], ['problem.html', 'The problem'], ['browse.html', 'Browse'], ['waiting.html', 'Still waiting'], ['about.html', 'Method'], ['data.html', 'Data']];
   const root = file.includes('/') ? '../' : '';
   const fix = (html) => (root ? html.replace(/(href|src|action)="(?!https?:|#|mailto:|\.\.\/)([^"]+)"/g, `$1="${root}$2"`) : html);
   const html = `<!doctype html>
@@ -229,6 +230,7 @@ function buildHome() {
   <h2 id="start-h">Where to start</h2>
   <ul class="plain">
     <li><a href="browse.html">Browse all entries</a>, with filters for status, hypothesis, field and review state.</li>
+    <li><a href="problem.html">Read about the problem</a>: the statement, what was tried before, and what the announced proof reports doing.</li>
     <li><a href="waiting.html">See what is still waiting</a>, grouped by what would have to be proved next.</li>
     <li><a href="about.html">Read the method</a>: the hypothesis taxonomy and how entries are classified.</li>
     <li><a href="data.html">Download the dataset</a> as JSON or CSV.</li>
@@ -579,6 +581,13 @@ buildBrowse();
 for (const e of entries) {
   try { buildEntry(e); } catch (err) { console.error(`Failed to render ${e.id}: ${err.message}`); process.exit(1); }
 }
+page({
+  file: 'problem.html',
+  title: 'The problem',
+  description: 'What the Riemann Hypothesis says, what was tried before, and what the announced proof reports doing.',
+  math: true,
+  body: problemPage({ m: (s) => tex(s, false), M: (s) => `<div class="formal">${tex(s, true)}</div>`, esc, entryLink: (id, label) => (byId[id] ? `<a href="theorems/${id}.html">${esc(label)}</a>` : esc(label)) }),
+});
 buildWaiting();
 buildAbout();
 buildData();
