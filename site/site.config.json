@@ -1,10 +1,10 @@
 {
   "name": "Assuming RH",
-  "tagline": "Which theorems proved assuming the Riemann Hypothesis would the announced proof settle?",
+  "tagline": "What would a proof of the Riemann Hypothesis settle?",
   "repo_url": "https://github.com/RiskAverseTech/assuming-rh",
   "credit": "Jaz",
   "site_url": "https://riskaversetech.github.io/assuming-rh/",
-  "share_description": "An open, provisional map of which theorems proved assuming the Riemann Hypothesis the announced proof would settle, and which need more.",
+  "share_description": "A map of the theorems that depend on the Riemann Hypothesis: which the announced proof would settle, and which need more. Provisional, AI-drafted, not yet expert-reviewed.",
   "highlights": [
     "miller-deterministic-primality",
     "schoenfeld-prime-counting-error",
