@@ -1,0 +1,48 @@
+id: cm-method-low-space-elliptic-curve-construction
+title: The CM method in quasi-linear time with space (m + n) log q
+field: computational-number-theory
+statement_plain: >
+  Fix real constants delta >= 0 and epsilon > 0. Let O be an imaginary
+  quadratic order with discriminant D and class number h = m n with
+  m = O(|D|^(1/2 - delta)), and let q be a prime with 4q = t^2 - v^2 D and
+  log q = O(|D|^delta log |D|). Then an elliptic curve over F_q whose
+  endomorphism ring is isomorphic to O can be constructed in expected time
+  O(|D| (log |D|)^(6 + epsilon)) using O((m + n) log q) space.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [galois-extensions, class-group-characters]
+status_note: >
+  Section 2.4 says the paper assumes GRH for the Dedekind zeta function of
+  the ring class field K_O, so that the CRT primes are at most a
+  polylogarithmic factor larger than |D|, and that "GRH without
+  qualification" also includes the other extended or generalized Riemann
+  hypotheses behind the bounds it uses. These include the class number bound
+  h(D) = O(|D|^(1/2) log log |D|), a statement about a quadratic Dirichlet
+  L-function, and generators of the class group of prime norm at most
+  6 (log |D|)^2 (Bach's bound, class group characters). The ring class field
+  is not abelian over the rationals in general. The result builds on
+  Sutherland's CRT algorithm for Hilbert class polynomials (existing entry
+  hilbert-class-polynomial-crt-algorithm) and improves its
+  O(|D|^(1/2 + epsilon) log q) space bound.
+sources:
+  - authors: A. V. Sutherland
+    title: Accelerating the CM method
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1009.1082
+    hypothesis_location: Proposition in Section 1, restated as Proposition 3; the hypothesis is described in Section 2.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Whether every one of the three kinds of hypothesis is needed for this particular proposition (rather than for other results of the paper) was not traced step by step; the cautious union is recorded.
+lean:
+  proved: false
+  path: null
+tags: [cm-method, class-polynomials, elliptic-curves, algorithms]
+added: 2026-11-21

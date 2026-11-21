@@ -1,0 +1,43 @@
+id: generalized-fermat-equation-2-3-11
+title: The generalized Fermat equation x^2 + y^3 = z^11
+field: arithmetic-geometry
+statement_plain: >
+  The only solutions of x^2 + y^3 = z^11 in coprime integers are the trivial
+  solutions (+-1, 0, 1), +-(0, 1, 1), (+-1, -1, 0) and the Catalan solutions
+  (+-3, -2, 1).
+statement_formal: |
+  x^2 + y^3 = z^{11},\ \gcd(x,y,z)=1 \implies (x,y,z) \in \{(\pm 1,0,1),\ \pm(0,1,1),\ (\pm 1,-1,0),\ (\pm 3,-2,1)\}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper says the Generalized Riemann Hypothesis is used only to certify
+  the class group computations (done in Magma) for five specific number
+  fields of degree 36, which enter the 2-Selmer groups of X_0(11) over
+  degree 12 fields. It does not define the hypothesis further. Conditional
+  class group computations rely on GRH bounds for the norms of prime ideals
+  generating the class group, which is a statement about L-functions of
+  class group characters of those degree 36 fields. The authors note that the
+  class groups could in principle be verified unconditionally by a finite
+  computation.
+sources:
+  - authors: N. Freitas, B. Naskręcki, M. Stoll
+    title: The generalized Fermat equation with exponents 2, 3, n
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1703.05058
+    hypothesis_location: Theorem 1.4 and Theorem 7.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not say which GRH-based bound Magma uses for the class groups. The code GRH-Hecke (class group characters, as in Bach's bound) is this project's reading; the Dedekind zeta functions of the five degree 36 fields may also be involved.
+lean:
+  proved: false
+  path: null
+tags: [generalized-fermat-equation, diophantine-equations, class-groups]
+added: 2026-11-21

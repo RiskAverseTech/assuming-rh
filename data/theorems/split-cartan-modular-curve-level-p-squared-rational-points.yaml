@@ -1,0 +1,43 @@
+id: split-cartan-modular-curve-level-p-squared-rational-points
+title: Rational points on the split Cartan modular curve of level p^2 are trivial for large p
+field: arithmetic-geometry
+statement_plain: >
+  For every sufficiently large prime p, every rational point of the modular
+  curve X_split(p^2) is a cusp or a CM point. Equivalently, for large p and
+  any elliptic curve E over Q without complex multiplication, the image of
+  the Galois representation on the p^2-torsion of E is not contained in the
+  normalizer of a split Cartan subgroup of GL_2(Z/p^2 Z).
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes "the Generalized Riemann Hypothesis for the zeta
+  functions of number fields". It is used once, in Proposition 8.5: Serre's
+  explicit Chebotarev theorem (his Theoreme 21) gives a small prime l at
+  which the Frobenius traces of E and of a quadratic twist differ, which
+  bounds p^n by a constant times log(N_E) (log log 2N_E)^6. The same paper
+  proves the level p^3 statement unconditionally.
+sources:
+  - authors: Yu. Bilu, P. Parent
+    title: Bounds for Integral j-Invariants and Cartan Structures on Elliptic Curves
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0807.2350
+    hypothesis_location: Theorem 1.3 (second sentence); the hypothesis is used in Proposition 8.5, bound (37)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      A reviewer should check whether later work of the same authors on Serre's uniformity problem in the split Cartan case (level p itself, for large p) makes this statement unconditional; if so the status should be proved-otherwise. This paper gives no evidence either way.
+    - >-
+      Serre's Theoreme 21 is applied to Galois extensions cut out by torsion of two elliptic curves; the code ERH-Dedekind follows the paper's own wording of its hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [modular-curves, galois-representations, split-cartan, serre-uniformity]
+added: 2026-11-21

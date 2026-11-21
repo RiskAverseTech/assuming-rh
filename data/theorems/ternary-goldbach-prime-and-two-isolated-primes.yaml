@@ -1,0 +1,38 @@
+id: ternary-goldbach-prime-and-two-isolated-primes
+title: Every large odd integer is a sum of a prime and two isolated primes
+field: additive-number-theory
+statement_plain: >
+  Call a prime p isolated if every integer m with
+  0 < |p - m| <= C log p log log p log log log log p / log log log p is
+  composite, where C is a fixed sufficiently small positive constant. Then
+  every sufficiently large odd integer is the sum of a prime and two
+  isolated primes.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes "Generalized Riemann Hypothesis" without a formal
+  definition. In the proof it is applied to sums of Lambda(n) twisted by
+  non-principal Dirichlet characters and to the sieve remainder terms for
+  primes in arithmetic progressions.
+sources:
+  - authors: H. Maier, M. Th. Rassias
+    title: The ternary Goldbach problem with a prime and two isolated primes
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1606.03845
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never defines its Generalized Riemann Hypothesis. The reading that only Dirichlet L-functions are needed comes from the places where the hypothesis is invoked (Section 2 sieve remainder, Section 3 character sums over primes); the full proof was not checked line by line.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, isolated-primes, prime-gaps, circle-method]
+added: 2026-11-21
