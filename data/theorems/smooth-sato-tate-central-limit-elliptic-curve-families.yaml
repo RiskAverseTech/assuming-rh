@@ -1,0 +1,54 @@
+id: smooth-sato-tate-central-limit-elliptic-curve-families
+title: Central limit theorem for smoothed Sato-Tate errors over families of elliptic curves
+field: arithmetic-geometry
+statement_plain: >
+  Let Phi be a real, even Schwartz function with Phi(t) = O((1+|t|)^(-2))
+  whose Fourier transform decays like exp(-lambda |t|^omega) for some fixed
+  lambda, omega > 0, fix L at least 1, and let phi_L(t) be the sum over
+  integers m of Phi(L(t + m)). For the elliptic curve E(a,b) let
+  N(x) be the sum of phi_L(theta_E(p)) over primes p in (x/2, x] not
+  dividing the conductor. Let A = A(x), B = B(x) satisfy
+  log A / log x and log B / log x tending to infinity and
+  log(2AB) at most x^(1/2 - epsilon). Then, averaged over |a| at most A and
+  |b| at most B, every r-th moment of
+  (N(x) - pi~(x) int phi_L mu) / sqrt(pi~(x) V) tends to the r-th moment
+  of the standard Gaussian (0 for odd r, r!/((r/2)! 2^(r/2)) for even r) as
+  x tends to infinity. Here mu(t) = 2 sin^2(pi t) is the Sato-Tate density
+  on [0,1], pi~(x) counts primes in (x/2, x], and V is the variance of
+  phi_L with respect to mu.
+statement_formal: |
+  \lim_{x\to\infty} \frac{1}{4AB} \sum_{|a|\le A}\sum_{|b|\le B} \left( \frac{N_{\Phi,L,E(a,b)}(x) - \tilde\pi(x)\int_0^1 \phi_L(t)\mu(t)\,dt}{\sqrt{\tilde\pi(x)\,V_{\Phi,L}}} \right)^{r} = \begin{cases} 0 & r \text{ odd} \\ \dfrac{r!}{(r/2)!\,2^{r/2}} & r \text{ even} \end{cases}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for all L-functions associated
+  to Hecke eigenforms with respect to the full modular group SL_2(Z) (the
+  paper calls this MRH). These are cusp forms of level 1 and arbitrary
+  weight, so they are not weight 2 forms. They enter through Birch's
+  formula, which expresses moments of a_E(p) over the family by traces of
+  Hecke operators for the full modular group. The paper's companion result
+  for families of modular forms (Theorem 1.6) is not the one recorded here.
+sources:
+  - authors: S. Baier, N. Prabhu, K. Sinha
+    title: Central limit theorems for elliptic curves and modular forms with smooth weight functions
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1906.06982
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem was read from the PDF because the extracted text is partly garbled.
+    - >-
+      Whether the sum over (a, b) excludes singular pairs is defined earlier in the paper and is not restated here.
+lean:
+  proved: false
+  path: null
+tags: [sato-tate, elliptic-curves, central-limit-theorem]
+added: 2026-11-21

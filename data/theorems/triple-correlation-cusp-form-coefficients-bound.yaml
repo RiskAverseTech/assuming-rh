@@ -1,0 +1,42 @@
+id: triple-correlation-cusp-form-coefficients-bound
+title: Triple correlation sums of cusp form coefficients
+field: analytic-number-theory
+statement_plain: >
+  Let a(n), b(n), c(n) be the (un-normalized) Fourier coefficients of
+  holomorphic cuspidal eigenforms of weight k, level N and trivial
+  nebentypus. Then for every epsilon > 0 the smoothed double sum of
+  a(h) b(m) c(2m - h) e^(-m/X) e^(-h/Y) over m, h at least 1 is
+  O(X^(k - 1 + Theta + 1/2 + epsilon) Y^((k-1)/2 - Theta + 1/4 + epsilon)),
+  where Theta < 7/64 is the best known bound towards Selberg's eigenvalue
+  conjecture.
+statement_formal: |
+  \sum_{m,h \ge 1} a(h)\,b(m)\,c(2m-h)\,e^{-m/X} e^{-h/Y} \ll X^{k-1+\Theta+\frac12+\epsilon}\, Y^{\frac{k-1}{2}-\Theta+\frac14+\epsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the same paper proves the bound with Y exponent
+  (k-1)/2 - Theta + 1/2 + epsilon (Theorem 1.1). RH is used to shift a
+  contour a further 1/4 before meeting poles at the zeros of the Riemann
+  zeta function (with the Euler factors at primes dividing 2N removed) that
+  appears in a denominator.
+sources:
+  - authors: T. A. Hulse, C. I. Kuan, D. Lowry-Duda, A. Walker
+    title: Triple Correlation Sums of Coefficients of Cusp Forms
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1911.09216
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The implied constant's dependence (on the forms and epsilon) is not stated in the theorem. The proof is one paragraph; it was read that the only zeros involved are those of zeta^(2N)(s), the zeta function with Euler factors at primes dividing 2N removed, so RH for zeta suffices.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, shifted-convolution-sums, fourier-coefficients]
+added: 2026-11-21

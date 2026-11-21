@@ -1,0 +1,46 @@
+id: zeta-zeros-shifted-form-factor-integral-bounds
+title: Bounds for integrals of the shifted pair correlation function F - F_h
+field: analytic-number-theory
+statement_plain: >
+  Let gamma, gamma' run over ordinates of non-trivial zeros of zeta in
+  (0, T], let w(u) = 4/(4 + u^2), L = log(T/(2 pi)), and for real h let
+  F_h(x, T) be the sum of cos((gamma - gamma' - h) log x)
+  w(gamma - gamma' - h). Put F_h(alpha) = ((T/(2 pi)) L)^(-1)
+  F_h((T/(2 pi))^alpha, T) and F = F_0 (Montgomery's function). Then for T
+  sufficiently large, the integral over alpha from 1 to infinity of
+  (F(alpha) - F_h(alpha)) / alpha^2 lies in [0, 9), and the integral of
+  (F(alpha) - F_h(alpha)) / alpha^4 lies in [0, 6).
+statement_formal: |
+  0 \le \int_1^\infty \frac{F(\alpha) - F_h(\alpha)}{\alpha^2}\,d\alpha < 9, \qquad 0 \le \int_1^\infty \frac{F(\alpha) - F_h(\alpha)}{\alpha^4}\,d\alpha < 6
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  These integrals are the unevaluated terms in the paper's main formula
+  (Theorem 1.1) for the second moment of S(t+h) - S(t) over [0, T] with
+  0 < h <= A and error O(T / L^2). That formula needs, besides RH, a
+  quantitative form of the Twin Prime Conjecture with error O(N^(1/2+epsilon)),
+  so it is not recorded as the entry; only Theorem 1.2, which assumes RH
+  alone, is.
+sources:
+  - authors: T. H. Chan
+    title: Distribution of the zeros of the Riemann zeta function in longer intervals
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0305341
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.2 does not state the range of h. Lemma 6.1 (F_h <= F) is stated for all alpha and h, but whether the upper bounds 9 and 6 are uniform in all real h or only for 0 < h <= A as in Theorem 1.1 should be checked.
+    - >-
+      The paper's headline result is Theorem 1.1, which needs the extra twin prime hypothesis; the choice to record Theorem 1.2 instead is a judgment call.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, pair-correlation, argument-of-zeta]
+added: 2026-11-21

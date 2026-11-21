@@ -1,0 +1,38 @@
+id: farey-lattice-counting-error-term-five-halves
+title: Error term T^(5/2+o(1)) in a lattice counting problem on Farey fractions
+field: analytic-number-theory
+statement_plain: >
+  Let F(T) be the set of Farey fractions a/b with 0 <= a < b <= T and
+  gcd(a, b) = 1. Let C(T) be the sum, over the fractions a/b of F(T) in the
+  closed interval [0, 1/2], of the number of elements of F(T) in the closed
+  interval [1 - a^2/b^2, 1]. Let F(T) also denote the number of Farey fractions and
+  G(T) the sum of xi^2 over Farey fractions xi at most 1/2. Then
+  C(T) = F(T) G(T) + O(T^(5/2 + o(1))).
+statement_formal: |
+  C(T) = F(T)\,G(T) + O\!\left(T^{5/2+o(1)}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  RH enters through the bound M(t) << t^(1/2) rho(t) for the Mertens
+  function. The paper says the earlier RH error term was
+  O(T^(752/283) rho(T) log T) and the unconditional one
+  O(T^3 delta(T^(1/2)) log T).
+sources:
+  - authors: O. Bordellès
+    title: On the error term of a lattice counting problem, II
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1708.07317
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [farey-fractions, lattice-points, mertens-function]
+added: 2026-11-21

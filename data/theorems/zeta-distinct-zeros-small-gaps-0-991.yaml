@@ -1,0 +1,44 @@
+id: zeta-distinct-zeros-small-gaps-0-991
+title: Gaps between distinct zeta zeros smaller than 0.991 times the average spacing
+field: analytic-number-theory
+statement_plain: >
+  Let gamma_d run over the distinct positive ordinates of zeros of the
+  Riemann zeta function (not counting multiplicity) and gamma_d^+ be the
+  next larger distinct ordinate. Then the lim inf of
+  (gamma_d^+ - gamma_d) log(gamma_d) / (2 pi) is at most 0.991. Moreover,
+  for any constant C > log 4 and large T, there are at least
+  T exp(-C log T / log log T) (up to a constant factor) pairs of
+  consecutive distinct ordinates in [T, 2T] with
+  0 < gamma_d^+ - gamma_d <= 0.991 * 2 pi / log T.
+statement_formal: |
+  \mu_d := \liminf_{\gamma_d \to \infty} \bigl(\gamma_d^{+} - \gamma_d\bigr)\frac{\log \gamma_d}{2\pi} \le 0.991
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unlike the existing entries on small gaps (for example
+  zeta-zeros-small-gaps-0-50895), this bound cannot be explained by
+  multiple zeros: it gives genuinely positive gaps. The same paper also
+  proves under RH that a positive proportion of consecutive spacings
+  (counted with multiplicity) are at most 0.6039 times the average spacing
+  (Theorem 1, mu_D <= 0.6039).
+sources:
+  - authors: H. M. Bui, D. A. Goldston, M. B. Milinovich, H. L. Montgomery
+    title: Small gaps and small spacings between zeta zeros
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.02359
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper has two headline theorems under RH; Theorem 2 (with Corollary 1) is recorded and Theorem 1 is only mentioned in the status note.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, small-gaps, pair-correlation]
+added: 2026-11-21

@@ -1,0 +1,43 @@
+id: mills-constant-least-value-digits
+title: The least Mills' constant begins 1.3063778838
+field: computational-number-theory
+statement_plain: >
+  The least real number A such that floor(A^(3^n)) is prime for every
+  positive integer n begins 1.3063778838 6308069046 8614492602 (the paper
+  lists 600 digits and computes 6850). This rests on the fact that there is
+  a prime between x^3 and (x+1)^3 for every real x at least 2^(1/3) - 1.
+statement_formal: |
+  A_{\min} := \min\{A : \lfloor A^{3^n} \rfloor \text{ is prime for all } n \ge 1\} = 1.3063778838\ldots
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  RH is used through Schoenfeld's explicit bound
+  |pi(x) - li(x)| < sqrt(x) log x / (8 pi) for x at least 2657, which gives
+  a prime between consecutive cubes (Lemma 5). The digits also depend on
+  the paper's computation and primality proofs of the first ten Mills
+  primes. The existing entry primes-between-consecutive-powers-above-squares
+  covers primes between consecutive cubes; this entry is about the value of
+  the constant.
+sources:
+  - authors: C. K. Caldwell, Y. F. Cheng
+    title: Determining Mills' Constant and a Note on Honaker's Problem
+    year: 2005
+    venue: Journal of Integer Sequences (2005)
+    url: https://arxiv.org/abs/1010.4883
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The volume and article number of the Journal of Integer Sequences paper are not printed in the extracted text; only "Published in Journal of Integer Sequences, August 24 2005" is.
+    - >-
+      The computational part (primality certificates for primes with thousands of digits) was not checked.
+lean:
+  proved: false
+  path: null
+tags: [primes, mills-constant, explicit-bounds]
+added: 2026-11-21

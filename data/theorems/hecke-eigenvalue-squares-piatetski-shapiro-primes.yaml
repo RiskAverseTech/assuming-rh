@@ -1,0 +1,40 @@
+id: hecke-eigenvalue-squares-piatetski-shapiro-primes
+title: Squares of Hecke eigenvalues at Piatetski-Shapiro primes for exponents below 12/11
+field: analytic-number-theory
+statement_plain: >
+  Let G be a Hecke eigenform for the full modular group SL_2(Z) with
+  normalized Hecke eigenvalues lambda(n), and fix c with 1 < c < 12/11.
+  Then the sum of lambda([n^c])^2 over n up to N for which [n^c] is prime is
+  asymptotic to N / (c log N) as N tends to infinity.
+statement_formal: |
+  \sum_{\substack{n \le N \\ [n^c] \in \mathbb{P}}} \lambda\bigl([n^c]\bigr)^2 \sim \frac{N}{c \log N} \qquad (N \to \infty,\ 1 < c < 12/11)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for all L-functions
+  L(Sym^2 G x chi, s), the symmetric square L-function of the level 1 Hecke
+  eigenform G twisted by Dirichlet characters chi. The paper says its
+  author previously had the result for 1 < c < 25/24 under the Lindelof
+  Hypothesis for the same family.
+sources:
+  - authors: S. Baier
+    title: Exponential sums with Dirichlet coefficients of L-functions
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1206.5039
+    hypothesis_location: Theorem 5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 5 is deduced from the general Theorem 3, whose condition c') also asks for polynomial upper and lower bounds for F(s, chi) to the right of the critical line; Remark 1 says these follow from the Riemann Hypothesis for these L-functions. Whether the proof also needs the prime number theorem for L(Sym^2 G, s) under RH is covered by the same hypothesis (chi trivial), as far as was read.
+lean:
+  proved: false
+  path: null
+tags: [hecke-eigenvalues, piatetski-shapiro-primes, exponential-sums]
+added: 2026-11-21

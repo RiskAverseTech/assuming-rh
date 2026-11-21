@@ -1,0 +1,38 @@
+id: zeta-derivative-moments-at-zeros-sharp-lower-bound
+title: Sharp lower bounds for moments of zeta'(rho) for all real k
+field: analytic-number-theory
+statement_plain: >
+  Let N(T) be the number of non-trivial zeros rho of the Riemann zeta
+  function with imaginary part in (0, T], and let J_k(T) be the average of
+  |zeta'(rho)|^(2k) over these zeros. For every real k at least 0 and all
+  large T, J_k(T) is at least a positive constant (depending on k) times
+  (log T)^(k(k+2)).
+statement_formal: |
+  J_k(T) := \frac{1}{N(T)} \sum_{0 < \Im(\rho) \le T} \left|\zeta'(\rho)\right|^{2k} \gg_k (\log T)^{k(k+2)} \qquad (k \ge 0 \text{ real},\ T \text{ large})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper says that Milinovich and Ng had this lower bound for natural
+  numbers k, and that combined with Kirila's upper bounds under RH it gives
+  the order of magnitude (log T)^(k(k+2)) for all real k at least 0
+  (Corollary 1.2). It complements the existing entry
+  zeta-derivative-moments-at-zeros-upper-bound.
+sources:
+  - authors: P. Gao
+    title: Sharp lower bounds for moments of ζ′(ρ)
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2106.03057
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, moments, zeta-derivative]
+added: 2026-11-21
