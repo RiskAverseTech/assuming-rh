@@ -1,0 +1,37 @@
+id: zeta-critical-line-bound-lower-order-terms
+title: "Upper bound for the zeta function on the critical line with lower-order terms"
+field: analytic-number-theory
+statement_plain: >
+  As t tends to infinity, log |zeta(1/2 + it)| is at most
+  (log 2 / 2) log t / log log t
+  + (log 2 / 2 + (log 2)^2) log t / (log log t)^2
+  + O(log t / (log log t)^3). The paper gives further terms of the
+  expansion with effectively computable coefficients.
+statement_formal: |
+  \log\left|\zeta(\tfrac12 + it)\right| \le \frac{\log 2}{2}\,\frac{\log t}{\log\log t} + \left(\frac{\log 2}{2} + \log^2 2\right)\frac{\log t}{(\log\log t)^2} + O\!\left(\frac{\log t}{(\log\log t)^3}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "E. Carneiro, M. B. Milinovich"
+    title: "On Littlewood's estimate for the modulus of the zeta function on the critical line"
+    year: 2024
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2403.17803
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The entry states the three-term form given in the paper's introduction. Theorem 2 itself is stated for t >= 10 and any integer K >= 4 with more terms and an O_K error; the text extraction of the third coefficient is garbled and should be checked against the PDF before the full form is recorded.
+    - >-
+      The implied constant in the error term is not explicit, so this is an asymptotic refinement and not a fully explicit bound.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, critical-line, upper-bounds]
+added: 2026-11-21

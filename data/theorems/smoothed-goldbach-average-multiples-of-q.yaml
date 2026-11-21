@@ -1,0 +1,34 @@
+id: smoothed-goldbach-average-multiples-of-q
+title: "Smoothed average of Goldbach representations over multiples of q"
+field: additive-number-theory
+statement_plain: >
+  Let psi_2(n) be the sum of Lambda(m) Lambda(m') over m + m' = n, and
+  let F_q(N) be the sum of psi_2(n) e^(-n/N) over n divisible by q, with
+  F = F_1. Then for q at least 2, F_q(N) = F(N)/phi(q) + O(N log N log q),
+  and F(N) = N^2 - 2 sum over zeta zeros rho of Gamma(rho) N^(rho+1) + O(N).
+statement_formal: |
+  F_q(N) = \frac{1}{\varphi(q)}\,F(N) + O\left(N \log N \log q\right), \qquad F_q(N) = \sum_{q \mid n} \psi_2(n)\,e^{-n/N}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: "D. A. Goldston, A. I. Suriajaya"
+    title: "On a smoothed average of the number of Goldbach representations"
+    year: 2023
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2306.04807
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The implied constants in the error terms are not explicit; this is an asymptotic statement.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, additive-problems, dirichlet-l-functions]
+added: 2026-11-21

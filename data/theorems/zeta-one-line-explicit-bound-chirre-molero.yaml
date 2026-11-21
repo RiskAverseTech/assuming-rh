@@ -1,0 +1,34 @@
+id: zeta-one-line-explicit-bound-chirre-molero
+title: "Explicit bound for the zeta function on the line Re s = 1"
+field: analytic-number-theory
+statement_plain: >
+  For t at least e^18, |zeta(1 + it)| is at most
+  2 e^gamma (log log t - log 2 + 1/2 + 0.2674 / log log t
+  - 2.6 log log t / log t), where gamma is the Euler-Mascheroni constant.
+  The paper gives a matching explicit upper bound for 1 / |zeta(1 + it)|.
+statement_formal: |
+  |\zeta(1+it)| \le 2e^{\gamma}\left( \log\log t - \log 2 + \frac12 + \frac{0.2674}{\log\log t} - \frac{2.6\,\log\log t}{\log t} \right) \quad \text{for all } t \ge e^{18}
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "A. Chirre, B. Molero"
+    title: "Explicit conditional bounds for zeta(s) at the edge of the critical strip"
+    year: 2026
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2602.06199
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The second author appears as 'Blas Molero' in the paper text and as 'Blas Molero Ravines' in the arXiv listing.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, explicit-bounds, one-line]
+added: 2026-11-21

@@ -1,0 +1,33 @@
+id: selberg-mean-value-pnt-intervals-explicit
+title: "Explicit version of Selberg's mean-value estimate for primes in short intervals"
+field: analytic-number-theory
+statement_plain: >
+  For all x at least 10^8 and any delta in (0, 10^-8], the integral from
+  1 to x of |theta(y + delta y) - theta(y) - delta y|^2 dy is less than
+  202 delta x^2 (log x)^2.
+statement_formal: |
+  \int_1^x \left|\theta(y+\delta y) - \theta(y) - \delta y\right|^2 dy < 202\,\delta\,x^2 \log^2 x \quad \text{for all } x \ge 10^8,\ \delta \in (0, 10^{-8}]
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "M. Cully-Hugill, A. W. Dudek"
+    title: "An explicit mean-value estimate for the PNT in intervals"
+    year: 2023
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2206.00433
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper also proves under RH (Theorem 2) that there is a Goldbach number in (x, x + 9696 log^2 x] for all x >= 2, and (Corollary 1) a result on primes in (y, y + 32277 log^2 y]. These could be separate entries; only Theorem 1 is recorded here.
+lean:
+  proved: false
+  path: null
+tags: [primes, short-intervals, mean-value, explicit-bounds]
+added: 2026-11-21

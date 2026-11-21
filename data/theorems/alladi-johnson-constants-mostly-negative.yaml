@@ -1,0 +1,40 @@
+id: alladi-johnson-constants-mostly-negative
+title: "Sign of the constants in the Alladi-Johnson series over smallest prime factors"
+field: analytic-number-theory
+statement_plain: >
+  For coprime l and k, let C(k,l) be the constant such that the sum of
+  mu(n) omega(n) / n over n up to X whose smallest prime factor is congruent
+  to l mod k equals C(k,l)/log X + O((log log X)^4/(log X)^2). Then for
+  large k the number of reduced classes l mod k with C(k,l) >= 0 is
+  O(phi(k)/log k), so C(k,l) is negative for a proportion 1 + O(1/log k)
+  of the reduced classes.
+statement_formal: |
+  \#\{\, 1 \le l \le k : (l,k)=1,\ C(k,l) \ge 0 \,\} \ll \frac{\varphi(k)}{\log k}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: "D. Thakur"
+    title: "On a series related to the Mobius function"
+    year: 2026
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2610.23660
+    hypothesis_location: Theorem 5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says only 'GRH' without a formal definition; the proof uses it solely for the bound theta(x, chi) << x^(1/2) (log kx)^2 for non-trivial Dirichlet characters chi mod k. A reviewer should confirm no other L-function enters.
+    - >-
+      The result is asymptotic (large k, implied constants not explicit) and depends on the paper's definition of C(k,l).
+    - >-
+      The asymptotic formula defining C(k,l) (Theorem 1) is unconditional; only Theorem 5 is conditional.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, arithmetic-progressions, dirichlet-l-functions]
+added: 2026-11-21

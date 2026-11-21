@@ -1,0 +1,35 @@
+id: primes-between-consecutive-powers-above-squares
+title: "Primes between x^(2+delta) and (x+1)^(2+delta)"
+field: analytic-number-theory
+statement_plain: >
+  If delta is at least 1/4, the interval [x^(2+delta), (x+1)^(2+delta)]
+  contains a prime for every real x at least 1. If 0 < delta < 1/4, it
+  contains a prime for all x at least (beta (log beta + log log beta))^beta,
+  where beta = 2/delta.
+statement_formal: |
+  \text{For } \delta \ge \tfrac14 \text{ and all real } x \ge 1 \text{ there is a prime in } \left[x^{2+\delta},\,(x+1)^{2+\delta}\right]
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: "M. Chamberland, A. Straub"
+    title: "Weakening the Legendre Conjecture"
+    year: 2026
+    venue: "Preprint"
+    url: https://arxiv.org/abs/2602.22502
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The proof combines the RH prime gap bound of Carneiro, Milinovich and Soundararajan with a large computation of Sorenson and Webster; the computation was not checked here.
+lean:
+  proved: false
+  path: null
+related: [dudek-primes-short-intervals]
+tags: [primes, prime-gaps, legendre-conjecture, explicit-bounds]
+added: 2026-11-21
