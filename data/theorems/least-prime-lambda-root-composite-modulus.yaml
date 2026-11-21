@@ -18,8 +18,9 @@ status_note: >
 sources:
   - authors: G. Martin
     title: The least prime primitive root and the shifted sieve
-    year: 1998
-    venue: Preprint
+    year: 1997
+    venue: Acta Arithmetica 80, 277-288
+    doi: 10.4064/aa-80-3-277-288
     url: https://arxiv.org/abs/math/9807104
     hypothesis_location: Corollary 3.1
     role: conditional-proof

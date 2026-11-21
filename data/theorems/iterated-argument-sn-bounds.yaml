@@ -23,8 +23,9 @@ status_note: >
 sources:
   - authors: E. Carneiro, A. Chirre
     title: Bounding S_n(t) on the Riemann hypothesis
-    year: 2017
-    venue: Preprint
+    year: 2018
+    venue: Mathematical Proceedings of the Cambridge Philosophical Society 164, 259-283
+    doi: 10.1017/s0305004116000992
     url: https://arxiv.org/abs/1702.04099
     hypothesis_location: Theorem 1
     role: conditional-proof

@@ -22,8 +22,9 @@ status_note: >
 sources:
   - authors: A. Simonič
     title: "Estimates for L-functions in the critical strip under GRH with effective applications"
-    year: 2022
-    venue: Preprint
+    year: 2023
+    venue: Mediterranean Journal of Mathematics 20, 87
+    doi: 10.1007/s00009-023-02289-2
     url: https://arxiv.org/abs/2201.10771
     hypothesis_location: "Theorem 2, which follows from Theorem 5"
     role: conditional-proof

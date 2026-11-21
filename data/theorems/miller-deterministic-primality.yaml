@@ -20,6 +20,7 @@ sources:
     year: 1976
     venue: J. Comput. System Sci. 13, 300-317
     doi: 10.1016/S0022-0000(76)80043-8
+    hypothesis_location: "Theorem 2. The Appendix defines ERH for the L-functions of the Legendre, Jacobi and q-th power residue characters, all Dirichlet characters"
     role: conditional-proof
   - authors: E. Bach
     title: Explicit bounds for primality testing and related problems
@@ -34,9 +35,7 @@ review:
   checked_by: null
   checked_on: null
   confidence: high
-  open_questions:
-    - >-
-      Bach's paper was read. Miller's 1976 paper was not.
+  open_questions: []
 lean:
   proved: false
   path: null

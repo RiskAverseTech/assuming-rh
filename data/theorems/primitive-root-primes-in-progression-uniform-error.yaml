@@ -22,8 +22,9 @@ status_note: >
 sources:
   - authors: M. Zoeteman
     title: Uniformly counting primes with a given primitive root and in an arithmetic progression
-    year: 2018
-    venue: Preprint
+    year: 2019
+    venue: International Journal of Number Theory 15, 2115-2134
+    doi: 10.1142/s1793042119501161
     url: https://arxiv.org/abs/1810.04942
     hypothesis_location: Theorem 1.1
     role: conditional-proof

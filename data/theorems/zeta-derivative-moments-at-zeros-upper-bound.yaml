@@ -15,8 +15,9 @@ status_note: null
 sources:
   - authors: M. B. Milinovich
     title: Upper bounds for the moments of zeta prime rho
-    year: 2008
-    venue: Preprint
+    year: 2010
+    venue: Bulletin of the London Mathematical Society 42, 28-44
+    doi: 10.1112/blms/bdp096
     url: https://arxiv.org/abs/0806.0786
     hypothesis_location: Theorem 1.1
     role: conditional-proof

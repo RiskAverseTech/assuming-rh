@@ -20,8 +20,9 @@ status_note: >
 sources:
   - authors: N. Ng
     title: The distribution of the summatory function of the Mobius function
-    year: 2003
-    venue: Preprint
+    year: 2004
+    venue: Proceedings of the London Mathematical Society 89, 361-389
+    doi: 10.1112/s0024611504014741
     url: https://arxiv.org/abs/math/0310381
     hypothesis_location: Theorem 1
     role: conditional-proof

@@ -1,0 +1,35 @@
+id: polya-vinogradov-loglog-improvement
+title: Character sums are at most sqrt(q) log log q
+field: analytic-number-theory
+statement_plain: >
+  For every non-principal Dirichlet character chi modulo q and every x, the
+  sum of chi(n) over n up to x is at most a constant times sqrt(q) log log q.
+  This improves the Polya-Vinogradov bound sqrt(q) log q.
+statement_formal: |
+  \sum_{n \le x} \chi(n) \ll \sqrt{q}\,\log\log q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper notes that the bound is essentially best possible: by a result
+  of Paley there are infinitely many characters whose sums reach a constant
+  times sqrt(q) log log q.
+sources:
+  - authors: H. L. Montgomery, R. C. Vaughan
+    title: Exponential sums with multiplicative coefficients
+    year: 1977
+    venue: Invent. Math. 43, 69-82
+    doi: 10.1007/BF01390204
+    hypothesis_location: "Theorem 2. The hypothesis is stated just before it: no Dirichlet L-function has a zero with real part above 1/2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [character-sums-maximal-size-explicit-constant, odd-order-character-sums-granville-soundararajan-bound]
+tags: [character-sums, polya-vinogradov]
+added: 2026-11-21

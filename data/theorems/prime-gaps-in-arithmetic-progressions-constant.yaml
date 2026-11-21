@@ -20,7 +20,8 @@ sources:
   - authors: A. Chirre, V. J. Pereira Júnior, D. de Laat
     title: "Primes in arithmetic progressions and semidefinite programming"
     year: 2021
-    venue: Preprint
+    venue: Mathematics of Computation 90, 2235-2246
+    doi: 10.1090/mcom/3638
     url: https://arxiv.org/abs/2005.02393
     hypothesis_location: "Theorem 1 and Corollary 2"
     role: conditional-proof

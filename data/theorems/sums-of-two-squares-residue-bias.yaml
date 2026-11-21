@@ -25,7 +25,8 @@ sources:
   - authors: O. Gorodetsky
     title: Sums of two squares are strongly biased towards quadratic residues
     year: 2023
-    venue: Preprint
+    venue: Algebra & Number Theory 17, 775-804
+    doi: 10.2140/ant.2023.17.775
     url: https://arxiv.org/abs/2111.12662
     hypothesis_location: Theorem 1.1
     role: conditional-proof

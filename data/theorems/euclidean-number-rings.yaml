@@ -26,6 +26,13 @@ sources:
     venue: Canad. J. Math. 56, 71-76
     doi: 10.4153/CJM-2004-004-5
     role: unconditional-proof
+  - authors: H. W. Lenstra, Jr.
+    title: On Artin's conjecture and Euclid's algorithm in global fields
+    year: 1977
+    venue: Invent. Math. 42, 201-224
+    doi: 10.1007/BF01389788
+    hypothesis_location: "Theorem 9.1, for rings of S-integers"
+    role: refinement
 related: [artin-primitive-root-conjecture]
 review:
   state: ai-classified

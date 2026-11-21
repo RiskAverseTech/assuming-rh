@@ -20,8 +20,9 @@ status_note: >
 sources:
   - authors: Y. Matiyasevich, F. Saidak, P. Zvengrowski
     title: Horizontal Monotonicity of the Modulus of the Riemann Zeta Function and Related Functions
-    year: 2012
-    venue: Preprint
+    year: 2014
+    venue: Acta Arithmetica 166, 189-200
+    doi: 10.4064/aa166-2-4
     url: https://arxiv.org/abs/1205.2773
     hypothesis_location: Theorem 3.4 (stated as Theorem 1.4 in the introduction)
     role: conditional-proof

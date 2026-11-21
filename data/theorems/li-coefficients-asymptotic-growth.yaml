@@ -23,7 +23,8 @@ sources:
   - authors: A. Voros
     title: Sharpenings of Li's criterion for the Riemann Hypothesis
     year: 2006
-    venue: Preprint
+    venue: Mathematical Physics, Analysis and Geometry 9, 53-63
+    doi: 10.1007/s11040-005-9002-8
     url: https://arxiv.org/abs/math/0506326
     hypothesis_location: Theorem (asymptotic criterion for the Riemann Hypothesis), equation (17)
     role: conditional-proof

@@ -19,7 +19,8 @@ sources:
   - authors: H. M. Bui, D. R. Heath-Brown
     title: On simple zeros of the Riemann zeta-function
     year: 2013
-    venue: Preprint
+    venue: Bulletin of the London Mathematical Society 45, 953-961
+    doi: 10.1112/blms/bdt026
     url: https://arxiv.org/abs/1302.5018
     hypothesis_location: "Theorem (Section 1) and its Corollary"
     role: conditional-proof

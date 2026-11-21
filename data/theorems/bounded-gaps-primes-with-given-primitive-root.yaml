@@ -20,7 +20,8 @@ sources:
   - authors: P. Pollack
     title: Bounded gaps between primes with a given primitive root
     year: 2014
-    venue: Preprint
+    venue: Algebra & Number Theory 8, 1769-1786
+    doi: 10.2140/ant.2014.8.1769
     url: https://arxiv.org/abs/1404.4007
     hypothesis_location: Theorem 1.1
     role: conditional-proof

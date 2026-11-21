@@ -23,8 +23,9 @@ status_note: >
 sources:
   - authors: P. Kurlberg, C. Pomerance
     title: On the period of the linear congruential and power generators
-    year: 2004
-    venue: Preprint
+    year: 2005
+    venue: Acta Arithmetica 119, 149-169
+    doi: 10.4064/aa119-2-2
     url: https://arxiv.org/abs/math/0405120
     hypothesis_location: Theorem 27 (announced after Theorem 4 in the introduction)
     role: conditional-proof

@@ -16,8 +16,9 @@ status_note: >
 sources:
   - authors: J. Andrade, S. Baluyot
     title: Small zeros of Dirichlet L-functions of quadratic characters of prime modulus
-    year: 2018
-    venue: Preprint
+    year: 2020
+    venue: Research in Number Theory 6, 18
+    doi: 10.1007/s40993-020-00193-2
     url: https://arxiv.org/abs/1802.03413
     hypothesis_location: Theorem 3
     role: conditional-proof

@@ -23,8 +23,9 @@ status_note: >
 sources:
   - authors: B. Wesolowski
     title: Generating subgroups of ray class groups with small prime ideals
-    year: 2018
-    venue: Preprint
+    year: 2019
+    venue: The Open Book Series 2, 461-478
+    doi: 10.2140/obs.2019.2.461
     url: https://arxiv.org/abs/1807.01561
     hypothesis_location: Theorem 1.2 (ERH recalled in Section 2; the case K = Q is Theorem 1.3)
     role: conditional-proof

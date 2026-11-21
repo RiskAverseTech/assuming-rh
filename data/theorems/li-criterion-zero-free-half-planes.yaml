@@ -20,8 +20,9 @@ status_note: >
 sources:
   - authors: P. Freitas
     title: A Li-type criterion for zero-free half-planes of Riemann's zeta function
-    year: 2005
-    venue: Preprint
+    year: 2006
+    venue: Journal of the London Mathematical Society 73, 399-414
+    doi: 10.1112/s0024610706022599
     url: https://arxiv.org/abs/math/0507368
     hypothesis_location: Theorem 1
     role: conditional-proof

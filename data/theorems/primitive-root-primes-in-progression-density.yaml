@@ -25,8 +25,9 @@ status_note: >
 sources:
   - authors: P. Moree
     title: On primes in arithmetic progression having a prescribed primitive root. II
-    year: 2007
-    venue: Preprint
+    year: 1999
+    venue: Journal of Number Theory 78, 85-98
+    doi: 10.1006/jnth.1999.2409
     url: https://arxiv.org/abs/0707.3062
     hypothesis_location: Theorem 1 (Lenstra), combined with Theorem 2
     role: conditional-proof

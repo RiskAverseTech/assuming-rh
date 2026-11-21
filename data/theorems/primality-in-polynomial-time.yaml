@@ -19,6 +19,7 @@ sources:
     year: 1976
     venue: J. Comput. System Sci. 13, 300-317
     doi: 10.1016/S0022-0000(76)80043-8
+    hypothesis_location: "Theorem 2. The Appendix defines ERH for the L-functions of the Legendre, Jacobi and q-th power residue characters, all Dirichlet characters"
     role: conditional-proof
   - authors: M. Agrawal, N. Kayal, N. Saxena
     title: PRIMES is in P

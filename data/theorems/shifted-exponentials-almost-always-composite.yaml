@@ -23,7 +23,8 @@ sources:
   - authors: O. Järviniemi, J. Teräväinen
     title: Composite values of shifted exponentials
     year: 2023
-    venue: Preprint
+    venue: Advances in Mathematics 429, 109187
+    doi: 10.1016/j.aim.2023.109187
     url: https://arxiv.org/abs/2010.01789
     hypothesis_location: Theorem 1.3
     role: conditional-proof

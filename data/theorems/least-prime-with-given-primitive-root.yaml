@@ -21,7 +21,8 @@ sources:
   - authors: K. Fan, P. Pollack
     title: Counting primes with a given primitive root, uniformly
     year: 2025
-    venue: Preprint
+    venue: Mathematika 71, e70055
+    doi: 10.1112/mtk.70055
     url: https://arxiv.org/abs/2505.05601
     hypothesis_location: Theorem 1.2
     role: conditional-proof

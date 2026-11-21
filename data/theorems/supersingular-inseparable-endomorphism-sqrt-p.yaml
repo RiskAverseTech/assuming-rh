@@ -25,7 +25,8 @@ sources:
   - authors: J. Fuselier, A. Iezzi, M. Kozek, T. Morrison, C. Namoijam
     title: Computing supersingular endomorphism rings using inseparable endomorphisms
     year: 2025
-    venue: Preprint
+    venue: Journal of Algebra 668, 145-189
+    doi: 10.1016/j.jalgebra.2025.01.012
     url: https://arxiv.org/abs/2306.03051
     hypothesis_location: "Proposition 4.5, using Proposition 4.2"
     role: conditional-proof

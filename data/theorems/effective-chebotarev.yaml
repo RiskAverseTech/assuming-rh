@@ -11,6 +11,9 @@ statement_formal: |
 hypotheses_required: [ERH-Dedekind]
 status: partial
 status_note: >
+  Under the same hypothesis the least prime ideal with a given Frobenius
+  class has norm at most a constant times (log |D|)^2. Lagarias, Montgomery
+  and Odlyzko later gave an unconditional bound, a fixed power of |D|.
   Unlocked only when L is abelian over the rationals, where the Dedekind
   zeta function of L is a product of Dirichlet L-functions. In that case the
   theorem is a statement about primes in arithmetic progressions and adds
@@ -22,6 +25,13 @@ sources:
     year: 1977
     venue: "Algebraic Number Fields (Durham 1975), Academic Press, 409-464"
     role: conditional-proof
+  - authors: J. C. Lagarias, H. L. Montgomery, A. M. Odlyzko
+    title: A bound for the least prime ideal in the Chebotarev density theorem
+    year: 1979
+    venue: Invent. Math. 54, 271-296
+    doi: 10.1007/BF01390234
+    hypothesis_location: "Introduction, inequality (1.2), which recalls the conditional bound. The paper's own theorems are unconditional."
+    role: refinement
 related: [primes-in-arithmetic-progressions-error, nullstellensatz-polynomial-hierarchy]
 review:
   state: ai-classified

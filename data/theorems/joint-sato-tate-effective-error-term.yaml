@@ -24,8 +24,9 @@ status_note: >
 sources:
   - authors: J. Thorner
     title: Effective forms of the Sato-Tate conjecture
-    year: 2020
-    venue: Preprint
+    year: 2021
+    venue: Research in the Mathematical Sciences 8, 4
+    doi: 10.1007/s40687-020-00234-3
     url: https://arxiv.org/abs/2002.10450
     hypothesis_location: Theorem 1.4
     role: conditional-proof

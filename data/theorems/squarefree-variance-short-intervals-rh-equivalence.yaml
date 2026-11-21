@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: O. Gorodetsky, K. Matomaki, M. Radziwill, B. Rodgers
     title: On the variance of squarefree integers in short intervals and arithmetic progressions
-    year: 2020
-    venue: Preprint
+    year: 2021
+    venue: Geometric and Functional Analysis 31, 111-149
+    doi: 10.1007/s00039-021-00557-5
     url: https://arxiv.org/abs/2006.04060
     hypothesis_location: "Theorem 3"
     role: conditional-proof

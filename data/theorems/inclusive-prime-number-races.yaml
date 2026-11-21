@@ -24,8 +24,9 @@ status_note: >
 sources:
   - authors: G. Martin, N. Ng
     title: Inclusive prime number races
-    year: 2019
-    venue: Preprint
+    year: 2020
+    venue: Transactions of the American Mathematical Society 373, 3561-3607
+    doi: 10.1090/tran/7996
     url: https://arxiv.org/abs/1710.00088
     hypothesis_location: Theorem 1.10
     role: conditional-proof

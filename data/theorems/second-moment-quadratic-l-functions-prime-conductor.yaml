@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: S. Baluyot, K. Pratt
     title: Dirichlet L-functions of quadratic characters of prime conductor at the central point
-    year: 2018
-    venue: Preprint
+    year: 2021
+    venue: Journal of the European Mathematical Society 24, 369-460
+    doi: 10.4171/jems/1084
     url: https://arxiv.org/abs/1809.09992
     hypothesis_location: "Theorem 1.3"
     role: conditional-proof

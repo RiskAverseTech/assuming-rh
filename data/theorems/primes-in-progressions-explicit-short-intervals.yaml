@@ -11,8 +11,9 @@ hypotheses_required: [RH, GRH-Dirichlet]
 status: unlocked
 status_note: >
   This is the first half of Theorem 1.2. The same theorem also gives at
-  least sqrt(x) such primes under a slightly larger h, and Theorems 1.1 and
-  1.3 of the paper give variants with other constants and ranges. The proof
+  least sqrt(x) such primes when h >= phi(q) ((1/2) log(q^2 x^3) + 15) sqrt(x)
+  and x >= (15 phi(q) log q log log q)^2, and Theorems 1.1 and 1.3 of the
+  paper give variants with other constants and ranges. The proof
   works with the L-functions of all characters modulo q, through their
   inducing primitive characters, which includes the Riemann zeta function
   for the principal character.
@@ -20,7 +21,8 @@ sources:
   - authors: A. W. Dudek, L. Grenié, G. Molteni
     title: "Explicit short intervals for primes in arithmetic progressions on GRH"
     year: 2019
-    venue: Preprint
+    venue: International Journal of Number Theory 15, 825-862
+    doi: 10.1142/s1793042119500441
     url: https://arxiv.org/abs/1606.08616
     hypothesis_location: "Theorem 1.2"
     role: conditional-proof

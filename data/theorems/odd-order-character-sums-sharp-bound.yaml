@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: A. P. Mangerel
     title: Sharp bounds for maximal sums of odd order Dirichlet characters
-    year: 2025
-    venue: Preprint
+    year: 2026
+    venue: International Mathematics Research Notices 2026, rnag032
+    doi: 10.1093/imrn/rnag032
     url: https://arxiv.org/abs/2505.07651
     hypothesis_location: "Theorem 1.1"
     role: conditional-proof

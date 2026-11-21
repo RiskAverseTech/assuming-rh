@@ -21,8 +21,9 @@ status_note: >
 sources:
   - authors: P. Moree
     title: Near-primitive roots
-    year: 2011
-    venue: Preprint
+    year: 2013
+    venue: Functiones et Approximatio Commentarii Mathematici 48, 133-145
+    doi: 10.7169/facm/2013.48.1.11
     url: https://arxiv.org/abs/1112.5090
     hypothesis_location: Theorem 3 (building on Theorem 2, due to Wagstaff)
     role: conditional-proof

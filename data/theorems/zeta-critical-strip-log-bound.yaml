@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: E. Carneiro, V. Chandee
     title: Bounding zeta(s) in the critical strip
-    year: 2010
-    venue: Preprint
+    year: 2011
+    venue: Journal of Number Theory 131, 363-384
+    doi: 10.1016/j.jnt.2010.08.002
     url: https://arxiv.org/abs/1008.4970
     hypothesis_location: Theorem 1
     role: conditional-proof

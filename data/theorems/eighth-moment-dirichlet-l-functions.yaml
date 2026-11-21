@@ -25,7 +25,8 @@ sources:
   - authors: V. Chandee, X. Li
     title: The eighth moment of Dirichlet L-functions
     year: 2014
-    venue: Preprint
+    venue: Advances in Mathematics 259, 339-375
+    doi: 10.1016/j.aim.2014.03.020
     url: https://arxiv.org/abs/1303.4482
     hypothesis_location: "Theorem 1.1"
     role: conditional-proof

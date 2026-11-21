@@ -20,7 +20,8 @@ sources:
   - authors: L. Grenie, G. Molteni
     title: Explicit bounds for generators of the class group
     year: 2017
-    venue: Preprint
+    venue: Mathematics of Computation 87, 2483-2511
+    doi: 10.1090/mcom/3281
     url: https://arxiv.org/abs/1607.02430
     hypothesis_location: Corollary 3.8 (hypothesis stated in Theorem 2.4 and the first paragraph of the introduction)
     role: conditional-proof

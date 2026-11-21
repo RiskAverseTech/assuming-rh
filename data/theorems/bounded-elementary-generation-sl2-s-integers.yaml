@@ -26,10 +26,18 @@ sources:
   - authors: A. V. Morgan, A. S. Rapinchuk, B. Sury
     title: Bounded generation of SL_2 over rings of S-integers with infinitely many units
     year: 2018
-    venue: Preprint
+    venue: Algebra & Number Theory 12, 1949-1974
+    doi: 10.2140/ant.2018.12.1949
     url: https://arxiv.org/abs/1708.09262
     hypothesis_location: Theorem 1.1 (unconditional; the conditional history is in the paragraph after it)
     role: unconditional-proof
+  - authors: H. W. Lenstra, Jr.
+    title: Artin's conjecture on primes with prescribed primitive roots
+    year: 1977
+    venue: "Sem. Delange-Pisot-Poitou, Theorie des nombres 18 (1976-77), exp. 14"
+    url: https://www.numdam.org/item/SDPP_1976-1977__18_1_A11_0/
+    hypothesis_location: "Theorem 5.2, which states the Cooke and Weinberger result, and Section 3, which describes their method as a generalization of Hooley's approach"
+    role: survey
 review:
   state: ai-classified
   checked_by: null
@@ -37,9 +45,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      Which L-functions Cooke and Weinberger need is not stated in the paper read; it says only "a suitable form of the Generalized Riemann Hypothesis". Their paper was not available. ERH-Dedekind was chosen because results of Artin primitive root type over number fields are usually proved with Dedekind zeta functions of Kummer-type extensions; a reviewer should confirm this from the 1975 paper. The status proved-otherwise does not depend on this choice.
-    - >-
-      The Cooke and Weinberger citation details were copied from the reference list of the paper read, where the title's remaining words and page range are as printed there.
+      Cooke and Weinberger's own paper was not read. Lenstra's seminar note says they assume "certain generalized Riemann hypotheses" and generalize Hooley's approach, which supports the recorded code. The status does not depend on it.
 lean:
   proved: false
   path: null
