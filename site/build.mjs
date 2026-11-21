@@ -164,11 +164,24 @@ function buildHome() {
     body: `
 <section class="hero">
   <h1>${esc(cfg.tagline)}</h1>
-  <p class="lede">Hundreds of published theorems begin "assuming the Riemann Hypothesis". A proof of the
-  Riemann Hypothesis and of its generalization to Dirichlet L-functions has now been claimed. This site
-  tracks, one theorem at a time, which conditional results that claim would make unconditional, which
-  are still waiting, and exactly which hypothesis each one needs. The exact variant matters: a result
-  that needs the hypothesis for a wider family of L-functions is not unlocked.</p>
+  <p class="lede">Mathematicians have a famous unsolved problem called the Riemann Hypothesis. Over more
+  than a century they have proved hundreds of results that start with "if the Riemann Hypothesis is true,
+  then...". In November 2026 a proof was announced. Computers have checked it. Mathematicians have not yet
+  agreed that it is right.</p>
+  <p class="lede">This site lists those "if... then" results. For each one it answers a simple question:
+  <strong>would the announced proof finish this result, or does it need something more?</strong></p>
+  <p>The hypothesis comes in several strengths, and the announced proof covers the two most basic
+  versions. Results that need a stronger version stay unproven.
+  <a href="about.html#taxonomy">See the versions</a>.</p>
+  <div class="trust" role="note" aria-labelledby="trust-h">
+    <h2 id="trust-h">Three things to know before you trust anything here</h2>
+    <ol>
+      <li><strong>The proof might be wrong.</strong> If it is, nothing on this list becomes true because of it.</li>
+      <li><strong>An AI wrote every entry, and no expert has checked them yet.</strong> Each entry says so. Treat every label as a draft.</li>
+      <li><strong>The list is incomplete.</strong> If a result is not here, that tells you nothing about it.</li>
+    </ol>
+    <p>If you see a mistake, please tell us. Every entry has a "suggest a correction" link.</p>
+  </div>
   <form class="search" action="browse.html" method="get" role="search">
     <label for="q">Search the ${entries.length} entries</label>
     <div class="search-row">
@@ -186,8 +199,7 @@ function buildHome() {
       <span class="count-label">${STATUS[s].label}</span>
       <span class="count-desc">${STATUS[s].short}</span></a></li>`).join('\n    ')}
   </ul>
-  <p class="notice"><strong>${unchecked} of ${entries.length} entries are AI-classified</strong> and have not been checked by a
-  human expert. Read every status as a draft until its review state says otherwise.
+  <p class="muted">${unchecked} of ${entries.length} entries are AI-classified and not yet checked by a human expert.
   <a href="about.html#review-states">What the review states mean</a>.</p>
 </section>
 <section aria-labelledby="start-h">
@@ -347,6 +359,23 @@ function buildAbout() {
   <dt>Sources</dt><dd>${proof.sources.length ? `<ul>${proof.sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>` : esc(s.label)}${s.accessed ? ` (accessed ${fmtDate(s.accessed)})` : ''}</li>`).join('')}</ul>` : 'None recorded yet.'}</dd>
 </dl>
 <p>If the proof is withdrawn or a gap is found, every "unlocked" and "partly unlocked" label on this site reverts to "conditional". Entries marked "proved otherwise" do not depend on it.</p>
+
+<h2 id="meaning">What this does and does not mean</h2>
+<ul>
+  <li><strong>Checked by a machine is not the same as understood by people.</strong> The proof is reported to
+  have been checked step by step by computer. No account of the argument that mathematicians can read,
+  follow and explain has been reviewed. Until one has, the result is not accepted, and this site treats it
+  as a claim.</li>
+  <li><strong>This list depends on the theorem being true, not on the proof being readable.</strong> A result
+  that follows from the Riemann Hypothesis follows from it whether or not anyone yet understands why the
+  hypothesis holds. That is why a map of consequences can be drawn now, and why it has to stay provisional.</li>
+  <li><strong>This site does not judge the proof.</strong> It does not assess, endorse or add evidence for it.
+  It records what would follow, and what would not.</li>
+  <li><strong>"Unlocked" is a statement about logic.</strong> It says that every hypothesis a result needs is
+  among those the proof claims. It does not say the result is now a theorem.</li>
+  <li><strong>The site is about the mathematics.</strong> How the proof was found is not its subject. Entries
+  drafted by an AI system are labelled as drafts because that is what they are.</li>
+</ul>
 
 <h2 id="taxonomy">The hypothesis taxonomy</h2>
 <p>Papers say "assuming GRH" loosely. The exact variant decides whether a result is unlocked, so every entry lists its hypotheses with these codes.</p>

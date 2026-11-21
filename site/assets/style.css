@@ -58,6 +58,11 @@ code { font-family: var(--mono); font-size: 0.9em; background: var(--surface); b
 
 .hero { padding: 1rem 0 0.5rem; }
 .hero h1 { max-width: 22ch; }
+.trust { background: var(--banner-bg); color: var(--banner-ink); border: 1px solid var(--banner-line); border-radius: 8px; padding: 0.25rem 1.1rem 0.6rem; max-width: 44rem; margin-top: 1.25rem; }
+.trust h2 { font-size: 1.15rem; margin: 0.9rem 0 0.4rem; }
+.trust ol { padding-left: 1.2rem; margin: 0.4rem 0; }
+.trust li { margin: 0.35rem 0; }
+.trust a { color: inherit; }
 .search label { display: block; font-weight: 600; margin: 1.5rem 0 0.35rem; }
 .search-row { display: flex; gap: 0.5rem; max-width: 36rem; }
 input[type="search"], select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0.45rem 0.6rem; width: 100%; min-width: 0; }
