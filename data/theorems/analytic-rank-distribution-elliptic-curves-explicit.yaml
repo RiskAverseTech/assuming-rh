@@ -1,0 +1,45 @@
+id: analytic-rank-distribution-elliptic-curves-explicit
+title: Explicit upper bounds for the proportion of elliptic curves of large analytic rank
+field: arithmetic-geometry
+statement_plain: >
+  Order elliptic curves y^2 = x^3 + Ax + B over the rationals by the naive
+  height max(|A|^3, |B|^2), and let P(r_E >= a) be the proportion with
+  analytic rank at least a. For every positive constant C and positive
+  integer n, P(r_E >= (1 + C) 9n) is at most
+  (sum over k from 0 to n of binom(2n, 2k) (1/2)^(2n-2k) (2k)! (1/6)^k)
+  divided by (9 C n)^(2n). For example P(r_E <= 11) is at least 0.935185
+  and P(r_E <= 21) is at least 0.996548.
+statement_formal: |
+  P\bigl(r_E \ge (1+C)\,9n\bigr) \le \frac{\sum_{k=0}^{n}\binom{2n}{2k}\left(\frac12\right)^{2n-2k}(2k)!\left(\frac16\right)^{k}}{(C\cdot 9n)^{2n}}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The theorem assumes GRH for elliptic L-functions, that is, for the
+  L-function L(s, E) of every elliptic curve over the rationals in the
+  family. These are L-functions of weight 2 newforms, not Dirichlet
+  L-functions.
+sources:
+  - authors: P. J. Cho, K. Jeong
+    title: On the distribution of analytic ranks of elliptic curves
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2003.09102
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper does not say in the introduction whether the "proportion" is a limit or a limit superior as the height bound grows; the entry uses the paper's word.
+    - >-
+      The formula in Theorem 1.1 is garbled in the extracted text and was read from the first page of the PDF.
+lean:
+  proved: false
+  path: null
+related: [elliptic-curve-rank-bounds]
+tags: [elliptic-curves, ranks, explicit-formula]
+added: 2026-11-21

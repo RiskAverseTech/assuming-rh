@@ -1,0 +1,50 @@
+id: frobenius-fields-abelian-varieties-power-saving
+title: Power saving bound for places where the Frobenius field of an abelian variety is a given field
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an absolutely simple abelian variety without complex
+  multiplication over a number field K whose monodromy groups are connected.
+  Let d and r be the dimension and rank of the semisimple quotient of the
+  Mumford-Tate group of A. For every eps > 0 there is a constant c depending
+  on A, K and eps such that, for every number field M and every X > 0, the
+  number of places v of good reduction with norm at most X whose Frobenius
+  field is isomorphic to M is at most c X^(1 - 1/(3d - r + 2) + eps).
+statement_formal: |
+  \#\{\, v \in S_{A,M} : N_{K/\mathbb{Q}}\, v \le X \,\} \le c\, X^{1 - \frac{1}{3d - r + 2} + \varepsilon}
+hypotheses_required: [ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [galois-extensions, class-group-characters]
+status_note: >
+  Remark 1.5 of the paper says the result is conditional on GRH for two
+  types of L-functions: the Dedekind zeta function of the number field M,
+  and the L-functions of the finite order Hecke characters attached to
+  abelian subquotients of the Galois extensions K(A[d])/K, for d a
+  squarefree product of primes. The Hecke characters live on intermediate
+  fields of the division fields of A, which are not abelian over the
+  rationals. For a generic A of dimension g the exponent is
+  1 - 1/(6g^2 + 2g + 2) + eps (Corollary 1.4). The same paper proves
+  unconditionally that the set of such places has upper density zero
+  (Theorem 1.1).
+sources:
+  - authors: A. A. Burungale, H. Hida, S. Lai
+    title: On the Frobenius fields of abelian varieties over number fields
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2402.07935
+    hypothesis_location: Theorem 1.3 (hypothesis specified in Remark 1.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The waiting_on families are an approximate fit: the Hecke characters are finite order characters of subfields of division fields (ray class characters), filed under class-group-characters, and the zeta function of the arbitrary field M is filed under galois-extensions.
+    - >-
+      The exponent is stacked in the extracted text of Theorem 1.3; it was reconstructed from the line "cX^(1 - 1/(3d-r+2) + eps)" and is consistent with Corollary 1.4 for d = 2g^2 + g, r = g.
+lean:
+  proved: false
+  path: null
+tags: [abelian-varieties, frobenius-fields, chebotarev]
+added: 2026-11-21

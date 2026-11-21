@@ -1,0 +1,43 @@
+id: frobenius-traces-products-non-cm-elliptic-curves
+title: Upper bounds for primes with a given Frobenius trace on a product of non-CM elliptic curves
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an abelian variety over the rationals isogenous over the
+  rationals to a product of g elliptic curves over the rationals that are
+  pairwise non-isogenous over the algebraic closure and have no complex
+  multiplication. Let pi_A(x, t) be the number of primes p up to x of good
+  reduction whose Frobenius trace on A equals t. Then for all sufficiently
+  large x, pi_A(x, 0) = O(x^(1 - 1/(3g+1)) / (log x)^(1 - 2/(3g+1))) and,
+  for t nonzero, pi_A(x, t) = O(x^(1 - 1/(3g+2)) / (log x)^(1 - 2/(3g+2))),
+  with implied constants depending on A.
+statement_formal: |
+  \pi_A(x,0) \ll_A \frac{x^{1-\frac{1}{3g+1}}}{(\log x)^{1-\frac{2}{3g+1}}}, \qquad \pi_A(x,t) \ll_A \frac{x^{1-\frac{1}{3g+2}}}{(\log x)^{1-\frac{2}{3g+2}}} \ \ (t \ne 0)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes GRH for Dedekind zeta functions of number fields. It
+  is used through effective Chebotarev theorems applied to subextensions of
+  the division fields of A, which are not abelian over the rationals. For
+  g = 1 the bounds are those of Murty, Murty and Saradha with Zywina's
+  refinement in the power of log x (see the entry
+  lang-trotter-upper-bounds-zywina in this batch).
+sources:
+  - authors: A. C. Cojocaru, T. Wang
+    title: Bounds for the distribution of the Frobenius traces associated to products of non-CM elliptic curves
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2205.15192
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [abelian-varieties, lang-trotter, chebotarev, frobenius-traces]
+added: 2026-11-21

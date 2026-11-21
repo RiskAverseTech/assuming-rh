@@ -1,0 +1,44 @@
+id: trivial-tate-shafarevich-reductions-error-39-40
+title: Primes where the reduction of an elliptic curve has trivial Tate-Shafarevich group, error x^(39/40)
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication, and let pi_TS(x) be the number of primes p up to x, not
+  dividing the conductor, for which the Tate-Shafarevich group of the
+  reduction E_p (taken over the function field of E_p) is trivial. Then
+  pi_TS(x) = alpha pi(x) + O(x^(39/40 + o(1))), where alpha is an explicit
+  constant depending on E and the implied constant may depend on E.
+statement_formal: |
+  \pi_{TS}(x) = \alpha\,\pi(x) + O\!\left(x^{39/40+o(1)}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper writes only "GRH". The hypothesis enters through a character
+  sum estimate over primes (Lemma 3, quoted from Cojocaru and David), whose
+  main term 1/((l1^2 - 1)(l2^2 - 1)) pi(x) and error term in sqrt(x) are of
+  effective Chebotarev type for the l1 l2 division field of E. Those fields
+  are not abelian over the rationals. The result sharpens the error terms
+  x^(53/54 + o(1)) of Cojocaru and Duke and x^(41/42 + o(1)) of Cojocaru
+  and David for the same asymptotic formula.
+sources:
+  - authors: I. E. Shparlinski
+    title: Tate-Shafarevich Groups and Frobenius Fields of Reductions of Elliptic Curves
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/0707.2976
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its "GRH" covers. The code ERH-Dedekind is inferred from the shape of Lemma 3; the cited paper of Cojocaru and David, where that lemma is proved, was not read.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, tate-shafarevich-group, square-sieve]
+added: 2026-11-21
