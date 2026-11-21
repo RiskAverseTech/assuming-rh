@@ -1,0 +1,39 @@
+id: zeta-zeros-gaps-2-7327-and-0-5154
+title: Zeta zero gaps above 2.7327 and below 0.5154 times the average
+field: analytic-number-theory
+statement_plain: >
+  Let gamma <= gamma' be consecutive ordinates of zeros of the Riemann zeta
+  function. Let lambda be the lim sup and mu the lim inf of
+  (gamma' - gamma) log(gamma) / (2 pi). Then lambda > 2.7327 and
+  mu < 0.5154.
+statement_formal: |
+  \lambda = \limsup_{\gamma} \, (\gamma' - \gamma)\frac{\log\gamma}{2\pi} > 2.7327, \qquad \mu = \liminf_{\gamma} \, (\gamma' - \gamma)\frac{\log\gamma}{2\pi} < 0.5154
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The small-gap bound mu < 0.5154 is weaker than the bound mu < 0.50895 in
+  the entry zeta-zeros-small-gaps-0-50895. The large-gap bound
+  lambda > 2.7327 is a different statement from that entry. It sharpens the
+  bounds lambda > 2.69 and mu < 0.5155 of Bui, Milinovich and Ng (entry
+  zeta-zeros-gaps-2-69-and-0-5155), by the same Montgomery-Odlyzko method
+  with a different choice of coefficients. The large-gap bound was later
+  improved under RH to lambda > 2.9 (entry zeta-zeros-large-gaps-2-9).
+sources:
+  - authors: S. Feng, X. Wu
+    title: On gaps between zeros of the Riemann zeta-function
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1003.0752
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-gaps, large-gaps]
+added: 2026-11-21

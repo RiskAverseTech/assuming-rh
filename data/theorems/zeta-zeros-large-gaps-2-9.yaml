@@ -1,0 +1,41 @@
+id: zeta-zeros-large-gaps-2-9
+title: Gaps between zeta zeros larger than 2.9 times the average
+field: analytic-number-theory
+statement_plain: >
+  Let gamma <= gamma' be consecutive ordinates of zeros of the Riemann zeta
+  function and let lambda be the lim sup of (gamma' - gamma) log(gamma) / (2 pi).
+  Then lambda > 2.9. So infinitely often two consecutive zeros are more than
+  2.9 times the average spacing apart.
+statement_formal: |
+  \lambda = \limsup_{\gamma} \, (\gamma' - \gamma)\frac{\log\gamma}{2\pi} > 2.9
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  No earlier dataset entry covers large gaps; the entry
+  zeta-zeros-small-gaps-0-50895 treats small gaps. This result needs only
+  RH for zeta. According to the paper, the previous best bound under RH was
+  lambda > 2.766 (Bredberg), while lambda > 3.072 was known under the
+  Generalized Riemann Hypothesis. The paper obtains a weaker version of
+  Ng's GRH result lambda > 3 without GRH, using the idea of Bui and
+  Heath-Brown (a generalized Vaughan identity and the hybrid large sieve).
+  It sharpens the RH-only bounds in the entries
+  zeta-zeros-gaps-2-69-and-0-5155 and zeta-zeros-gaps-2-7327-and-0-5154.
+sources:
+  - authors: H. M. Bui
+    title: Large gaps between consecutive zeros of the Riemann zeta-function. II
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1305.4068
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-gaps, large-gaps]
+added: 2026-11-21
