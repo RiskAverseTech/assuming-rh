@@ -1,0 +1,43 @@
+id: zeta-zeros-tail-bound-counts-short-windows
+title: Tail bound exp(-C x log x) for counts of zeta zeros in windows of length 1 / log T
+field: analytic-number-theory
+statement_plain: >
+  Let N(t) count the zeros of the Riemann zeta function with ordinate in
+  (0, t). For all x >= 2 and T >= 2, the proportion of t in [T, 2T] for
+  which the window (t, t + 1/log T] contains at least x zeros is at most a
+  constant times exp(-C x log x), where C and the implied constant are
+  absolute.
+statement_formal: |
+  \frac{1}{T}\,\mathrm{meas}\Bigl\{ t \in [T,2T] : N\bigl(t + \tfrac{1}{\log T}\bigr) - N(t) \ge x \Bigr\} \ll e^{-C x \log x}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Only the Riemann Hypothesis for the zeta function is assumed. This is
+  Corollary 1.2, a consequence of Theorem 1.1, which gives the same bound
+  for the smoothed count with weight 1 / (1 + xi^2). The paper notes that
+  without RH one can prove the weaker bound exp(-c x). Under RH the paper
+  also proves the same tail bound for (1 / log T) times the logarithmic
+  derivative of zeta at 1/2 + alpha / log T + it (Theorem 1.3), and that
+  averages over [T, 2T] of powers of ratios of zeta at such nearby points
+  stay bounded (Theorem 1.4). It is different from the existing entry
+  zeta-zeros-short-interval-count-goldston-gonek, which bounds the count
+  in every interval rather than its distribution.
+sources:
+  - authors: B. Rodgers
+    title: Tail bounds for counts of zeros and eigenvalues, and an application to ratios
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1502.05658
+    hypothesis_location: Corollary 1.2 (from Theorem 1.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-counting, tail-bounds]
+added: 2026-11-21

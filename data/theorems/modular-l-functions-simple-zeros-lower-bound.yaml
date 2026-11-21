@@ -1,0 +1,41 @@
+id: modular-l-functions-simple-zeros-lower-bound
+title: At least T (log T)^(-epsilon) simple zeros of a modular L-function up to height T
+field: analytic-number-theory
+statement_plain: >
+  Let f be a primitive holomorphic cusp form of weight k, level q and
+  character chi, and let N_f^s(T) be the number of simple non-trivial zeros
+  of L(s, f) with imaginary part in (0, T]. Then for every epsilon > 0 and
+  all sufficiently large T, N_f^s(T) is at least a positive constant
+  (depending on f and epsilon) times T (log T)^(-epsilon).
+statement_formal: |
+  N_f^{s}(T) \gg_{f,\varepsilon} T(\log T)^{-\varepsilon}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic, modular-form-l-functions]
+status_note: >
+  Only the Riemann Hypothesis for the single L-function L(s, f) is assumed.
+  For comparison the total number of zeros up to T is about
+  (T / pi) log T, so this is not a positive proportion. The paper notes that
+  Booker proved unconditionally that there are infinitely many simple zeros,
+  without a quantitative bound. The existing entries on simple zeros
+  (zeta-simple-zeros-proportion-19-27 and the Dirichlet L-function entries)
+  concern degree 1 L-functions.
+sources:
+  - authors: M. B. Milinovich, N. Ng
+    title: Simple zeros of modular L-functions
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1306.0854
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, simple-zeros, zeros-of-l-functions]
+added: 2026-11-21

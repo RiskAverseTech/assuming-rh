@@ -1,0 +1,47 @@
+id: log-cyclotomic-unit-lattice-dual-basis-norm
+title: Asymptotic norm of the dual basis of the log-cyclotomic-unit lattice for prime conductor
+field: computational-number-theory
+statement_plain: >
+  Let q be a prime and let b_j be the standard basis of the
+  log-cyclotomic-unit lattice of the q-th cyclotomic field, with dual basis
+  b_j^v. All the dual vectors have the same norm, and
+  ||b_j^v||^2 = (4 zeta(2) / zeta(4)) (1/q) (1 + O(q^(-1+epsilon))) as q
+  tends to infinity. As a consequence, the algorithm of Cramer, Ducas,
+  Peikert and Regev for recovering a short generator of a principal ideal
+  from an arbitrary generator succeeds with probability at least
+  1 - (q - 3) exp(-t/2) with t of order sqrt(q).
+statement_formal: |
+  \|b_j^{\vee}\|^{2} = \frac{4\zeta(2)}{\zeta(4)}\cdot\frac{1}{q}\,\bigl(1 + O(q^{-1+\varepsilon})\bigr) \qquad (q \to \infty,\ q \text{ prime})
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper defines its GRH as the statement for Dirichlet L-functions. It
+  is used to evaluate the negative second moment of L(1, chi) over
+  non-principal even characters modulo q, which controls the norm of the
+  dual basis. The hypothesis affects the analysis of the success
+  probability, not the algorithm itself. Earlier analysis under GRH gave
+  only the upper bound of order (log log q)^2 / q, hence t of order
+  sqrt(q) / log log q. No existing entry covers short generator recovery.
+sources:
+  - authors: I.-I. Ng, Y. Toma
+    title: Recovering short generators via negative moments of Dirichlet L-functions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.13420
+    hypothesis_location: Theorem 3.1 (application in Corollary 4.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Corollary 4.2 gives t = (1 / (4 sqrt 2)) sqrt(zeta(4) q / zeta(2)) as read from a garbled formula in the extracted text; the entry states only that t is of order sqrt(q), as in the introduction.
+    - >-
+      The paper assumes, as Cramer, Ducas, Peikert and Regev do, that the index of the cyclotomic units in the full unit group is small; this concerns the application, not Theorem 3.1.
+lean:
+  proved: false
+  path: null
+tags: [lattice-cryptography, cyclotomic-units, negative-moments]
+added: 2026-11-21

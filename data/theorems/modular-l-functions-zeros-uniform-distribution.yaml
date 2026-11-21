@@ -1,0 +1,42 @@
+id: modular-l-functions-zeros-uniform-distribution
+title: Zeros of L-functions of modular forms become uniformly distributed as the conductor grows
+field: analytic-number-theory
+statement_plain: >
+  For a primitive holomorphic cusp form f of weight k and level N with
+  analytic conductor q_f (about N k^2 / 4), let Delta_f be the measure that
+  puts mass 2 pi / log q_f at the imaginary part of each non-trivial zero
+  of L_f(s). Then for any family of primitive forms whose analytic
+  conductors tend to infinity, the measures Delta_f converge, in the space
+  of measures of slow growth on the real line, to Lebesgue measure.
+statement_formal: |
+  \Delta_f := \frac{2\pi}{\log q_f} \sum_{L_f(\rho)=0} \delta_{t(\rho)}, \quad t(\rho) = \tfrac{1}{i}\bigl(\rho - \tfrac12\bigr), \qquad \lim_{j\to\infty} \Delta_{f_j} = dx \ \text{ whenever } q_{f_j} \to \infty
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic, modular-form-l-functions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the L-functions of the
+  primitive forms in the family (forms on Gamma_0(N) of any weight k). The
+  paper follows the method of Tsfasman and Vladut for Dedekind zeta
+  functions. No existing entry covers this; the entries on low-lying zeros
+  in the dataset concern Dirichlet L-functions.
+sources:
+  - authors: A. Zykin
+    title: Uniform distribution of zeroes of L-functions of modular forms
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1412.2990
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Under GRH the measure is supported on the real line; whether a version of the statement survives without GRH (with zeros off the line) is not discussed in the part of the paper that was read.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, zeros-of-l-functions, equidistribution]
+added: 2026-11-21

@@ -1,0 +1,48 @@
+id: split-abelian-surfaces-finite-fields-count
+title: Counting non-simple principally polarized abelian surfaces over a finite field
+field: arithmetic-geometry
+statement_plain: >
+  Let S(q) be the number of isomorphism classes of principally polarized
+  abelian surfaces over the finite field F_q that are not simple over F_q.
+  Then for all prime powers q, S(q) / q^(5/2) is bounded above by a constant
+  times (log q)^2 (log log q)^4 and below by a positive constant times
+  1 / ((log q) (log log q)^6). So the probability that a random
+  principally polarized abelian surface over F_q is split is q^(-1/2) up to
+  these logarithmic factors.
+statement_formal: |
+  \frac{1}{(\log q)(\log\log q)^{6}} \ll \frac{\#\mathcal{A}_{2,\text{split}}(\mathbb{F}_q)}{q^{5/2}} \ll (\log q)^{2}(\log\log q)^{4}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used only through Littlewood's conditional bound
+  h(D) << |D|^(1/2) log log |D| for class numbers of imaginary quadratic
+  fields (Lemma 4.4), which rests on the Riemann Hypothesis for the
+  L-functions of quadratic Dirichlet characters; see the existing entry on
+  Littlewood's bounds for L(1, chi) and class numbers. Unconditionally the
+  paper proves the same statement with upper factor
+  (log q)^4 (log log q)^2 and lower factor 1 / ((log q)^3 (log log q)^4).
+  Although the objects live over finite fields, the hypothesis is the
+  classical one over the rationals.
+sources:
+  - authors: J. D. Achter, E. W. Howe
+    title: Split abelian surfaces over finite fields and reductions of genus-2 curves
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1510.00481
+    hypothesis_location: Theorem 1.2 (through Lemma 4.4)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only "the generalized Riemann hypothesis". That it is needed only for quadratic Dirichlet L-functions is inferred from Lemma 4.4, whose conditional part cites Littlewood's 1927 class number paper, and from the fact that every conditional step in the paper cites Lemma 4.4.
+    - >-
+      Whether every later "under GRH" step (Propositions 3.1 to 3.5) uses nothing beyond Lemma 4.4 was checked by searching the text, not by reading every proof in full.
+lean:
+  proved: false
+  path: null
+tags: [abelian-surfaces, finite-fields, class-numbers]
+added: 2026-11-21
