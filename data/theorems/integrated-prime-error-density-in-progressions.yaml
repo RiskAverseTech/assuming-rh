@@ -1,0 +1,55 @@
+id: integrated-prime-error-density-in-progressions
+title: Positive logarithmic density for both signs of an integrated prime-counting error
+field: analytic-number-theory
+statement_plain: >-
+  Let m be q or 2q for a prime q between 11 and 10,009 inclusive. In any reduced residue class a modulo m, integrate φ(m)π(t;m,a) − li(t) from 2 to x and multiply by (log x)/x^(3/2). The set of x where the result exceeds 1/4 and the set where it is below −3/2 each have positive lower logarithmic density.
+statement_formal: |
+  E_{m,a}(x)=\frac{\log x}{x^{3/2}}\int_2^x\bigl(\varphi(m)\pi(t;m,a)-\operatorname{li}(t)\bigr)\,dt,\quad
+  \underline{\delta}_{\log}\{x:E_{m,a}(x)>1/4\}>0,\quad
+  \underline{\delta}_{\log}\{x:E_{m,a}(x)<-3/2\}>0.
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >-
+  The density conclusion uses GRH for the primitive Dirichlet L-functions that occur modulo m, including the Riemann zeta function. Crossley proves that both thresholds are crossed arbitrarily far out unconditionally for the same moduli. Johnston’s Problem 23 asks when the integral in one residue class stays negative.
+sources:
+  - authors: Lee Crossley
+    title: Integrated prime-counting errors for prime moduli
+    year: 2026
+    venue: Zenodo
+    doi: 10.5281/zenodo.24425209
+    url: https://github.com/leecrossley/integrated-prime-errors-mod-11/blob/e87f9b710565f8543e96f27fc04b1049d70de9af/range/PROOF.md#L13
+    hypothesis_location: Theorem 1 and the almost periodicity argument in section 1
+    role: conditional-proof
+  - authors: Daniel R. Johnston
+    title: On the average value of π(t) − li(t)
+    year: 2022
+    url: https://arxiv.org/abs/2201.06184
+    hypothesis_location: Theorem 1.1 treats the unrestricted prime count.
+  - authors: Alia Hamieh, Habiba Kadiri, Greg Martin and Nathan Ng
+    title: Comparative Prime Number Theory Problem List
+    year: 2024
+    url: https://arxiv.org/pdf/2407.03530#page=9
+    hypothesis_location: Problem 23, posed by Daniel R. Johnston
+  - authors: Tianyu Zhao
+    title: On the mean values of the error terms in Mertens’ theorems
+    year: 2025
+    venue: Research in Number Theory
+    doi: 10.1007/s40993-025-00640-y
+    url: https://arxiv.org/html/2411.18903v2#S8
+    hypothesis_location: Section 8, equation (35) and Table 1
+author_submitted:
+  by: leecrossley
+  source_standing: preprint-by-contributor
+  note: null
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: low
+  open_questions:
+    - Zhao’s Table 1 gives eventual negativity for five classes modulo 11 and five modulo 22. Crossley’s Theorem 1 gives positive excursions in all ten. The difference calls for an independent check of the two arguments.
+lean:
+  proved: false
+  path: null
+tags: [prime-counting, arithmetic-progressions, logarithmic-density]
+added: 2026-11-21
