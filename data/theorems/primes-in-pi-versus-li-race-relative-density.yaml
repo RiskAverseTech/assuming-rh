@@ -1,0 +1,46 @@
+id: primes-in-pi-versus-li-race-relative-density
+title: The primes p with pi(p) > li(p) have the Rubinstein-Sarnak density among the primes
+field: analytic-number-theory
+statement_plain: >
+  Let Delta (about 2.6 x 10^-7) be the logarithmic density of the set of
+  real x with pi(x) > li(x). Then the set of primes p with pi(p) > li(p) has
+  the same density relative to the primes: the sum of (log p)/p over primes
+  p <= x with pi(p) > li(p), divided by log x, tends to Delta as x tends to
+  infinity. Consequently the sum of 1/p over these primes, divided by
+  log log x, also tends to Delta.
+statement_formal: |
+  \lim_{x\to\infty}\frac{1}{\log x}\sum_{\substack{p\le x\\ \pi(p)>\mathrm{li}(p)}}\frac{\log p}{p}=\Delta=\delta\bigl(\{x\ge 1:\pi(x)>\mathrm{li}(x)\}\bigr)\approx 2.6\times 10^{-7}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Linear Independence hypothesis (LI) for the
+  Riemann zeta function: the positive ordinates of its zeros are linearly
+  independent over the rationals. It is not covered. Only the zeta function
+  is involved, not other Dirichlet L-functions. The existence and value of
+  Delta are due to Rubinstein and Sarnak under the same two assumptions (see
+  the entry chebyshev-bias); the new part is that the primes themselves
+  follow the same density. The paper notes that the continuity it needs
+  follows from a much weaker form of LI, and proves analogous results for
+  other races (the Mertens race in Theorem 4.1 and the Zhang race in
+  Theorem 5.6).
+sources:
+  - authors: J. D. Lichtman, G. Martin, C. Pomerance
+    title: Primes in prime number races
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1809.03033
+    hypothesis_location: "Theorem 2.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The year is that of the arXiv version read (v2, January 2019); no journal reference is printed in the text."
+lean:
+  proved: false
+  path: null
+tags: [prime-races, logarithmic-density, linear-independence]
+added: 2026-11-21

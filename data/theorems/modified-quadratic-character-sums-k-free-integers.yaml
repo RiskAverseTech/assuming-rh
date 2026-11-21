@@ -1,0 +1,43 @@
+id: modified-quadratic-character-sums-k-free-integers
+title: Partial sums of modified quadratic characters over k-free integers are at most x^(1/(k+1)+eps)
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a real non-principal Dirichlet character modulo q, and let g be
+  the completely multiplicative function with g(p) = chi(p) for primes p not
+  dividing q and g(p) = 1 for primes p dividing q. For an integer k >= 2 let
+  f(n) = g(n) if n is k-free and f(n) = 0 otherwise. Then for every eps > 0
+  the sum of f(n) over n <= x is O(x^(1/(k+1) + eps)). In particular there is
+  a multiplicative function supported on the k-free integers, taking values
+  +1 or -1 at every prime, with partial sums this small.
+statement_formal: |
+  \sum_{n\le x}\mu^{(k)}(n)\,g_\chi(n)\ll x^{\frac{1}{k+1}+\varepsilon}\quad\text{for every }\varepsilon>0
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here mu^(k) is the indicator function of the k-free integers. The paper's
+  Remark 2 says that for even k only the Riemann Hypothesis for zeta is
+  needed, and for odd k only GRH for Dirichlet L-functions; the hypothesis
+  keeps the proof away from the poles of 1/zeta(ks) and 1/L(ks, chi). This
+  improves the exponent 1/(k + 1/2) + eps of Aymone, Medeiros and Bueno and
+  extends the case k = 2 (exponent 1/3) due to Q. Liu. No earlier entry in
+  the dataset covers this question.
+sources:
+  - authors: C. Bueno
+    title: Modified Dirichlet character sums over the k-free integers
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2411.08268
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "Theorem 1.1 is stated as an existence result; the explicit form with f = mu^(k) g_chi for any real non-principal chi is taken from Section 3 and the proof in Section 6. The implied constant presumably depends on q, k and eps."
+lean:
+  proved: false
+  path: null
+tags: [character-sums, k-free-integers, multiplicative-functions]
+added: 2026-11-21

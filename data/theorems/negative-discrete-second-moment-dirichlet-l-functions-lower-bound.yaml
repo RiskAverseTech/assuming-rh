@@ -1,0 +1,46 @@
+id: negative-discrete-second-moment-dirichlet-l-functions-lower-bound
+title: Lower bound for the sum of 1/|L'(rho, chi)|^2 over zeros, uniform in the conductor
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character modulo q, and let
+  rho = 1/2 + i gamma run over the non-trivial zeros of L(s, chi). Fix A > 0
+  and eps > 0. Uniformly for 3 <= q <= T^A and T large, the sum of
+  1/|L'(rho, chi)|^2 over zeros with 0 < gamma <= T is at least
+  (1 - eps) (A_q / (2 pi)) T / (2 + log q / log T), where A_q is 6/pi^2
+  times the product of p/(p + 1) over the primes p dividing q.
+statement_formal: |
+  \sum_{0<\gamma\le T}\frac{1}{|L'(\rho,\chi)|^{2}}\ \ge\ (1-\varepsilon)\,\frac{A_q}{2\pi}\,\frac{T}{2+\frac{\log q}{\log T}}, \qquad A_q=\frac{6}{\pi^{2}}\prod_{p\mid q}\frac{p}{p+1}, \qquad 3\le q\le T^{A}
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is that all non-trivial zeros of L(s, chi) are
+  simple; without it the terms 1/L'(rho, chi) are not defined. It is not a
+  Riemann Hypothesis and is not covered. GRH is assumed only for the single
+  function L(s, chi). This is the Dirichlet analogue, uniform in q, of the
+  lower bound of Milinovich and Ng for the sum of 1/|zeta'(rho)|^2 (which
+  assumes RH and simple zeros); for fixed q it recovers the same proportion
+  one half of the conjectured size. The paper's Theorem 6 gives a companion
+  lower bound for the sum of |L(2 rho, chi^2) / L'(rho, chi)|^2 in the range
+  q <= T^(1 - delta). The entries zeta-derivative-moments-at-zeros-upper-bound
+  and zeta-derivative-at-zeros-small-values concern zeta'(rho) and are
+  different statements.
+sources:
+  - authors: A. Pearce-Crump
+    title: Negative discrete second moments of Dirichlet L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.25094
+    hypothesis_location: "Theorem 5"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, discrete-moments, simple-zeros]
+added: 2026-11-21

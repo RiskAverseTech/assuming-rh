@@ -1,0 +1,50 @@
+id: one-level-density-quadratic-dirichlet-l-functions-ratios-conjecture
+title: 1-level density of quadratic Dirichlet L-functions for all compact Fourier support, from the Ratios Conjecture
+field: analytic-number-theory
+statement_plain: >
+  Consider the family of L(s, chi_8d) with d odd and square-free, weighted by
+  w(d/X), and let L = log(X/(2 pi e)). For every even Schwartz test function
+  phi whose Fourier transform phihat has compact support (of any size), the
+  1-level density D*(phi; X) of the low-lying zeros equals an explicit
+  expression up to an error O(1/L^2). The expression consists of phihat(0),
+  the integral of phihat over u >= 1, and explicit terms carrying a factor
+  1/L, one of which is proportional to phihat(1). So the transition when the
+  support reaches the point 1 is visible in the main term and in the lower
+  order terms, and no further transition occurs when the support reaches
+  points of [2, infinity).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the L-functions Ratios Conjecture for this family
+  (Conjecture 3.1 of the paper, after Conrey, Farmer and Zirnbauer), which
+  predicts the weighted average of L(1/2 + alpha, chi_8d) / L(1/2 + gamma,
+  chi_8d) with error O(X^(-1/2 + eps)). It is not a Riemann Hypothesis and is
+  not covered. The entry
+  one-level-density-quadratic-dirichlet-l-functions-lower-order-terms
+  records what the same authors prove under GRH alone for support in
+  (-2, 2); the present formula agrees with it up to O(1/L^2) there and
+  extends it to arbitrary compact support. The explicit terms with factor 1/L
+  are in the display of Theorem 1.4 and are not reproduced here.
+sources:
+  - authors: D. Fiorilli, J. Parks, A. Södergren
+    title: "Low-lying zeros of quadratic Dirichlet L-functions: A transition in the Ratios Conjecture"
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1710.06834
+    hypothesis_location: "Theorem 1.4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper writes only GRH; whether RH for zeta is also needed (zeta factors appear in the Ratios Conjecture formula) was not determined."
+    - "The paper's Theorem 1.1 also refines, under GRH alone, the earlier result for support in (-2, 2) with error O(X^(sigma/6 - 1/3 + eps)); that is treated as covered by the entry for the earlier paper."
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, ratios-conjecture]
+added: 2026-11-21
