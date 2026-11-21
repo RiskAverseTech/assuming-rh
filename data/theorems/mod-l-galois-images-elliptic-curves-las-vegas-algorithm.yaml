@@ -1,0 +1,50 @@
+id: mod-l-galois-images-elliptic-curves-las-vegas-algorithm
+title: Polynomial-time computation of all mod-l Galois images of a non-CM elliptic curve
+field: computational-number-theory
+statement_plain: >
+  Fix a number field K. There is a Las Vegas algorithm that, given an
+  elliptic curve E over K without complex multiplication in integral form
+  y^2 = f(x), determines for every prime l a subgroup of GL_2(Z/lZ) that is
+  locally conjugate to the image G_E(l) of the mod-l Galois representation.
+  It outputs a bound L with G_E(l) = GL_2(Z/lZ) for all primes l > L and
+  generators of the subgroup for each l <= L, in expected time
+  (log ||f||)^(11+o(1)).
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper defines GRH as the statement that the non-trivial zeros of the
+  Dedekind zeta function of every number field lie on the critical line. It
+  is used for the running time: effective Chebotarev bounds
+  (Lagarias-Odlyzko, Serre) in the division fields of E bound the norms of
+  the Frobenius primes that must be sampled, and the Larson-Vaintrob bound
+  limits the largest exceptional prime l. The paper says the algorithms could
+  be implemented without the hypothesis at an exponential cost in running
+  time. It also relies on a GRH-based algorithm of Bisson and Sutherland for
+  endomorphism rings of ordinary curves over finite fields. A companion
+  result (Theorem 5.15) gives a Monte Carlo algorithm with running time
+  (log ||f||)^(1+o(1)).
+sources:
+  - authors: A. V. Sutherland
+    title: Computing images of Galois representations attached to elliptic curves
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.07618
+    hypothesis_location: Theorem 5.7; GRH is defined at the start of Section 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The endomorphism ring subroutine cited from Bisson and Sutherland has its own GRH assumption, which may involve class group characters of imaginary quadratic orders (GRH-Hecke); the paper only states its hypothesis for Dedekind zeta functions.
+    - >-
+      The year is that of the latest arXiv version (v7); the paper was first posted in 2015.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, galois-representations, algorithms, chebotarev]
+added: 2026-11-21

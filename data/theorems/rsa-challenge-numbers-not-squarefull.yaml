@@ -1,0 +1,39 @@
+id: rsa-challenge-numbers-not-squarefull
+title: The RSA challenge numbers RSA-210, RSA-220, RSA-230 and RSA-232 are not squarefull
+field: computational-number-theory
+statement_plain: >
+  The RSA challenge numbers RSA-210, RSA-220, RSA-230 and RSA-232 are not
+  squarefull: each of them has at least one prime factor of multiplicity 1.
+  The proof does not use any knowledge of their factorizations.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem is stated under GRH for quadratic Dirichlet L-functions. The
+  method uses the explicit formula for L(s, chi_Delta), where Delta is the
+  fundamental discriminant attached to the number being tested, to bound
+  |Delta| from below; the hypothesis is used for the correctness of the
+  resulting certificate. These numbers had not been factored when the paper
+  was written; once a number is factored the statement can be checked
+  directly, which the paper does not discuss.
+sources:
+  - authors: A. R. Booker, G. A. Hiary, J. P. Keating
+    title: Detecting squarefree numbers
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1304.6937
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Some of these RSA numbers may have been factored since the paper appeared, which would make the statement checkable unconditionally; the paper itself gives no such evidence, so the status follows the paper.
+lean:
+  proved: false
+  path: null
+tags: [squarefree-testing, explicit-formula, quadratic-characters, algorithms]
+added: 2026-11-21

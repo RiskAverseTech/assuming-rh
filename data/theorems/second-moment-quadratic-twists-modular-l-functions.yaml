@@ -1,0 +1,41 @@
+id: second-moment-quadratic-twists-modular-l-functions
+title: Asymptotic for the second moment of quadratic twists of a modular L-function
+field: analytic-number-theory
+statement_plain: >
+  Let f be a Hecke eigenform of weight k for the full modular group with
+  k divisible by 4. The sum of L(1/2, f x chi_{8d})^2 over odd squarefree d
+  with 0 < 8d <= X is asymptotic to c X log X, where
+  c = (2 / pi^2) L(1, sym^2 f)^3 Z_2(0,0) is the constant predicted by the
+  Keating-Snaith conjectures (Z_2(0,0) is an explicit Euler product defined
+  in the paper).
+statement_formal: |
+  \sum\nolimits^{*}_{\substack{0 < 8d \le X \\ (d,2)=1}} L\bigl(\tfrac12, f \otimes \chi_{8d}\bigr)^2 = (c + o(1))\, X \log X, \qquad c = \frac{2}{\pi^2}\, L(1, \mathrm{sym}^2 f)^3\, Z_2(0,0)
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes the Generalized Riemann Hypothesis for the twisted
+  L-functions L(s, f x chi_d) for all fundamental discriminants d, for the
+  Riemann zeta function, and for the symmetric square L-function
+  L(s, sym^2 f). Here f has full level and weight divisible by 4, so these
+  are not weight 2 forms. The same paper proves unconditionally the matching
+  lower bound (c + o(1)) X log X (Theorem 1.1).
+sources:
+  - authors: K. Soundararajan, M. P. Young
+    title: The second moment of quadratic twists of modular L-functions
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0907.4747
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [moments-of-l-functions, quadratic-twists, modular-forms]
+added: 2026-11-21

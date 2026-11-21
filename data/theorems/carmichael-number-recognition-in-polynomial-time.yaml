@@ -1,0 +1,42 @@
+id: carmichael-number-recognition-in-polynomial-time
+title: Recognizing Carmichael numbers is in P, with unconditionally correct output
+field: complexity-theory
+statement_plain: >
+  There is a deterministic algorithm that decides whether a given integer n
+  is a Carmichael number and runs in time polynomial in log n. When n is a
+  Carmichael number the algorithm finds its complete prime factorization,
+  using Fermat tests to the bases b < 2 (log n)^2, so its answers are
+  always correct.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper's hypothesis is the Extended Riemann Hypothesis, used only for
+  the running time: correctness is unconditional. It is invoked through
+  Theorem 1.4.5 of Crandall and Pomerance (reference [8]) to guarantee that
+  for distinct primes q1, q2 some b < 2 (log q1 q2)^2 is a square modulo one
+  and not the other, or a non-square modulo q2. These are statements about
+  small elements outside proper subgroups of the multiplicative group modulo
+  an integer, which is the Dirichlet L-function case. The paper does not
+  spell out which L-functions it means by ERH.
+sources:
+  - authors: A. Shallue, J. Webster
+    title: Algorithms for Carmichael numbers
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2506.09903
+    hypothesis_location: Theorem 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define ERH. That only Dirichlet L-functions are needed is read from the use made of it (Miller-style bounds on least non-residues and on least elements outside a subgroup modulo q1 q2) and from the cited textbook theorem, which was not consulted.
+lean:
+  proved: false
+  path: null
+tags: [carmichael-numbers, primality-testing, algorithms]
+added: 2026-11-21
