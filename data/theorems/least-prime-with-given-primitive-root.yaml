@@ -9,6 +9,7 @@ statement_formal: |
   p_g \ll \log^{19}(2|g|)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper defines GRH as the Riemann Hypothesis for all Dedekind zeta
   functions of number fields. It is used through a conditional Chebotarev

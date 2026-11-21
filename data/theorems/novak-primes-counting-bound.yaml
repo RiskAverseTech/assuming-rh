@@ -9,6 +9,7 @@ statement_formal: |
   \pi_N(x) \ll \frac{x \ln\ln x}{(\ln x)^2}
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper only says "Generalized Riemann Hypothesis" and uses it through
   one lemma (Lemma 3, quoted from Kurlberg and Pomerance) saying that few

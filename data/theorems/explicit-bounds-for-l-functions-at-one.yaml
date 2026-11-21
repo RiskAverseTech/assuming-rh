@@ -12,6 +12,7 @@ statement_formal: |
   |L(1,f)| \le 2^d e^{d\gamma}\left( y^d + \frac{d}{2}\,y^{d-1} + \frac{d\,K(d)}{4}\,y^{d-2} \right), \qquad y = \log\log C(f) - \log 2d, \quad \log C(f) \ge 23d
 hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
 status_note: >
   The extra assumption is the Ramanujan-Petersson conjecture for L(s, f),
   and the Riemann hypothesis is assumed for L(s, f) itself. The paper notes

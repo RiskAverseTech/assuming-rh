@@ -10,6 +10,7 @@ statement_formal: |
   \liminf_{n\to\infty}\,(q_{n+m-1}-q_n)\le C_m
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper says the hypothesis is GRH for Dedekind zeta functions. It is
   used through the effective Chebotarev density theorem (Theorem 2.3),

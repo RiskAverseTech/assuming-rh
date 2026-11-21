@@ -6,6 +6,7 @@ statement_plain: A deliberately wrong fixture that claims an uncovered result is
 statement_formal: null
 hypotheses_required: [GRH-Dirichlet, ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: null
 sources:
   - authors: C. Hooley

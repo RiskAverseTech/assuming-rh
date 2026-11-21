@@ -12,6 +12,7 @@ statement_formal: |
   \frac{1}{2\pi}\int_{-\infty}^{\infty} \left|1 - \zeta V_N\!\left(\tfrac12 + it\right)\right|^2 \frac{dt}{\tfrac14 + t^2} \sim \frac{2 + \gamma - \log 4\pi}{\log N}, \qquad V_N(s) = \sum_{n=1}^{N} \left(1 - \frac{\log n}{\log N}\right) \frac{\mu(n)}{n^s}
 hypotheses_required: [RH, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [extra-assumption]
 status_note: >
   Besides RH the theorem assumes that the sum of 1/|zeta'(rho)|^2 over zeros
   rho with |Im rho| <= T is O(T^(3/2 - delta)) for some delta > 0. The paper

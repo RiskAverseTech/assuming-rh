@@ -35,7 +35,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      The paper's main derivation uses a saddle-point evaluation presented with limited rigour; the RH-true direction is also given by a real-analytic argument attributed to Oesterlé. A reviewer should confirm that both directions count as proved.
+      The paper's main derivation uses a saddle-point evaluation presented with limited rigor; the RH-true direction is also given by a real-analytic argument attributed to Oesterlé. A reviewer should confirm that both directions count as proved.
     - >-
       The paper writes the asymptotic as "mod o(n)"; it is recorded here as an o(n) error term.
 lean:

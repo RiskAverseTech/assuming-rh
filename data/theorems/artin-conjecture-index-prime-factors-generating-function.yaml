@@ -15,6 +15,7 @@ statement_formal: |
   = F_a(z)\prod_{q}\left(1+\frac{z-1}{q(q-1)}\right)+O\!\left(\frac{x\log\log x}{(\log x)^2}\right)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper describes the hypothesis, as in Hooley's proof, as the
   generalized Riemann hypothesis for the Dedekind zeta functions of the
@@ -39,7 +40,7 @@ review:
   confidence: high
   open_questions:
     - >-
-      The error term is printed as O(x log log x / (log x)^2) on the right of an average normalised by 1/pi(x); this is copied as printed and the normalisation should be checked by a reviewer.
+      The error term is printed as O(x log log x / (log x)^2) on the right of an average normalized by 1/pi(x); this is copied as printed and the normalisation should be checked by a reviewer.
     - >-
       The definition of F_a(z) was read from the text extraction of page 3 and should be checked against the PDF.
 lean:

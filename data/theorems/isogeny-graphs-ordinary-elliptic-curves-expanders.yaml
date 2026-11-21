@@ -12,6 +12,7 @@ statement_formal: |
   |\lambda| = O\!\left((\lambda_{\mathrm{triv}}\log\lambda_{\mathrm{triv}})^{1/2+1/B}\right) \ \text{ for every nontrivial eigenvalue } \lambda
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   The graph is identified with a Cayley graph of the class group of an
   imaginary quadratic order, a quotient of a narrow ray class group of an

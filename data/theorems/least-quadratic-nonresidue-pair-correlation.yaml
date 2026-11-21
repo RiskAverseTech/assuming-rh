@@ -8,6 +8,7 @@ statement_formal: |
   n(q) \ll (\log q)^{1+\varepsilon} \quad \text{for all sufficiently large primes } q
 hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [extra-assumption]
 status_note: >
   Beyond the Riemann Hypothesis for the Dirichlet L-function of the quadratic
   character modulo q, the proof assumes a pair-correlation hypothesis

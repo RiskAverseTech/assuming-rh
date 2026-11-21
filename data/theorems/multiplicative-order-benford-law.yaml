@@ -11,6 +11,7 @@ statement_formal: |
   \sum_{\substack{n\le x\\ \gcd(n,a)=1}}\ell_a(n)^{i\theta}=o(x)\qquad(x\to\infty)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper says that by GRH it means the Riemann Hypothesis for Dedekind
   zeta functions. The hypothesis enters through a lemma of Li and Pomerance

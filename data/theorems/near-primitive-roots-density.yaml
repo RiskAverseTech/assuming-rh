@@ -11,6 +11,7 @@ statement_formal: |
   \delta(g,t)=\sum_{n=1}^{\infty}\frac{\mu(n)}{[\mathbb{Q}(\zeta_{nt},g^{1/nt}):\mathbb{Q}]}
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The series formula for the density is due to Wagstaff (Theorem 2 of the
   paper, quoted from his work); the paper's own contribution, Theorem 3,

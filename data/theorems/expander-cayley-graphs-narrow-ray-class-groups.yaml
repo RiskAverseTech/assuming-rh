@@ -14,6 +14,7 @@ statement_formal: |
   \lambda_{\mathrm{triv}} = 2\,\mathrm{li}(x) + O\!\left(n\,x^{1/2}\log(xq)\right), \qquad |\lambda| = O\!\left(n\,x^{1/2}\log(xq)\right) \ \text{ for every nontrivial eigenvalue } \lambda
 hypotheses_required: [GRH-Hecke]
 status: partial
+waiting_on: [class-group-characters]
 status_note: >
   The theorem assumes GRH for the L-functions of the characters of the narrow
   ray class group G. For a general number field these are Hecke L-functions

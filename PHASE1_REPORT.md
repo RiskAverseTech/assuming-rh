@@ -73,25 +73,25 @@ Other things found along the way:
 
 - The release is a short note and a Lean 4 archive on the author's site, with third-party mirrors on GitHub. The headline theorems are RH (Mathlib's definition) and GRH for Dirichlet L-functions. Nothing is claimed for Dedekind, Hecke or Artin L-functions, which matches the taxonomy.
 - One public third-party verification run had passed its source scan but was about 41 percent through the build when checked on 21 November. Press reports say other independent kernel checks passed. Those reports were seen as search summaries only.
-- **The archive has no licence file.** This matters for phase 3: the development cannot be imported or redistributed until that changes.
+- **The archive has no license file.** This matters for phase 3: the development cannot be imported or redistributed until that changes.
 - The spec says "independent kernel checks have passed". I worded the banner slightly more cautiously ("checks have been reported, at least one still running") because that is what could be confirmed. Easy to change in `data/meta/proof-status.yaml`.
 
 ## Things I was unsure about
 
 1. **Commit trailers.** The spec says public credit is "Jaz" only, including commits. I therefore left out the usual AI co-author and session trailers. The commit author name and address are the ones given in the spec. That address becomes public once the repository is pushed.
 2. **Repository address.** Resolved after this report was written: the project is named Assuming RH and lives at `https://github.com/RiskAverseTech/assuming-rh`. Correction and footer links now point there.
-3. **CC BY 4.0 legal text.** `LICENSE-DATA` is a notice that links to the licence. The full legal text could not be downloaded here and should be pasted in before publishing.
+3. **CC BY 4.0 legal text.** `LICENSE-DATA` is a notice that links to the license. The full legal text could not be downloaded here and should be pasted in before publishing.
 4. **CI workflow** is written but has never run. The two GitHub Actions are pinned to major versions and should be pinned to commit hashes before the first push.
 5. **Site name.** Resolved: "Assuming RH". It is set in one place, `site/site.config.json`.
 6. **Search without JavaScript.** Reading works without JavaScript. Search and filters do not, and the page says so.
-7. **Accessibility** was built in (landmarks, skip link, labels, focus styles, sort state, no colour-only meaning) and checked by eye in both themes and at phone width. No automated audit or screen reader test was run.
+7. **Accessibility** was built in (landmarks, skip link, labels, focus styles, sort state, no color-only meaning) and checked by eye in both themes and at phone width. No automated audit or screen reader test was run.
 
 ## Questions for Jaz before phase 2
 
 1. Final project name and domain.
 2. Which GitHub account or organization hosts it.
 3. Which host for the site. It is plain static files, so GitHub Pages, Cloudflare Pages or Netlify all work.
-4. Whether to announce on the Lean Zulip and offer the dataset to the effort there. The search on 21 November found no dedicated catalogue. The nearest thing is a single-author GitHub issue tracking downstream targets of the proof (`1337isnot1337/solved-conjectures`, issue 80). Worth a look before launch. The Zulip itself could not be read from here.
+4. Whether to announce on the Lean Zulip and offer the dataset to the effort there. The search on 21 November found no dedicated catalog. The nearest thing is a single-author GitHub issue tracking downstream targets of the proof (`1337isnot1337/solved-conjectures`, issue 80). Worth a look before launch. The Zulip itself could not be read from here.
 5. Whether commits should carry an AI co-author line after all.
 6. Whether to allow network access to arxiv.org and ams.org so the VERIFY items can be checked against the papers before anything is published.
 

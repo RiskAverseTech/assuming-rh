@@ -9,6 +9,7 @@ statement_formal: |
   T_C(K) \le 4.01\,\log^2 \Delta_K, \quad \text{where } T_C(K) \text{ is the least } T \text{ such that } \{\mathfrak{p} : N\mathfrak{p} \le T\} \text{ generates } \mathrm{Cl}_K
 hypotheses_required: [GRH-Hecke, ERH-Dedekind]
 status: still-conditional
+waiting_on: [single-field-zeta, class-group-characters]
 status_note: >
   The proof rests on a criterion of Belabas, Diaz y Diaz and Friedman that
   assumes the Riemann Hypothesis for the L-functions of all non-trivial

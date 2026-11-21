@@ -7,6 +7,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   Weinberger's proof follows Hooley's method for Artin's conjecture and
   needs the hypothesis for Dedekind zeta functions of Kummer-type extensions

@@ -9,6 +9,7 @@ statement_formal: |
   \mathrm{Cl}(K) = \bigl\langle\, [\mathfrak{p}] : N\mathfrak{p} \le 12\,(\log|\Delta_K|)^2 \,\bigr\rangle
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   This differs from the first expectation that the quadratic case would be
   unlocked. Bach defines his hypothesis as the statement that all Hecke

@@ -14,6 +14,7 @@ statement_formal: |
   \lambda_\chi = \frac{1}{e}\sum_{p \le m}\ \sum_{N\mathfrak{a} = p} \chi(\mathfrak{a}) = O\!\left(m^{1/2}\log|mD|\right) \quad \text{for every non-trivial character } \chi \text{ of } \mathrm{Cl}(\mathcal{O}_D)
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   The hypothesis is used for the eigenvalue separation (Lemma 4.1), which
   gives both the expander property and the polynomial running time of the

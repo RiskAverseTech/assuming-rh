@@ -5,6 +5,7 @@ statement_plain: A fixture that is classified consistently and must pass.
 statement_formal: null
 hypotheses_required: [GRH-Dirichlet, ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: null
 sources:
   - authors: C. Hooley

@@ -10,6 +10,7 @@ statement_formal: |
   |\psi_K(x) - x| \le \sqrt{x}\,\Bigl[\Bigl(\frac{\log x}{2\pi} + 2\Bigr)\log\Delta_K + \Bigl(\frac{\log^2 x}{8\pi} + 2\Bigr) n_K\Bigr] \quad \text{for } x \ge 100
 hypotheses_required: [ERH-Dedekind]
 status: partial
+waiting_on: [single-field-zeta]
 status_note: >
   The hypothesis is that the Dedekind zeta function of K has no zeros with
   real part above 1/2. When K is abelian over the rationals (for example

@@ -16,6 +16,7 @@ statement_formal: |
   \int_X f\,d\mu_j - \int_X f\,d\mu_0 \ll_{\varepsilon} \lambda_j^{-\frac14+\varepsilon}\,\|f\|_{L^{2,1/2}}
 hypotheses_required: [RH, GRH-automorphic]
 status: still-conditional
+waiting_on: [higher-automorphic]
 status_note: >
   The theorem is stated under a Lindelof-type bound, with a parameter a
   between 0 and 1, for the central values of the triple product L-functions

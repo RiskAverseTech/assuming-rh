@@ -13,6 +13,7 @@ statement_formal: |
   D_K^{1/n} \ \ge\ \left(8\pi e^{C+\pi/2}\right)^{r_1/n}\left(8\pi e^{C}\right)^{2r_2/n} - O\!\left((\log n)^{-2}\right)
 hypotheses_required: [ERH-Dedekind]
 status: partial
+waiting_on: [single-field-zeta]
 status_note: >
   The bound for a field K needs the hypothesis only for the Dedekind zeta
   function of K itself. So it is unlocked when K is abelian over the

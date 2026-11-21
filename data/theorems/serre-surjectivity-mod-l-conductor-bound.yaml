@@ -11,6 +11,7 @@ statement_formal: |
   \ell \ \ge\ c\,(\log N_E)\,(\log\log 2N_E)^{3} \ \Longrightarrow\ \operatorname{Im}(\rho_\ell) = \mathrm{GL}_2(\mathbb{Z}_\ell)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [galois-extensions]
 status_note: >
   Serre defines (GRH) as the statement that the zeta function of a number
   field has no zero of real part above 1/2. The proof uses the conditional

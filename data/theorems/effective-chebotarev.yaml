@@ -10,6 +10,7 @@ statement_formal: |
   \left|\pi_C(x) - \frac{|C|}{|G|}\operatorname{li}(x)\right| \ll \frac{|C|}{|G|}\,\sqrt{x}\,\log\!\left(|\Delta_L|\,x^{n}\right)
 hypotheses_required: [ERH-Dedekind]
 status: partial
+waiting_on: [galois-extensions]
 status_note: >
   Under the same hypothesis the least prime ideal with a given Frobenius
   class has norm at most a constant times (log |D|)^2. Lagarias, Montgomery

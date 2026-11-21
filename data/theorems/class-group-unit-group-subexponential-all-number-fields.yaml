@@ -12,6 +12,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   The paper states that its Extended Riemann Hypothesis means the Riemann
   Hypothesis for Hecke L-functions. Its closing discussion says the random

@@ -1,0 +1,17 @@
+# expect: needs waiting_on
+id: still-conditional-without-waiting-on
+title: Correctly conditional fixture
+field: analytic-number-theory
+statement_plain: A fixture that is classified consistently and must pass.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, ERH-Dedekind]
+status: still-conditional
+status_note: null
+sources:
+  - authors: C. Hooley
+    title: On Artin's conjecture
+    year: 1967
+review: { state: ai-classified, checked_by: null, checked_on: null, confidence: low, open_questions: [] }
+lean: { proved: false, path: null }
+tags: [fixture]
+added: 2026-11-21

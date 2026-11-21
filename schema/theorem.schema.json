@@ -6,9 +6,19 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "id", "title", "field", "statement_plain", "statement_formal",
-    "hypotheses_required", "status", "status_note", "sources",
-    "review", "lean", "tags", "added"
+    "id",
+    "title",
+    "field",
+    "statement_plain",
+    "statement_formal",
+    "hypotheses_required",
+    "status",
+    "status_note",
+    "sources",
+    "review",
+    "lean",
+    "tags",
+    "added"
   ],
   "properties": {
     "id": {
@@ -17,7 +27,11 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "maxLength": 80
     },
-    "title": { "type": "string", "minLength": 3, "maxLength": 140 },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 140
+    },
     "field": {
       "description": "Controlled vocabulary.",
       "enum": [
@@ -30,10 +44,16 @@
         "topology"
       ]
     },
-    "statement_plain": { "type": "string", "minLength": 10 },
+    "statement_plain": {
+      "type": "string",
+      "minLength": 10
+    },
     "statement_formal": {
       "description": "Optional LaTeX (math mode, rendered as a display formula with KaTeX at build time).",
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "hypotheses_required": {
       "description": "Every hypothesis the conditional proof needs. For proved-otherwise entries: the hypotheses of the historical conditional proof.",
@@ -42,34 +62,91 @@
       "uniqueItems": true,
       "items": {
         "enum": [
-          "RH", "GRH-Dirichlet", "ERH-Dedekind", "GRH-Hecke",
-          "GRH-Artin", "GRH-automorphic", "PLUS-EXTRA"
+          "RH",
+          "GRH-Dirichlet",
+          "ERH-Dedekind",
+          "GRH-Hecke",
+          "GRH-Artin",
+          "GRH-automorphic",
+          "PLUS-EXTRA"
         ]
       }
     },
-    "status": { "enum": ["unlocked", "partial", "still-conditional", "proved-otherwise"] },
-    "status_note": { "type": ["string", "null"] },
+    "status": {
+      "enum": [
+        "unlocked",
+        "partial",
+        "still-conditional",
+        "proved-otherwise"
+      ]
+    },
+    "status_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "sources": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["authors", "title", "year"],
+        "required": [
+          "authors",
+          "title",
+          "year"
+        ],
         "properties": {
-          "authors": { "type": "string", "minLength": 2 },
-          "title": { "type": "string", "minLength": 2 },
-          "year": { "type": "integer", "minimum": 1700, "maximum": 2100 },
-          "venue": { "type": ["string", "null"] },
-          "doi": { "type": ["string", "null"], "pattern": "^10\\.[0-9]{4,9}/\\S+$" },
-          "url": { "type": ["string", "null"], "pattern": "^https://\\S+$" },
+          "authors": {
+            "type": "string",
+            "minLength": 2
+          },
+          "title": {
+            "type": "string",
+            "minLength": 2
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1700,
+            "maximum": 2100
+          },
+          "venue": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "doi": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^https://\\S+$"
+          },
           "hypothesis_location": {
             "description": "Section or theorem number where the hypothesis is used.",
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "role": {
             "description": "What this source contributes to the entry.",
-            "enum": ["conditional-proof", "unconditional-proof", "refinement", "survey", null]
+            "enum": [
+              "conditional-proof",
+              "unconditional-proof",
+              "refinement",
+              "survey",
+              null
+            ]
           }
         }
       }
@@ -77,35 +154,106 @@
     "review": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["state", "checked_by", "checked_on", "confidence", "open_questions"],
+      "required": [
+        "state",
+        "checked_by",
+        "checked_on",
+        "confidence",
+        "open_questions"
+      ],
       "properties": {
-        "state": { "enum": ["ai-classified", "human-checked", "lean-verified"] },
-        "checked_by": { "type": ["string", "null"] },
-        "checked_on": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
-        "confidence": { "enum": ["low", "medium", "high"] },
-        "open_questions": { "type": "array", "items": { "type": "string" } }
+        "state": {
+          "enum": [
+            "ai-classified",
+            "human-checked",
+            "lean-verified"
+          ]
+        },
+        "checked_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checked_on": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "lean": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["proved", "path"],
+      "required": [
+        "proved",
+        "path"
+      ],
       "properties": {
-        "proved": { "type": "boolean" },
-        "path": { "type": ["string", "null"] }
+        "proved": {
+          "type": "boolean"
+        },
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "related": {
       "description": "Ids of related entries.",
       "type": "array",
       "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
     },
     "tags": {
       "type": "array",
       "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
     },
-    "added": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+    "added": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "waiting_on": {
+      "description": "For still-conditional and partial entries: the families of L-functions or assumptions the result is still waiting on. Codes are defined in data/meta/waiting.yaml.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "kummer-fields",
+          "galois-extensions",
+          "single-field-zeta",
+          "class-group-characters",
+          "power-residue-characters",
+          "modular-form-l-functions",
+          "higher-automorphic",
+          "extra-assumption"
+        ]
+      }
+    }
   }
 }

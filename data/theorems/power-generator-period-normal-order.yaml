@@ -12,6 +12,7 @@ statement_formal: |
   \operatorname{ord}^*(e,\lambda(n)) = n\cdot\exp\!\left(-(1+o(1))(\log\log n)^2\log\log\log n\right)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper's footnote says that GRH means the Riemann hypothesis for
   L-functions associated with certain Kummer extensions. It is used, as in
