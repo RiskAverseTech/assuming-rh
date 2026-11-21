@@ -1,0 +1,52 @@
+id: satellite-knot-recognition-in-np
+title: Satellite knot recognition is in NP
+field: topology
+statement_plain: >
+  There is a certificate, checkable in time polynomial in the number of
+  crossings, that a given knot diagram represents a satellite knot.
+statement_formal: |
+  \text{SATELLITE KNOT RECOGNITION} \in \mathsf{NP}
+hypotheses_required: [ERH-Dedekind]
+status: proved-otherwise
+status_note: >
+  Baldwin and Sivek (2017) proved this under GRH. Their certificate that an
+  incompressible torus is not boundary parallel is a nonabelian
+  representation into SL(2, F_p), and the hypothesis guarantees a small
+  enough prime p, by Kuperberg's method resting on an effective Chebotarev
+  theorem (see the entry knottedness-in-np). It is needed only for the
+  existence of the certificate, not for checking it. Haraway and Hoffman
+  proved the result without any hypothesis, as a special case of their
+  theorem that recognizing irreducible toroidal 3-manifolds is in NP, using
+  normal surface theory in place of representations. The Baldwin and Sivek
+  paper also proves under GRH that torus knot recognition is in coNP; that
+  statement is part of the entry three-sphere-recognition-in-conp.
+sources:
+  - authors: J. A. Baldwin, S. Sivek
+    title: On the complexity of torus knot recognition
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1706.04424
+    hypothesis_location: "Theorem 1.3 (restated as Theorem 6.4), through Theorem 5.6, which is Kuperberg's Theorem 3.3"
+    role: conditional-proof
+  - authors: R. Haraway III, N. R. Hoffman
+    title: On the complexity of cusped non-hyperbolicity
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/1907.01675
+    hypothesis_location: Theorem 3, a special case of Theorem 4 (no hypothesis)
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Neither paper prints a journal reference in the text read, so both are listed as preprints with the year of the arXiv version read. The Haraway and Hoffman text thanks a referee, so a published version probably exists.
+    - >-
+      Corollary 1.4 of Baldwin and Sivek (hyperbolic knot recognition is in coNP, under GRH) is not recorded separately; given the unconditional result here it follows from their own argument without the hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [knot-theory, complexity, chebotarev]
+added: 2026-11-21

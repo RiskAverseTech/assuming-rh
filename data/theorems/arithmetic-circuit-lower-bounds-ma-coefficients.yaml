@@ -1,0 +1,46 @@
+id: arithmetic-circuit-lower-bounds-ma-coefficients
+title: Fixed-polynomial arithmetic circuit lower bounds over the complex numbers for polynomials with coefficients in MA
+field: complexity-theory
+statement_plain: >
+  For every constant k there is a family (P_n) of polynomials in n
+  variables, of degree polynomial in n and with coefficients in {0, 1}
+  computable in the class MA, that is not computed by arithmetic circuits
+  of size n^k over the complex numbers, where the circuits may use
+  arbitrary complex constants.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used to eliminate the complex constants from the
+  circuits: a system of integer polynomial equations with a complex solution
+  has a solution modulo a small prime p. This comes in through Koiran's
+  theorem that the Hilbert Nullstellensatz is in the polynomial hierarchy
+  (the paper's Theorem 4; see the entry nullstellensatz-polynomial-hierarchy)
+  and through a prime-counting bound for solvable systems quoted from
+  Bürgisser (Lemma 2), used to show that VP = VNP over the complex numbers
+  would give CH = MA (Lemma 3). Koiran's theorem rests on an effective Chebotarev estimate
+  for number fields that are not abelian in general. The paper writes only
+  "GRH". The same paper proves, under the same hypothesis, a variant with
+  polynomials that can be evaluated in AM (Proposition 2).
+sources:
+  - authors: H. Fournier, S. Perifel, R. de Verclos
+    title: On fixed-polynomial size circuit lower bounds for uniform polynomials in the sense of Valiant
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1304.5910
+    hypothesis_location: "Corollary 1, through Theorem 5, Theorem 4 (Koiran) and Lemmas 2 and 3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not say which L-functions its GRH covers. ERH-Dedekind is taken from the classification of Koiran's theorem in the existing entry nullstellensatz-polynomial-hierarchy; Bürgisser's lemma was not available to check.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-circuits, lower-bounds, nullstellensatz]
+added: 2026-11-21

@@ -1,0 +1,44 @@
+id: robin-criterion-lcm-power-divisor-sums
+title: Robin-type inequality for sums of products of divisors with given least common multiple
+field: analytic-number-theory
+statement_plain: >
+  Fix a real number kappa at least 2 and let sigma^[kappa](n) be the sum
+  over divisors d of n of mu(n/d) sigma(d)^kappa; for an integer kappa = k
+  this is the sum of the products d_1 ... d_k over all k-tuples of positive
+  integers whose least common multiple is n. Then for every n > 2162160,
+  sigma^[kappa](n) is less than (e^gamma n log log n)^kappa / zeta(kappa),
+  where gamma is the Euler-Mascheroni constant.
+statement_formal: |
+  \sigma^{[\kappa]}(n) := \sum_{d \mid n} \mu(n/d)\,\sigma(d)^{\kappa} < \frac{(e^{\gamma}\, n \log\log n)^{\kappa}}{\zeta(\kappa)} \qquad (\kappa \ge 2,\ n > 2162160)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. For each fixed real kappa at least 2
+  the paper proves that the Riemann hypothesis holds if and only if the
+  inequality holds for all n > 2162160. For kappa > 3/2 it proves the
+  equivalence with the inequality for all sufficiently large n. It is an
+  analogue of Robin's criterion (see the entries robin-inequality and
+  robin-inequality-odd-integers) for a different arithmetic function. The
+  same paper proves an analogue of Lagarias's criterion for kappa at least
+  4 (Theorem 1.7), which is not part of this entry.
+sources:
+  - authors: S. Fan, M. Kobayashi, G. Molnar
+    title: A family of analogues to the Robin criterion
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.02106
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The proof of Theorem 1.5 was not read in detail; the statement, the range of kappa and the threshold are taken from the theorem as stated in the introduction and the abstract.
+lean:
+  proved: false
+  path: null
+tags: [robin-inequality, sum-of-divisors, rh-equivalent]
+added: 2026-11-21
