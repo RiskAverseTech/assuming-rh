@@ -147,3 +147,7 @@ table.waiting .num, th.num { text-align: right; font-variant-numeric: tabular-nu
 .known a { text-decoration: none; color: inherit; display: block; } .known a:hover .known-title { text-decoration: underline; }
 .known-title { display: block; font-weight: 700; } .known-st { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
 .known-badge { margin-top: auto; }
+.statement-box { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 8px; padding: 0.5rem 1rem 0.75rem; margin: 1rem 0; max-width: 52rem; }
+.statement-box .formal { border: 0; padding: 0.25rem 0; background: transparent; }
+.statement-box p { margin: 0.4rem 0; }
+dl.tried dt { font-family: var(--serif); font-size: 1.05rem; }
