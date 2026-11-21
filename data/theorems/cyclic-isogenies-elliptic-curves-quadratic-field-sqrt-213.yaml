@@ -1,0 +1,50 @@
+id: cyclic-isogenies-elliptic-curves-quadratic-field-sqrt-213
+title: Cyclic isogeny degrees of elliptic curves over Q(sqrt(213)) and 18 other quadratic fields
+field: arithmetic-geometry
+statement_plain: >
+  An elliptic curve over the quadratic field Q(sqrt(213)) has a rational
+  cyclic isogeny of degree N exactly when N is one of 1 to 21, 24, 25, 27,
+  32, 36, 37, 43, 67 or 163. Compared with the Mazur-Kenku list over Q, the
+  new degrees are 20, 24, 32 and 36. The paper gives the analogous complete
+  list for Q(sqrt(d)) for 18 further values of d, among them -6846, -2289,
+  834 and 9903.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis enters only through the explicit bound on isogeny primes of
+  Momose Type 2 due to Banwait and Derickx (see the entry
+  isogeny-primes-momose-type-2-explicit-bound), which makes the set of
+  candidate prime degrees finite and computable. The paper says (Remark 1.3
+  and Remark 3.4) that it is needed only for the effective Chebotarev
+  density theorem applied to a degree 4 extension of the quadratic field
+  K. The paper does not say whether that degree 8 field is abelian over Q;
+  if it is, the hypothesis would reduce to Dirichlet L-functions. The
+  paper's general algorithm also mentions the rank part of the Birch and
+  Swinnerton-Dyer conjecture for one step, and says that in practice the
+  ranks can be computed unconditionally; Theorem 1.2 is stated assuming GRH
+  only.
+sources:
+  - authors: B. S. Banwait, F. Najman, O. Padurariu
+    title: Cyclic isogenies of elliptic curves over fixed quadratic fields
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2206.08891
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The Chebotarev step is applied to a degree 4 Galois extension E' of the quadratic field K, built as a tower of quadratic extensions. If E' is multiquadratic over Q (hence abelian), GRH for Dirichlet L-functions would suffice and the status would be unlocked. The paper does not describe E' explicitly, so the cautious code ERH-Dedekind was chosen.
+    - >-
+      The list of degrees for Q(sqrt(213)) was read from Table 1.2 of the paper; the other 18 fields are in Table 8.1 and are not reproduced here.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, isogenies, quadratic-fields, modular-curves]
+added: 2026-11-21

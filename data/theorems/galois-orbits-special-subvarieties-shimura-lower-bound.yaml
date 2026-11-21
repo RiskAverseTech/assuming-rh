@@ -1,0 +1,54 @@
+id: galois-orbits-special-subvarieties-shimura-lower-bound
+title: Lower bounds for Galois orbits of special subvarieties of Shimura varieties
+field: arithmetic-geometry
+statement_plain: >
+  Let Z be a special subvariety of a Shimura variety, defined by a Shimura
+  subdatum (H, X_H) whose generic Mumford-Tate group H has non-trivial
+  connected center T, and let L_T be the splitting field of T. For every
+  positive integer N, the degree of the Galois orbit of Z is at least a
+  constant times (log |disc(L_T)|)^N times the product, over the primes p
+  where K_T is not maximal at p, of max(1, B |K^m_{T,p} / K_{T,p}|), with B
+  a positive constant independent of Z and N. In particular, in an infinite
+  sequence of special points the sizes of the Galois orbits are unbounded.
+statement_formal: |
+  \deg\bigl(\text{Gal}(\overline{\mathbb{Q}}/E)\cdot Z\bigr) \gg_N \prod_{p \,:\, K^{m}_{T,p} \ne K_{T,p}} \max\bigl(1,\, B\,|K^{m}_{T,p}/K_{T,p}|\bigr)\cdot \bigl(\log|\text{disc}(L_T)|\bigr)^{N}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes "the GRH for CM fields". It enters through the factor
+  (log |disc(L_T)|)^N, which is obtained (Proposition 2.13, quoting an
+  earlier theorem of Yafaev) from the effective Chebotarev density theorem
+  in the Galois CM field L_T, giving many small primes that split
+  completely in L_T. The paper notes that the hypothesis is not needed when
+  the Mumford-Tate groups of the points lie in one conjugacy class under a
+  faithful representation. The precise statement (Theorem 2.19) has further
+  technical hypotheses: G semisimple of adjoint type, K neat and a product
+  of local factors, and a field of definition of bounded degree; see the
+  paper. These bounds were used by Klingler and Yafaev to prove the
+  Andre-Oort conjecture under the same hypothesis.
+sources:
+  - authors: E. Ullmo, A. Yafaev
+    title: "Galois orbits and equidistribution of special subvarieties: towards the André-Oort conjecture"
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1209.0934
+    hypothesis_location: Theorem 2.19 (and Theorem 3.10, Corollary 3.12)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement is a simplified form of Theorem 2.19 taken from the paper's introduction; the degree is with respect to a specific line bundle and the full theorem has extra technical hypotheses.
+    - >-
+      The Andre-Oort conjecture and lower bounds for Galois orbits of special points have since been reported proved unconditionally by other methods (work of Tsimerman, and of Pila, Shankar and Tsimerman with collaborators). The paper on disk contains no evidence for this, so the status was left as still-conditional; a reviewer should check whether this entry should become proved-otherwise.
+    - >-
+      'GRH for CM fields' was read as the Riemann Hypothesis for Dedekind zeta functions of CM fields, since it is used for effective Chebotarev (splitting of primes) in the Galois CM field L_T.
+lean:
+  proved: false
+  path: null
+tags: [shimura-varieties, andre-oort, galois-orbits, effective-chebotarev]
+added: 2026-11-21

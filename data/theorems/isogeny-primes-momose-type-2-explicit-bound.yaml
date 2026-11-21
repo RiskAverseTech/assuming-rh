@@ -1,0 +1,50 @@
+id: isogeny-primes-momose-type-2-explicit-bound
+title: Explicit bound for isogeny primes of Momose Type 2 over a number field
+field: arithmetic-geometry
+statement_plain: >
+  Let k be a number field of degree d and discriminant Delta_k, and let E
+  be an elliptic curve over k with a k-rational isogeny of prime degree p
+  whose isogeny character is of Momose Type 2. Then
+  p <= (8 d log(12 p) + 16 log(Delta_k) + 10 d + 6)^4, so there are only
+  finitely many such primes p for each k.
+statement_formal: |
+  p \le \bigl( 8d \log(12p) + 16 \log \Delta_k + 10d + 6 \bigr)^{4}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper says this bound is its only result that requires the
+  hypothesis. It is used through the effective Chebotarev density theorem
+  of Bach and Sorenson, applied to a Galois extension E' of k of absolute
+  degree 4d, to find a small prime ideal of k that splits in k(sqrt(-p)).
+  With this bound the paper's algorithm outputs a finite superset of the
+  isogeny primes of k (Theorem 1.7), and the paper deduces (Theorem 1.8)
+  that the isogeny primes of the cubic field Q(zeta_7)^+ and of
+  Q(beta), beta^3 - beta^2 - 3 beta + 1 = 0, are the same as those of Q,
+  while Q(alpha), alpha^3 - alpha^2 - 2 alpha - 20 = 0, has the one extra
+  isogeny prime 29. This sharpens and generalizes the quadratic-field bound
+  in Banwait's earlier paper (see the entry
+  isogeny-primes-quadratic-fields-sqrt-minus-10-5-7).
+sources:
+  - authors: B. S. Banwait, M. Derickx
+    title: Explicit isogenies of prime degree over number fields
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2203.06009
+    hypothesis_location: Theorem 1.6 (3) and Proposition 6.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH'. The proof applies the Bach-Sorenson effective Chebotarev theorem to a Galois extension E'/k of absolute degree 4d taken from Larson and Vaintrob; the code ERH-Dedekind (zeta function of E') is this project's reading of what that theorem needs.
+    - >-
+      If k is abelian over Q and E' is abelian over Q as well, the hypothesis would reduce to Dirichlet L-functions for that k; the paper does not describe E' explicitly, so no partial status is claimed.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, isogenies, effective-chebotarev, explicit-bounds]
+added: 2026-11-21

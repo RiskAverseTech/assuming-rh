@@ -1,0 +1,45 @@
+id: product-of-two-primes-residue-class-small-first-prime
+title: Every reduced residue class mod k is a product of a prime up to k^epsilon and a prime up to k^(5/2 + epsilon)
+field: analytic-number-theory
+statement_plain: >
+  Fix a small epsilon > 0, let y = x^epsilon and let k be of order x^delta
+  with 1/3 <= delta < 2/5. For all large x and every a coprime to k, the
+  number of pairs (u, p) with u <= x having no prime factor below sqrt(x),
+  p <= y prime and u p = a mod k is at least
+  (0.0342 + o(1)) x y / (phi(k) log x log y). In particular, for large k
+  every reduced residue class a mod k can be written as p1 p2 mod k with
+  primes p1 <= k^epsilon and p2 <= k^(5/2 + epsilon).
+statement_formal: |
+  N_k\bigl(a; x, y, x^{1/2}\bigr) \ge \frac{(0.0342 + o(1))\,xy}{\varphi(k)(\log x)(\log y)}, \qquad y = x^{\varepsilon},\ k \asymp x^{\delta},\ \delta \in [\tfrac13, \tfrac25)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used for the bound sum_{p <= y} chi(p) << y^(1/2)
+  log(ky) for non-principal characters chi modulo k (Lemma 4.3), which
+  feeds the Type I and II estimates of a Harman sieve. For 1/4 <= delta <
+  1/3 the same theorem gives an asymptotic formula. The result is progress
+  toward the conjecture of Erdos, Odlyzko and Sarkozy that every reduced
+  class mod k is a product of two primes both at most k.
+sources:
+  - authors: K. H. Yau
+    title: Product of an integer free of small prime factors and prime in arithmetic progression
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1812.10214
+    hypothesis_location: Theorem 3.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The consequence about p1 <= k^epsilon and p2 <= k^(5/2 + epsilon) is a remark the paper makes after Theorem 3.3, not a numbered theorem.
+    - >-
+      The paper does not define GRH; the only place it is invoked is the character sum over primes in Lemma 4.3, which needs Dirichlet L-functions modulo k only.
+lean:
+  proved: false
+  path: null
+tags: [primes-in-progressions, sieve-methods, character-sums]
+added: 2026-11-21

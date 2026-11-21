@@ -1,0 +1,50 @@
+id: andre-oort-curves-in-shimura-varieties
+title: Andre-Oort for curves in Shimura varieties (a conjecture of Yves Andre)
+field: arithmetic-geometry
+statement_plain: >
+  Let C be an irreducible closed algebraic curve in a Shimura variety
+  Sh_K(G, X). If C contains infinitely many special points, then C is of
+  Hodge type, that is, a special subvariety.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: proved-otherwise
+status_note: >
+  Now known without any hypothesis: this is a case of the Andre-Oort
+  conjecture, which Pila, Shankar and Tsimerman report proving in full
+  generality (2021). What follows describes the earlier conditional proof.
+  The paper assumes "the Generalised Riemann Hypothesis for CM fields". It
+  is used through the effective Chebotarev density theorem: to find, for a
+  CM field L with large discriminant d_L, many primes below (log d_L)^5
+  that split in L (giving a lower bound of the form c (log d_L)^N for
+  Galois orbits of special points, Theorem 2.15), and to choose a suitable
+  prime for a Hecke correspondence. The same paper proves an unconditional
+  result (Theorem 1.3) under an extra condition on the special points.
+sources:
+  - authors: A. Yafaev
+    title: A conjecture of Yves André
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0302125
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+  - authors: J. Pila, A. N. Shankar, J. Tsimerman (with an appendix by H. Esnault and M. Groechenig)
+    title: Canonical Heights on Shimura Varieties and the André-Oort Conjecture
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.08788
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of the Pila, Shankar and Tsimerman paper, which says it proves the Andre-Oort conjecture in full generality. Only the abstract was read, and its publication status was not checked.
+    - >-
+      'GRH for CM fields' was read as the Riemann Hypothesis for Dedekind zeta functions of CM fields (splitting fields of the Mumford-Tate tori of special points), since it is used only for effective Chebotarev.
+lean:
+  proved: false
+  path: null
+tags: [shimura-varieties, andre-oort, special-points, effective-chebotarev]
+added: 2026-11-21

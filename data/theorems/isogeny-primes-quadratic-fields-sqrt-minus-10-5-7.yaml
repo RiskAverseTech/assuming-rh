@@ -1,0 +1,50 @@
+id: isogeny-primes-quadratic-fields-sqrt-minus-10-5-7
+title: Isogeny primes of the quadratic fields Q(sqrt(-10)), Q(sqrt(5)) and Q(sqrt(7))
+field: arithmetic-geometry
+statement_plain: >
+  Call a prime p an isogeny prime for a number field K if some elliptic
+  curve over K has a K-rational isogeny of degree p. The isogeny primes for
+  Q(sqrt(-10)) and for Q(sqrt(7)) are exactly those for Q, namely 2, 3, 5,
+  7, 11, 13, 17, 19, 37, 43, 67 and 163. The isogeny primes for Q(sqrt(5))
+  are those for Q together with 23 and 47.
+statement_formal: |
+  \begin{aligned}
+  \text{IsogPrimeDeg}(\mathbb{Q}(\sqrt{-10})) &= \text{IsogPrimeDeg}(\mathbb{Q}), \\
+  \text{IsogPrimeDeg}(\mathbb{Q}(\sqrt{5})) &= \text{IsogPrimeDeg}(\mathbb{Q}) \cup \{23, 47\}, \\
+  \text{IsogPrimeDeg}(\mathbb{Q}(\sqrt{7})) &= \text{IsogPrimeDeg}(\mathbb{Q})
+  \end{aligned}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper notes that finiteness of the set of isogeny primes of these
+  fields is known unconditionally (Momose) but not effectively. The
+  hypothesis is used to make the bound on isogeny primes of Momose Type 2
+  effective (Proposition 5.3: p <= (16 log p + 16 log(12 Delta_K) + 26)^4),
+  through the Bach-Sorenson effective Chebotarev theorem applied to a
+  degree 8 field E' that is a tower of quadratic extensions over the
+  quadratic field K. The paper does not say whether E' is abelian over Q;
+  if it is, the hypothesis would reduce to Dirichlet L-functions.
+sources:
+  - authors: B. S. Banwait
+    title: Explicit isogenies of prime degree over quadratic fields
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2101.02673
+    hypothesis_location: Theorem 1.10, using Proposition 5.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The degree 8 field E' in the Chebotarev step is described only as a Galois extension in a tower of successive quadratic extensions E'/E/K/Q. If E' is multiquadratic over Q, then its zeta function is a product of Dirichlet L-functions and the result would be unlocked. This could not be settled from the paper, so the cautious code ERH-Dedekind and status still-conditional were used. A number theorist should check Larson and Vaintrob, Corollary 6.3.
+    - >-
+      The list of isogeny primes for Q (Mazur's theorem) is taken from the companion paper arXiv:2203.06009, Theorem 1.2.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, isogenies, quadratic-fields, effective-chebotarev]
+added: 2026-11-21
