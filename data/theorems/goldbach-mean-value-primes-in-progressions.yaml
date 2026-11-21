@@ -1,0 +1,42 @@
+id: goldbach-mean-value-primes-in-progressions
+title: Mean value of Goldbach representations with primes in arithmetic progressions
+field: additive-number-theory
+statement_plain: >
+  Let R(n, q1, a1, q2, a2) be the sum of Lambda(m1) Lambda(m2) over
+  m1 + m2 = n with m1 = a1 mod q1 and m2 = a2 mod q2. For X at least 2 and
+  (a1, q1) = (a2, q2) = 1, the sum of R over n up to X equals
+  X^2 / (2 phi(q1) phi(q2)) plus explicit sums over zeros of Dirichlet
+  L-functions, with an error O(X log X log(q1 X) log(q2 X)) whose implied
+  constant is absolute.
+statement_formal: |
+  \sum_{n \le X} R(n, q_1, a_1, q_2, a_2) = \frac{1}{\varphi(q_1)\varphi(q_2)} \left( \frac{X^2}{2} - G(X, q_1, a_1) - G(X, q_2, a_2) + H(X) \right) + O\bigl( X (\log X)(\log q_1 X)(\log q_2 X) \bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes less than GRH: only that every non-real nontrivial zero
+  of every Dirichlet L-function lies on the critical line (real zeros off
+  the line are allowed). GRH for Dirichlet L-functions implies this. In the
+  formula, G(X, q, a) is a sum over nontrivial zeros of the L-functions
+  modulo q and H(X) collects the contribution of possible real zeros with
+  real part at least 1/2; both are defined in the paper.
+sources:
+  - authors: Y. Suzuki
+    title: A mean value of the representation function for the sum of two primes in arithmetic progressions
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.01967
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The hypothesis as worded covers all Dirichlet L-functions; the principal characters bring in the Riemann zeta function, which the paper notes has no real nontrivial zeros. RH for zeta is treated here as included in the Dirichlet case and is not listed separately.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, primes-in-progressions, mean-values]
+added: 2026-11-21

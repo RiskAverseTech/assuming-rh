@@ -1,0 +1,36 @@
+id: goldbach-average-over-multiples-of-q
+title: Average number of Goldbach representations over multiples of q
+field: additive-number-theory
+statement_plain: >
+  Let psi_2(n) be the sum of Lambda(m) Lambda(m') over m + m' = n, let G(N)
+  be the sum of psi_2(n) over n up to N, and let G_q(N) be the same sum
+  restricted to multiples of q. Then for 2 <= q <= N,
+  G_q(N) = G(N)/phi(q) + O(N log^3 N), with an absolute implied constant.
+statement_formal: |
+  G_q(N) = \frac{G(N)}{\varphi(q)} + O\bigl(N \log^3 N\bigr) \qquad (2 \le q \le N), \qquad G_q(N) = \sum_{\substack{n \le N \\ q \mid n}} \ \sum_{m + m' = n} \Lambda(m)\Lambda(m')
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes GRH for the Dirichlet L-functions of all characters
+  modulo q. This includes the principal character, whose L-function has the
+  nontrivial zeros of the Riemann zeta function, so RH is listed as well.
+sources:
+  - authors: K. Ikeda, A. I. Suriajaya
+    title: The average number of Goldbach representations over multiples of q
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.04315
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [ternary-goldbach]
+tags: [goldbach, primes-in-progressions, mean-values]
+added: 2026-11-21

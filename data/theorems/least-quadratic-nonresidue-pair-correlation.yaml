@@ -1,0 +1,39 @@
+id: least-quadratic-nonresidue-pair-correlation
+title: Least quadratic non-residue below (log q)^(1+eps) via pair correlation
+field: analytic-number-theory
+statement_plain: >
+  For every eps > 0 and every sufficiently large prime q, the least quadratic
+  non-residue n(q) modulo q satisfies n(q) << (log q)^(1+eps).
+statement_formal: |
+  n(q) \ll (\log q)^{1+\varepsilon} \quad \text{for all sufficiently large primes } q
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  Beyond the Riemann Hypothesis for the Dirichlet L-function of the quadratic
+  character modulo q, the proof assumes a pair-correlation hypothesis
+  (Hypothesis 1 of the paper): the pair-correlation sum F(x, T) over zeros of
+  that L-function is << T log(kx) uniformly for x^eps <= T < x. The paper
+  proves this bound only for x <= T <= e^x. The pair-correlation hypothesis is
+  not covered.
+sources:
+  - authors: N. Kandhil, A. Languasco, P. Moree
+    title: "Beyond the Riemann Hypothesis bounds: A pair-correlation approach to the least prime in arithmetic progression and the smallest quadratic non-residue"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.14515
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper also has a conditional result on the least prime in an arithmetic progression under GRH and a second pair-correlation hypothesis; it is not recorded here and its statement was not read in full.
+lean:
+  proved: false
+  path: null
+related: [least-quadratic-nonresidue]
+tags: [quadratic-non-residue, pair-correlation, dirichlet-characters]
+added: 2026-11-21
