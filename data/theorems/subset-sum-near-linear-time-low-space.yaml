@@ -1,0 +1,41 @@
+id: subset-sum-near-linear-time-low-space
+title: Subset Sum in time about n t and space about n
+field: complexity-theory
+statement_plain: >
+  Subset Sum with n positive integers and target t has a randomized
+  algorithm with one-sided error probability (n + t)^(-Omega(1)) that runs
+  in time O~(n t) and space O~(n log t), where O~ hides polylogarithmic
+  factors.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used for the time and space bounds. The algorithm works
+  modulo a random prime p congruent to 1 modulo tau, where tau is a power of
+  two of size about t, and needs many such primes of size polynomial in tau.
+  The paper obtains them from a conditional quantitative form of Dirichlet's
+  theorem on primes in arithmetic progressions (a bound of Titchmarsh).
+  Unconditionally the same theorem gives time O~(n t^(1+epsilon)) and space
+  O~(n t^epsilon). The main result of the paper, time O~(n + t), is
+  unconditional and is not this entry.
+sources:
+  - authors: K. Bringmann
+    title: A near-linear pseudopolynomial time algorithm for Subset Sum
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1610.04712
+    hypothesis_location: "Theorem 1.3, first item, proved in Section 4 through Lemma 4.4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper does not define its Extended Riemann Hypothesis. The classification rests on its only use, a count of primes in the progression 1 + tau N taken from a cited paper (reference [8], Proposition 4.3), which was not read.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, subset-sum, primes-in-arithmetic-progressions]
+added: 2026-11-21

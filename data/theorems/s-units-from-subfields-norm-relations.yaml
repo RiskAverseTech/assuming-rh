@@ -1,0 +1,42 @@
+id: s-units-from-subfields-norm-relations
+title: Polynomial-time reduction of S-unit computation to subfields via norm relations
+field: computational-number-theory
+statement_plain: >
+  Let G be a finite group and H a set of subgroups of G for which a norm
+  relation exists. There is a deterministic polynomial-time algorithm that,
+  given a number field K, an injection of G into Aut(K), a finite G-stable
+  set S of prime ideals of K, and for each subgroup in H a basis of the
+  S-unit group of its fixed field, returns a Z-basis of the group of S-units
+  of K.
+statement_formal: null
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+status_note: >
+  The hypothesis enters through the paper's effective Grunwald-Wang theorem
+  (Theorem 4.11), which bounds the primes needed to test whether an element
+  is a d-th power. Its proof applies Theorem 4 of Bach (1990) to a ray class
+  group character of the field L = K(zeta_d), so it needs Hecke L-functions
+  of a general number field. The hypothesis is needed to prove that the
+  saturation step is correct with a polynomial bound on the primes used.
+sources:
+  - authors: J.-F. Biasse, C. Fieker, T. Hofmann, A. Page
+    title: Norm relations and computational problems in number fields
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2002.12332
+    hypothesis_location: "Theorem E in the introduction, proved as Theorem 4.18 using Theorem 4.11 and Corollary 4.13"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes GRH without a formal definition. The Hecke code comes from the proof of Theorem 4.11, which names a ray class group character and cites Bach's Theorem 4.
+lean:
+  proved: false
+  path: null
+related: [bach-class-group-generators]
+tags: [algorithms, s-units, number-fields]
+added: 2026-11-21

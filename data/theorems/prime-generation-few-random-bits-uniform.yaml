@@ -1,0 +1,45 @@
+id: prime-generation-few-random-bits-uniform
+title: Close to uniform prime generation with few random bits
+field: computational-number-theory
+statement_plain: >
+  Fix q proportional to x^(1 - epsilon). The algorithm picks a random residue
+  a coprime to q, tests random numbers a + t q up to x for primality up to
+  (log x)^2 times, and then falls back to testing uniformly random integers
+  up to x. It terminates almost surely, its output distribution on primes up
+  to x is statistically close to uniform, and on average it needs
+  (1 + o(1)) (phi(q)/q) log x primality tests and
+  (epsilon + o(1)) (phi(q)/q) (log x)^2 / log 2 random bits.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper defines its hypothesis as the Riemann Hypothesis for L-functions
+  of Dirichlet characters. It is used, through a theorem of Turan on the mean
+  square of pi(x; q, a) - pi(x)/phi(q) over residues a, for both the
+  uniformity bound and the average running time. Termination does not depend
+  on it. The same paper gives a different algorithm with a random modulus
+  that is analysed unconditionally with the Barban-Davenport-Halberstam
+  theorem, but its distance to uniform is only polynomially small in log x,
+  so it does not replace this result.
+sources:
+  - authors: P.-A. Fouque, M. Tibouchi
+    title: Close to uniform prime number generation with fewer random bits
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1406.7078
+    hypothesis_location: "Theorems 3.4.1 and 3.4.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The entry combines Theorem 3.4.1 (uniformity) and Theorem 3.4.2 (iterations and random bits) for Algorithm 2. Theorem 3.4.1 also bounds the collision entropy, which is left out of the statement.
+lean:
+  proved: false
+  path: null
+related: [primes-in-arithmetic-progressions-error]
+tags: [algorithms, prime-generation, primes-in-arithmetic-progressions]
+added: 2026-11-21

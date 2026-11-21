@@ -1,0 +1,46 @@
+id: hilbert-class-polynomial-crt-algorithm
+title: Computing Hilbert class polynomials with the Chinese Remainder Theorem
+field: computational-number-theory
+statement_plain: >
+  The Hilbert class polynomial H_D(X) modulo a positive integer P can be
+  computed by a Las Vegas algorithm in expected time
+  O(|D| (log |D|)^5 (log log |D|)^4) using
+  O(|D|^(1/2) (log |D| + log P) log log |D|) space.
+statement_formal: |
+  O\!\left(|D|\log^5|D|\,(\log\log|D|)^4\right) \text{ time}, \qquad O\!\left(|D|^{1/2}(\log|D|+\log P)\log\log|D|\right) \text{ space}
+hypotheses_required: [GRH-Dirichlet, ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+status_note: >
+  The output is always correct; the paper says the hypothesis is used only
+  for the complexity bounds, and that its label GRH stands for several
+  extended or generalized Riemann hypotheses. Three kinds appear. The bound
+  on the class number h(D) concerns a quadratic Dirichlet L-function. The
+  supply of suitable primes comes from an effective Chebotarev density
+  theorem in the ring class field of the order of discriminant D, which is
+  not abelian over the rationals in general. The bound O((log |D|)^2) on the
+  prime norms generating the class group is Bach's bound, which uses class
+  group characters of the imaginary quadratic field.
+sources:
+  - authors: A. V. Sutherland
+    title: Computing Hilbert class polynomials with the Chinese Remainder Theorem
+    year: 2013
+    venue: "Mathematics of Computation (journal header printed in the arXiv text, volume and pages not shown)"
+    url: https://arxiv.org/abs/0903.2785
+    hypothesis_location: "Theorem 1, proved in Section 7 through Lemmas 2 to 7"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year is that of the arXiv version read (v4). The journal volume, pages and year are not printed in the text.
+    - >-
+      The assignment of each bound to a kind of L-function is this draft's reading of the cited tools (effective Chebotarev in the ring class field, Bach's generator bound), not a statement in the paper.
+lean:
+  proved: false
+  path: null
+related: [bach-class-group-generators]
+tags: [algorithms, class-polynomials, complex-multiplication, chebotarev]
+added: 2026-11-21
