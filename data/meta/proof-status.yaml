@@ -1,15 +1,15 @@
 # Verification status of the proof every "unlocked" label depends on.
 # The site banner and the method page read this file. Update last_updated
 # whenever anything here changes.
-status: Claimed. The formal proof has been checked by many independent proof checkers. Not yet accepted by the mathematical community.
-headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
+status: Formal proof verified by the Lean community. The argument has not yet been understood or reviewed by mathematicians.
+headline: The Lean community has verified a formal proof of the Riemann Hypothesis. The argument has not yet been understood or reviewed by mathematicians.
 summary: >
   On 20 November 2026 Levent Alpöge released a proof, written in a form that
   computers can check, of the Riemann Hypothesis and of its extension to
-  Dirichlet L-functions. The Lean community has checked it with many
-  independent proof checkers, including formally verified ones, and all
-  accept it. No account of the argument has been reviewed and published by
-  mathematicians.
+  Dirichlet L-functions. On 21 November the Lean FRO and the Mathlib
+  Initiative announced a joint statement certifying that the formal proof is
+  correct and meets their verification criteria. No account of the argument
+  that mathematicians can read has been reviewed.
 last_updated: 2026-11-21
 claims:
   - The Riemann Hypothesis, stated with Mathlib's own definition.
@@ -41,7 +41,7 @@ caveats:
     not yet been re-read by a human. Sources marked "not read directly" were
     seen only as search summaries or as links in the discussion.
 sources:
-  - label: "Lean community announcement on the verification process (linked in the discussion, not read directly)"
+  - label: "Joint statement of the Lean FRO and the Mathlib Initiative on the verification (announced by the Lean account; the statement itself was not read directly)"
     url: https://leanprover-community.github.io/blog/posts/riemann-hypothesis/
     accessed: 2026-11-21
   - label: "Community copy of the Lean code"
