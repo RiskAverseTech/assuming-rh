@@ -1,0 +1,39 @@
+id: goldbach-cesaro-average-error-order-n
+title: Cesaro-weighted average of Goldbach representations with error O(N)
+field: additive-number-theory
+statement_plain: >
+  Let r_2(n) be the sum of Lambda(m) Lambda(m') over all m + m' = n. Then the
+  sum of (1 - n/N) r_2(n) over n up to N equals N^2 / 6 minus twice the sum of
+  N^(rho+1) / (rho (rho+1) (rho+2)) over the nontrivial zeros rho of the
+  Riemann zeta function, with an error O(N).
+statement_formal: |
+  \sum_{n \le N} \left(1 - \frac{n}{N}\right) r_2(n) = \frac{N^2}{6} - 2\sum_{\rho} \frac{N^{\rho+1}}{\rho(\rho+1)(\rho+2)} + O(N), \qquad r_2(n) = \sum_{m + m' = n} \Lambda(m)\Lambda(m')
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is the smoothed companion of the unweighted average recorded in the
+  entry goldbach-average-explicit-formula-error-n-log-cubed (Languasco and
+  Zaccagnini, error O(N log^3 N)), which the same paper re-proves as its
+  Theorem 1; with the Cesaro weight of order 1 the error drops to O(N). It
+  relates to the entry goldbach-average-equivalent-to-rh as well.
+sources:
+  - authors: D. A. Goldston, L. Yang
+    title: The Average Number of Goldbach Representations
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1601.06902
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      In the extracted text the paper's restatement of the Languasco and Zaccagnini formula (its Theorem 1, equation (2.1)) prints the sum over zeros without the factor 2 that appears in its equation (1.4); this does not affect Theorem 2, which is what is recorded here.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, mean-values, zeta-zeros]
+added: 2026-11-21

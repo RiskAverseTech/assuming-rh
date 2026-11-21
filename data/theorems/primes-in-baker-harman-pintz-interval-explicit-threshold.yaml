@@ -1,0 +1,45 @@
+id: primes-in-baker-harman-pintz-interval-explicit-threshold
+title: "Explicit range for a prime in [x, x + x^(21/40)]"
+field: analytic-number-theory
+statement_plain: >
+  For every x at least 3.5 * 10^90 there is a prime in the interval
+  [x, x + x^(1/2 + 1/40)]. Moreover, for every m with 0 < m <= 15.831 and
+  every x at least 1 there is a prime in [x, x + x^(1/2 + 1/m)].
+statement_formal: |
+  \text{For all } x \ge 3.5 \times 10^{90} \text{ there is a prime in } \left[x,\; x + x^{\frac12 + \frac1{40}}\right]
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is deduced from the bound of Carneiro, Milinovich and Soundararajan
+  recorded in the entry dudek-primes-short-intervals, by finding where
+  x^(1/40) exceeds (22/25) log x; the second statement also uses the
+  computation of Sorenson and Webster verifying a prime between n^2 and
+  n^2 + n for n up to 7 * 10^13. Baker, Harman and Pintz proved
+  unconditionally that the interval [x, x + x^(21/40)] contains a prime for
+  all sufficiently large x, with no explicit threshold. The paper's Theorem 3
+  (a prime in [y^M, (y+1)^M] for M at least 2.29) is weaker than the entry
+  primes-between-consecutive-powers-above-squares, which reaches exponent
+  2.25, and is not recorded.
+sources:
+  - authors: M. Visser
+    title: Primes in short intervals assuming the Riemann hypothesis
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.27830
+    hypothesis_location: Theorem 1 (and Theorem 2 for the second statement)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The result is a short corollary of the Carneiro, Milinovich and Soundararajan prime gap bound; a reviewer may prefer to fold it into the entry dudek-primes-short-intervals instead of keeping a separate entry.
+    - >-
+      The second statement depends on the Sorenson and Webster computation, which was not checked here. The paper is a recent preprint.
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-gaps, short-intervals, explicit-bounds]
+added: 2026-11-21
