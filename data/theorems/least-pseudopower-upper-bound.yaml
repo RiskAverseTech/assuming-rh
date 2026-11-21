@@ -1,0 +1,44 @@
+id: least-pseudopower-upper-bound
+title: Upper bound for the least x-pseudopower to base g
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer g with |g| >= 2. An x-pseudopower to base g is a positive
+  integer that is not a power of g but is congruent to a power of g modulo
+  every prime p <= x. Let q_g(x) be the least one. There is a number a_g such
+  that q_g(x) <= exp(a_g x log log x / log x) for all x >= 3.
+statement_formal: |
+  q_g(x)\le \exp\!\left(a_g\,\frac{x\log\log x}{\log x}\right)\qquad (x\ge 3)
+hypotheses_required: [ERH-Dedekind, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper defines its GRH as the Riemann Hypothesis for Dedekind zeta
+  functions of algebraic number fields. The proof uses it twice: through a
+  result of Kurlberg and Pomerance on the multiplicative order of g modulo
+  primes, proved by the method of Hooley (Kummer fields, not abelian over
+  the rationals), and for sums of chi(n) Lambda(n) over Dirichlet characters.
+  The first use is not covered. Bach, Lukes, Shallit and Williams conjecture
+  the stronger bound exp(a_g x / log x). The same paper proves under the same
+  hypothesis that x-pseudopowers are equidistributed in intervals of length
+  at least exp(b_g x / log log x) (its Theorem 3); its results on
+  pseudosquares are unconditional.
+sources:
+  - authors: C. Pomerance, I. E. Shparlinski
+    title: On pseudosquares and pseudopowers
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/0712.1081
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The exact fields needed come from the cited theorem of Kurlberg and Pomerance, which was not read; the classification as Kummer fields rests on this paper's statement that it follows ideas of Hooley and Pappalardi.
+lean:
+  proved: false
+  path: null
+tags: [pseudopowers, multiplicative-order, least-witness]
+added: 2026-11-21

@@ -1,0 +1,45 @@
+id: short-character-sums-smooth-number-approximation
+title: Character sums are governed by smooth numbers, and are o(x) once log x / log log q tends to infinity
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a non-principal character modulo q and let 1 <= x <= q. Write
+  Psi(x, y; chi) for the sum of chi(n) over n <= x all of whose prime factors
+  are at most y, and Psi(x, y) for the number of such n. If
+  y >= (log q)^2 (log x)^2 (log log q)^12 then the sum of chi(n) over n <= x
+  equals Psi(x, y; chi) + O(Psi(x, y) / (log log q)^2). Further, the sum is
+  at most a constant times Psi(x, (log q)^2 (log log q)^20), so it is o(x)
+  whenever log x / log log q tends to infinity with q.
+statement_formal: |
+  \sum_{n\le x}\chi(n)=\Psi(x,y;\chi)+O\!\left(\frac{\Psi(x,y)}{(\log\log q)^{2}}\right)\quad\text{for } y\ge \log^{2}q\,\log^{2}x\,(\log\log q)^{12},\qquad \sum_{n\le x}\chi(n)\ll\Psi\!\left(x,\log^{2}q\,(\log\log q)^{20}\right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper refines Lemma 2 of Montgomery and Vaughan, who proved the
+  approximation with error O(x y^(-1/2) log^4 q) under the same hypothesis.
+  The paper also shows unconditionally that the range is best possible: for
+  any fixed A and every prime q some non-principal character has a sum of
+  size >> x at x = (log q)^A. This concerns short sums and is a different
+  result from the entries polya-vinogradov-loglog-improvement and
+  character-sums-maximal-size-explicit-constant, which bound the maximal
+  sum by a multiple of sqrt(q) log log q.
+sources:
+  - authors: A. Granville, K. Soundararajan
+    title: Large character sums
+    year: 1999
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9903196
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The arXiv text does not define the hypothesis beyond the name Generalized Riemann Hypothesis; it is applied to Dirichlet characters, following Montgomery and Vaughan. Whether only L(s, chi) for the given character is needed was not checked.
+    - Year and venue are those of the arXiv version; no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, smooth-numbers, dirichlet-characters]
+added: 2026-11-21

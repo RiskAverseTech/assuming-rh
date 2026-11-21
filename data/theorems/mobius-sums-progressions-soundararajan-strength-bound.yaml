@@ -1,0 +1,43 @@
+id: mobius-sums-progressions-soundararajan-strength-bound
+title: Mobius sums in arithmetic progressions with no restriction on the modulus
+field: analytic-number-theory
+statement_plain: >
+  Let M(x; q, a) be the sum of mu(n) over n <= x with n congruent to a mod q,
+  and let d = gcd(a, q). For every eps > 0, M(x; q, a) is at most a constant
+  depending only on eps times
+  sqrt(x/d) exp((log(x/d))^(1/2) (log log(x/d))^(3 + eps)), uniformly over
+  all progressions a mod q.
+statement_formal: |
+  M(x;q,a)=\sum_{\substack{n\le x\\ n\equiv a \bmod q}}\mu(n)\ll_{\varepsilon}\sqrt{x/d}\,\exp\!\left((\log(x/d))^{1/2}(\log\log(x/d))^{3+\varepsilon}\right),\qquad d=\gcd(a,q)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states the hypothesis as: for every Dirichlet character chi, all
+  nontrivial zeros of L(s, chi) lie on the line Re(s) = 1/2. The proof sums
+  over all characters of a modulus, including the principal one, so RH is
+  listed as well. This sharpens the bound of Halupczok and Suger (draft
+  entry mobius-sums-progressions-halupczok-suger-bound), which has exponent
+  3/5 on log x and requires gcd(a, q) = 1 and a restricted range of q. It is
+  the analogue for progressions of Soundararajan's bound for the Mertens
+  function M(x); the entry mertens-function-bound records the classical
+  bound for M(x). The bound is nontrivial for q <= x^(1/2 - eps).
+sources:
+  - authors: L. Ye
+    title: Bounding sums of the Möbius function over arithmetic progressions
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1406.7326
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The source is an arXiv preprint; no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, arithmetic-progressions, mertens-function]
+added: 2026-11-21

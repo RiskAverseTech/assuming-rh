@@ -1,0 +1,37 @@
+id: fractional-moments-dirichlet-l-functions-upper-bound
+title: Upper bound of the right order for fractional moments of Dirichlet L-functions, 0 < k < 2
+field: analytic-number-theory
+statement_plain: >
+  Let M_k(q) be the sum of |L(1/2, chi)|^(2k) over all non-principal
+  characters chi modulo q. For every real k with 0 < k < 2, M_k(q) is at most
+  a constant depending on k times phi(q) (log q)^(k^2).
+statement_formal: |
+  M_k(q)=\sum_{\substack{\chi \bmod q\\ \chi\ne\chi_0}}\left|L(\tfrac12,\chi)\right|^{2k}\ll_k \varphi(q)(\log q)^{k^2}\qquad (0<k<2)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used for the L-functions of the non-principal characters
+  modulo q. The same paper proves the bound unconditionally when k = 1/v for
+  a positive integer v (its Theorem 2). This is a different result from the
+  entry eighth-moment-dirichlet-l-functions, which is an asymptotic formula
+  averaged over moduli.
+sources:
+  - authors: D. R. Heath-Brown
+    title: Fractional Moments of Dirichlet L-Functions
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0910.2102
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - Later work using the methods of Soundararajan and Harper may give this bound under the same hypothesis for all k > 0; this was not checked.
+lean:
+  proved: false
+  path: null
+tags: [moments, dirichlet-l-functions, central-values]
+added: 2026-11-21

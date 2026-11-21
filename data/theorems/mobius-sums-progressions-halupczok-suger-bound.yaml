@@ -1,0 +1,42 @@
+id: mobius-sums-progressions-halupczok-suger-bound
+title: Mobius sums in arithmetic progressions with a Siegel-Walfisz type range of moduli
+field: analytic-number-theory
+statement_plain: >
+  Let M(x, q, a) be the sum of mu(n) over n <= x with n congruent to a mod q.
+  For every eps > 0, M(x, q, a) is at most a constant depending only on eps
+  times sqrt(x) exp((log x)^(3/5) (log log x)^(16/5 + eps)), uniformly for
+  gcd(a, q) = 1 and all q up to
+  exp((log 2 / 2) floor((log x)^(3/5) (log log x)^(11/5))).
+statement_formal: |
+  M(x,q,a)=\sum_{\substack{n\le x\\ n\equiv a \bmod q}}\mu(n)\ll_{\varepsilon}\sqrt{x}\,\exp\!\left((\log x)^{3/5}(\log\log x)^{16/5+\varepsilon}\right),\qquad \gcd(a,q)=1,\quad q\le \exp\!\left(\tfrac{\log 2}{2}\left\lfloor(\log x)^{3/5}(\log\log x)^{11/5}\right\rfloor\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes the Riemann hypothesis for all Dirichlet L-series
+  L(s, chi) with chi mod q, for all moduli q in the range. This includes the
+  principal character, whose L-function has the zeros of the Riemann zeta
+  function, so RH is listed as well. The method extends Soundararajan's
+  bound for the Mertens function M(x) to progressions; the entry
+  mertens-function-bound records the classical bound for M(x). The paper notes its bound is weaker than those of
+  Soundararajan and of Balazard and de Roton for M(x) but sharper than that
+  of Maier and Montgomery.
+sources:
+  - authors: K. Halupczok, B. Suger
+    title: Partial sums of the Möbius function in arithmetic progressions assuming GRH
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1111.3305
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - A later preprint of L. Ye (arXiv 1406.7326) claims a stronger bound with no restriction on q; it is drafted as a separate entry (mobius-sums-progressions-soundararajan-strength-bound).
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, arithmetic-progressions, mertens-function]
+added: 2026-11-21

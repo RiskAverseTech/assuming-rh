@@ -1,0 +1,42 @@
+id: primitive-dirichlet-l-functions-simple-zeros-eleven-twelfths
+title: At least 11/12 of the zeros of primitive Dirichlet L-functions are simple, in a weighted average over moduli
+field: analytic-number-theory
+statement_plain: >
+  Average over moduli q between Q and 2Q with a smooth weight W(q/Q)/phi(q),
+  over primitive characters chi mod q, and over zeros 1/2 + i gamma of
+  L(s, chi) with weight |Phi^(i gamma)|^2, where Phi^ is the Mellin transform
+  of Phi and Phi^(ix) = (sin x / x)^2. Then the weighted sum over simple
+  zeros is at least 11/12 + o(1) times the weighted sum over all zeros, as Q
+  tends to infinity.
+statement_formal: |
+  \frac{1}{N_\Phi(Q)}\sum_{q}\frac{W(q/Q)}{\varphi(q)}\sum\nolimits^{*}_{\chi \bmod q}\ \sum_{\gamma_\chi\ \text{simple}}\left|\hat\Phi(i\gamma_\chi)\right|^{2}\ \ge\ \frac{11}{12}+o(1),\qquad N_\Phi(Q)=\sum_{q}\frac{W(q/Q)}{\varphi(q)}\sum\nolimits^{*}_{\chi \bmod q}\ \sum_{\gamma_\chi}\left|\hat\Phi(i\gamma_\chi)\right|^{2}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is assumed throughout the paper for primitive Dirichlet
+  L-functions. The result follows from the paper's Theorem 2, an asymptotic
+  for the q-analogue of the pair correlation function for |alpha| < 2. The
+  paper says the earlier method of Ozluk, which averages over all characters,
+  gives a proportion of 0.8688. The weight is concentrated on zeros of
+  bounded height, so this is a statement about low-lying zeros. Compare the
+  entry zeta-simple-zeros-proportion-19-27 for the Riemann zeta function.
+sources:
+  - authors: V. Chandee, Y. Lee, S.-C. Liu, M. Radziwiłł
+    title: Simple zeros of primitive Dirichlet L-functions and the asymptotic large sieve
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1211.6725
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The function Phi with Mellin transform (sin x / x)^2 on the imaginary axis is not smooth; the paper remarks that its Theorem 2 still applies.
+lean:
+  proved: false
+  path: null
+tags: [simple-zeros, dirichlet-l-functions, pair-correlation, asymptotic-large-sieve]
+added: 2026-11-21

@@ -1,0 +1,46 @@
+id: fourth-moment-quadratic-dirichlet-l-functions-asymptotic
+title: Asymptotic formula for the fourth moment of quadratic Dirichlet L-functions at the central point
+field: analytic-number-theory
+statement_plain: >
+  Let chi_8d be the real primitive character given by the Kronecker symbol
+  (8d / .). The sum of L(1/2, chi_8d)^4 over odd square-free d with
+  0 < d <= X equals
+  a_4 / (2^6 3^3 5^2 7 pi^2) X (log X)^10 + O(X (log X)^(9.75 + eps)) for
+  every eps > 0, where a_4 is an explicit Euler product over odd primes.
+statement_formal: |
+  \begin{aligned}
+  &\sum\nolimits^{*}_{\substack{0<d\le X\\ (d,2)=1}} L\!\left(\tfrac12,\chi_{8d}\right)^{4}
+  =\frac{a_4}{2^{6}\cdot 3^{3}\cdot 5^{2}\cdot 7\cdot\pi^{2}}\,X(\log X)^{10}+O\!\left(X(\log X)^{9.75+\varepsilon}\right),\\
+  &a_4=2^{-12}\prod_{p>2}\frac{\left(1-\frac1p\right)^{10}}{1+\frac1p}\left(\frac{\left(1+\frac{1}{\sqrt p}\right)^{-4}+\left(1-\frac{1}{\sqrt p}\right)^{-4}}{2}+\frac1p\right)
+  \end{aligned}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The starred sum is over square-free integers. The theorem is stated
+  assuming GRH for L(s, chi_d) for all fundamental discriminants d; the proof
+  (Section 8) also invokes RH for a sum over primes, so RH is listed as well.
+  This confirms, for k = 4, the leading term conjectured by Keating and
+  Snaith in the form given by Andrade and Keating. The same paper proves
+  unconditionally the lower bound with the same leading constant (its
+  Theorem 1.2). The entry second-moment-quadratic-l-functions-prime-conductor
+  is a different result, on the second moment over prime conductors.
+sources:
+  - authors: Q. Shen
+    title: The fourth moment of quadratic Dirichlet L-functions
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/1907.01107
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The theorem statement names only GRH for quadratic Dirichlet L-functions, while the proof says "By RH" at (8.3); RH was added on that basis. Both are covered, so the status does not depend on this.
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-characters, central-values]
+added: 2026-11-21

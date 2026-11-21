@@ -1,0 +1,49 @@
+id: n-level-density-quadratic-dirichlet-l-functions-support-two
+title: n-level density of low-lying zeros of quadratic Dirichlet L-functions for Fourier support sum |u_i| < 2
+field: analytic-number-theory
+statement_plain: >
+  Consider the family L(s, chi_8d) with d odd, positive and square-free,
+  X <= d <= 2X. For a test function f(x_1, ..., x_n) that is a product of
+  even Schwartz functions whose Fourier transform is supported in
+  |u_1| + ... + |u_n| < 2, the n-level density of the low-lying zeros
+  (scaled by log X / (2 pi) and averaged over the family) has a limit as X
+  tends to infinity, given by an explicit combinatorial formula in the f_i
+  and their Fourier transforms. For n <= 3 this limit equals the integral of
+  f against the unitary symplectic n-level density predicted by the Katz-Sarnak
+  Density Conjecture.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes GRH throughout and uses it for the zeros of L(s, chi_8d)
+  and for sums over primes twisted by non-principal quadratic characters
+  (its Proposition 3.1). This extends Rubinstein's result, which under the
+  same hypothesis covers support in |u_1| + ... + |u_n| < 1. The paper says
+  it cannot show that its formula matches the symplectic prediction for
+  general n; the match for n <= 3 is its Corollary 2.2, whose computation is
+  omitted and referred to another work of the author. The full formula of
+  Theorem 2.1 is too long to reproduce here. The entry
+  low-lying-zeros-dirichlet-l-functions-quarter-spacing concerns a different
+  family (all characters of a prime modulus).
+sources:
+  - authors: P. Gao
+    title: n-level density of the low-lying zeros of quadratic Dirichlet L-functions
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0806.4830
+    hypothesis_location: Theorem 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The entry does not reproduce the explicit formula of Theorem 2.1; a reviewer may want to add it or restrict the entry to Corollary 2.2.
+    - The proof of Corollary 2.2 (agreement with the symplectic density for n at most 3) is not in the paper; it is referred to reference [3].
+    - The introduction defines GRH for general automorphic L-functions, but the hypothesis appears to be used only for quadratic Dirichlet L-functions. Whether the Riemann zeta function is also needed (for example for square moduli) was not checked line by line; either way the status is unlocked.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, quadratic-characters, n-level-density]
+added: 2026-11-21
