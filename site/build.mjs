@@ -120,6 +120,16 @@ function page({ file, title, description, body, math = false }) {
 <title>${esc(title)}${title === cfg.name ? '' : ' | ' + esc(cfg.name)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="author" content="${esc(cfg.credit)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${esc(cfg.name)}">
+<meta property="og:title" content="${esc(title === cfg.name ? cfg.name + ': ' + cfg.tagline : title + ' | ' + cfg.name)}">
+<meta property="og:description" content="${esc(file === 'index.html' ? cfg.share_description : description)}">
+<meta property="og:url" content="${esc(cfg.site_url + (file === 'index.html' ? '' : file))}">
+<meta property="og:image" content="${esc(cfg.site_url)}assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Assuming RH: which theorems proved assuming the Riemann Hypothesis would the announced proof settle, and which need more?">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="assets/style.css">
@@ -207,6 +217,13 @@ function buildHome() {
   ${authorSub ? `<p class="muted">${authorSub} more ${authorSub === 1 ? 'entry is an unrefereed result' : 'entries are unrefereed results'} submitted by ${authorSub === 1 ? 'its author' : 'their authors'}. ${authorSub === 1 ? 'It is' : 'They are'} labeled and not included in the counts above. <a href="about.html#author-submitted">What that means</a>.</p>` : ''}
   <p class="muted">${unchecked} of ${entries.length} entries are AI-classified and not yet checked by a human expert.
   <a href="about.html#review-states">What the review states mean</a>.</p>
+</section>
+<section aria-labelledby="known-h">
+  <h2 id="known-h">Some well-known results at a glance</h2>
+  <ul class="known">
+    ${(cfg.highlights || []).filter((id) => byId[id]).map((id) => { const e = byId[id]; const st = e.statement_plain.trim().replace(/\s+/g, ' '); const cut = st.length > 150 ? st.slice(0, st.lastIndexOf(' ', 150)) + ' ...' : st; return `<li class="status-${e.status}"><a href="theorems/${e.id}.html"><span class="known-title">${esc(e.title)}</span><span class="known-st">${esc(cut)}</span></a><span class="known-badge">${statusBadge(e)}</span></li>`; }).join('\n    ')}
+  </ul>
+  <p class="muted">A small selection. <a href="browse.html">Browse all ${entries.length} entries</a> or see <a href="waiting.html">what is still waiting</a>.</p>
 </section>
 <section aria-labelledby="start-h">
   <h2 id="start-h">Where to start</h2>
@@ -551,7 +568,7 @@ function buildData() {
 // ---------- run ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets', 'katex'), { recursive: true });
-for (const f of ['style.css', 'app.js']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
+for (const f of ['style.css', 'app.js', 'social-card.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
 const kdist = path.join(ROOT, 'node_modules', 'katex', 'dist');
 fs.copyFileSync(path.join(kdist, 'katex.min.css'), path.join(OUT, 'assets', 'katex', 'katex.min.css'));
 fs.cpSync(path.join(kdist, 'fonts'), path.join(OUT, 'assets', 'katex', 'fonts'), { recursive: true, filter: (src) => !/\.(ttf|woff)$/.test(src) });
