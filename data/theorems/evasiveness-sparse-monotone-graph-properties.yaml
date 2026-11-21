@@ -1,0 +1,37 @@
+id: evasiveness-sparse-monotone-graph-properties
+title: Sparse monotone graph properties are eventually evasive
+field: complexity-theory
+statement_plain: >
+  For any eps > 0, every nontrivial monotone property of n-vertex graphs that
+  fails for all graphs with more than n^(5/4 - eps) edges is evasive for all
+  sufficiently large n. That is, its decision-tree complexity equals the
+  number n(n-1)/2 of possible edges.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper defines ERH as the Riemann Hypothesis for Dirichlet L-functions.
+  It is used for a prime number theorem in arithmetic progressions with
+  square-root error, which gives a prime r = a mod pq with n/4 <= r <= n/2
+  for a modulus pq of size about n^(1/2 - eps). Under Chowla's conjecture on
+  the least prime in a progression the edge bound improves to n^(3/2 - eps),
+  and unconditionally the paper gets c n log n.
+sources:
+  - authors: L. Babai, A. Banerjee, R. Kulkarni, V. Naik
+    title: Evasiveness and the Distribution of Prime Numbers
+    year: 2010
+    venue: Symposium on Theoretical Aspects of Computer Science 2010 (Nancy, France), pp. 71-82
+    url: https://arxiv.org/abs/1001.4829
+    hypothesis_location: "Theorem 1.4 (b), proved in Section 5.3 from Lemma 5.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [evasiveness, decision-tree-complexity, primes-in-progressions]
+added: 2026-11-21

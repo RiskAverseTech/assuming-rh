@@ -1,0 +1,38 @@
+id: odd-order-character-sums-polya-vinogradov-improvement
+title: Maximal sums of odd order characters, up to a power of log log log log q
+field: analytic-number-theory
+statement_plain: >
+  Let g >= 3 be a fixed odd integer and chi a primitive Dirichlet character
+  of order g and conductor q. Then the maximal partial sum
+  M(chi) = max_t |sum_{n <= t} chi(n)| is at most a constant times
+  sqrt(q) (log log q)^(1 - delta_g) (log log log q)^(-1/4) (log log log log q)^O(1),
+  where delta_g = 1 - (g/pi) sin(pi/g).
+statement_formal: |
+  M(\chi) \ll \sqrt{q}\,(\log_2 q)^{1-\delta_g}(\log_3 q)^{-1/4}(\log_4 q)^{O(1)},
+  \qquad \delta_g = 1-\frac{g}{\pi}\sin\frac{\pi}{g}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here log_j is the j-fold iterated logarithm. The paper also shows
+  unconditionally (Theorem 1.3) that the bound is attained up to the power of
+  log_4 q. The GRH input is a result of Granville and Soundararajan relating
+  M(chi) to twists by characters of small conductor.
+sources:
+  - authors: Y. Lamzouri, A. P. Mangerel
+    title: Large odd order character sums and improvements of the Polya-Vinogradov inequality
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1701.01042
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [character-sums, polya-vinogradov, dirichlet-characters]
+added: 2026-11-21

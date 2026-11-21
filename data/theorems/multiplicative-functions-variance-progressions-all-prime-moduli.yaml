@@ -1,0 +1,43 @@
+id: multiplicative-functions-variance-progressions-all-prime-moduli
+title: Variance of bounded multiplicative functions in progressions for every prime modulus
+field: analytic-number-theory
+statement_plain: >
+  Let 1 <= Q <= x/10 and (log(x/Q))^(-1/200) <= eps <= 1. For every prime
+  p <= Q and every multiplicative function f with |f| <= 1, the variance over
+  reduced residue classes a mod p of the sum of f(n) over n <= x, n = a mod p,
+  around the main term (chi_1(a)/phi(p)) sum_{n <= x} f(n) conj(chi_1(n)), is
+  at most a constant times eps x^2 / p. Here chi_1 is a character mod p
+  minimizing the pretentious distance from f to chi(n) n^(it) with |t| <= log x.
+statement_formal: |
+  \sideset{}{^*}\sum_{a \bmod p}\left|\sum_{\substack{n\le x\\ n\equiv a \,(\mathrm{mod}\, p)}}f(n)-\frac{\chi_1(a)}{\varphi(p)}\sum_{n\le x}f(n)\overline{\chi_1}(n)\right|^{2}\ll \varepsilon\,\frac{x^{2}}{p}
+  \quad\text{for all primes } p\le Q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Unconditionally the paper proves the same bound for all primes p <= Q
+  outside an exceptional set of size at most (log x)^(eps^(-200)). The
+  exceptional moduli are those for which some Dirichlet L-function mod q of
+  large conductor has a zero close to the line Re(s) = 1, so under GRH there
+  are none. Analogous GRH statements hold for general typical moduli
+  (Theorem 1.4) and in the hybrid setting (Theorem 1.5).
+sources:
+  - authors: O. Klurman, A. P. Mangerel, J. Teravainen
+    title: Multiplicative functions in short arithmetic progressions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/1909.12280
+    hypothesis_location: "Corollary 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The GRH statement is a one-sentence addendum to Corollary 1.1 (and to Theorems 1.2, 1.4 and 1.5). Unconditionally the same bound holds for all primes outside a small exceptional set, so the conditional part is a secondary result of the paper."
+    - "The paper remarks that a weaker version of GRH (a zero-free region near the 1-line for characters of large conductor) suffices."
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-functions, arithmetic-progressions, variance]
+added: 2026-11-21

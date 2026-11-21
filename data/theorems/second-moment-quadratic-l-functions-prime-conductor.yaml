@@ -1,0 +1,39 @@
+id: second-moment-quadratic-l-functions-prime-conductor
+title: Asymptotic for the second moment of L(1/2, chi_p) over primes p = 1 mod 8
+field: analytic-number-theory
+statement_plain: >
+  Let chi_p be the real primitive Dirichlet character of prime conductor p.
+  The sum of (log p) L(1/2, chi_p)^2 over primes p <= X with p = 1 mod 8
+  equals c (X/4) (log X)^3 + O(X (log X)^(11/4)), where
+  c = 1 / (144 zeta(2) (1 - 1/sqrt(2))^2) = 0.0492...
+statement_formal: |
+  \sum_{\substack{p\le X\\ p\equiv 1 \,(\mathrm{mod}\, 8)}}(\log p)\,L\!\left(\tfrac12,\chi_p\right)^{2}
+  = c\,\frac{X}{4}(\log X)^{3}+O\!\left(X(\log X)^{11/4}\right),
+  \qquad c=\left(144\,\zeta(2)\left(1-\tfrac{1}{\sqrt2}\right)^{2}\right)^{-1}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem assumes the Riemann Hypothesis for zeta and for the Dirichlet
+  L-functions L(s, chi_p) with p = 1 mod 8 only. Unconditionally the paper
+  proves upper and lower bounds of the same order (Theorem 1.2).
+sources:
+  - authors: S. Baluyot, K. Pratt
+    title: Dirichlet L-functions of quadratic characters of prime conductor at the central point
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1809.09992
+    hypothesis_location: "Theorem 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper mentions work in progress by Andrade, Heath-Brown, Li, Radziwill and Soundararajan on an unconditional asymptotic for this second moment. If that has appeared, the status should become proved-otherwise."
+    - "The conditional theorem is not the main result of the paper, whose headline (Theorem 1.1, non-vanishing for more than nine percent of primes) is unconditional."
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-characters, central-values]
+added: 2026-11-21

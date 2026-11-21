@@ -1,0 +1,38 @@
+id: zeta-zeros-small-gaps-0-50895
+title: Consecutive zeta zeros closer than 0.50895 times the average spacing
+field: analytic-number-theory
+statement_plain: >
+  Let gamma_1 <= gamma_2 <= ... be the ordinates of the nontrivial zeros of
+  the Riemann zeta function in the upper half-plane. Then the lim inf of
+  (gamma_{n+1} - gamma_n) log(gamma_n) / (2 pi) is less than 0.50895. So
+  infinitely often two consecutive zeros are closer than 0.50895 times the
+  average spacing.
+statement_formal: |
+  \mu:=\liminf_{n\to\infty}\frac{\gamma_{n+1}-\gamma_n}{2\pi/\log\gamma_n}<0.50895
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  According to the paper, the previous best conditional bound was
+  mu < 0.515396. The proof combines Montgomery's pair correlation approach
+  with the Montgomery-Odlyzko method and uses only the Riemann Hypothesis for
+  zeta.
+sources:
+  - authors: S. Inoue
+    title: Small gaps between consecutive zeros of the Riemann zeta-function
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.05733
+    hypothesis_location: "Theorem 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The numerical constant comes from an optimization of weight functions that was not re-checked here."
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-spacing, small-gaps]
+added: 2026-11-21
