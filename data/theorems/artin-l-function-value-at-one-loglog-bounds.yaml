@@ -1,0 +1,51 @@
+id: artin-l-function-value-at-one-loglog-bounds
+title: Upper and lower bounds of log log size for Artin L-functions at s = 1
+field: algebraic-number-theory
+statement_plain: >
+  Let K/k be a Galois extension of number fields with group G, let chi be a
+  character of G, and let kappa(chi) be the leading coefficient of the
+  Laurent expansion of the Artin L-function L(s, chi) at s = 1. Then
+  |kappa(chi)| is bounded above and below by products of powers of
+  log log(e D_k) and log log q(chi), where D_k is the absolute discriminant
+  of k and q(chi) is the analytic conductor. The exponents are determined by
+  the degree chi(1), the minimum of Re chi(g) over G, the multiplicity of
+  the trivial character in chi, and the same quantities for the character
+  induced to the Galois closure over Q.
+statement_formal: |
+  |\kappa(\chi)| \ll_{[k:\mathbb{Q}],|G|,\chi(1)} (\log\log eD_k)^{\tilde\chi(1)-\chi(1)} \, (\log\log q(\chi))^{\chi(1)-\langle \chi, 1_G\rangle}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta function
+  of K, used through the conditional Chebotarev density theorem of Lagarias
+  and Odlyzko. The formal statement shows the upper bound only; the lower
+  bound has the same shape with chi(1) replaced by mu(chi), the minimum of
+  Re chi(g). When K is abelian over the rationals the zeta function of K
+  is a product of Dirichlet L-functions, so that case would be covered. The
+  main theorems of the paper are unconditional, with log in place of
+  log log; this is the paper's one conditional result.
+sources:
+  - authors: P. J. Cho, R. J. Lemke Oliver, A. Zaman
+    title: Effective Brauer-Siegel theorems for Artin $L$-functions
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2510.02309
+    hypothesis_location: Proposition 2.1 (proved in Section 9)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The status is still-conditional because K is a general Galois extension. A reviewer may prefer partial, since the abelian case over the rationals is covered.
+    - >-
+      The lower bound in the text extraction has an exponent printed as mu-tilde(chi), read here as mu of the induced character.
+lean:
+  proved: false
+  path: null
+related: [dedekind-zeta-residue-explicit-bounds]
+tags: [artin-l-functions, l-function-values, brauer-siegel]
+added: 2026-11-21

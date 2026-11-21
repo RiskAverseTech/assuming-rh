@@ -1,0 +1,37 @@
+id: large-values-quadratic-dirichlet-l-functions-central-point
+title: Large central values of quadratic Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  For all sufficiently large X there is a fundamental discriminant d with
+  X < |d| <= 2X for which |L(1/2, chi_d)| is at least
+  exp((1/2 + o(1)) sqrt(log X logloglog X / loglog X)).
+statement_formal: |
+  \max_{\substack{d \text{ fundamental discriminant} \\ X < |d| \le 2X}} |L(\tfrac12, \chi_d)| \ge \exp\left( \left(\tfrac12 + o(1)\right) \sqrt{\frac{\log X \, \log\log\log X}{\log\log X}} \right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says this improves a lower bound of Soundararajan for the same
+  maximum. The hypothesis enters through a character sum estimate (Lemma 1)
+  for sums of chi_d(n) over fundamental discriminants d, which is proved
+  from bounds for log L(s, chi) with chi a quadratic Dirichlet character.
+sources:
+  - authors: P. Darbar, G. Maiti
+    title: Large values of quadratic Dirichlet $L$-functions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2406.01519
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes GRH without a formal definition. The reading that only quadratic Dirichlet L-functions are needed comes from the proof of Lemma 1; the rest of the proof of Theorem 1 was not checked line by line for other uses.
+lean:
+  proved: false
+  path: null
+tags: [l-function-values, quadratic-characters, resonance-method]
+added: 2026-11-21
