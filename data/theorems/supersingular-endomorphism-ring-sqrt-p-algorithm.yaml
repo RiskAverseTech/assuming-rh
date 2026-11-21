@@ -1,0 +1,52 @@
+id: supersingular-endomorphism-ring-sqrt-p-algorithm
+title: Computing a supersingular endomorphism ring in about sqrt(p) time
+field: computational-number-theory
+statement_plain: >
+  There is a probabilistic algorithm that, given a supersingular elliptic
+  curve in characteristic p, computes its endomorphism ring in expected time
+  O~(p^(1/2)), that is p^(1/2) up to factors polynomial in log p.
+statement_formal: |
+  \mathrm{EndRing} \text{ is solvable in expected time } \tilde{O}\!\left(p^{1/2}\right)
+hypotheses_required: [GRH-Hecke]
+status: proved-otherwise
+status_note: >
+  Algorithms with this running time were known earlier only under the
+  generalized Riemann hypothesis, through Wesolowski's conditional
+  equivalence of the endomorphism ring problem with the l-isogeny path
+  problem (FOCS 2021), and by a more direct approach of Fuselier, Iezzi,
+  Kozek, Morrison and Namoijam. Page and Wesolowski prove the bound with no
+  hypothesis (Theorem 8.7), using their unconditional reduction of the
+  endomorphism ring problem to the isogeny problem. They say the earlier
+  unconditional algorithms ran in time O~(p) and returned only a full-rank
+  subring.
+sources:
+  - authors: B. Wesolowski
+    title: The supersingular isogeny path and endomorphism ring problems are equivalent
+    year: 2022
+    venue: 62nd Annual IEEE Symposium on Foundations of Computer Science (FOCS 2021)
+    hypothesis_location: "Not read for this entry; cited by Page and Wesolowski as conditional on the generalized Riemann hypothesis"
+    role: conditional-proof
+  - authors: A. Page, B. Wesolowski
+    title: The supersingular Endomorphism Ring and One Endomorphism problems are equivalent
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2309.10432
+    hypothesis_location: Theorem 8.7 (no hypothesis)
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The earlier conditional paper was not read. Page and Wesolowski say only "the generalised Riemann hypothesis"; the code GRH-Hecke is a cautious guess at what that work needs (primes represented by quadratic forms and class groups), not something this paper states.
+    - >-
+      The reference details for the earlier paper are copied from the bibliography of the paper read; no DOI or URL is printed there.
+    - >-
+      The existing entry supersingular-inseparable-endomorphism-sqrt-p records a different conditional theorem from the paper of Fuselier and others; it is related but not the same statement.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, supersingular-curves, endomorphism-rings, isogenies]
+added: 2026-11-21

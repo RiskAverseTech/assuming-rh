@@ -1,0 +1,47 @@
+id: supersingular-curves-over-fp-ibukiyama-prime-bound
+title: Bound on the minimal Ibukiyama prime of a supersingular curve over F_p
+field: arithmetic-geometry
+statement_plain: >
+  Let p > 3 be a prime. By a result of Ibukiyama, the endomorphism ring of a
+  supersingular elliptic curve over F_p with j-invariant j not equal to 0 or
+  1728 is isomorphic to one of two explicit maximal orders O(q) or O'(q)
+  attached to a prime q; let q_j be the least such q. Then
+  q_j < 10000 p (log p)^6 for every such j.
+statement_formal: |
+  q_j < 10000\, p \log^6 p \quad \text{for every supersingular } j \in \mathbb{F}_p \setminus \{0, 1728\}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The proof applies an explicit effective Chebotarev density theorem
+  (Grenié and Molteni) to the extensions L_0(zeta_8) and L_1(zeta_8) of the
+  rationals, where L_0 and L_1 are ring class fields of orders in
+  Q(sqrt(-p)). These fields are Galois but not abelian over the rationals in
+  general. The same theorem also gives q_j < 10000 p (log p)^4 for a generic
+  j, and asymptotics for the number of j with q_j at most a multiple of
+  sqrt(p).
+sources:
+  - authors: S. Li, Y. Ouyang, Z. Xu
+    title: Endomorphism rings of supersingular elliptic curves over $\mathbb{F}_p$
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1907.12185
+    hypothesis_location: "Theorem 1.2 (3), proved in Section 4 using Lemma 4.3 and Theorem 2.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.2 is stated for p > 3, but the proof of part (3) assumes p > 2000; the paper reports a numerical computation of the maximum of q_j for all p < 2000. A reviewer should confirm that the stated range p > 3 is fully justified.
+    - >-
+      The paper writes GRH without saying for which L-functions. The code is this draft's reading of the proof, which uses the conditional Chebotarev bound for the fields L_i(zeta_8).
+    - >-
+      The meaning of "generic" in part (2) of the theorem was not recorded; only part (3) is stated in this entry.
+lean:
+  proved: false
+  path: null
+tags: [supersingular-curves, endomorphism-rings, chebotarev]
+added: 2026-11-21

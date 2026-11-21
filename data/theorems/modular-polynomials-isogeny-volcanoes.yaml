@@ -1,0 +1,46 @@
+id: modular-polynomials-isogeny-volcanoes
+title: Computing classical modular polynomials with isogeny volcanoes
+field: computational-number-theory
+statement_plain: >
+  For an odd prime l and a positive integer m, the classical modular
+  polynomial Phi_l modulo m can be computed by a Las Vegas algorithm (using
+  l-isogeny volcanoes modulo many primes and the Chinese Remainder Theorem)
+  in expected time O(l^3 (log l)^3 log log l) using O(l^2 log(l m)) expected
+  space.
+statement_formal: |
+  O\!\left(l^3 \log^3 l \,\log\log l\right) \text{ expected time}, \qquad O\!\left(l^2 \log (lm)\right) \text{ expected space}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The output is always correct; the paper says the hypothesis is used only to
+  analyze the running time. It enters through effective Chebotarev bounds:
+  in Theorem 4.4, to show that enough suitable primes p of size
+  O(l^6 (log l)^4) exist, applied to a ray class field of an imaginary
+  quadratic order (the paper says it assumes the hypothesis for the Dedekind
+  zeta function of that field), and in Theorem 5.1, applied to a ring class
+  field, to bound the norms in class group presentations. These fields are
+  Galois over the rationals but not abelian in general.
+sources:
+  - authors: R. Bröker, K. Lauter, A. V. Sutherland
+    title: Modular polynomials via isogeny volcanoes
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1001.0402
+    hypothesis_location: "Theorem 1, proved in Section 6 using Theorems 4.4 and 5.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year is that of the arXiv version read (v2). The text carries a journal style header without the journal name, volume or year, so the venue is recorded as Preprint.
+    - >-
+      The zeta function of a ray class field of an imaginary quadratic field factors into Hecke L-functions of ray class characters, so the entry could also be coded GRH-Hecke with class-group-characters. The code follows the paper's own wording (Dedekind zeta function).
+lean:
+  proved: false
+  path: null
+tags: [algorithms, modular-polynomials, isogenies, chebotarev]
+added: 2026-11-21

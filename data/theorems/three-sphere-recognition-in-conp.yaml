@@ -1,0 +1,54 @@
+id: three-sphere-recognition-in-conp
+title: 3-sphere recognition is in coNP
+field: topology
+statement_plain: >
+  There is a certificate, checkable in polynomial time, that a given
+  triangulated 3-manifold is not the 3-sphere. The same holds for torus
+  knot recognition and for hyperbolicity of cusped 3-manifolds: each of
+  these decision problems is in coNP.
+statement_formal: |
+  \text{3-SPHERE RECOGNITION} \in \mathsf{coNP}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  Zentner (2018) proved 3-sphere recognition is in coNP under GRH, by
+  Kuperberg's method for the unknot (see the entry knottedness-in-np): the
+  hypothesis guarantees, through an effective Chebotarev theorem, a prime p
+  of polynomial size such that an irreducible integer polynomial has a root
+  modulo p, so that the certificate (a nonabelian representation into
+  SL(2, F_p)) is short. Baldwin and Sivek show that a weaker assumption is
+  enough: the quasi-Riemann hypothesis for Dedekind zeta functions, namely
+  that for some universal epsilon > 0 no Dedekind zeta function of a number
+  field has a zero with real part above 1 - epsilon (their Hypothesis 1.2,
+  Theorem 1.3). This is implied by the Riemann hypothesis for Dedekind zeta
+  functions of all number fields, which is how it is coded here. The paper
+  reports that a formalized proof of Hypothesis 1.2 has been claimed by
+  others, which would make the result unconditional, but the authors choose
+  to keep describing it as conditional, and this entry follows them.
+sources:
+  - authors: J. A. Baldwin, S. Sivek
+    title: 3-manifold decision problems and Riemann hypotheses
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.06705
+    hypothesis_location: "Theorem 1.3, through Theorem 2.1, both assuming Hypothesis 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The hypothesis used is strictly weaker than any code in the taxonomy (a zero-free strip of fixed width for all Dedekind zeta functions, not the full Riemann hypothesis for them). ERH-Dedekind is the nearest code. A reviewer should decide whether this needs its own treatment.
+    - >-
+      The paper says a Lean-formalized proof of its Hypothesis 1.2 has been communicated by Cureton and Thorner, and that if it holds the result is unconditional; the authors still present the result as conditional. If that proof is accepted, the status should become proved-otherwise.
+    - >-
+      The statement about unknot recognition in the same theorem is already the entry knottedness-in-np and is not repeated here. The paper says hyperbolic knot recognition and unknot recognition were already known to be in coNP unconditionally by other methods.
+lean:
+  proved: false
+  path: null
+related: [knottedness-in-np]
+tags: [three-manifolds, complexity, chebotarev]
+added: 2026-11-21

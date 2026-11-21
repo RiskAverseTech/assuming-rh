@@ -1,0 +1,48 @@
+id: module-sivp-worst-case-to-average-case
+title: Worst-case to average-case reduction for SIVP on module lattices of fixed rank
+field: complexity-theory
+statement_plain: >
+  Let K be a number field of degree d and discriminant D, fix a rank r > 1
+  and let n = rd. Given an oracle that solves gamma'-SIVP with probability
+  p = 2^(-o(n)) on random module lattices of rank r over K (drawn from the
+  discretized invariant measure), there is a probabilistic polynomial time
+  algorithm solving gamma-SIVP on every module lattice of rank r over K,
+  with gamma equal to gamma' times a polynomial in |D|^(1/d) and d, using an
+  expected number of oracle queries polynomial in log |D| times 1/p (the
+  polynomials depend on r).
+statement_formal: |
+  \gamma = \mathrm{poly}_r\!\left(|\Delta_K|^{1/d}, d\right)\cdot \gamma', \qquad \mathrm{poly}_r(\log|\Delta_K|)\cdot p^{-1} \text{ expected queries}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper states its hypothesis precisely: the Riemann hypothesis for the
+  L-function of every Hecke character of K of trivial modulus. It is used in
+  the quantitative equidistribution theorem for random walks (Hecke
+  operators at primes of bounded norm) on the space of module lattices
+  (Theorem 3), on which the reduction rests. The paper says the result was
+  previously known only for rank 1 (ideal lattices), by de Boer, Ducas,
+  Pellet-Mary and Wesolowski, also under the Extended Riemann Hypothesis.
+sources:
+  - authors: K. de Boer, A. Page, R. Toma, B. Wesolowski
+    title: Average hardness of SIVP for module lattices of fixed rank
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.13659
+    hypothesis_location: "Theorem 1, through Theorem 3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Hecke characters of trivial modulus include characters of infinite order (trivial on no finite-index subgroup of the idele class group), not only class group characters. The waiting family class-group-characters is the closest available; a reviewer may want a finer family.
+    - >-
+      Even when K is abelian over the rationals (for example cyclotomic, the case of cryptographic interest) these Hecke L-functions are not Dirichlet L-functions, so no special case was marked as covered.
+lean:
+  proved: false
+  path: null
+tags: [lattices, cryptography, module-lattices, hecke-characters]
+added: 2026-11-21
