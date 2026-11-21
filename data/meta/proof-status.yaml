@@ -1,13 +1,14 @@
 # Verification status of the proof every "unlocked" label depends on.
 # The site banner and the method page read this file. Update last_updated
 # whenever anything here changes.
-status: Claimed. Checked by several independent proof checkers. Not yet accepted by the mathematical community.
+status: Claimed. The formal proof has been checked by many independent proof checkers. Not yet accepted by the mathematical community.
 headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
 summary: >
   On 20 November 2026 Levent Alpöge released a proof, written in a form that
   computers can check, of the Riemann Hypothesis and of its extension to
-  Dirichlet L-functions. Several independent proof checkers have since
-  accepted it. No account of the argument has been reviewed and published by
+  Dirichlet L-functions. The Lean community has checked it with many
+  independent proof checkers, including formally verified ones, and all
+  accept it. No account of the argument has been reviewed and published by
   mathematicians.
 last_updated: 2026-11-21
 claims:
@@ -17,28 +18,38 @@ claims:
 caveats:
   - >
     A formal proof accepted by a proof checker shows that the formal
-    statement follows from the axioms. Whether the formal statement says
-    what mathematicians mean by the hypothesis is a separate, human
-    question. The headline statements are short and use Mathlib definitions,
-    and participants in the public discussion were still talking through
-    that question on 21 November 2026.
+    statement follows from the axioms. The headline statements are short and
+    use Mathlib definitions, and the community compared them with an
+    independent statement in two ways. Whether the argument is understood is
+    a separate, human question.
   - >
-    The checks reported in the public discussion on the Lean community chat
-    include the standard Lean build, a statement comparison and axiom check,
-    and acceptance by several independently written checkers (among them
-    nanoda and con-leche). This project has not run a check of its own.
+    The checks reported in the public discussion include the standard Lean
+    build, a statement comparison and axiom check, and acceptance by many
+    independently written checkers, among them the three formally verified
+    ones. One long bundled run was still in progress on 21 November 2026.
+    This project has not run a check of its own.
   - >
     Checked by machine is not the same as understood. No human-readable
-    account of the argument has been reviewed.
+    account of the argument has been reviewed. Participants expect that to
+    take a long time.
   - >
-    The released archive carries no license file, so it is not reused or
-    redistributed here. The same point was raised in the public discussion
-    and had not been answered when this was written.
+    The released archive carried no license file. On 21 November 2026 a
+    maintainer reported that the author is preparing one. Until it appears,
+    the code is not reused or redistributed here.
   - >
     This file was compiled by an AI system from the sources below and has
-    not yet been re-read by a human. Sources marked "reported" were seen
-    only as search summaries.
+    not yet been re-read by a human. Sources marked "not read directly" were
+    seen only as search summaries or as links in the discussion.
 sources:
+  - label: "Lean community announcement on the verification process (linked in the discussion, not read directly)"
+    url: https://leanprover-community.github.io/blog/posts/riemann-hypothesis/
+    accessed: 2026-11-21
+  - label: "Community copy of the Lean code"
+    url: https://github.com/leanprover-community/riemann-hypothesis
+    accessed: 2026-11-21
+  - label: "Checker results collected by Andrew Sutherland (linked in the discussion, not read directly)"
+    url: https://math.mit.edu/~drew/grh/
+    accessed: 2026-11-21
   - label: "Lean community chat, public thread on the proof, including the checker results (read directly)"
     url: https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/Discussion.3A.20Alp.C3.B6ge.20Proves.20the.20Riemann.20Hypothesis
     accessed: 2026-11-21
