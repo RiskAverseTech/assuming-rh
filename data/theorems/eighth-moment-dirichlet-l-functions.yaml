@@ -12,8 +12,11 @@ statement_formal: |
   = 24024\,a_4\sum_{q}\Psi\!\left(\tfrac{q}{Q}\right)\prod_{p\mid q}\frac{\left(1-\frac1p\right)^{7}}{1+\frac9p+\frac9{p^2}+\frac1{p^3}}\,\varphi^{\flat}(q)\,\frac{(\log q)^{16}}{16!}\int_{-\infty}^{\infty}\left|\Gamma\!\left(\tfrac{1/2+iy}{2}\right)\right|^{8}dy
   + O\!\left(Q^{2}(\log Q)^{15+\epsilon}\right)
 hypotheses_required: [RH, GRH-Dirichlet]
-status: unlocked
+status: proved-otherwise
 status_note: >
+  Now known without any hypothesis: Chandee, Li, Matomaki and Radziwill
+  (2023) prove the same asymptotic unconditionally, and their abstract says
+  so. What follows describes the earlier conditional proof.
   Here Psi is smooth and compactly supported in [1, 2], phi-flat(q) is the
   number of primitive even characters mod q, and a_4 is the Euler product
   over p of (1 - 1/p)^9 (1 + 9/p + 9/p^2 + 1/p^3). The paper says GRH is used
@@ -30,13 +33,19 @@ sources:
     url: https://arxiv.org/abs/1303.4482
     hypothesis_location: "Theorem 1.1"
     role: conditional-proof
+  - authors: V. Chandee, X. Li, K. Matomäki, M. Radziwiłł
+    title: The eighth moment of Dirichlet L-functions II
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2307.13194
+    hypothesis_location: "Theorem 1.1 (no hypothesis)"
+    role: unconditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
   confidence: medium
   open_questions:
-    - "From memory, not from this paper: a later paper of Chandee, Li, Matomaki and Radziwill is believed to prove this asymptotic without GRH. If confirmed, the status should become proved-otherwise."
     - "The paper writes only GRH. Its sketch says the hypothesis is used to bound moments of Dirichlet L-functions in the t-aspect (Propositions 2.9 and 2.10); the principal character case would be RH for zeta, so RH is listed as well."
 lean:
   proved: false
