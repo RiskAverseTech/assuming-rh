@@ -1,0 +1,40 @@
+id: linnik-goldbach-two-primes-seven-powers-of-two
+title: Large even integers as two primes plus exactly 7 powers of 2
+field: additive-number-theory
+statement_plain: >
+  Every sufficiently large even integer is a sum of two primes and exactly 7
+  powers of 2.
+statement_formal: |
+  N = p_1 + p_2 + 2^{\nu_1} + \cdots + 2^{\nu_7} \quad \text{for every sufficiently large even } N
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The same paper proves unconditionally that 13 powers of 2 suffice (Theorem
+  1). The hypothesis is used once, on the minor arcs, to bound the
+  exponential sum over primes by N^(3/4 + o(1)) through Lemma 12 of Baker
+  and Harman. The paper reports that Pintz and Ruzsa obtained the same
+  conditional result independently.
+sources:
+  - authors: D. R. Heath-Brown, J.-C. Puchta
+    title: Integers represented as a sum of primes and powers of two
+    year: 2002
+    venue: Asian J. Math. 6, 535-565
+    url: https://arxiv.org/abs/math/0201299
+    hypothesis_location: Theorem 2 (hypothesis used in Section 8, minor arc bound for S(alpha))
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never defines its Generalized Riemann Hypothesis. The classification as Dirichlet L-functions rests on the single place it is used, an estimate for sums of Lambda(n) e((a/q + beta) n) quoted from Lemma 12 of Baker and Harman; that cited lemma was not read.
+    - >-
+      The journal reference is not printed in this paper's own text; it was taken from the reference list of arXiv 1404.5669 (Platt and Trudgian), another paper in this sweep.
+lean:
+  proved: false
+  path: null
+related: [ternary-goldbach]
+tags: [goldbach, powers-of-two, circle-method]
+added: 2026-11-21

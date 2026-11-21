@@ -12,12 +12,18 @@ hypotheses_required: [GRH-automorphic]
 status: still-conditional
 status_note: >
   These results need the hypothesis for the L-functions of elliptic curves
-  themselves, which the claimed proof does not cover.
+  themselves, which the claimed proof does not cover. Mestre states his
+  bound for newforms of weight k and level N, with k^2 N in place of N, and
+  assumes that the zeros of the L-function in the critical strip lie on the
+  central line. For elliptic curves he also assumed modularity, which is now
+  a theorem.
 sources:
   - authors: J.-F. Mestre
     title: Formules explicites et minorations de conducteurs de variétés algébriques
     year: 1986
     venue: Compositio Math. 58, 209-232
+    url: https://www.numdam.org/item/CM_1986__58_2_209_0/
+    hypothesis_location: "Proposition II.1 (i)"
     role: conditional-proof
   - authors: A. Brumer
     title: The average rank of elliptic curves I
@@ -32,7 +38,7 @@ review:
   confidence: medium
   open_questions:
     - >-
-      This is a family of results. The two representatives and their constants are quoted from memory and have not been checked against the papers.
+      Mestre's Proposition II.1 was read and matches the first statement. Brumer's paper was not read, and the constant 2.3 is quoted from memory.
 lean:
   proved: false
   path: null

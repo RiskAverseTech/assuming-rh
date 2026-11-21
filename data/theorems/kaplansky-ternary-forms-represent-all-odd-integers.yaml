@@ -1,0 +1,42 @@
+id: kaplansky-ternary-forms-represent-all-odd-integers
+title: Three ternary quadratic forms that represent all positive odd integers
+field: analytic-number-theory
+statement_plain: >
+  Each of the ternary quadratic forms x^2 + 2y^2 + 5z^2 + xz,
+  x^2 + 3y^2 + 6z^2 + xy + 2yz and x^2 + 3y^2 + 7z^2 + xy + xz represents
+  every positive odd integer.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+status_note: >
+  These are the three candidates left open from Kaplansky's list (the paper's
+  Conjecture 1). The proof follows the method of Ono and Soundararajan as
+  refined by Chandee: it needs the hypothesis for quadratic Dirichlet
+  L-functions, to bound class numbers from below, and for the L-functions of
+  quadratic twists of weight 2 newforms, through Waldspurger's theorem. The
+  second part is not covered. The same paper proves that, given this
+  statement, a positive-definite integer-valued quadratic form represents all
+  positive odd integers if and only if it represents 46 specific odd integers
+  up to 451 (Theorem 2, the 451-Theorem).
+sources:
+  - authors: J. Rouse
+    title: Quadratic forms representing all odd positive integers
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1111.0979
+    hypothesis_location: Theorem 7 (proved in Section 6)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes only "the Generalized Riemann Hypothesis". The L-functions were identified from Section 6, which bounds L(F_i tensor chi, 1/2) and L(1, chi) using results of Chandee that assume GRH; Chandee's paper was not read.
+lean:
+  proved: false
+  path: null
+related: [ramanujan-ternary-form]
+tags: [quadratic-forms, ternary-forms, modular-forms]
+added: 2026-11-21

@@ -1,0 +1,44 @@
+id: isogeny-graphs-ordinary-elliptic-curves-expanders
+title: Small-degree isogeny graphs of ordinary elliptic curves are expanders
+field: arithmetic-geometry
+statement_plain: >
+  Fix B > 2. Take the isomorphism classes (over the algebraic closure) of
+  ordinary elliptic curves over F_q with N points whose endomorphism rings are
+  isomorphic to that of a fixed such curve, and join two curves when there is
+  an isogeny between them of prime degree less than (log 4q)^B. This graph is
+  an expander: its nontrivial eigenvalues are
+  O((t log t)^(1/2 + 1/B)), where t is the trivial eigenvalue.
+statement_formal: |
+  |\lambda| = O\!\left((\lambda_{\mathrm{triv}}\log\lambda_{\mathrm{triv}})^{1/2+1/B}\right) \ \text{ for every nontrivial eigenvalue } \lambda
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+status_note: >
+  The graph is identified with a Cayley graph of the class group of an
+  imaginary quadratic order, a quotient of a narrow ray class group of an
+  imaginary quadratic field, and the eigenvalue bound comes from the paper's
+  Theorem 1.1. The hypothesis is therefore needed for L-functions of class
+  group characters of imaginary quadratic orders, which are Hecke
+  L-functions and are not covered. The paper uses this theorem to show that
+  the elliptic curve discrete logarithm problem has roughly uniform
+  difficulty across curves of the same level (Theorem 1.6).
+sources:
+  - authors: D. Jao, S. D. Miller, R. Venkatesan
+    title: Expander graphs based on GRH with an application to elliptic curve cryptography
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0811.0647
+    hypothesis_location: Theorem 1.5 (proved in Section 3 from Theorems 3.2 and 1.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes only "assuming GRH" in Theorem 1.5. The classification as Hecke L-functions comes from the proof, which reduces to Theorem 1.1 for the class group of the order of discriminant D.
+lean:
+  proved: false
+  path: null
+tags: [isogeny-graphs, elliptic-curves, expander-graphs, cryptography]
+added: 2026-11-21

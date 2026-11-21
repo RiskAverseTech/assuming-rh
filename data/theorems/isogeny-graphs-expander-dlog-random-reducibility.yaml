@@ -1,0 +1,52 @@
+id: isogeny-graphs-expander-dlog-random-reducibility
+title: Isogeny graphs of ordinary elliptic curves are expanders, and discrete log is random reducible
+field: computational-number-theory
+statement_plain: >
+  Take the elliptic curves over a finite field F_q that have a given number
+  of points and a given endomorphism ring (a "level"), joined by isogenies
+  of prime degree at most m = (log q)^(2 + delta). This isogeny graph G is
+  an expander: a random walk on G reaches any subset of size h with
+  probability at least h / (2 |G|) after polylog(q) steps. As a
+  consequence, an algorithm that solves the discrete logarithm problem on a
+  fixed positive proportion of the curves in a level can be used to solve
+  it on every curve of that level with polylog(q) expected queries.
+statement_formal: |
+  \lambda_\chi = \frac{1}{e}\sum_{p \le m}\ \sum_{N\mathfrak{a} = p} \chi(\mathfrak{a}) = O\!\left(m^{1/2}\log|mD|\right) \quad \text{for every non-trivial character } \chi \text{ of } \mathrm{Cl}(\mathcal{O}_D)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+status_note: >
+  The hypothesis is used for the eigenvalue separation (Lemma 4.1), which
+  gives both the expander property and the polynomial running time of the
+  reduction. Lemma 4.1 assumes the Riemann Hypothesis for L(s, chi) where
+  chi is a non-trivial ideal class character of an imaginary quadratic
+  order. These are Hecke L-functions of an imaginary quadratic field, not
+  Dirichlet L-functions in general. The paper also views them as
+  L-functions of weight one modular forms (Hecke theta functions).
+sources:
+  - authors: D. Jao, S. D. Miller, R. Venkatesan
+    title: Do All Elliptic Curves of the Same Order Have the Same Difficulty of Discrete Log?
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0411378
+    hypothesis_location: "Theorem 1.1 and Corollary 1.2; the hypothesis enters through Lemma 4.1 and Lemma 5.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Coded GRH-Hecke because Lemma 4.1 is stated for ideal class characters of a quadratic order. The proof goes through Lemma 5.3, which is stated for L-functions of holomorphic cusp forms, so GRH-automorphic would be an equally valid label for the same L-functions.
+    - >-
+      The value m = (log q)^(2 + delta) is taken from the proof of Theorem 1.1; the theorem itself only says m = p(log q) for a polynomial p.
+    - >-
+      Appendix A treats supersingular curves by a different argument (Ramanujan property of the graphs, after Pizer). The appendix was not read closely enough to say whether that case is free of the hypothesis, so the entry is stated for the ordinary case only.
+    - >-
+      The year 2005 is the date of the arXiv version read (v3); the first version is from 2004. No journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+related: [isogeny-graphs-ordinary-elliptic-curves-expanders]
+tags: [elliptic-curves, isogeny-graphs, discrete-logarithm, expander-graphs]
+added: 2026-11-21

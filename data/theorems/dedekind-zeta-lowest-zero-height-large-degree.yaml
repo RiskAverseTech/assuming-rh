@@ -1,0 +1,40 @@
+id: dedekind-zeta-lowest-zero-height-large-degree
+title: Dedekind zeta functions of fields of large degree have a zero close to the real axis
+field: algebraic-number-theory
+statement_plain: >
+  The Dedekind zeta function of a number field of degree n has a zero on
+  the critical line at height O(1 / log n) as n tends to infinity.
+  Unconditionally it is only known that there is a zero at height at most
+  0.54 + o(1) as n tends to infinity.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: partial
+status_note: >
+  The statement for a field K needs the hypothesis only for the Dedekind
+  zeta function of K itself, so it is unlocked for fields that are abelian
+  over the rationals and stays conditional for general number fields. This
+  paper is a survey; it attributes the result to an earlier paper of
+  Odlyzko (its reference G5) and gives no proof.
+sources:
+  - authors: A. M. Odlyzko
+    title: "Bounds for discriminants and related estimates for class numbers, regulators and zeros of zeta functions: a survey of recent results"
+    year: 1990
+    venue: Sém. Théor. Nombres Bordeaux (2) 2, 119-141
+    url: https://www.numdam.org/item/JTNB_1990__2_1_119_0/
+    hypothesis_location: "Section 6, paragraph after Open Problem 6.2; the hypothesis is defined in Section 1"
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The survey gives this result in one sentence without proof or explicit constant, citing its reference G5; the original paper was not read, so the exact form of the bound is not confirmed.
+    - >-
+      Marked partial on the strength of the abelian special case. A reviewer may prefer still-conditional.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, low-lying-zeros, number-fields]
+added: 2026-11-21

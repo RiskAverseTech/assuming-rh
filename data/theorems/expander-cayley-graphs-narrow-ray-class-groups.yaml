@@ -1,0 +1,45 @@
+id: expander-cayley-graphs-narrow-ray-class-groups
+title: Cayley graphs of narrow ray class groups on small primes are expanders
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field of degree n and discriminant D, m an integral ideal,
+  G the narrow ray class group of K relative to m, and q = D N(m). Take the
+  Cayley graph of G whose generators are the classes, and their inverses, of
+  the prime ideals coprime to m whose norm is a prime at most x. Its trivial
+  eigenvalue is 2 li(x) + O(n sqrt(x) log(xq)) and every nontrivial
+  eigenvalue is O(n sqrt(x) log(xq)), with absolute constants. In particular,
+  for B > 2 and x at least (log q)^B, the nontrivial eigenvalues are
+  O((t log t)^(1/2 + 1/B)) where t is the trivial eigenvalue.
+statement_formal: |
+  \lambda_{\mathrm{triv}} = 2\,\mathrm{li}(x) + O\!\left(n\,x^{1/2}\log(xq)\right), \qquad |\lambda| = O\!\left(n\,x^{1/2}\log(xq)\right) \ \text{ for every nontrivial eigenvalue } \lambda
+hypotheses_required: [GRH-Hecke]
+status: partial
+status_note: >
+  The theorem assumes GRH for the L-functions of the characters of the narrow
+  ray class group G. For a general number field these are Hecke L-functions
+  and the result stays conditional. In the paper's first example, K = Q, the
+  group is (Z/qZ)* and the characters are Dirichlet characters, so that case
+  is covered: the Cayley graph of (Z/qZ)* with generators the primes up to
+  (log q)^B not dividing q, and their inverses, is an expander for any fixed
+  B > 2.
+sources:
+  - authors: D. Jao, S. D. Miller, R. Venkatesan
+    title: Expander graphs based on GRH with an application to elliptic curve cryptography
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0811.0647
+    hypothesis_location: Theorem 1.1 (hypothesis used for estimate (2.6) in Section 2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      In the bound (1.7) the implied constant depends on B and n; the entry gives the statement as printed and the proof was not checked line by line.
+lean:
+  proved: false
+  path: null
+tags: [expander-graphs, ray-class-groups, cayley-graphs]
+added: 2026-11-21

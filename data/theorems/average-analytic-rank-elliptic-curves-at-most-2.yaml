@@ -1,0 +1,41 @@
+id: average-analytic-rank-elliptic-curves-at-most-2
+title: The average analytic rank of elliptic curves over the rationals is at most 2
+field: arithmetic-geometry
+statement_plain: >
+  Order the elliptic curves E_{r,s}: y^2 = x^3 + r x + s over the rationals
+  (with no prime p such that p^4 divides r and p^6 divides s) by a smooth
+  weight that restricts r to size T^(1/3) and s to size T^(1/2). Then the
+  weighted average of the analytic rank r(E) is at most 2 + o(1) as T tends
+  to infinity. This improves Brumer's bound of 2.3.
+statement_formal: |
+  \frac{1}{S(T)}\sum_{E\in\mathcal{C}} w_T(E)\, r(E) \ \le\ 2 + o(1) \qquad (T\to\infty)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+status_note: >
+  The theorem assumes the Riemann Hypothesis for the L-functions of all the
+  elliptic curves E_{r,s}. These are L-functions of weight two modular
+  forms, not Dirichlet L-functions.
+sources:
+  - authors: D. R. Heath-Brown
+    title: The Average Analytic Rank of Elliptic Curves
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0305114
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The existing entry elliptic-curve-rank-bounds quotes Brumer's bound 2.3 for the same average. This entry records the sharper constant 2 and is not a duplicate, but a reviewer may prefer to merge the two.
+    - >-
+      The same paper also proves (Theorem 2) that the proportion of curves with analytic rank at least R is O((3R/2)^(-R/12)), under the same hypothesis. It is not recorded as a separate entry.
+lean:
+  proved: false
+  path: null
+related: [elliptic-curve-rank-bounds]
+tags: [elliptic-curves, ranks, explicit-formula]
+added: 2026-11-21

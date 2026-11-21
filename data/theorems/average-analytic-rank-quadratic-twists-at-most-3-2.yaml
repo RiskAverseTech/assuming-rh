@@ -1,0 +1,40 @@
+id: average-analytic-rank-quadratic-twists-at-most-3-2
+title: The average analytic rank in a family of quadratic twists is at most 3/2
+field: arithmetic-geometry
+statement_plain: >
+  Let E be a fixed elliptic curve over the rationals of conductor N and let
+  E_D be its quadratic twist by a fundamental discriminant D coprime to N.
+  Counted with a smooth weight w(D/T), the average analytic rank of the
+  twists E_D is at most 3/2 + o(1) as T tends to infinity, separately over
+  the twists with root number +1 and over those with root number -1. As a
+  corollary, at least a proportion 1/4 + o(1) of the twists with root
+  number +1 have Mordell-Weil rank 0, and at least a proportion 3/4 + o(1)
+  of the twists with root number -1 have Mordell-Weil rank 1.
+statement_formal: |
+  \frac{1}{W^{\pm}(T)}\sum_{D\in\mathcal{T}^{\pm}} w(D/T)\, r(E_D) \ \le\ \frac{3}{2} + o(1) \qquad (T\to\infty)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+status_note: >
+  The theorem assumes the Riemann Hypothesis for the L-functions L_D(s) of
+  all the quadratic twists E_D, for every integer D. These are L-functions
+  of elliptic curves, not Dirichlet L-functions.
+sources:
+  - authors: D. R. Heath-Brown
+    title: The Average Analytic Rank of Elliptic Curves
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0305114
+    hypothesis_location: Theorem 3 and Theorem 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [elliptic-curve-rank-bounds]
+tags: [elliptic-curves, ranks, quadratic-twists]
+added: 2026-11-21

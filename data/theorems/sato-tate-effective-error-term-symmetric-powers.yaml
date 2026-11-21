@@ -1,0 +1,46 @@
+id: sato-tate-effective-error-term-symmetric-powers
+title: Sato-Tate conjecture for newforms with error term x^(3/4)
+field: analytic-number-theory
+statement_plain: >
+  Let f be a non-CM holomorphic newform of weight k, level q and trivial
+  nebentypus, with Sato-Tate angles theta_p, and let I be a subinterval of
+  [0, pi] with Sato-Tate measure mu. The number of primes p up to x, not
+  dividing q, with theta_p in I differs from mu pi(x) by at most
+  c x^(3/4) log(kqx) / log x for all x at least 3, with c an absolute
+  constant. Also there is a prime p not dividing q with theta_p in I and
+  p at most c' (log(kq/mu))^2 / mu^4.
+statement_formal: |
+  \bigl|\pi_{f,I}(x) - \mu_{ST}(I)\,\pi(x)\bigr| \le c_6\, x^{3/4}\,\frac{\log(kqx)}{\log x} \quad (x \ge 3)
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+status_note: >
+  The theorem assumes GRH for the symmetric power L-functions L(s, Sym^m f)
+  for all m at least 0. The case m = 0 is the Riemann zeta function; the
+  others are automorphic L-functions on GL(m+1) and are not covered. The
+  paper credits the first bound to Rouse and Thorner and the least prime
+  bound to Chen, Park and Swaminathan (for elliptic curves), both for
+  squarefree level and both assuming automorphy of the symmetric powers,
+  which the paper says is now known by work of Newton and Thorne. The same
+  paper proves unconditionally an error term
+  O(pi(x) log(kq log x) / sqrt(log x)) (Theorem 1.1).
+sources:
+  - authors: J. Thorner
+    title: Effective forms of the Sato-Tate conjecture
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2002.10450
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper gives only a short proof of Theorem 1.3, saying the cited proofs for squarefree level extend to general level "with little additional effort"; the cited papers of Rouse and Thorner and of Chen, Park and Swaminathan were not read.
+lean:
+  proved: false
+  path: null
+tags: [sato-tate, modular-forms, symmetric-power-l-functions]
+added: 2026-11-21
