@@ -67,7 +67,7 @@ Other things found along the way:
 - **Item 22, Koiran.** The journal version may state only "second level of the polynomial hierarchy", with AM in the revised technical report. Open question on the entry.
 - **Item 28, Helfgott.** Accepted for Annals of Mathematics Studies in 2015. Could not confirm it is in print.
 - **DOIs** are filled in only where a search result showed them or I am certain of them. The rest are empty and should be filled from Crossref.
-- **`hypothesis_location`** is filled for 7 sources and empty for the rest. The site says "not yet recorded" where it is empty.
+- **`hypothesis_location`** is filled for 8 sources and empty for the rest. The site says "not yet recorded" where it is empty.
 
 ## Proof status: what was found
 
@@ -78,7 +78,7 @@ Other things found along the way:
 
 ## Things I was unsure about
 
-1. **Commit trailers.** The spec says public credit is "Jaz" only, including commits. I therefore left out the usual AI co-author and session trailers. The commit author is `Jaz <jaz@riskaversetechcompany.com>` as specified. Note that this address is in the spec as the commit author, and it will be public once pushed.
+1. **Commit trailers.** The spec says public credit is "Jaz" only, including commits. I therefore left out the usual AI co-author and session trailers. The commit author name and address are the ones given in the spec. That address becomes public once the repository is pushed.
 2. **Repository address.** Correction links and footer links use the placeholder `https://github.com/OWNER/grh-unlocked` from `site/site.config.json`. They will not work until phase 2 sets the real address.
 3. **CC BY 4.0 legal text.** `LICENSE-DATA` is a notice that links to the licence. The full legal text could not be downloaded here and should be pasted in before publishing.
 4. **CI workflow** is written but has never run. The two GitHub Actions are pinned to major versions and should be pinned to commit hashes before the first push.
