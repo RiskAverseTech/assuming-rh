@@ -9,7 +9,7 @@ statement_plain: >
   at most a constant times eps x^2 / p. Here chi_1 is a character mod p
   minimizing the pretentious distance from f to chi(n) n^(it) with |t| <= log x.
 statement_formal: |
-  \sideset{}{^*}\sum_{a \bmod p}\left|\sum_{\substack{n\le x\\ n\equiv a \,(\mathrm{mod}\, p)}}f(n)-\frac{\chi_1(a)}{\varphi(p)}\sum_{n\le x}f(n)\overline{\chi_1}(n)\right|^{2}\ll \varepsilon\,\frac{x^{2}}{p}
+  \sum\nolimits^{*}_{a \bmod p}\left|\sum_{\substack{n\le x\\ n\equiv a \,(\mathrm{mod}\, p)}}f(n)-\frac{\chi_1(a)}{\varphi(p)}\sum_{n\le x}f(n)\overline{\chi_1}(n)\right|^{2}\ll \varepsilon\,\frac{x^{2}}{p}
   \quad\text{for all primes } p\le Q
 hypotheses_required: [GRH-Dirichlet]
 status: unlocked

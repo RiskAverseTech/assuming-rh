@@ -8,7 +8,7 @@ statement_plain: >
   |sum_n chi_d(n) W(n/Y)| is at most a constant times
   X Y^(k/2) (log X)^(k(k-1)/2).
 statement_formal: |
-  \sideset{}{^*}\sum_{0<d\le X}\left|\sum_{n\ge 1}\chi_d(n)\,W\!\left(\tfrac{n}{Y}\right)\right|^{k}\ll X\,Y^{k/2}(\log X)^{k(k-1)/2}
+  \sum\nolimits^{*}_{0<d\le X}\left|\sum_{n\ge 1}\chi_d(n)\,W\!\left(\tfrac{n}{Y}\right)\right|^{k}\ll X\,Y^{k/2}(\log X)^{k(k-1)/2}
 hypotheses_required: [GRH-Dirichlet]
 status: unlocked
 status_note: >
