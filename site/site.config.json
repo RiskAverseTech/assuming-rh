@@ -1,7 +1,6 @@
 {
-  "name": "GRH Unlocked",
-  "working_name_note": "Placeholder name. The final name, domain and repo_url are set in phase 2.",
+  "name": "Assuming RH",
   "tagline": "Which theorems proved assuming the Riemann Hypothesis are now unconditional?",
-  "repo_url": "https://github.com/OWNER/grh-unlocked",
+  "repo_url": "https://github.com/RiskAverseTech/assuming-rh",
   "credit": "Jaz"
 }

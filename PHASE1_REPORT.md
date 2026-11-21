@@ -79,10 +79,10 @@ Other things found along the way:
 ## Things I was unsure about
 
 1. **Commit trailers.** The spec says public credit is "Jaz" only, including commits. I therefore left out the usual AI co-author and session trailers. The commit author name and address are the ones given in the spec. That address becomes public once the repository is pushed.
-2. **Repository address.** Correction links and footer links use the placeholder `https://github.com/OWNER/grh-unlocked` from `site/site.config.json`. They will not work until phase 2 sets the real address.
+2. **Repository address.** Resolved after this report was written: the project is named Assuming RH and lives at `https://github.com/RiskAverseTech/assuming-rh`. Correction and footer links now point there.
 3. **CC BY 4.0 legal text.** `LICENSE-DATA` is a notice that links to the licence. The full legal text could not be downloaded here and should be pasted in before publishing.
 4. **CI workflow** is written but has never run. The two GitHub Actions are pinned to major versions and should be pinned to commit hashes before the first push.
-5. **Site name.** "GRH Unlocked" is used as the display name. It is set in one place.
+5. **Site name.** Resolved: "Assuming RH". It is set in one place, `site/site.config.json`.
 6. **Search without JavaScript.** Reading works without JavaScript. Search and filters do not, and the page says so.
 7. **Accessibility** was built in (landmarks, skip link, labels, focus styles, sort state, no colour-only meaning) and checked by eye in both themes and at phone width. No automated audit or screen reader test was run.
 

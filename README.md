@@ -1,10 +1,8 @@
-# GRH Unlocked
+# Assuming RH
 
 > Which theorems that were proved "assuming the Riemann Hypothesis" (or a generalized version) are now unconditional, which are still waiting, and exactly which hypothesis does each one need?
 
 An open dataset and a static website that answer that question, one theorem at a time.
-
-`grh-unlocked` is a working name.
 
 ## Read this first
 
