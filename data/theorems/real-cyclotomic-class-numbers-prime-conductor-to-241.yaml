@@ -1,0 +1,46 @@
+id: real-cyclotomic-class-numbers-prime-conductor-to-241
+title: Class numbers of real cyclotomic fields of prime conductor up to 241
+field: algebraic-number-theory
+statement_plain: >
+  For a prime p <= 241, the class number of the maximal real subfield
+  Q(zeta_p + zeta_p^(-1)) of the p-th cyclotomic field is 1, except that it
+  is 4 for p = 163, 11 for p = 191 and 3 for p = 229.
+statement_formal: |
+  h\!\left(\mathbb{Q}(\zeta_p+\zeta_p^{-1})\right)=\begin{cases}1 & \text{if } p\le 241,\ p\ne 163, 191, 229,\\ 4 & \text{if } p=163,\\ 11 & \text{if } p=191,\\ 3 & \text{if } p=229.\end{cases}
+hypotheses_required: [ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  For p <= 151 the paper proves class number 1 unconditionally; the
+  hypothesis is needed for 151 < p <= 241. It is used to bound the class
+  number from above, either by Odlyzko's GRH discriminant bounds applied to
+  the Hilbert class field or by the paper's Lemma 3.2, which comes from
+  sums over prime ideals of the Hilbert class field. Schoof's table then
+  identifies the class number once it is known to be below 80000. The
+  Dedekind zeta function of the Hilbert class field is a product of
+  L-functions of class group characters of the real cyclotomic field. These
+  are not Dirichlet L-functions, so the result is not covered, even though
+  the real cyclotomic field itself is abelian over the rationals.
+sources:
+  - authors: J. C. Miller
+    title: "Real cyclotomic fields of prime conductor and their class numbers"
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1407.2373
+    hypothesis_location: "Theorem 1.1 (second part), proved in Sections 7 and 8 using Lemma 3.2 and the GRH discriminant bounds of Odlyzko"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'the generalized Riemann hypothesis' and never names the zeta function. That it is the Dedekind zeta function of the Hilbert class field is inferred from the method (discriminant bounds and prime ideal sums for the Hilbert class field); the author's earlier paper, where Lemma 3.2 is proved, was not read.
+    - >-
+      The result also rests on Schoof's table of real cyclotomic class numbers and on computer searches for elements of small norm; these were not checked.
+lean:
+  proved: false
+  path: null
+tags: [class-numbers, cyclotomic-fields, hilbert-class-field]
+added: 2026-11-21

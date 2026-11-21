@@ -1,0 +1,44 @@
+id: average-multiplicative-order-arnold-problem
+title: Average multiplicative order of a fixed integer g modulo n
+field: analytic-number-theory
+statement_plain: >
+  Let l_g(n) be the multiplicative order of g modulo n and let T_g(x) be
+  (1/x) times the sum of l_g(n) over n <= x coprime to g. Then
+  T_g(x) = (x / log x) exp((B log log x / log log log x)(1 + o(1))) as x
+  tends to infinity, uniformly for 1 < |g| <= log x, where
+  B = 0.3453720641... is an explicit constant. So the average order of g is
+  essentially as large as the average of Carmichael's lambda function.
+statement_formal: |
+  T_g(x) := \frac{1}{x}\sum_{\substack{n\le x\\ (n,g)=1}}\ell_g(n) = \frac{x}{\log x}\exp\!\left(\frac{B\log\log x}{\log\log\log x}\,(1+o(1))\right),\qquad B = e^{-\gamma}\prod_{p}\left(1-\frac{1}{(p-1)^2(p+1)}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  A footnote in the paper says that what is needed is the Riemann Hypothesis
+  for the Dedekind zeta functions of the Kummer extensions
+  Q(e^(2 pi i/n), g^(1/n)) for all n > 1. These fields are not abelian over
+  the rationals. The upper bound implicit in the theorem is unconditional,
+  since l_g(n) is at most Carmichael's lambda(n); only the lower bound uses
+  the hypothesis. The result disproves a conjecture of Arnold that T_g(x) is
+  asymptotic to c(g) x / log x. The dataset entry
+  multiplicative-order-benford-law concerns the same order function but a
+  different statement.
+sources:
+  - authors: P. Kurlberg, C. Pomerance
+    title: "On a problem of Arnold: the average multiplicative order of a given integer"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1108.5209
+    hypothesis_location: "Theorem 1; the hypothesis is made precise in footnote 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, artin-type, carmichael-function]
+added: 2026-11-21

@@ -1,0 +1,46 @@
+id: multiquadratic-unit-group-minimal-index-density
+title: Unit groups of totally real multiquadratic fields with minimal index modulo p
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a totally real multiquadratic field in which the ramification
+  index of 2 is at most 2. The set of primes p that split completely in K
+  and for which the image of the unit group of K in (O_K / p O_K)^* has the
+  smallest possible index (p - 1)/2 has a natural density, and this density
+  is positive if and only if K contains a unit of norm -1. When K has such a
+  unit the density is given by an explicit Euler product formula.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The proof adapts Hooley's method for Artin's primitive root conjecture. The
+  hypothesis enters through the conditional Chebotarev density theorem of
+  Lagarias and Odlyzko (Theorem 4.5 of the paper), applied to the fields K_k
+  obtained from K by adjoining the k-th roots of unity and k-th roots of the
+  units of K, and to their subfields. These are Kummer-type fields that are
+  Galois but not abelian over the rationals. This is a generalization of the
+  setting of the entry artin-primitive-root-conjecture from one integer to
+  the unit group of a multiquadratic field.
+sources:
+  - authors: M. E. Stadnik
+    title: "A Multiquadratic Field Generalization of Artin's Conjecture, unabridged"
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1202.3475
+    hypothesis_location: "Theorem 4.17; the hypothesis is used through Theorem 4.5 in Section 4.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its generalized Riemann hypothesis covers. The code ERH-Dedekind is inferred from the way Theorem 4.5 (Lagarias and Odlyzko) is applied to the Galois fields K_k and their subfields.
+    - >-
+      The explicit density formula involves sets C_k defined in the body of the paper, so it is not reproduced here.
+lean:
+  proved: false
+  path: null
+tags: [artin-type, unit-groups, multiquadratic-fields]
+added: 2026-11-21

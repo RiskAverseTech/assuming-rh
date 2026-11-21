@@ -1,0 +1,59 @@
+id: effective-chebotarev-quasi-riemann-hypothesis
+title: Effective Chebotarev density theorem from a zero-free strip
+field: algebraic-number-theory
+statement_plain: >
+  Let L/K be a Galois extension of number fields with group G, let C be a
+  conjugacy class of G, and fix delta in (0, 1/2]. If the Dedekind zeta
+  function of L has no zeros with real part greater than 1 - delta, then for
+  every x > 2 the number of unramified primes of K of norm at most x with
+  Artin symbol C differs from (|C|/|G|) Li(x) by at most
+  c (|C|/|G|) x^(1 - delta) log(D^(1/delta) x^n), where D and n are the
+  absolute discriminant and degree of L and c is an effectively computable
+  absolute constant.
+statement_formal: |
+  \left|\pi_C(x,L/K)-\frac{\#C}{\#G}\operatorname{Li}(x)\right|\le c_1\,\frac{\#C}{\#G}\,x^{1-\delta}\log\!\left(\Delta_L^{1/\delta}\,x^{n_L}\right)\qquad (x>2)
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis here is a quasi-Riemann hypothesis for the Dedekind zeta
+  function of L: no zeros with real part greater than 1 - delta. For
+  delta < 1/2 this is weaker than every code in the taxonomy; ERH-Dedekind
+  is the nearest code and is the case delta = 1/2, where the theorem is the
+  Lagarias and Odlyzko result recorded in the entry effective-chebotarev.
+  The hypothesis for the Dedekind zeta function of L implies the zero-free
+  strip for every delta, so the theorem is unlocked when L is abelian over
+  the rationals and, as far as RH-type hypotheses go, stays conditional for
+  other L; hence partial, as for effective-chebotarev. The paper reports
+  recent preprints claiming a zero-free strip of width 1/6000 for all
+  Dedekind zeta functions, but says its authors have not verified them and
+  therefore states everything conditionally. If such a zero-free strip is
+  established, the theorem becomes unconditional for that delta. Corollaries
+  in the paper, under the same hypothesis: a least prime with given Artin
+  symbol of norm O((log D)^(1/delta) (log log D)^(2/delta)), and the
+  Ellenberg and Venkatesh bound for l-torsion in class groups.
+sources:
+  - authors: C. Frei, E. Sofos, M. Widmer
+    title: "Some applications of the quasi-Riemann hypothesis to class groups and small generators of number fields"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.18491
+    hypothesis_location: "Theorem 1.1; QRH(delta) is defined in the first paragraph of the Introduction"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The hypothesis is a zero-free strip (quasi-Riemann hypothesis), weaker than the taxonomy's codes; ERH-Dedekind is used as the nearest code. A reviewer should decide whether the taxonomy needs a separate code for this.
+    - >-
+      Marked partial by analogy with effective-chebotarev (abelian L is covered). A reviewer may prefer still-conditional, or a different status if the cited zero-free strip preprints are accepted.
+    - >-
+      The paper says a version of this theorem is stated without detailed proof in an earlier paper it cites as [CM23, Theorem 4].
+lean:
+  proved: false
+  path: null
+tags: [chebotarev, zero-free-regions, number-fields]
+added: 2026-11-21

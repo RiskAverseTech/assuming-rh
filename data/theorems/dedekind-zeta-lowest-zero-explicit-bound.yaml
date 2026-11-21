@@ -1,0 +1,49 @@
+id: dedekind-zeta-lowest-zero-explicit-bound
+title: Explicit bound for the lowest zero of a Dedekind zeta function in terms of the root discriminant
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field of degree n and discriminant d, let
+  alpha = log|d| / n be its log root discriminant, and let tau(K) be the
+  least t > 0 with zeta_K(1/2 + it) = 0. If alpha > 6.6958 and zeta_K(1/2)
+  is not zero, then either tau(K) is at least 14.1347..., the height of the
+  lowest zero of the Riemann zeta function, or
+  tau(K) <= pi / (sqrt(2) log((alpha - 1.2874) / 5.4084)).
+statement_formal: |
+  \tau(K)\le\frac{\pi}{\sqrt{2}\,\log\!\left(\dfrac{\alpha_K-1.2874}{5.4084}\right)}\quad\text{or}\quad \tau(K)\ge\tau_0=14.1347\ldots,\qquad \alpha_K=\frac{\log|d_K|}{n_K}>6.6958,\ \zeta_K(1/2)\ne 0
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper defines GRH as the statement that all non-trivial zeros of
+  zeta_K(s) lie on the line with real part 1/2, and the proof applies an
+  explicit formula to zeta_K only. So the statement is unlocked for fields K
+  that are abelian over the rationals and stays conditional for general
+  number fields. The paper presents the result as a refinement of a bound of
+  O. Sami, tau(K) = O(1 / log log |d_K|) with a constant depending on the
+  degree. A companion result (Theorem 1.2) treats the case zeta_K(1/2) = 0
+  for alpha > 12.1048. Related entry on the same quantity:
+  dedekind-zeta-lowest-zero-height-large-degree, which bounds the lowest
+  zero in terms of the degree.
+sources:
+  - authors: S. Kala
+    title: "On the lowest zero of Dedekind zeta function"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2401.10936
+    hypothesis_location: "Theorem 1.1; GRH is defined in the Introduction"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Marked partial on the strength of the abelian special case, following the existing entry dedekind-zeta-lowest-zero-height-large-degree. A reviewer may prefer still-conditional.
+    - >-
+      The displayed bound was read from the PDF because the text extraction of the formula is garbled.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, low-lying-zeros, number-fields]
+added: 2026-11-21

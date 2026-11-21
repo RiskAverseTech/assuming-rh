@@ -1,0 +1,47 @@
+id: least-prime-with-given-primitive-root-almost-all
+title: Least prime having g as a primitive root, for almost all g
+field: analytic-number-theory
+statement_plain: >
+  For an integer g other than -1 and not a square, let p_g be the least prime
+  for which g is a primitive root. Fix B > 2 + 2 e^(-1/3) = 3.433... and let
+  N be sufficiently large. Then all such g with N <= |g| <= 2N satisfy
+  p_g <= (log |g|)^B, with at most O((log N)^(B-1)) exceptions. In particular
+  p_g <= (log |g|)^3.44 with at most O((log N)^2.44) exceptions.
+statement_formal: |
+  \#\{\,g\in\mathcal{G} : N\le |g|\le 2N,\ p_g > (\log|g|)^{B}\,\} \ll (\log N)^{B-1}\qquad \left(B > 2+2e^{-1/3}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  This sharpens, for all but a very small set of g, the uniform bound
+  p_g = O((log 2|g|)^19) of Fan and Pollack recorded in the entry
+  least-prime-with-given-primitive-root. The proof follows Fan and Pollack's
+  argument and adds a new variant of Gallagher's larger sieve. One of the
+  lemmas taken from Fan and Pollack (Lemma 3.2) uses the Chebotarev density
+  theorem conditional on GRH, which there is applied to the Kummer fields
+  Q(zeta_d, g^(1/d)); these are not abelian over the rationals. The other
+  conditional steps use only primes in arithmetic progressions and character
+  sums. The paper also has an unconditional result (Theorem 1.3): p_g is at
+  most Phi(N) for all but o(N) integers g in an interval of length N, for
+  any Phi tending to infinity.
+sources:
+  - authors: D. R. Johnston, S. Naik
+    title: "The least prime with a given primitive root and a variant of the larger sieve"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.08569
+    hypothesis_location: "Theorem 1.1; the hypothesis enters through Lemmas 3.1 to 3.4"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH beyond mentioning GRH for Dedekind zeta functions in connection with Hooley. That Lemma 3.2 needs Kummer fields is taken from its description (Chebotarev conditional on GRH) and from the Fan and Pollack entry already in the dataset; the Fan and Pollack paper was not re-read here.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, larger-sieve]
+added: 2026-11-21
