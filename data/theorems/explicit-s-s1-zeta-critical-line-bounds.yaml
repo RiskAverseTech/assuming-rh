@@ -1,0 +1,37 @@
+id: explicit-s-s1-zeta-critical-line-bounds
+title: Explicit bounds for S(t), S_1(t) and zeta(1/2 + it)
+field: analytic-number-theory
+statement_plain: >
+  For all t at least 2 pi, |S(t)| <= 0.96 log t / log log t,
+  |S_1(t)| <= 2.491 log t / (log log t)^2 and
+  |zeta(1/2 + it)| <= exp(0.995 log t / log log t). Here
+  S(t) = (1/pi) arg zeta(1/2 + it) and S_1(t) is the integral of S from 0 to t.
+statement_formal: |
+  |S(t)| \le \frac{0.96\,\log t}{\log\log t}, \qquad |S_1(t)| \le \frac{2.491\,\log t}{(\log\log t)^2}, \qquad \left|\zeta\!\left(\tfrac12+it\right)\right| \le \exp\!\left(\frac{0.995\,\log t}{\log\log t}\right) \qquad (t \ge 2\pi)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Corollary 1 combines the sharper conditional bounds of Theorem 1 of the
+  paper, valid for very large t, with known unconditional explicit bounds for
+  smaller t.
+sources:
+  - authors: A. Simonic
+    title: On explicit estimates for S(t), S_1(t), and zeta(1/2 + it) under the Riemann Hypothesis
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2010.13307
+    hypothesis_location: Corollary 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year is that of the arXiv version read (v2, October 2021). A later paper by the same author cites this work as J. Number Theory (2021), but that reference is not printed in this paper's own text.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, argument-function, explicit-bounds]
+added: 2026-11-21

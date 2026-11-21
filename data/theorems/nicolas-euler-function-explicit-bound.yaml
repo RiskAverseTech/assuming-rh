@@ -1,0 +1,39 @@
+id: nicolas-euler-function-explicit-bound
+title: Explicit upper bound for n / phi(n) with a sqrt(log n) correction
+field: analytic-number-theory
+statement_plain: >
+  Let phi be Euler's function, gamma Euler's constant and
+  c(n) = (n/phi(n) - e^gamma log log n) sqrt(log n). Then
+  c(n) <= c(N_66) = 4.0628356921... for every n at least 2, where N_66 is the
+  product of the first 66 primes. Moreover limsup c(n) = e^gamma (2 + beta) =
+  3.6444150964..., where beta = 2 + gamma - log pi - 2 log 2.
+statement_formal: |
+  \frac{n}{\varphi(n)} \le e^{\gamma}\log\log n + \frac{4.0628356921\ldots}{\sqrt{\log n}} \qquad (n \ge 2)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper shows (Corollary 1.1) that each assertion of Theorem 1.1 is in
+  fact equivalent to the Riemann hypothesis.
+sources:
+  - authors: J.-L. Nicolas
+    title: Small values of the Euler function and the Riemann hypothesis
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1202.0729
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      A footnote says the article will be published in Acta Arithmetica, but no volume or year is printed, so the venue is left as Preprint.
+    - >-
+      The formal statement rewrites inequality (1.6), c(n) <= c(N_66), using the definition (1.2) of c(n); a reviewer should confirm the rewriting.
+lean:
+  proved: false
+  path: null
+tags: [euler-function, explicit-bounds, primorials]
+added: 2026-11-21

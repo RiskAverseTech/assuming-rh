@@ -1,0 +1,34 @@
+id: explicit-pnt-short-intervals
+title: Explicit prime number theorem in short intervals
+field: analytic-number-theory
+statement_plain: >
+  For all x at least e^10 and every h with sqrt(x) log x <= h <= x^(3/4),
+  |psi(x + h) - psi(x) - h| < (1/pi) sqrt(x) log x log( h / (sqrt(x) log x) )
+  + 2 sqrt(x) log x, where psi is the Chebyshev function.
+statement_formal: |
+  \left|\psi(x+h) - \psi(x) - h\right| < \frac{1}{\pi}\sqrt{x}\,\log x\,\log\!\left(\frac{h}{\sqrt{x}\,\log x}\right) + 2\sqrt{x}\,\log x \qquad \left(x \ge e^{10},\ \sqrt{x}\log x \le h \le x^{3/4}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: M. Cully-Hugill, A. W. Dudek
+    title: A conditional explicit result for the prime number theorem in short intervals
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/1902.05065
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year is that of the arXiv version read (v2, April 2022); the first arXiv version dates from 2019.
+lean:
+  proved: false
+  path: null
+related: [dudek-primes-short-intervals]
+tags: [primes, short-intervals, explicit-bounds]
+added: 2026-11-21

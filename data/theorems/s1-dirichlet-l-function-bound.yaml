@@ -1,0 +1,47 @@
+id: s1-dirichlet-l-function-bound
+title: Bounds for the integrated argument S_1(t, chi) of Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character and let
+  S_1(t, chi) = (1/pi) times the integral over sigma from 1/2 to infinity of
+  log |L(sigma + it, chi)|. With C the analytic conductor of L(s, chi) at
+  height t, for every real t one has
+  S_1(t, chi) <= (pi/48) log C / (log log C^3)^2 and
+  S_1(t, chi) >= -(pi/24) log C / (log log C^3)^2, each up to an error
+  O( log C logloglog C^3 / (log log C^3)^3 ).
+statement_formal: |
+  -\frac{\pi}{24}\,\frac{\log C}{(\log\log C^{3})^{2}} + O(E) \;\le\; S_1(t,\chi) \;\le\; \frac{\pi}{48}\,\frac{\log C}{(\log\log C^{3})^{2}} + O(E), \qquad E = \frac{\log C\,\log\log\log C^{3}}{(\log\log C^{3})^{3}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper's Theorem 1 is stated for a general class of L-functions
+  L(s, pi) of degree m with local parameters bounded by p^theta, assuming the
+  generalized Riemann hypothesis for that L-function, with leading constants
+  (1 + 2 theta)^2 pi/48 and (1 + 2 theta)^2 pi/24 and with C^(3/m) in the
+  iterated logarithms. This entry records only the special case of primitive
+  Dirichlet characters (m = 1, theta = 0), which the paper names as an
+  example of its class. Here C = C(t, chi) = N (|it + mu| + 3) in the paper's
+  notation, with N the conductor and mu the gamma factor shift.
+sources:
+  - authors: E. Carneiro, R. Finder
+    title: On the argument of L-functions
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.01833
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The specialization to Dirichlet characters (m = 1, theta = 0, N = q, mu equal to 0 or 1) is my own reading of the general theorem; the paper only says that Dirichlet L-functions of primitive characters are examples of its class and does not write out this case.
+    - >-
+      The general theorem for automorphic L-functions would need GRH-automorphic and is not recorded here.
+lean:
+  proved: false
+  path: null
+tags: [l-functions, argument-function, extremal-functions]
+added: 2026-11-21

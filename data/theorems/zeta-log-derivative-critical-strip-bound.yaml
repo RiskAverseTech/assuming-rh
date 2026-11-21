@@ -1,0 +1,41 @@
+id: zeta-log-derivative-critical-strip-bound
+title: Bound for the logarithmic derivative of zeta in the critical strip
+field: analytic-number-theory
+statement_plain: >
+  For any fixed delta > 0 and 1/2 + delta <= sigma <= 1 - delta,
+  |zeta'/zeta(sigma + it)| <= (B_sigma / (sigma (1 - sigma)) + o(1)) (log t)^(2 - 2 sigma)
+  as t grows, where B_sigma is the square root of
+  (3 sigma^4 - 17 sigma^3 + 19 sigma^2 + 4 sigma - 4)(-sigma^2 + 3 sigma - 1) / (sigma (2 - sigma)).
+statement_formal: |
+  \left|\frac{\zeta'}{\zeta}(\sigma+it)\right| \le \left(\frac{B_\sigma}{\sigma(1-\sigma)} + o(1)\right)(\log t)^{2-2\sigma}, \qquad B_\sigma = \sqrt{\frac{(3\sigma^4 - 17\sigma^3 + 19\sigma^2 + 4\sigma - 4)(-\sigma^2 + 3\sigma - 1)}{\sigma(2-\sigma)}}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The full statement of Theorem 1 is uniform in the range
+  1/2 + (lambda_0 + c)/log log t <= sigma <= 1 - c/sqrt(log log t), t >= 3,
+  with error term O( (log t)^(2 - 2 sigma) / ((sigma - 1/2)(1 - sigma)^2 log log t) ),
+  where lambda_0 = 0.771... solves 2 lambda_0 tanh(lambda_0) = 1. The implied
+  constant is not made explicit.
+sources:
+  - authors: A. Chirre, F. Goncalves
+    title: Bounding the log-derivative of the zeta-function
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2103.06237
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Only the leading constant is explicit; the error term has an unspecified implied constant.
+    - >-
+      The formula for B_sigma was read from the PDF because the text extraction uses a garbled symbol encoding.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, logarithmic-derivative, critical-strip]
+added: 2026-11-21

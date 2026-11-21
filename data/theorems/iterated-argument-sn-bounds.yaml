@@ -1,0 +1,45 @@
+id: iterated-argument-sn-bounds
+title: Bounds for the iterated argument functions S_n(t) of the zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let S_n(t) be the n-th iterated integral of S(t) = (1/pi) arg zeta(1/2 + it),
+  normalized as in the paper. For every n >= 0 and t sufficiently large,
+  -(C_n^- + o(1)) log t / (log log t)^(n+1) <= S_n(t) <=
+  (C_n^+ + o(1)) log t / (log log t)^(n+1), with explicit constants. For odd n
+  both constants are at most zeta(n+1) / (pi 2^(n+1)); for example
+  C_1^+ = pi/48 and C_1^- = pi/24, and C_0 = 1/4.
+statement_formal: |
+  -\left(C_n^- + o(1)\right)\frac{\log t}{(\log\log t)^{n+1}} \le S_n(t) \le \left(C_n^+ + o(1)\right)\frac{\log t}{(\log\log t)^{n+1}}, \qquad \max(C_n^-, C_n^+) = \frac{\zeta(n+1)}{\pi\, 2^{n+1}} \ \text{ for odd } n
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  For n = 4k + 1 the paper gives C_n^- = zeta(n+1)/(pi 2^(n+1)) and
+  C_n^+ = (1 - 2^(-n)) zeta(n+1)/(pi 2^(n+1)); for n = 4k + 3 the two are
+  swapped; for even n >= 2 the constants are given by formula (1.7) of the
+  paper. The o(1) terms are O(logloglog t / log log t) with implied constants
+  depending on n. The cases n = 0 and n = 1 are due to Carneiro, Chandee and
+  Milinovich. The final section of the paper extends the result to a general
+  class of L-functions; that extension is not recorded here.
+sources:
+  - authors: E. Carneiro, A. Chirre
+    title: Bounding S_n(t) on the Riemann hypothesis
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1702.04099
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The bound holds for t sufficiently large with o(1) terms, so it is explicit only in the leading constants.
+    - >-
+      The constants for even n (formula (1.7)) are not reproduced in the entry.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, argument-function, extremal-functions]
+added: 2026-11-21
