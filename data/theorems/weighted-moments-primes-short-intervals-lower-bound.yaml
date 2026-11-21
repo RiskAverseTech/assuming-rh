@@ -1,0 +1,46 @@
+id: weighted-moments-primes-short-intervals-lower-bound
+title: Lower bounds for weighted even moments of primes in short intervals
+field: analytic-number-theory
+statement_plain: >
+  Let eta be an even test function in the paper's class E_kappa
+  (0 < kappa < 1/2) and Phi a non-trivial even integrable function with Phi
+  and its Fourier transform non-negative. Let psi_eta(x, delta) be the sum
+  over n of Lambda(n) n^(-1/2) eta(delta^(-1) log(n/x)), minus its expected
+  main term, and let M_n(X, delta) be the n-th moment of this quantity over
+  x, weighted by Phi(log x / log X) dx/x and normalized by
+  (log X) times the integral of Phi over (0, infinity). Then for delta in
+  (0, kappa) and n at most delta^(-1/2) (log(1/delta + 2))^(1/2),
+  (-1)^n M_n is at least mu_n delta^(n/2)
+  (alpha log(1/delta) + beta)^(n/2) (1 + O(n^2 delta / log(1/delta + 2)))
+  plus an error O(delta (K log(1/delta + 2))^n / log X), where mu_n is the
+  n-th Gaussian moment and alpha, beta are the integrals of eta-hat^2 and of
+  eta-hat^2(t) log|t|. This matches the size predicted by a conjecture of
+  Montgomery and Soundararajan for even n.
+statement_formal: |
+  (-1)^n M_n(X,\delta;\eta,\Phi) \ge \mu_n \delta^{n/2}\bigl(\alpha(\hat\eta^2)\log(\delta^{-1}) + \beta(\hat\eta^2)\bigr)^{n/2}\Bigl(1 + O_{\kappa,\eta}\Bigl(\frac{n^2\delta}{\log(\delta^{-1}+2)}\Bigr)\Bigr) + O_{\Phi}\Bigl(\delta\,\frac{(K_\eta\log(\delta^{-1}+2))^n}{\log X}\Bigr)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The same paper shows that the bound holds unconditionally for an unbounded
+  sequence of values of X (Corollary 1.3); RH is what gives it for all X.
+sources:
+  - authors: R. de la Bretèche, D. Fiorilli
+    title: On a conjecture of Montgomery and Soundararajan
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2009.05760
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement depends on the paper's precise definitions of the class E_kappa (decay of eta and eta', non-negative Fourier transform with a decay bound) and of the main term subtracted from psi_eta; these are summarized here, not reproduced in full.
+lean:
+  proved: false
+  path: null
+tags: [primes, short-intervals, moments]
+added: 2026-11-21

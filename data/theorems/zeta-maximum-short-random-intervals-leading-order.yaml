@@ -1,0 +1,43 @@
+id: zeta-maximum-short-random-intervals-leading-order
+title: Leading order of the maximum of log zeta on short random intervals of the critical line
+field: analytic-number-theory
+statement_plain: >
+  Fix h > 0 and epsilon > 0 and let U be uniform on [0, 1]. As T tends to
+  infinity, with probability tending to 1 the supremum over t in
+  [UT - h, UT + h] of Re log zeta(1/2 + it) lies in
+  [(1 - epsilon) log log T, (1 + epsilon) log log T]. The same holds for the
+  supremum of Im log zeta(1/2 + it), and the infimum of
+  Im log zeta(1/2 + it) lies in
+  [-(1 + epsilon) log log T, -(1 - epsilon) log log T].
+statement_formal: |
+  \mathbb{P}\Bigl( \sup_{t \in [UT-h,\,UT+h]} \Re \log\zeta\bigl(\tfrac12 + it\bigr) \in \bigl[(1-\epsilon)\log\log T,\ (1+\epsilon)\log\log T\bigr] \Bigr) \longrightarrow 1 \quad (T \to \infty)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is the leading order term in a conjecture of Fyodorov, Hiary and
+  Keating. The paper says RH is used only once, in Proposition 3.2, to
+  approximate an averaged version of log zeta by a sum over prime powers.
+  The same paper proves unconditionally the upper bound
+  sup Re log zeta <= log log T + g(T) with probability tending to 1, for
+  any g tending to infinity (Theorem 1.3).
+sources:
+  - authors: J. Najnudel
+    title: On the extreme values of the Riemann zeta function on random intervals of the critical line
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1611.05562
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Later work by other authors may have established the statement for the real part without RH; this paper does not say so, and it was not checked. A reviewer should confirm whether part of this entry is now proved otherwise.
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, extreme-values, critical-line]
+added: 2026-11-21

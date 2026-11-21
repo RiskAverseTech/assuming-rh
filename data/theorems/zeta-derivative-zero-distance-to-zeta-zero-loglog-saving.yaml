@@ -1,0 +1,39 @@
+id: zeta-derivative-zero-distance-to-zeta-zero-loglog-saving
+title: Distance from a zero of zeta' to the nearest zeta zero ordinate
+field: analytic-number-theory
+statement_plain: >
+  Let rho' = beta' + i gamma' be a zero of zeta'(s) and let gamma_c be the
+  ordinate of a zero of zeta(s) nearest to gamma'. If
+  beta' - 1/2 <= 1 / log log gamma', then |gamma' - gamma_c| is
+  O(sqrt((beta' - 1/2) / log log gamma')) with an absolute implied
+  constant, and for gamma' sufficiently large the constant can be taken to
+  be 2.16.
+statement_formal: |
+  \gamma' - \gamma_c \ll \sqrt{\frac{\beta' - 1/2}{\log\log\gamma'}} \qquad \text{for } \beta' - \tfrac12 \le \frac{1}{\log\log\gamma'}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This improves, under RH, the unconditional bound
+  gamma' - gamma_c << sqrt(|beta' - 1/2|) of Garaev and Yildirim by a
+  factor sqrt(log log gamma').
+sources:
+  - authors: F. Ge
+    title: Conditional estimates on small distances between ordinates of zeros of ζ(s) and ζ′(s)
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1604.04243
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes the bound for gamma' - gamma_c without absolute value signs; it is read here as a bound on the distance.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zeta-derivative, zero-spacing]
+added: 2026-11-21

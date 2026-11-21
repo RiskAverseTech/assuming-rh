@@ -1,0 +1,35 @@
+id: weighted-central-limit-theorem-log-zeta
+title: Central limit theorem for log|zeta(1/2+it)| weighted by |zeta|^2
+field: analytic-number-theory
+statement_plain: >
+  As t varies in [T, 2T], the distribution of log|zeta(1/2 + it)| with
+  respect to the weighted measure |zeta(1/2 + it)|^2 dt is asymptotically
+  Gaussian with mean log log T and variance (1/2) log log T.
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper says RH is used only in Proposition 1.1, to bound the
+  contribution of the zeros through a sum of |zeta(rho + i alpha)|^2 over
+  zeros, which is known to be O(T (log T)^2) only under RH.
+sources:
+  - authors: A. Fazzari
+    title: A weighted central limit theorem for log |ζ(1/2 + it)|
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/1912.08127
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Theorem 1.1 is stated in words; the exact mode of convergence (convergence of the normalized weighted distribution function for each fixed V) was not transcribed as a formula.
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, central-limit-theorem, value-distribution]
+added: 2026-11-21

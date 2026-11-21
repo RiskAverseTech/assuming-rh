@@ -1,0 +1,43 @@
+id: piltz-divisor-error-term-no-sign-change-intervals
+title: Many intervals without sign changes of the Piltz divisor error term
+field: analytic-number-theory
+statement_plain: >
+  Let k be an integer at least 3, d_k the k-fold divisor function and
+  Delta_k(x) the sum of d_k(n) for n up to x minus the residue at s = 1 of
+  zeta(s)^k x^s / s. For every small epsilon > 0 there are constants c_0
+  (depending on k) and X_0 (depending on k and epsilon) such that for
+  X at least X_0 there are at least X^(1/(k(k-1)) - epsilon) disjoint
+  subintervals of [X, 2X], each of length
+  c_0 epsilon X^(1 - 1/k) (log X)^(-k^2 - 2), on which
+  |Delta_k(x)| > (C_k/2 - epsilon) x^(1/2 - 1/(2k)), where
+  C_k = (1/pi) (1/(2k) sum over n of d_k(n)^2 / n^(1 + 1/k))^(1/2). In
+  particular Delta_k does not change sign on any of these subintervals.
+statement_formal: |
+  |\Delta_k(x)| > \left(\tfrac12 C_k - \varepsilon\right) x^{\frac12 - \frac{1}{2k}} \ \text{ on at least } X^{\frac{1}{k(k-1)}-\varepsilon} \text{ disjoint subintervals of } [X,2X] \text{ of length } c_0\,\varepsilon\, X^{1-\frac1k}(\log X)^{-k^2-2}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper says this shows that Tong's theorem on sign changes of Delta_k
+  in intervals of length a constant times X^(1 - 1/k) is best possible up
+  to powers of log X for k at least 3. Under the weaker Lindelof Hypothesis
+  the same paper gets subintervals of length X^(1 - 1/k - xi)
+  (Theorem 1.2).
+sources:
+  - authors: S. Baluyot, C. Castillo
+    title: Sign changes of the error term in the Piltz divisor problem
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2302.08003
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [divisor-problem, sign-changes, short-intervals]
+added: 2026-11-21
