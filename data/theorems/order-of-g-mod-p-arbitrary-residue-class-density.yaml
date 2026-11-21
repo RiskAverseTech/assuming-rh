@@ -1,0 +1,52 @@
+id: order-of-g-mod-p-arbitrary-residue-class-density
+title: Density of primes p for which the order of g modulo p lies in a given residue class a modulo d
+field: analytic-number-theory
+statement_plain: >
+  Let g be a rational number other than -1, 0, 1 and let a and d be integers
+  with d at least 1. The number of primes p <= x for which the multiplicative
+  order of g modulo p is congruent to a modulo d equals
+  delta_g(a,d) x / log x + O(x / (log x)^(3/2)), with the implied constant
+  depending on d and g. The density delta_g(a,d) is given by an explicit
+  double series over the degrees of the Kummer fields
+  K_(s,r) = Q(zeta_s, g^(1/r)).
+statement_formal: |
+  \delta_g(a,d)=\sum_{\substack{t\ge 1\\ (1+ta,\,d)=1}}\ \sum_{\substack{n\ge 1\\ (n,d)\mid a}}\frac{\mu(n)\,c_g(1+ta,\,dt,\,nt)}{[K_{[d,n]t,\,nt}:\mathbb{Q}]},\qquad K_{s,r}=\mathbb{Q}(\zeta_s,g^{1/r})
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  In the formula, [d,n] is the least common multiple, and c_g(b,f,v) is 1 if
+  the automorphism of Q(zeta_f) sending zeta_f to zeta_f^b is the identity on
+  the intersection of Q(zeta_f) with K_(v,v), and 0 otherwise. This extends
+  the dataset entry order-of-g-mod-p-residue-classes-mod-4-density (part I of
+  the same series, moduli 3 and 4) to every modulus d. The paper writes only
+  "GRH". The proof counts primes with given index t in a progression by a
+  variation of Hooley's argument, which uses the fields K_(s,r); these are
+  not abelian over the rationals. Part III of the series
+  (arXiv:math/0405527) shows under the same hypothesis that for all but
+  O_d(x (log x)^(-1/phi(k_1(d)))) integers g with |g| <= x the densities
+  equal g-independent average values; it is not recorded separately.
+sources:
+  - authors: P. Moree
+    title: "On the distribution of the order and index of g(mod p) over residue classes II"
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0404339
+    hypothesis_location: "Theorem 2 (a special case of Theorem 1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not spell out which fields its GRH refers to. Part I of
+      the series says the Riemann Hypothesis for the fields
+      Q(zeta_r, g^(1/s)) with s dividing r is enough; this entry assumes the
+      same holds here.
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, artin-conjecture, kummer-extensions]
+added: 2026-11-21

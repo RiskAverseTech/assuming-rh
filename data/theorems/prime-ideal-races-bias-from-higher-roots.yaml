@@ -1,0 +1,60 @@
+id: prime-ideal-races-bias-from-higher-roots
+title: Biased prime ideal races in which the bias comes only from 2p-th roots
+field: analytic-number-theory
+statement_plain: >
+  For every odd prime p there is a Galois extension L/K of number fields,
+  with Galois group G isomorphic to Q_4p x Q_4(p-1) x C_(rad(p-1)/2) (Q_4n the
+  generalized quaternion group of order 4n), and conjugacy classes C1, C2 of
+  G with the following properties. Elements of C1 and C2 have the same
+  number of l-th roots in G for every squarefree l < 2p, in particular the
+  same number of square roots, and the race between prime ideals with
+  Frobenius in C1 and in C2 is biased but not extremely so: the set of x
+  where the normalized count for C1 exceeds that for C2 has logarithmic
+  density strictly between 1/2 and 1.
+statement_formal: |
+  \tfrac12<\delta_{L/K}(C_1,C_2)<1,\qquad r_\ell^{G}(C_1)=r_\ell^{G}(C_2)\ \text{for all squarefree } \ell<2p
+hypotheses_required: [GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The existence of the extensions and classes (Theorem 1.5) is
+  unconditional; the statement about the density (Corollary 1.4) is
+  conditional. It assumes the Riemann Hypothesis for all Artin L-functions
+  of the Galois closure of L over Q, and two extra assumptions: Artin's
+  holomorphy conjecture for these L-functions, and the hypothesis LI, that
+  the positive imaginary parts of their zeros are linearly independent over
+  the rationals and that L(1/2, chi) is nonzero for orthogonal and unitary
+  irreducible characters. The fields are Galois over Q with a symmetric
+  group as Galois group, so the Artin L-functions are not of Dirichlet type.
+  The general criterion behind this is Theorem 1.2 of the paper. The paper
+  also shows the minimal group order for this phenomenon is 96 for p = 3 and
+  320 for p = 5. Related entries: chebyshev-bias and
+  inclusive-prime-number-races.
+sources:
+  - authors: M. Hayani
+    title: On the role of higher roots in prime ideal races
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.23150
+    hypothesis_location: "Corollary 1.4 combined with Theorem 1.5; hypotheses stated in Section 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The entry combines Corollary 1.4 (conditional) with Theorem 1.5
+      (unconditional existence); the paper states the combination only in
+      prose. The paper has results under GRH for Artin L-functions alone
+      (Theorem 1.6, Proposition 1.8), which are not recorded here.
+    - >-
+      No waiting_on family fits the Riemann Hypothesis for Artin L-functions
+      of a general Galois extension with code GRH-Artin, so only
+      extra-assumption is listed.
+lean:
+  proved: false
+  path: null
+tags: [chebyshev-bias, prime-ideal-races, artin-l-functions]
+added: 2026-11-21

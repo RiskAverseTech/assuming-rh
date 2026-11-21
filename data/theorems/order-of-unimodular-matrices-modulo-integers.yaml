@@ -1,0 +1,51 @@
+id: order-of-unimodular-matrices-modulo-integers
+title: Hyperbolic matrices in SL2(Z) have order almost N modulo almost all integers N
+field: analytic-number-theory
+statement_plain: >
+  Let A be a matrix in SL2(Z) with |trace(A)| > 2, and let ord_N(A) be the
+  order of A modulo N. For every fixed epsilon > 0, the number of integers
+  N <= x with ord_N(A) << N^(1 - epsilon) is o(x), so ord_N(A) >> N^(1 - epsilon)
+  on a set of integers of density one. For primes: if f increases to infinity
+  more slowly than log x, then ord_p(A) >= p / f(p) for all primes p <= x
+  outside a set of size O(x / (log x f(x)^(1 - epsilon))).
+statement_formal: |
+  \#\{N\le x:\ \operatorname{ord}_N(A)\ll N^{1-\epsilon}\}=o(x)\qquad (A\in \mathrm{SL}_2(\mathbb{Z}),\ |\operatorname{tr}A|>2)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper defines GRH as the Riemann Hypothesis for the Dedekind zeta
+  functions of all number fields, and remarks that for the matrix results it
+  is enough to assume it for the fields K_n = K(zeta_n, eps^(1/n)), n > 1,
+  where eps is an eigenvalue of A and K = Q(eps) is a real quadratic field.
+  These Kummer-type fields are not abelian over the rationals. The hypothesis
+  enters through Serre's conditional Chebotarev density theorem, in an
+  argument of Hooley type. The same paper proves under GRH the analogue for
+  integers (Theorem 1): for an integer b other than 0, 1, -1, the order of b
+  modulo N exceeds N^(1 - epsilon) on a set of integers N of density one.
+  Related entries on multiplicative orders by the same author:
+  power-generator-period-normal-order and
+  average-multiplicative-order-arnold-problem.
+sources:
+  - authors: P. Kurlberg
+    title: On the order of unimodular matrices modulo integers
+    year: 2002
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0202053
+    hypothesis_location: "Theorem 3 (with Theorem 2 for primes); the hypothesis is defined in Section 2.1 and narrowed in the remark after Corollary 6"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The arXiv text is marked "preliminary version". The exponent in the
+      exceptional-set bound of Theorem 2 was read from a garbled text
+      extraction as x / (log x f(x)^(1 - epsilon)).
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, matrices, artin-conjecture]
+added: 2026-11-21
