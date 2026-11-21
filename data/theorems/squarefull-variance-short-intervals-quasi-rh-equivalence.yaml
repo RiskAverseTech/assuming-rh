@@ -1,0 +1,42 @@
+id: squarefull-variance-short-intervals-quasi-rh-equivalence
+title: Variance bound for square-full integers in short intervals with both main terms removed
+field: analytic-number-theory
+statement_plain: >
+  Write D_r(x; H) = (x + H)^r - x^r. For every eps in (0, 1/1000) and every
+  X^eps <= H <= X^(1 - eps), the mean square over x in [X, 2X] of the number
+  of square-full integers in (x, x + H] minus
+  (zeta(3/2)/zeta(3)) D_(1/2)(x; H) + (zeta(2/3)/zeta(2)) D_(1/3)(x; H)
+  is at most a constant depending on eps times X^(1/5 + 5 eps).
+statement_formal: |
+  \frac{1}{X}\int_{X}^{2X}\left| \sum_{x<n\le x+H} 1_{\text{square-full}}(n) - \left( \frac{\zeta(3/2)}{\zeta(3)}\, D_{1/2}(x;H) + \frac{\zeta(2/3)}{\zeta(2)}\, D_{1/3}(x;H) \right) \right|^{2} dx \ll_{\varepsilon} X^{1/5+5\varepsilon}, \qquad D_r(x;H) = (x+H)^r - x^r
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper proves that this statement is equivalent to a quasi-Riemann
+  hypothesis: every zero of the Riemann zeta function has real part in
+  [2/5, 3/5] (called 1/10-QRH in the paper). That hypothesis is weaker than
+  RH, so RH implies the statement, but the statement is not equivalent to RH
+  itself. It complements the existing entry
+  squarefree-variance-short-intervals-rh-equivalence and the squarefull
+  variance asymptotic of Chan.
+sources:
+  - authors: Y. Meemark, W. Wongcharoenbhorn
+    title: Variance of square-full integers in short intervals and arithmetic progressions
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2504.14511
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The hypothesis is a quasi-Riemann hypothesis (zeros in the strip 2/5 <= Re s <= 3/5), weaker than RH; the entry is coded RH because the dataset has no code for it.
+    - The formula was read from the PDF because the text extraction of display (1.3) is garbled.
+lean:
+  proved: false
+  path: null
+tags: [squarefull-numbers, short-intervals, variance, quasi-riemann-hypothesis]
+added: 2026-11-21

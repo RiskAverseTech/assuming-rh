@@ -1,0 +1,36 @@
+id: prime-plus-non-squarefree-every-integer-above-24
+title: Every integer above 24 is a prime plus a number that is not square-free
+field: additive-number-theory
+statement_plain: >
+  Every integer n > 24 can be written as the sum of a prime and a positive
+  integer that is not square-free.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Unconditionally the same paper proves the result for every odd n > 24 and,
+  ineffectively, for every sufficiently large n; the hypothesis is needed
+  only for even n. The proof uses GRH for Dirichlet L-functions through an
+  explicit bound for the least prime in a progression modulo q^2 and an
+  explicit error term for primes in progressions. Related to the existing
+  entries least-prime-in-arithmetic-progression and
+  prime-plus-square-exceptional-set-bound, but a different statement.
+sources:
+  - authors: E. S. Lee, R. O'Clarey
+    title: On the Sum of a Prime and a Number that is not Square-Free
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2605.02426
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [additive-problems, primes, squarefree-numbers, explicit-bounds]
+added: 2026-11-21

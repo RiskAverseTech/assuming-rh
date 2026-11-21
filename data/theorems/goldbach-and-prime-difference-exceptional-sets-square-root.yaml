@@ -1,0 +1,44 @@
+id: goldbach-and-prime-difference-exceptional-sets-square-root
+title: Square-root bounds for the exceptional sets in the Goldbach and prime difference problems
+field: additive-number-theory
+statement_plain: >
+  Let E_+(N) be the number of even integers in (2, N] that are not sums of
+  two primes and E_-(N) the number of positive even integers up to N that
+  are not differences of two primes. Then E_+(N) and E_-(N) are both at most
+  a constant times sqrt(N) (log N)^100.
+statement_formal: |
+  E_{+}(N) \ll N^{1/2} (\log N)^{100}, \qquad E_{-}(N) \ll N^{1/2} (\log N)^{100}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes less than GRH: only that every non-trivial zero of every
+  primitive Dirichlet L-function has real part at most a fixed Theta with
+  1/2 <= Theta < 11/12 (a quasi Riemann Hypothesis), with the implied
+  constant depending on Theta. GRH is the case Theta = 1/2. For E_+ alone the
+  paper recalls that Goldston already had N^(1/2) (log N)^3 under GRH, so
+  under full GRH the new content is the bound for E_- and the weaker
+  hypothesis. No existing entry records a Goldbach exceptional set bound;
+  prime-plus-square-exceptional-set-bound is the analog for a prime plus a
+  square.
+sources:
+  - authors: H. Li, Z. Liu
+    title: Fourth moments of prime exponential sums and exceptional sets for sums and differences of primes
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.26756
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The hypothesis is a quasi-GRH for Dirichlet L-functions, weaker than GRH; coded GRH-Dirichlet because it is implied by it.
+    - The paper remarks that a preprint it cites proves a zero-free half-plane Re(s) > 7/8. If that covered all Dirichlet L-functions the theorem would be unconditional, but the paper still states it as conditional and I have not relied on that remark.
+    - A very recent, long preprint (October 2026); the proof was not checked.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, exceptional-sets, prime-differences, quasi-riemann-hypothesis]
+added: 2026-11-21

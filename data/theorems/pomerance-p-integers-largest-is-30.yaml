@@ -1,0 +1,35 @@
+id: pomerance-p-integers-largest-is-30
+title: Pomerance's conjecture that 30 is the largest P-integer
+field: analytic-number-theory
+statement_plain: >
+  Call k > 1 a P-integer if the first phi(k) primes coprime to k form a
+  reduced residue system modulo k. The only P-integers are 2, 4, 6, 12, 18
+  and 30.
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the same paper proves that every P-integer is below
+  10^3500, and that no k with 30 < k <= 10^11 is a P-integer. The proof under
+  RH uses an explicit RH bound for pi(x) - Li(x) to count primes in intervals
+  of length k.
+sources:
+  - authors: L. Hajdu, N. Saradha, R. Tijdeman
+    title: On a conjecture of Pomerance
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1107.5191
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The paper says the conjecture was open in 2011. A later unconditional proof may exist in the literature (I recall one attributed to Yang and Togbe, not verified here); if so the status should become proved-otherwise.
+lean:
+  proved: false
+  path: null
+tags: [primes, residue-classes, explicit-bounds]
+added: 2026-11-21

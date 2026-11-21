@@ -1,0 +1,37 @@
+id: nth-prime-inverse-logarithmic-integral-explicit-bound
+title: Explicit bound for the n-th prime minus the inverse logarithmic integral
+field: analytic-number-theory
+statement_plain: >
+  Let ali denote the inverse function of the logarithmic integral li. For
+  every n >= 11 the n-th prime p_n satisfies
+  |p_n - ali(n)| < (1/pi) sqrt(n) (log n)^(5/2).
+statement_formal: |
+  \left| p_n - \operatorname{li}^{-1}(n) \right| < \frac{1}{\pi} \sqrt{n}\, (\log n)^{5/2} \quad \text{for all } n \ge 11
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The paper proves both directions
+  (Theorem 6.2). The forward direction is deduced from Schoenfeld's explicit
+  bound for pi(x) - li(x), which is the existing entry
+  schoenfeld-prime-counting-error; this entry is its counterpart for the
+  n-th prime.
+sources:
+  - authors: J. Arias de Reyna, J. Toulisse
+    title: The n-th prime asymptotically
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1203.5413
+    hypothesis_location: Theorem 6.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The converse direction is only sketched in the paper (a bound O(n^(1/2 + eps)) for p_n - ali(n) gives pi(x) = li(x) + O(x^(1/2 + eps))).
+lean:
+  proved: false
+  path: null
+tags: [primes, nth-prime, explicit-bounds, rh-equivalent]
+added: 2026-11-21

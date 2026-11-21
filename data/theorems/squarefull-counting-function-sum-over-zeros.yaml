@@ -1,0 +1,46 @@
+id: squarefull-counting-function-sum-over-zeros
+title: Counting square-full numbers with an explicit sum over zeta zeros and error x^eps
+field: analytic-number-theory
+statement_plain: >
+  Let B_2(x) be the number of square-full integers up to x. For all
+  sufficiently large x, B_2(x) equals
+  (zeta(3/2)/zeta(3)) x^(1/2) + (zeta(2/3)/zeta(2)) x^(1/3), plus a sum of
+  terms c_gamma x^(1/12 + i gamma/6) over the zeros 1/2 + i gamma of zeta
+  with |gamma| < c_1 x^(1/2), plus an error O(x^(10 eps)) for every
+  eps > 0. Here the c_gamma are effective complex constants and c_1 > 0 is
+  fixed.
+statement_formal: |
+  \sum_{n \le x} f_2(n) = \frac{\zeta(3/2)}{\zeta(3)}\, x^{1/2} + \frac{\zeta(2/3)}{\zeta(2)}\, x^{1/3} + \sum_{\zeta(1/2+i\gamma)=0,\ |\gamma| < c_1 x^{1/2}} c_{\gamma/6}\, x^{\frac{1}{12} + i\frac{\gamma}{6}} + O_{\varepsilon}\bigl(x^{10\varepsilon}\bigr)
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is that every non-trivial zero of the Riemann zeta
+  function is simple (the paper calls RH plus simplicity the strong Riemann
+  hypothesis). The same theorem also gives a version with the sum cut at
+  |gamma| < c_2 x^(5/12) and error O(x^(1/12 + 10 eps)). No existing entry
+  treats the counting function of square-full numbers; the paper quotes
+  earlier bounds E_2(x) << x^(theta + eps) under RH alone with theta down to
+  about 0.1406.
+sources:
+  - authors: A. Sankaranarayanan, P. Akhilesh
+    title: On the counting function of square-full numbers
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.02327
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The size of the sum over zeros is not estimated in the paper, so the theorem does not by itself give a bound for the classical error term E_2(x).
+    - The constants c_gamma are not written out in the theorem statement; the entry does not specify them.
+    - A recent preprint; the proof was not checked in detail.
+lean:
+  proved: false
+  path: null
+tags: [squarefull-numbers, explicit-formula, simple-zeros]
+added: 2026-11-21
