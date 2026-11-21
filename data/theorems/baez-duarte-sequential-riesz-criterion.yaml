@@ -1,0 +1,42 @@
+id: baez-duarte-sequential-riesz-criterion
+title: Baez-Duarte sequential criterion for the Riemann Hypothesis
+field: analytic-number-theory
+statement_plain: >
+  Let c_k be the sum over j from 0 to k of (-1)^j binomial(k, j) / zeta(2j + 2).
+  Then c_k = O(k^(-3/4 + epsilon)) as k tends to infinity, for every positive
+  epsilon.
+statement_formal: |
+  c_k = \sum_{j=0}^{k} (-1)^j \binom{k}{j} \frac{1}{\zeta(2j+2)} = O_\varepsilon\!\left(k^{-3/4+\varepsilon}\right) \quad \text{for every } \varepsilon > 0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The equivalence is due to L. Baez-Duarte
+  (2005); it is a discrete version of the Riesz criterion (1916), that RH holds
+  if and only if R(x) = O(x^(1/4 + epsilon)), where R(x) is the sum over k of
+  (-1)^k x^(k+1) / (k! zeta(2k + 2)). The cited paper is a conference overview
+  that quotes the criterion and reports numerical data; it states (with proof
+  in the authors' other papers) that R(x) = O(x^(delta+1)) if and only if
+  c_k = O(k^delta) for any real delta > -3/2.
+sources:
+  - authors: J. Cislo, M. Wolf
+    title: Criteria equivalent to the Riemann Hypothesis
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0808.0640
+    hypothesis_location: Section 3, equations (18)-(19)
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The cited paper only surveys this equivalence, which is due to Baez-Duarte (Int. J. Math. Math. Sci. 2005, reference [2] of the paper); the original proof was not read.
+    - >-
+      The paper lists several other classical RH equivalences (von Koch, Beurling, de Bruijn-Newman, Li, Lagarias); only the Baez-Duarte criterion, the paper's stated focus, is recorded here.
+lean:
+  proved: false
+  path: null
+tags: [riemann-hypothesis-equivalent, riesz-criterion, zeta-values]
+added: 2026-11-21

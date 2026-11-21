@@ -1,0 +1,42 @@
+id: li-criterion-zero-free-half-planes
+title: Li's criterion and its extension to zero-free half-planes
+field: analytic-number-theory
+statement_plain: >
+  Let xi(s) = s (s - 1) pi^(-s/2) Gamma(s/2) zeta(s) and let lambda_n be
+  1/(n-1)! times the n-th derivative of s^(n-1) log xi(s) at s = 1. Then
+  lambda_n >= 0 for every positive integer n.
+statement_formal: |
+  \lambda_n = \frac{1}{(n-1)!} \frac{d^n}{ds^n}\Bigl[s^{n-1} \log \xi(s)\Bigr]_{s=1} \ge 0 \quad \text{for all } n \ge 1
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. It is Li's criterion, due to X.-J. Li
+  (1997). The cited paper re-proves it as the case tau = 1 of a more general
+  result (Theorem 1): for tau >= 1/2, the half-plane Re(s) > tau/2 contains
+  no zero of zeta if and only if alpha_n(tau) >= 0 for all positive integers
+  n, where alpha_n(tau) is defined like lambda_n with the derivative taken at
+  s = tau. For tau > 1 that general statement is equivalent to a zero-free
+  half-plane weaker than RH, not to RH.
+sources:
+  - authors: P. Freitas
+    title: A Li-type criterion for zero-free half-planes of Riemann's zeta function
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0507368
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The RH equivalence recorded here (tau = 1) is Li's criterion and is due to Li, not to the cited paper; the paper's new content is the family indexed by tau.
+    - >-
+      The paper remarks that its indexing of the coefficients differs from the convention of Bombieri and Lagarias away from tau = 1; at tau = 1 the two agree.
+lean:
+  proved: false
+  path: null
+tags: [riemann-hypothesis-equivalent, li-criterion, zero-free-regions]
+added: 2026-11-21

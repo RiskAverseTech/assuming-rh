@@ -1,0 +1,42 @@
+id: zeta-modulus-horizontal-monotonicity
+title: Horizontal monotonicity of the modulus of zeta left of the critical line
+field: analytic-number-theory
+statement_plain: >
+  For every fixed real t with |t| >= 8, the modulus |zeta(sigma + it)| is
+  monotone decreasing as a function of sigma on the half-line sigma <= 1/2.
+  The same holds with zeta replaced by Riemann's xi function or by Euler's
+  eta function eta(s) = (1 - 2^(1-s)) zeta(s).
+statement_formal: |
+  |\zeta(\sigma_1 + it)| \ge |\zeta(\sigma_2 + it)| \quad \text{for all } \sigma_1 < \sigma_2 \le \tfrac12 \text{ and all real } t \text{ with } |t| \ge 8
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH, for each of the three functions
+  separately. The paper proves unconditionally that the monotonicity holds in
+  the smaller region sigma <= 0, |t| >= 8. For the xi function the
+  equivalence is credited in the paper to Sondow and Dumitrescu, and that
+  monotone decrease of |zeta| implies RH is credited to earlier work of
+  Saidak and Zvengrowski.
+sources:
+  - authors: Y. Matiyasevich, F. Saidak, P. Zvengrowski
+    title: Horizontal Monotonicity of the Modulus of the Riemann Zeta Function and Related Functions
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1205.2773
+    hypothesis_location: Theorem 3.4 (stated as Theorem 1.4 in the introduction)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem says "monotone decreasing" while the abstract says "strictly decrease"; the formal statement here uses the non-strict form. Both forms are equivalent to RH by the paper's argument, but a reader should confirm the intended one.
+    - >-
+      The proof of the equivalence for the region sigma <= 1/2 is given in one sentence by reference to the argument of Corollary 2.5.
+lean:
+  proved: false
+  path: null
+tags: [riemann-hypothesis-equivalent, zeta-function, monotonicity]
+added: 2026-11-21

@@ -1,0 +1,42 @@
+id: goldbach-average-equivalent-to-rh
+title: Average of Goldbach representations with error exponent 3/2
+field: additive-number-theory
+statement_plain: >
+  Let G(n) be the sum of Lambda(m1) Lambda(m2) over all m1 + m2 = n, where
+  Lambda is the von Mangoldt function. Then for every positive epsilon the
+  sum of G(n) over n up to x equals x^2 / 2 + O(x^(3/2 + epsilon)).
+statement_formal: |
+  \sum_{n \le x} G(n) = \frac{x^2}{2} + O_\varepsilon\!\left(x^{3/2+\varepsilon}\right) \ \text{ for every } \varepsilon > 0, \qquad G(n) = \sum_{m_1 + m_2 = n} \Lambda(m_1)\Lambda(m_2)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The equivalence was stated by
+  Granville (2007); according to the cited survey his sketch did not suffice
+  for the direction that deduces RH, which was completed by Bhowmik,
+  Halupczok, Matsumoto and Suzuki and by Bhowmik and Ruzsa. The survey gives
+  an overview of the proof in its Section 4. Its analogue for primes in
+  arithmetic progressions (Theorem 3 of the survey) is an equivalence with
+  GRH for Dirichlet L-functions that additionally assumes the Distinct Zero
+  Conjecture; that analogue is not what is recorded here.
+sources:
+  - authors: G. Bhowmik, K. Halupczok
+    title: Asymptotics of Goldbach Representations
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1809.06920
+    hypothesis_location: Theorem 2
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The cited paper is a survey; the equivalence is due to Granville, Bhowmik, Halupczok, Matsumoto, Suzuki and Ruzsa (references [17], [4] and [5] of the paper), whose original proofs were not read.
+lean:
+  proved: false
+  path: null
+related: [goldbach-average-over-multiples-of-q]
+tags: [riemann-hypothesis-equivalent, goldbach-problem, average-order]
+added: 2026-11-21

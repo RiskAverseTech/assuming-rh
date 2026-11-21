@@ -1,0 +1,33 @@
+id: zeta-derivative-moments-at-zeros-upper-bound
+title: Upper bounds for moments of zeta'(rho) over the zeros
+field: analytic-number-theory
+statement_plain: >
+  Let N(T) be the number of non-trivial zeros rho of zeta with imaginary
+  part gamma in (0, T]. For every positive integer k and every positive
+  epsilon, the average of |zeta'(rho)|^(2k) over these zeros is
+  O((log T)^(k(k+2) + epsilon)) for sufficiently large T, with the implied
+  constant depending on k and epsilon.
+statement_formal: |
+  \frac{1}{N(T)} \sum_{0 < \gamma \le T} \left|\zeta'(\rho)\right|^{2k} \ll_{k,\varepsilon} (\log T)^{k(k+2)+\varepsilon} \qquad (k \in \mathbb{N})
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: M. B. Milinovich
+    title: Upper bounds for the moments of zeta prime rho
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0806.0786
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, zeta-derivative-at-zeros, discrete-moments]
+added: 2026-11-21

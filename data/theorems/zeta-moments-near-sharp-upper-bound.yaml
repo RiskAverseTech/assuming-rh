@@ -1,0 +1,37 @@
+id: zeta-moments-near-sharp-upper-bound
+title: Near-sharp upper bounds for moments of the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let M_k(T) be the integral of |zeta(1/2 + it)|^(2k) over 0 <= t <= T. For
+  every positive real k and every positive epsilon, M_k(T) is at least a
+  constant times T (log T)^(k^2) and at most a constant times
+  T (log T)^(k^2 + epsilon), with constants depending on k and epsilon.
+statement_formal: |
+  T(\log T)^{k^2} \ll_k \int_0^T \left|\zeta\!\left(\tfrac12 + it\right)\right|^{2k} dt \ll_{k,\varepsilon} T(\log T)^{k^2+\varepsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The new part is the upper bound, deduced from the paper's main Theorem on
+  the measure of the set where log|zeta(1/2 + it)| >= V. The lower bound
+  under RH for all positive real k is attributed in the paper to
+  Ramachandra.
+sources:
+  - authors: K. Soundararajan
+    title: Moments of the Riemann zeta-function
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0612106
+    hypothesis_location: Corollary A
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [lindelof-hypothesis]
+tags: [zeta-moments, critical-line, large-values]
+added: 2026-11-21

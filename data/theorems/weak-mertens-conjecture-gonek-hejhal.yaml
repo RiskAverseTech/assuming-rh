@@ -1,0 +1,41 @@
+id: weak-mertens-conjecture-gonek-hejhal
+title: Weak Mertens conjecture and bounds for the Mobius summatory function
+field: analytic-number-theory
+statement_plain: >
+  Let M(x) be the sum of the Mobius function over the integers up to x. Then
+  M(x) = O(sqrt(x) (log x)^(3/2)), and the weak Mertens conjecture holds: the
+  integral of (M(x)/x)^2 over 2 <= x <= X is O(log X).
+statement_formal: |
+  M(x) \ll x^{1/2} (\log x)^{3/2} \qquad \text{and} \qquad \int_2^X \left(\frac{M(x)}{x}\right)^2 dx \ll \log X
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  Besides RH the theorem assumes the bound J_{-1}(T) = O(T), where
+  J_{-1}(T) is the sum of 1/|zeta'(rho)|^2 over zeros with 0 < gamma <= T
+  (the k = 1 case of the Gonek-Hejhal conjecture). The paper notes that this
+  implicitly assumes all zeros of zeta are simple. Under the same two
+  assumptions the paper also shows that e^(-y/2) M(e^y) has a limiting
+  distribution (Theorem 2). The pointwise bound in part (i) is attributed in
+  the paper to unpublished work of Gonek.
+sources:
+  - authors: N. Ng
+    title: The distribution of the summatory function of the Mobius function
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0310381
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Theorem 1 has four parts; parts (i) and (iv) are recorded. Parts (ii) and (iii) and Theorem 2 need the same two assumptions.
+lean:
+  proved: false
+  path: null
+related: [mertens-function-bound]
+tags: [mertens-function, mobius-function, gonek-hejhal-conjecture]
+added: 2026-11-21
