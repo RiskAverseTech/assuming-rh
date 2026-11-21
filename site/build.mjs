@@ -78,6 +78,7 @@ function rich(text) {
 const statusBadge = (e) =>
   `<span class="badge status-${e.status}${e.review.state === 'ai-classified' ? ' draft' : ''}">${STATUS[e.status].label}</span>`;
 const reviewBadge = (e) => `<span class="badge review-${e.review.state}">${REVIEW[e.review.state].label}</span>`;
+const authorBadge = (e) => (e.author_submitted ? ' <span class="badge author-sub">Author-submitted, unrefereed</span>' : '');
 const hypChip = (code) => `<span class="chip cov-${hyp[code].covered}" title="${esc(hyp[code].name)}: ${COVERED[hyp[code].covered]}">${code}</span>`;
 const fmtDate = (iso) => {
   const [y, m, d] = iso.split('-').map(Number);
@@ -157,7 +158,9 @@ ${body}
 
 // ---------- pages ----------
 function buildHome() {
-  const counts = Object.fromEntries(STATUS_ORDER.map((s) => [s, entries.filter((e) => e.status === s).length]));
+  const counted = entries.filter((e) => !e.author_submitted);
+  const authorSub = entries.length - counted.length;
+  const counts = Object.fromEntries(STATUS_ORDER.map((s) => [s, counted.filter((e) => e.status === s).length]));
   const unchecked = entries.filter((e) => e.review.state === 'ai-classified').length;
   page({
     file: 'index.html',
@@ -201,6 +204,7 @@ function buildHome() {
       <span class="count-label">${STATUS[s].label}</span>
       <span class="count-desc">${STATUS[s].short}</span></a></li>`).join('\n    ')}
   </ul>
+  ${authorSub ? `<p class="muted">${authorSub} more ${authorSub === 1 ? 'entry is an unrefereed result' : 'entries are unrefereed results'} submitted by ${authorSub === 1 ? 'its author' : 'their authors'}. ${authorSub === 1 ? 'It is' : 'They are'} labeled and not included in the counts above. <a href="about.html#author-submitted">What that means</a>.</p>` : ''}
   <p class="muted">${unchecked} of ${entries.length} entries are AI-classified and not yet checked by a human expert.
   <a href="about.html#review-states">What the review states mean</a>.</p>
 </section>
@@ -226,7 +230,7 @@ function buildBrowse() {
       const hay = [e.title, e.statement_plain, e.tags.join(' '), e.sources.map((s) => s.authors + ' ' + s.year).join(' '), e.hypotheses_required.join(' ')].join(' ').toLowerCase();
       return `<tr data-status="${e.status}" data-hyps="${e.hypotheses_required.join(' ')}" data-field="${e.field}" data-review="${e.review.state}" data-search="${esc(hay)}">
       <th scope="row" data-sort="${esc(e.title.toLowerCase())}"><a href="theorems/${e.id}.html">${esc(e.title)}</a></th>
-      <td data-sort="${STATUS_ORDER.indexOf(e.status)}">${statusBadge(e)}</td>
+      <td data-sort="${STATUS_ORDER.indexOf(e.status)}">${statusBadge(e)}${authorBadge(e)}</td>
       <td data-sort="${esc(e.hypotheses_required.join(' '))}">${e.hypotheses_required.map(hypChip).join(' ')}</td>
       <td data-sort="${e.field}">${FIELD(e.field)}</td>
       <td data-sort="${Object.keys(REVIEW).indexOf(e.review.state)}">${reviewBadge(e)}</td>
@@ -290,7 +294,8 @@ function buildEntry(e) {
 <article class="entry">
   <header>
     <h1>${esc(e.title)}</h1>
-    <p class="badges">${statusBadge(e)} ${reviewBadge(e)} <span class="field">${FIELD(e.field)}</span></p>
+    <p class="badges">${statusBadge(e)} ${reviewBadge(e)}${authorBadge(e)} <span class="field">${FIELD(e.field)}</span></p>
+    ${e.author_submitted ? `<p class="notice"><strong>Submitted by its author and not refereed.</strong> This result was contributed by ${esc(e.author_submitted.by)}, an author of the source cited below. The source has not been through peer review, and nobody independent has checked it for this site. It is not included in the site's headline counts.${e.author_submitted.note ? ' ' + esc(e.author_submitted.note) : ''}</p>` : ''}
     ${r.state === 'ai-classified' ? `<p class="notice"><strong>Not yet human-checked.</strong> ${REVIEW[r.state].long}</p>` : ''}
   </header>
 
@@ -403,6 +408,15 @@ function buildAbout() {
 <dl class="defs">
   ${Object.keys(REVIEW).map((r) => `<dt><span class="badge review-${r}">${REVIEW[r].label}</span></dt><dd>${REVIEW[r].long}</dd>`).join('\n  ')}
 </dl>
+
+<h2 id="author-submitted">Results submitted by their authors</h2>
+<p>Most entries cite a refereed paper or an arXiv preprint by someone other than the person who added the entry. Sometimes an author contributes their own new result, with a source that has not been refereed. Those entries are welcome, and they are kept apart:</p>
+<ul>
+  <li>They carry the label "Author-submitted, unrefereed" wherever they appear.</li>
+  <li>They are left out of the counts on the home page.</li>
+  <li>Their confidence is recorded as low until someone independent has checked them.</li>
+</ul>
+<p>The label is removed when the source is published in a refereed venue or an independent expert has checked the entry.</p>
 
 <h2 id="how">How entries are classified</h2>
 <ol>
