@@ -4,11 +4,11 @@
 status: Claimed. Machine checks reported. Not yet accepted by the mathematical community.
 headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
 summary: >
-  On 20 November 2026 Levent Alpöge released a Lean 4 formalization claiming
-  a proof of the Riemann Hypothesis and of the Generalized Riemann Hypothesis
-  for Dirichlet L-functions. Independent checks of the formal proof have been
-  reported, at least one further check was still running when this was
-  written, and no refereed account exists.
+  On 20 November 2026 Levent Alpöge released a proof, written in a form that
+  computers can check, of the Riemann Hypothesis and of its extension to
+  Dirichlet L-functions. Independent computer checks have been reported and
+  at least one more was still running when this was written. No account of
+  the proof has been reviewed and published by mathematicians.
 last_updated: 2026-11-21
 claims:
   - The Riemann Hypothesis, stated with Mathlib's own definition.

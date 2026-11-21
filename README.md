@@ -1,10 +1,30 @@
 # Assuming RH
 
+## In plain words
+
+Mathematicians have a famous unsolved problem called the Riemann Hypothesis. Over more than a century they have proved hundreds of results that start with "if the Riemann Hypothesis is true, then...". Those results have been waiting for someone to prove the "if" part.
+
+In November 2026 a proof was announced. Computers have checked it. Mathematicians have not yet agreed that it is right.
+
+This project is a list of those "if... then" results. For each one it answers a simple question: **would the announced proof finish this result, or does the result need something more?**
+
+"Something more" matters because the Riemann Hypothesis comes in several strengths. The announced proof covers the two most basic versions. Many results need a stronger version, and those stay unproven.
+
+## Three things to know before you trust anything here
+
+1. **The proof might be wrong.** If it is, nothing on this list becomes true because of it.
+2. **An AI wrote every entry, and no expert has checked them yet.** Each entry says so. Treat every label as a draft.
+3. **The list is incomplete.** If a result is not here, that tells you nothing about it.
+
+If you see a mistake, please tell us. Every entry on the site has a "suggest a correction" link.
+
+## For mathematicians
+
 > Which theorems that were proved "assuming the Riemann Hypothesis" (or a generalized version) are now unconditional, which are still waiting, and exactly which hypothesis does each one need?
 
 An open dataset and a static website that answer that question, one theorem at a time.
 
-## Read this first
+## The details
 
 **Everything here is provisional.**
 
