@@ -1,0 +1,40 @@
+id: squarefull-variance-short-intervals-asymptotic
+title: Asymptotic for the variance of squarefull numbers in short intervals in the optimal range
+field: analytic-number-theory
+statement_plain: >
+  Let Q(x) count the squarefull numbers up to x and put
+  y = 2 sqrt(x) H + H^2. For every eps > 0 and
+  X^eps <= H <= X^(1/4 - eps), the mean square over x in [X, 2X] of
+  Q(x + y) - Q(x) - (zeta(3/2)/zeta(3)) H is asymptotic to
+  (4 zeta(4/3) / (3 zeta(2))) H^(2/3) times the integral over y > 0 of
+  (sin(pi y)/(pi y))^2 y^(1/3).
+statement_formal: |
+  \frac{1}{X}\int_{X}^{2X}\left| Q(x+y) - Q(x) - \frac{\zeta(3/2)}{\zeta(3)} H \right|^{2} dx \sim \frac{4\zeta(4/3)}{3\zeta(2)} \int_{0}^{\infty} \left( \frac{\sin \pi y}{\pi y} \right)^{2} y^{1/3}\, dy \cdot H^{2/3}, \qquad y = 2\sqrt{x}\,H + H^{2},\ X^{\varepsilon} \le H \le X^{1/4-\varepsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper assumes either RH or the Lindelof Hypothesis for the Riemann zeta
+  function; the Lindelof Hypothesis follows from RH, so RH suffices.
+  Unconditionally the paper proves the same asymptotic for
+  X^eps <= H <= X^(189/1046 - 2 eps). This is the squarefull counterpart of
+  the existing entry squarefree-variance-short-intervals-rh-equivalence.
+sources:
+  - authors: T. H. Chan
+    title: Variance of squarefull numbers in short intervals II
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2311.13463
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - Only the Lindelof Hypothesis is really used, which is weaker than RH; the entry is coded RH because the dataset has no code for the Lindelof Hypothesis alone.
+lean:
+  proved: false
+  path: null
+tags: [squarefull-numbers, short-intervals, variance]
+added: 2026-11-21

@@ -1,0 +1,46 @@
+id: liouville-weighted-sums-polya-counterexample-density
+title: Counterexamples to Polya's conjecture have positive logarithmic density
+field: analytic-number-theory
+statement_plain: >
+  Let L_alpha(x) be the sum of lambda(n) / n^alpha over n <= x, where lambda
+  is the Liouville function, and let P_alpha be the set of x >= 1 with
+  L_alpha(x) <= 0. For every 0 <= alpha < 1/2 the logarithmic density of
+  P_alpha exists and is at least 1/2 and strictly less than 1, and it tends
+  to 1 as alpha tends to 1/2 from below. In particular (alpha = 0) the set
+  of x where the summatory Liouville function is positive has positive
+  logarithmic density.
+statement_formal: |
+  \tfrac12 \le \delta(P_\alpha) < 1 \quad (0 \le \alpha < \tfrac12), \qquad \lim_{\alpha \to 1/2^-} \delta(P_\alpha) = 1, \qquad P_\alpha = \Bigl\{ x \ge 1 : \sum_{n \le x} \frac{\lambda(n)}{n^{\alpha}} \le 0 \Bigr\}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Two extra assumptions are needed beyond RH. The first is Linear
+  Independence: the positive imaginary parts of the zeros of the Riemann zeta
+  function are linearly independent over the rationals. The second is the
+  bound J_{-1}(T) << T for the negative discrete moment, the sum of
+  1/|zeta'(rho)|^2 over zeros with 0 < gamma < T. Theorem 1.6 of the same
+  paper drops Linear Independence (but keeps the moment bound) and shows that
+  for alpha = 1/2 the set P_{1/2} has logarithmic density 1. This is the
+  Liouville function analog of the existing entry chebyshev-bias; no existing
+  entry treats the Liouville function.
+sources:
+  - authors: P. Humphries
+    title: The distribution of weighted sums of the Liouville function and Pólya's conjecture
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1108.1524
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The year is that of the arXiv version (v2); a journal reference is not printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [liouville-function, polya-conjecture, logarithmic-density, linear-independence]
+added: 2026-11-21
