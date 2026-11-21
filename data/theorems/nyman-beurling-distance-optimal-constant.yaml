@@ -20,8 +20,9 @@ status_note: >
 sources:
   - authors: S. Bettin, J. B. Conrey, D. W. Farmer
     title: An optimal choice of Dirichlet polynomials for the Nyman-Beurling criterion
-    year: 2012
-    venue: Preprint
+    year: 2013
+    venue: Proceedings of the Steklov Institute of Mathematics 280, 30-36
+    doi: 10.1134/s0081543813030036
     url: https://arxiv.org/abs/1211.5191
     hypothesis_location: Theorem 1
     role: conditional-proof

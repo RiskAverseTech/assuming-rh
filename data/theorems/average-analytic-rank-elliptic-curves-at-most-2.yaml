@@ -18,8 +18,9 @@ status_note: >
 sources:
   - authors: D. R. Heath-Brown
     title: The Average Analytic Rank of Elliptic Curves
-    year: 2003
-    venue: Preprint
+    year: 2004
+    venue: Duke Mathematical Journal 122, 591-623
+    doi: 10.1215/s0012-7094-04-12235-3
     url: https://arxiv.org/abs/math/0305114
     hypothesis_location: Theorem 1
     role: conditional-proof

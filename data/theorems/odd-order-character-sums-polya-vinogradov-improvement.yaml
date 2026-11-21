@@ -20,8 +20,9 @@ status_note: >
 sources:
   - authors: Y. Lamzouri, A. P. Mangerel
     title: Large odd order character sums and improvements of the Polya-Vinogradov inequality
-    year: 2017
-    venue: Preprint
+    year: 2022
+    venue: Transactions of the American Mathematical Society 375, 3759-3793
+    doi: 10.1090/tran/8607
     url: https://arxiv.org/abs/1701.01042
     hypothesis_location: "Theorem 1.2"
     role: conditional-proof

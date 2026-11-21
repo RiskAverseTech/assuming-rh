@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: A. Chirre, F. Goncalves
     title: Bounding the log-derivative of the zeta-function
-    year: 2021
-    venue: Preprint
+    year: 2022
+    venue: Mathematische Zeitschrift 300, 1041-1053
+    doi: 10.1007/s00209-021-02820-9
     url: https://arxiv.org/abs/2103.06237
     hypothesis_location: Theorem 1
     role: conditional-proof

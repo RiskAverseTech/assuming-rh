@@ -21,7 +21,8 @@ sources:
   - authors: P. Pollack
     title: Two problems on the distribution of Carmichael's lambda function
     year: 2023
-    venue: Preprint
+    venue: Mathematika 69, 1195-1220
+    doi: 10.1112/mtk.12222
     url: https://arxiv.org/abs/2303.14043
     hypothesis_location: "Theorem 1.4, via Lemma 6.7"
     role: conditional-proof

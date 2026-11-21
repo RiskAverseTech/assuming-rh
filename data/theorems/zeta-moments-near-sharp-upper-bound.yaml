@@ -18,8 +18,9 @@ status_note: >
 sources:
   - authors: K. Soundararajan
     title: Moments of the Riemann zeta-function
-    year: 2008
-    venue: Preprint
+    year: 2009
+    venue: Annals of Mathematics 170, 981-993
+    doi: 10.4007/annals.2009.170.981
     url: https://arxiv.org/abs/math/0612106
     hypothesis_location: Corollary A
     role: conditional-proof

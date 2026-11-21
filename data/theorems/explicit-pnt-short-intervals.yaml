@@ -14,7 +14,8 @@ sources:
   - authors: M. Cully-Hugill, A. W. Dudek
     title: A conditional explicit result for the prime number theorem in short intervals
     year: 2022
-    venue: Preprint
+    venue: Research in Number Theory 8, 61
+    doi: 10.1007/s40993-022-00358-1
     url: https://arxiv.org/abs/1902.05065
     hypothesis_location: Theorem 1
     role: conditional-proof

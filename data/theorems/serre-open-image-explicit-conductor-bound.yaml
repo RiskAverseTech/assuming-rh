@@ -22,7 +22,8 @@ sources:
   - authors: J. Mayle, T. Wang
     title: On the effective version of Serre's open image theorem
     year: 2024
-    venue: Preprint
+    venue: Bulletin of the London Mathematical Society 56, 1399-1416
+    doi: 10.1112/blms.13002
     url: https://arxiv.org/abs/2109.08656
     hypothesis_location: Theorem 1
     role: conditional-proof

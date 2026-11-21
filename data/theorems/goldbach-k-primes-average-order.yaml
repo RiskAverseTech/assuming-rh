@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: T. T. Nguyen
     title: Goldbach Representations with several primes
-    year: 2024
-    venue: Preprint
+    year: 2026
+    venue: Journal of Number Theory 279, 858-877
+    doi: 10.1016/j.jnt.2025.07.008
     url: https://arxiv.org/abs/2409.13368
     hypothesis_location: "Theorem 1.2"
     role: conditional-proof

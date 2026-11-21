@@ -17,8 +17,9 @@ status_note: >
 sources:
   - authors: A. Simonic
     title: On explicit estimates for S(t), S_1(t), and zeta(1/2 + it) under the Riemann Hypothesis
-    year: 2021
-    venue: Preprint
+    year: 2022
+    venue: Journal of Number Theory 231, 464-491
+    doi: 10.1016/j.jnt.2021.05.014
     url: https://arxiv.org/abs/2010.13307
     hypothesis_location: Corollary 1
     role: conditional-proof

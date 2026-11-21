@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: M. Munsch, Y. Toma
     title: Bounds for moments of quadratic character sums and theta functions
-    year: 2025
-    venue: Preprint
+    year: 2026
+    venue: Bulletin des Sciences Mathématiques 210, 103806
+    doi: 10.1016/j.bulsci.2026.103806
     url: https://arxiv.org/abs/2503.05269
     hypothesis_location: "Theorem 4"
     role: conditional-proof

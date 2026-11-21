@@ -17,8 +17,9 @@ status_note: >
 sources:
   - authors: L. C. Washington, A. Yang
     title: Analogues of the Robin-Lagarias Criteria for the Riemann Hypothesis
-    year: 2020
-    venue: Preprint
+    year: 2021
+    venue: International Journal of Number Theory 17, 843-870
+    doi: 10.1142/s1793042121500111
     url: https://arxiv.org/abs/2008.04787
     hypothesis_location: Theorem 1.2 (restated as Theorem 3.6)
     role: conditional-proof

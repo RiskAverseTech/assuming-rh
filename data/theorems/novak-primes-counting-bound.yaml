@@ -18,8 +18,9 @@ status_note: >
 sources:
   - authors: A. Kalmynin
     title: On Novak numbers
-    year: 2017
-    venue: Preprint
+    year: 2018
+    venue: "Sbornik: Mathematics 209, 491-502"
+    doi: 10.1070/sm8848
     url: https://arxiv.org/abs/1611.00417
     hypothesis_location: Theorem 5 (via Lemma 3)
     role: conditional-proof

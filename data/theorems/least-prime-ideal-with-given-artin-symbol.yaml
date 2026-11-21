@@ -1,0 +1,47 @@
+id: least-prime-ideal-with-given-artin-symbol
+title: Least prime ideal with a given Artin symbol in an abelian extension
+field: algebraic-number-theory
+statement_plain: >
+  Let E/K be an abelian extension of number fields with E different from Q,
+  let D be the absolute discriminant of E and n its degree, and let sigma be
+  an element of the Galois group. Then there is a prime ideal p of K of
+  residue degree 1 whose Artin symbol is sigma and whose norm is at most
+  (1 + o(1)) (log D + 2n)^2. An explicit form holds for every Galois
+  extension: the norm can be taken at most (4 log D + 2.5 n + 5)^2.
+statement_formal: |
+  N\mathfrak{p} \le \left(4\log\Delta_E + 2.5\,n + 5\right)^2
+hypotheses_required: [ERH-Dedekind]
+status: partial
+status_note: >
+  The proof factors the Dedekind zeta function of E into Hecke L-functions
+  of characters of the Galois group and assumes the hypothesis for them.
+  When K = Q and E is abelian over the rationals these are Dirichlet
+  L-functions, so that case is covered. It includes the bound for the least
+  prime in a residue class, which has its own entry. The paper's corollary
+  that every ideal class of a quadratic field contains a prime of norm at
+  most (1 + o(1)) (h log |D|)^2 uses the Hilbert class field, which is not
+  abelian over the rationals in general, and is not covered.
+sources:
+  - authors: E. Bach, J. Sorenson
+    title: Explicit bounds for primes in residue classes
+    year: 1996
+    venue: Math. Comp. 65, 1717-1735
+    doi: 10.1090/S0025-5718-96-00763-6
+    hypothesis_location: "Theorem 3.1 (asymptotic) and Theorem 5.1 (explicit)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes ERH without restating its definition. It is read here as the hypothesis for the Hecke L-functions into which the zeta function of E factors, as in the proof.
+    - >-
+      The asymptotic statement is for abelian extensions. The paper says it extends to Galois extensions with sigma replaced by its conjugacy class.
+lean:
+  proved: false
+  path: null
+related: [least-prime-in-arithmetic-progression, effective-chebotarev, bach-class-group-generators]
+tags: [chebotarev, prime-ideals, explicit-bounds]
+added: 2026-11-21

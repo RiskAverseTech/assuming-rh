@@ -18,7 +18,8 @@ sources:
   - authors: J.-L. Nicolas
     title: Small values of the Euler function and the Riemann hypothesis
     year: 2012
-    venue: Preprint
+    venue: Acta Arithmetica 155, 311-321
+    doi: 10.4064/aa155-3-7
     url: https://arxiv.org/abs/1202.0729
     hypothesis_location: Theorem 1.1
     role: conditional-proof

@@ -21,8 +21,9 @@ status_note: >
 sources:
   - authors: J.-F. Biasse, C. Fieker, T. Hofmann, A. Page
     title: Norm relations and computational problems in number fields
-    year: 2025
-    venue: Preprint
+    year: 2022
+    venue: Journal of the London Mathematical Society 105, 2373-2414
+    doi: 10.1112/jlms.12563
     url: https://arxiv.org/abs/2002.12332
     hypothesis_location: "Theorem E in the introduction, proved as Theorem 4.18 using Theorem 4.11 and Corollary 4.13"
     role: conditional-proof

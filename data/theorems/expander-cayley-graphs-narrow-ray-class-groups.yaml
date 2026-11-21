@@ -26,7 +26,8 @@ sources:
   - authors: D. Jao, S. D. Miller, R. Venkatesan
     title: Expander graphs based on GRH with an application to elliptic curve cryptography
     year: 2009
-    venue: Preprint
+    venue: Journal of Number Theory 129, 1491-1504
+    doi: 10.1016/j.jnt.2008.11.006
     url: https://arxiv.org/abs/0811.0647
     hypothesis_location: Theorem 1.1 (hypothesis used for estimate (2.6) in Section 2)
     role: conditional-proof

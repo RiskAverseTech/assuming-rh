@@ -17,19 +17,27 @@ status_note: >
 sources:
   - authors: J. Vandehey
     title: Absolutely abnormal, continued fraction normal numbers
-    year: 2015
-    venue: Preprint
+    year: 2016
+    venue: Bulletin of the Australian Mathematical Society 94, 217-223
+    doi: 10.1017/s0004972716000101
     url: https://arxiv.org/abs/1512.00337
     hypothesis_location: Theorem 1.1 (via Theorem 2.1 and Corollary 2.2)
+    role: conditional-proof
+  - authors: H. W. Lenstra, Jr.
+    title: On Artin's conjecture and Euclid's algorithm in global fields
+    year: 1977
+    venue: Invent. Math. 42, 201-224
+    doi: 10.1007/BF01389788
+    hypothesis_location: "Theorem 3.1: the zeta function of each field L_n, obtained by adjoining n-th roots of unity and n-th roots, satisfies the generalized Riemann hypothesis"
     role: conditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
-  confidence: medium
+  confidence: high
   open_questions:
     - >-
-      The paper does not define its Generalized Riemann Hypothesis. The classification as ERH-Dedekind rests on the cited theorem of Lenstra (Invent. Math. 42, 1977, Theorem 8.3) being of Hooley type; that source was not available here.
+      Lenstra's paper was read: its hypothesis is the Riemann hypothesis for the zeta functions of Kummer-type fields, which confirms the code. Vandehey's own paper does not restate it.
 lean:
   proved: false
   path: null

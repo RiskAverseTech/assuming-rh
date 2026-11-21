@@ -16,8 +16,9 @@ status_note: >
 sources:
   - authors: A. Dudek
     title: Almost-Ramanujan graphs and prime gaps
-    year: 2014
-    venue: Preprint
+    year: 2015
+    venue: European Journal of Combinatorics 43, 204-209
+    doi: 10.1016/j.ejc.2014.09.001
     url: https://arxiv.org/abs/1402.0620
     hypothesis_location: Theorem 1.5
     role: conditional-proof

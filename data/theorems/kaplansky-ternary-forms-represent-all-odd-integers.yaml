@@ -21,8 +21,9 @@ status_note: >
 sources:
   - authors: J. Rouse
     title: Quadratic forms representing all odd positive integers
-    year: 2013
-    venue: Preprint
+    year: 2014
+    venue: American Journal of Mathematics 136, 1693-1745
+    doi: 10.1353/ajm.2014.0041
     url: https://arxiv.org/abs/1111.0979
     hypothesis_location: Theorem 7 (proved in Section 6)
     role: conditional-proof

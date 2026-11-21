@@ -23,8 +23,9 @@ status_note: >
 sources:
   - authors: A. Granville, K. Soundararajan
     title: "Large character sums: pretentious characters and the Polya-Vinogradov theorem"
-    year: 2005
-    venue: Preprint
+    year: 2006
+    venue: Journal of the American Mathematical Society 20, 357-384
+    doi: 10.1090/s0894-0347-06-00536-4
     url: https://arxiv.org/abs/math/0503113
     hypothesis_location: Theorem 4
     role: conditional-proof

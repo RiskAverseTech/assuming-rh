@@ -19,8 +19,9 @@ status_note: >
 sources:
   - authors: K. McGown, E. Treviño, T. Trudgian
     title: "Resolving Grosswald's conjecture on GRH"
-    year: 2015
-    venue: Preprint
+    year: 2016
+    venue: Functiones et Approximatio Commentarii Mathematici 55, 215-225
+    doi: 10.7169/facm/2016.55.2.5
     url: https://arxiv.org/abs/1508.05182
     hypothesis_location: "Theorem 1, proved from Theorem 2 and Theorem 3, which use Lemma 1 on Dirichlet characters modulo p"
     role: conditional-proof

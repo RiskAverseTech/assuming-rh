@@ -9,6 +9,9 @@ statement_formal: |
 hypotheses_required: [GRH-Dirichlet]
 status: unlocked
 status_note: >
+  Bach and Sorenson first proved the asymptotic bound (1 + o(1)) (phi(q) log q)^2
+  and the explicit bound 2 (q log q)^2 for every q. The statement above, due
+  to Lamzouri, Li and Soundararajan, removes the o(1) for q > 3.
   A 2017 corrigendum to this paper changes two asymptotic theorems. It is
   reported not to affect this explicit corollary.
 sources:
@@ -25,6 +28,13 @@ sources:
     venue: Math. Comp. 86, 2551-2554
     doi: 10.1090/mcom/3261
     role: refinement
+  - authors: E. Bach, J. Sorenson
+    title: Explicit bounds for primes in residue classes
+    year: 1996
+    venue: Math. Comp. 65, 1717-1735
+    doi: 10.1090/S0025-5718-96-00763-6
+    hypothesis_location: "Corollary 3.4 and Theorem 5.3"
+    role: conditional-proof
 related: [primes-in-arithmetic-progressions-error]
 review:
   state: ai-classified

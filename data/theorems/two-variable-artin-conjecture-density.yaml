@@ -21,8 +21,9 @@ status_note: >
 sources:
   - authors: P. Moree, P. Stevenhagen
     title: A two-variable Artin conjecture
-    year: 1999
-    venue: Preprint
+    year: 2000
+    venue: Journal of Number Theory 85, 291-304
+    doi: 10.1006/jnth.2000.2547
     url: https://arxiv.org/abs/math/9912250
     hypothesis_location: Theorem 2
     role: conditional-proof
