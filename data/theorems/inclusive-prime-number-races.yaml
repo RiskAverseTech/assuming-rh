@@ -1,0 +1,47 @@
+id: inclusive-prime-number-races
+title: Prime number races are inclusive under a weak linear independence hypothesis
+field: analytic-number-theory
+statement_plain: >
+  Fix q at least 3. Call an ordinate of a zero of a Dirichlet L-function
+  modulo q self-sufficient if it is not a rational linear combination of the
+  other ordinates, and call a character robust if the sum of 1/gamma over
+  its self-sufficient ordinates diverges. If every nonprincipal character
+  modulo q is robust, then every prime number race modulo q is strongly
+  inclusive: the vector of normalized error terms lands in every open ball
+  with positive logarithmic density, so every ordering of
+  pi(x; q, a_1), ..., pi(x; q, a_r) occurs with positive logarithmic density.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  The extra assumption is a weakened form of the Linear Independence
+  hypothesis: every nonprincipal character modulo q must be robust, meaning
+  the sum of 1/gamma over its self-sufficient zero ordinates diverges. This
+  is much weaker than full Linear Independence (as used by Rubinstein and
+  Sarnak) but is still unproven and is not covered. GRH is assumed for all
+  Dirichlet L-functions modulo q; the paper says most of its results do not
+  need RH for zeta itself.
+sources:
+  - authors: G. Martin, N. Ng
+    title: Inclusive prime number races
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1710.00088
+    hypothesis_location: Theorem 1.10
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper says "most of our results do not require RH for zeta itself" without saying in the introduction which ones do. Theorem 1.10 concerns only nonprincipal characters, so RH is not listed, but this was not traced through the proof. The status is the same either way.
+    - >-
+      When r = phi(q) the paper restricts the balls to those meeting the hyperplane where the coordinates sum to zero; the plain statement omits this detail.
+lean:
+  proved: false
+  path: null
+related: [chebyshev-bias]
+tags: [prime-races, chebyshev-bias, linear-independence]
+added: 2026-11-21

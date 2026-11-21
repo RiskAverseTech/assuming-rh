@@ -1,0 +1,40 @@
+id: least-quadratic-nonresidue-fourier-optimization
+title: Least quadratic non-residue below (61/80) log^2 p
+field: analytic-number-theory
+statement_plain: >
+  For every sufficiently large prime p, the least quadratic non-residue n_p
+  modulo p is less than (61/80) (log p)^2.
+statement_formal: |
+  n_p < \tfrac{61}{80}\,\log^2 p \quad \text{for all sufficiently large primes } p
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The cited article is an exposition. It states the result and attributes the
+  proof to the preprint of Carneiro, Milinovich, Quesada-Herrera and Ramos
+  (arXiv 2404.08380). The same article also states a result on primes of the
+  form u^2 + 27 v^2 in short intervals, which uses Hecke L-functions of an
+  imaginary quadratic field and is not part of this entry.
+sources:
+  - authors: E. Quesada-Herrera
+    title: Fourier optimization and consequences of the generalized Riemann hypothesis
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2411.05095
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The article is expository and gives no proof of this theorem. The classification as GRH for Dirichlet L-functions rests on its definition of GRH (zeros of L(s, chi) for Dirichlet characters) and on the nature of the problem; the original preprint arXiv 2404.08380 was not read.
+    - >-
+      Whether the proof also uses the Riemann Hypothesis for the zeta function itself is not stated in this article. Either way the status is unchanged.
+lean:
+  proved: false
+  path: null
+related: [least-quadratic-nonresidue]
+tags: [quadratic-non-residue, fourier-optimization, dirichlet-characters]
+added: 2026-11-21

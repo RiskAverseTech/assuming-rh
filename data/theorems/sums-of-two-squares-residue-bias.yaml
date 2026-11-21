@@ -1,0 +1,44 @@
+id: sums-of-two-squares-residue-bias
+title: Sums of two squares are biased towards quadratic residue classes
+field: analytic-number-theory
+statement_plain: >
+  Let S(n; q, a) count the sums of two squares up to n that are congruent to
+  a modulo q. Fix q and residues a, b coprime to q with a = b = 1 mod (4, q).
+  If an explicit constant C_{q,a,b}, built from the central values
+  L(1/2, chi) L(1/2, chi chi_{-4}) of the real characters chi modulo q, is
+  positive, then S(n; q, a) > S(n; q, b) for a set of integers n of natural
+  density 1.
+statement_formal: |
+  C_{q,a,b} := \sum_{\substack{\chi \bmod q \\ \chi^2 = \chi_0}} (\chi(a) - \chi(b)) \Bigl(1 - \tfrac{\chi(2)}{\sqrt{2}}\Bigr)^{-1/2} \sqrt{L(\tfrac12, \chi)\, L(\tfrac12, \chi\chi_{-4})} > 0 \ \Longrightarrow\ \#\{ n \le x : S(n; q, a) > S(n; q, b) \} = x(1 + o(1))
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes GRH for L(s, chi) and L(s, chi chi_{-4}) for all Dirichlet
+  characters chi modulo q; the principal character brings in the zeta
+  function, so RH is listed too. The positivity of C_{q,a,b} is a condition
+  inside the statement, not an extra hypothesis of the proof; the paper says
+  it can be verified numerically for fixed q, a, b (for example q = 3, a = 1,
+  b = 2). When a is a quadratic residue and b is not, the paper notes that
+  Chowla's conjecture on nonvanishing at 1/2 would give positivity for every
+  q, and Chowla's conjecture is not covered.
+sources:
+  - authors: O. Gorodetsky
+    title: Sums of two squares are strongly biased towards quadratic residues
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2111.12662
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Status depends on how the positivity condition is read. It is recorded as part of the statement, so the entry is marked unlocked. A reviewer who wants the bias for all q without that condition should treat it as needing Chowla's conjecture in addition (PLUS-EXTRA, still-conditional).
+lean:
+  proved: false
+  path: null
+tags: [sums-of-two-squares, chebyshev-bias, natural-density]
+added: 2026-11-21

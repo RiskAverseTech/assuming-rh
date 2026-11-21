@@ -1,0 +1,38 @@
+id: chebyshev-bias-weighted-natural-density
+title: Chebyshev's bias modulo 4 with natural density 1 for primes weighted by 1/sqrt(p)
+field: analytic-number-theory
+statement_plain: >
+  Let pi_{1/2}(x; 4, a) be the sum of 1/sqrt(p) over primes p up to x with
+  p = a mod 4. The set of x at least 2 for which
+  pi_{1/2}(x; 4, 3) > pi_{1/2}(x; 4, 1) has natural density 1.
+statement_formal: |
+  \lim_{X \to \infty} \frac{1}{X}\, \mathrm{meas}\bigl\{\, 2 \le x \le X : \pi_{1/2}(x; 4, 3) > \pi_{1/2}(x; 4, 1) \,\bigr\} = 1, \qquad \pi_{1/2}(x; q, a) = \sum_{\substack{p \le x \\ p \equiv a \bmod q}} \frac{1}{\sqrt{p}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Only GRH for the single nonprincipal Dirichlet character modulo 4 is
+  assumed. No Linear Independence or Deep Riemann Hypothesis is used. The
+  general result (Theorem 1.1) holds for any modulus q under GRH for the
+  nonprincipal characters modulo q.
+sources:
+  - authors: M. Hayani
+    title: Chebyshev's bias without linear independence
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.23302
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Corollary 1.2 follows from Theorem 1.1 when L(1/2, chi) is nonzero for the nonprincipal character modulo 4. The paper states the corollary without an extra assumption, so this nonvanishing is taken as known; it was not checked here.
+lean:
+  proved: false
+  path: null
+related: [chebyshev-bias]
+tags: [chebyshev-bias, prime-races, natural-density]
+added: 2026-11-21

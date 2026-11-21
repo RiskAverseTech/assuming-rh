@@ -1,0 +1,36 @@
+id: nonvanishing-quadratic-l-functions-prime-modulus
+title: Central values of quadratic Dirichlet L-functions of prime modulus are mostly nonzero
+field: analytic-number-theory
+statement_plain: >
+  Let chi_p be the Legendre symbol modulo a prime p, and let v be 1 or 3.
+  Then L(1/2, chi_p) = 0 for at most 25 percent of the primes p congruent to
+  v modulo 4, so it is nonzero for at least 75 percent of them.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes only "GRH" and does not define it. The proof uses it for
+  the quadratic Dirichlet L-functions L(s, chi_p), for real characters
+  (n / .) in a character sum over primes, and for the prime number theorem in
+  progressions modulo 4, which involves the zeta function.
+sources:
+  - authors: J. Andrade, S. Baluyot
+    title: Small zeros of Dirichlet L-functions of quadratic characters of prime modulus
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1802.03413
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never states which L-functions its GRH covers. The classification is inferred from the proof (Lemma 2 and the explicit formula for Dirichlet characters), which was read in part, not line by line.
+lean:
+  proved: false
+  path: null
+tags: [nonvanishing, quadratic-characters, low-lying-zeros]
+added: 2026-11-21

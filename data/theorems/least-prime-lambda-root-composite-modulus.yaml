@@ -1,0 +1,41 @@
+id: least-prime-lambda-root-composite-modulus
+title: Least prime primitive root and least prime lambda-root for any modulus
+field: analytic-number-theory
+statement_plain: >
+  For every integer q at least 2, the least prime lambda-root g*(q) modulo q
+  (a prime whose multiplicative order mod q is the largest possible; a prime
+  primitive root when q has primitive roots) satisfies
+  g*(q) << (w log w)^4 (log q)^2, where w is the number of distinct prime
+  factors of phi(q) and log w is replaced by 1 when it is smaller than 1.
+statement_formal: |
+  g^*(q) \ll \bigl(\omega(\phi(q))\,\log_1 \omega(\phi(q))\bigr)^4 (\log q)^2, \qquad \log_1 x = \max\{\log x, 1\}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper needs the hypothesis only for certain nonprincipal Dirichlet
+  characters modulo q (those in a set it calls Phi_*(q)). For prime q the
+  paper says the bound was already shown by Shoup, improving Wang.
+sources:
+  - authors: G. Martin
+    title: The least prime primitive root and the shifted sieve
+    year: 1998
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9807104
+    hypothesis_location: Corollary 3.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The main theorems of the paper (Theorems 1 and 2) are unconditional almost-all results; the conditional statement recorded here is the corollary of Proposition 3. For prime q it overlaps with Shoup's bound on the least primitive root.
+    - >-
+      No journal reference is visible in the arXiv text, so the venue is given as Preprint.
+lean:
+  proved: false
+  path: null
+related: [shoup-least-primitive-root]
+tags: [primitive-roots, lambda-roots, dirichlet-characters]
+added: 2026-11-21
