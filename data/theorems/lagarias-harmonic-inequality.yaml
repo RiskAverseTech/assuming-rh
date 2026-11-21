@@ -9,7 +9,12 @@ statement_formal: |
   \sigma(n) \le H_n + e^{H_n}\log H_n \qquad (n \ge 1), \qquad H_n = \sum_{k=1}^{n} \frac{1}{k}
 hypotheses_required: [RH]
 status: unlocked
-status_note: This inequality is equivalent to RH. The proof builds on Robin's inequality.
+status_note: >
+  This inequality is equivalent to RH. The proof builds on Robin's inequality.
+  A Lean 4 formalization of the equivalence between RH and Lagarias's inequality for every positive n exists
+  in the repository cited below. Its description says the statement uses
+  Mathlib's own definitions. This project has not checked it, so the entry's
+  review state is unchanged.
 sources:
   - authors: J. C. Lagarias
     title: An elementary problem equivalent to the Riemann hypothesis
@@ -17,6 +22,13 @@ sources:
     venue: Amer. Math. Monthly 109, 534-543
     doi: 10.1080/00029890.2002.11919883
     role: conditional-proof
+  - authors: kimihiro64 (GitHub)
+    title: "Robin1984: a Lean 4 formalization of Robin's criterion for the Riemann hypothesis"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/kimihiro64/Robin1984
+    hypothesis_location: "Theorem Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion, stated against Mathlib's RiemannHypothesis"
+    role: formalization
 related: [robin-inequality]
 review:
   state: ai-classified

@@ -91,9 +91,9 @@ function correctionUrl(e) {
 function sourceHtml(s) {
   const link = s.doi ? `https://doi.org/${s.doi}` : s.url;
   const title = link ? `<a href="${esc(link)}" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
-  const roles = { 'conditional-proof': 'Conditional proof', 'unconditional-proof': 'Unconditional proof', refinement: 'Refinement', survey: 'Survey or reference' };
+  const roles = { 'conditional-proof': 'Conditional proof', 'unconditional-proof': 'Unconditional proof', refinement: 'Refinement', formalization: 'Formalization', survey: 'Survey or reference' };
   return `<li>${s.role ? `<span class="role">${roles[s.role]}</span> ` : ''}${esc(s.authors)} (${s.year}). <cite>${title}</cite>.${s.venue ? ' ' + esc(s.venue) + '.' : ''}${s.doi ? ` <span class="doi">doi:${esc(s.doi)}</span>` : ''}` +
-    `<div class="where">${s.hypothesis_location ? 'Hypothesis used at: ' + esc(s.hypothesis_location) : 'Where the hypothesis is invoked: not yet recorded.'}</div></li>`;
+    `<div class="where">${s.role === 'formalization' ? (s.hypothesis_location ? esc(s.hypothesis_location) : '') : (s.hypothesis_location ? 'Hypothesis used at: ' + esc(s.hypothesis_location) : 'Where the hypothesis is invoked: not yet recorded.')}</div></li>`;
 }
 
 // ---------- layout ----------

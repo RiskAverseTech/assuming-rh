@@ -8,13 +8,25 @@ statement_formal: |
   \sigma(n) < e^{\gamma}\, n \log\log n \qquad (n > 5040)
 hypotheses_required: [RH]
 status: unlocked
-status_note: This inequality is equivalent to RH.
+status_note: >
+  This inequality is equivalent to RH.
+  A Lean 4 formalization of the equivalence between RH and Robin's inequality for every n above 5040 exists
+  in the repository cited below. Its description says the statement uses
+  Mathlib's own definitions. This project has not checked it, so the entry's
+  review state is unchanged.
 sources:
   - authors: G. Robin
     title: Grandes valeurs de la fonction somme des diviseurs et hypothèse de Riemann
     year: 1984
     venue: J. Math. Pures Appl. 63, 187-213
     role: conditional-proof
+  - authors: kimihiro64 (GitHub)
+    title: "Robin1984: a Lean 4 formalization of Robin's criterion for the Riemann hypothesis"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/kimihiro64/Robin1984
+    hypothesis_location: "Theorem Robin1984.robin_inequality_iff_riemannHypothesis, stated against Mathlib's RiemannHypothesis"
+    role: formalization
 related: [lagarias-harmonic-inequality]
 review:
   state: ai-classified
