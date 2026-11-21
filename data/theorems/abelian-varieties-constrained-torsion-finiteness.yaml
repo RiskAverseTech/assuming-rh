@@ -1,0 +1,48 @@
+id: abelian-varieties-constrained-torsion-finiteness
+title: Finiteness of abelian varieties with constrained l-power torsion (Rasmussen-Tamagawa conjecture)
+field: arithmetic-geometry
+statement_plain: >
+  Fix a number field K and an integer g > 0. For a prime l, consider the
+  isomorphism classes of g-dimensional abelian varieties A over K whose
+  l-power torsion field K(A[l^infinity]) lies in the maximal pro-l extension
+  of K(mu_{l^infinity}) unramified away from l. Then the set of pairs
+  (class of A, l) of this kind is finite; equivalently, such abelian
+  varieties exist for only finitely many primes l.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [galois-extensions]
+status_note: >
+  Theorem 5.1 assumes, for all large l, GRH for the Dedekind zeta functions
+  of the fields L K~, where L is a subfield of Q(mu_l) and K~ is the Galois
+  closure of K over the rationals. It is used through the effective
+  Chebotarev theorem of Lagarias and Odlyzko. When K is abelian over the
+  rationals, in particular when K is the field of rational numbers, every
+  such field L K~ is abelian over the rationals, so its zeta function is a
+  product of Dirichlet L-functions and that case is covered. For other K
+  the fields are not abelian and the result stays conditional. The paper
+  also proves unconditionally the semistable version (Theorem 3.6) and
+  several cases of small degree and dimension.
+sources:
+  - authors: C. Rasmussen, A. Tamagawa
+    title: Arithmetic of abelian varieties with constrained torsion
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1302.1477
+    hypothesis_location: Theorem 5.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The "partial" status rests on my own observation that L K~ is abelian over the rationals when K is; the paper does not make this remark. A reviewer should confirm that no other step of the proof of Theorem 5.1 uses the hypothesis for a further field.
+    - >-
+      The paper also proves a version uniform in K for odd degree (Theorem 5.3) under GRH for all Dedekind zeta functions; it is not recorded separately.
+lean:
+  proved: false
+  path: null
+tags: [abelian-varieties, torsion, galois-representations, chebotarev]
+added: 2026-11-21

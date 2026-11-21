@@ -1,0 +1,50 @@
+id: sato-tate-explicit-error-constant-3-33
+title: Explicit Sato-Tate conjecture for newforms of squarefree level with constant 3.33
+field: analytic-number-theory
+statement_plain: >
+  Let f be a non-CM newform of even weight k at least 2 and squarefree level
+  N, with Sato-Tate angles theta_p, let I be a closed subinterval of
+  [0, pi] with Sato-Tate measure mu, and put q(f) = N(k - 1). Then for all
+  x at least 2 the number of primes p up to x with theta_p in I differs
+  from mu Li(x) by at most
+  3.33 x^(3/4) - 3 x^(3/4) log log x / log x + 202 x^(3/4) log q(f) / log x.
+statement_formal: |
+  \bigl|\pi_{f,I}(x) - \mu_{ST}(I)\,\mathrm{Li}(x)\bigr| \le 3.33\,x^{3/4} - \frac{3x^{3/4}\log\log x}{\log x} + \frac{202\,x^{3/4}\log q(f)}{\log x} \quad (x \ge 2)
+hypotheses_required: [RH, GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The theorem assumes the paper's Conjecture 1.1 for every n at least 0:
+  part (f) is GRH for each symmetric power L-function L(s, Sym^n f) (the
+  case n = 0 is the Riemann zeta function), and parts (a) to (e) are the
+  extra assumption, namely the predicted conductor, gamma factor, local
+  factors at primes dividing N, functional equation and analytic
+  continuation of L(s, Sym^n f), which the paper says follow from Langlands
+  functoriality and were known at the time for n at most 4. The existing
+  entry sato-tate-effective-error-term-symmetric-powers records the later
+  version for general level with an unspecified constant; this entry
+  records the explicit constants.
+sources:
+  - authors: J. Rouse, J. Thorner
+    title: The explicit Sato-Tate conjecture and densities pertaining to Lehmer-type questions
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1305.5283
+    hypothesis_location: Theorem 1.2 (hypotheses in Conjecture 1.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      PLUS-EXTRA is listed because this paper treats automorphy of the symmetric powers (Conjecture 1.1 (a) to (e)) as unproved. The existing entry sato-tate-effective-error-term-symmetric-powers reports, from a later paper, that this automorphy is now known; if so PLUS-EXTRA and extra-assumption should be removed here.
+    - >-
+      The same paper also proves, under the same hypotheses, that the density of n with tau(n) nonzero exceeds 1 - 1.54 x 10^(-13); it is not recorded as a separate entry.
+lean:
+  proved: false
+  path: null
+related: [sato-tate-effective-error-term-symmetric-powers]
+tags: [sato-tate, modular-forms, symmetric-power-l-functions, explicit-bounds]
+added: 2026-11-21

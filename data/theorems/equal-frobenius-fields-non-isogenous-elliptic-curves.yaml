@@ -1,0 +1,45 @@
+id: equal-frobenius-fields-non-isogenous-elliptic-curves
+title: Primes at which two non-isogenous elliptic curves have equal Frobenius fields, bound x^(6/7)
+field: arithmetic-geometry
+statement_plain: >
+  Let E1 and E2 be elliptic curves over a number field K, without complex
+  multiplication and not potentially isogenous. Let F(x) be the number of
+  primes of K of norm at most x, of good reduction for both curves, at
+  which the Frobenius fields of E1 and E2 are equal. Then there is a
+  positive constant kappa', depending on E1, E2 and K, such that
+  F(x) < kappa' x^(6/7) / (log x)^(5/7) for all sufficiently large x.
+statement_formal: |
+  F_{E_1,E_2}(x) < \kappa'(E_1,E_2,K)\,\frac{x^{6/7}}{(\log x)^{5/7}}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  Part (ii) of the theorem assumes GRH for Dedekind zeta functions of
+  number fields, used through effective Chebotarev theorems for
+  subextensions of the l-division field of the abelian surface E1 x E2,
+  which is not abelian over the rationals. The same theorem has an
+  unconditional part (i), F(x) < kappa x (log log x)^(1/9) / (log x)^(19/18),
+  and a part (iii), F(x) < kappa'' x^(2/3) (log x)^(1/3), that also assumes
+  Artin's holomorphy conjecture and a pair correlation conjecture for Artin
+  L-functions; only part (ii) is recorded here.
+sources:
+  - authors: A. C. Cojocaru, A. Hinz, T. Wang
+    title: Quantitative upper bounds related to an isogeny criterion for elliptic curves
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2404.12466
+    hypothesis_location: Theorem 1(ii)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The exponents 6/7 and 5/7 are stacked in the extracted text; they agree between the abstract and Theorem 1 but were not checked against the PDF image.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, frobenius-fields, chebotarev, isogeny]
+added: 2026-11-21

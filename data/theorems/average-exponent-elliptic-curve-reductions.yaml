@@ -1,0 +1,42 @@
+id: average-exponent-elliptic-curve-reductions
+title: Average exponent of the reductions of an elliptic curve modulo primes
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals and, for a prime p of good
+  reduction, let e_p be the exponent of the group of points of E modulo p.
+  Then the average of e_p over primes p up to x equals
+  (1/2) C_E x + O(x^(5/6) (log x)^(4/3)) for all x at least 2, where C_E is
+  an explicit constant in (0, 1) and the implied constant depends only on E.
+statement_formal: |
+  \frac{1}{\pi(x)}\sum_{p\le x} e_p = \tfrac12\, C_E\, x + O_E\!\left(x^{5/6}(\log x)^{4/3}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes GRH for the Dedekind zeta functions of the k-division
+  fields L_k of E for all positive integers k. These fields are not abelian
+  over the rationals in general. The result sharpens the error term
+  x^(9/10) (log x)^(11/5) of Freiberg and Kurlberg. For curves with complex
+  multiplication the same paper proves the asymptotic unconditionally with
+  the weaker error term O(x / (log x)^(1/14)) (Theorem 1.1(b)).
+sources:
+  - authors: J. Wu
+    title: The average exponent of elliptic curves modulo p
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1206.5929
+    hypothesis_location: Theorem 1.1(a)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Part (a) is stated for every elliptic curve over the rationals, including CM curves; whether the CM case of part (a) could be reduced to covered L-functions was not examined.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, group-exponent, chebotarev]
+added: 2026-11-21
