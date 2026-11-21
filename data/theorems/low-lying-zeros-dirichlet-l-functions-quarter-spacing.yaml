@@ -1,0 +1,38 @@
+id: low-lying-zeros-dirichlet-l-functions-quarter-spacing
+title: A positive proportion of Dirichlet L-functions have a zero within beta times the average spacing, for any beta above 1/4
+field: analytic-number-theory
+statement_plain: >
+  Let q be a large prime. For every beta > 1/4, a positive proportion of
+  the non-principal characters chi modulo q have an L-function whose lowest
+  zero has height less than beta times the average spacing 2 pi / log q.
+  The paper gives an explicit lower bound for this proportion in terms of
+  Beurling-Selberg functions.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is Corollary 2 of the paper, deduced from a bound for the mean square
+  of the argument of L(s, chi) over characters modulo q (Theorem 2). The
+  paper says the earlier explicit conditional bounds gave a positive proportion only
+  for beta > 1/2.
+sources:
+  - authors: T. Zhao
+    title: Conditional estimates on the argument of Dirichlet $L$-functions with applications to low-lying zeros
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.13301
+    hypothesis_location: Corollary 2 (from Theorem 2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The explicit lower bound in Corollary 2 involves an integral of Fourier transforms of extremal functions and is not reproduced in the entry.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, argument-of-l-functions, beurling-selberg]
+added: 2026-11-21

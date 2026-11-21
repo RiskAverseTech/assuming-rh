@@ -1,0 +1,46 @@
+id: coprime-universal-ternary-forms-primes-5-23-29-31
+title: Ternary quadratic forms representing all positive integers coprime to 5, 23, 29 or 31
+field: analytic-number-theory
+statement_plain: >
+  The forms x^2 + xz + 2y^2 + 3yz + 7z^2 and x^2 + 2y^2 + yz + 7z^2 represent
+  every positive integer coprime to 5. The forms
+  x^2 + 2xz + 2y^2 + 3yz + 5z^2, x^2 + xz + 2y^2 + 3yz + 5z^2 and
+  x^2 + 2xz + 2y^2 + yz + 5z^2 represent every positive integer coprime to
+  23, 29 and 31 respectively.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  This is the paper's Conjecture 1.2 for the primes 5, 23, 29 and 31, proved
+  under the hypothesis in Theorem 1.9. The conjecture also lists three forms
+  for p = 2, which are the subject of the existing entry
+  kaplansky-ternary-forms-represent-all-odd-integers. The paper says it
+  needs the hypothesis for specific quadratic Dirichlet L-functions and for
+  modular L-functions of weight two (through the Shimura lift and
+  Waldspurger's formula, following Ono and Soundararajan). The second part
+  is not covered. Given this statement, the paper's main theorem
+  characterizing coprime-universal forms for these primes becomes
+  unconditional.
+sources:
+  - authors: M. Bordignon, G. Cherubini
+    title: Coprime-Universal Quadratic Forms
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2406.01533
+    hypothesis_location: Theorem 1.9 (proved in Section 11)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The five forms were copied from Table 1 of the paper, where the text extraction is partly garbled; the coefficients should be checked against the PDF.
+lean:
+  proved: false
+  path: null
+related: [kaplansky-ternary-forms-represent-all-odd-integers]
+tags: [quadratic-forms, ternary-forms, universal-forms]
+added: 2026-11-21

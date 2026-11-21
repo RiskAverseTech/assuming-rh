@@ -1,0 +1,39 @@
+id: carmichael-lambda-function-no-unique-value
+title: Every value of Carmichael's function is taken at least twice
+field: analytic-number-theory
+statement_plain: >
+  For every positive integer n there is an integer m different from n with
+  lambda(m) = lambda(n), where lambda is Carmichael's function (the largest
+  order of an element modulo n).
+statement_formal: |
+  \forall n \ge 1 \;\; \exists m \ne n : \; \lambda(m) = \lambda(n)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is a conjecture of Banks et al. The paper states its hypothesis as
+  the Extended Riemann Hypothesis for Dirichlet L-functions, used through a
+  bound for the error term in the count of primes in an arithmetic
+  progression, to find for each prime power p^a a suitable prime q with
+  p^a dividing q - 1. The paper also proves unconditionally that such a
+  prime exists for all p^a above an effective constant.
+sources:
+  - authors: K. Ford, F. Luca
+    title: The number of solutions of $\lambda(x)=n$
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1010.5442
+    hypothesis_location: Theorem 2 (with Theorem 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Whether the statement has since been proved unconditionally was not checked; the paper itself leaves a finite but uncomputed range open.
+lean:
+  proved: false
+  path: null
+tags: [carmichael-function, primes-in-progressions, arithmetic-functions]
+added: 2026-11-21

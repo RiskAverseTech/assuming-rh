@@ -1,0 +1,42 @@
+id: moments-cubic-quartic-dirichlet-l-functions-order-of-magnitude
+title: Order of magnitude of moments of cubic and quartic Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  For every real k >= 0, the sum of |L(1/2, chi)|^(2k) over primitive cubic
+  Dirichlet characters chi of conductor q <= X coprime to 3 has order of
+  magnitude X (log X)^(k^2). The same holds for primitive quartic Dirichlet
+  characters (with primitive square) of odd conductor q <= X.
+statement_formal: |
+  \sum_{\substack{q \le X \\ (q,3)=1}} \; \sum\nolimits^{*}_{\substack{\chi \bmod q \\ \chi^3 = \chi_0}} \left| L(\tfrac12, \chi) \right|^{2k} \asymp_k X (\log X)^{k^2}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The characters here are Dirichlet characters of order 3 and 4 over the
+  rationals. The conditional steps (Lemma 2.9, Propositions 5.2 and 5.3)
+  assume RH for zeta and GRH for L(s, chi) with chi a primitive cubic or
+  quartic Dirichlet character. Hecke L-functions over Q(omega) and Q(i)
+  appear in the proof only through an unconditional convexity bound. The
+  paper proves the lower bound for k >= 1/2 unconditionally in the cubic
+  case, and under the Lindelof hypothesis for quartic Dirichlet
+  L-functions in the quartic case.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Bounds for moments of cubic and quartic Dirichlet $L$-functions
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2104.09909
+    hypothesis_location: Theorem 1.5 (upper bounds are Theorem 1.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem statements say only "GRH". The precise hypothesis was read from Lemma 2.9 and Propositions 5.2 and 5.3. The proof of Theorem 1.4 (twisted second moments, small k) was not checked in full for a use of GRH for the Hecke L-functions over Q(omega) or Q(i).
+lean:
+  proved: false
+  path: null
+tags: [moments, l-function-values, cubic-characters]
+added: 2026-11-21
