@@ -1,0 +1,54 @@
+id: shifted-moments-quadratic-dirichlet-l-functions-upper-bound
+title: Sharp upper bounds for shifted moments of quadratic Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let chi^(8d) be the quadratic character (8d / .), let k >= 1 be an integer
+  and let a_1, ..., a_k and A be fixed positive reals. For large X and real
+  t_1, ..., t_k with |t_j| <= X^A, the sum over odd square-free d <= X of
+  the product of |L(1/2 + i t_j, chi^(8d))|^(a_j) is at most a constant times
+  X (log X)^((a_1^2 + ... + a_k^2)/4) times a product of powers of
+  |zeta(1 + i(t_j - t_l) + 1/log X)|, |zeta(1 + i(t_j + t_l) + 1/log X)| and
+  |zeta(1 + 2 i t_j + 1/log X)|, with the exponents shown in the formula.
+  The constant depends on k, A and the a_j but not on X or the t_j.
+statement_formal: |
+  \begin{aligned}
+  \sum\nolimits^{*}_{\substack{d\le X\\ (d,2)=1}}\ \prod_{j=1}^{k}\left|L\!\left(\tfrac12+it_j,\chi^{(8d)}\right)\right|^{a_j}
+  \ll{}& X(\log X)^{(a_1^2+\cdots+a_k^2)/4}
+  \prod_{1\le j<l\le k}\left|\zeta\!\left(1+i(t_j-t_l)+\tfrac{1}{\log X}\right)\right|^{a_ja_l/2}\left|\zeta\!\left(1+i(t_j+t_l)+\tfrac{1}{\log X}\right)\right|^{a_ja_l/2}\\
+  &\times\prod_{1\le j\le k}\left|\zeta\!\left(1+2it_j+\tfrac{1}{\log X}\right)\right|^{a_j^2/4+a_j/2}
+  \end{aligned}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The starred sum is over square-free integers. The hypothesis is used for
+  the quadratic Dirichlet L-functions L(s, chi^(8d)). The paper's
+  Corollary 1.2 replaces the zeta factors by an explicit function g; one of
+  the three cases of the estimate used there holds under the Riemann
+  hypothesis for zeta. As an application (Theorem 1.3) the paper bounds the
+  unsmoothed moments: the sum over odd square-free d <= X of
+  |sum_{n <= Y} chi^(8d)(n)|^(2m) is << X Y^m (log X)^(2m^2 - m + 1) for
+  m > (sqrt(5) + 1)/2. That application is the unsmoothed counterpart of the
+  entry quadratic-character-sum-moments-sharp-upper-bound and the
+  all-square-free-moduli counterpart of quadratic-character-sum-moments-prime-moduli.
+  The entry shifted-moments-dirichlet-l-functions-lower-bound gives lower
+  bounds for a different family (characters of a fixed modulus).
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Shifted moments of quadratic Dirichlet L-functions
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2406.18024
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The paper writes only "GRH" without defining it; it is applied to quadratic Dirichlet L-functions and, in Section 4, to primitive Dirichlet characters. If the Riemann zeta function is also needed for Theorem 1.1 itself, RH should be added; the status would not change.
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-characters, shifted-moments, character-sums]
+added: 2026-11-21

@@ -1,0 +1,42 @@
+id: dirichlet-l-functions-distinct-and-simple-zeros-proportion
+title: More than 83.216% of zeros of primitive Dirichlet L-functions are distinct and more than 66.433% are simple, on average over moduli
+field: analytic-number-theory
+statement_plain: >
+  Let N(T, Q) be the smoothly weighted count, over moduli q of size about Q
+  and primitive characters chi mod q (weight Psi(q/Q)/phi(q)), of zeros of
+  L(s, chi) with imaginary part at most T in absolute value, and let N_d and
+  N_s be the same counts restricted to distinct zeros and to simple zeros.
+  For any constant A >= 6, if (log Q)^6 <= T <= (log Q)^A and Q is large
+  enough, then N_d(T, Q) >= 0.83216 N(T, Q) and N_s(T, Q) >= 0.66433 N(T, Q).
+statement_formal: |
+  N_d(T,Q)\ge 0.83216\,N(T,Q),\qquad N_s(T,Q)\ge 0.66433\,N(T,Q),\qquad (\log Q)^{6}\le T\le(\log Q)^{A}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is for the primitive Dirichlet L-functions in the family.
+  Without it the same paper proves the proportions 0.8013 and 0.60261 (its
+  Theorem 1). The entry zeta-simple-zeros-proportion-19-27 is the analogous
+  kind of result for the Riemann zeta function alone. The draft entry
+  primitive-dirichlet-l-functions-simple-zeros-eleven-twelfths gives a larger
+  proportion of simple zeros for the same family, but counted with a
+  different weight that concentrates on low-lying zeros.
+sources:
+  - authors: X. Wu
+    title: Distinct zeros and simple zeros of Dirichlet L-functions
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1206.1679
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The abstract on the arXiv listing quotes slightly different unconditional percentages (80.124% and 60.248%) from version 4 of the text (80.13% and 60.261%); the conditional figures were taken from the version 4 text.
+lean:
+  proved: false
+  path: null
+tags: [simple-zeros, dirichlet-l-functions, asymptotic-large-sieve]
+added: 2026-11-21

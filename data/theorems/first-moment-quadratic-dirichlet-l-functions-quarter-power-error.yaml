@@ -1,0 +1,47 @@
+id: first-moment-quadratic-dirichlet-l-functions-quarter-power-error
+title: Smoothed first moment of quadratic Dirichlet L-functions with error term O(X^(1/4 + eps))
+field: analytic-number-theory
+statement_plain: >
+  For odd positive n let chi_n be the quadratic character (. / n) and let
+  L^(2)(s, chi_n) be its L-function with the Euler factor at 2 removed. Let w
+  be a non-negative Schwartz function. Then the sum over all odd positive n
+  of L^(2)(1/2, chi_n) w(n/X) equals X Q(log X) + O(X^(1/4 + eps)) for every
+  eps > 0, where Q is a linear polynomial whose coefficients depend only on
+  absolute constants and on the Mellin transform of w and its derivative
+  at 1.
+statement_formal: |
+  \sum_{(n,2)=1} L^{(2)}\!\left(\tfrac12,\chi_n\right) w\!\left(\frac{n}{X}\right)=X\,Q(\log X)+O\!\left(X^{1/4+\varepsilon}\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is Corollary 1.2, the limit as alpha tends to 0 of Theorem 1.1, which
+  gives the two main terms explicitly for L^(2)(1/2 + alpha, chi_n) with
+  0 < Re(alpha) < 1/2 and error O((1 + |alpha|)^(5 + eps) X^(1/4 + eps)).
+  The hypothesis is used to bound 1/L(s, psi) for Re(s) >= 1/2 + eps, for
+  primitive quadratic characters and also for the principal character, that
+  is for the Riemann zeta function, so RH is listed as well. The paper
+  remarks that its proof gives the error term O(X^(1/2 + eps))
+  unconditionally. The sum is over all odd n, not only square-free n, so
+  the L-functions are not all primitive. The entry
+  second-moment-quadratic-l-functions-prime-conductor concerns a different
+  moment and family.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: First moment of central values of quadratic Dirichlet L-functions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.11588
+    hypothesis_location: Theorem 1.1 and Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The explicit polynomial Q is not given in the paper.
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-characters, central-values, multiple-dirichlet-series]
+added: 2026-11-21
