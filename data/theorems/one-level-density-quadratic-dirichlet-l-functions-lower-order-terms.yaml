@@ -1,0 +1,47 @@
+id: one-level-density-quadratic-dirichlet-l-functions-lower-order-terms
+title: 1-level density of quadratic Dirichlet L-functions with lower order terms for Fourier support in (-2, 2)
+field: analytic-number-theory
+statement_plain: >
+  Consider the family of L(s, chi_8d) with d odd and square-free, weighted by
+  w(d/X) for an even non-negative Schwartz function w. For an even Schwartz
+  test function phi whose Fourier transform is supported in (-2, 2), and any
+  fixed K, the 1-level density D*(phi; X) of the low-lying zeros equals
+  phihat(0) minus half the integral of phihat over [-1, 1], plus the sum
+  over k from 1 to K of R_{w,k}(phi) / (log X)^k, plus an error
+  O(1/(log X)^(K+1)). The coefficients R_{w,k}(phi) are explicit linear
+  functionals of phi, given in terms of w and the derivatives of phihat at
+  the points 0 and 1.
+statement_formal: |
+  D^{*}(\phi;X)=\widehat{\phi}(0)-\frac12\int_{-1}^{1}\widehat{\phi}(u)\,du+\sum_{k=1}^{K}\frac{R_{w,k}(\phi)}{(\log X)^{k}}+O_{w,\phi,K}\Bigl(\frac{1}{(\log X)^{K+1}}\Bigr), \qquad \text{supp}\,\widehat{\phi}\subset(-2,2)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This sharpens the n = 1 case of the entry
+  n-level-density-quadratic-dirichlet-l-functions-support-two (Gao), and the
+  earlier result of Ozluk and Snyder, which give only the main term for the
+  same support: here there is a full expansion in descending powers of
+  log X. The paper gives the first coefficient R_{w,1} explicitly in its
+  formula (1.3); it contains a term in phihat(1), which shows a transition
+  when the support reaches 1. Theorem 3.5 of the paper gives a version with
+  a power saving error term.
+sources:
+  - authors: D. Fiorilli, J. Parks, A. Södergren
+    title: "Low-lying zeros of quadratic Dirichlet L-functions: Lower order terms for extended support"
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1601.06833
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The theorem says only GRH. RH for zeta is listed as well because Lemmas 2.2 and 2.4 are stated under the Riemann Hypothesis and Lemma 2.5 (prime sums of (m/p) log p, including square m) is the central input; whether the paper's GRH is meant to include zeta is not stated."
+    - "The coefficients R_{w,k} are not reproduced; only their existence and general shape are recorded."
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, quadratic-characters]
+added: 2026-11-21

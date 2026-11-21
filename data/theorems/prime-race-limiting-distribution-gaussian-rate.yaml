@@ -1,0 +1,50 @@
+id: prime-race-limiting-distribution-gaussian-rate
+title: Rate of convergence to the Gaussian for the limiting distribution in the Shanks-Renyi prime number race
+field: analytic-number-theory
+statement_plain: >
+  Fix r >= 2. For distinct reduced residues a_1, ..., a_r modulo a large q,
+  let mu be the limiting logarithmic distribution of the vector with entries
+  (log x / sqrt(x)) (phi(q) pi(x; q, a_j) - pi(x)), and let Var(q) be twice
+  the sum of 1/(1/4 + gamma^2) over the positive zero ordinates gamma of
+  L(s, chi) for all non-principal chi modulo q (so Var(q) is asymptotic to
+  phi(q) log q). Then for 0 < lambda <= sqrt(log log q), the mu-measure of
+  the set where the Euclidean norm exceeds lambda sqrt(Var(q)) equals the
+  corresponding standard r-dimensional Gaussian measure up to an error
+  O_r(1/(log q)^2). The error term is optimal: for some r-tuple of residues
+  the difference is at least a constant times 1/(log q)^2 for
+  1/4 < lambda < 3/4.
+statement_formal: |
+  \mu_{q;a_1,\ldots,a_r}\Bigl(\|x\|>\lambda\sqrt{\mathrm{Var}(q)}\Bigr)=(2\pi)^{-r/2}\int_{\|x\|>\lambda}\exp\Bigl(-\frac{x_1^{2}+\cdots+x_r^{2}}{2}\Bigr)dx+O_r\Bigl(\frac{1}{\log^{2}q}\Bigr), \qquad 0<\lambda\le\sqrt{\log\log q}
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Linear Independence hypothesis (LI): the
+  nonnegative imaginary parts of the zeros of all Dirichlet L-functions
+  attached to primitive characters modulo q are linearly independent over
+  the rationals. It is not covered. This sharpens the result of Rubinstein
+  and Sarnak (see the entry chebyshev-bias) that the limiting distribution
+  tends to a Gaussian as q grows, by giving the exact rate uniformly in
+  lambda. Theorems 2 to 4 of the paper, under the same assumptions, describe
+  the large deviations of the distribution for V up to and beyond
+  phi(q) log q.
+sources:
+  - authors: Y. Lamzouri
+    title: Large deviations of the limiting distribution in the Shanks-Rényi prime number race
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1103.0060
+    hypothesis_location: "Theorem 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The existence of the limiting distribution needs only GRH (Rubinstein and Sarnak); the paper assumes LI for the comparison with the Gaussian."
+lean:
+  proved: false
+  path: null
+tags: [prime-races, limiting-distribution, linear-independence]
+added: 2026-11-21

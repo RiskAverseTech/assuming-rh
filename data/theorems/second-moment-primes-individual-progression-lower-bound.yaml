@@ -1,0 +1,41 @@
+id: second-moment-primes-individual-progression-lower-bound
+title: Lower bound for the second moment of primes in a single arithmetic progression in short intervals
+field: analytic-number-theory
+statement_plain: >
+  Let psi(x; q, a) be the sum of the von Mangoldt function over n <= x with
+  n = a mod q, where a is coprime to q, and let I(x, h, q, a) be the integral
+  over y from x to 2x of (psi(y + h; q, a) - psi(y; q, a) - h/phi(q))^2. For
+  any eps > 0 and q <= h <= (xq)^(1/3 - eps), I(x, h, q, a) is at least
+  (1/2) (xh/phi(q)) log(xq/h^3) minus an error of order
+  (xh/phi(q)) (log log 3q)^3.
+statement_formal: |
+  \int_x^{2x}\Bigl(\psi(y+h;q,a)-\psi(y;q,a)-\frac{h}{\varphi(q)}\Bigr)^{2}dy \;\ge\; \frac12\,\frac{xh}{\varphi(q)}\log\Bigl(\frac{xq}{h^{3}}\Bigr)-O\Bigl(\frac{xh}{\varphi(q)}(\log\log 3q)^{3}\Bigr), \qquad q\le h\le (xq)^{1/3-\epsilon}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The bound is for one residue class, not an average over the classes modulo
+  q. The paper says it is within a constant factor of the conjectured
+  asymptotic. This differs from the entry
+  variance-primes-progressions-limiting-distribution, which concerns the
+  variance over all residue classes of a modulus. For q = 1 the statement is
+  about the zeta function only.
+sources:
+  - authors: D. A. Goldston, C. Y. Yildirim
+    title: On the second moment for primes in an arithmetic progression
+    year: 2000
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0004149
+    hypothesis_location: "Theorem 1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The paper writes GRH and uses it through the bound psi(x; q, a) - x/phi(q) << sqrt(x) log^2 x; the principal character brings in the zeta function, which GRH-Dirichlet is taken to include here."
+lean:
+  proved: false
+  path: null
+tags: [primes-in-progressions, short-intervals, second-moment]
+added: 2026-11-21

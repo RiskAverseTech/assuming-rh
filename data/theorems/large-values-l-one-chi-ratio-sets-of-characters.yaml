@@ -1,0 +1,45 @@
+id: large-values-l-one-chi-ratio-sets-of-characters
+title: Large values of |L(1, chi)| in the ratio set of a very small set of characters
+field: analytic-number-theory
+statement_plain: >
+  Let q be a sufficiently large prime, let delta > 0 be fixed, and let A be
+  any set of Dirichlet characters modulo q with at least
+  (log log q)^(1 + delta) elements; write |A| for its size. Then some
+  non-principal character chi of the form chi_1 / chi_2 with chi_1, chi_2 in
+  A satisfies |L(1, chi)| >= e^gamma (log log |A| + log log log |A| -
+  log_2 4 - log(1 + 1/delta) - 1 + o(1)), where gamma is the
+  Euler-Mascheroni constant.
+statement_formal: |
+  \#\mathcal{A}=A\ge(\log\log q)^{1+\delta}\ \Longrightarrow\ \exists\,\chi\in\mathcal{A}/\mathcal{A},\ \chi\ne\chi_0:\quad |L(1,\chi)|\ \ge\ e^{\gamma}\Bigl(\log_2 A+\log_3 A-\log_2 4-\log\bigl(1+\delta^{-1}\bigr)-1+o(1)\Bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here log_2 and log_3 are the paper's iterated logarithms. Unconditionally
+  the same paper proves the same bound only for sets with at least
+  (log q)^(1 + delta) elements; the hypothesis lowers the threshold to
+  (log log q)^(1 + delta). The proof assumes GRH for all Dirichlet
+  L-functions of modulus q and uses it to approximate L(1, chi) by a short
+  Euler product. The paper's Theorem 2.2(ii) is a similar conditional result
+  for L(sigma, chi) with 1/2 < sigma < 1. This is a lower bound for extreme
+  values over a thin set of characters, complementary to the upper bounds in
+  the entry littlewood-l1-chi-bounds.
+sources:
+  - authors: P. Darbar, B. Kerr, M. Munsch, I. E. Shparlinski
+    title: Large values of L(σ, χ) over sets of characters with small product set
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.02960
+    hypothesis_location: "Theorem 2.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper defines log_nu z with a floor of 2 (log_1 z = max{2, log z}); under that convention log_2 4 equals 2, while the proof (condition (1 + delta)(1 - kappa log 4) > 1) suggests log log 4. The term is copied as printed."
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, extreme-values, value-at-one]
+added: 2026-11-21
