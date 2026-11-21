@@ -1,0 +1,46 @@
+id: l-torsion-class-groups-almost-all-fields-over-base
+title: Bound for l-torsion in class groups of almost all degree d fields containing a fixed field
+field: algebraic-number-theory
+statement_plain: >
+  Let F be a number field of degree m, let d be a multiple of m with
+  2 <= d/m <= 5, and let l be a positive integer. For 100% of the number
+  fields K of degree d that contain F, ordered by absolute discriminant D_K,
+  the l-torsion subgroup of the class group of K has size at most a constant
+  times D_K^(1/2 - m/(l(m+d)) + eps), for every eps > 0.
+statement_formal: |
+  \#\mathrm{Cl}_K[\ell] \ll_{d,\ell,\varepsilon} D_K^{\frac{1}{2} - \frac{m}{\ell(m+d)} + \varepsilon} \quad \text{for } 100\% \text{ of degree } d \text{ fields } K \supseteq F, \quad [F:\mathbb{Q}] = m, \ 2 \le d/m \le 5
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used to apply the effective Chebotarev density theorem of
+  Lagarias and Odlyzko to the normal closure of each field K, which gives
+  many small primes that split completely in K. The normal closure is a
+  general Galois extension of the rationals. The paper's main results for
+  degrees 4 and 5 over the rationals are unconditional; this entry records
+  the conditional Corollary 1.8. Theorem 1.7 gives the same bound for any
+  d divisible by m under the further assumption that there are at least a
+  constant times X fields of degree d containing F with discriminant up to X.
+sources:
+  - authors: M. Widmer
+    title: Bounds for the $\ell$-torsion in class groups
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1709.10137
+    hypothesis_location: Corollary 1.8 (from Theorem 1.7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only "GRH" without defining it. The proof applies the Lagarias-Odlyzko theorem to the normal closure of K, so the entry is coded as the hypothesis for Dedekind zeta functions of Galois extensions; the paper does not state this explicitly.
+    - >-
+      "100% of fields" is the paper's wording for all but a zero-density set when the fields are counted by discriminant.
+lean:
+  proved: false
+  path: null
+tags: [class-groups, torsion, chebotarev]
+added: 2026-11-21

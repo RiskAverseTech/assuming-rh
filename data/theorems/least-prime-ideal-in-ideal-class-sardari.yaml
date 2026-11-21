@@ -1,0 +1,44 @@
+id: least-prime-ideal-in-ideal-class-sardari
+title: Least prime ideal in a given ideal class of a number field
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field of bounded degree with discriminant D_K and class
+  number h_K. Every ideal class of K contains a prime ideal of norm at most
+  a constant times h_K^2 (log |D_K|)^2, and all but o(h_K) of the ideal
+  classes contain a prime ideal of norm at most a constant times
+  h_K (log |D_K|)^(2+eps).
+statement_formal: |
+  N\mathfrak{p}_A \ll h_K^2 \log^2 |D_K| \ \text{ for every class } A, \qquad N\mathfrak{p}_A \ll h_K (\log |D_K|)^{2+\epsilon} \ \text{ for all but } o(h_K) \text{ classes } A
+hypotheses_required: [GRH-Hecke, ERH-Dedekind]
+status: still-conditional
+waiting_on: [class-group-characters, single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the L-functions of all
+  characters of the ideal class group of K (the unramified Hecke characters).
+  The trivial character gives the Dedekind zeta function of K, which the
+  proof also uses. Class group characters are in general not Dirichlet
+  characters, even for quadratic fields, so nothing here is covered. The
+  paper also proves sharper bounds for imaginary quadratic fields under an
+  additional pair correlation type conjecture; those are not recorded here.
+sources:
+  - authors: N. T. Sardari
+    title: The least prime ideal in a given ideal class
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1802.06193
+    hypothesis_location: Corollary 1.9 (from Theorem 1.8)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The implied constants depend on the degree of K, which the paper assumes bounded; they are not made explicit.
+lean:
+  proved: false
+  path: null
+related: [least-prime-ideal-with-given-artin-symbol]
+tags: [prime-ideals, class-groups, hecke-characters]
+added: 2026-11-21

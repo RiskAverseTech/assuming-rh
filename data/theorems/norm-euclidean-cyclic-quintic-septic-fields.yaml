@@ -1,0 +1,42 @@
+id: norm-euclidean-cyclic-quintic-septic-fields
+title: Classification of the norm-Euclidean cyclic fields of degrees 5 and 7
+field: algebraic-number-theory
+statement_plain: >
+  A cyclic number field of degree 5 is norm-Euclidean if and only if its
+  discriminant is 11^4, 31^4 or 41^4. A cyclic number field of degree 7 is
+  norm-Euclidean if and only if its discriminant is 29^6 or 43^6.
+statement_formal: |
+  [K:\mathbb{Q}] = 5 \text{ cyclic}: \ K \text{ norm-Euclidean} \iff \Delta_K \in \{11^4, 31^4, 41^4\}; \qquad [K:\mathbb{Q}] = 7 \text{ cyclic}: \ K \text{ norm-Euclidean} \iff \Delta_K \in \{29^6, 43^6\}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This paper does not define GRH. Its conditional step (Proposition 5.2)
+  takes a bound of Bach on the least prime where a Dirichlet character is
+  not 1, and Theorems 3.1 and 3.2 of McGown's paper "Norm-Euclidean Galois
+  fields and the generalized Riemann hypothesis" (arXiv 1102.2043). In that
+  paper GRH means the hypothesis for Dirichlet L-functions, and the Dedekind
+  zeta function of a cyclic field of prime degree is a product of Dirichlet
+  L-functions. The result extends the cubic classification recorded in the entry on norm-Euclidean Galois cubic fields to degrees 5 and 7. The proof also relies
+  on a large computation.
+sources:
+  - authors: P. Lezowski, K. J. McGown
+    title: The Euclidean algorithm in quintic and septic cyclic fields
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1601.03433
+    hypothesis_location: Theorem 1.3 (the hypothesis enters through Proposition 5.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH covers. The classification as Dirichlet-only comes from reading the cited results (Bach's bound for Dirichlet characters, and McGown's Theorems 3.1 and 3.2, whose hypotheses are RH, GRH for a Dirichlet L-function, and GRH for the Dedekind zeta function of a cyclic field). The theorem numbers cited as [13, Theorems 3.1 and 3.2] refer to the journal version of McGown's paper; in the arXiv text the matching bounds on q2 and r are Theorems 3.2 and 3.3. A reviewer should confirm that no other conditional input is used.
+lean:
+  proved: false
+  path: null
+related: [euclidean-number-rings, norm-euclidean-galois-cubic-fields-classification]
+tags: [norm-euclidean, cyclic-fields, euclidean-algorithm]
+added: 2026-11-21

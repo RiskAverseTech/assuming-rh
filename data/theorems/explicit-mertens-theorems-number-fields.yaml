@@ -1,0 +1,46 @@
+id: explicit-mertens-theorems-number-fields
+title: Explicit Mertens theorems for number fields
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field of degree n and discriminant D. For all x >= 2,
+  the sum of log N(p)/N(p) over prime ideals p of norm at most x equals
+  log x + A(x) with |A(x)| <= 4.73 log|D| + 9.27 n + log 2, and the sum of
+  1/N(p) over the same prime ideals equals log log x + M_K + B(x) with
+  |B(x)| <= (13.47 log|D| + (26.37 + 0.12 log x) n) / sqrt(x), where M_K is
+  a constant depending on K. An explicit product formula of Mertens type
+  follows.
+statement_formal: |
+  \Bigl|\sum_{N(\mathfrak{p}) \le x} \frac{1}{N(\mathfrak{p})} - \log\log x - M_K\Bigr| \le \frac{13.47 \log|\Delta_K| + (26.37 + 0.12 \log x)\, n_K}{\sqrt{x}}, \qquad x \ge 2
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper defines GRH as the statement that the non-trivial zeros of the
+  Dedekind zeta function of K lie on the line Re s = 1/2. When K is abelian
+  over the rationals (for example quadratic or cyclotomic) this zeta
+  function is a product of Dirichlet L-functions, so the bounds are unlocked
+  for those fields. For other fields the result stays conditional.
+sources:
+  - authors: S. R. Garcia, E. S. Lee
+    title: Explicit Mertens' Theorems for Number Fields
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.03337
+    hypothesis_location: Theorem A
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The arXiv version read (v3) carries margin notes by the authors saying the preprint is in a temporarily truncated state and that the constants may be updated. The constants recorded are those of v3.
+    - >-
+      Theorem B of the paper extends the result to prime ideals with a given Artin symbol in a Galois extension L/K, assuming the hypothesis for the zeta function of L; that version is not recorded here.
+lean:
+  proved: false
+  path: null
+related: [explicit-prime-ideal-theorem-chebyshev-function]
+tags: [mertens-theorems, prime-ideals, explicit-bounds]
+added: 2026-11-21

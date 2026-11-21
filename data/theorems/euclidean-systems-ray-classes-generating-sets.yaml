@@ -1,0 +1,40 @@
+id: euclidean-systems-ray-classes-generating-sets
+title: Generating sets of ray class groups modulo powers of p are Euclidean systems
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a totally real Galois number field of degree at least 3, and let
+  p be an odd rational prime that does not split completely in K. Then for
+  every positive integer N, any generating set of the ray class group of K
+  with modulus (p)^N is a Euclidean system of ray classes.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The hypothesis enters through Lenstra's theorem on Artin's generalized
+  primitive root conjecture (Lenstra's Theorem 4.6), applied with the ray
+  class field of K and a group W of units. That theorem concerns the fields
+  obtained from K by adjoining roots of unity and roots of the elements of
+  W, which are Kummer-type fields and not abelian over the rationals. The
+  paper writes only "GRH" and does not define it.
+sources:
+  - authors: Y. Matsuno
+    title: On Euclidean systems of ray classes
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.01703
+    hypothesis_location: Theorem 1.2 (restated as Theorem 5.8; the hypothesis enters through Theorem 5.1 and Corollary 5.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The coding as Dedekind zeta functions of Kummer-type fields follows the usual hypothesis of Lenstra's theorem, which the paper cites without restating its exact hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [euclidean-algorithm, ray-class-groups, artin-conjecture]
+added: 2026-11-21
