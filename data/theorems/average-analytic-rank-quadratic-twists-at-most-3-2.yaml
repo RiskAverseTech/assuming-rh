@@ -14,6 +14,7 @@ statement_formal: |
   \frac{1}{W^{\pm}(T)}\sum_{D\in\mathcal{T}^{\pm}} w(D/T)\, r(E_D) \ \le\ \frac{3}{2} + o(1) \qquad (T\to\infty)
 hypotheses_required: [GRH-automorphic]
 status: still-conditional
+waiting_on: [modular-form-l-functions]
 status_note: >
   The theorem assumes the Riemann Hypothesis for the L-functions L_D(s) of
   all the quadratic twists E_D, for every integer D. These are L-functions

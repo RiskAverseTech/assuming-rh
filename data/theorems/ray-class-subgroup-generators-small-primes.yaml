@@ -12,6 +12,7 @@ statement_formal: |
   N(\mathfrak{p}) < \Bigl([\mathrm{Cl}_{\mathfrak{m}}(K):H]\,\bigl(2.71\log(\Delta N(\mathfrak{m}_0)) + 1.29\,|\mathfrak{m}_\infty| + 1.38\,\omega(\mathfrak{m}_0)\bigr) + 4.13\Bigr)^2
 hypotheses_required: [GRH-Hecke]
 status: partial
+waiting_on: [class-group-characters]
 status_note: >
   The paper's ERH is the statement that all Hecke L-functions are zero-free
   for Re(s) > 1/2, and the proof applies it to ray class characters of K, so

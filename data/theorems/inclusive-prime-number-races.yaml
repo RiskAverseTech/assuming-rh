@@ -13,6 +13,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [extra-assumption]
 status_note: >
   The extra assumption is a weakened form of the Linear Independence
   hypothesis: every nonprincipal character modulo q must be robust, meaning

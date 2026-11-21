@@ -5,11 +5,12 @@ statement_plain: >
   The set of x for which there are more primes up to x of the form 4k + 3
   than of the form 4k + 1 has logarithmic density about 0.9959. More
   generally, the logarithmic densities in prime number races exist, lie
-  strictly between 0 and 1, and favour non-residue classes.
+  strictly between 0 and 1, and favor non-residue classes.
 statement_formal: |
   \delta\bigl(\{\, x : \pi(x;4,3) > \pi(x;4,1) \,\}\bigr) = 0.9959\ldots
 hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [extra-assumption]
 status_note: >
   The extra assumption is the Grand Simplicity Hypothesis, also called
   Linear Independence: the positive imaginary parts of the zeros of the

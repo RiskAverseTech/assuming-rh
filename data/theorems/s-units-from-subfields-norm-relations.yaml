@@ -11,6 +11,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   The hypothesis enters through the paper's effective Grunwald-Wang theorem
   (Theorem 4.11), which bounds the primes needed to test whether an element

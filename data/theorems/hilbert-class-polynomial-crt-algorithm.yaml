@@ -10,6 +10,7 @@ statement_formal: |
   O\!\left(|D|\log^5|D|\,(\log\log|D|)^4\right) \text{ time}, \qquad O\!\left(|D|^{1/2}(\log|D|+\log P)\log\log|D|\right) \text{ space}
 hypotheses_required: [GRH-Dirichlet, ERH-Dedekind, GRH-Hecke]
 status: still-conditional
+waiting_on: [galois-extensions, class-group-characters]
 status_note: >
   The output is always correct; the paper says the hypothesis is used only
   for the complexity bounds, and that its label GRH stands for several

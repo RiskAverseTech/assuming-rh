@@ -18,7 +18,7 @@ status_note: >
   square of pi(x; q, a) - pi(x)/phi(q) over residues a, for both the
   uniformity bound and the average running time. Termination does not depend
   on it. The same paper gives a different algorithm with a random modulus
-  that is analysed unconditionally with the Barban-Davenport-Halberstam
+  that is analyzed unconditionally with the Barban-Davenport-Halberstam
   theorem, but its distance to uniform is only polynomially small in log x,
   so it does not replace this result.
 sources:

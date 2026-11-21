@@ -11,6 +11,7 @@ statement_formal: |
   c(E)\le 964\log\operatorname{rad}(2N_E)+5760
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [galois-extensions]
 status_note: >
   The paper says the hypothesis is GRH for Dedekind zeta functions. It is
   used through the effective Chebotarev density theorem of Lagarias and

@@ -1,5 +1,5 @@
 id: sums-of-two-squares-residue-bias
-title: Sums of two squares are biased towards quadratic residue classes
+title: Sums of two squares are biased toward quadratic residue classes
 field: analytic-number-theory
 statement_plain: >
   Let S(n; q, a) count the sums of two squares up to n that are congruent to

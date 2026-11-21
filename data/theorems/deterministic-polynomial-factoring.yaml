@@ -10,6 +10,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
 status: still-conditional
+waiting_on: [power-residue-characters]
 status_note: >
   Classified cautiously. Taking square roots modulo a prime needs Dirichlet
   L-functions only and is unlocked (see the entry on square roots). The

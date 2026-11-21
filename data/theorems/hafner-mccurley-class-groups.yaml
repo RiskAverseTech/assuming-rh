@@ -9,6 +9,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Hecke]
 status: still-conditional
+waiting_on: [class-group-characters]
 status_note: >
   This differs from the first expectation that the result would be unlocked
   because the field is quadratic. The paper invokes the hypothesis through

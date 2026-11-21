@@ -13,6 +13,7 @@ statement_formal: |
   \pi_g(x;m,a)=\delta(a,m,g)\frac{x}{\log x}+O\!\left(\frac{1}{\varphi(m)}\frac{x}{\log x}\cdot\frac{(\log|g|)\max\{\log(2m),\log\log x\}}{\log x}\right)
 hypotheses_required: [GRH-Hecke, ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper states its hypothesis precisely: for each squarefree k, all
   Hecke L-functions of the number field Q(zeta_k, g^(1/k)) satisfy the

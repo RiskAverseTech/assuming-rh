@@ -9,6 +9,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [galois-extensions]
 status_note: >
   The proof counts the primes modulo which the system has a solution, using
   an effective Chebotarev estimate for arbitrary number fields. Those fields

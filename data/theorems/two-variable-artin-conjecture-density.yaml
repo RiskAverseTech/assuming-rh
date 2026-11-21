@@ -11,6 +11,7 @@ statement_formal: |
   \delta(a,b)=c_{a,b}\prod_{p}\left(1-\frac{p}{p^3-1}\right),\qquad c_{a,b}\in\mathbb{Q}_{>0}
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The analytic part follows Stephens, who assumes the Riemann hypothesis for
   each of the fields F_(i,j) = Q(zeta_(ij), a^(1/ij), b^(1/i)), and Hooley's

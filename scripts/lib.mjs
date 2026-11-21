@@ -24,6 +24,15 @@ export function loadTaxonomy() {
   return list;
 }
 
+export function loadWaiting() {
+  return readYaml(path.join(ROOT, 'data', 'meta', 'waiting.yaml'));
+}
+let waitingMap = null;
+function loadWaitingMap() {
+  if (!waitingMap) waitingMap = Object.fromEntries(loadWaiting().map((w) => [w.code, w]));
+  return waitingMap;
+}
+
 export function loadProofStatus() {
   return readYaml(path.join(ROOT, 'data', 'meta', 'proof-status.yaml'));
 }
@@ -48,7 +57,7 @@ const blank = (s) => s === null || s === undefined || String(s).trim() === '';
  * Validate one parsed entry. Returns a list of error strings.
  * knownIds: set of ids that "related" may point to (null skips that check).
  */
-export function validateEntry(entry, fileName, taxonomy, knownIds = null) {
+export function validateEntry(entry, fileName, taxonomy, knownIds = null, waitingFamilies = loadWaitingMap()) {
   const errors = [];
   const validate = schemaValidator();
   if (!validate(entry)) {
@@ -85,6 +94,23 @@ export function validateEntry(entry, fileName, taxonomy, knownIds = null) {
   }
   if (hyps.includes('PLUS-EXTRA') && blank(entry.status_note)) {
     errors.push('PLUS-EXTRA needs a status_note naming the extra assumption');
+  }
+
+  // Entries that are not fully unlocked must say what they are waiting on.
+  const waits = entry.status === 'still-conditional' || entry.status === 'partial';
+  if (waits && !entry.waiting_on) {
+    errors.push(`status "${entry.status}" needs waiting_on (see data/meta/waiting.yaml)`);
+  }
+  if (!waits && entry.waiting_on) {
+    errors.push(`waiting_on is only for still-conditional and partial entries`);
+  }
+  if (entry.waiting_on && waitingFamilies) {
+    for (const w of entry.waiting_on) {
+      const fam = waitingFamilies[w];
+      if (fam && !fam.hypotheses.some((h) => hyps.includes(h))) {
+        errors.push(`waiting_on "${w}" belongs to ${fam.hypotheses.join(' or ')}, none of which is in hypotheses_required`);
+      }
+    }
   }
 
   // Review state consistency.

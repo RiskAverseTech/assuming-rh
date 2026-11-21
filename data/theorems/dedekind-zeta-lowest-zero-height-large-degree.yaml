@@ -9,6 +9,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: partial
+waiting_on: [single-field-zeta]
 status_note: >
   The statement for a field K needs the hypothesis only for the Dedekind
   zeta function of K itself, so it is unlocked for fields that are abelian

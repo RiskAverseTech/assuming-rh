@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import katex from 'katex';
-import { ROOT, validateDir, loadTaxonomy, loadProofStatus } from '../scripts/lib.mjs';
+import { ROOT, validateDir, loadTaxonomy, loadProofStatus, loadWaiting } from '../scripts/lib.mjs';
 
 const SITE = path.join(ROOT, 'site');
 const OUT = path.join(ROOT, 'dist');
@@ -20,6 +20,8 @@ if (problems.length) {
 const taxonomy = loadTaxonomy();
 const hyp = Object.fromEntries(taxonomy.map((h) => [h.code, h]));
 const proof = loadProofStatus();
+const waiting = loadWaiting();
+const waitBy = Object.fromEntries(waiting.map((w) => [w.code, w]));
 entries.sort((a, b) => a.title.localeCompare(b.title));
 const byId = Object.fromEntries(entries.map((e) => [e.id, e]));
 
@@ -106,7 +108,7 @@ function banner() {
 </aside>`;
 }
 function page({ file, title, description, body, math = false }) {
-  const nav = [['index.html', 'Home'], ['browse.html', 'Browse'], ['about.html', 'Method'], ['data.html', 'Data']];
+  const nav = [['index.html', 'Home'], ['browse.html', 'Browse'], ['waiting.html', 'Still waiting'], ['about.html', 'Method'], ['data.html', 'Data']];
   const root = file.includes('/') ? '../' : '';
   const fix = (html) => (root ? html.replace(/(href|src|action)="(?!https?:|#|mailto:|\.\.\/)([^"]+)"/g, `$1="${root}$2"`) : html);
   const html = `<!doctype html>
@@ -206,6 +208,7 @@ function buildHome() {
   <h2 id="start-h">Where to start</h2>
   <ul class="plain">
     <li><a href="browse.html">Browse all entries</a>, with filters for status, hypothesis, field and review state.</li>
+    <li><a href="waiting.html">See what is still waiting</a>, grouped by what would have to be proved next.</li>
     <li><a href="about.html">Read the method</a>: the hypothesis taxonomy and how entries are classified.</li>
     <li><a href="data.html">Download the dataset</a> as JSON or CSV.</li>
     <li>Found a mistake? Every entry page has a "suggest a correction" link.</li>
@@ -312,6 +315,7 @@ function buildEntry(e) {
     <h2 id="h-status">Status and why</h2>
     <p>${statusBadge(e)}</p>
     ${whyHtml(e)}
+    ${e.waiting_on ? `<p><strong>Waiting on:</strong> ${e.waiting_on.map((w) => `<a href="waiting.html#${w}">${esc(waitBy[w].name)}</a>`).join('; ')}.</p>` : ''}
   </section>
 
   <section aria-labelledby="h-sources">
@@ -374,7 +378,7 @@ function buildAbout() {
   <li><strong>"Unlocked" is a statement about logic.</strong> It says that every hypothesis a result needs is
   among those the proof claims. It does not say the result is now a theorem.</li>
   <li><strong>The site is about the mathematics.</strong> How the proof was found is not its subject. Entries
-  drafted by an AI system are labelled as drafts because that is what they are.</li>
+  drafted by an AI system are labeled as drafts because that is what they are.</li>
 </ul>
 
 <h2 id="taxonomy">The hypothesis taxonomy</h2>
@@ -419,8 +423,57 @@ function buildAbout() {
 </ul>
 <p>If you know one of these results well, please check its entry. Each entry page has a "suggest a correction" link that opens a prefilled GitHub issue.</p>
 
-<h2 id="licence">Licence and credit</h2>
+<h2 id="license">License and credit</h2>
 <p>The dataset is released under CC BY 4.0 and the code under the MIT License. Maintained by ${esc(cfg.credit)}.</p>`,
+  });
+}
+
+function buildWaiting() {
+  const open = entries.filter((e) => e.waiting_on);
+  const rows = waiting.map((w) => {
+    const all = open.filter((e) => e.waiting_on.includes(w.code));
+    const only = all.filter((e) => e.waiting_on.length === 1);
+    return { w, all, only };
+  }).sort((a, b) => b.all.length - a.all.length);
+  const multi = open.filter((e) => e.waiting_on.length > 1).length;
+  const top = rows[0];
+  page({
+    file: 'waiting.html',
+    title: 'Still waiting',
+    description: 'Entries the claimed proof does not finish, grouped by what would have to be proved next.',
+    body: `
+<h1>What is still waiting, and on what</h1>
+<p class="lede">The announced proof covers the two most basic versions of the Riemann Hypothesis. ${open.length} of the
+${entries.length} entries need more. This page groups them by what would have to be proved next to finish them.</p>
+<p>The largest group is "${esc(top.w.name)}": ${top.all.length} entries wait on it, and ${top.only.length} of those need nothing else.
+The same caution applies here as everywhere on this site: these groupings were drafted by an AI system and have not been checked by an expert.</p>
+
+<div class="table-wrap" tabindex="0" role="region" aria-label="Summary of what entries are waiting on">
+<table class="waiting">
+  <thead><tr><th scope="col">What would need proving</th><th scope="col">Hypothesis code</th><th scope="col" class="num">Entries waiting on it</th><th scope="col" class="num">Of which need nothing else</th></tr></thead>
+  <tbody>
+  ${rows.map(({ w, all, only }) => `<tr><th scope="row"><a href="#${w.code}">${esc(w.name)}</a></th><td>${w.hypotheses.map(hypChip).join(' ')}</td><td class="num">${all.length}</td><td class="num">${only.length}</td></tr>`).join('\n  ')}
+  </tbody>
+</table>
+</div>
+<p class="muted">An entry is counted under every group it needs, so the middle column adds up to more than ${open.length}. ${multi} entries need more than one group.
+"Need nothing else" means the entry would be fully unlocked if that one group were proved, on top of what the announced proof covers.</p>
+
+${rows.map(({ w, all }) => `<section aria-labelledby="${w.code}">
+  <h2 id="${w.code}">${esc(w.name)} <span class="count-inline">${all.length}</span></h2>
+  <p>${esc(w.plain.trim())}</p>
+  <ul class="wait-list">
+    ${all.sort((a, b) => a.waiting_on.length - b.waiting_on.length || a.title.localeCompare(b.title)).map((e) => `<li><a href="theorems/${e.id}.html">${esc(e.title)}</a> ${statusBadge(e)}${e.waiting_on.length > 1 ? ` <span class="muted">also needs: ${e.waiting_on.filter((x) => x !== w.code).map((x) => esc(waitBy[x].name.charAt(0).toLowerCase() + waitBy[x].name.slice(1))).join('; ')}</span>` : ''}</li>`).join('\n    ')}
+  </ul>
+</section>`).join('\n')}
+
+<h2 id="reading">How to read this</h2>
+<ul>
+  <li>These groups are finer than the hypothesis codes. Two results can both need "the Riemann Hypothesis for Dedekind zeta functions" and still wait on different fields.</li>
+  <li>Partly unlocked entries appear here too, because part of them still waits.</li>
+  <li>The groups say what the existing proofs use. A different proof of the same result might need less.</li>
+  <li>Where a paper says only "GRH", the group was inferred from the method or from a cited result. Each entry's open questions say when that is the case.</li>
+</ul>`,
   });
 }
 
@@ -433,13 +486,14 @@ function buildData() {
   fs.mkdirSync(dataDir, { recursive: true });
   const bundle = {
     generated_from: 'data/theorems/*.yaml',
-    licence: 'CC BY 4.0',
+    license: 'CC BY 4.0',
     proof_status: proof,
     hypotheses: taxonomy,
+    waiting_families: waiting,
     theorems: entries,
   };
   fs.writeFileSync(path.join(dataDir, 'theorems.json'), JSON.stringify(bundle, null, 2) + '\n');
-  const cols = ['id', 'title', 'field', 'status', 'hypotheses_required', 'status_note', 'statement_plain', 'statement_formal', 'review_state', 'confidence', 'checked_by', 'checked_on', 'lean_proved', 'sources', 'tags', 'added'];
+  const cols = ['id', 'title', 'field', 'status', 'hypotheses_required', 'waiting_on', 'status_note', 'statement_plain', 'statement_formal', 'review_state', 'confidence', 'checked_by', 'checked_on', 'lean_proved', 'sources', 'tags', 'added'];
   const lines = [cols.join(',')];
   for (const e of entries) {
     const row = {
@@ -466,7 +520,7 @@ function buildData() {
 </ul>
 <h2>Source of truth</h2>
 <p>Each theorem lives in one YAML file in the <a href="${esc(cfg.repo_url)}">repository</a> under <code>data/theorems/</code>. To add or fix an entry, open an issue or a pull request there.</p>
-<h2>Licence</h2>
+<h2>License</h2>
 <p>The dataset is released under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Please keep the review state with any entry you reuse: an AI-classified label is a draft, and presenting it as settled would mislead your readers.</p>
 <h2>Fields</h2>
 <dl class="defs">
@@ -494,6 +548,7 @@ buildBrowse();
 for (const e of entries) {
   try { buildEntry(e); } catch (err) { console.error(`Failed to render ${e.id}: ${err.message}`); process.exit(1); }
 }
+buildWaiting();
 buildAbout();
 buildData();
 console.log(`Built ${entries.length} entry pages into dist/`);

@@ -1,0 +1,61 @@
+# Families of L-functions (or other assumptions) that entries are still
+# waiting on. Finer than the hypothesis codes: it says which L-functions a
+# proof would have to reach to settle an entry. Every entry with status
+# still-conditional or partial lists at least one of these in "waiting_on".
+- code: kummer-fields
+  name: Zeta and L-functions of Kummer fields
+  hypotheses: [ERH-Dedekind, GRH-Artin, GRH-Hecke]
+  plain: >
+    The Riemann Hypothesis for the Dedekind zeta functions, or the Artin and
+    Hecke L-functions, of fields made by adjoining roots of unity and n-th
+    roots of a number. This is what
+    Hooley's method for Artin's primitive root conjecture uses. These fields
+    are not abelian over the rationals.
+- code: galois-extensions
+  name: Zeta functions of general Galois extensions
+  hypotheses: [ERH-Dedekind]
+  plain: >
+    The Riemann Hypothesis for the Dedekind zeta functions of arbitrary
+    Galois extensions, as used in effective versions of the Chebotarev
+    density theorem.
+- code: single-field-zeta
+  name: The zeta function of the field in the statement
+  hypotheses: [ERH-Dedekind]
+  plain: >
+    The Riemann Hypothesis for the Dedekind zeta function of the one number
+    field the result is about. Already covered when that field is abelian
+    over the rationals, so these entries are partly unlocked.
+- code: class-group-characters
+  name: L-functions of class group characters
+  hypotheses: [GRH-Hecke]
+  plain: >
+    The Riemann Hypothesis for Hecke L-functions of characters of ideal class
+    groups and ray class groups of number fields, including quadratic fields
+    and their orders.
+- code: power-residue-characters
+  name: L-functions of power residue characters
+  hypotheses: [GRH-Hecke]
+  plain: >
+    The Riemann Hypothesis for Hecke L-functions of power residue characters
+    over cyclotomic and related fields, used to find non-residues in
+    extensions of finite fields.
+- code: modular-form-l-functions
+  name: L-functions of elliptic curves and weight 2 modular forms
+  hypotheses: [GRH-automorphic]
+  plain: >
+    The Riemann Hypothesis for the L-functions of elliptic curves over the
+    rationals, their quadratic twists, and weight 2 newforms.
+- code: higher-automorphic
+  name: Other automorphic L-functions
+  hypotheses: [GRH-automorphic]
+  plain: >
+    The Riemann Hypothesis for automorphic L-functions beyond weight 2
+    modular forms, such as symmetric power, Rankin-Selberg and triple
+    product L-functions.
+- code: extra-assumption
+  name: An assumption that is not a Riemann Hypothesis
+  hypotheses: [PLUS-EXTRA]
+  plain: >
+    Something no Riemann Hypothesis would give, for example Linear
+    Independence of zeros, a pair correlation bound, or the
+    Ramanujan-Petersson conjecture. Each entry names its own.

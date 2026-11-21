@@ -13,6 +13,7 @@ statement_formal: |
   =\frac{A(a,f,h)}{\varphi(f)}\left(1+\left(\frac{\gamma}{a}\right)\frac{\mu(2|b|)}{\prod_{p\mid b,\,p\mid h}(p-2)\prod_{p\mid b,\,p\nmid h}(p^2-p-1)}\right)
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The hypothesis enters only through Lenstra's theorem (Theorem 1 of the
   paper), which gives the existence of the density and the series formula

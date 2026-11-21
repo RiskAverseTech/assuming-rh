@@ -8,6 +8,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
 status: still-conditional
+waiting_on: [modular-form-l-functions]
 status_note: >
   These are the three candidates left open from Kaplansky's list (the paper's
   Conjecture 1). The proof follows the method of Ono and Soundararajan as

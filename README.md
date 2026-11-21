@@ -80,6 +80,7 @@ One trap worth knowing: a result about the class group of a quadratic field usua
 data/theorems/*.yaml         one file per theorem (the source of truth)
 data/meta/proof-status.yaml  status of the underlying proof (banner data)
 data/meta/hypotheses.yaml    the taxonomy and what the claim covers
+data/meta/waiting.yaml       what the not-yet-unlocked entries are waiting on
 schema/theorem.schema.json   JSON Schema for a theorem file
 scripts/validate.mjs         schema plus cross-field checks
 scripts/test-validate.mjs    checks that the validator rejects bad fixtures
@@ -119,7 +120,7 @@ The site is plain HTML that reads fine without JavaScript. A small script adds f
 
 The stack is deliberately small: three pinned dependencies (`js-yaml`, `ajv`, `katex`) and about 400 lines of build script. Fewer packages means less supply-chain risk and less to maintain.
 
-## Licence
+## License
 
 Code: MIT, see [LICENSE](LICENSE). Dataset: CC BY 4.0, see [LICENSE-DATA](LICENSE-DATA).
 

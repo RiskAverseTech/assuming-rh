@@ -1,0 +1,27 @@
+# Roadmap: what would make this more valuable
+
+A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 21 November 2026.
+
+## Done
+
+- **A "Still waiting" view.** Entries the announced proof does not finish, grouped by which L-functions a future proof would have to reach.
+- **Random audit.** 15 entries checked independently against their papers.
+- **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
+
+## Next
+
+1. **First human-checked entries.** Even a handful signed off by a named number theorist changes how the whole dataset is read. Nothing else on this list matters as much.
+2. **Lean proofs of the implications.** Proving "RH implies X" needs only Mathlib's statement of RH, not the proof archive, so the missing license is not a blocker. Start with Robin's inequality (a formalization already exists to link to), Miller's test and the least non-residue bound.
+3. **Dependencies between entries.** Record which results rest on which, such as Miller's test on the non-residue bound. This turns the list into a graph and shows which few results carry many others.
+4. **Make it citable.** Tagged releases, a changelog, a citation file and a DOI through Zenodo, so a paper can cite a fixed version.
+5. **Wider coverage through citations.** Sweep the papers that cite the key sources (Bach, Lagarias and Odlyzko, Hooley) in place of keyword searches, which missed the classics.
+
+## Ideas
+
+- **Coverage per claim.** A second proof of GRH has been announced by other authors. Store what each claim covers as data, so the site can show an entry's status under each claim and update at once if a claim is withdrawn or a wider one appears.
+- **What software can drop its caveat.** Computer algebra systems mark some results as "correct assuming GRH" (class groups, unit groups, some primality and factoring routines). List which of those caveats the announced proof would remove and which it would not. Most class group computations rest on class group characters, so they would stay conditional, which is worth saying clearly.
+- **The weakest hypothesis each proof uses.** Some results need far less than the full hypothesis, for example only the absence of a zero very close to 1. Recording that shows what partial progress would already give.
+- **The unconditional state of the art next to each entry.** For example the best known bound without any hypothesis beside the conditional one, so a reader sees how much the proof would improve.
+- **Formal statements for every entry**, and where possible the statement in Lean.
+- **A change feed.** A page and feed listing status changes, new entries and corrections, so people can follow without watching the repository.
+- **Check against the Lean development itself.** When the archive has a license, confirm that each "unlocked" entry needs nothing beyond the statements it actually proves.

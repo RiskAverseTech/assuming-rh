@@ -13,7 +13,7 @@ hypotheses_required: [RH]
 status: unlocked
 status_note: >
   Conrey, Ghosh and Gonek had proved the same bound assuming RH together
-  with the Generalised Lindelof Hypothesis. This paper removes the second
+  with the Generalized Lindelof Hypothesis. This paper removes the second
   assumption, so only RH for the Riemann zeta-function is needed.
 sources:
   - authors: H. M. Bui, D. R. Heath-Brown

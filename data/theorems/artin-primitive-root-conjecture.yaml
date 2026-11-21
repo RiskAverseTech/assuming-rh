@@ -8,6 +8,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   Hooley's proof needs the hypothesis for the Dedekind zeta functions of the
   Kummer fields obtained by adjoining k-th roots of unity and a k-th root of

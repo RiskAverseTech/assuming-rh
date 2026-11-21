@@ -13,6 +13,7 @@ statement_formal: |
   \bigl|\pi_{f,I}(x) - \mu_{ST}(I)\,\pi(x)\bigr| \le c_6\, x^{3/4}\,\frac{\log(kqx)}{\log x} \quad (x \ge 3)
 hypotheses_required: [RH, GRH-automorphic]
 status: still-conditional
+waiting_on: [higher-automorphic]
 status_note: >
   The theorem assumes GRH for the symmetric power L-functions L(s, Sym^m f)
   for all m at least 0. The case m = 0 is the Riemann zeta function; the

@@ -8,6 +8,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper says only "Generalized Riemann Hypothesis". It is used once,
   through a theorem of Lenstra on primes in an arithmetic progression that

@@ -9,6 +9,7 @@ statement_formal: |
   n \text{ odd},\ n > 2719 \;\Longrightarrow\; n = x^2 + y^2 + 10z^2 \text{ for some integers } x, y, z
 hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
 status: still-conditional
+waiting_on: [modular-form-l-functions]
 status_note: >
   The Dirichlet part, used for Littlewood's lower bound on class numbers, is
   covered. The proof also needs the hypothesis for the L-functions of

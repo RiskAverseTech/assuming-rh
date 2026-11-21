@@ -12,6 +12,7 @@ statement_formal: |
   N\mathfrak{p} \le \left(4\log\Delta_E + 2.5\,n + 5\right)^2
 hypotheses_required: [ERH-Dedekind]
 status: partial
+waiting_on: [galois-extensions]
 status_note: >
   The proof factors the Dedekind zeta function of E into Hecke L-functions
   of characters of the Galois group and assumes the hypothesis for them.

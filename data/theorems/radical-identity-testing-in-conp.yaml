@@ -10,6 +10,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [galois-extensions]
 status_note: >
   The hypothesis is used for correctness of the coNP procedure: an effective
   Chebotarev density theorem (Lagarias and Odlyzko, Serre) must supply enough

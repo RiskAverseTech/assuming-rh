@@ -10,6 +10,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The theorem is stated under an assumption (*): in certain arithmetic
   progressions a mod f there is a prime having a prescribed odd prime g as a

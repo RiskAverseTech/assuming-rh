@@ -8,6 +8,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [GRH-Artin, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [kummer-fields, extra-assumption]
 status_note: >
   The extra assumption is the paper's Hypothesis 1.2, a Brun-Titchmarsh type
   estimate on average for primes p congruent to 1 modulo m for which

@@ -10,6 +10,7 @@ statement_formal: |
   \frac{\zeta(n_K)}{2e^{\gamma}}\,\frac{\exp\bigl(-\frac{3}{\ln\ln|\Delta_K|}\bigr)}{\ln\ln|\Delta_K|} \le \kappa_K \le (2e^{\gamma})^{n_K-1} \exp\Bigl(\frac{11-3n_K}{4\ln\ln|\Delta_K|}\Bigr) (\ln\ln|\Delta_K|)^{n_K-1}
 hypotheses_required: [RH, ERH-Dedekind]
 status: partial
+waiting_on: [single-field-zeta]
 status_note: >
   The theorem assumes GRH for the Dedekind zeta functions of K and of Q.
   When K is abelian over the rationals its zeta function is a product of the

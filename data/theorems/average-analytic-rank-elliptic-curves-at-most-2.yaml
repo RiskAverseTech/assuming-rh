@@ -11,6 +11,7 @@ statement_formal: |
   \frac{1}{S(T)}\sum_{E\in\mathcal{C}} w_T(E)\, r(E) \ \le\ 2 + o(1) \qquad (T\to\infty)
 hypotheses_required: [GRH-automorphic]
 status: still-conditional
+waiting_on: [modular-form-l-functions]
 status_note: >
   The theorem assumes the Riemann Hypothesis for the L-functions of all the
   elliptic curves E_{r,s}. These are L-functions of weight two modular

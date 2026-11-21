@@ -9,6 +9,7 @@ statement_formal: |
   M(x) \ll x^{1/2} (\log x)^{3/2} \qquad \text{and} \qquad \int_2^X \left(\frac{M(x)}{x}\right)^2 dx \ll \log X
 hypotheses_required: [RH, PLUS-EXTRA]
 status: still-conditional
+waiting_on: [extra-assumption]
 status_note: >
   Besides RH the theorem assumes the bound J_{-1}(T) = O(T), where
   J_{-1}(T) is the sum of 1/|zeta'(rho)|^2 over zeros with 0 < gamma <= T

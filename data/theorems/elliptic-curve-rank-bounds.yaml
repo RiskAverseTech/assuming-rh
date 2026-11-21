@@ -10,6 +10,7 @@ statement_formal: |
   \operatorname{ord}_{s=1} L(E, s) = O\!\left(\frac{\log N_E}{\log\log N_E}\right)
 hypotheses_required: [GRH-automorphic]
 status: still-conditional
+waiting_on: [modular-form-l-functions]
 status_note: >
   These results need the hypothesis for the L-functions of elliptic curves
   themselves, which the claimed proof does not cover. Mestre states his

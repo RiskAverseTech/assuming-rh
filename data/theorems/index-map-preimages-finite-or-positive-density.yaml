@@ -13,6 +13,7 @@ statement_plain: >
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
 status: still-conditional
+waiting_on: [kummer-fields]
 status_note: >
   The paper writes only "GRH" and says it is needed because the proof of
   Theorem 4.1 uses an effective Chebotarev density theorem (citing Lagarias
