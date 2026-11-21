@@ -1,0 +1,44 @@
+name: Propose a new theorem
+description: A result proved under RH or a generalization that is not in the dataset yet.
+title: "New entry: "
+labels: [new-entry]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Theorem
+      description: A short name for the result.
+    validations:
+      required: true
+  - type: textarea
+    id: statement
+    attributes:
+      label: Statement
+      description: In plain language. LaTeX is welcome as well.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Authors, title, year, venue, DOI. If you know where the hypothesis is used (theorem or section), say so.
+    validations:
+      required: true
+  - type: checkboxes
+    id: hypotheses
+    attributes:
+      label: Which hypotheses does the proof need?
+      description: Tick all that apply. Leave blank if you are not sure.
+      options:
+        - label: RH (Riemann zeta function only)
+        - label: GRH-Dirichlet (Dirichlet L-functions)
+        - label: ERH-Dedekind (Dedekind zeta functions of number fields)
+        - label: GRH-Hecke (Hecke L-functions, including class group characters)
+        - label: GRH-Artin (Artin L-functions)
+        - label: GRH-automorphic (modular forms, elliptic curves, automorphic forms)
+        - label: PLUS-EXTRA (another unproven assumption as well)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything a reviewer should know, such as a later unconditional proof or a special case.

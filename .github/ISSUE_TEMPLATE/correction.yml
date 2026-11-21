@@ -1,0 +1,43 @@
+name: Suggest a correction
+description: Something in an entry is wrong, imprecise or missing.
+title: "Correction: "
+labels: [correction]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry id
+      description: The slug of the entry, as in the page address.
+      placeholder: miller-deterministic-primality
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - The status (unlocked, partial, still conditional, proved otherwise)
+        - The hypotheses listed
+        - The statement
+        - A source or citation
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should it say?
+      description: Please point to the theorem or section of the paper that settles it, if you can.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Paper, DOI or link that supports the correction.
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: How sure are you?
+      options:
+        - label: I have read the relevant part of the primary source.

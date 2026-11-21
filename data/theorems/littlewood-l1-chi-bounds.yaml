@@ -1,0 +1,34 @@
+id: littlewood-l1-chi-bounds
+title: Littlewood's bounds for L(1, chi) and class numbers
+field: analytic-number-theory
+statement_plain: >
+  For a real primitive character chi modulo q, L(1, chi) is at most about
+  2 e^gamma log log q and at least about pi^2 / (12 e^gamma log log q). By
+  the class number formula, the class number of the imaginary quadratic
+  field of discriminant -d is therefore sqrt(d) up to a factor of order
+  log log d in both directions.
+statement_formal: |
+  \bigl(1 + o(1)\bigr)\frac{\pi^2}{12\,e^{\gamma}\log\log q} \;\le\; L(1,\chi) \;\le\; \bigl(1 + o(1)\bigr)\,2e^{\gamma}\log\log q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: J. E. Littlewood
+    title: On the class-number of the corpus P(sqrt(-k))
+    year: 1928
+    venue: Proc. London Math. Soc. 27, 358-372
+    role: conditional-proof
+related: [no-siegel-zeros]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The constants are quoted from memory of the standard statement of Littlewood's theorem.
+lean:
+  proved: false
+  path: null
+tags: [l-functions, class-numbers, quadratic-fields]
+added: 2026-11-21

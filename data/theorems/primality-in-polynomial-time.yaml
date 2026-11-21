@@ -1,0 +1,39 @@
+id: primality-in-polynomial-time
+title: Primality testing in deterministic polynomial time
+field: computational-number-theory
+statement_plain: >
+  There is a deterministic algorithm that decides whether an integer n is
+  prime in time polynomial in log n.
+statement_formal: |
+  \mathrm{PRIMES} \in \mathsf{P}
+hypotheses_required: [GRH-Dirichlet]
+status: proved-otherwise
+status_note: >
+  Miller's 1976 test gave this under GRH for Dirichlet L-functions.
+  Agrawal, Kayal and Saxena proved it unconditionally with a different
+  algorithm. Miller's test is still much faster in practice, which is why
+  its own entry matters.
+sources:
+  - authors: G. L. Miller
+    title: Riemann's hypothesis and tests for primality
+    year: 1976
+    venue: J. Comput. System Sci. 13, 300-317
+    role: conditional-proof
+  - authors: M. Agrawal, N. Kayal, N. Saxena
+    title: PRIMES is in P
+    year: 2004
+    venue: Ann. of Math. 160, 781-793
+    doi: 10.4007/annals.2004.160.781
+    role: unconditional-proof
+related: [miller-deterministic-primality]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primality, algorithms, complexity]
+added: 2026-11-21

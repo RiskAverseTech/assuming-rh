@@ -1,0 +1,29 @@
+id: robin-inequality
+title: Robin's inequality for the sum of divisors
+field: analytic-number-theory
+statement_plain: >
+  For every integer n above 5040, the sum of the divisors of n is less than
+  e^gamma times n log log n, where gamma is the Euler-Mascheroni constant.
+statement_formal: |
+  \sigma(n) < e^{\gamma}\, n \log\log n \qquad (n > 5040)
+hypotheses_required: [RH]
+status: unlocked
+status_note: This inequality is equivalent to RH.
+sources:
+  - authors: G. Robin
+    title: Grandes valeurs de la fonction somme des diviseurs et hypothèse de Riemann
+    year: 1984
+    venue: J. Math. Pures Appl. 63, 187-213
+    role: conditional-proof
+related: [lagarias-harmonic-inequality]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [sum-of-divisors, equivalent-to-rh]
+added: 2026-11-21

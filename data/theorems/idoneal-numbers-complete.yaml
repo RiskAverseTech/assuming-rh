@@ -1,0 +1,36 @@
+id: idoneal-numbers-complete
+title: Euler's list of 65 idoneal numbers is complete
+field: algebraic-number-theory
+statement_plain: >
+  There are exactly 65 idoneal numbers (Euler's "convenient numbers"), the
+  largest being 1848.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Unconditionally, Weinberger showed there is at most one further fundamental
+  discriminant with class group of exponent at most 2, which leaves at most
+  two more idoneal numbers. The common claim "at most one more" is a
+  misstatement. The conditional proof needs only the L-functions of real
+  Dirichlet characters, and only the absence of a zero very close to 1.
+sources:
+  - authors: P. J. Weinberger
+    title: Exponents of the class groups of complex quadratic fields
+    year: 1973
+    venue: Acta Arith. 22, 117-124
+    url: https://eudml.org/doc/205148
+    role: conditional-proof
+related: [no-siegel-zeros]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Weinberger's exact conditional hypothesis (which zero-free region, for which characters) has not been read in the paper. Secondary sources say it concerns real Dirichlet characters only.
+lean:
+  proved: false
+  path: null
+tags: [idoneal-numbers, class-groups, quadratic-fields]
+added: 2026-11-21

@@ -1,0 +1,48 @@
+id: least-quadratic-nonresidue
+title: Least quadratic non-residue is below 2 (ln p)^2
+field: analytic-number-theory
+statement_plain: >
+  For every odd prime p, the smallest positive integer that is not a square
+  modulo p is less than 2 (ln p)^2. More generally, every proper subgroup of
+  the multiplicative group modulo m omits some positive integer below
+  2 (ln m)^2.
+statement_formal: |
+  n_p < 2(\ln p)^2, \qquad n_p = \min\{\, n \ge 1 : n \text{ is not a square modulo } p \,\}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Ankeny proved O((log p)^2). Bach gave the constant 2. Lamzouri, Li and
+  Soundararajan later improved it to (log q)^2 for q at least 5.
+sources:
+  - authors: N. C. Ankeny
+    title: The least quadratic non residue
+    year: 1952
+    venue: Ann. of Math. 55, 65-72
+    role: conditional-proof
+  - authors: E. Bach
+    title: Explicit bounds for primality testing and related problems
+    year: 1990
+    venue: Math. Comp. 55, 355-380
+    doi: 10.1090/S0025-5718-1990-1023756-8
+    role: refinement
+  - authors: Y. Lamzouri, X. Li, K. Soundararajan
+    title: Conditional bounds for the least quadratic non-residue and related problems
+    year: 2015
+    venue: Math. Comp. 84, 2391-2412
+    doi: 10.1090/S0025-5718-2015-02925-1
+    hypothesis_location: Corollary 1.1
+    role: refinement
+related: [miller-deterministic-primality, deterministic-square-roots-mod-p]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The range in Lamzouri, Li and Soundararajan (prime q at least 5, or all q at least 5) was reported inconsistently by citing papers and must be checked in Corollary 1.1.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-residues, explicit-bounds]
+added: 2026-11-21

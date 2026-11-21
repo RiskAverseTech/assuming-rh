@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      # Pin both actions to a full commit SHA before the first push.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install pinned dependencies
+        run: npm ci --ignore-scripts
+      - name: Validate data
+        run: npm run validate
+      - name: Test the validator against fixtures
+        run: npm test
+      - name: Build site
+        run: npm run build
+      - name: Check copy
+        run: npm run check-copy

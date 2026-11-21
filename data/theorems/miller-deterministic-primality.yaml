@@ -1,0 +1,42 @@
+id: miller-deterministic-primality
+title: Deterministic Miller primality test
+field: computational-number-theory
+statement_plain: >
+  An odd integer n > 1 is prime if and only if it passes the Miller
+  strong-pseudoprime test for every base a up to 2 (ln n)^2. This gives a
+  deterministic primality test that runs in polynomial time.
+statement_formal: |
+  n \text{ odd and composite} \;\Longrightarrow\; \text{some } a \le 2(\ln n)^2 \text{ is a Miller witness for } n
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Miller proved a bound of the form c (ln n)^2. Bach made the constant 2
+  explicit. Primality testing in polynomial time is known unconditionally by
+  a different algorithm (see the AKS entry), so what is unlocked here is the
+  correctness of this specific, much faster test.
+sources:
+  - authors: G. L. Miller
+    title: Riemann's hypothesis and tests for primality
+    year: 1976
+    venue: J. Comput. System Sci. 13, 300-317
+    role: conditional-proof
+  - authors: E. Bach
+    title: Explicit bounds for primality testing and related problems
+    year: 1990
+    venue: Math. Comp. 55, 355-380
+    doi: 10.1090/S0025-5718-1990-1023756-8
+    role: refinement
+related: [least-quadratic-nonresidue, primality-in-polynomial-time]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Bach's abstract was seen in search summaries. The theorem itself has not been re-read in the paper.
+lean:
+  proved: false
+  path: null
+tags: [primality, algorithms, derandomization]
+added: 2026-11-21

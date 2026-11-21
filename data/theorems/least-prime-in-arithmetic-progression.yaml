@@ -1,0 +1,41 @@
+id: least-prime-in-arithmetic-progression
+title: Least prime in an arithmetic progression
+field: analytic-number-theory
+statement_plain: >
+  For every modulus q greater than 3 and every a coprime to q, the smallest
+  prime congruent to a modulo q is at most (phi(q) log q)^2.
+statement_formal: |
+  p(q, a) \le \left(\varphi(q)\log q\right)^2 \qquad (q > 3,\ \gcd(a,q) = 1)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  A 2017 corrigendum to this paper changes two asymptotic theorems. It is
+  reported not to affect this explicit corollary.
+sources:
+  - authors: Y. Lamzouri, X. Li, K. Soundararajan
+    title: Conditional bounds for the least quadratic non-residue and related problems
+    year: 2015
+    venue: Math. Comp. 84, 2391-2412
+    doi: 10.1090/S0025-5718-2015-02925-1
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+  - authors: Y. Lamzouri, X. Li, K. Soundararajan
+    title: Corrigendum to "Conditional bounds for the least quadratic non-residue and related problems"
+    year: 2017
+    venue: Math. Comp. 86, 2551-2554
+    doi: 10.1090/mcom/3261
+    role: refinement
+related: [primes-in-arithmetic-progressions-error]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Corollary 1.2 is quoted as reported by two citing papers. It has not been read in the paper itself.
+lean:
+  proved: false
+  path: null
+tags: [primes, arithmetic-progressions, explicit-bounds]
+added: 2026-11-21

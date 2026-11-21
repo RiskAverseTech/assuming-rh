@@ -1,0 +1,24 @@
+{
+  "name": "grh-unlocked",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open dataset and site tracking which theorems conditional on the Riemann Hypothesis are now unconditional.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Jaz",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node scripts/test-validate.mjs",
+    "build": "node scripts/validate.mjs && node site/build.mjs",
+    "preview": "node site/preview.mjs",
+    "check-copy": "node scripts/check-copy.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "js-yaml": "5.5.0",
+    "katex": "0.19.1"
+  }
+}

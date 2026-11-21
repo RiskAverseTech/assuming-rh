@@ -1,0 +1,39 @@
+id: elliptic-curve-rank-bounds
+title: Analytic rank bounds for elliptic curves
+field: arithmetic-geometry
+statement_plain: >
+  The analytic rank of an elliptic curve over the rationals of conductor N
+  is O(log N / log log N) (Mestre), and the average analytic rank of
+  elliptic curves over the rationals ordered by height is at most 2.3
+  (Brumer).
+statement_formal: |
+  \operatorname{ord}_{s=1} L(E, s) = O\!\left(\frac{\log N_E}{\log\log N_E}\right)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+status_note: >
+  These results need the hypothesis for the L-functions of elliptic curves
+  themselves, which the claimed proof does not cover.
+sources:
+  - authors: J.-F. Mestre
+    title: Formules explicites et minorations de conducteurs de variétés algébriques
+    year: 1986
+    venue: Compositio Math. 58, 209-232
+    role: conditional-proof
+  - authors: A. Brumer
+    title: The average rank of elliptic curves I
+    year: 1992
+    venue: Invent. Math. 109, 445-472
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      This is a family of results. The two representatives and their constants are quoted from memory and have not been checked against the papers.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, ranks]
+added: 2026-11-21

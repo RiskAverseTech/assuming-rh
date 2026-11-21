@@ -1,0 +1,54 @@
+id: deterministic-polynomial-factoring
+title: Deterministic polynomial factoring over finite fields in special cases
+field: computational-number-theory
+statement_plain: >
+  Three results. Huang: an integer polynomial with abelian Galois group can
+  be factored modulo a prime p in deterministic polynomial time. Rónyai: for
+  Galois group G the time is polynomial in the size of G and of the input.
+  Evdokimov: any polynomial of degree n over a finite field with q elements
+  can be factored in deterministic time (n^(log n) log q)^O(1).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+status_note: >
+  Classified cautiously. Taking square roots modulo a prime needs Dirichlet
+  L-functions only and is unlocked (see the entry on square roots). The
+  general algorithms also need power non-residues in extension fields, for
+  which Dirichlet L-functions are not known to suffice. Unconditional
+  deterministic polynomial-time factoring over finite fields remains open
+  either way.
+sources:
+  - authors: M.-D. Huang
+    title: Generalized Riemann hypothesis and factoring polynomials over finite fields
+    year: 1991
+    venue: J. Algorithms 12, 464-481
+    doi: 10.1016/0196-6774(91)90014-P
+    role: conditional-proof
+  - authors: L. Rónyai
+    title: Galois groups and factoring polynomials over finite fields
+    year: 1992
+    venue: SIAM J. Discrete Math. 5, 345-365
+    doi: 10.1137/0405026
+    role: conditional-proof
+  - authors: S. A. Evdokimov
+    title: Factorization of polynomials over finite fields in subexponential time under GRH
+    year: 1994
+    venue: "Algorithmic Number Theory (ANTS-I), Lecture Notes in Comput. Sci. 877"
+    doi: 10.1007/3-540-58691-1_58
+    role: conditional-proof
+related: [deterministic-square-roots-mod-p]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: low
+  open_questions:
+    - >-
+      The exact GRH variant is not confirmed from any of the three papers. The hypothesis is used to find r-th power non-residues, including in extension fields, and the usual justification there goes through Hecke characters of number fields.
+    - >-
+      Huang's case of abelian Galois group may need less. If it needs Dirichlet L-functions only, this entry should be split and that part marked unlocked.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, derandomization, finite-fields, polynomial-factoring]
+added: 2026-11-21

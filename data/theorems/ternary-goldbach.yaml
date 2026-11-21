@@ -1,0 +1,40 @@
+id: ternary-goldbach
+title: Ternary Goldbach conjecture
+field: additive-number-theory
+statement_plain: >
+  Every odd integer greater than 5 is the sum of three primes.
+statement_formal: |
+  n \text{ odd},\ n > 5 \;\Longrightarrow\; n = p_1 + p_2 + p_3 \text{ with } p_1, p_2, p_3 \text{ prime}
+hypotheses_required: [GRH-Dirichlet]
+status: proved-otherwise
+status_note: >
+  Deshouillers, Effinger, te Riele and Zinoviev proved the full statement in
+  1997 under GRH for Dirichlet L-functions. Helfgott proved it without any
+  hypothesis in 2013.
+sources:
+  - authors: J.-M. Deshouillers, G. Effinger, H. te Riele, D. Zinoviev
+    title: A complete Vinogradov 3-primes theorem under the Riemann hypothesis
+    year: 1997
+    venue: Electron. Res. Announc. Amer. Math. Soc. 3, 99-104
+    doi: 10.1090/S1079-6762-97-00031-0
+    role: conditional-proof
+  - authors: H. A. Helfgott
+    title: The ternary Goldbach conjecture is true
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1312.7748
+    role: unconditional-proof
+related: [chen-theorem-explicit]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Helfgott's proof was accepted for Annals of Mathematics Studies in 2015. Whether the book is in print has not been confirmed.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, additive-problems]
+added: 2026-11-21

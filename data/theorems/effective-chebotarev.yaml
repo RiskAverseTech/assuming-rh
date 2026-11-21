@@ -1,0 +1,38 @@
+id: effective-chebotarev
+title: Effective Chebotarev density theorem
+field: algebraic-number-theory
+statement_plain: >
+  For a Galois extension L of the rationals of degree n and discriminant D,
+  the number of primes up to x with a given Frobenius conjugacy class C
+  equals (|C| / n) li(x) with an explicit error of order
+  sqrt(x) log(|D| x^n).
+statement_formal: |
+  \left|\pi_C(x) - \frac{|C|}{|G|}\operatorname{li}(x)\right| \ll \frac{|C|}{|G|}\,\sqrt{x}\,\log\!\left(|\Delta_L|\,x^{n}\right)
+hypotheses_required: [ERH-Dedekind]
+status: partial
+status_note: >
+  Unlocked only when L is abelian over the rationals, where the Dedekind
+  zeta function of L is a product of Dirichlet L-functions. In that case the
+  theorem is a statement about primes in arithmetic progressions and adds
+  little. For non-abelian L, which is where the theorem is mostly used, it
+  stays conditional.
+sources:
+  - authors: J. C. Lagarias, A. M. Odlyzko
+    title: Effective versions of the Chebotarev density theorem
+    year: 1977
+    venue: "Algebraic Number Fields (Durham 1975), Academic Press, 409-464"
+    role: conditional-proof
+related: [primes-in-arithmetic-progressions-error, nullstellensatz-in-am]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Marked partial on the strength of the abelian special case. A reviewer may prefer still-conditional, since that special case says nothing beyond primes in arithmetic progressions.
+lean:
+  proved: false
+  path: null
+tags: [chebotarev, prime-ideals, explicit-bounds]
+added: 2026-11-21

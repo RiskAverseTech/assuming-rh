@@ -1,0 +1,39 @@
+id: deterministic-square-roots-mod-p
+title: Deterministic polynomial-time square roots modulo a prime
+field: computational-number-theory
+statement_plain: >
+  There is a deterministic algorithm that, given a prime p and a square a
+  modulo p, finds a square root of a modulo p in time polynomial in log p.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The Tonelli-Shanks algorithm is deterministic once it is given a quadratic
+  non-residue modulo p. Under GRH for Dirichlet L-functions a non-residue
+  below 2 (ln p)^2 exists, so trying 2, 3, 4, ... in turn finds one quickly.
+sources:
+  - authors: D. Shanks
+    title: Five number-theoretic algorithms
+    year: 1973
+    venue: Proc. Second Manitoba Conf. on Numerical Mathematics, 51-70
+    role: conditional-proof
+  - authors: E. Bach
+    title: Explicit bounds for primality testing and related problems
+    year: 1990
+    venue: Math. Comp. 55, 355-380
+    doi: 10.1090/S0025-5718-1990-1023756-8
+    role: conditional-proof
+related: [least-quadratic-nonresidue]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      This is a folklore corollary. No single paper stating it in this form has been identified yet.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, derandomization, quadratic-residues]
+added: 2026-11-21

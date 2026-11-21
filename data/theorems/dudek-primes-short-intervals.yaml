@@ -1,0 +1,44 @@
+id: dudek-primes-short-intervals
+title: Explicit primes in short intervals
+field: analytic-number-theory
+statement_plain: >
+  For every x at least 2 there is a prime in the interval from
+  x - (4/pi) sqrt(x) log x up to x.
+statement_formal: |
+  \text{For all } x \ge 2 \text{ there is a prime } p \text{ with } x - \tfrac{4}{\pi}\sqrt{x}\,\log x < p \le x .
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Carneiro, Milinovich and Soundararajan later improved the constant: under
+  RH there is a prime in [x, x + (22/25) sqrt(x) log x] for every x at
+  least 4.
+sources:
+  - authors: A. W. Dudek
+    title: On the Riemann hypothesis and the difference between primes
+    year: 2015
+    venue: Int. J. Number Theory 11, 771-778
+    url: https://arxiv.org/abs/1402.6417
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+  - authors: E. Carneiro, M. B. Milinovich, K. Soundararajan
+    title: Fourier optimization and prime gaps
+    year: 2019
+    venue: Comment. Math. Helv. 94, 533-568
+    doi: 10.4171/CMH/467
+    role: refinement
+related: [cramer-prime-gap-bound]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Checked against search summaries of the arXiv abstract only. Theorem 2 of the paper has not been read directly, and the DOI is not confirmed.
+    - >-
+      The constant 22/25 of Carneiro, Milinovich and Soundararajan is taken from papers that cite it, not from the paper itself.
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-gaps, explicit-bounds]
+added: 2026-11-21

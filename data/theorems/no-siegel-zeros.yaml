@@ -1,0 +1,45 @@
+id: no-siegel-zeros
+title: Nonexistence of Siegel zeros
+field: analytic-number-theory
+statement_plain: >
+  No Dirichlet L-function of a real character modulo q has a real zero
+  between 1 - c / log q and 1, for an absolute constant c. As a consequence,
+  bounds that were previously ineffective, such as Siegel's lower bound for
+  class numbers, get computable constants.
+statement_formal: |
+  L(\beta, \chi) \ne 0 \quad \text{for real } \chi \bmod q \text{ and } 1 - \frac{c}{\log q} < \beta < 1
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Under GRH for Dirichlet L-functions there are no real zeros to the right
+  of 1/2 at all, so this is immediate. Separately, a manuscript in OpenAI's
+  October 2026 release claims this result without any hypothesis ("Uniform
+  exclusion of Landau-Siegel zeros"), and human rewrites have appeared as
+  preprints (for example arXiv:2610.15483). None of that work is refereed
+  yet, so it is noted here and not relied on.
+sources:
+  - authors: C. L. Siegel
+    title: Über die Classenzahl quadratischer Zahlkörper
+    year: 1935
+    venue: Acta Arith. 1, 83-86
+    role: survey
+  - authors: H. Davenport (revised by H. L. Montgomery)
+    title: Multiplicative Number Theory, 3rd edition
+    year: 2000
+    venue: Springer, Graduate Texts in Mathematics 74
+    hypothesis_location: Chapters 14 and 21
+    role: survey
+related: [littlewood-l1-chi-bounds, idoneal-numbers-complete]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The October 2026 OpenAI claim and the follow-up preprints are recorded from search summaries, not read directly. If that work is accepted, this entry should move to proved-otherwise.
+lean:
+  proved: false
+  path: null
+tags: [siegel-zeros, real-characters, effective-constants]
+added: 2026-11-21

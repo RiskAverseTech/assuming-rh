@@ -1,0 +1,37 @@
+id: chen-theorem-explicit
+title: Explicit Chen's theorem
+field: additive-number-theory
+statement_plain: >
+  Every even integer larger than exp(exp(15.85)) is the sum of a prime and a
+  number with at most two prime factors.
+statement_formal: |
+  N \text{ even},\ N > e^{e^{15.85}} \;\Longrightarrow\; N = p + m,\quad p \text{ prime},\ \Omega(m) \le 2
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Chen's theorem itself is unconditional for sufficiently large even
+  numbers. The hypothesis is used only to lower the explicit threshold. An
+  unconditional explicit version with a much larger threshold is in
+  arXiv:2207.09452.
+sources:
+  - authors: M. Bordignon, V. Starichkova
+    title: An explicit version of Chen's theorem assuming the Generalized Riemann Hypothesis
+    year: 2024
+    venue: Ramanujan J. 64, 1213-1242
+    doi: 10.1007/s11139-024-00866-x
+    url: https://arxiv.org/abs/2211.08844
+    role: conditional-proof
+related: [ternary-goldbach]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement is from the abstract. That the paper's GRH means Dirichlet L-functions is inferred from the method and a secondary source, not from the paper's own definition.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, chen-theorem, explicit-bounds]
+added: 2026-11-21

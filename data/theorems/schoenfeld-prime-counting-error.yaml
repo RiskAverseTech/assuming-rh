@@ -1,0 +1,30 @@
+id: schoenfeld-prime-counting-error
+title: Schoenfeld's explicit error bound for the prime counting function
+field: analytic-number-theory
+statement_plain: >
+  For every x at least 2657, the number of primes up to x differs from the
+  logarithmic integral li(x) by less than sqrt(x) ln(x) / (8 pi).
+statement_formal: |
+  \left|\pi(x) - \operatorname{li}(x)\right| < \frac{\sqrt{x}\,\ln x}{8\pi} \qquad (x \ge 2657)
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: L. Schoenfeld
+    title: Sharper bounds for the Chebyshev functions theta(x) and psi(x). II
+    year: 1976
+    venue: Math. Comp. 30, 337-360
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The constant and the range x >= 2657 are quoted from memory of Schoenfeld's Corollary 1 and have not been re-read in the paper.
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-counting, explicit-bounds]
+added: 2026-11-21

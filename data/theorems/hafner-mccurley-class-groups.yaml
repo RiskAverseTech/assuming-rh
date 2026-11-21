@@ -1,0 +1,39 @@
+id: hafner-mccurley-class-groups
+title: Subexponential class group computation for imaginary quadratic fields
+field: computational-number-theory
+statement_plain: >
+  There is a probabilistic algorithm that computes the structure of the
+  class group of the imaginary quadratic field of discriminant -d in
+  expected time L(d)^(sqrt(2) + o(1)), where
+  L(d) = exp(sqrt(log d log log d)).
+statement_formal: null
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+status_note: >
+  This differs from the first expectation that the result would be unlocked
+  because the field is quadratic. The analysis uses the hypothesis twice:
+  for a small set of prime forms that generates the class group, and for the
+  equidistribution of prime forms among the classes. Both are statements
+  about characters of the class group, which are Hecke characters and not
+  Dirichlet characters. See the entry on Bach's bound.
+sources:
+  - authors: J. L. Hafner, K. S. McCurley
+    title: A rigorous subexponential algorithm for computation of class groups
+    year: 1989
+    venue: J. Amer. Math. Soc. 2, 837-850
+    doi: 10.1090/S0894-0347-1989-1002631-0
+    role: conditional-proof
+related: [bach-class-group-generators]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: low
+  open_questions:
+    - >-
+      Where exactly ERH enters has not been read in the paper. The two uses named in the note are from recollection of the paper and of Seysen's lemma.
+lean:
+  proved: false
+  path: null
+tags: [class-groups, algorithms, quadratic-fields]
+added: 2026-11-21

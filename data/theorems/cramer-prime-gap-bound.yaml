@@ -1,0 +1,31 @@
+id: cramer-prime-gap-bound
+title: Cramér's bound on gaps between consecutive primes
+field: analytic-number-theory
+statement_plain: >
+  The gap between a prime p and the next prime is at most a constant times
+  sqrt(p) log p.
+statement_formal: |
+  p_{n+1} - p_n = O\!\left(\sqrt{p_n}\,\log p_n\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Explicit versions of this bound are recorded in the entry on primes in
+  short intervals.
+sources:
+  - authors: H. Cramér
+    title: Some theorems concerning prime numbers
+    year: 1920
+    venue: Ark. Mat. Astr. Fys. 15, no. 5
+    role: conditional-proof
+related: [dudek-primes-short-intervals]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-gaps]
+added: 2026-11-21

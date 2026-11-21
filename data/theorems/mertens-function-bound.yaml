@@ -1,0 +1,39 @@
+id: mertens-function-bound
+title: Square-root growth of the Mertens function
+field: analytic-number-theory
+statement_plain: >
+  The Mertens function M(x), the sum of the Möbius function over the
+  integers up to x, grows no faster than x to the power 1/2 + epsilon, for
+  every positive epsilon.
+statement_formal: |
+  M(x) = \sum_{n \le x} \mu(n) = O_\varepsilon\!\left(x^{1/2+\varepsilon}\right) \quad \text{for every } \varepsilon > 0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This bound is equivalent to RH. It is not the stronger Mertens conjecture
+  that |M(x)| is below sqrt(x), which Odlyzko and te Riele disproved in 1985.
+sources:
+  - authors: J. E. Littlewood
+    title: Quelques conséquences de l'hypothèse que la fonction zeta de Riemann n'a pas de zéros dans le demi-plan R(s) > 1/2
+    year: 1912
+    venue: C. R. Acad. Sci. Paris 154, 263-266
+    role: conditional-proof
+  - authors: E. C. Titchmarsh (revised by D. R. Heath-Brown)
+    title: The Theory of the Riemann Zeta-function, 2nd edition
+    year: 1986
+    venue: Oxford University Press
+    hypothesis_location: Theorem 14.25 (C)
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The Titchmarsh theorem number is quoted from memory.
+lean:
+  proved: false
+  path: null
+tags: [mertens-function, moebius, equivalent-to-rh]
+added: 2026-11-21

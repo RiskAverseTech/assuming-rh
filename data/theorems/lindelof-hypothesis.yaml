@@ -1,0 +1,33 @@
+id: lindelof-hypothesis
+title: Lindelöf hypothesis for the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  On the critical line the Riemann zeta function grows more slowly than any
+  positive power of the height: zeta(1/2 + it) is O(t^epsilon) for every
+  positive epsilon.
+statement_formal: |
+  \zeta\!\left(\tfrac12 + it\right) = O_\varepsilon\!\left(|t|^{\varepsilon}\right) \quad \text{for every } \varepsilon > 0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  RH implies the Lindelöf hypothesis. The converse is not known. This entry
+  covers the zeta function only, not Lindelöf-type bounds for other
+  L-functions.
+sources:
+  - authors: E. C. Titchmarsh (revised by D. R. Heath-Brown)
+    title: The Theory of the Riemann Zeta-function, 2nd edition
+    year: 1986
+    venue: Oxford University Press
+    hypothesis_location: Chapter XIV
+    role: survey
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, growth-bounds]
+added: 2026-11-21

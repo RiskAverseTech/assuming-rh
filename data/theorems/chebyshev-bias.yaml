@@ -1,0 +1,39 @@
+id: chebyshev-bias
+title: Chebyshev's bias in prime number races
+field: analytic-number-theory
+statement_plain: >
+  The set of x for which there are more primes up to x of the form 4k + 3
+  than of the form 4k + 1 has logarithmic density about 0.9959. More
+  generally, the logarithmic densities in prime number races exist, lie
+  strictly between 0 and 1, and favour non-residue classes.
+statement_formal: |
+  \delta\bigl(\{\, x : \pi(x;4,3) > \pi(x;4,1) \,\}\bigr) = 0.9959\ldots
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+status_note: >
+  The extra assumption is the Grand Simplicity Hypothesis, also called
+  Linear Independence: the positive imaginary parts of the zeros of the
+  relevant Dirichlet L-functions are linearly independent over the
+  rationals. It is not covered. One part of the paper needs only GRH for
+  Dirichlet L-functions and so is covered: the normalized error terms have a
+  limiting logarithmic distribution.
+sources:
+  - authors: M. Rubinstein, P. Sarnak
+    title: Chebyshev's bias
+    year: 1994
+    venue: Experiment. Math. 3, 173-197
+    doi: 10.1080/10586458.1994.10504289
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Which results need only GRH and which also need Linear Independence is taken from secondary summaries of the paper.
+lean:
+  proved: false
+  path: null
+tags: [prime-races, chebyshev-bias, linear-independence]
+added: 2026-11-21

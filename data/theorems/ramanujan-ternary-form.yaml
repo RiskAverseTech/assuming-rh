@@ -1,0 +1,37 @@
+id: ramanujan-ternary-form
+title: Ramanujan's ternary quadratic form x^2 + y^2 + 10 z^2
+field: analytic-number-theory
+statement_plain: >
+  The form x^2 + y^2 + 10 z^2 represents every odd positive integer except
+  exactly these 18: 3, 7, 21, 31, 33, 43, 67, 79, 87, 133, 217, 219, 223,
+  253, 307, 391, 679 and 2719.
+statement_formal: |
+  n \text{ odd},\ n > 2719 \;\Longrightarrow\; n = x^2 + y^2 + 10z^2 \text{ for some integers } x, y, z
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+status_note: >
+  The Dirichlet part, used for Littlewood's lower bound on class numbers, is
+  covered. The proof also needs the hypothesis for the L-functions of
+  quadratic twists of an elliptic curve, which are L-functions of weight 2
+  newforms. That part is not covered.
+sources:
+  - authors: K. Ono, K. Soundararajan
+    title: Ramanujan's ternary quadratic form
+    year: 1997
+    venue: Invent. Math. 130, 415-454
+    doi: 10.1007/s002220050191
+    role: conditional-proof
+related: [littlewood-l1-chi-bounds]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The wording of Theorem 1 has not been read directly. The list of the 16 values found by Ramanujan is from memory. The count of 18 and the two additions 679 and 2719 were confirmed by search summaries.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-forms, ramanujan, elliptic-curves]
+added: 2026-11-21

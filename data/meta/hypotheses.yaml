@@ -1,0 +1,67 @@
+# The hypothesis taxonomy. "covered" says whether the Alpöge claim
+# (RH plus GRH for Dirichlet L-functions) implies the hypothesis:
+#   yes      fully covered
+#   partial  covered in a named special case only
+#   no       not covered
+# scripts/validate.mjs reads this file to check every entry's status.
+- code: RH
+  name: Riemann Hypothesis
+  covered: yes
+  plain: >
+    Every non-trivial zero of the Riemann zeta function has real part 1/2.
+  coverage_note: null
+- code: GRH-Dirichlet
+  name: GRH for Dirichlet L-functions
+  covered: yes
+  plain: >
+    Every non-trivial zero of every Dirichlet L-function has real part 1/2.
+    Dirichlet L-functions are built from characters of the integers modulo q
+    and control how primes are distributed among residue classes.
+  coverage_note: null
+- code: ERH-Dedekind
+  name: Extended Riemann Hypothesis for Dedekind zeta functions
+  covered: partial
+  plain: >
+    Every non-trivial zero of the Dedekind zeta function of a number field
+    has real part 1/2. The Dedekind zeta function controls how prime ideals
+    are distributed in the field.
+  coverage_note: >
+    Covered when the field is an abelian extension of the rationals, which
+    includes quadratic and cyclotomic fields, because the zeta function of
+    such a field is a product of Dirichlet L-functions. Not covered for
+    general number fields.
+- code: GRH-Hecke
+  name: GRH for Hecke L-functions
+  covered: no
+  plain: >
+    Every non-trivial zero of the L-function of a Hecke character of a
+    number field has real part 1/2. This includes the L-functions of
+    characters of ideal class groups and ray class groups.
+  coverage_note: >
+    Not covered, even over a quadratic field. A character of the class group
+    of a quadratic field is in general not a Dirichlet character, because the
+    Hilbert class field is usually not abelian over the rationals.
+- code: GRH-Artin
+  name: GRH for Artin L-functions
+  covered: no
+  plain: >
+    Every non-trivial zero of the L-function of a Galois representation of a
+    number field extension has real part 1/2.
+  coverage_note: >
+    Not covered. Only the one-dimensional representations over the rationals
+    reduce to Dirichlet L-functions.
+- code: GRH-automorphic
+  name: GRH for automorphic L-functions
+  covered: no
+  plain: >
+    Every non-trivial zero of the L-function of a modular form, an elliptic
+    curve, or a higher automorphic form lies on its critical line.
+  coverage_note: null
+- code: PLUS-EXTRA
+  name: A further unproven assumption
+  covered: no
+  plain: >
+    The proof needs an unproven assumption beyond any Riemann Hypothesis,
+    for example that the imaginary parts of the zeros are linearly
+    independent over the rationals. The entry's status note names it.
+  coverage_note: null

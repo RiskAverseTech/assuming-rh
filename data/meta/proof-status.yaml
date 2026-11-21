@@ -1,0 +1,47 @@
+# Verification status of the proof every "unlocked" label depends on.
+# The site banner and the method page read this file. Update last_updated
+# whenever anything here changes.
+status: Claimed. Machine checks reported. Not yet accepted by the mathematical community.
+headline: A proof of the Riemann Hypothesis has been claimed but is not yet accepted.
+summary: >
+  On 20 November 2026 Levent Alpöge released a Lean 4 formalization claiming
+  a proof of the Riemann Hypothesis and of the Generalized Riemann Hypothesis
+  for Dirichlet L-functions. Independent checks of the formal proof have been
+  reported, at least one further check was still running when this was
+  written, and no refereed account exists.
+last_updated: 2026-11-21
+claims:
+  - The Riemann Hypothesis, stated with Mathlib's own definition.
+  - GRH for every Dirichlet L-function, for all characters and separately for primitive characters.
+  - Nothing is claimed for Dedekind zeta functions, Hecke, Artin or automorphic L-functions.
+caveats:
+  - >
+    A formal proof checked by the Lean kernel shows that the formal statement
+    follows from the axioms. Whether the formal statement says what
+    mathematicians mean by the hypothesis is a separate, human question.
+    The headline statements are short and use Mathlib definitions.
+  - >
+    One public third-party check had passed its source scan but had not
+    finished building the proof on 21 November 2026. Press reports say other
+    independent kernel checks have passed. This project has not run a check
+    of its own.
+  - >
+    The released archive carries no licence file, so it is not reused or
+    redistributed here.
+  - >
+    The entries in this file were gathered by an AI research pass on
+    21 November 2026 and have not yet been re-read by a human. Sources
+    marked "reported" were seen only as search summaries.
+sources:
+  - label: "Third-party mirror of the Lean archive, with the headline statements (read directly)"
+    url: https://github.com/CocoSgt/riemann-hypothesis-lean
+    accessed: 2026-11-21
+  - label: "Hertaspace independent verification run, status page (read directly)"
+    url: https://github.com/Hertaspace/alpoge-rh-lean-verification/blob/main/status/STATUS.md
+    accessed: 2026-11-21
+  - label: "Scientific American on independent rechecks (reported, not read directly)"
+    url: https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/
+    accessed: 2026-11-21
+  - label: "Author's note, remark.pdf (reported, not read directly)"
+    url: https://alpo.ge/remark.pdf
+    accessed: 2026-11-21

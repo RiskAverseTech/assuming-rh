@@ -1,0 +1,44 @@
+id: titchmarsh-divisor-problem
+title: Titchmarsh divisor problem
+field: analytic-number-theory
+statement_plain: >
+  The sum over primes p up to x of the number of divisors of p - 1 is
+  asymptotic to C x, with C = zeta(2) zeta(3) / zeta(6).
+statement_formal: |
+  \sum_{p \le x} d(p - 1) \sim \frac{\zeta(2)\,\zeta(3)}{\zeta(6)}\, x
+hypotheses_required: [GRH-Dirichlet]
+status: proved-otherwise
+status_note: >
+  Titchmarsh proved the asymptotic in 1930 under GRH for Dirichlet
+  L-functions. Linnik proved it unconditionally with the dispersion method
+  (1961). Rodriquez (1965) and Halberstam (1967) gave short proofs from the
+  Bombieri-Vinogradov theorem.
+sources:
+  - authors: E. C. Titchmarsh
+    title: A divisor problem
+    year: 1930
+    venue: Rend. Circ. Mat. Palermo 54, 414-429
+    role: conditional-proof
+  - authors: Yu. V. Linnik
+    title: The Dispersion Method in Binary Additive Problems
+    year: 1963
+    venue: Amer. Math. Soc. (translation of the 1961 Russian original)
+    role: unconditional-proof
+  - authors: H. Halberstam
+    title: Footnote to the Titchmarsh-Linnik divisor problem
+    year: 1967
+    venue: Proc. Amer. Math. Soc. 18, 187-188
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Titchmarsh's 1930 paper was not found by search. Its citation is from memory.
+lean:
+  proved: false
+  path: null
+tags: [divisor-function, primes, dispersion-method]
+added: 2026-11-21

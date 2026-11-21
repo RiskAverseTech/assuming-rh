@@ -1,0 +1,38 @@
+id: euclidean-number-rings
+title: Number rings with infinitely many units and class number 1 are Euclidean
+field: algebraic-number-theory
+statement_plain: >
+  If the ring of integers of a number field has infinitely many units, then
+  it is a Euclidean domain if and only if it is a principal ideal domain.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  Weinberger's proof follows Hooley's method for Artin's conjecture and
+  needs the hypothesis for Dedekind zeta functions of Kummer-type extensions
+  that are not abelian over the rationals. Part of the statement is known
+  unconditionally: Harper and Murty (2004) proved it for Galois fields of
+  unit rank above 3, and Harper proved that Z[sqrt(14)] is Euclidean.
+sources:
+  - authors: P. J. Weinberger
+    title: On Euclidean rings of algebraic integers
+    year: 1973
+    venue: Proc. Sympos. Pure Math. 24, Amer. Math. Soc., 321-332
+    role: conditional-proof
+  - authors: M. Harper, M. R. Murty
+    title: Euclidean rings of algebraic integers
+    year: 2004
+    venue: Canad. J. Math. 56, 71-76
+    role: unconditional-proof
+related: [artin-primitive-root-conjecture]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [euclidean-domains, number-fields, units]
+added: 2026-11-21

@@ -1,0 +1,33 @@
+id: artin-primitive-root-conjecture
+title: Artin's primitive root conjecture
+field: analytic-number-theory
+statement_plain: >
+  Every integer a other than -1 that is not a perfect square is a primitive
+  root modulo infinitely many primes, and the set of such primes has the
+  density that Artin predicted.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  Hooley's proof needs the hypothesis for the Dedekind zeta functions of the
+  Kummer fields obtained by adjoining k-th roots of unity and a k-th root of
+  a. These fields are not abelian over the rationals, so the claimed proof
+  does not cover them.
+sources:
+  - authors: C. Hooley
+    title: On Artin's conjecture
+    year: 1967
+    venue: J. Reine Angew. Math. 225, 209-220
+    role: conditional-proof
+related: [euclidean-number-rings]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, kummer-fields]
+added: 2026-11-21

@@ -1,0 +1,17 @@
+# expect: needs checked_by and checked_on
+id: human-checked-without-checker
+title: Wrongly unlocked Artin conjecture
+field: analytic-number-theory
+statement_plain: A deliberately wrong fixture that claims an uncovered result is unlocked.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, ERH-Dedekind]
+status: still-conditional
+status_note: null
+sources:
+  - authors: C. Hooley
+    title: On Artin's conjecture
+    year: 1967
+review: { state: human-checked, checked_by: null, checked_on: null, confidence: low, open_questions: [] }
+lean: { proved: false, path: null }
+tags: [fixture]
+added: 2026-11-21

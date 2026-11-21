@@ -1,0 +1,33 @@
+id: primes-in-arithmetic-progressions-error
+title: Square-root error term for primes in arithmetic progressions
+field: analytic-number-theory
+statement_plain: >
+  For a coprime to q and q at most x, the weighted count of primes up to x
+  that are congruent to a modulo q equals x / phi(q) with an error of
+  O(sqrt(x) (log x)^2).
+statement_formal: |
+  \psi(x; q, a) = \frac{x}{\varphi(q)} + O\!\left(\sqrt{x}\,(\log x)^2\right) \qquad (\gcd(a,q) = 1,\ q \le x)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: H. Davenport (revised by H. L. Montgomery)
+    title: Multiplicative Number Theory, 3rd edition
+    year: 2000
+    venue: Springer, Graduate Texts in Mathematics 74
+    hypothesis_location: Chapter 20
+    role: survey
+related: [least-prime-in-arithmetic-progression]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The chapter reference is quoted from memory.
+lean:
+  proved: false
+  path: null
+tags: [primes, arithmetic-progressions]
+added: 2026-11-21

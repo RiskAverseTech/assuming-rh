@@ -1,0 +1,41 @@
+id: knottedness-in-np
+title: Knottedness is in NP
+field: topology
+statement_plain: >
+  There is a certificate, checkable in polynomial time, that a given knot
+  diagram does not represent the unknot.
+statement_formal: |
+  \mathrm{KNOTTEDNESS} \in \mathsf{NP}
+hypotheses_required: [ERH-Dedekind]
+status: proved-otherwise
+status_note: >
+  Kuperberg proved this in 2014 under GRH, using an effective Chebotarev
+  estimate for non-abelian number fields to guarantee a short certificate.
+  Lackenby proved it without any hypothesis (published 2021).
+sources:
+  - authors: G. Kuperberg
+    title: Knottedness is in NP, modulo GRH
+    year: 2014
+    venue: Adv. Math. 256, 493-506
+    url: https://arxiv.org/abs/1112.0845
+    role: conditional-proof
+  - authors: M. Lackenby
+    title: The efficient certification of knottedness and Thurston norm
+    year: 2021
+    venue: Adv. Math. 387, 107796
+    doi: 10.1016/j.aim.2021.107796
+    role: unconditional-proof
+related: [nullstellensatz-in-am]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Kuperberg's own statement of the hypothesis has not been read. The variant is inferred from Lackenby's survey, which names the results of Koiran, Lagarias and Odlyzko, and Weinberger as the tools.
+lean:
+  proved: false
+  path: null
+tags: [knot-theory, complexity, chebotarev]
+added: 2026-11-21

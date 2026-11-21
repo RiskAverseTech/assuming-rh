@@ -1,0 +1,30 @@
+id: lagarias-harmonic-inequality
+title: Lagarias's harmonic number inequality
+field: analytic-number-theory
+statement_plain: >
+  For every positive integer n, the sum of the divisors of n is at most
+  H_n + exp(H_n) log(H_n), where H_n is the n-th harmonic number. Equality
+  holds only for n = 1.
+statement_formal: |
+  \sigma(n) \le H_n + e^{H_n}\log H_n \qquad (n \ge 1), \qquad H_n = \sum_{k=1}^{n} \frac{1}{k}
+hypotheses_required: [RH]
+status: unlocked
+status_note: This inequality is equivalent to RH. The proof builds on Robin's inequality.
+sources:
+  - authors: J. C. Lagarias
+    title: An elementary problem equivalent to the Riemann hypothesis
+    year: 2002
+    venue: Amer. Math. Monthly 109, 534-543
+    role: conditional-proof
+related: [robin-inequality]
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [sum-of-divisors, harmonic-numbers, equivalent-to-rh]
+added: 2026-11-21

@@ -1,0 +1,18 @@
+# expect: status is "unlocked" but these hypotheses are not covered
+# Deliberately wrong: Hooley's theorem needs ERH-Dedekind, so it cannot be unlocked.
+id: unlocked-with-uncovered-hypothesis
+title: Wrongly unlocked Artin conjecture
+field: analytic-number-theory
+statement_plain: A deliberately wrong fixture that claims an uncovered result is unlocked.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, ERH-Dedekind]
+status: unlocked
+status_note: null
+sources:
+  - authors: C. Hooley
+    title: On Artin's conjecture
+    year: 1967
+review: { state: ai-classified, checked_by: null, checked_on: null, confidence: low, open_questions: [] }
+lean: { proved: false, path: null }
+tags: [fixture]
+added: 2026-11-21
