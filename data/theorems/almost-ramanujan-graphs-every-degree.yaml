@@ -1,0 +1,39 @@
+id: almost-ramanujan-graphs-every-degree
+title: Almost-Ramanujan expander families of every degree
+field: analytic-number-theory
+statement_plain: >
+  For every integer k at least 3 one can explicitly construct a family of
+  k-regular expander graphs, all of which have spectral gap at least
+  k - 2 (k - 1)^(1/2 + r(k)), where r(k) = O(log log k / log k).
+statement_formal: |
+  k - \lambda_2(X_m) \ge k - 2(k-1)^{\frac12 + r(k)}, \qquad r(k) = O\!\left(\frac{\log\log k}{\log k}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The hypothesis enters only through Cramer's conditional bound on gaps
+  between consecutive primes, p' - p = O(sqrt(p) log p). The implied constant
+  in r(k) is not made explicit.
+sources:
+  - authors: A. Dudek
+    title: Almost-Ramanujan graphs and prime gaps
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1402.0620
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The result is in graph theory; the schema has no combinatorics field, so analytic-number-theory was chosen because the conditional input is a prime gap bound.
+    - >-
+      The bound has an unspecified implied constant, so it is not fully explicit. The paper gives the proof in one sentence (insert Cramer's bound into inequality (6)).
+lean:
+  proved: false
+  path: null
+related: [cramer-prime-gap-bound]
+tags: [expander-graphs, prime-gaps, ramanujan-graphs]
+added: 2026-11-21

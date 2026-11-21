@@ -1,0 +1,41 @@
+id: zeta-critical-strip-log-bound
+title: Upper bound for log |zeta(alpha + it)| inside the critical strip
+field: analytic-number-theory
+statement_plain: >
+  For fixed alpha with 1/2 < alpha < 1 and large t, log |zeta(alpha + it)| is
+  at most (1/2 + (2 alpha - 1)/(alpha (1 - alpha))) (log t)^(2 - 2 alpha) / log log t
+  + log(2 log log t) + O( (log t)^(2 - 2 alpha) / ((1 - alpha)^2 (log log t)^2) ).
+  The paper also gives matching forms when alpha tends to 1/2 or to 1 as t
+  grows, and a lower bound of the same shape.
+statement_formal: |
+  \log|\zeta(\alpha+it)| \le \left(\frac12 + \frac{2\alpha-1}{\alpha(1-\alpha)}\right)\frac{(\log t)^{2-2\alpha}}{\log\log t} + \log(2\log\log t) + O\!\left(\frac{(\log t)^{2-2\alpha}}{(1-\alpha)^2(\log\log t)^2}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The displayed bound is the generic case of Theorem 1, which applies when
+  neither (alpha - 1/2) log log t nor (1 - alpha) log log t is bounded. The
+  result holds for large t with an unspecified implied constant; only the
+  leading constant is explicit.
+sources:
+  - authors: E. Carneiro, V. Chandee
+    title: Bounding zeta(s) in the critical strip
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1008.4970
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1 is an asymptotic bound for large t with an O-term, not a fully explicit inequality. A reviewer should decide whether it is clean enough for the dataset.
+    - >-
+      Only the third (generic) case of the three-case formula in Theorem 1 is recorded. The formula was read from the PDF because the text extraction is garbled.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, critical-strip, extremal-functions]
+added: 2026-11-21

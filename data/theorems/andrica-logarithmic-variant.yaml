@@ -1,0 +1,38 @@
+id: andrica-logarithmic-variant
+title: Logarithmic variant of Andrica's conjecture
+field: analytic-number-theory
+statement_plain: >
+  For every n at least 1, with p_n the n-th prime,
+  sqrt(p_(n+1)) / ln p_(n+1) - sqrt(p_n) / ln p_n <= 11/25.
+statement_formal: |
+  \frac{\sqrt{p_{n+1}}}{\ln p_{n+1}} - \frac{\sqrt{p_n}}{\ln p_n} \le \frac{11}{25} \qquad (n \ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The proof rests on the explicit prime gap bound of Carneiro, Milinovich and
+  Soundararajan under RH, p_(n+1) - p_n < (22/25) sqrt(p_n) ln p_n. The same
+  paper also proves, under RH, that the difference of m-th roots of
+  consecutive primes is at most 44 / (25 e (m - 2)) for n >= 3 and m > 2
+  (Theorem 3).
+sources:
+  - authors: M. Visser
+    title: Variants on Andrica's conjecture with and without the Riemann hypothesis
+    year: 2018
+    venue: Mathematics 6 (2018), no. 12, 289
+    url: https://arxiv.org/abs/1804.02500
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The abstract states the inequality with a strict sign and Theorem 2 states it with a non-strict sign; the entry follows Theorem 2.
+lean:
+  proved: false
+  path: null
+related: [dudek-primes-short-intervals]
+tags: [primes, prime-gaps, andrica-conjecture, explicit-bounds]
+added: 2026-11-21

@@ -1,0 +1,44 @@
+id: dirichlet-l-function-explicit-critical-line-bound
+title: Explicit upper bound for Dirichlet L-functions on the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive even Dirichlet character modulo q and put
+  C = q (|t| + 1/2). If log log C is at least 10, then |L(1/2 + it, chi)| is
+  at most exp( (23/25) log C / (log log C)^2 + (3/8) log C / log log C ).
+statement_formal: |
+  \left| L\!\left(\tfrac12 + it, \chi\right) \right| \le \exp\!\left( \frac{23 \log \tilde C}{25 (\log\log \tilde C)^2} + \frac{3 \log \tilde C}{8 \log\log \tilde C} \right), \qquad \tilde C = q\left(|t| + \tfrac12\right),\ \log\log \tilde C \ge 10
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper proves a bound for a general class of L-functions satisfying
+  Ramanujan's conjecture (Theorem 2.1 and Corollary 1.1), assuming GRH for the
+  L-function in question. This entry records only the special case for
+  primitive even Dirichlet characters (Corollary 1.2). The same paper gives
+  the same bound for the Riemann zeta function with T <= t <= 2T and C = T
+  (Corollary 1.4), and versions for holomorphic cusp forms and Dedekind zeta
+  functions (Corollaries 1.3 and 1.5), which are not recorded here.
+sources:
+  - authors: V. Chandee
+    title: Explicit upper bounds for L-functions on the critical line
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0906.4177
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement of Corollary 1.2 does not repeat the words 'assume GRH'; the hypothesis is carried by Theorem 2.1 and the introduction. Confirm that this is the intended reading.
+    - >-
+      RH for zeta is listed because the proof of Corollary 1.1 says 'Since we assume GRH' when bounding the sum of the von Mangoldt function up to t using Rosser and Schoenfeld. It is not clear whether that step truly needs RH for zeta or only GRH for L(s, chi). Either way the status is unlocked.
+    - >-
+      The exponent in the first term is read as (log log C)^2; this matches the derivation with x = (log C)^2 but the text extraction prints it as log2 log C.
+lean:
+  proved: false
+  path: null
+tags: [l-functions, explicit-bounds, critical-line]
+added: 2026-11-21

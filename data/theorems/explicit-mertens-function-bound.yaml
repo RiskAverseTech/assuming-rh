@@ -1,0 +1,41 @@
+id: explicit-mertens-function-bound
+title: Explicit bound for the Mertens function
+field: analytic-number-theory
+statement_plain: >
+  For all x at least 10^(10^4.487), the Mertens function M(x), the sum of the
+  Moebius function up to x, satisfies
+  |M(x)| <= 0.6 sqrt(x) exp( 5.2251 log x / log log((3e/2) sqrt(x)) + log log x ).
+statement_formal: |
+  |M(x)| \le 0.6\,\sqrt{x}\,\exp\!\left(\frac{5.2251\,\log x}{\log\log\!\left(\frac{3e}{2}\sqrt{x}\right)} + \log\log x\right) \qquad \left(x \ge 10^{10^{4.487}}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The same theorem gives an explicit conditional bound for the number of
+  k-free integers up to x, and bounds of the form |M(x)| <= A x^alpha log x
+  for tabulated constants. Theorem 1 of the paper gives explicit conditional
+  bounds for log |zeta(s)| and log |1/zeta(s)| to the right of the critical
+  line.
+sources:
+  - authors: A. Simonic
+    title: Explicit estimates for zeta(s) in the critical strip under the Riemann Hypothesis
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.11744
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The formula was read from the PDF because the text extraction of inequality (9) is garbled; a reviewer should recheck the constants 0.6, 5.2251 and 4.487.
+    - >-
+      The repository already has an entry named mertens-function-bound; a reviewer should decide whether this entry should be merged with it or linked through the related field.
+lean:
+  proved: false
+  path: null
+related: [mertens-function-bound]
+tags: [mertens-function, moebius-function, explicit-bounds]
+added: 2026-11-21
