@@ -1,0 +1,43 @@
+id: primitive-root-primes-in-progression-uniform-error
+title: Primes with a given primitive root in an arithmetic progression, with a uniform error term
+field: analytic-number-theory
+statement_plain: >
+  Let g be an integer that is not a perfect square and not -1. For all
+  coprime positive integers a and m, the number of primes p up to x with
+  p congruent to a modulo m and with g as a primitive root equals
+  delta(a,m,g) x / log x plus an error of size
+  O((1/phi(m)) (x / log x) (log |g|) max(log 2m, log log x) / log x), with an
+  absolute implied constant. Here delta(a,m,g) is the density found by
+  Lenstra.
+statement_formal: |
+  \pi_g(x;m,a)=\delta(a,m,g)\frac{x}{\log x}+O\!\left(\frac{1}{\varphi(m)}\frac{x}{\log x}\cdot\frac{(\log|g|)\max\{\log(2m),\log\log x\}}{\log x}\right)
+hypotheses_required: [GRH-Hecke, ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper states its hypothesis precisely: for each squarefree k, all
+  Hecke L-functions of the number field Q(zeta_k, g^(1/k)) satisfy the
+  Riemann Hypothesis. These fields are not abelian over the rationals. The
+  Dedekind zeta function of each field is the Hecke L-function of the
+  trivial character, so both codes are listed.
+sources:
+  - authors: M. Zoeteman
+    title: Uniformly counting primes with a given primitive root and in an arithmetic progression
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1810.04942
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The error term was transcribed from a text extraction with non-standard symbols and should be checked against the PDF.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [primitive-roots, artin-conjecture, arithmetic-progressions, kummer-fields]
+added: 2026-11-21

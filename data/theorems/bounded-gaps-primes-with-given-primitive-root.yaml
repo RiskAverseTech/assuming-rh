@@ -1,0 +1,38 @@
+id: bounded-gaps-primes-with-given-primitive-root
+title: Bounded gaps between primes with a given primitive root
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer g that is not -1 and not a square, and let q_1 < q_2 < ...
+  be the primes for which g is a primitive root. For each m, the lim inf of
+  q_(n+m-1) - q_n is at most a finite constant C_m that depends on m but not
+  on g.
+statement_formal: |
+  \liminf_{n\to\infty}\,(q_{n+m-1}-q_n)\le C_m
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The paper says the hypothesis is GRH for Dedekind zeta functions. It is
+  used through the effective Chebotarev density theorem (Theorem 2.3),
+  applied to the Kummer fields Q(zeta_q, g^(1/q)), which are not abelian over
+  the rationals. Theorem 4.1 of the paper shows the m primes can be taken to
+  be consecutive primes.
+sources:
+  - authors: P. Pollack
+    title: Bounded gaps between primes with a given primitive root
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1404.4007
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [primitive-roots, bounded-gaps, kummer-fields]
+added: 2026-11-21

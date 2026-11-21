@@ -1,0 +1,46 @@
+id: primitive-root-primes-in-progression-density
+title: Density of primes in an arithmetic progression with a prescribed primitive root
+field: analytic-number-theory
+statement_plain: >
+  Let g be an integer that is not -1 and not a square, and let a and f be
+  coprime positive integers. The set of primes p congruent to a modulo f for
+  which g is a primitive root has a natural density, and this density equals
+  an explicit Euler product: A(a,f,h)/phi(f) times a correction factor
+  involving a Kronecker symbol, where h is the largest integer such that g is
+  an h-th power.
+statement_formal: |
+  \delta(a,f,g)=\sum_{n=1}^{\infty}\frac{\mu(n)\,c_a(n)}{[\mathbb{Q}(\zeta_f,\zeta_n,g^{1/n}):\mathbb{Q}]}
+  =\frac{A(a,f,h)}{\varphi(f)}\left(1+\left(\frac{\gamma}{a}\right)\frac{\mu(2|b|)}{\prod_{p\mid b,\,p\mid h}(p-2)\prod_{p\mid b,\,p\nmid h}(p^2-p-1)}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+status_note: >
+  The hypothesis enters only through Lenstra's theorem (Theorem 1 of the
+  paper), which gives the existence of the density and the series formula
+  with error term O(x log log x / (log x)^2). The evaluation of the series as
+  an Euler product (Theorem 2) is unconditional algebra. The paper writes
+  only "GRH". Lenstra's theorem follows Hooley's method and concerns the
+  fields Q(zeta_f, zeta_n, g^(1/n)), which are not abelian over the
+  rationals. The quantities b, gamma and A(a,f,h) are defined in Theorem 2 of
+  the paper.
+sources:
+  - authors: P. Moree
+    title: On primes in arithmetic progression having a prescribed primitive root. II
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/0707.3062
+    hypothesis_location: Theorem 1 (Lenstra), combined with Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH is for. The code ERH-Dedekind is inferred from the Kummer fields in Theorem 1 and from Hooley's method; Lenstra's 1977 paper was not available here.
+lean:
+  proved: false
+  path: null
+related: [artin-primitive-root-conjecture]
+tags: [primitive-roots, artin-conjecture, arithmetic-progressions, kummer-fields]
+added: 2026-11-21
