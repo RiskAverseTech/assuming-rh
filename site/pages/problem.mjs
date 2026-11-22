@@ -54,6 +54,7 @@ ${tried.map(([t, d]) => `  <dt>${esc(t)}</dt><dd>${d}</dd>`).join('\n')}
 <p>This site maps what follows from the result. Others are mapping the proof. These are independent projects, listed here because they answer the questions this page cannot.</p>
 <ul>
   <li><a href="https://nasqret.github.io/riemann-proof-atlas/" rel="noopener">Riemann proof atlas</a>, by Bartosz Naskręcki. An interactive map of the Lean declarations in the formalization and how they relate, with links to the source code.</li>
+  <li><a href="https://tdupu.github.io/riemann-public/riemann-book.pdf" rel="noopener">Notes on Alpöge's Proof of the Riemann Hypothesis</a>, printed by Taylor Dupuy. A 271-page set of lecture notes, labeled by its author as AI generated and temporary. It states the main theorem for the zeta function and Dirichlet L-functions and shows how the proof is assembled from twenty named parts. The notes say they do not verify the argument or the Lean code, and give complete proofs for only some of the parts.</li>
   <li><a href="https://github.com/leanprover-community/riemann-hypothesis" rel="noopener">The Lean code</a>, as maintained by the Lean community.</li>
   <li><a href="https://math.mit.edu/~drew/grh/" rel="noopener">Verification results</a>, collected by Andrew Sutherland: which proof checkers were run and what they reported.</li>
 </ul>
