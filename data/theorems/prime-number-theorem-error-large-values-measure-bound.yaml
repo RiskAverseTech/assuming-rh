@@ -1,0 +1,43 @@
+id: prime-number-theorem-error-large-values-measure-bound
+title: Size of the set where the prime number theorem error term is large
+field: analytic-number-theory
+statement_plain: >
+  Let psi be the Chebyshev function. For every small epsilon > 0 and every
+  fixed c' < sqrt(2 pi), the Lebesgue measure of the set of x <= X with
+  |psi(x) - x| >= epsilon sqrt(X) (log X)^2 is O(X^(1 - c' sqrt(epsilon))).
+  More precisely, for small epsilon and delta and large X, any subset of
+  [X, 2X] on which |psi(x) - x| >= epsilon sqrt(x) (log x)^2 and whose points
+  are X^(1 - (1 - 2 delta) sqrt(2 pi epsilon)) separated has at most
+  exp(C / (epsilon delta)^2) elements, for an absolute constant C.
+statement_formal: |
+  \mu\bigl\{x\le X:\ |\psi(x)-x|\ge \varepsilon X^{1/2}(\log X)^2\bigr\} \ \ll\ X^{\,1-c'\varepsilon^{1/2}} \qquad \text{for any fixed } c'<\sqrt{2\pi}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper compares this with what follows from Wintner's moment bounds,
+  namely the same estimate with c' about 0.535 (its Proposition 1). The
+  separated-set bound is Theorem 2; the measure bound is deduced from it in
+  equation (22).
+sources:
+  - authors: B. Kerr
+    title: Large values of the error term in the prime number theorem
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2301.09053
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The measure bound (22) is stated in the text after Theorem 2 rather
+      than as a numbered theorem, and the dependence of the implied constant
+      on epsilon and c' is not made explicit there.
+lean:
+  proved: false
+  path: null
+tags: [prime-number-theorem, chebyshev-function, large-values]
+added: 2026-11-22

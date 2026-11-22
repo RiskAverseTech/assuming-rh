@@ -1,0 +1,43 @@
+id: zeta-universality-polylog-short-intervals
+title: Universality of the zeta function in intervals of length a power of log T
+field: analytic-number-theory
+statement_plain: >
+  Let D be the closed disc of radius r centered at s_0 = sigma_0 + i t_0,
+  contained in the strip 1/2 < Re s < 1, and let H = (log T)^B with
+  B > 2 / (2(sigma_0 - r) - 1). Let f be continuous and non-vanishing on D
+  and analytic in its interior. Then for every epsilon > 0 the set of tau in
+  [T, T + H] with max over s in D of |zeta(s + i tau) - f(s)| < epsilon has
+  measure at least a positive constant times H for all large T (positive
+  lower density).
+statement_formal: |
+  \liminf_{T\to\infty}\frac{1}{H}\,\mu\Bigl\{\tau\in[T,T+H]:\ \max_{s\in D}|\zeta(s+i\tau)-f(s)|<\varepsilon\Bigr\}>0, \qquad H=(\log T)^{B},\ \ B>\frac{2}{2(\sigma_0-r)-1}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the paper proves the same with lim sup in place of
+  lim inf, for B > 4 / (2(sigma_0 - r) - 1) (its Theorem 1.2). The paper
+  recalls that the previously known range under RH was
+  H >= exp((log T)^(1 - epsilon)), and unconditionally H >= T^(1273/4053).
+sources:
+  - authors: Y. Lee, Ł. Pańkowski
+    title: Universality of the zeta function in short intervals
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2502.15364
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.1 as printed does not say that f is non-vanishing, but the
+      proof approximates log f(s) and the classical statements quoted in the
+      introduction require it, so the entry includes that condition.
+lean:
+  proved: false
+  path: null
+tags: [universality, short-intervals, value-distribution]
+added: 2026-11-22

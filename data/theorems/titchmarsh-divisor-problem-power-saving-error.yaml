@@ -1,0 +1,43 @@
+id: titchmarsh-divisor-problem-power-saving-error
+title: Power-saving error term in the Titchmarsh divisor problem
+field: analytic-number-theory
+statement_plain: >
+  Let T(x) be the sum of Lambda(n) tau(n - 1) over 1 < n <= x, where Lambda
+  is the von Mangoldt function and tau the divisor function. There is a
+  delta > 0 such that for all x >= 2,
+  T(x) = C_1 x (log x + 2 gamma - 1 - 2 C_2) + O(x^(1 - delta)), where C_1 is
+  the product over primes of 1 + 1/(p(p-1)), C_2 is the sum over primes of
+  log p / (1 + p(p-1)) and gamma is Euler's constant.
+statement_formal: |
+  \sum_{1<n\le x}\Lambda(n)\,\tau(n-1)=C_1\,x\,\bigl\{\log x+2\gamma-1-2C_2\bigr\}+O\bigl(x^{1-\delta}\bigr), \qquad C_1=\prod_p\Bigl(1+\frac{1}{p(p-1)}\Bigr),\ \ C_2=\sum_p\frac{\log p}{1+p(p-1)}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This sharpens the entry titchmarsh-divisor-problem: the asymptotic itself
+  is unconditional (Linnik), and the best unconditional error term, due to
+  Fouvry and to Bombieri, Friedlander and Iwaniec, is O(x / (log x)^A). The
+  hypothesis is the Riemann Hypothesis for all Dirichlet L-functions, used
+  to bound the contribution of characters of small conductor to sums over
+  primes in progressions; the rest of the argument is the dispersion method
+  with the paper's unconditional bounds for sums of Kloosterman sums.
+  Unconditionally the paper gets the error O(x exp(-delta sqrt(log x)))
+  after isolating a possible Siegel zero term (Theorem 1.2).
+sources:
+  - authors: S. Drappeau
+    title: Sums of Kloosterman sums in arithmetic progressions, and the error term in the dispersion method
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.05549
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [titchmarsh-divisor-problem, dispersion-method, kloosterman-sums]
+added: 2026-11-22
