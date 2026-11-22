@@ -1,0 +1,44 @@
+id: pi-minus-li-integral-explicit-two-sided-bounds
+title: Explicit two-sided bounds for the integral of pi(t) - li(t)
+field: analytic-number-theory
+statement_plain: >
+  Let lambda_0 = 2 + gamma - log(4 pi) = 0.0461914..., where gamma is Euler's
+  constant. The integral from 2 to x of pi(t) - li(t) is greater than
+  -x^(3/2)/log x for every x at least 2,258,093,575, and is less than
+  (lambda_0 - 2/3) x^(3/2)/log x for every x at least 139,537,375.
+statement_formal: |
+  -\frac{x^{3/2}}{\log x} < \int_2^x \bigl(\pi(t)-\operatorname{li}(t)\bigr)\,dt < \Bigl(\lambda_0-\frac{2}{3}\Bigr)\frac{x^{3/2}}{\log x}, \qquad \lambda_0 = 2+\gamma-\log 4\pi
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The paper proves the two inequalities
+  under RH (Theorem 1.2 and Corollary 1.3) and takes the reverse implication
+  from Johnston's criterion that RH holds if and only if the integral is
+  negative for all x > 2. It sharpens the dataset entry
+  pi-minus-li-integral-negative-rh-equivalence, which records only the sign,
+  and makes explicit an asymptotic two-sided bound of Stechkin and Popov. The
+  left inequality holds for x at least 2,258,093,575 and the right one for x
+  at least 139,537,375; the paper notes these thresholds may not be the
+  smallest possible. Corollary 1.8 gives the analogous bounds
+  -0.713 x^(3/2) < integral of theta(t) - t < (lambda_0 - 2/3) x^(3/2).
+sources:
+  - authors: C. Axler
+    title: New estimates for some integrals of functions defined over primes
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2203.09290
+    hypothesis_location: Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The "only if" direction (the bounds imply RH) is not new: it follows from Johnston's equivalence, which is already the entry pi-minus-li-integral-negative-rh-equivalence. The new content is the explicit bounds under RH.
+lean:
+  proved: false
+  path: null
+tags: [prime-counting, rh-equivalence, logarithmic-integral, explicit-bounds]
+added: 2026-11-22

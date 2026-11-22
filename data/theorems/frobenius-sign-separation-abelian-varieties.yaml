@@ -1,0 +1,54 @@
+id: frobenius-sign-separation-abelian-varieties
+title: A small prime where two abelian varieties have Frobenius traces of opposite sign
+field: arithmetic-geometry
+statement_plain: >
+  Let A and A' be abelian varieties over a number field k, of dimensions g
+  and g' and absolute conductors N and N', with Hom(A, A') = 0. Then there
+  is a prime p of k not dividing N N' at which the Frobenius traces of A and
+  A' are nonzero and of opposite sign, with norm
+  O([k:Q]^2 (log 2|Disc(k)|)^2 g^4 g'^4 (g + g')^2 (log 2 N N')^2). The
+  implied constant is absolute.
+statement_formal: |
+  \exists\, \mathfrak{p} \nmid NN':\quad a_{\mathfrak{p}}(A)\, a_{\mathfrak{p}}(A') < 0, \qquad \mathrm{Nm}(\mathfrak{p}) = O\left([k:\mathbb{Q}]^2 \log(2|\Delta_k|)^2\, g^4 (g')^4 (g+g')^2 \log(2NN')^2\right)
+hypotheses_required: [GRH-automorphic, ERH-Dedekind, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, single-field-zeta, extra-assumption]
+status_note: >
+  The theorem assumes Conjecture 2.1 of the paper for the L-functions
+  L(s, chi) of the irreducible constituents chi of one explicit virtual
+  representation of the Sato-Tate group of A x A', namely
+  (V^(-2g) + V tensor V) tensor (V'^(2g') + V' tensor V'), where V and V' are
+  the tautological representations of the Sato-Tate groups. These are
+  motivic L-functions attached to A and A' and are not known to be
+  automorphic in general; the trivial constituent gives the Dedekind zeta
+  function of k. Conjecture 2.1 asks for analytic continuation, a functional
+  equation and the Riemann Hypothesis. The extra assumptions recorded are
+  the Mumford-Tate conjecture for A and A' (needed to define the Sato-Tate
+  groups) and the analytic continuation and functional equation. The result
+  removes a power of log log from an earlier bound of the same authors and
+  extends the elliptic curve case of Chen, Park and Swaminathan (dataset
+  entry least-prime-frobenius-traces-opposite-sign); see also
+  least-prime-opposite-sign-frobenius-traces-bucur-kedlaya.
+sources:
+  - authors: A. Bucur, F. Fité, K. S. Kedlaya
+    title: Frobenius sign separation for abelian varieties
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.10568
+    hypothesis_location: Theorem 1.1 (hypothesis stated as Conjecture 2.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      ERH-Dedekind is listed because the trivial constituent of the representation gives the Dedekind zeta function of k, following the treatment of the related Bucur-Kedlaya entry; a reviewer may prefer to fold this into GRH-automorphic.
+    - >-
+      The implied constant is said to be absolute and effectively computable but is not given.
+lean:
+  proved: false
+  path: null
+tags: [abelian-varieties, frobenius-traces, least-prime, sato-tate]
+added: 2026-11-22

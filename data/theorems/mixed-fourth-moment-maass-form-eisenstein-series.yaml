@@ -1,0 +1,47 @@
+id: mixed-fourth-moment-maass-form-eisenstein-series
+title: Mixed fourth moment of a Hecke-Maass cusp form and an Eisenstein series
+field: analytic-number-theory
+statement_plain: >
+  Let phi be an L^2-normalized Hecke-Maass cusp form for SL(2,Z) with
+  spectral parameter t_phi, and let E_T(z) = E(z, 1/2 + iT) be the
+  Eisenstein series. For T at least 1, the integral of phi(z)^2 |E_T(z)|^2
+  over the modular surface, with respect to dx dy / y^2, equals
+  (3/pi) (log(1/4 + t_phi^2) + log(1/4 + T^2)) + O((log(T + t_phi))^(1/2 + eps))
+  as min(t_phi, T) tends to infinity.
+statement_formal: |
+  \int_{\mathrm{SL}_2(\mathbb{Z})\backslash\mathbb{H}} \phi(z)^2\,|E_T(z)|^2\,\frac{dx\,dy}{y^2} = \frac{3}{\pi}\Bigl[\log\bigl(\tfrac14+t_\phi^2\bigr)+\log\bigl(\tfrac14+T^2\bigr)\Bigr]+O\bigl((\log(T+t_\phi))^{1/2+\varepsilon}\bigr)
+hypotheses_required: [RH, GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The paper assumes "GRH and GRC" without listing the L-functions. In the
+  proof GRH is used for L(s, phi_j), L(s, Sym^2 phi x phi_j) and
+  L(s, Sym^2 phi_j) over Hecke-Maass forms phi_j (Lemmas 5.1 and 5.2), for
+  symmetric power L-functions of phi, and the main term contains
+  zeta'/zeta(1 + 2iT) and L'/L(1, Sym^2 phi), which are absorbed in the
+  error term. The extra assumption is the Generalized Ramanujan Conjecture
+  for the Maass forms. The paper notes (Remark 1.5) that the result is
+  unconditional in the range t_phi << T^(1 - eps).
+sources:
+  - authors: C. Guo
+    title: Mixed fourth moments of automorphic forms and the shifted moments of $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2601.00660
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never states exactly which L-functions GRH is assumed for; the list in status_note was read from the proofs in Section 5 and may be incomplete.
+    - >-
+      RH for the Riemann zeta function is listed because the main term involves zeta'/zeta(1 + 2iT), which must be smaller than the stated error term; the paper does not say this explicitly.
+lean:
+  proved: false
+  path: null
+tags: [maass-forms, eisenstein-series, fourth-moment, quantum-chaos]
+added: 2026-11-22
