@@ -1,0 +1,43 @@
+id: diophantine-approximation-prime-denominator-quadratic-fields
+title: Diophantine approximation with prime denominators in quadratic fields with exponent 2/3
+field: analytic-number-theory
+statement_plain: >
+  Let K be an imaginary quadratic number field with ring of integers O_K and
+  let epsilon > 0. For every complex number alpha not in K there are
+  infinitely many non-zero principal prime ideals P of O_K such that
+  |alpha - b/p| <= N(P)^(-2/3 + epsilon) for some generator p of P and some
+  b in O_K. The analogous statement holds for real quadratic fields, with
+  simultaneous approximation of a pair of real numbers in both embeddings.
+statement_formal: |
+  \left|\alpha - \frac{b}{p}\right| \le N(\mathfrak{p})^{-2/3+\varepsilon} \quad \text{for infinitely many principal prime ideals } \mathfrak{p} = (p) \subset \mathcal{O}_K,\ b \in \mathcal{O}_K
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for all Hecke L-functions of the
+  quadratic field K. The paper says Hecke characters of non-trivial infinity
+  type are needed, so this is more than class group and ray class group
+  characters. The imaginary case is Theorem 2 and the real case is Theorem 4
+  (for pairs (x_1, x_2) outside the image of K). The paper says the
+  unconditional exponent in this setting is 29/44 in place of 2/3, and that
+  over the rationals the corresponding result is unconditional (Matomaki).
+sources:
+  - authors: S. Baier, S. Das, E. A. Molla
+    title: Diophantine approximation with prime denominator in quadratic number fields under GRH
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2312.02628
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The waiting family class-group-characters is the closest available; the proof also uses Hecke characters of non-trivial infinity type.
+lean:
+  proved: false
+  path: null
+tags: [diophantine-approximation, quadratic-fields, hecke-characters]
+added: 2026-11-22

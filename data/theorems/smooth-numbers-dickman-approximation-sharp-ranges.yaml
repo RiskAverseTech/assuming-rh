@@ -1,0 +1,46 @@
+id: smooth-numbers-dickman-approximation-sharp-ranges
+title: Size of Psi(x, y) / (x rho(u)) on both sides of y = (log x)^2
+field: analytic-number-theory
+statement_plain: >
+  Let Psi(x, y) be the number of y-smooth integers up to x, rho the Dickman
+  function and u = log x / log y. Fix epsilon > 0 and let x be large enough
+  in terms of epsilon. For (log x)^(2 + epsilon) <= y <= (1 - epsilon) x,
+  Psi(x, y) = x rho(u) (1 + E) where E is positive and of exact order
+  log(u + 1) / log y. For epsilon log x <= y <= (log x)^(2 - epsilon),
+  Psi(x, y) = x rho(u) exp(E') where E' is positive and of exact order
+  (log x)^2 / (y log y). In both ranges Psi(x, y) >= x rho(u).
+statement_formal: |
+  \begin{aligned}
+  \Psi(x,y) &= x\rho(u)\left(1 + \Theta_\varepsilon\!\left(\frac{\log(u+1)}{\log y}\right)\right) && (\log x)^{2+\varepsilon} \le y \le (1-\varepsilon)x, \\
+  \Psi(x,y) &= x\rho(u)\exp\!\left(\Theta_\varepsilon\!\left(\frac{\log^2 x}{y\log y}\right)\right) && \varepsilon\log x \le y \le (\log x)^{2-\varepsilon}
+  \end{aligned}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Here Theta denotes a quantity bounded above and below by positive
+  constant multiples of its argument. Unconditionally the paper proves the
+  first estimate for y >= exp((log log x)^(5/3 + epsilon)) and the second
+  for y <= exp((log log x)^(3/5 - epsilon)) log x. The paper says Hildebrand
+  had shown under RH that Psi(x, y) = x rho(u) exp(O(log(u + 1) / log y))
+  for y >= (log x)^(2 + epsilon), and that its results confirm, in stronger
+  form, his conjecture that Psi(x, y) ~ x rho(u) no longer holds for y
+  below (log x)^(2 - epsilon).
+sources:
+  - authors: O. Gorodetsky
+    title: Smooth integers and the Dickman $ρ$ function
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.08973
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [smooth-numbers, dickman-function, explicit-formula]
+added: 2026-11-22

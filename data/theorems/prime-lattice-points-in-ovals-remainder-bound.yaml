@@ -1,0 +1,40 @@
+id: prime-lattice-points-in-ovals-remainder-bound
+title: Prime lattice points in dilates of an oval with remainder O(R^(3/2))
+field: analytic-number-theory
+statement_plain: >
+  Let Omega be a compact convex planar domain containing the origin in its
+  interior, symmetric under reflections in both coordinate axes, with smooth
+  boundary of nowhere zero curvature. Let psi_Omega(R) be the sum of
+  Lambda(|m|) Lambda(|n|) over lattice points (m, n) in the dilate R Omega,
+  where Lambda is the von Mangoldt function. Then
+  psi_Omega(R) = area(Omega) R^2 + O(R^(3/2)).
+statement_formal: |
+  \psi_\Omega(R) := \sum_{(m,n) \in R\Omega \cap \mathbb{Z}^2} \Lambda(|m|)\,\Lambda(|n|) = \operatorname{area}(\Omega)\, R^2 + O\!\left(R^{3/2}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper calls this upper bound sharp. It also shows, assuming RH, that
+  the normalized remainder (psi_Omega(R) - area(Omega) R^2) / R^(3/2) has a
+  limiting distribution on a logarithmic scale; its finer description
+  (absolute continuity, a formula for the density) needs in addition the
+  Linear Independence Hypothesis for the zeros of zeta and is not recorded
+  here.
+sources:
+  - authors: B. Huang, Z. Rudnick
+    title: Prime lattice points in ovals
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1803.03013
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [lattice-points, primes, error-terms]
+added: 2026-11-22
