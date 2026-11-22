@@ -1,0 +1,50 @@
+id: cyclically-covering-subspaces-average-codimension-lower-bound
+title: Average lower bound for the maximal codimension of cyclically covering subspaces of F_2^n
+field: analytic-number-theory
+statement_plain: >
+  A subspace of F_2^n is cyclically covering if the union of its cyclic
+  shifts is all of F_2^n, and h_2(n) denotes the largest codimension of
+  such a subspace. Then the average of h_2(n) over n up to X is at least
+  (2 A(2) + o(1)) log log X as X tends to infinity, where A(2) = 0.3739...
+  is Artin's constant, the density of primes having 2 as a primitive root.
+statement_formal: |
+  \frac{1}{X}\sum_{n \le X} h_2(n) \ge \bigl(2A(2) + o(1)\bigr)\log\log X \quad (X \to +\infty), \qquad A(2) = \prod_{p} \Bigl(1 - \frac{1}{p(p-1)}\Bigr)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The hypothesis is used only through Artin's primitive root conjecture for
+  the base 2: the primes having 2 as a primitive root have density A(2).
+  The paper cites Hooley for this and does not define its Generalized
+  Riemann Hypothesis; Hooley's proof uses the Dedekind zeta functions of
+  the Kummer fields Q(zeta_k, 2^(1/k)), which are not abelian over the
+  rationals. The rest of the argument (h_2(p) >= 2 for such primes p,
+  superadditivity of h_q, and an unconditional averaging theorem, Theorem
+  8.1) does not use the hypothesis. The same paper proves the analogous
+  bound for q = 3 with constant 1/3 unconditionally, and under the same
+  hypothesis shows that for every prime q > 3 there are infinitely many
+  primes n with h_q(n) = 0 for which q is not a primitive root
+  (Corollary 3.2).
+sources:
+  - authors: Y. Li, P. Yuan
+    title: Discrete Fourier Transform Approach to Cyclically Covering Subspaces of $\mathbb{F}^n_q$
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.13307
+    hypothesis_location: Corollary 8.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper only writes "Generalized Riemann Hypothesis" and cites Hooley; ERH-Dedekind for Kummer fields is inferred from Hooley's method, as the brief instructs.
+    - >-
+      The field value is a compromise: the result is combinatorial and the number theory enters only through Artin's conjecture.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, coding-theory]
+added: 2026-11-22

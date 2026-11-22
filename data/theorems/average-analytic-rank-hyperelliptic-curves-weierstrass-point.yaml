@@ -1,0 +1,45 @@
+id: average-analytic-rank-hyperelliptic-curves-weierstrass-point
+title: Average analytic rank of genus g hyperelliptic curves with a Weierstrass point over a number field
+field: arithmetic-geometry
+statement_plain: >
+  Let K be a number field of degree D and let g be a positive integer. The
+  limsup of the average analytic rank of genus g hyperelliptic curves over
+  K with a Weierstrass point, ordered by naive height, is at most
+  1/2 + 3 g (2g + 1) D / 2.
+statement_formal: |
+  \limsup_{X\to\infty} \frac{1}{\#\mathcal{H}_{g,1}(K)(X)} \sum_{C_a \in \mathcal{H}_{g,1}(K)(X)} r_a \le \frac{1}{2} + \frac{3g(2g+1)D}{2}
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the Hasse-Weil L-functions
+  L(s, C/K) of all genus g hyperelliptic curves C over K with a Weierstrass
+  point. The extra assumption is the Hasse-Weil conjecture for these
+  curves: that L(s, C/K) has an analytic continuation and its completed
+  form satisfies the expected functional equation. These L-functions have
+  degree 2g over K and are not known to be automorphic in general. For
+  g = 1 the bound is (1 + 9D)/2, which the paper says recovers the result
+  of Phillips recorded in the entry
+  average-analytic-rank-elliptic-curves-number-fields. The local reduction
+  statistics that form the first part of the paper are unconditional.
+sources:
+  - authors: K. Jeong, J. Park
+    title: Local statistics and average rank of genus $g$ hyperelliptic curves with a Weierstrass point
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.12381
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      GRH-automorphic is used as the closest code for Hasse-Weil L-functions of hyperelliptic curves that are not known to be automorphic.
+lean:
+  proved: false
+  path: null
+tags: [hyperelliptic-curves, analytic-rank, average-rank]
+added: 2026-11-22

@@ -1,0 +1,55 @@
+id: one-level-density-quadratic-hecke-l-functions-gaussian-field-lower-order-terms
+title: Lower order terms of the one-level density of quadratic Hecke L-functions over the Gaussian field for support in (-2, 2)
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and consider the family of quadratic Hecke L-functions
+  L(s, chi_{i(1+i)^5 c}) with c square-free in Z[i] and coprime to 1 + i.
+  Let phi be an even Schwartz function whose Fourier transform is supported
+  in (-2, 2), let w be an even non-zero non-negative Schwartz weight, and
+  let D(phi; w, X) be the one-level density of low-lying zeros of the
+  family, weighted by w(N(c)/X) and with zeros scaled by log X / (2 pi).
+  Then for every integer M >= 1, D(phi; w, X) equals
+  phi^(0) - (1/2) int_{-1}^{1} phi^(u) du plus the sum over m from 1 to M of
+  R_{w,m}(phi) / (log X)^m, plus O((log X)^(-M-1)), where phi^ is the
+  Fourier transform and the R_{w,m} are explicit linear functionals of phi.
+statement_formal: |
+  D(\phi; w, X) = \widehat{\phi}(0) - \frac{1}{2}\int_{-1}^{1} \widehat{\phi}(u)\,du + \sum_{m=1}^{M} \frac{R_{w,m}(\phi)}{(\log X)^{m}} + O\!\left(\frac{1}{(\log X)^{M+1}}\right)
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The theorem assumes GRH for the L-functions in the family and for the
+  Dedekind zeta function of K = Q(i). The latter is the product of the
+  Riemann zeta function and the Dirichlet L-function of the character
+  modulo 4, so that part is covered. The family consists of Hecke
+  L-functions of quadratic characters over Q(i), which are in general not
+  Dirichlet L-functions, so the result stays conditional. The theorem
+  refines the authors' earlier computation of the main term for the same
+  family and is the Gaussian field analog of the result of Fiorilli, Parks
+  and Sodergren recorded in the entry
+  one-level-density-quadratic-dirichlet-l-functions-lower-order-terms. The
+  paper's Theorem 1.2 rederives the expansion assuming in addition a ratios
+  conjecture for this family.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Lower order terms of the one level density of a family of quadratic Hecke $L$-functions
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/1912.05041
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The coefficients R_{w,m}(phi) are given in the paper's formula (4.4) and are not reproduced here.
+    - >-
+      power-residue-characters is used as the waiting_on family for quadratic Hecke characters over Q(i), as in the sibling entries for this family.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, low-lying-zeros, hecke-l-functions, gaussian-field]
+added: 2026-11-22

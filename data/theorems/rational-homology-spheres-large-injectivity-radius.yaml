@@ -1,0 +1,54 @@
+id: rational-homology-spheres-large-injectivity-radius
+title: Hyperbolic rational homology 3-spheres with arbitrarily large injectivity radius
+field: topology
+statement_plain: >
+  There is an explicit tower of covers N_0 <- N_1 <- N_2 <- ... in which
+  each N_n is a hyperbolic rational homology 3-sphere and the injectivity
+  radius of N_n tends to infinity. The N_n are congruence covers M_n of an
+  arithmetic 3-manifold built from the quaternion algebra over Q(sqrt(-2))
+  ramified at the two primes above 3, and the key fact is that the first
+  rational cohomology of every M_n vanishes.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind, PLUS-EXTRA]
+status: proved-otherwise
+status_note: >
+  Calegari and Dunfield proved this assuming GRH and their Conjecture 3.2,
+  a strengthening of results of Taylor and others attaching Galois
+  representations to automorphic forms on GL_2 over an imaginary quadratic
+  field (this is the extra assumption). GRH enters through Odlyzko's
+  discriminant bounds, applied to a number field L cut out by a mod 3
+  Galois representation of Q(sqrt(-2)), to show that representation is
+  reducible (Theorem 4.1); such bounds use the Dedekind zeta function of L,
+  which is not abelian over the rationals. The paper itself states that
+  Boston and Ellenberg, in the next paper of the same journal volume,
+  proved the vanishing of H^1(M_n; Q) unconditionally by pro-p group
+  methods, so the result no longer depends on either assumption.
+sources:
+  - authors: F. Calegari, N. M. Dunfield
+    title: Automorphic forms and rational homology 3-spheres
+    year: 2006
+    venue: Geometry & Topology 10, 295-329
+    doi: 10.2140/gt.2006.10.295
+    url: https://arxiv.org/abs/math/0508271
+    hypothesis_location: Theorem 1.4
+    role: conditional-proof
+  - authors: N. Boston, J. S. Ellenberg
+    title: Pro-p groups and towers of rational homology spheres
+    year: 2006
+    venue: Geom. Topol. 10, 331-334
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The Boston and Ellenberg paper was not read; its unconditional result is taken from the statements in Calegari and Dunfield (abstract, introduction and Section 6).
+    - >-
+      The paper writes only "GRH" without defining it. ERH-Dedekind is inferred from the use of Odlyzko's GRH discriminant bounds for the field L.
+lean:
+  proved: false
+  path: null
+tags: [hyperbolic-3-manifolds, galois-representations, discriminant-bounds]
+added: 2026-11-22

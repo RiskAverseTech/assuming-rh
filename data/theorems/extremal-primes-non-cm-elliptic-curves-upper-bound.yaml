@@ -1,0 +1,49 @@
+id: extremal-primes-non-cm-elliptic-curves-upper-bound
+title: Upper bound for the number of extremal primes of a non-CM elliptic curve
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication and let a_p(E) be its trace of Frobenius at p. The number
+  of primes p in (x, 2x] with a_p(E) equal to the integer part of 2 sqrt(p),
+  that is, primes where the number of points of E modulo p is as small as
+  the Hasse bound allows, is O(x^(1/2)), with the implied constant depending
+  on E.
+statement_formal: |
+  \#\{x < p \le 2x : a_p(E) = [2\sqrt{p}]\} \ll_E x^{1/2}
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes that for every n >= 0 the symmetric power L-function
+  L(s, Sym^n E) has analytic continuation to the whole plane, satisfies the
+  expected functional equation and satisfies the Riemann Hypothesis. The
+  case n = 0 is the Riemann zeta function; the others are L-functions of
+  degree n + 1 and are not covered. The proof refines the effective
+  Sato-Tate argument of Rouse and Thorner, who under the same hypotheses
+  obtained O(x^(3/4) (log x)^(-1/2)) for primes with a fixed value of
+  a_p(E). The conjectured count of extremal primes up to x for non-CM
+  curves is of order x^(1/4) / log x. See also the entry
+  sato-tate-effective-error-term-symmetric-powers.
+sources:
+  - authors: C. David, A. Gafni, A. Malik, N. Prabhu, C. L. Turnage-Butterbaugh
+    title: Extremal primes for elliptic curves without complex multiplication
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1807.05255
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper lists analytic continuation and the functional equation of the symmetric power L-functions as assumptions. The existing entry sato-tate-effective-error-term-symmetric-powers reports that automorphy of these symmetric powers is now known, so PLUS-EXTRA was not listed here; a reviewer should confirm.
+    - >-
+      The theorem is stated for a_p(E) = [2 sqrt(p)]; the paper says the case a_p(E) = -[2 sqrt(p)] is analogous by symmetry but the theorem statement covers only the first.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, sato-tate, frobenius-traces]
+added: 2026-11-22
