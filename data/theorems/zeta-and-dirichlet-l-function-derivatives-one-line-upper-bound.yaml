@@ -1,0 +1,44 @@
+id: zeta-and-dirichlet-l-function-derivatives-one-line-upper-bound
+title: Upper bounds for derivatives of zeta on the 1-line and of Dirichlet L-functions at 1
+field: analytic-number-theory
+statement_plain: >
+  Fix a natural number l and let Y_l be the integral over u from 0 to
+  infinity of u^l rho(u), where rho is the Dickman function. Then the l-th
+  derivative of the Riemann zeta function satisfies |zeta^(l)(1 + it)| <=
+  (2^(l+1) Y_l + o(1)) (log log t)^(l+1) as t tends to infinity, and for any
+  non-principal Dirichlet character chi modulo q, |L^(l)(1, chi)| <=
+  (2^(l+1) Y_l + o(1)) (log log q)^(l+1) as q tends to infinity.
+statement_formal: |
+  \left|\zeta^{(\ell)}(1+it)\right| \le \left(2^{\ell+1}\mathbf{Y}_{\ell} + o(1)\right)(\log\log t)^{\ell+1}, \qquad \left|L^{(\ell)}(1,\chi)\right| \le \left(2^{\ell+1}\mathbf{Y}_{\ell} + o(1)\right)(\log\log q)^{\ell+1}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The bound for zeta (Theorem 3) assumes RH; the bound for L(s, chi)
+  (Theorem 4) assumes the Riemann Hypothesis for that L(s, chi). The paper
+  describes these as generalizations of Littlewood's bounds (existing entry
+  littlewood-l1-chi-bounds is the case l = 0). The paper proves
+  unconditionally that the maximum of |zeta^(l)(1 + it)| over T <= t <= 2T is
+  at least (Y_l + o(1)) (log log T)^(l+1), and a similar lower bound for the
+  maximum over characters modulo a prime q, so the upper bounds are sharp up
+  to the factor 2^(l+1). Under a conjecture of Granville and Soundararajan
+  on character sums (not a Riemann Hypothesis) the paper removes that factor
+  for L-functions; that result is not part of this entry.
+sources:
+  - authors: D. Yang
+    title: Extreme values of derivatives of zeta and $L$-functions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2204.13826
+    hypothesis_location: Theorem 3 (zeta, under RH) and Theorem 4 (Dirichlet L-functions, under GRH)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-one-line, dirichlet-l-functions, derivatives, extreme-values]
+added: 2026-11-22

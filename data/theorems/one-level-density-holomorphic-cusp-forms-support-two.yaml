@@ -1,0 +1,49 @@
+id: one-level-density-holomorphic-cusp-forms-support-two
+title: One-level density of low-lying zeros for holomorphic cusp forms with Fourier support in (-2, 2)
+field: analytic-number-theory
+statement_plain: >
+  Take the families of L-functions of holomorphic cusp forms split by the
+  sign of the functional equation: level 1 forms of weight k up to K (k
+  divisible by 4 for even sign, k congruent to 2 mod 4 for odd sign), and
+  newforms of fixed weight k and prime level N tending to infinity. For every
+  even Schwartz function phi whose Fourier transform is supported in (-2, 2),
+  the average one-level density of low-lying zeros tends to the integral of
+  phi against the SO(even) density for even sign and the SO(odd) density for
+  odd sign. For the symmetric square L-functions of level 1 forms the same
+  holds with the symplectic density when the support is in (-4/3, 4/3).
+statement_formal: |
+  \lim_{N \to \infty} \frac{1}{M_k^{\pm}(N)} \sum_{f \in H_k^{\pm}(N)} D(f, \phi) = \int_{-\infty}^{\infty} \phi(x)\, W(SO(\text{even/odd}))(x)\,dx \qquad (\operatorname{supp}\hat\phi \subset (-2, 2))
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes "the GRH for all relevant L-functions". The proof uses
+  the Riemann Hypothesis for L(s, f) and for the symmetric square
+  L(s, sym^2 f) of the cusp forms in the families, and GRH for Dirichlet
+  L-functions to bound sums over primes arising from Kloosterman sums. The
+  paper says the theorem can be established unconditionally when the support
+  is in (-1, 1); the extension to (-2, 2) is the conditional part. In this
+  arXiv version the level N is taken prime.
+sources:
+  - authors: H. Iwaniec, W. Luo, P. Sarnak
+    title: Low lying zeros of families of L-functions
+    year: 1999
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9901141
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The fixed weight k in the level family can be 2, which would also fit the family modular-form-l-functions; higher-automorphic is listed because general weight and symmetric squares are involved.
+    - >-
+      The formal statement shows only the level-aspect case; the weight-aspect and symmetric square cases are in the plain statement.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, modular-forms, low-lying-zeros]
+added: 2026-11-22

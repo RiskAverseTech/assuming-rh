@@ -1,0 +1,51 @@
+id: second-moment-derivative-quadratic-twists-modular-l-functions
+title: Second moment of the central derivative of quadratic twists of a modular L-function
+field: analytic-number-theory
+statement_plain: >
+  Let f be a normalized Hecke newform of even weight kappa, odd level N and
+  trivial central character, and let F be a smooth compactly supported
+  approximation to the indicator function of [0, 1]. The sum of
+  L'(1/2, f x chi_{8d})^2 F(8d/X) over squarefree d coprime to 2N for which
+  the twist has root number -1 equals
+  (X / pi^2) L(1, sym^2 f)^3 Z*(0,0) F~(1) ((1/3) log^3 X + C_2(f) log^2 X)
+  plus an error O(X (log X)^(1 + epsilon)), where F~ is the Mellin transform
+  of F, Z*(0,0) is an explicit constant given by Euler products, and C_2(f)
+  is an explicit constant.
+statement_formal: |
+  \sum_{\substack{(d,2N)=1,\ d \text{ squarefree} \\ w(f \otimes \chi_{8d}) = -1}} L'(\tfrac12, f \otimes \chi_{8d})^2\, F(8d/X) = \frac{X}{\pi^2} L(1, \mathrm{sym}^2 f)^3 Z^*(0,0) \widetilde{F}(1) \left( \tfrac13 \log^3 X + C_2(f) \log^2 X \right) + O_{\kappa,N,\varepsilon}\!\left( X (\log X)^{1+\varepsilon} \right)
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes GRH for the Riemann zeta function, the family of
+  quadratic twists of f, and the symmetric square of f. It says the full
+  strength is not used: the hypothesis serves only to obtain an upper bound
+  for the mean square of L(sigma + it, f x chi_d) near the critical line
+  (its Conjecture 1), which follows from these Riemann Hypotheses by work of
+  Soundararajan. This is the analogue with a derivative of the second moment
+  of Soundararajan and Young (existing entry
+  second-moment-quadratic-twists-modular-l-functions). The weight is general,
+  so the L-functions are not limited to weight 2.
+sources:
+  - authors: I. Petrow
+    title: Moments of L'(1/2) in the Family of Quadratic Twists
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1208.4069
+    hypothesis_location: Theorem 1; the hypothesis is spelled out at the start of Section 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The main term was read from the PDF because the text extraction of the display is garbled; the definitions of Z*(0,0) and C_2(f) are in the paper and are not reproduced here.
+    - >-
+      The paper also proves, under the same kind of hypothesis, a mixed moment for two forms (Theorem 2) and a first moment uniform in weight and level (Theorem 3); these are not recorded separately.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-twists, moments, modular-forms]
+added: 2026-11-22

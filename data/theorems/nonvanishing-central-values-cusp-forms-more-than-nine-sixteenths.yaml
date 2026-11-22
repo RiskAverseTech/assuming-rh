@@ -1,0 +1,48 @@
+id: nonvanishing-central-values-cusp-forms-more-than-nine-sixteenths
+title: More than 9/16 of even holomorphic cusp forms have non-vanishing central L-value
+field: analytic-number-theory
+statement_plain: >
+  Among level 1 holomorphic Hecke cusp forms f of weight k up to K with k
+  divisible by 4, the proportion with L(1/2, f) nonzero has lim inf greater
+  than 9/16 as K grows; the same holds for newforms of fixed weight and
+  prime level N with even functional equation as N grows. For odd
+  functional equation the proportion with nonzero central derivative
+  L'(1/2, f) has lim inf greater than 15/16 in both families, and the average
+  order of vanishing at 1/2 over all newforms of prime level N has lim sup
+  less than 1. For symmetric squares of level 1 forms the proportion with
+  L(1/2, sym^2 f) nonzero has lim inf greater than 55/64.
+statement_formal: |
+  \liminf_{N \to \infty} \frac{\#\{f \in H_k^{+}(\Gamma_0(N)) : L(\tfrac12, f) \ne 0\}}{\#H_k^{+}(\Gamma_0(N))} > \frac{9}{16}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The corollary assumes "the GRH for GL2 automorphic L-functions as well as
+  Dirichlet L-functions". It follows from the one-level density theorem of
+  the same paper (entry one-level-density-holomorphic-cusp-forms-support-two)
+  by choosing positive test functions. The paper notes that a proportion of
+  at least 1/2 for even forms is known unconditionally from Iwaniec and
+  Sarnak, and that Kowalski-Michel and Vanderkam have an unconditional lower
+  bound 7/8 for the odd case in the level aspect. The symmetric square part
+  also uses the hypothesis for L(s, sym^2 f).
+sources:
+  - authors: H. Iwaniec, W. Luo, P. Sarnak
+    title: Low lying zeros of families of L-functions
+    year: 1999
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9901141
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      In this arXiv version the level N is prime. The printed counts for the weight family are written with H_k(Gamma) over k up to K; the statement here paraphrases them as proportions of forms.
+lean:
+  proved: false
+  path: null
+tags: [nonvanishing, modular-forms, central-values]
+added: 2026-11-22

@@ -1,0 +1,42 @@
+id: ternary-goldbach-two-piatetski-shapiro-primes-missing-digit-prime
+title: Ternary Goldbach with two Piatetski-Shapiro primes and a prime with a missing digit
+field: additive-number-theory
+statement_plain: >
+  Let gamma* = 8/9 + (2/3) log(10/9)/log 10 (about 0.919), fix gamma_0 with
+  gamma* < gamma_0 <= 1, put c_0 = 1/gamma_0 and fix a digit a_0 in {0, ...,
+  9}. Then every sufficiently large odd integer N_0 is a sum p_1 + p_2 + p_3
+  of three primes, where p_1 and p_2 are Piatetski-Shapiro primes of the form
+  [n^(c_0)] and the decimal expansion of p_3 does not contain the digit a_0.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes only GRH and does not define it. The hypothesis is applied
+  to exponential sums over primes at a/q + xi (Lemma 6.5), through the
+  estimate for primes in residue classes modulo q with error
+  O(u^(1/2 + epsilon)), and to counts of integers with prescribed prime
+  factorization pattern in residue classes modulo q. These are statements
+  about Dirichlet L-functions. The existing entry
+  ternary-goldbach-missing-digit-piatetski-shapiro-hooley-primes is a later
+  variant by the same authors.
+sources:
+  - authors: H. Maier, M. Th. Rassias
+    title: The ternary Goldbach problem with two Piatetski-Shapiro primes and a prime with a missing digit
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.07873
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      GRH is never defined in the paper. That only Dirichlet L-functions are needed is read from the places where it is invoked (Lemma 6.5, the lemma after Lemma 6.6, and the proof of Proposition 4.5); the long proof was not checked line by line for other uses.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, piatetski-shapiro-primes, missing-digits, circle-method]
+added: 2026-11-22

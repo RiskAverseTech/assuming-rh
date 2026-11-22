@@ -1,0 +1,46 @@
+id: newform-coefficient-differences-few-prime-factors
+title: Differences of Fourier coefficients of two newforms with few prime factors
+field: analytic-number-theory
+statement_plain: >
+  Let f_1 and f_2 be non-CM newforms of weights k_1, k_2 >= 2 with integer
+  Fourier coefficients a_1(n) and a_2(n), not character twists of each other
+  if k_1 = k_2, and let k = max(k_1, k_2). Then the number of primes p up to
+  X with a_1(p) != a_2(p) and with a_1(p) - a_2(p) having at most
+  [7k + 1/2 + k^(1/5)] distinct prime divisors is at least a positive
+  constant times X / (log X)^2.
+statement_formal: |
+  \#\left\{ p \le X : a_1(p) \ne a_2(p),\ \omega\bigl(a_1(p) - a_2(p)\bigr) \le \left[ 7k + \tfrac12 + k^{1/5} \right] \right\} \gg \frac{X}{(\log X)^2}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper defines GRH as the Riemann Hypothesis for all Artin L-functions.
+  It is used through the effective Chebotarev density theorem of Lagarias,
+  Odlyzko and Serre, stated in the paper under the Riemann Hypothesis for
+  the Dedekind zeta function of a Galois extension K of Q, and applied to
+  the fields cut out by the product of the mod h Galois representations of
+  f_1 and f_2. These fields are not abelian over Q. The paper remarks that a
+  zero-free half-plane to the left of Re(s) = 1 would suffice. As an
+  application, the number of primes giving a congruence between two such
+  newforms is at most [7k + 1/2 + k^(1/5)].
+sources:
+  - authors: A. Kumar, M. Kumari
+    title: Divisors of Fourier coefficients of two newforms
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2104.10055
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's stated hypothesis is for all Artin L-functions, which would be the code GRH-Artin. The entry uses ERH-Dedekind because the only use found is Proposition 2.1, which needs the Riemann Hypothesis for the Dedekind zeta function of the Galois field; a reviewer may prefer to list GRH-Artin as well.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, fourier-coefficients, sieve-methods, chebotarev]
+added: 2026-11-22

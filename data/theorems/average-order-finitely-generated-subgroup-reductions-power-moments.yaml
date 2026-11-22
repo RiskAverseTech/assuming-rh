@@ -1,0 +1,47 @@
+id: average-order-finitely-generated-subgroup-reductions-power-moments
+title: Average over primes of powers of the order of a finitely generated subgroup of the rationals modulo p
+field: analytic-number-theory
+statement_plain: >
+  Let Gamma be a finitely generated multiplicative subgroup of the nonzero
+  rationals of rank r >= 2, and let Gamma_p be its reduction modulo a prime p
+  (taken trivial when p divides the support of Gamma). For the exponent t,
+  the sum of |Gamma_p|^t over primes p up to x equals
+  li(x^(t+1)) (C_{Gamma,t} + O(log log x / (log x)^r)), where C_{Gamma,t} is
+  the absolutely convergent series over k >= 1 of
+  J_t(k) rad(k)^t (-1)^omega(k) / (k^(2t) [Q(zeta_k, Gamma^(1/k)) : Q]) and
+  J_t is Jordan's totient function.
+statement_formal: |
+  \sum_{p \le x} |\Gamma_p|^{t} = \mathrm{li}(x^{t+1}) \left( C_{\Gamma,t} + O_{\Gamma}\!\left( \frac{\log\log x}{(\log x)^{r}} \right) \right), \qquad C_{\Gamma,t} = \sum_{k \ge 1} \frac{J_t(k)\,\mathrm{rad}(k)^{t}\,(-1)^{\omega(k)}}{k^{2t}\,[\mathbb{Q}(\zeta_k, \Gamma^{1/k}) : \mathbb{Q}]}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The theorem assumes the Generalized Riemann Hypothesis for the fields
+  Q(zeta_k, Gamma^(1/k)), k a natural number, obtained from the cyclotomic
+  field by adjoining the k-th roots of all elements of Gamma. It is used
+  through the effective Chebotarev density theorem (Lemma 6) for the
+  Dedekind zeta functions of these fields. The paper says the rank 1 case
+  was treated by Kurlberg and Pomerance (compare the existing entry
+  average-multiplicative-order-arnold-problem, which averages over all
+  moduli n rather than over primes).
+sources:
+  - authors: C. Pehlivan
+    title: Average Multiplicative Order of Finitely Generated Subgroup of Rational Numbers Over Primes
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.01550
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1 does not state the range of the exponent t. The abstract speaks of powers of the order and the case t = 1 is singled out, so t is presumably a fixed positive integer; this should be confirmed.
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, kummer-fields, chebotarev]
+added: 2026-11-22
