@@ -1,0 +1,37 @@
+id: argument-of-zeta-exponential-moments-upper-bound
+title: Exponential moments of the argument of zeta on the critical line are at most (log T)^(k^2 + eps)
+field: analytic-number-theory
+statement_plain: >
+  For every real k and every eps > 0, the average over t in [0, T] of
+  exp(2k Im log zeta(1/2 + it)) is at most a constant depending on k and eps
+  times (log T)^(k^2 + eps). Here Im log zeta(1/2 + it) = pi S(t) is the
+  argument of zeta on the critical line.
+statement_formal: |
+  \frac{1}{T}\int_0^T \exp\bigl(2k\,\Im\log\zeta(\tfrac12+it)\bigr)\,dt \ll_{k,\varepsilon} (\log T)^{k^2+\varepsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper states the bound as an expectation over T U with U uniform on
+  [0, 1]. It is the analogue for the imaginary part of log zeta of
+  Soundararajan's upper bound for moments of |zeta(1/2 + it)|, with the same
+  accuracy. The paper expects the true order to be (log T)^(k^2) and does not
+  prove a lower bound.
+sources:
+  - authors: J. Najnudel
+    title: Exponential moments of the argument of the Riemann zeta function on the critical line
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/1804.00343
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, argument-of-zeta, moments]
+added: 2026-11-22

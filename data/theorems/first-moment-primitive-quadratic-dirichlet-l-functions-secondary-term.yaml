@@ -1,0 +1,48 @@
+id: first-moment-primitive-quadratic-dirichlet-l-functions-secondary-term
+title: First moment of primitive quadratic Dirichlet L-functions with a secondary term of size X^(1/3) log X
+field: analytic-number-theory
+statement_plain: >
+  Let chi_{8d} be the quadratic character given by the Kronecker symbol
+  (8d / .) and let Phi be a non-negative smooth weight supported in [1/2, 2].
+  For X >= 2, the sum over odd square-free d >= 1 of
+  Phi(d/X) L(1/2, chi_{8d}) equals
+  X P_1(log X) + X^(1/3) P_2(log X) + O(X^(1/4 + eps)) for every eps > 0,
+  where P_1 and P_2 are explicitly computed linear polynomials.
+statement_formal: |
+  \sum_{\substack{d\ge 1\\ d\ \text{odd}}}\mu^2(d)\,\Phi\!\left(\frac{d}{X}\right)L\!\left(\tfrac12,\chi_{8d}\right)=X\,P_1(\log X)+X^{1/3}P_2(\log X)+O\!\left(X^{1/4+\varepsilon}\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes the Riemann hypothesis for the Riemann zeta function
+  together with the generalized Lindelof hypothesis for Dirichlet
+  L-functions, that is |L(sigma + it, chi)| << n^eps for primitive chi of
+  conductor n and sigma >= 1/2. The Lindelof hypothesis is weaker than, and
+  a consequence of, GRH for Dirichlet L-functions, so the entry is coded
+  GRH-Dirichlet. Theorem 1.2 of the paper assumes only the Lindelof
+  hypothesis and has error term O(X^(beta/2 + eps)) with beta the supremum of
+  the real parts of the zeta zeros; RH for zeta gives beta = 1/2. This
+  complements the entry
+  first-moment-quadratic-dirichlet-l-functions-quarter-power-error (Gao and
+  Zhao), which has the same error term for the sum over all odd n without
+  the square-free condition and has no X^(1/3) term.
+sources:
+  - authors: M. Cech
+    title: First moment of quadratic Dirichlet L-functions with secondary terms
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.03197
+    hypothesis_location: Corollary 1.1 and Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper's assumption on Dirichlet L-functions is the generalized Lindelof hypothesis, not GRH. It is coded GRH-Dirichlet because GRH implies it; a reviewer may prefer a different coding."
+    - "The polynomials P_1 and P_2 are given in Theorem 1.2 (2) of the paper but are not reproduced here."
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-characters, central-values, multiple-dirichlet-series]
+added: 2026-11-22

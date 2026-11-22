@@ -1,0 +1,46 @@
+id: log-zeta-second-moment-critical-line-second-order-term
+title: Second moment of log |zeta(1/2 + it)| with a lower-order term of size T
+field: analytic-number-theory
+statement_plain: >
+  As T tends to infinity, the integral from 0 to T of
+  (log |zeta(1/2 + it)|)^2 dt equals (T/2) log log T + a T + o(T). Here
+  a = (1/2) (gamma_0 + sum over m >= 2 and primes p of
+  (1/m^2 - 1/m) p^(-m) + integral from 1 to infinity of F(alpha)/alpha^2
+  d alpha), gamma_0 is Euler's constant, and F(alpha) = F(alpha, T) is
+  Montgomery's pair correlation function of the zeta zeros up to height T.
+statement_formal: |
+  \int_0^T \log^2\left|\zeta\left(\tfrac12+it\right)\right|\,dt=\frac{T}{2}\log\log T+aT+o(T),\qquad a=\frac12\left(\gamma_0+\sum_{m=2}^{\infty}\sum_p\left(\frac1{m^2}-\frac1m\right)\frac1{p^m}+\int_1^\infty\frac{F(\alpha)}{\alpha^2}\,d\alpha\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Here F(alpha, T) = ((T/2 pi) log T)^(-1) times the sum over zero ordinates
+  0 < gamma, gamma' <= T of T^(i alpha (gamma - gamma')) w(gamma - gamma')
+  with w(u) = 4/(4 + u^2). The constant a depends mildly on T through F; the
+  paper says this dependence is mild (its Lemma 3.1.3). No pair correlation
+  conjecture is assumed for this statement. The paper notes that under
+  Montgomery's Strong Pair Correlation Conjecture the integral of
+  F(alpha)/alpha^2 can be replaced by 1, which gives a special case of a
+  conjecture of Keating and Snaith. This is the analogue for log |zeta| of
+  Goldston's result for S(t). The paper's other RH results (Theorems 1.3.1
+  to 1.3.3) concern the variance of S(t + Delta) - S(t) and are not recorded
+  here.
+sources:
+  - authors: M. M. Lugar, M. B. Milinovich, E. Quesada-Herrera
+    title: On the number variance of zeta zeros and a conjecture of Berry
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.14918
+    hypothesis_location: Theorem 1.2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The constant a involves the function F(alpha, T), whose integral is not evaluated without a pair correlation conjecture."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, pair-correlation]
+added: 2026-11-22
