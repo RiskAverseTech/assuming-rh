@@ -41,5 +41,7 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [nullstellensatz-polynomial-hierarchy]
+related: [schubert-vanishing-in-am-and-coam]
 tags: [nullstellensatz, arthur-merlin, polynomial-hierarchy]
 added: 2026-11-21

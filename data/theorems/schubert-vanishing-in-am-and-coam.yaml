@@ -39,6 +39,6 @@ review:
 lean:
   proved: false
   path: null
-related: [nullstellensatz-polynomial-hierarchy]
+rests_on: [nullstellensatz-polynomial-hierarchy]
 tags: [schubert-calculus, complexity, arthur-merlin, chebotarev]
 added: 2026-11-21

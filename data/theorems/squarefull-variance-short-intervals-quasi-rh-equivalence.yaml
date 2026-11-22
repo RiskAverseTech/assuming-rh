@@ -38,5 +38,6 @@ review:
 lean:
   proved: false
   path: null
+related: [squarefree-variance-short-intervals-rh-equivalence]
 tags: [squarefull-numbers, short-intervals, variance, quasi-riemann-hypothesis]
 added: 2026-11-21

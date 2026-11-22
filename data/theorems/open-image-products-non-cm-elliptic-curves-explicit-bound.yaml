@@ -46,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [galois-representations, elliptic-curves, effective-chebotarev]
 added: 2026-11-22

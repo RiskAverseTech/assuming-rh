@@ -33,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+related: [eighth-moment-dirichlet-l-functions]
 tags: [moments, dirichlet-l-functions, central-values]
 added: 2026-11-21

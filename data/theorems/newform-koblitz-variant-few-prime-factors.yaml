@@ -49,5 +49,6 @@ review:
 lean:
   proved: false
   path: null
+related: [newform-coefficient-differences-few-prime-factors]
 tags: [modular-forms, koblitz-conjecture, weighted-sieve, chebotarev]
 added: 2026-11-22

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [twisted-quadratic-character-sums-prime-modulus-moments]
 tags: [character-sums, quadratic-twists, modular-forms]
 added: 2026-11-22

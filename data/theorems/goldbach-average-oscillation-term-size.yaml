@@ -38,5 +38,6 @@ review:
 lean:
   proved: false
   path: null
+related: [goldbach-average-explicit-formula-error-n-log-cubed]
 tags: [goldbach, zeta-zeros, oscillations]
 added: 2026-11-21

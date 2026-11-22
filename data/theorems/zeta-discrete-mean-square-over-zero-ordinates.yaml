@@ -35,5 +35,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-at-zeros-small-values, zeta-derivative-moments-at-zeros-upper-bound]
 tags: [zeta-function, zeros, discrete-moments]
 added: 2026-11-21

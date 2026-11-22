@@ -25,6 +25,14 @@ const waiting = loadWaiting();
 const waitBy = Object.fromEntries(waiting.map((w) => [w.code, w]));
 entries.sort((a, b) => a.title.localeCompare(b.title));
 const byId = Object.fromEntries(entries.map((e) => [e.id, e]));
+// Reverse links, computed at build time.
+const usedBy = {};
+const referredBy = {};
+for (const e of entries) {
+  for (const id of e.rests_on || []) (usedBy[id] ||= []).push(e.id);
+  for (const id of e.related || []) (referredBy[id] ||= []).push(e.id);
+}
+const linkList = (list) => `<ul>${list.map((id) => `<li><a href="theorems/${id}.html">${esc(byId[id].title)}</a> ${statusBadge(byId[id])}</li>`).join('')}</ul>`;
 
 // ---------- vocabulary ----------
 const STATUS = {
@@ -232,6 +240,7 @@ function buildHome() {
     <li><a href="browse.html">Browse all entries</a>, with filters for status, hypothesis, field and review state.</li>
     <li><a href="problem.html">Read about the problem</a>: the statement, what was tried before, and what the announced proof reports doing.</li>
     <li><a href="waiting.html">See what is still waiting</a>, grouped by what would have to be proved next.</li>
+    <li><a href="connections.html">See which results carry the most others</a>.</li>
     <li><a href="about.html">Read the method</a>: the hypothesis taxonomy and how entries are classified.</li>
     <li><a href="data.html">Download the dataset</a> as JSON or CSV.</li>
     <li>Found a mistake? Every entry page has a "suggest a correction" link.</li>
@@ -362,7 +371,17 @@ function buildEntry(e) {
     <p><a class="button" href="${esc(correctionUrl(e))}" rel="noopener">Suggest a correction</a></p>
   </section>
 
-  ${(e.related || []).length ? `<section aria-labelledby="h-related"><h2 id="h-related">Related entries</h2><ul>${e.related.map((id) => `<li><a href="theorems/${id}.html">${esc(byId[id].title)}</a> ${statusBadge(byId[id])}</li>`).join('')}</ul></section>` : ''}
+  ${(() => {
+    const rests = e.rests_on || [];
+    const used = usedBy[e.id] || [];
+    const rel = [...new Set([...(e.related || []), ...(referredBy[e.id] || [])])].filter((id) => !rests.includes(id) && !used.includes(id)).sort((x, y) => byId[x].title.localeCompare(byId[y].title));
+    if (!rests.length && !used.length && !rel.length) return '';
+    return `<section aria-labelledby="h-related"><h2 id="h-related">Connections</h2>
+    ${rests.length ? `<h3>Rests on</h3><p class="muted">The proof uses these results as ingredients.</p>${linkList(rests)}` : ''}
+    ${used.length ? `<h3>Used by</h3><p class="muted">These entries use this result as an ingredient.</p>${linkList(used)}` : ''}
+    ${rel.length ? `<h3>Related entries</h3>${linkList(rel)}` : ''}
+    </section>`;
+  })()}
   <p class="tags">${e.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join(' ')}</p>
 </article>`,
   });
@@ -546,6 +565,34 @@ function csvCell(v) {
   const s = Array.isArray(v) ? v.join('; ') : v === null || v === undefined ? '' : String(v).trim().replace(/\s+/g, ' ');
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
+function buildConnections() {
+  const rows = entries.map((e) => ({ e, used: (usedBy[e.id] || []).length, ref: new Set([...(referredBy[e.id] || [])]).size })).filter((r) => r.used + r.ref >= 3).sort((x, y) => y.used + y.ref - (x.used + x.ref) || x.e.title.localeCompare(y.e.title)).slice(0, 40);
+  const nRests = entries.filter((e) => (e.rests_on || []).length).length;
+  const nLinked = entries.filter((e) => (e.rests_on || []).length || (e.related || []).length || (usedBy[e.id] || []).length || (referredBy[e.id] || []).length).length;
+  page({
+    file: 'connections.html',
+    title: 'Connections',
+    description: 'Which entries other entries point to most often.',
+    body: `
+<h1>Connections between entries</h1>
+<p class="lede">Some results carry many others. This page lists the entries that other entries point to most often.</p>
+<p>${nLinked} of the ${entries.length} entries are linked to at least one other entry. Two kinds of link are recorded:</p>
+<ul>
+  <li><strong>Rests on.</strong> The proof uses the other result as an ingredient. This is recorded by hand for ${nRests} entries so far, only where the entry's own notes say so.</li>
+  <li><strong>Related.</strong> One entry's notes name the other: a sharper version, a special case, the same method, or a comparison. These were collected automatically from the notes.</li>
+</ul>
+<p class="muted">The links are incomplete. Most dependencies between results are not recorded yet, so a low count here means little. The links were drafted by an AI system and have not been checked by an expert.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Entries most often pointed to">
+<table class="waiting">
+  <thead><tr><th scope="col">Entry</th><th scope="col" class="num">Used by</th><th scope="col" class="num">Named by</th></tr></thead>
+  <tbody>
+  ${rows.map(({ e, used, ref }) => `<tr><th scope="row"><a href="theorems/${e.id}.html">${esc(e.title)}</a> ${statusBadge(e)}</th><td class="num">${used}</td><td class="num">${ref}</td></tr>`).join('\n  ')}
+  </tbody>
+</table>
+</div>`,
+  });
+}
+
 function buildData() {
   const dataDir = path.join(OUT, 'data');
   fs.mkdirSync(dataDir, { recursive: true });
@@ -623,4 +670,5 @@ page({
 buildWaiting();
 buildAbout();
 buildData();
+buildConnections();
 console.log(`Built ${entries.length} entry pages into dist/`);

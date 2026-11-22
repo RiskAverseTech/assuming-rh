@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [power-generator-period-normal-order]
 tags: [power-generator, carmichael-function, normal-order]
 added: 2026-11-22

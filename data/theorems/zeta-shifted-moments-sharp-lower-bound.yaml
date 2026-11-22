@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [shifted-moments-dedekind-zeta-sharp-lower-bound, shifted-moments-dirichlet-l-functions-lower-bound, zeta-shifted-moments-sharp-upper-bound]
 tags: [zeta-function, moments, shifted-moments]
 added: 2026-11-22

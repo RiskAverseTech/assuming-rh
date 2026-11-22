@@ -38,5 +38,6 @@ review:
 lean:
   proved: false
   path: null
+related: [primitive-dirichlet-l-functions-simple-zeros-eleven-twelfths, zeta-simple-zeros-proportion-19-27]
 tags: [simple-zeros, dirichlet-l-functions, asymptotic-large-sieve]
 added: 2026-11-21

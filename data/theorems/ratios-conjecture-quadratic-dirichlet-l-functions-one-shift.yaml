@@ -54,5 +54,6 @@ review:
 lean:
   proved: false
   path: null
+related: [n-level-density-quadratic-dirichlet-l-functions-support-two, one-level-density-quadratic-dirichlet-l-functions-ratios-conjecture]
 tags: [ratios-conjecture, quadratic-characters, multiple-dirichlet-series]
 added: 2026-11-22

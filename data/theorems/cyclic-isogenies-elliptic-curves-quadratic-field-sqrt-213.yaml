@@ -46,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [isogeny-primes-momose-type-2-explicit-bound]
 tags: [elliptic-curves, isogenies, quadratic-fields, modular-curves]
 added: 2026-11-21

@@ -27,7 +27,6 @@ sources:
     url: https://github.com/kimihiro64/Robin1984
     hypothesis_location: "Theorem Robin1984.robin_inequality_iff_riemannHypothesis, stated against Mathlib's RiemannHypothesis"
     role: formalization
-related: [lagarias-harmonic-inequality]
 review:
   state: ai-classified
   checked_by: null
@@ -37,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+related: [lagarias-harmonic-inequality]
 tags: [sum-of-divisors, equivalent-to-rh]
 added: 2026-11-21

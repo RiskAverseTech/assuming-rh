@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-small-gaps-0-50895]
 tags: [zeta-zeros, small-gaps, pair-correlation]
 added: 2026-11-21

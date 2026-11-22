@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-discrete-mean-square-over-zero-ordinates]
 tags: [zeta-zeros, discrete-moments, mean-values]
 added: 2026-11-22

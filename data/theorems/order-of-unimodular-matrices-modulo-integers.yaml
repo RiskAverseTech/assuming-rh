@@ -47,5 +47,6 @@ review:
 lean:
   proved: false
   path: null
+related: [average-multiplicative-order-arnold-problem, power-generator-period-normal-order]
 tags: [multiplicative-order, matrices, artin-conjecture]
 added: 2026-11-21

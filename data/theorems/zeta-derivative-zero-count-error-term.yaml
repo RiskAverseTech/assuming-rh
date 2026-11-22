@@ -35,5 +35,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-short-interval-count-goldston-gonek]
 tags: [zeta-derivative, zero-counting]
 added: 2026-11-21

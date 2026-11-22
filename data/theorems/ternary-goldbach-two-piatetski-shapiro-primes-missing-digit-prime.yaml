@@ -38,5 +38,6 @@ review:
 lean:
   proved: false
   path: null
+related: [ternary-goldbach-missing-digit-piatetski-shapiro-hooley-primes]
 tags: [goldbach, piatetski-shapiro-primes, missing-digits, circle-method]
 added: 2026-11-22

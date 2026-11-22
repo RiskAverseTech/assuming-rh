@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [artin-primitive-root-conjecture]
 tags: [multiplicative-order, artin-conjecture, finite-fields]
 added: 2026-11-22

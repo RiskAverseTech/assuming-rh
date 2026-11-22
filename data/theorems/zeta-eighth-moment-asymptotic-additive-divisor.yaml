@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [zeta-shifted-moments-sharp-upper-bound, zeta-moments-sharp-upper-bound-harper]
 tags: [zeta-moments, eighth-moment, additive-divisor-problem]
 added: 2026-11-22

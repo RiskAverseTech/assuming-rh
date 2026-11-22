@@ -35,5 +35,6 @@ review:
 lean:
   proved: false
   path: null
+related: [character-sum-high-moments-arbitrary-length-sharp-upper-bound]
 tags: [zeta-function, moments, zeta-sums]
 added: 2026-11-22

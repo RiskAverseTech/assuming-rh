@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [chebyshev-bias]
 tags: [prime-races, chebyshev-bias, semiprimes]
 added: 2026-11-22

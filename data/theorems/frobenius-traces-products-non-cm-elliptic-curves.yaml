@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [lang-trotter-upper-bounds-zywina]
 tags: [abelian-varieties, lang-trotter, chebotarev, frobenius-traces]
 added: 2026-11-21

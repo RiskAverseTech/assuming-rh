@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [one-level-density-cubic-l-functions-eisenstein-field-support-13-11]
 tags: [one-level-density, low-lying-zeros, non-vanishing, hecke-l-functions]
 added: 2026-11-22

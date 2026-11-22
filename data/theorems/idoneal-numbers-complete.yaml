@@ -26,7 +26,6 @@ sources:
     url: https://eudml.org/doc/205148
     hypothesis_location: Theorem 1 (and Lemma 4)
     role: conditional-proof
-related: [no-siegel-zeros]
 review:
   state: ai-classified
   checked_by: null
@@ -41,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [no-siegel-zeros]
 tags: [idoneal-numbers, class-groups, quadratic-fields]
 added: 2026-11-21

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [littlewood-l1-chi-bounds]
 tags: [l-functions, explicit-bounds, class-numbers, special-values]
 added: 2026-11-21

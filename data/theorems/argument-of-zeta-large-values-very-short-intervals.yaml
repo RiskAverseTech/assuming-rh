@@ -34,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+related: [explicit-s-s1-zeta-critical-line-bounds]
 tags: [zeta-function, argument-of-zeta, short-intervals]
 added: 2026-11-21

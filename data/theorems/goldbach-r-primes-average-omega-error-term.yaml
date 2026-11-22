@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [goldbach-average-explicit-formula-error-n-log-cubed, goldbach-k-primes-average-order]
 tags: [goldbach, omega-results, explicit-formula]
 added: 2026-11-22

@@ -33,6 +33,7 @@ npm test
   - `proved-otherwise` if an unconditional proof exists. Name it in `status_note` and cite it. Here `hypotheses_required` records what the older conditional proof used.
 - Results about class groups, ray class groups or power residues over a number field usually need `GRH-Hecke`, even when the field is quadratic.
 - For a `still-conditional` or `partial` entry, fill in `waiting_on` with the families from `data/meta/waiting.yaml` that the proof uses. This says which L-functions a future proof would have to reach, and it feeds the "Still waiting" page.
+- Link entries where it helps. `rests_on` lists entries whose result the proof uses as an ingredient; use it only when the paper says so. `related` lists entries worth reading alongside (a sharper version, a special case, the same method). The site shows the reverse links automatically.
 - If the proof needs something beyond a Riemann Hypothesis, add `PLUS-EXTRA` and name the assumption in `status_note`.
 - Cite the original paper. Fill in `hypothesis_location` (the theorem or section where the hypothesis is used) when you know it.
 - Put every doubt in `review.open_questions`. An honest open question is better than a confident guess.

@@ -51,5 +51,6 @@ review:
 lean:
   proved: false
   path: null
+related: [supersingular-endomorphism-ring-sqrt-p-algorithm]
 tags: [supersingular-curves, endomorphism-rings, isogenies, cryptography]
 added: 2026-11-21

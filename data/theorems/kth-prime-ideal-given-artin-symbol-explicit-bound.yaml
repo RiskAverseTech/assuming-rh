@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, explicit-chebotarev-psi-bound-grenie-molteni, least-prime-ideal-with-given-artin-symbol]
 tags: [effective-chebotarev, prime-ideals, explicit-bounds]
 added: 2026-11-22

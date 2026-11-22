@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [sparse-polynomials, finite-fields, effective-chebotarev]
 added: 2026-11-22

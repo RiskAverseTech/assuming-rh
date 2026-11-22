@@ -53,5 +53,6 @@ review:
 lean:
   proved: false
   path: null
+related: [expander-cayley-graphs-narrow-ray-class-groups, isogeny-graphs-expander-dlog-random-reducibility, ray-class-subgroup-generators-small-primes]
 tags: [isogeny-graphs, expander-graphs, abelian-varieties, class-groups]
 added: 2026-11-22

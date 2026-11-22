@@ -34,7 +34,6 @@ sources:
     doi: 10.1090/S0025-5718-2015-02925-1
     hypothesis_location: Corollary 1.1
     role: refinement
-related: [miller-deterministic-primality, deterministic-square-roots-mod-p]
 review:
   state: ai-classified
   checked_by: null
@@ -46,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [miller-deterministic-primality, deterministic-square-roots-mod-p]
 tags: [quadratic-residues, explicit-bounds]
 added: 2026-11-21

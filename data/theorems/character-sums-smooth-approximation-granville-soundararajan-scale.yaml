@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [short-character-sums-smooth-number-approximation]
 tags: [character-sums, smooth-numbers, dirichlet-characters]
 added: 2026-11-22

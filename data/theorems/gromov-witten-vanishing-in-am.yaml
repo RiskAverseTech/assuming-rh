@@ -43,5 +43,7 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [parametric-nullstellensatz-in-am]
+related: [nullstellensatz-polynomial-hierarchy, schubert-vanishing-in-am-and-coam]
 tags: [arthur-merlin, nullstellensatz, gromov-witten, schubert-calculus]
 added: 2026-11-22

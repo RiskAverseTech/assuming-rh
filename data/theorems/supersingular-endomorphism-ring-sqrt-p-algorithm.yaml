@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [supersingular-inseparable-endomorphism-sqrt-p]
 tags: [algorithms, supersingular-curves, endomorphism-rings, isogenies]
 added: 2026-11-21

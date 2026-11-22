@@ -22,7 +22,6 @@ sources:
     doi: 10.1006/jcom.1996.0019
     hypothesis_location: "Theorem 9 in Section 5, which rests on the effective Chebotarev theorem of Lagarias and Odlyzko. The main result is Theorem 2."
     role: conditional-proof
-related: [effective-chebotarev, knottedness-in-np]
 review:
   state: ai-classified
   checked_by: null
@@ -34,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, knottedness-in-np]
 tags: [complexity, polynomial-systems, chebotarev]
 added: 2026-11-21

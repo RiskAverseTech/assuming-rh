@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [index-map-preimages-finite-or-positive-density, near-primitive-roots-density]
 tags: [multiplicative-index, artin-conjecture, kummer-extensions]
 added: 2026-11-21

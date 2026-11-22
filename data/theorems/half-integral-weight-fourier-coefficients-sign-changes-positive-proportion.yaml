@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [half-integral-weight-fourier-coefficients-decorrelation-primes]
 tags: [half-integral-weight, sign-changes, modular-forms, quadratic-twists]
 added: 2026-11-22

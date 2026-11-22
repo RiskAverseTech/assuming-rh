@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [chebyshev-bias, prime-races-three-or-more-competitors-bias-size]
 tags: [prime-races, chebyshev-bias, linear-independence]
 added: 2026-11-22

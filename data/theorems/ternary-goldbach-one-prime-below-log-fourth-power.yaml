@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [ternary-goldbach]
 tags: [goldbach, ternary-goldbach, small-primes, circle-method]
 added: 2026-11-22

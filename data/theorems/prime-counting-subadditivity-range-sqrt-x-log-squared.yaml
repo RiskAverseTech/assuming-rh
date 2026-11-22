@@ -34,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [schoenfeld-prime-counting-error]
 tags: [prime-counting-function, hardy-littlewood-conjecture, subadditivity]
 added: 2026-11-22

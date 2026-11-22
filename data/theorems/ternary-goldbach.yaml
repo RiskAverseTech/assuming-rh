@@ -25,7 +25,6 @@ sources:
     venue: Preprint
     url: https://arxiv.org/abs/1312.7748
     role: unconditional-proof
-related: [chen-theorem-explicit]
 review:
   state: ai-classified
   checked_by: null
@@ -37,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+related: [chen-theorem-explicit]
 tags: [goldbach, additive-problems]
 added: 2026-11-21

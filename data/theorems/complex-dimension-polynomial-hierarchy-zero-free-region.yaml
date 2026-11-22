@@ -49,5 +49,6 @@ review:
 lean:
   proved: false
   path: null
+related: [nullstellensatz-polynomial-hierarchy, three-sphere-recognition-in-conp]
 tags: [nullstellensatz, polynomial-hierarchy, zero-free-regions]
 added: 2026-11-21

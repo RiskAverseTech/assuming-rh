@@ -133,6 +133,12 @@ export function validateEntry(entry, fileName, taxonomy, knownIds = null, waitin
     errors.push('lean.proved is true but lean.path is empty');
   }
 
+  if (knownIds && entry.rests_on) {
+    for (const id of entry.rests_on) {
+      if (id === entry.id) errors.push('rests_on lists the entry itself');
+      else if (!knownIds.has(id)) errors.push(`rests_on id "${id}" does not exist`);
+    }
+  }
   if (knownIds && entry.related) {
     for (const id of entry.related) {
       if (id === entry.id) errors.push('related lists the entry itself');

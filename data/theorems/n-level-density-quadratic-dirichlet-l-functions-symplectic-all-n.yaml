@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [n-level-density-quadratic-dirichlet-l-functions-support-two]
 tags: [n-level-density, quadratic-characters, low-lying-zeros]
 added: 2026-11-22

@@ -55,5 +55,6 @@ review:
 lean:
   proved: false
   path: null
+related: [index-map-preimages-finite-or-positive-density]
 tags: [artin-conjecture, kummer-fields, chebotarev]
 added: 2026-11-22

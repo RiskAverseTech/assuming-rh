@@ -34,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+related: [average-analytic-rank-elliptic-curves-at-most-2]
 tags: [elliptic-curves, analytic-rank, number-fields]
 added: 2026-11-22

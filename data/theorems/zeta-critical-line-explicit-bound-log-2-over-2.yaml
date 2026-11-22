@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [explicit-s-s1-zeta-critical-line-bounds, zeta-critical-line-bound-lower-order-terms]
 tags: [riemann-zeta, critical-line, explicit-bounds]
 added: 2026-11-22

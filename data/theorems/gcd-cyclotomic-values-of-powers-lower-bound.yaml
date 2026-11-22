@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [greatest-common-divisor, cyclotomic-polynomials, effective-chebotarev]
 added: 2026-11-22

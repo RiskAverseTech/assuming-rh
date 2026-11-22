@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [nullstellensatz-polynomial-hierarchy, parametric-nullstellensatz-in-am]
 tags: [interactive-proofs, polynomial-ideals, arthur-merlin, chebotarev]
 added: 2026-11-22

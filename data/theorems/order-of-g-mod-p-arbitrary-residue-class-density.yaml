@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [order-of-g-mod-p-residue-classes-mod-4-density]
 tags: [multiplicative-order, artin-conjecture, kummer-extensions]
 added: 2026-11-21

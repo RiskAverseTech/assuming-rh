@@ -41,5 +41,7 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [dudek-primes-short-intervals]
+related: [primes-between-consecutive-powers-above-squares]
 tags: [primes, prime-gaps, short-intervals, explicit-bounds]
 added: 2026-11-21

@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [class-group-generators-norm-bound-4-01]
 tags: [class-groups, explicit-bounds, algorithms]
 added: 2026-11-22

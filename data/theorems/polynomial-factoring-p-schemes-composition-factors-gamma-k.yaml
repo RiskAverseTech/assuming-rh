@@ -54,5 +54,6 @@ review:
 lean:
   proved: false
   path: null
+related: [deterministic-polynomial-factoring]
 tags: [polynomial-factoring, finite-fields, algorithms, galois-groups]
 added: 2026-11-22

@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [large-values-quadratic-dirichlet-l-functions-central-point]
 tags: [l-function-values, quadratic-characters, resonance-method, derivatives]
 added: 2026-11-21

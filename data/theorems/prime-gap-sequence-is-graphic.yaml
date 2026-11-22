@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [dudek-primes-short-intervals]
 tags: [primes, prime-gaps, graph-theory]
 added: 2026-11-22

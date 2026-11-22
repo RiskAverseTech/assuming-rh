@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [idoneal-numbers-complete]
 tags: [genus-2-curves, complex-multiplication, class-groups]
 added: 2026-11-21

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [smooth-numbers-in-sqrt-length-intervals]
 tags: [smooth-numbers, short-intervals, saddle-point-method]
 added: 2026-11-22

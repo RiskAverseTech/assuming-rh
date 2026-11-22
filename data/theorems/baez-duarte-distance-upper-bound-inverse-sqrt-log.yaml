@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [baez-duarte-strong-nyman-beurling-criterion, nyman-beurling-distance-optimal-constant]
 tags: [nyman-beurling, baez-duarte-criterion, mobius-function]
 added: 2026-11-22

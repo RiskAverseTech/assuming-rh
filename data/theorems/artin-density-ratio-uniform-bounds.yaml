@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [artin-primitive-root-conjecture]
 tags: [primitive-roots, artin-conjecture, densities]
 added: 2026-11-21

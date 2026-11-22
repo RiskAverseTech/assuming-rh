@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [sato-tate-explicit-error-constant-3-33]
 tags: [ramanujan-tau, sato-tate, explicit-bounds, lehmer-conjecture]
 added: 2026-11-22

@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [moments-cubic-quartic-dirichlet-l-functions-order-of-magnitude]
 tags: [moments-of-l-functions, cubic-characters, quartic-characters]
 added: 2026-11-22

@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [multiplicative-order-benford-law]
 tags: [multiplicative-order, artin-type, carmichael-function]
 added: 2026-11-21

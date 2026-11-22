@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [prime-plus-two-prime-squares-short-intervals]
 tags: [waring-goldbach, short-intervals, prime-powers]
 added: 2026-11-22

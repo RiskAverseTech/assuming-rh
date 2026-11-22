@@ -54,5 +54,6 @@ review:
 lean:
   proved: false
   path: null
+related: [large-values-quadratic-dirichlet-l-functions-central-point]
 tags: [extreme-values, hecke-l-functions, quadratic-characters, resonance-method]
 added: 2026-11-22

@@ -55,5 +55,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [chebotarev, zero-free-regions, number-fields]
 added: 2026-11-21

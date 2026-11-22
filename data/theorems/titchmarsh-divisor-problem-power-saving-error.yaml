@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [titchmarsh-divisor-problem]
 tags: [titchmarsh-divisor-problem, dispersion-method, kloosterman-sums]
 added: 2026-11-22

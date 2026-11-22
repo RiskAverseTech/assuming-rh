@@ -33,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+related: [argument-of-zeta-extreme-values-resonance]
 tags: [zeta-function, argument-of-zeta, omega-results]
 added: 2026-11-22

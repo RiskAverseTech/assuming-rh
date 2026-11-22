@@ -35,7 +35,6 @@ sources:
     doi: 10.1090/S0025-5718-07-02003-0
     hypothesis_location: "Introduction: the hypothesis controls a sum over zeros of an L-function of a class group character and a sum over zeros of the Dedekind zeta function"
     role: refinement
-related: [hafner-mccurley-class-groups]
 review:
   state: ai-classified
   checked_by: null
@@ -47,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [hafner-mccurley-class-groups]
 tags: [class-groups, explicit-bounds, algorithms]
 added: 2026-11-21
