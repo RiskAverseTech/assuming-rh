@@ -1,0 +1,49 @@
+id: one-level-density-hilbert-modular-forms-support-three-halves
+title: One-level density for Hilbert modular forms over any totally real field
+field: analytic-number-theory
+statement_plain: >
+  Let F be a totally real number field of degree n, let k = (k_1, ..., k_n)
+  be a weight with even positive entries and N(k) their product, and let n be
+  a square-free integral ideal of F. As N(k) N(n) tends to infinity, the
+  average over all primitive Hilbert modular forms f of weight k and level n
+  of the one-level density D(f; phi) is asymptotic to the integral of
+  phi(x) (1 + delta_0(x)/2), the orthogonal density, for every Schwartz
+  function phi whose Fourier transform is supported in (-u, u), where
+  u = (3/2) log N(n) / log(N(n) N(k)^2) + (4/3) log N(k) / log(N(n) N(k)^2).
+  In particular u = 3/2 is allowed when log N(k) = o(log N(n)).
+statement_formal: |
+  \frac{1}{|\Pi_k(\mathfrak{n})|} \sum_{f \in \Pi_k(\mathfrak{n})} D(f;\phi) \sim \int_{-\infty}^{\infty} \phi(x)\Bigl(1 + \tfrac12\delta_0(x)\Bigr)dx, \qquad \mathrm{supp}\,\widehat{\phi} \subset (-u,u),\quad u = \frac{3}{2}\,\frac{\log N(\mathfrak{n})}{\log(N(\mathfrak{n})N(k)^2)} + \frac{4}{3}\,\frac{\log N(k)}{\log(N(\mathfrak{n})N(k)^2)}
+hypotheses_required: [GRH-automorphic, ERH-Dedekind]
+status: still-conditional
+waiting_on: [higher-automorphic, single-field-zeta]
+status_note: >
+  The theorem assumes GRH for the Dedekind zeta function of F, for the
+  L-functions L(s, f) of the primitive Hilbert modular forms f of weight k
+  and level n, and for their symmetric squares L(s, Sym^2 f). It extends a
+  theorem of Iwaniec, Luo and Sarnak from Q to arbitrary totally real
+  fields, and removes the class number one and parallel weight conditions of
+  Liu and Miller. A second theorem in the paper gives the symplectic
+  one-level density for Rankin-Selberg convolutions f x g with a fixed form
+  g, under GRH for the zeta function of F, L(s, f x g) and
+  L(s, Sym^2 (f x g)).
+sources:
+  - authors: A. Hamieh, P.-J. Wong
+    title: Low-Lying Zeros of $L$-functions of Adélic Hilbert Modular Forms and their Convolutions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.03034
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Even when F is abelian over the rationals (so that its zeta function is covered), the hypothesis for the Hilbert modular L-functions and their symmetric squares remains; no special case is covered.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, hilbert-modular-forms]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: keating-snaith-lower-bound-cubic-hecke-l-functions-eisenstein-field
+title: Lower bound toward the Keating-Snaith conjecture for cubic Hecke L-functions over the Eisenstein field
+field: analytic-number-theory
+statement_plain: >
+  Let omega = e^(2 pi i/3), and let F be the family of square-free f in
+  Z[omega] with f not 1 and f congruent to 1 modulo 9, with chi_f the cubic
+  residue character modulo f. For any fixed interval (alpha, beta), as X
+  tends to infinity the number of f in F with X < N(f) <= 2X for which
+  log|L(1/2, chi_f)| / sqrt(log log N(f)) lies in (alpha, beta) is at least
+  (2/13) (P(alpha < Z < beta) + o(1)) times the number of f in F with
+  X < N(f) <= 2X, where Z is a standard normal random variable.
+statement_formal: |
+  \#\Bigl\{ f \in \mathcal{F} : X < N(f) \le 2X,\ \frac{\log|L(\frac12,\chi_f)|}{\sqrt{\log\log N(f)}} \in (\alpha,\beta) \Bigr\} \ge \frac{2}{13}\Bigl( \int_\alpha^\beta \frac{1}{\sqrt{2\pi}} e^{-t^2/2}\,dt + o(1) \Bigr)\, \#\{ f \in \mathcal{F} : X < N(f) \le 2X \}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The theorem assumes GRH for the Hecke L-functions L(s, chi_f) of the cubic
+  residue characters over Q(omega), for f in the family. These are not
+  Dirichlet L-functions. The proof extends the method of Radziwill and
+  Soundararajan to this family, using twisted one-level density estimates
+  that build on the work of David and Guloglu recorded in the entry
+  one-level-density-cubic-l-functions-eisenstein-field-support-13-11; the
+  constant 2/13 is the non-vanishing proportion obtained there.
+sources:
+  - authors: H. Lin, P.-J. Wong
+    title: Towards Keating-Snaith's conjecture for cubic Hecke $L$-functions over the Eisenstein field
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.08783
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [central-values, cubic-characters, hecke-l-functions, value-distribution]
+added: 2026-11-22

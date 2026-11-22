@@ -1,0 +1,55 @@
+id: ratios-conjecture-primitive-quadratic-hecke-l-functions-class-number-one
+title: Ratios conjecture with one shift for primitive quadratic Hecke L-functions over imaginary quadratic fields of class number one
+field: analytic-number-theory
+statement_plain: >
+  Let K be an imaginary quadratic field of class number one, w a
+  non-negative Schwartz function, and chi^(c_K c) the primitive quadratic
+  Hecke character attached to a square-free c in O_K coprime to 2. For
+  0 < |Re(alpha)| < 1/2 and Re(beta) > 0, the sum over such c of
+  L(1/2 + alpha, chi^(c_K c)) / L(1/2 + beta, chi^(c_K c)) w(N(c)/X) equals
+  an explicit main term of size X plus an explicit secondary term of size
+  X^(1 - alpha), with error O((1 + |alpha|)^(5/2 + eps) (1 + |beta|)^eps
+  X^(E + eps)), where E = max(1/2, 1 - Re(alpha) - Re(beta),
+  1 - Re(alpha)/2 - Re(beta)/2, 1/2 - Re(alpha)/2, 1/2 - Re(alpha)).
+statement_formal: |
+  \begin{aligned} \sum\nolimits^{*}_{(c,2)=1} \frac{L(\frac12+\alpha, \chi^{(c_K c)})}{L(\frac12+\beta, \chi^{(c_K c)})}\, w\Bigl(\frac{N(c)}{X}\Bigr) &= X\,\widehat{w}(1)\,\frac{r_K |U_K|^2 a(2)}{\zeta_K(2)}\,\frac{\zeta_K^{(2)}(1+2\alpha)}{\zeta_K^{(2)}(1+\alpha+\beta)}\,P\bigl(\tfrac12+\alpha, \tfrac12+\beta\bigr) \\ &\quad + X^{1-\alpha}\,\widehat{w}(1-\alpha)\,\frac{(2\pi)^{2\alpha}}{(|D_K| N(c_K))^{\alpha}}\,\frac{\Gamma(\frac12-\alpha)}{\Gamma(\frac12+\alpha)}\,\frac{r_K |U_K|^2 a(2)}{\zeta_K(2)}\,\frac{\zeta_K^{(2)}(1-2\alpha)}{\zeta_K^{(2)}(1-\alpha+\beta)}\,P\bigl(\tfrac12-\alpha, \tfrac12+\beta\bigr) \\ &\quad + O\bigl((1+|\alpha|)^{5/2+\varepsilon}(1+|\beta|)^{\varepsilon} X^{E(\alpha,\beta)+\varepsilon}\bigr) \end{aligned}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper says the only place GRH is needed is the bound
+  1/L(z, chi^(c_K c)) << (|z| N(c_K c))^eps for Re(z) >= 1/2 + eps, that is,
+  GRH for the quadratic Hecke L-functions in the family. These are
+  L-functions of quadratic residue symbols over K = Q(sqrt(d)), d in {-1,
+  -2, -3, -7, -11, -19, -43, -67, -163}, and in general not Dirichlet
+  L-functions. In the formula r_K is the residue of zeta_K at 1, U_K the
+  unit group, D_K the discriminant, a(2) the product over primes dividing 2
+  of (1 + 1/N)^(-1), zeta_K^(2) the zeta function without Euler factors at
+  2, c_K = (1 + i)^5, 4 sqrt(-2) or 8 according to d, and P an explicit
+  Euler product over odd primes. The paper notes that letting beta tend to
+  infinity gives the first moment with error O(X^(1/2 + eps)) with no
+  hypothesis. It is the analog of the entry
+  ratios-conjecture-quadratic-dirichlet-l-functions-one-shift.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Ratios conjecture for primitive quadratic Hecke $L$-functions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2309.13811
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Only the quadratic field Q(i) is cyclotomic; power-residue-characters is used as the closest waiting_on family for quadratic residue symbols over the other eight fields.
+    - >-
+      The main terms were transcribed from the PDF of Theorem 1.1; the definitions of the Euler product P(w, z) and of the exact set of c summed over are in the paper and are only summarized here.
+lean:
+  proved: false
+  path: null
+tags: [ratios-conjecture, hecke-l-functions, quadratic-characters, moments]
+added: 2026-11-22
