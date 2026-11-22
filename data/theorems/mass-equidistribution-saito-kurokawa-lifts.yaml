@@ -1,0 +1,48 @@
+id: mass-equidistribution-saito-kurokawa-lifts
+title: Mass equidistribution for Saito-Kurokawa lifts as the weight grows
+field: analytic-number-theory
+statement_plain: >
+  Let F run through holomorphic Siegel cusp forms of weight k for Sp_4(Z)
+  that are Hecke eigenforms and Saito-Kurokawa lifts. Then for every bounded
+  continuous function phi on Sp_4(Z)\H_2, the normalized mass
+  |F(Z)|^2 (det Y)^k dmu / ||F||^2 integrated against phi tends to the
+  average of phi with respect to the invariant measure as k tends to
+  infinity. Consequently the zero divisors of these lifts, divided by k,
+  converge weakly to the Kaehler form of the Bergman metric.
+statement_formal: |
+  \frac{1}{\|F\|_2^2}\int_{\text{Sp}_4(\mathbb{Z})\backslash\mathbb{H}_2} |F(Z)|^2\,\varphi(Z)\,(\det Y)^{k-3}\,dX\,dY \ \longrightarrow\ \frac{1}{\text{vol}(\text{Sp}_4(\mathbb{Z})\backslash\mathbb{H}_2)}\int_{\text{Sp}_4(\mathbb{Z})\backslash\mathbb{H}_2} \varphi(Z)\,(\det Y)^{-3}\,dX\,dY \qquad (k\to\infty)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorems say only "Assume GRH". The proof of the key moment bound
+  (Proposition 4.1) names what is used: GRH for L(s, f x chi_d) for all
+  fundamental discriminants d, and for L(s, Sym^2 f), where f is the
+  integral weight Hecke eigenform of weight 2k - 2 for SL_2(Z) attached to
+  the lift by the Shimura correspondence. The weights go to infinity, so
+  this is beyond weight 2 forms. The bound L(1, chi_d) << log log |d| for
+  quadratic Dirichlet characters is also used under GRH. The equidistribution
+  of zero divisors is Theorem 1.3; the paper says it needs GRH only through
+  Theorem 1.2. This is the degree 2 Siegel analog of the entry
+  quantum-unique-ergodicity-half-integral-weight-kohnen-plus-space.
+sources:
+  - authors: J. Jääsaari, S. Lester, A. Saha
+    title: Mass equidistribution for Saito-Kurokawa lifts
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2309.13009
+    hypothesis_location: Theorem 1.2 (L-functions named after Proposition 4.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The list of L-functions is taken from the sentence after Proposition 4.1 and from Section 4; other parts of the paper that say only "Assume GRH" were not traced line by line.
+lean:
+  proved: false
+  path: null
+tags: [quantum-unique-ergodicity, siegel-modular-forms, saito-kurokawa-lifts]
+added: 2026-11-22

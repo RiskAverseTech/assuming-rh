@@ -1,0 +1,48 @@
+id: elliptic-curve-point-counts-products-many-representations
+title: Some integers are products of point counts N_p(E) at k primes in unboundedly many ways
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over Q without complex multiplication, let
+  N_p(E) be the number of points of E modulo a prime p of good reduction,
+  and let G_k(E, n) be the number of k-tuples of good primes
+  p_1 < ... < p_k with N_{p_1}(E) ... N_{p_k}(E) = n. For every k >= 3
+  the limit superior of G_k(E, n) as n tends to infinity is infinite. More
+  precisely, for all large x there are integers n <= x with
+  G_k(E, n) >= (log x)^delta, where delta = k (log 2)(1 - 2 eps) - 2 > 0
+  for small eps > 0.
+statement_formal: |
+  \limsup_{n\to\infty} G_k(E,n)=\infty \qquad (k\ge 3)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper defines its hypothesis (Definition 2.7): for all n >= 2 the
+  Dedekind zeta function of the division field K_n = Q(E[n]) has all its
+  nontrivial zeros on the critical line. These fields are Galois over Q
+  with group inside GL_2(Z/n) and are not abelian in general. The
+  hypothesis enters through an explicit error term for the number of primes
+  p <= x with d dividing N_p(E), which feeds a result of Liu on the normal
+  order of the number of prime divisors of N_p(E). For curves with complex
+  multiplication the paper proves the same statement unconditionally. The
+  paper conjectures that the result also holds for k = 1 and k = 2.
+sources:
+  - authors: K. Joshi
+    title: On the equation $N_{p_1}(E)\cdot N_{p_2}(E)\cdots N_{p_k}(E)=n$
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/1711.06283
+    hypothesis_location: Theorem 1.7 (hypothesis defined in Definition 2.7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      In the extracted text the displayed statement reads "lim" where the abstract has a limit superior; the entry uses the limit superior. The formula for delta was read from garbled text and checked against the range of eps in Theorem 2.32.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, point-counts, division-fields]
+added: 2026-11-22
