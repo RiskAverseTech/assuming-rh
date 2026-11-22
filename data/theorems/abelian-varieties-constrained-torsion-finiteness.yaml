@@ -23,6 +23,8 @@ status_note: >
   the fields are not abelian and the result stays conditional. The paper
   also proves unconditionally the semistable version (Theorem 3.6) and
   several cases of small degree and dimension.
+  A later paper (Ishii, 2025) proves the case of abelian fivefolds over the
+  rationals without the hypothesis.
 sources:
   - authors: C. Rasmussen, A. Tamagawa
     title: Arithmetic of abelian varieties with constrained torsion
@@ -31,6 +33,13 @@ sources:
     url: https://arxiv.org/abs/1302.1477
     hypothesis_location: Theorem 5.1
     role: conditional-proof
+  - authors: S. Ishii
+    title: On the Rasmussen-Tamagawa conjecture for abelian fivefolds
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2510.14306
+    hypothesis_location: "Theorem 1.3 (no hypothesis)"
+    role: refinement
 review:
   state: ai-classified
   checked_by: null

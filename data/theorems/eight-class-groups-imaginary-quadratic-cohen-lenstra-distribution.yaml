@@ -12,9 +12,12 @@ statement_plain: >
 statement_formal: |
   \lim_{N\to\infty} \frac{\#\{-N < d < 0 \text{ squarefree} : 2\,\mathrm{Cl}\,K_d[8] \cong (\mathbb{Z}/2\mathbb{Z})^{m-j} \oplus (\mathbb{Z}/4\mathbb{Z})^{j}\}}{\#\{-N < d < 0 \text{ squarefree} : 2\,\mathrm{Cl}\,K_d[4] \cong (\mathbb{Z}/2\mathbb{Z})^{m}\}} = \frac{\#\{M \in M_m(\mathbb{F}_2) : \operatorname{corank}(M) = j\}}{\# M_m(\mathbb{F}_2)}
 hypotheses_required: [ERH-Dedekind]
-status: still-conditional
-waiting_on: [galois-extensions]
+status: proved-otherwise
 status_note: >
+  Now known without any hypothesis: the same author later proved that the
+  2^infinity-class groups of imaginary quadratic fields have the predicted
+  distribution (Smith, 2017), which includes the 8-class groups. What
+  follows describes the earlier conditional proof.
   The paper's Assumption 4.1 is the Riemann hypothesis for the Dedekind zeta
   function of every finite Galois extension K of the rationals whose Galois
   group is a metabelian 2-group; it is used through an effective Chebotarev
@@ -31,12 +34,20 @@ sources:
     url: https://arxiv.org/abs/1607.07860
     hypothesis_location: "Theorem 4.2 (under Assumption 4.1)"
     role: conditional-proof
+  - authors: A. Smith
+    title: "2^∞-Selmer groups, 2^∞-class groups, and Goldfeld's conjecture"
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1702.02325
+    role: unconditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
   confidence: medium
   open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of arXiv 1702.02325, which says the 2^infinity-class groups of imaginary quadratic fields have the distribution predicted by the Cohen-Lenstra heuristic. Only the abstract was read; that the two papers use the same normalization of the distribution was not checked.
     - >-
       The author's later work on 2^infinity-Selmer groups and class groups may establish this distribution without the hypothesis. That is not stated in this paper and was not checked, so the status is left as still-conditional; a reviewer should check whether proved-otherwise applies.
     - >-

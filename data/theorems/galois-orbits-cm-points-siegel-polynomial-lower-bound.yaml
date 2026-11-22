@@ -11,9 +11,11 @@ statement_plain: >
 statement_formal: |
   |\mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \cdot x| \gg_g \mathrm{Disc}(Z(\mathrm{End}(B)))^{\delta_g}
 hypotheses_required: [ERH-Dedekind]
-status: still-conditional
-waiting_on: [galois-extensions]
+status: proved-otherwise
 status_note: >
+  Now known without any hypothesis: the same author later obtained lower
+  bounds for Galois orbits of CM points from the averaged Colmez conjecture
+  (Tsimerman, 2015). What follows describes the earlier conditional proof.
   The paper's hypothesis is "the Generalized Riemann Hypothesis for CM
   fields". It is used (Theorem 7.6) to produce many rational primes of size
   a small power of the discriminant that split completely in the CM field K,
@@ -30,12 +32,20 @@ sources:
     url: https://arxiv.org/abs/1103.5619
     hypothesis_location: Theorem 1.1 (second sentence), proved through Theorem 7.6
     role: conditional-proof
+  - authors: J. Tsimerman
+    title: A proof of the Andre-Oort conjecture for A_g
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1506.01466
+    role: unconditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
   confidence: medium
   open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of arXiv 1506.01466, which says the averaged Colmez conjecture yields lower bounds for Galois orbits of CM points. Only the abstract was read; whether the later bound has the same exponent as the one stated here was not checked.
     - >-
       The paper says only "GRH for CM fields". Counting rational primes that split completely in K is a Chebotarev statement for the Galois closure of K, so the Dedekind zeta function of the Galois closure (also a CM field) is presumably what is needed; the paper does not spell this out.
     - >-
