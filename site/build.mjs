@@ -469,6 +469,13 @@ function buildWaiting() {
     return { w, all, only };
   }).sort((a, b) => b.all.length - a.all.length);
   const multi = open.filter((e) => e.waiting_on.length > 1).length;
+  const within = (codes) => open.filter((e) => e.hypotheses_required.every((h) => codes.includes(h))).length;
+  const ladder = [
+    ['the Dedekind zeta function of every number field', within(['RH', 'GRH-Dirichlet', 'ERH-Dedekind'])],
+    ['those, and every Hecke L-function', within(['RH', 'GRH-Dirichlet', 'ERH-Dedekind', 'GRH-Hecke'])],
+    ['those, and every Artin L-function', within(['RH', 'GRH-Dirichlet', 'ERH-Dedekind', 'GRH-Hecke', 'GRH-Artin'])],
+  ];
+  const beyond = open.length - ladder[2][1];
   const top = rows[0];
   page({
     file: 'waiting.html',
@@ -491,6 +498,16 @@ The same caution applies here as everywhere on this site: these groupings were d
 </div>
 <p class="muted">An entry is counted under every group it needs, so the middle column adds up to more than ${open.length}. ${multi} entries need more than one group.
 "Need nothing else" means the entry would be fully unlocked if that one group were proved, on top of what the announced proof covers.</p>
+
+<section aria-labelledby="next">
+<h2 id="next">What would move next</h2>
+<p>The author's note says he expects, "with more time", to obtain "the Extended Riemann Hypothesis too". The note does not define the term; it usually means the Riemann Hypothesis for Dedekind zeta functions of number fields. Nothing of the kind has been released. This section only counts what further results would settle here, going by the hypothesis codes on each entry.</p>
+<p>If the Riemann Hypothesis were proved for:</p>
+<ul>
+  ${ladder.map(([label, n]) => `<li>${esc(label)}: <strong>${n} of ${open.length}</strong> waiting entries would need nothing further.</li>`).join('\n  ')}
+</ul>
+<p class="muted">The steps are cumulative. The remaining ${beyond} entries need the hypothesis for automorphic L-functions, or an assumption that is not a Riemann Hypothesis at all. The counts inherit every caution on this site: the codes were assigned by an AI system and have not been checked by an expert.</p>
+</section>
 
 ${rows.map(({ w, all }) => `<section aria-labelledby="${w.code}">
   <h2 id="${w.code}">${esc(w.name)} <span class="count-inline">${all.length}</span></h2>
