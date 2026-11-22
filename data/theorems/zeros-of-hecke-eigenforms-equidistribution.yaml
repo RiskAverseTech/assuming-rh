@@ -1,0 +1,56 @@
+id: zeros-of-hecke-eigenforms-equidistribution
+title: "Zeros of Hecke eigenforms equidistribute as the weight grows"
+field: analytic-number-theory
+statement_plain: >
+  Let f_k be a sequence of cuspidal Hecke eigenforms for SL2(Z) of weight k.
+  As k tends to infinity, the zeros of f_k become equidistributed in the
+  modular domain SL2(Z)\H with respect to the normalized hyperbolic measure
+  (3/pi) dx dy / y^2: the proportion of inequivalent zeros lying in a nice
+  compact set tends to its relative hyperbolic area.
+statement_formal: null
+hypotheses_required: [GRH-automorphic]
+status: proved-otherwise
+status_note: >
+  Now known without any hypothesis: Holowinsky and Soundararajan (2008)
+  prove the mass equidistribution conjecture of Rudnick and Sarnak for Hecke
+  eigenforms, which is the only step where this paper used the hypothesis.
+  What follows describes the earlier conditional proof.
+  The paper says the hypothesis is the Generalized Riemann Hypothesis "for
+  certain automorphic L-functions". In the sketch of proof these are the
+  Rankin-Selberg L-functions L(s, f_k x f_k) (periods against Eisenstein
+  series) and the triple product L-functions L(1/2, g x f_k x f_k) with g a
+  Hecke-Maass cusp form (via Watson's formula). The hypothesis is used only
+  to get equidistribution of the masses y^k |f_k|^2 dV; the passage from
+  mass equidistribution to zeros (Theorem 2) is unconditional. The paper
+  notes the result is unconditional for CM forms.
+sources:
+  - authors: "Z. Rudnick"
+    title: "On the asymptotic distribution of zeros of modular forms"
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0506267
+    hypothesis_location: "Theorem 1"
+    role: conditional-proof
+  - authors: R. Holowinsky, K. Soundararajan
+    title: Mass equidistribution for Hecke eigenforms
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0809.1636
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of the Holowinsky and Soundararajan paper (only the abstract was read) together with this paper's own statement that the step from mass equidistribution to zeros is unconditional.
+    - >-
+      Mass equidistribution for holomorphic Hecke eigenforms of growing weight was later proved without any hypothesis (Holowinsky and Soundararajan, 2010), which combined with Theorem 2 of this paper would make the statement unconditional. The paper on disk predates that work and does not name it, so the status here is left as still-conditional; a reviewer should probably change it to proved-otherwise and add that source.
+    - >-
+      The proof of Theorem 1 in the paper is only a sketch (Section 4) that refers to Sarnak and Watson for the link between the hypothesis and mass equidistribution.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, equidistribution, quantum-unique-ergodicity]
+added: 2026-11-22

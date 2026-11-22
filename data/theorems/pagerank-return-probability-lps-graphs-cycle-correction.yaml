@@ -1,0 +1,43 @@
+id: pagerank-return-probability-lps-graphs-cycle-correction
+title: "PageRank return probability on Lubotzky-Phillips-Sarnak graphs: the cycle correction has order 1/N"
+field: analytic-number-theory
+statement_plain: >
+  Fix a prime p congruent to 1 mod 4 and an interval I = [c0, c1] of
+  positive reals. For an admissible prime q (q congruent to 1 mod 4, p a
+  quadratic non-residue mod q, q > 2 sqrt(p)), let X_q be the Lubotzky-
+  Phillips-Sarnak graph, which is (p+1)-regular with N_q = q(q^2 - 1)
+  vertices, and let Delta_q(alpha) be the return probability of a simple
+  random walk on X_q stopped at an independent geometric time with parameter
+  alpha, minus the same quantity on the (p+1)-regular tree. Then for alpha =
+  1 - c / log q, the correction Delta_q(alpha) is bounded above and below by
+  constant multiples of 1/N_q, uniformly for c in I, for every sufficiently
+  large admissible q.
+statement_formal: |
+  \Delta_q(\alpha_{q,c}) \asymp_{p,I} \frac{1}{N_q}, \qquad \alpha_{q,c} = 1 - \frac{c}{\log q},\quad N_q = q(q^2-1)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Generalized Riemann Hypothesis for L(s, chi_D) for
+  every negative fundamental discriminant D; the paper remarks that for a
+  given level q the proof uses it only for |D| <= q^6. The lower bound is
+  unconditional, and unconditionally the paper proves the upper bound with
+  an extra factor log log q (Theorem 1.1(i)).
+sources:
+  - authors: "S. Hua"
+    title: "PageRank on Lubotzky-Phillips-Sarnak graphs"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.00109
+    hypothesis_location: "Theorem 1.1(ii)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [ramanujan-graphs, random-walks, quadratic-characters]
+added: 2026-11-22

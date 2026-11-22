@@ -1,0 +1,40 @@
+id: elliptic-curve-group-order-divisible-by-m-deterministic
+title: "Deterministic construction of an elliptic curve over F_p with group order divisible by m"
+field: computational-number-theory
+statement_plain: >
+  There is a deterministic algorithm that, given a prime p > 3 and a
+  positive integer m = o(p^(1/2) (log p)^(-4)), outputs an elliptic curve E
+  over the finite field F_p such that m divides the number of points of E
+  over F_p, in time m p^(1/2 + o(1)).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says the hypothesis comes into play in selecting a prime v in a
+  prescribed interval [V, 4V], with V at least a constant times (log p)^2,
+  modulo which p is a quadratic residue (Corollary 5, from a bound for sums
+  of Legendre symbols (p/v), a character modulo 4p). The curve is then built
+  by the CM method with a discriminant made small by the square factor v^2.
+  The same paper gives an unconditional version that works for almost all
+  primes p (Theorem 3).
+sources:
+  - authors: "I. E. Shparlinski, A. V. Sutherland"
+    title: "Finding elliptic curves with a subgroup of prescribed size"
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1403.7887
+    hypothesis_location: "Theorem 2 (hypothesis used in Lemma 4 and Corollary 5)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The explicit uses are Lemma 4 and Corollary 5 (Legendre symbols, a Dirichlet character modulo 4p) and finding a quadratic non-residue; the deterministic Hilbert class polynomial and root-finding steps are described as not relying on GRH. A reviewer should confirm no cited subroutine in the proof of Theorem 2 needs more.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, finite-fields, cm-method, algorithms]
+added: 2026-11-22

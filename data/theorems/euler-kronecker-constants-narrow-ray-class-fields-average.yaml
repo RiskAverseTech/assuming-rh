@@ -1,0 +1,49 @@
+id: euler-kronecker-constants-narrow-ray-class-fields-average
+title: "Average bound for Euler-Kronecker constants of narrow ray class fields of an imaginary quadratic field"
+field: algebraic-number-theory
+statement_plain: >
+  Let K be an imaginary quadratic field with class number h_K and
+  discriminant d_K, and for a principal prime ideal q of O_K let K(q) be the
+  narrow ray class field modulo q, with Euler-Kronecker constant
+  gamma_{K(q)}. For Q >= 8 exp(8 * 10^45 |d_K|), the average of
+  |gamma_{K(q)}| over principal prime ideals q with Q/2 < N(q) <= Q is less
+  than |gamma_K| + (6000 h_K^2 + 10^17 h_K + 11) log Q.
+statement_formal: |
+  \frac{1}{\pi^{*}(Q)}\sum\nolimits^{\prime}_{\frac12 Q< N\mathfrak{q}\le Q}\bigl|\gamma_{K(\mathfrak{q})}\bigr| < |\gamma_K| + \bigl(6000\,h_K^{2}+10^{17}\,h_K+11\bigr)\log Q
+hypotheses_required: [ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [single-field-zeta, class-group-characters]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the Dedekind zeta functions
+  of the fields K(q) for all non-zero principal prime ideals q. These fields
+  are abelian over K but, as the paper stresses, not abelian over the
+  rationals, so no case is covered by Dirichlet L-functions. The zeta
+  function of K(q) is the product of the Hecke L-functions of the ray class
+  characters modulo q, and the proof applies the hypothesis to these
+  (Proposition 5.3) and to the zeta function of the Hilbert class field
+  through the explicit Chebotarev theorem of Grenie and Molteni; this is why
+  GRH-Hecke is listed next to ERH-Dedekind. In the primed sum q runs over
+  principal prime ideals and pi*(Q) counts them.
+sources:
+  - authors: "N. Kandhil, R. Lunia, J. Sivaraman"
+    title: "Explicit upper bounds on the average of Euler-Kronecker constants of narrow ray class fields"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2402.13127
+    hypothesis_location: "Theorem 1.7"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper states its hypothesis only for Dedekind zeta functions of the fields K(q). GRH-Hecke is added because that hypothesis is equivalent to the Riemann Hypothesis for the ray class Hecke L-functions modulo q that the proof works with; a reviewer may prefer to list ERH-Dedekind alone.
+    - >-
+      The coefficient 10^17 of h_K was read from the PDF; the extracted text prints it as '1017'.
+lean:
+  proved: false
+  path: null
+tags: [euler-kronecker-constants, ray-class-fields, explicit-bounds]
+added: 2026-11-22

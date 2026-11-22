@@ -1,0 +1,45 @@
+id: random-multiplicative-functions-modular-coefficients-high-moments
+title: "High moments of Steinhaus random multiplicative functions twisted by Hecke eigenvalues"
+field: analytic-number-theory
+statement_plain: >
+  Let lambda(n) be the normalized Fourier coefficients of a fixed
+  holomorphic Hecke eigenform of weight divisible by 4 for SL2(Z), and h a
+  Steinhaus random multiplicative function. There is a small absolute
+  constant c > 0 such that the expectation of |sum over n <= x of h(n)
+  lambda(n)|^(2q) equals exp(-q^2 log q - q^2 log log(2q) + O(q^2)) x^q (log
+  x)^((q-1)^2), uniformly for all large x and real 1 <= q <= c log x / log
+  log x.
+statement_formal: |
+  \mathbb{E}\Bigl|\sum_{n\le x}h(n)\lambda(n)\Bigr|^{2q} = \exp\bigl(-q^{2}\log q-q^{2}\log\log(2q)+O(q^{2})\bigr)\,x^{q}(\log x)^{(q-1)^{2}}
+hypotheses_required: [RH, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper writes only "GRH". The places where it is invoked are the prime
+  number theorem with square-root error term (the Riemann zeta function) and
+  the corresponding bounds for sums of lambda(n)^2 and of (lambda(p)^2 - 1)
+  log p, which rest on the symmetric square L-function L(s, sym^2 f) of the
+  fixed eigenform f. The authors remark that the hypothesis is indispensable
+  at only two places and might be removable with more work. Theorem 1.2
+  gives the analogous result for Rademacher random multiplicative functions.
+sources:
+  - authors: "P. Gao, L. Zhao"
+    title: "High moments of random multiplicative functions twisted by Fourier coefficients of modular forms"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.01514
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The codes are inferred from Lemma 2.2 and formula (2.8): zeta and the symmetric square L-function of f. If L(s, f) itself is also needed somewhere, the classification does not change.
+lean:
+  proved: false
+  path: null
+tags: [random-multiplicative-functions, modular-forms, moments]
+added: 2026-11-22

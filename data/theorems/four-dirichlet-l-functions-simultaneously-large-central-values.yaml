@@ -1,0 +1,44 @@
+id: four-dirichlet-l-functions-simultaneously-large-central-values
+title: "Four twisted Dirichlet L-functions are simultaneously large, and simultaneously small and nonzero, at the central point"
+field: analytic-number-theory
+statement_plain: >
+  Let q be a large prime and let chi_1, ..., chi_4 be even primitive
+  Dirichlet characters to pairwise coprime squarefree moduli D_j <= D, with
+  D^272 << q^(11/16 - 1/2000). For every fixed c > 0 there are >> q
+  characters chi mod q with |L(1/2, chi chi_j)| > exp(c sqrt(log log q)) for
+  all j = 1, ..., 4, and there are >> q characters chi mod q with 0 <
+  |L(1/2, chi chi_j)| < exp(-c sqrt(log log q)) for all j = 1, ..., 4.
+statement_formal: |
+  \#\Bigl\{\chi \bmod q:\ |L(\tfrac12,\chi\chi_j)| > \exp\bigl(c\sqrt{\log\log q}\bigr),\ j=1,\dots,4\Bigr\} \gg_c q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is a corollary of the paper's main result, a weighted central limit
+  theorem (Theorem 1.1): with respect to a mollified weight that vanishes
+  when a central value vanishes, the four normalized values log|L(1/2, chi
+  chi_j)| / sqrt((1/2) log log q) are asymptotically independent standard
+  Gaussians, with error O((log log q)^(-1/2 + epsilon)). The hypothesis is
+  used for the Dirichlet L-functions involved.
+sources:
+  - authors: "H. M. Bui, A. Florea, M. B. Milinovich"
+    title: "Simultaneous non-vanishing of Dirichlet L-functions, II: Weighted central limit theorem"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.21532
+    hypothesis_location: "Corollary 1.2 (from Theorem 1.1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Corollary 1.2 does not restate the conditions on the characters chi_j and the size of D; they are taken here from the standing assumptions and from Theorem 1.1, from which the corollary is deduced.
+    - >-
+      The paper writes 'the Generalized Riemann Hypothesis' without a formal definition; every L-function in the argument is a Dirichlet L-function.
+lean:
+  proved: false
+  path: null
+tags: [central-values, dirichlet-l-functions, central-limit-theorem]
+added: 2026-11-22

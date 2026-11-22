@@ -1,0 +1,41 @@
+id: large-values-quadratic-character-sums-beyond-square-root
+title: "Large values of quadratic character sums longer than the square root of the modulus"
+field: analytic-number-theory
+statement_plain: >
+  Let X be large and exp((log X)^(1/2 + epsilon)) < x < X^(1/2). Then there
+  is a fundamental discriminant d with X < |d| <= 2X for which the sum of
+  chi_d(n) over n <= |d|/x is at least sqrt(X/x) exp((1 + o(1))
+  sqrt(log(sqrt(X)/x) log_3(sqrt(X)/x) / log_2(sqrt(X)/x))), where log_j is
+  the j-fold iterated logarithm.
+statement_formal: |
+  \max_{\substack{X<|d|\le 2X\\ d\in\mathcal F}}\ \sum_{n\le |d|/x}\chi_d(n)\ \ge\ \sqrt{\frac{X}{x}}\,
+  \exp\!\left((1+o(1))\sqrt{\frac{\log(\sqrt X/x)\,\log_3(\sqrt X/x)}{\log_2(\sqrt X/x)}}\right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used through Lemma 2.2, an asymptotic for the sum of
+  chi_d(n) over fundamental discriminants |d| <= X with error O(X^(1/2 +
+  epsilon)), quoted from an earlier paper. This is a dual of an
+  unconditional result of de la Breteche and Tenenbaum for sums of length x
+  up to the square root of the modulus.
+sources:
+  - authors: "Z. Dong, R. Wang, W. Wang, H. Zhang"
+    title: "Large values of quadratic character sums revisited"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.24147
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH' and does not define it. The one place it is used (Lemma 2.2, cited from another paper) is a sum of the quadratic characters chi_d(n) over d, which is governed by Dirichlet L-functions; the cited source was not read.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, quadratic-characters, omega-results]
+added: 2026-11-22

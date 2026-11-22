@@ -1,0 +1,48 @@
+id: gauss-class-number-mean-value-error-118-181
+title: "Gauss's class number mean value formulas with error exponent 118/181"
+field: analytic-number-theory
+statement_plain: >
+  Let h(D) be the number of SL2(Z)-classes of primitive binary quadratic
+  forms of discriminant D, and eps_D the fundamental unit of norm 1 for
+  positive non-square D. Gauss's mean value formulas for the four sums over
+  n <= N of h(-4n), h(-n), h(n) log eps_n and h(4n) log eps_4n hold, with
+  their known main and secondary terms, with error term O(N^(118/181 +
+  epsilon)) for every epsilon > 0. For example, the sum of h(-4n) over n <=
+  N equals (4 pi / (21 zeta(3))) N^(3/2) - (2 / pi^2) N + O(N^(118/181 +
+  epsilon)).
+statement_formal: |
+  \sum_{n\le N} h(-4n) = \frac{4\pi}{21\,\zeta(3)}\,N^{3/2} - \frac{2}{\pi^{2}}\,N + O_{\varepsilon}\bigl(N^{118/181+\varepsilon}\bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The assumption actually used is the uniform Lindelof bound L(1/2 + it,
+  chi) << (q(1+|t|))^epsilon for primitive non-principal quadratic Dirichlet
+  characters chi of conductor q, which the paper notes follows from the
+  Generalized Riemann Hypothesis for quadratic Dirichlet L-functions. The
+  paper says the hypothesis enters only through the boundary terms (short
+  sums of L(1, chi)). Unconditionally the same paper gets the exponent 55/84
+  (Theorems 1.1 and 1.2), and 2274811/3487744 if no Dirichlet L-function
+  vanishes in Re s > 7/8 (Theorem 1.3).
+sources:
+  - authors: "B. Jia, C. Luo, X. Song, W. Xiong"
+    title: "On the error term in Gauss's mean value formulas for class numbers"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.10606
+    hypothesis_location: "Remark 1.4 (proved in Section 7.4)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The result is stated as a remark (Remark 1.4) with a proof in Section 7.4, not as a numbered theorem.
+    - >-
+      The hypothesis in the paper is the Lindelof bound for quadratic Dirichlet L-functions, which is weaker than the Riemann Hypothesis for them.
+lean:
+  proved: false
+  path: null
+tags: [class-numbers, binary-quadratic-forms, mean-values]
+added: 2026-11-22
