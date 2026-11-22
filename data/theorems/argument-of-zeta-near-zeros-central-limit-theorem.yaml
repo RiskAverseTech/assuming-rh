@@ -1,0 +1,42 @@
+id: argument-of-zeta-near-zeros-central-limit-theorem
+title: Central limit theorem with rate for arg zeta(rho + z) over the zeros rho
+field: analytic-number-theory
+statement_plain: >
+  Let rho = 1/2 + i gamma run over the nontrivial zeros of the Riemann zeta
+  function with 0 < gamma <= T, and let N(T) be their number. Put
+  Psi(T) = sum of 1/p over primes p <= T and X = T^(1/(16 Psi(T)^6)). Let
+  z = u + iv with 0 < u <= 1/log X and v = O(1/log X). Then for T
+  sufficiently large the proportion of these zeros with
+  arg zeta(rho + z) / sqrt((1/2) log log T) in [a, b] equals the standard
+  Gaussian measure of [a, b] plus O(log log log T / sqrt(log log T)).
+statement_formal: |
+  \frac{1}{N(T)}\,\#\left\{0<\gamma\le T:\ \frac{\arg\zeta(\rho+z)}{\sqrt{\tfrac12\log\log T}}\in[a,b]\right\} = \frac{1}{\sqrt{2\pi}}\int_a^b e^{-x^2/2}\,dx + O\!\left(\frac{\log\log\log T}{\sqrt{\log\log T}}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Theorem 1.2 of the paper, which assumes the Riemann Hypothesis
+  only. The companion results for log|zeta(rho + z)| (Theorem 1.1) and for
+  log(|zeta'(rho)| / log T) (Theorem 1.3, sharpening a theorem of Hejhal)
+  need in addition Montgomery's Pair Correlation Conjecture, or a
+  zero-spacing hypothesis together with simplicity of all zeros, and are
+  not recorded here.
+sources:
+  - authors: F. Cicek
+    title: On the Logarithm of the Riemann Zeta-function Near the Nontrivial Zeros
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.10533
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The paper does not say in the statement whether the error term is uniform in a and b.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, argument-of-zeta, central-limit-theorem]
+added: 2026-11-22

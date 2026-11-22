@@ -1,0 +1,41 @@
+id: montgomery-pair-correlation-function-long-average-bounds
+title: Long averages of Montgomery's pair correlation function lie between 0.9303 and 1.3208
+field: analytic-number-theory
+statement_plain: >
+  Let F(alpha, T) be Montgomery's pair correlation function: 1/N(T) times
+  the sum over pairs of ordinates gamma, gamma' in (0, T] of zeros of the
+  Riemann zeta function of T^(i alpha (gamma - gamma')) w(gamma - gamma'),
+  with w(u) = 4/(4 + u^2). For every b >= 1 and all large l, as T tends to
+  infinity the average of F(alpha, T) over alpha in [b, b + l] lies between
+  0.9303 + o(1) and 1.3208 + o(1). The upper bound is uniform in b; the
+  lower bound needs l >= l_0(b). The conjectured value is 1.
+statement_formal: |
+  0.9303 + o(1) < \frac{1}{\ell}\int_{b}^{b+\ell} F(\alpha, T)\, d\alpha < 1.3208 + o(1) \qquad (T \to \infty)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper says this improves the bounds 0.9278 and 1.3302 of Carneiro,
+  Chandee, Chirre and Milinovich. Under the Riemann Hypothesis for
+  Dirichlet L-functions as well, the same paper improves the constants to
+  0.9314 and 1.3155 (Corollary 4). The existing entry
+  q-analog-pair-correlation-average-bounds is the analogous problem for a
+  family of Dirichlet L-functions.
+sources:
+  - authors: E. Carneiro, M. B. Milinovich, A. P. Ramos
+    title: Fourier optimization and Montgomery's pair correlation conjecture
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.01913
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, pair-correlation, fourier-optimization]
+added: 2026-11-22

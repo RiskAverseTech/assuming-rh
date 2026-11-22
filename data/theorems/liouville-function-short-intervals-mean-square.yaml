@@ -1,0 +1,32 @@
+id: liouville-function-short-intervals-mean-square
+title: Square-root cancellation on average for the Liouville function in short intervals
+field: analytic-number-theory
+statement_plain: >
+  Let lambda be the Liouville function. As X tends to infinity, the integral
+  over x from X to 2X of |sum of lambda(n) over x <= n <= x + h|^2 is
+  O(X h (log X)^6), provided
+  h = h(X) <= exp(sqrt((1/2 - o(1)) log X log log X)).
+statement_formal: |
+  \int_X^{2X} \Bigl| \sum_{x \le n \le x+h} \lambda(n) \Bigr|^2 dx \ll X h (\log X)^6 \qquad \text{for } h \le \exp\!\left(\sqrt{\left(\tfrac12 - o(1)\right)\log X \log\log X}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: J. Chinis
+    title: On the Liouville function in short intervals
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.06788
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [liouville-function, short-intervals, multiplicative-functions]
+added: 2026-11-22

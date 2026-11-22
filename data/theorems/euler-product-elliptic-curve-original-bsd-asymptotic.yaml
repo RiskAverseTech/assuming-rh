@@ -1,0 +1,42 @@
+id: euler-product-elliptic-curve-original-bsd-asymptotic
+title: Original Birch and Swinnerton-Dyer product asymptotic outside a set of finite logarithmic measure
+field: analytic-number-theory
+statement_plain: >
+  Let E be an elliptic curve over Q, let N_p be the number of points of E
+  modulo p, and let r be the order of vanishing of L(E, s) at s = 1. Then
+  there is a set S of real numbers of finite logarithmic measure such that
+  the product of N_p / p over primes p <= x is asymptotic to C (log x)^r as
+  x tends to infinity outside S, where
+  C = sqrt(2) e^(r gamma) r! / L^(r)(E, 1) and gamma is Euler's constant.
+statement_formal: |
+  \prod_{p \le x} \frac{N_p}{p} \sim \frac{r!}{L^{(r)}(E,1)} \cdot \sqrt{2}\, e^{r\gamma} (\log x)^{r} \qquad (x \to \infty,\ x \notin S), \qquad \int_S \frac{dt}{t} < \infty
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the single L-function L(E, s)
+  of the elliptic curve E over Q (all non-trivial zeros on the line
+  Re(s) = 1). Here r is the analytic rank; the paper's Corollary 4.4 replaces
+  r by the rank of E(Q) when the two are assumed equal. By a theorem of
+  Goldfeld quoted in the paper, the asymptotic for all x (with no exceptional
+  set) would imply this Riemann Hypothesis.
+sources:
+  - authors: A. Sheth
+    title: Euler Product Asymptotics for $L$-functions of Elliptic Curves
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2312.05236
+    hypothesis_location: Theorem 4.2 (Theorem B)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The year is taken from the arXiv identifier; the version on disk is v4, dated January 2026.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, euler-products, birch-swinnerton-dyer]
+added: 2026-11-22

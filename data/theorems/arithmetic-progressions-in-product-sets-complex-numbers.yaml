@@ -1,0 +1,40 @@
+id: arithmetic-progressions-in-product-sets-complex-numbers
+title: Arithmetic progressions in product sets of complex numbers have length O(n^(1+epsilon))
+field: additive-number-theory
+statement_plain: >
+  Let B be a set of n complex numbers and let B.B be the set of all products
+  b b' with b, b' in B. Then for every epsilon > 0 the longest arithmetic
+  progression contained in B.B has length at most O_epsilon(n^(1 + epsilon)).
+statement_formal: |
+  B \subset \mathbb{C},\ |B| = n \ \Longrightarrow\ \text{every arithmetic progression in } B\cdot B \text{ has length } O_{\varepsilon}\!\left(n^{1+\varepsilon}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper writes only "GRH". The hypothesis enters through the effective
+  Chebotarev density theorem of Lagarias and Odlyzko, applied to the
+  splitting field over Q of an irreducible integer polynomial, to get a
+  lower bound for the number of primes modulo which the polynomial has a
+  root. For sets of natural numbers the same paper proves the bound
+  O(n log n) unconditionally, and it says the earlier unconditional bound
+  for complex numbers was O(n^(3/2)).
+sources:
+  - authors: D. Zhelezov
+    title: Improved bounds for arithmetic progressions in product sets
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1502.03704
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper does not say which L-functions its "GRH" covers. The code ERH-Dedekind is inferred from the appendix, where the Lagarias-Odlyzko theorem is applied to the splitting field of a polynomial.
+lean:
+  proved: false
+  path: null
+tags: [product-sets, arithmetic-progressions, chebotarev]
+added: 2026-11-22
