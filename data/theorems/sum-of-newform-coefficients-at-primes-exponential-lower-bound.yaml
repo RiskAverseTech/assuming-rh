@@ -1,0 +1,52 @@
+id: sum-of-newform-coefficients-at-primes-exponential-lower-bound
+title: Lower bounds for a_f(p) + a_g(p) for twist-inequivalent newforms
+field: analytic-number-theory
+statement_plain: >
+  Let f and g be non-CM normalized newforms of the same weight k with
+  trivial nebentypus and integer Fourier coefficients, not twists of each
+  other by any Dirichlet character. Then for every eps > 0 and for almost
+  all primes p (a set of primes of natural density 1), the largest prime
+  factor P of a_f(p) + a_g(p) satisfies
+  log P >= log p / exp(3 (log log p)^(1/2 + eps)), and
+  log |a_f(p) + a_g(p)| >= (log log p)^(1/2 + eps) log p / exp(3 (log log p)^(1/2 + eps)).
+statement_formal: |
+  \log P\bigl(a_f(p)+a_g(p)\bigr)\ \ge\ \frac{\log p}{e^{3(\log\log p)^{1/2+\epsilon}}},\qquad \log\bigl|a_f(p)+a_g(p)\bigr|\ \ge\ (\log\log p)^{1/2+\epsilon}\,\frac{\log p}{e^{3(\log\log p)^{1/2+\epsilon}}}\quad\text{for almost all primes } p
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper defines GRH as the Riemann Hypothesis for all Artin L-functions.
+  In the text it is used through the effective Chebotarev density theorem
+  of Lagarias and Odlyzko, quoted under GRH for the Dedekind zeta function
+  of a Galois extension, applied to the fields L_h cut out by the product of
+  the mod h Galois representations of f and g, and through a bound
+  O(x^(13/14)) for the number of primes with a_f(p) + a_g(p) = 0 quoted from
+  another paper. These fields are not abelian over Q. The coding follows
+  the entry newform-coefficient-differences-few-prime-factors, which uses
+  the same fields. Unconditionally the paper proves
+  P(a_f(p) + a_g(p)) > (log p)^(1/14) (log log p)^(3/7 - eps) for almost all
+  primes (Theorem 1.1). The paper remarks that the results stay valid with
+  a_f(p) - a_g(p) in place of the sum.
+sources:
+  - authors: M. Kumari, P. K. Mishra, J. Sengupta
+    title: On Lower Bounds for sums of Fourier Coefficients of Twist-Inequivalent Newforms
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.07474
+    hypothesis_location: "Theorem 1.5 (via Proposition 3.1(b), Lemma 3.3 and Theorem 8.1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's stated hypothesis is GRH for all Artin L-functions; the entry is coded ERH-Dedekind because the only use visible in the text is effective Chebotarev under GRH for Dedekind zeta functions. The conditional bound O(x^(13/14)) in Lemma 3.3 is quoted from another paper (cited as KK23) and may use more.
+    - >-
+      Theorem 1.5 was read from the PDF because the text extraction of the formulas is garbled.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, fourier-coefficients, largest-prime-factor, effective-chebotarev]
+added: 2026-11-22

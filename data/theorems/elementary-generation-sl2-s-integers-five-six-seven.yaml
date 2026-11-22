@@ -1,0 +1,48 @@
+id: elementary-generation-sl2-s-integers-five-six-seven
+title: Short elementary factorizations in SL_2 over rings of S-integers
+field: algebraic-number-theory
+statement_plain: >
+  Let O be the ring of S-integers of a number field K and suppose the unit
+  group of O is infinite. Then every matrix in SL_2(O) is a product of at
+  most 5 elementary matrices if K has a real embedding, at most 6 if S
+  contains a finite place, and at most 7 in general, and in each case the
+  first factor can be taken lower triangular.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper's Riemann Hypothesis 3.7 is the Riemann Hypothesis for the zeta
+  functions of the fields K(zeta_n, (O^x)^(1/n)) for all integers n > 0,
+  obtained by adjoining the n-th roots of unity and the n-th roots of all
+  units of O. It enters only through the terminating division chains of
+  Cooke and Weinberger (their Theorems 2.2, 2.9 and 2.14), which are quoted
+  and not reproved. This sharpens the bound 9 recorded in the entry
+  bounded-elementary-generation-sl2-s-integers (proved unconditionally by
+  Morgan, Rapinchuk and Sury), and the paper also proves the bound 8
+  unconditionally when K has a real embedding or S contains a finite place
+  (Theorem 1.2). The paper notes that 5 cannot be lowered to 4 in general,
+  by a result of Morgan, Rapinchuk and Sury for Z[1/p] with p > 7.
+sources:
+  - authors: B. W. Jordan, Y. Zaytman
+    title: On the bounded generation of arithmetic SL_2
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/1810.12972
+    hypothesis_location: "Theorem 1.3 (hypothesis stated as Riemann Hypothesis 3.7 in Section 3.4)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The hypothesis is used only inside the cited theorems of Cooke and Weinberger, which were not read. The code ERH-Dedekind is taken from the paper's own statement of Hypothesis 3.7.
+    - >-
+      When K is abelian over Q the fields K(zeta_n, (O^x)^(1/n)) are still not abelian over Q in general, so no special case is marked as covered.
+lean:
+  proved: false
+  path: null
+tags: [bounded-generation, elementary-matrices, s-integers]
+added: 2026-11-22

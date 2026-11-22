@@ -1,0 +1,47 @@
+id: zeta-zeros-mesoscopic-central-limit-theorem-linear-statistics
+title: Mesoscopic central limit theorem for linear statistics of zeta zeros
+field: analytic-number-theory
+statement_plain: >
+  Let n(T) tend to infinity with n(T) = o(log T), let t be uniformly
+  distributed in [T, 2T], and let eta be a fixed real function of compact
+  support and bounded variation. Put Delta_eta = sum over zeta zeros
+  1/2 + i gamma of eta((log T)(gamma - t)/(2 pi n(T))). If the integral of
+  |x| |eta^(x)|^2 over the real line diverges, then the mean of Delta_eta is
+  n(T) times the integral of eta plus o(1), its variance is asymptotic to
+  the integral of |x| |eta^(x)|^2 over [-n(T), n(T)], and
+  (Delta_eta - mean)/sqrt(variance) converges in distribution to a standard
+  Gaussian. The same conclusion holds when eta has compact support and
+  bounded second derivative, in which case the variance converges.
+statement_formal: |
+  \Delta_\eta=\sum_{\gamma}\eta\!\left(\frac{\log T}{2\pi n(T)}(\gamma-t)\right),\qquad \operatorname{Var}(\Delta_\eta)\sim\int_{-n(T)}^{n(T)}|x|\,|\hat\eta(x)|^2\,dx,\qquad \frac{\Delta_\eta-\mathbb{E}\Delta_\eta}{\sqrt{\operatorname{Var}\Delta_\eta}}\Rightarrow N(0,1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Here eta^ is the Fourier transform of eta. Taking eta to be the indicator
+  function of [-1/2, 1/2] recovers the central limit theorem of Fujii for the
+  number of zeros in an interval of length 2 pi n(T)/log T, with variance
+  asymptotic to (1/pi^2) log n(T). The second statement is Theorem 1.3 of the
+  paper. The results match those for the sine kernel determinantal point
+  process (Costin and Lebowitz, Soshnikov, Spohn). No earlier entry in the
+  dataset covers this mesoscopic central limit theorem.
+sources:
+  - authors: B. Rodgers
+    title: A central limit theorem for the zeroes of the zeta function
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1205.0303
+    hypothesis_location: "Theorems 1.2 and 1.3 (the introduction assumes RH throughout)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper assumes RH throughout and does not say whether Fujii's original theorem (the special case of an indicator function) was itself conditional.
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, central-limit-theorem, random-matrix-theory]
+added: 2026-11-22

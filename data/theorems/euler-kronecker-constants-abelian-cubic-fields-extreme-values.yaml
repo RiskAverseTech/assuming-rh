@@ -1,0 +1,57 @@
+id: euler-kronecker-constants-abelian-cubic-fields-extreme-values
+title: Extreme values of Euler-Kronecker constants of abelian cubic fields
+field: analytic-number-theory
+statement_plain: >
+  Let A_3(x) be the set of abelian cubic fields K with discriminant at most
+  x, and let gamma_K be the Euler-Kronecker constant of K. For every eps > 0
+  and all sufficiently large x, the maximum of gamma_K over A_3(x) is at
+  least log log x + log log log x - C_plus - eps, and the maximum of
+  -gamma_K over A_3(x) is at least 2 log log x + 2 log log log x - C_minus - eps,
+  where C_plus and C_minus are explicit constants, printed in the paper as
+  5.7972... and 9.4207....
+statement_formal: |
+  \max_{K\in A_3(x)}\gamma_K \ge \log\log x+\log\log\log x-C^{+}_{\mathrm{cubic}}-\varepsilon,\qquad \max_{K\in A_3(x)}(-\gamma_K) \ge 2\log\log x+2\log\log\log x-C^{-}_{\mathrm{cubic}}-\varepsilon
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The hypothesis is GRH for Hecke L-functions over Q(omega), omega a
+  primitive cube root of unity. The constants gamma_K themselves are
+  expressed through L'/L(1, chi) for cubic Dirichlet characters chi, but the
+  proof (a long resonator method) needs a power-saving asymptotic for sums
+  of chi(m) over all primitive cubic Dirichlet characters of conductor at
+  most z (Lemma 2.2, from Darbar, David, Lalin and Lumley), and that estimate
+  is where the Hecke L-functions over Q(omega) enter. The paper says that
+  without the hypothesis this resonator could not be used. The result adds
+  the secondary term log log log x to the unconditional extreme values of
+  Cho and Kim. Here C_plus = 3 log 2 + 1 + sum over primes p of
+  (3p + 10) log p / ((p^3 - 1)(p + 2)) and C_minus = 4 log 2 + 2 + 3 gamma
+  + 4 times the sum over p of log p / ((p^3 - 1)(p + 2)), with gamma Euler's
+  constant. A rough evaluation of these printed formulas by this project
+  gives about 3.72 and 6.65, not the printed decimals 5.7972 and 9.4207, so
+  one of the two is misprinted; the entry quotes both as printed. The paper
+  also proves the analogous bound for quadratic fields
+  under GRH for quadratic Dirichlet L-functions.
+sources:
+  - authors: Y. Toma
+    title: Extreme values of Euler-Kronecker constants of abelian cubic fields
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.18569
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The Hecke L-functions over Q(omega) are used inside the cited cubic character sum estimate (Lemma 2.2); which Hecke characters exactly (cubic residue symbols and their twists) was not checked in the cited source.
+    - >-
+      The formulas for the constants (checked against the PDF, sums over all primes p as printed) evaluate numerically to about 3.72 and 6.65, which does not match the printed values 5.7972 and 9.4207; restricting the sums to primes congruent to 1 mod 3 does not match either. A reviewer should decide which constants are correct.
+lean:
+  proved: false
+  path: null
+tags: [euler-kronecker-constants, cubic-fields, extreme-values]
+added: 2026-11-22

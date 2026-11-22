@@ -1,0 +1,54 @@
+id: generalized-bent-functions-nonexistence-infinitely-many-primes
+title: Nonexistence of generalized bent functions of type [n, 2p] for a positive proportion of primes with fixed index of 2
+field: algebraic-number-theory
+statement_plain: >
+  Fix an odd positive integer n and a positive integer g. For a prime p let
+  f be the multiplicative order of 2 modulo p, let
+  l = 2(p - 1) / ((3 - (-1)^f) f), and let B(l) be the largest power of 2
+  dividing l. Then there is a positive constant C depending only on n and g
+  such that, asymptotically, at least C x / log x primes p <= x satisfy
+  (p - 1)/f = g and p > 2^(2 B(l) + n l), and for every such prime there is
+  no generalized bent function from (Z/2pZ)^n to Z/2pZ. In particular there
+  are infinitely many such primes for each n.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The nonexistence statement for each individual prime p satisfying the two
+  conditions is unconditional (Theorem 4.1 of the paper). The hypothesis is
+  needed only to show that the set of such primes has positive relative
+  density, through a theorem of L. Murty on primes p for which a given
+  integer a has order (p - 1)/g modulo p (a near-primitive-root version of
+  Artin's conjecture, proved by Hooley's method). The paper calls the
+  hypothesis ERH and, when quoting Murty's theorem, simply "the Riemann
+  Hypothesis", without saying for which functions; Hooley's method uses the
+  Dedekind zeta functions of the Kummer fields Q(zeta_m, 2^(1/m)). The
+  paper also states computer-assisted results (Propositions 5.4 and 5.5)
+  that depend on GRH through the class group routine of PARI/GP; those are
+  not recorded here.
+sources:
+  - authors: C. Lv, Y. Zhu
+    title: Nonexistence of generalized bent functions and the quadratic norm form equations
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/1804.01292
+    hypothesis_location: "Corollary 4.2 (via Proposition 3.3 and the cited Theorem 2.3)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which zeta functions its ERH covers. The code ERH-Dedekind with kummer-fields is this project's reading of the cited theorem of Murty (near-primitive roots, Hooley's method), which was not checked against Murty's paper.
+    - >-
+      Corollary 4.2 is printed for 'fixed positive integers n and g', but Theorem 4.1, on which it rests, requires n odd; the entry states it for odd n.
+    - >-
+      The positivity of the density constant for every g is asserted in the paper's quoted Theorem 2.3 and was not checked.
+lean:
+  proved: false
+  path: null
+tags: [bent-functions, artin-conjecture, cyclotomic-fields]
+added: 2026-11-22
