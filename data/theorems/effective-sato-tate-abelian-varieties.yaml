@@ -1,0 +1,63 @@
+id: effective-sato-tate-abelian-varieties
+title: "Effective Sato-Tate conjecture for abelian varieties with connected Sato-Tate group"
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an abelian variety of dimension g over a number field k, with
+  absolute conductor N and connected Sato-Tate group ST(A), and let mu be
+  the Sato-Tate measure on [-2g, 2g]. For every subinterval I of nonzero
+  length, the number of primes p of k not dividing N with norm at most x
+  whose normalized Frobenius trace lies in I equals mu(I) Li(x) +
+  O(x^(1-eps) (log(N x))^(2 eps) / (log x)^(1-4 eps)) for x >= x_0, where
+  eps = 1/(2(q + phi)), q is the rank of the Lie algebra of ST(A) and phi
+  the number of positive roots of its semisimple part. The implied constant
+  depends only on k and g, and x_0 = O(nu(|I|) (log 2N)^2 (log log 4N)^4)
+  with nu(z) = max(1, (log z)^6 / z^(1/eps)).
+statement_formal: |
+  \sum_{\mathrm{Nm}(\mathfrak p)\le x}\delta_I(\overline a_{\mathfrak p}) = \mu(I)\,\mathrm{Li}(x) + O\Bigl(\frac{x^{1-\varepsilon_{\mathfrak g}}\,\log(Nx)^{2\varepsilon_{\mathfrak g}}}{\log(x)^{1-4\varepsilon_{\mathfrak g}}}\Bigr),\qquad \varepsilon_{\mathfrak g}=\frac{1}{2(q+\varphi)}
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The paper names its L-functions precisely: the motivic L-functions L(chi,
+  s) attached to the irreducible characters chi of the Sato-Tate group
+  ST(A), built from the l-adic representations of A. Its Conjecture 2.4
+  ("Generalized Riemann hypothesis") assumes for each of them analytic
+  continuation of the completed L-function, a functional equation, and that
+  all zeros in the critical strip have real part 1/2. These L-functions are
+  not known to be automorphic in general, so even their analytic
+  continuation is an assumption. The extra assumption is the Mumford-Tate
+  conjecture for A, used to bound the exponents of a Cartan subgroup in
+  terms of g. For an elliptic curve with complex multiplication the
+  L-functions are Hecke L-functions of powers of the Grossencharacter
+  (Corollary 1.4). The paper derives a Linnik-type bound for the least prime
+  with Frobenius trace in a given interval (Corollary 1.2) and a bound
+  O((log 2NN')^2 (log log 4NN')^6) for the least prime where two abelian
+  varieties have Frobenius traces of opposite sign (Corollary 1.3).
+sources:
+  - authors: A. Bucur, F. Fité, K. S. Kedlaya
+    title: "Effective Sato-Tate conjecture for abelian varieties and applications"
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2002.08807
+    hypothesis_location: Theorem 1.1 (proved as Theorem 3.8); the hypothesis is Conjecture 2.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The formula for nu is stacked in the extracted text; it was read as
+      max(1, log(z)^6 / z^(1/eps)).
+    - >-
+      The dependence of the result on the parts of Conjecture 2.4 other than
+      the location of zeros (continuation and functional equation) is
+      recorded under PLUS-EXTRA together with the Mumford-Tate conjecture; a
+      reviewer may prefer to regard continuation as part of the
+      GRH-automorphic hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [sato-tate, abelian-varieties, effective-bounds]
+added: 2026-11-22

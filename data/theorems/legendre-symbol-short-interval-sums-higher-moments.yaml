@@ -1,0 +1,43 @@
+id: legendre-symbol-short-interval-sums-higher-moments
+title: "Higher moments over primes of Legendre symbol sums on a short interval away from the origin"
+field: analytic-number-theory
+statement_plain: >
+  Let s >= 1 be a fixed integer and let 2 <= h < u <= Q be integers. For
+  complex weights alpha_n with |alpha_n| <= 1 supported on u < n <= u + h,
+  let S_p be the sum of alpha_n (n/p) over u < n <= u + h, where (n/p) is
+  the Legendre symbol. Then the sum of |S_p|^(2s) over primes p in [Q, 2Q]
+  is << h^s (log h)^(s(2s-1)) pi(Q) + h^(2s) Q^(1/2+o(1)).
+statement_formal: |
+  \sum_{\substack{p\in[Q,2Q]\\ p\ \text{prime}}}\Bigl|\sum_{u<n\le u+h}\alpha_n\Bigl(\frac{n}{p}\Bigr)\Bigr|^{2s} \ll h^{s}(\log h)^{s(2s-1)}\pi(Q)+h^{2s}Q^{1/2+o(1)}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes "the GRH" without a definition. It is used only through
+  Lemma 2.2, the bound sum_{t <= T} (t/m) <= T^(1/2) m^(o(1)) for Jacobi
+  symbols with m an odd nonsquare, which is a statement about Dirichlet
+  L-functions of real characters. The rest of the proof (Selberg sieve
+  weights and a count of tuples in a short interval with square product,
+  Theorem 1.3) is unconditional. Unconditionally the paper proves the second
+  moment bound h pi(Q) log h + h^2 Q^(7/8+o(1)) (Theorem 1.1).
+sources:
+  - authors: M. Munsch, I. E. Shparlinski, Y.-C. Sun, Y. Xiao
+    title: "Large sieve inequality for sums of Legendre symbols over short intervals"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.23661
+    hypothesis_location: Theorem 1.2 (via Lemma 2.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper does not say which L-functions its GRH covers; GRH-Dirichlet
+      is inferred from Lemma 2.2 being the only conditional input.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, legendre-symbol, large-sieve, short-intervals]
+added: 2026-11-22

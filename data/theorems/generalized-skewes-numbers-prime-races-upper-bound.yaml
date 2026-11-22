@@ -1,0 +1,49 @@
+id: generalized-skewes-numbers-prime-races-upper-bound
+title: "Triple-logarithmic upper bound for generalized Skewes numbers in prime number races"
+field: analytic-number-theory
+statement_plain: >
+  Let q >= 3 and let a, b be distinct invertible residue classes modulo q.
+  Let x_{q;a,b} be the least x >= 2 with pi(x; q, a) > pi(x; q, b). Then log
+  log log x_{q;a,b} << log phi(q), where the implied constant depends only
+  on the exponent A of the effective linear independence hypothesis.
+statement_formal: |
+  \log\log\log x_{q;a,b} \ll_A \log\varphi(q)
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Besides GRH for Dirichlet L-functions modulo q, the theorem assumes an
+  effective linear independence conjecture, called ELI_A(X_q) in the paper
+  (Conjecture 4.1): for some A > 1, every non-trivial integer combination
+  sum m_j gamma_j of the first N(T) positive ordinates of zeros of the
+  L-functions of the characters in X_q, with |m_j| <= N(T), has absolute
+  value >> N(T)^(-N(T)^A). Here X_q is the set of characters chi modulo q
+  with chi(a) different from chi(b). This extra assumption is not a Riemann
+  Hypothesis. The bound is a corollary of Theorem 1.4, a quantitative rate
+  of convergence to the logarithmic density of the race. The paper also
+  proves unconditionally (Theorem 1.3) that Skewes numbers for the race of
+  quadratic residues against non-residues can grow faster than a conjecture
+  of Fiorilli predicted.
+sources:
+  - authors: A. Bailleul, M. Hayani, T. Untrau
+    title: "A Wasserstein metric approach to generalized Skewes' numbers. I. Prime number races"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2603.20093
+    hypothesis_location: Theorem 1.5 (under the assumptions of Theorem 1.4)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The description of X_q as the characters with chi(a) different from
+      chi(b) is this entry's reading of "the support of the Fourier
+      transform of t_q = phi(q)(1_a - 1_b)".
+lean:
+  proved: false
+  path: null
+tags: [prime-number-races, skewes-number, linear-independence]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: elliptic-curve-least-maximal-order-point-lower-bound
+title: "Lower bound 0.36 log p for the least x-coordinate of a point of maximal order on an elliptic curve mod p"
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals. For a prime p of good
+  reduction let r(E, p) be the smallest non-negative integer that is the
+  x-coordinate of a point of maximal order in E(F_p). Then there are
+  infinitely many primes p with r(E, p) > 0.36 log p.
+statement_formal: |
+  r(E,p) > 0.36\,\log p \quad \text{for infinitely many primes } p
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The proof builds, for each N, a number field F (the splitting field of a
+  polynomial T(z), a compositum of the 2-division field of E, a
+  multiquadratic field and splitting fields of quartics attached to halving
+  the points with x-coordinates 0, ..., N) such that r(E, p) > N for every
+  prime p that splits completely in F. The paper assumes the Generalized
+  Riemann Hypothesis for the Dedekind zeta function of F and uses the
+  Lagarias-Odlyzko bound for the least such prime, p < C_0 (log |disc F|)^2.
+  F is in general not abelian over the rationals. The authors note that 0.36
+  can be replaced by any constant below 1/log 16. Unconditionally the paper
+  proves r(E, p) > 0.72 log log p for infinitely many p.
+sources:
+  - authors: S. Jin, L. C. Washington
+    title: "An Elliptic Curve Analogue of Pillai's Lower Bound on Primitive Roots"
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2104.13256
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, primitive-roots, chebotarev]
+added: 2026-11-22
