@@ -446,13 +446,28 @@ function buildAbout() {
   <li>A human checks the entry against the primary source before it moves to "human-checked".</li>
 </ol>
 
+<h2 id="coverage">What has been searched, and what has not</h2>
+<p>As of 22 November 2026:</p>
+<ul>
+  <li><strong>arXiv abstracts.</strong> arXiv's own search finds about 1,870 abstracts that mention the Riemann Hypothesis or a generalization by name, including the abbreviations GRH and ERH. All of them were screened for a conditional result, by keyword filters and by reading excerpts of the abstracts.</li>
+  <li><strong>Papers opened.</strong> 816 papers were opened and their main theorems read. ${entries.filter((e) => e.sources.some((x) => (x.url || '').includes('arxiv.org/abs/'))).length} of the ${entries.length} entries cite an arXiv paper. The other opened papers were set aside: unconditional, already covered by a sharper entry, the hypothesis only mentioned, or no way to tell which L-functions were meant.</li>
+  <li><strong>Classic papers.</strong> A small number of older journal papers were added by hand from the published text.</li>
+</ul>
+<p>What this does not cover:</p>
+<ul>
+  <li>Papers that use the hypothesis without naming it in the abstract.</li>
+  <li>Anything that is not on arXiv, which includes most of the literature before the 1990s and many journal papers since.</li>
+  <li>Secondary results. Usually only the headline conditional theorem of a paper is recorded.</li>
+  <li>Mistakes in the screening. The filters and the reading were done by an AI system and can have missed papers.</li>
+</ul>
+
 <h2 id="limits">Limits of AI classification</h2>
 <ul>
   <li>Most entries start as AI drafts. An AI system can misremember a constant, a range, an attribution, or which L-functions a proof needs.</li>
   <li>The hard question is usually hidden: a paper may say "GRH" and use it for Hecke or Dedekind L-functions deep inside a cited lemma. An AI draft can miss that.</li>
   <li>"Where the hypothesis is invoked" is often not yet recorded. Where it is missing, the entry says so.</li>
   <li>Statements are simplified for readability. The cited paper is the authority, never this site.</li>
-  <li>An entry being absent means nothing. The dataset is far from complete.</li>
+  <li>An entry being absent means nothing. The dataset is not complete; see <a href="#coverage">what has been searched</a>.</li>
 </ul>
 <p>If you know one of these results well, please check its entry. Each entry page has a "suggest a correction" link that opens a prefilled GitHub issue.</p>
 

@@ -25,6 +25,10 @@ status_note: >
   congruence condition on q, for which the paper cites Lenstra; compare
   near-primitive-roots-density and
   primitive-root-primes-in-progression-density.
+  A later paper (Naik, 2024) proves without any hypothesis that E(p) has
+  positive lower density for every prime p, so the statement that M is not
+  a Matsuda monoid of any positive type is now unconditional. The exact
+  densities given here still rest on the hypothesis.
 sources:
   - authors: R. C. Daileda
     title: An application of a generalization of Artin's primitive root conjecture in the theory of monoid rings
@@ -33,6 +37,13 @@ sources:
     url: https://arxiv.org/abs/2112.09080
     hypothesis_location: "Corollary 1, from Theorems 1 and 2"
     role: conditional-proof
+  - authors: S. Naik
+    title: Matsuda monoids and Artin's primitive root conjecture
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2410.09694
+    hypothesis_location: "Theorem 1 (no hypothesis)"
+    role: refinement
 review:
   state: ai-classified
   checked_by: null

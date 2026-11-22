@@ -47,6 +47,16 @@ A wrong "unlocked" label does more harm than a missing entry. When in doubt, an 
 - On 21 November 2026 a random sample of 15 of the 113 sweep entries was audited independently against the source papers, including the formulas as printed. 14 were correct, 1 had a minor omission in a note, and none had a mathematical error. A sample of 15 is small: it rules out a high error rate, not a modest one.
 - The audit compares entries with their own papers. It does not test classifications that rest on inference, for example where a paper says only "GRH" and the variant was read off a cited lemma. Those doubts are listed under each entry's open questions and need a number theorist.
 
+## What has been searched, and what has not
+
+As of 22 November 2026:
+
+- **arXiv abstracts.** arXiv's own search finds about 1,870 abstracts that mention the Riemann Hypothesis or a generalization by name, including the abbreviations GRH and ERH. All of them were screened for a conditional result, by keyword filters and by reading excerpts of the abstracts.
+- **Papers opened.** 816 papers were opened and their main theorems read. Most entries come from these. The rest were set aside: unconditional, already covered by a sharper entry, the hypothesis only mentioned, or no way to tell which L-functions were meant.
+- **Classic papers.** A small number of older journal papers were added by hand from the published text.
+
+Not covered: papers that use the hypothesis without naming it in the abstract; anything that is not on arXiv, which includes most of the literature before the 1990s; secondary results of a paper beyond its headline conditional theorem; and whatever the screening, done by an AI system, missed.
+
 ## The hypothesis taxonomy
 
 Papers say "assuming GRH" loosely. The exact variant decides whether a result is unlocked.
