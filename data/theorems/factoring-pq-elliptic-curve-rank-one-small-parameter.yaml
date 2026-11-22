@@ -1,0 +1,52 @@
+id: factoring-pq-elliptic-curve-rank-one-small-parameter
+title: A rank one elliptic curve y^2 = x^3 - 2rDx with r = O(log^4 D) whose generator reveals the factors of D = pq
+field: computational-number-theory
+statement_plain: >
+  Let D = pq be a product of two distinct odd primes. There is a positive
+  integer r = O((log D)^4) such that the elliptic curve
+  E: y^2 = x^3 - 2rDx over Q has rank one and, for a generator Q of E(Q)
+  modulo torsion and every odd k, the p-adic and q-adic valuations of the
+  x-coordinate of kQ differ. Hence p and q can be recovered from D and the
+  x-coordinate of any odd multiple of Q.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the parity conjecture for these elliptic curves
+  (the paper needs only the weak form: root number -1 implies positive
+  rank). It gives rank at least one; a 2-descent gives rank at most one.
+  The Generalized Riemann Hypothesis is used only for the bound
+  r = O(log^4 D): Lemma 5.1 finds a prime l << log^2(p1 ... pk) with
+  prescribed Legendre symbols and prescribed residue modulo a fixed m, by
+  applying the Bach-Sorenson bound for the least prime with a given Artin
+  symbol to the field Q(sqrt(p1), ..., sqrt(pk), zeta_m). That field is
+  abelian over Q, so only Dirichlet L-functions are involved. Without the
+  Riemann Hypothesis the paper still gets infinitely many suitable r under
+  the parity conjecture. The paper does not claim that the generator can be
+  computed quickly, and remarks that its height is expected to be large.
+sources:
+  - authors: X. Li, J. Zeng
+    title: On the elliptic curve $y^2 = x^3 - 2rDx$ and factoring integers
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1207.0274
+    hypothesis_location: Theorem 1.1 and Corollary 1.2; GRH enters in Lemma 5.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Lemma 5.1 does not repeat the words "assume GRH"; the dependence is through its citation of Theorem 3.1(3) of Bach and Sorenson, which was not consulted. The reading that only Dirichlet L-functions are needed rests on the paper's statement that the field K is abelian over Q.
+    - >-
+      The theorem speaks of "conjectural rank one"; the entry states rank one as the conclusion under the parity conjecture.
+    - >-
+      The title is given as printed in the version on disk (v3); the arXiv listing title is "Factoring integer using elliptic curves over rational number field Q".
+lean:
+  proved: false
+  path: null
+tags: [integer-factoring, elliptic-curves, parity-conjecture]
+added: 2026-11-22

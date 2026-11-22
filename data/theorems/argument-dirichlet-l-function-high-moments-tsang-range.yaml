@@ -1,0 +1,42 @@
+id: argument-dirichlet-l-function-high-moments-tsang-range
+title: High moments of Im log L(1/2 + it, chi) uniformly for k up to a multiple of log log T
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive non-principal Dirichlet character modulo a fixed
+  squarefree odd q >= 3, let X(t) = Im log L(1/2 + it, chi) and
+  L_T = log log(qT). For every K > 0 there are constants C and T_0,
+  depending on K, q and chi, such that for all T >= T_0 and all integers k
+  with 1 <= k <= K L_T, the average of |X(t)|^(2k) over [T, 2T] is at most
+  (C k L_T)^k.
+statement_formal: |
+  \frac{1}{T} \int_T^{2T} \bigl|\operatorname{Im} \log L(\tfrac12 + it, \chi)\bigr|^{2k}\, dt \le (C_K\, k\, \log\log(qT))^{k}, \qquad T \ge T_0,\ 1 \le k \le K \log\log(qT)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the single Dirichlet
+  L-function L(s, chi) in the statement (equivalently for its conjugate).
+  It is used to carry Selberg's pointwise approximate formula for S(t) over
+  to L(s, chi). By Markov's inequality the bound gives a Gaussian-scale
+  tail estimate exp(-c V^2 / L_T) for the measure of t with |X(t)| > V in
+  the range sqrt(L_T) << V << L_T (Corollary 5.1).
+sources:
+  - authors: S. D. Hughes
+    title: A Tsang-range high-moment bound for $\operatorname{Im}\log L(\tfrac12+it,χ)$ under GRH
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.10242
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper is a recent single-author preprint and describes the result as a port of known arguments for the zeta function (Selberg, Tsang, Soundararajan) to a fixed Dirichlet L-function; its proof was not checked, and it is not clear why the modulus is restricted to squarefree odd q.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, argument-of-l-functions, moments]
+added: 2026-11-22

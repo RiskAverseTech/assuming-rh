@@ -1,0 +1,48 @@
+id: xyz-conjecture-smooth-abc-solutions-exponent-8
+title: Infinitely many primitive solutions of X + Y + Z = 0 with smoothness below (log H)^(8 + epsilon)
+field: analytic-number-theory
+statement_plain: >
+  For a triple of nonzero integers with X + Y + Z = 0 and gcd(X, Y, Z) = 1,
+  let H = max(|X|, |Y|, |Z|) and let S be the largest prime factor of XYZ.
+  For every epsilon > 0 there are infinitely many such primitive triples
+  with S < (log H)^(8 + epsilon). In the paper's terminology, the
+  xyz-smoothness exponent kappa_0 is at most 8.
+statement_formal: |
+  \forall\, \varepsilon > 0: \quad \#\{(X,Y,Z) \in \mathbb{Z}^3 : X + Y + Z = 0,\ \gcd(X,Y,Z) = 1,\ S(X,Y,Z) < (\log H(X,Y,Z))^{8+\varepsilon}\} = \infty
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states its hypothesis explicitly: the Riemann zeta function and
+  all Dirichlet L-functions have all their zeros in the critical strip on
+  the line Re(s) = 1/2. It is used mainly to control the minor arcs in the
+  Hardy-Littlewood method. This paper sketches the proof; the full proof is
+  in the authors' companion paper (reference [23]), which gives a lower
+  bound of the expected order of magnitude for the number of primitive
+  solutions of height at most H with smoothness at most (log H)^kappa for
+  each fixed kappa > 8 (Theorem 3.1). The entry
+  smooth-solutions-a-plus-b-equals-c-asymptotic (Drappeau) later turned
+  that lower bound into an asymptotic formula under the same hypothesis.
+  The paper also shows that the abc conjecture implies there are only
+  finitely many primitive solutions with S < (log H)^(1 - epsilon); that
+  part is not recorded here.
+sources:
+  - authors: J. C. Lagarias, K. Soundararajan
+    title: "Smooth solutions to the abc equation: the xyz Conjecture"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/0911.4147
+    hypothesis_location: Theorem 1.2 (hypothesis stated just before it; stronger form in Theorem 3.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      This paper only sketches the proof of Theorem 1.2 and refers to the authors' companion paper (reference [23]) for the details; a reviewer may prefer to cite that paper as the primary source.
+lean:
+  proved: false
+  path: null
+tags: [smooth-numbers, abc-equation, circle-method]
+added: 2026-11-22

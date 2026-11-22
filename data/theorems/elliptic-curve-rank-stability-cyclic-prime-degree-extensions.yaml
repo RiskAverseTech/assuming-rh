@@ -1,0 +1,52 @@
+id: elliptic-curve-rank-stability-cyclic-prime-degree-extensions
+title: Lower bound for how often an elliptic curve gains no rank in cyclic extensions of odd prime degree
+field: arithmetic-geometry
+statement_plain: >
+  Let p be an odd prime, K a number field and E an elliptic curve over K
+  whose mod p Galois image contains SL_2(F_p). Order the cyclic degree p
+  extensions F of K by the product of the norms of the primes of K that
+  ramify in F. Then the lower density of those F with
+  rank E(F) = rank E(K) is at least PR(0) = prod_{k >= 0} 1 / (1 + p^(-k)),
+  which is about 0.3195 for p = 3 and 0.3967 for p = 5. More generally the
+  upper density of F with rank E(F) - rank E(K) > (p - 1)(r - 1) is at most
+  sum_{j >= r} PR(j), where PR(j) = PR(0) prod_{k=1}^{j} p / (p^k - 1).
+statement_formal: |
+  \liminf_{X \to \infty} \frac{\#\{F \in \mathcal{F}_p(K;X) : \text{rk}\,E(F) = \text{rk}\,E(K)\}}{\#\mathcal{F}_p(K;X)} \ \ge\ \prod_{k=0}^{\infty} \frac{1}{1 + p^{-k}}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper's hypothesis is the Extended Riemann Hypothesis in the form
+  needed for the effective Chebotarev density theorem for an arbitrary
+  Galois extension F/K of number fields (its Theorem 3.5, quoted from
+  Serre). It is used to replace the non-standard "fan structure" ordering
+  of Klagsbrun, Mazur and Rubin by the ordering by the product of ramified
+  primes. The extensions involved contain the p-division field K(E[p]),
+  whose Galois group contains SL_2(F_p), so they are not abelian. Theorem
+  1.1 also has a version for p = 2 with a correction term delta(E/K); the
+  paper proves analogous results for Selmer ranks of more general Galois
+  modules (Theorem 5.1) and for certain superelliptic and hyperelliptic
+  curves (Theorems 1.2 and 1.3).
+sources:
+  - authors: D. Keliher, S. W. Park
+    title: Distribution of Selmer ranks in prime cyclic extensions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.01126
+    hypothesis_location: Theorem 1.1 (from Theorem 5.1); ERH enters through Theorem 3.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define ERH beyond quoting the conditional effective Chebotarev theorem; the entry takes it to be the Riemann Hypothesis for the Dedekind zeta functions of the Galois extensions that theorem is applied to.
+    - >-
+      The formula for PR(j) was read from extracted text with a garbled display; the reading PR(j) = prod_{k>=0} 1/(1+p^(-k)) times prod_{k=1}^{j} p/(p^k - 1) matches the paper's Table 1 values for PR(0) (0.3195 for p = 3) but should be checked against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [selmer-groups, elliptic-curves, rank-growth]
+added: 2026-11-22

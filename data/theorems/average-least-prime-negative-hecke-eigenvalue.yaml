@@ -1,0 +1,44 @@
+id: average-least-prime-negative-hecke-eigenvalue
+title: The average least prime with negative Hecke eigenvalue equals the average least quadratic non-residue
+field: analytic-number-theory
+statement_plain: >
+  For a newform f of even weight k and squarefree level N with trivial
+  character, let p_f be the least prime p with Hecke eigenvalue
+  lambda_f(p) < 0. As k + N tends to infinity, the average of p_f over all
+  newforms of weight k and level N tends to sum_{i >= 1} p_i / 2^i, where
+  p_i is the i-th prime. This is the same constant (about 3.67) that Erdos
+  found for the average least quadratic non-residue.
+statement_formal: |
+  \lim_{k+N \to \infty} \frac{1}{|H_k^{*}(N)|} \sum_{f \in H_k^{*}(N)} p_f = \sum_{i=1}^{\infty} \frac{p_i}{2^i}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper states that the hypothesis is the Riemann Hypothesis for every
+  symmetric power L-function L(s, Sym^m f), m >= 1, of each newform f in the
+  family (all even weights and squarefree levels). It is used only through
+  a result of Thorner giving p_f << (log(k^2 N))^2, because the
+  unconditional bound on p_f is too weak to control the average. The
+  companion result on the least integer n with lambda_f(n) < 0
+  (Theorem 1.2) is unconditional.
+sources:
+  - authors: J. Voros
+    title: On the average least negative Hecke eigenvalue
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2502.11987
+    hypothesis_location: Theorem 1.1 and the paragraph after it; the use is explained in Section 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The numerical value 3.67 of the constant is not printed next to Theorem 1.1 in the lines read; it is the well-known value of sum p_i / 2^i and should be checked.
+lean:
+  proved: false
+  path: null
+tags: [hecke-eigenvalues, sign-changes, modular-forms]
+added: 2026-11-22
