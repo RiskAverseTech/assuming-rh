@@ -1,0 +1,47 @@
+id: quadratic-fields-nonsolvable-maximal-unramified-extension-22268-1567
+title: Maximal unramified extensions of Q(sqrt(22268)) and Q(sqrt(-1567)) have finite nonsolvable Galois groups
+field: algebraic-number-theory
+statement_plain: >
+  Let K_ur denote the maximal extension of a number field K that is
+  unramified at all places. For K = Q(sqrt(22268)) the group Gal(K_ur/K) is
+  isomorphic to A_5 x C_2. For K = Q(sqrt(-1567)) the group Gal(K_ur/K) is
+  isomorphic to PSL_2(F_8) x C_15.
+statement_formal: |
+  \operatorname{Gal}\bigl(K_{ur}/K\bigr) \cong A_5 \times C_2 \ \text{ for } K=\mathbb{Q}(\sqrt{22268}), \qquad \operatorname{Gal}\bigl(K_{ur}/K\bigr) \cong \mathrm{PSL}_2(\mathbb{F}_8) \times C_{15} \ \text{ for } K=\mathbb{Q}(\sqrt{-1567})
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper writes only "GRH". It is used in two ways: through the
+  conditional lower bounds for root discriminants (Odlyzko-type bounds from
+  Martinet's tables), applied to hypothetical further unramified extensions
+  in order to rule them out, and in Magma computations of class groups of
+  intermediate fields of large degree. The fields involved are unramified
+  extensions of K with nonsolvable Galois group over the rationals, so they
+  are not abelian over the rationals and the result is not covered. The
+  paper says the imaginary quadratic example is, to the authors' knowledge,
+  the first imaginary quadratic field with a nonsolvable unramified
+  extension for which the group is explicitly determined.
+sources:
+  - authors: K.-S. Kim, J. König
+    title: Some examples of quadratic fields with finite nonsolvable maximal unramified extensions II
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1709.08453
+    hypothesis_location: Theorem 4.1 and Theorem 5.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never defines GRH; the code ERH-Dedekind is inferred from its use in discriminant lower bounds and class group computations. Class group computations under GRH may also rest on Hecke L-functions, depending on the software's method, which the paper does not describe.
+    - >-
+      No waiting_on family describes discriminant bounds for non-abelian fields exactly; galois-extensions is the closest.
+lean:
+  proved: false
+  path: null
+tags: [unramified-extensions, class-field-towers, discriminant-bounds]
+added: 2026-11-22

@@ -1,0 +1,44 @@
+id: self-conjugate-6-cores-positivity
+title: Every positive integer except 2, 12, 13 and 73 has a self-conjugate 6-core partition
+field: analytic-number-theory
+statement_plain: >
+  Let sc_6(n) be the number of self-conjugate 6-core partitions of n. Then
+  sc_6(n) > 0 for every positive integer n except n = 2, 12, 13 and 73.
+  Equivalently, the ternary quadratic form Q = 3x^2 + 32y^2 + 32yz + 32z^2
+  represents 24n + 35 for every positive integer n outside these four values.
+  This is the positivity conjecture of Hanusa and Nath.
+statement_formal: |
+  sc_6(n) = \tfrac{1}{12}\,\#\{(x,y,z)\in\mathbb{Z}^3 : 24n+35 = 3x^2+32y^2+32yz+32z^2\} > 0 \quad \text{for all } n \ge 1,\ n \notin \{2, 12, 13, 73\}
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The theorem assumes GRH for all Dirichlet L-functions and all modular
+  L-functions. The proof uses it for two families: the quadratic Dirichlet
+  L-functions L(s, chi_{-N}) with N = 24n + 35 (through the class number
+  h(-N)), and the L-functions of the quadratic twists by chi_{-N} of the
+  elliptic curve E: y^2 = x^3 - x^2 + x of conductor 24 (a weight 2 newform
+  of level 24), through an explicit bound of Chandee for
+  L(E x chi_{-N}, 1)^(1/2) / L(chi_{-N}, 1). This reduces the problem to
+  n <= 916347, which is checked by computer. The Dirichlet part is covered;
+  the twisted elliptic curve L-functions are not. Unconditionally, Alpoge
+  showed sc_6(n) > 0 for all sufficiently large n, ineffectively.
+sources:
+  - authors: M. Hanson, M. Jameson
+    title: Self-conjugate 6-cores and quadratic forms
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.00738
+    hypothesis_location: Theorem 3 and Corollary 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [partitions, ternary-quadratic-forms, quadratic-twists]
+added: 2026-11-22

@@ -1,0 +1,48 @@
+id: new-isogenies-elliptic-curves-coprime-degree-extensions
+title: No new isogenies of elliptic curves over extensions of degree coprime to a constant B(F)
+field: arithmetic-geometry
+statement_plain: >
+  Let F be a number field that contains no imaginary quadratic field (F has
+  no rational CM). Then there is an effectively computable positive integer
+  B = B(F) such that for every finite extension L/F of degree coprime to B
+  and every elliptic curve E over F, every cyclic isogeny of E defined over
+  L is already defined over F.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis enters only through a theorem of Larson and Vaintrob,
+  quoted as Theorem 6 of the paper, whose exceptional case reads "GRH fails
+  for F[sqrt(-l)]" for a prime l. So what is needed is the Riemann
+  Hypothesis for the Dedekind zeta functions of the quadratic extensions
+  F(sqrt(-l)) of F. If F is abelian over the rationals (for example F = Q or
+  a real abelian field), each F(sqrt(-l)) is abelian over the rationals and
+  its zeta function is a product of Dirichlet L-functions, so that case is
+  covered. For other F the result stays conditional. The same hypothesis
+  gives Theorem 2 of the paper: for l larger than a constant c(F), the image
+  of the mod l Galois representation of any elliptic curve over F is either
+  GL_2(F_l) or contained in the normalizer of a Cartan subgroup.
+sources:
+  - authors: T. Genao
+    title: New isogenies of elliptic curves over number fields
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.05507
+    hypothesis_location: Theorem 1 (hypothesis enters through Theorem 6, quoted from Larson and Vaintrob)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH' in its theorems. That it is needed exactly for the fields F(sqrt(-l)) is taken from the statement of Theorem 6 as quoted from Larson and Vaintrob; their paper is not on disk and was not checked.
+    - >-
+      The constant B(F) is effectively computable but not given explicitly, so the statement is an existence result.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, isogenies, galois-representations]
+added: 2026-11-22

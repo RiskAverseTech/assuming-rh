@@ -1,0 +1,46 @@
+id: dedekind-zeta-limit-in-families-generalized-brauer-siegel
+title: Limit of log Dedekind zeta functions in families of number fields for Re s > 1/2
+field: algebraic-number-theory
+statement_plain: >
+  Let K_i be an asymptotically exact family of number fields, let
+  g_i = log sqrt|D_i| be the genus of K_i, and let phi_q be the limit of
+  (number of prime ideals of K_i of norm q) / g_i. Then for every s with
+  Re s > 1/2, log((s - 1) zeta_{K_i}(s)) / g_i converges to the logarithm of
+  the limit zeta function, the product over prime powers q of
+  (1 - q^(-s))^(-phi_q), uniformly on compact subsets of the half-plane
+  Re s > 1/2.
+statement_formal: |
+  \lim_{i\to\infty} \frac{\log\bigl((s-1)\,\zeta_{K_i}(s)\bigr)}{g_{K_i}} = \log \zeta_{\{K_i\}}(s) = -\sum_{q} \phi_q \log\bigl(1-q^{-s}\bigr), \qquad \operatorname{Re} s > \tfrac12
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is GRH for the Dedekind zeta functions of the fields K_i in
+  the family. If every K_i is abelian over the rationals, each zeta function
+  is a product of Dirichlet L-functions and the result is covered; for
+  other families it stays conditional. The case s = 1 is the generalized
+  Brauer-Siegel theorem of Tsfasman and Vladut, which the paper recalls is
+  known unconditionally for almost normal fields and under GRH in general.
+  The paper also deduces a limit formula for Euler-Kronecker constants
+  (Corollary 1) and an upper bound at s = 1/2 (Theorem 3).
+sources:
+  - authors: A. Zykin
+    title: Asymptotic properties of Dedekind zeta functions in families of number fields
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0912.0441
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says Corollary 1 was formulated earlier without the Riemann hypothesis but with a flawed proof, and that its validity without GRH is still open; this does not affect Theorem 2.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, brauer-siegel, families-of-number-fields]
+added: 2026-11-22

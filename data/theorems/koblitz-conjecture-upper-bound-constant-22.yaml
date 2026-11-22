@@ -1,0 +1,50 @@
+id: koblitz-conjecture-upper-bound-constant-22
+title: Koblitz conjecture upper bound within a factor 22 of the conjectured constant
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve without complex multiplication over a number
+  field k, and let t be the least common multiple of the orders of the
+  k-rational torsion subgroups of the curves k-isogenous to E. Let P(x) be
+  the number of primes p of k of good reduction with norm at most x for
+  which |E(F_p)| / t is prime. Then P(x) <= (22 + o(1)) C x / (log x)^2,
+  where C = C_{E,k} > 0 is the constant in the conjectured asymptotic
+  P(x) ~ C x / (log x)^2.
+statement_formal: |
+  P_{E,k}(x) \le (22 + o(1))\, C_{E,k}\, \frac{x}{(\log x)^2}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper defines GRH as the statement that the Dedekind zeta function of
+  every number field has no zeros with real part greater than 1/2. It is
+  used through effective Chebotarev bounds for the division fields of E,
+  which are not abelian over the rationals, inside a large sieve for Galois
+  representations. The o(1) term depends on E and k. Unconditionally the
+  same theorem gives P(x) <= (24 + o(1)) C x / (log x log log x). A
+  footnote says a quasi-GRH would give the same bound with 22 replaced by a
+  larger constant. Cojocaru had earlier proved P(x) << x / (log x)^2 under
+  GRH for curves over the rationals with t = 1, without an explicit
+  constant.
+sources:
+  - authors: D. Zywina
+    title: The Large Sieve and Galois Representations
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0812.2222
+    hypothesis_location: Theorem 1.3 (ii) (GRH is defined in Appendix A)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper has further conditional results (Theorems 1.6 and 1.13, power-saving bounds for Frobenius traces in thin sets and for abelian varieties); only the Koblitz bound is recorded.
+    - >-
+      The proof of Theorem 1.3 (ii) was not read line by line; that it needs GRH only (and not Artin's holomorphy conjecture) is taken from the statement of the theorem.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, koblitz-conjecture, large-sieve]
+added: 2026-11-22

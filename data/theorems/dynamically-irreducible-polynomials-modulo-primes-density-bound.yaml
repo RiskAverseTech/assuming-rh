@@ -1,0 +1,43 @@
+id: dynamically-irreducible-polynomials-modulo-primes-density-bound
+title: Primes modulo which all iterates of a polynomial stay irreducible are O(Q / (log Q log log Q)) in [Q, 2Q]
+field: analytic-number-theory
+statement_plain: >
+  Let f be a polynomial with integer coefficients whose derivative has the
+  form g(X)^2 (aX + b) with g in Z[X] and a nonzero (this includes every
+  quadratic polynomial), and assume that -b/a is not a pre-periodic point of
+  f. Let P_f(Q) be the number of primes p in [Q, 2Q] such that every iterate
+  of f is irreducible modulo p. Then P_f(Q) = O(Q / (log Q log log Q)) for
+  Q >= 3, with the implied constant depending only on f.
+statement_formal: |
+  P_f(Q) = \#\{\, p \in [Q,2Q] : f \bmod p \text{ is dynamically irreducible} \,\} = O_f\!\left(\frac{Q}{\log Q\,\log\log Q}\right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes only "the GRH". In the text it is invoked once, for
+  Lemma 2.5, a square-root bound for sums of Jacobi symbols (p/q) over
+  primes p <= M, cited from Montgomery and Vaughan; this needs the
+  hypothesis only for Dirichlet L-functions of real characters.
+  Unconditionally the same paper proves the weaker bound
+  (log log log log Q)^(2+o(1)) / (log log log Q) times Q / log Q
+  (Theorem 1.2).
+sources:
+  - authors: L. Mérai, A. Ostafe, I. E. Shparlinski
+    title: Dynamical irreducibility of polynomials modulo primes
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1905.11657
+    hypothesis_location: Theorem 1.4 (hypothesis used through Lemma 2.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never defines GRH. The classification as Dirichlet L-functions only rests on the single place where the text invokes it (Lemma 2.5, quadratic character sums over primes); the proof of Theorem 1.4 was not checked line by line for other uses.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-dynamics, irreducible-polynomials, square-sieve]
+added: 2026-11-22
