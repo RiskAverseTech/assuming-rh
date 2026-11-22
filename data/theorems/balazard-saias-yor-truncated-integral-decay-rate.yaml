@@ -1,0 +1,38 @@
+id: balazard-saias-yor-truncated-integral-decay-rate
+title: Rate of decay of the truncated Balazard-Saias-Yor integral
+field: analytic-number-theory
+statement_plain: >
+  Let I(T) be the integral over -T <= t <= T of
+  log|zeta(1/2 + it)| / (1/4 + t^2). Then, as T tends to infinity,
+  I(T) = O(log T / (T^2 (log log T)^2)) and
+  I(T) = Omega(sqrt(log T) / (T^2 (log log T)^(3/2))). In particular
+  I(T) = O(T^(-alpha)) for every fixed alpha < 2, but I(T) is not O(T^(-2)).
+statement_formal: |
+  I(T) = \int_{-T}^{T} \frac{\log|\zeta(\tfrac12+it)|}{\tfrac14+t^2}\,dt = O\!\left(\frac{1}{T^2}\,\frac{\log T}{(\log\log T)^2}\right), \qquad I(T) = \Omega\!\left(\frac{1}{T^2}\,\frac{\sqrt{\log T}}{(\log\log T)^{3/2}}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Balazard, Saias and Yor proved that RH is equivalent to I(T) tending to 0.
+  This result gives the rate under RH, answering a question of Borwein,
+  Bradley and Crandall and disproving their conjecture I(T) = O(T^(-2)). The
+  same paper gives an unconditional formula for I(T) in terms of zeros off
+  the critical line (Theorem 1.2).
+sources:
+  - authors: H. M. Bui, S. J. Lester, M. B. Milinovich
+    title: On Balazard, Saias, and Yor's equivalence to the Riemann Hypothesis
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1306.0856
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, omega-results, rh-equivalences]
+added: 2026-11-22

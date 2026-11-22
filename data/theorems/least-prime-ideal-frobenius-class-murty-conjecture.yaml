@@ -1,0 +1,46 @@
+id: least-prime-ideal-frobenius-class-murty-conjecture
+title: Least unramified prime ideal with Frobenius in a given conjugacy class (Murty's conjecture)
+field: algebraic-number-theory
+statement_plain: >
+  Let L/K be a Galois extension of number fields with group G and let d_L be
+  the absolute discriminant of L. For every conjugacy class C of G there is a
+  prime ideal p of K, unramified in L, whose Frobenius class is C and whose
+  norm is O((log(d_L + 2))^2 / |C|).
+statement_formal: |
+  N\mathfrak{p} \ll \frac{(\log(d_L+2))^2}{|C|}
+hypotheses_required: [GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The theorem assumes the Riemann Hypothesis and Artin's holomorphy
+  conjecture (the extra assumption) for every Artin L-function L(s, L/K, chi)
+  with chi an irreducible character of Gal(L/K). The paper describes this as
+  a strong form of a conjecture of K. Murty, and it saves the factor |C|
+  over the bound O((log(d_L + 2))^2) of Lagarias, Montgomery and Odlyzko
+  (compare the entries effective-chebotarev and
+  least-prime-ideal-with-given-artin-symbol). When G is abelian the Artin
+  L-functions are Hecke L-functions and Artin's conjecture is known, but they
+  are Dirichlet L-functions only when K = Q. The same theorem gives further
+  refinements when L is Galois over Q.
+sources:
+  - authors: D. Fiorilli, F. Jouve
+    title: Distribution of Frobenius elements in families of Galois extensions
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2001.05428
+    hypothesis_location: Theorem 2.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper does not say whether the implied constant in (23) is absolute."
+    - "The paper has many other conditional results (Chebyshev bias in families, under GRH, Artin's conjecture and Linear Independence); only Theorem 2.3, bound (23), is recorded."
+    - "waiting_on lists only extra-assumption because no family in waiting.yaml covers GRH-Artin for general Galois extensions."
+lean:
+  proved: false
+  path: null
+tags: [chebotarev, least-prime-ideal, artin-l-functions]
+added: 2026-11-22

@@ -1,0 +1,44 @@
+id: zeta-kth-derivative-zeros-real-parts-sum
+title: Sum of the real parts of the zeros of the k-th derivative of zeta
+field: analytic-number-theory
+statement_plain: >
+  Let k be a positive integer. The sum of (beta - 1/2) over the non-real
+  zeros beta + i gamma of the k-th derivative of zeta with 0 < gamma <= T,
+  counted with multiplicity, equals
+  (k T / (2 pi)) log log (T / (2 pi))
+  + (1 / (2 pi)) ((1/2) log 2 - k log log 2) T - k Li(T / (2 pi))
+  + O((log log T)^2) for T > 2 pi, with the implied constant depending only
+  on k. Also the number N_k(T) of these zeros is
+  (T / (2 pi)) log (T / (4 pi)) - T / (2 pi) + O(log T / sqrt(log log T)).
+statement_formal: |
+  \sum_{\substack{\zeta^{(k)}(\rho^{(k)})=0 \\ 0<\gamma^{(k)}\le T}} \left(\beta^{(k)} - \tfrac12\right) = \frac{kT}{2\pi}\log\log\frac{T}{2\pi} + \frac{1}{2\pi}\left(\tfrac12\log 2 - k\log\log 2\right)T - k\,\mathrm{Li}\!\left(\frac{T}{2\pi}\right) + O_k\!\left((\log\log T)^2\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Generalizes Akatsuka's results for the first derivative to every k. The
+  paper says Levinson and Montgomery proved the first formula unconditionally
+  with error O(log T), and Berndt the count N_k(T) with error O(log T). For
+  k = 1 the zero count has a sharper conditional error term
+  O(log T / log log T) in the entry zeta-derivative-zero-count-error-term;
+  this entry is not sharper than that one for k = 1 but covers all k and the
+  sum of real parts. Here Li(x) is the integral of 1/log t from 2 to x.
+sources:
+  - authors: A. I. Suriajaya
+    title: On the zeros of the k-th derivative of the Riemann zeta function under the Riemann hypothesis
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1310.6489
+    hypothesis_location: Theorems 1 and 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "Two statements of the paper (Theorem 1 and Theorem 3) are combined in one entry; the count N_k(T) for k = 1 is weaker than the existing entry zeta-derivative-zero-count-error-term."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, zeros-of-derivatives, zero-counting]
+added: 2026-11-22

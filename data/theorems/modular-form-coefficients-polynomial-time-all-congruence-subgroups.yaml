@@ -1,0 +1,45 @@
+id: modular-form-coefficients-polynomial-time-all-congruence-subgroups
+title: Polynomial-time computation of coefficients of modular forms for all congruence subgroups
+field: computational-number-theory
+statement_plain: >
+  There is a probabilistic algorithm that, given a positive integer k, a
+  number field K, a congruence subgroup Gamma of SL_2(Z), a modular form f of
+  weight k for Gamma over K, and a positive integer m in factored form,
+  computes the m-th coefficient a_m(f), with expected running time bounded by
+  a polynomial in the length of the input.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann hypothesis for zeta functions of number
+  fields, and it is used for the running time of the
+  Couveignes-Edixhoven-Bruin algorithm. The paper does not re-derive where the
+  hypothesis enters; it refers to Bruin's work, where the algorithm was shown
+  to run in polynomial time under the same hypothesis for certain congruence
+  subgroups only. This paper's contribution is unconditional: a polynomial
+  bound for the discriminant of the modular curve X_1(n) (at most
+  5 * 10^8 n^14), which removes the restriction on the subgroup. The fields
+  involved are not abelian over the rationals in general. Compare the entry
+  point-counting-modular-curve-x1-polynomial-time.
+sources:
+  - authors: A. Javanpeykar (with an appendix by P. Bruin)
+    title: Polynomial bounds for Arakelov invariants of Belyi curves
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1403.6404
+    hypothesis_location: Theorem 5.0.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper does not say for which number fields the hypothesis is used; the waiting_on code follows the related entry point-counting-modular-curve-x1-polynomial-time (coefficient fields of newforms) and should be checked against Bruin's thesis."
+    - "The precise input and output conventions and the meaning of 'probabilistic' are deferred by the paper to Bruin's work."
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, algorithms, arakelov-theory]
+added: 2026-11-22

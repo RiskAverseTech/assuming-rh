@@ -1,0 +1,41 @@
+id: zeta-shifted-moments-sharp-lower-bound
+title: Sharp lower bound for shifted moments of the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let beta_1, ..., beta_m >= 0 be fixed and let alpha_1, ..., alpha_m be real
+  shifts, possibly depending on T, with |alpha_k| <= T/2. For T sufficiently
+  large in terms of beta, the integral over t in [T, 2T] of the product of
+  |zeta(1/2 + i(t + alpha_k))|^(2 beta_k) is at least a constant depending on
+  beta times T (log T)^(beta_1^2 + ... + beta_m^2) times the product over
+  j < k of |zeta(1 + i(alpha_j - alpha_k) + 1/log T)|^(2 beta_j beta_k).
+statement_formal: |
+  \int_T^{2T} \prod_{k=1}^{m} \left|\zeta\!\left(\tfrac12 + i(t+\alpha_k)\right)\right|^{2\beta_k} dt \gg_{\beta} T(\log T)^{\beta_1^2+\cdots+\beta_m^2} \prod_{1\le j<k\le m} \left|\zeta\!\left(1 + i(\alpha_j-\alpha_k) + \tfrac{1}{\log T}\right)\right|^{2\beta_j\beta_k}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Matches the upper bound of the same shape proved by the same author under
+  RH (compare the two-shift entry zeta-shifted-moments-sharp-upper-bound), so
+  under RH these shifted moments have the stated order of magnitude. The
+  analogs for Dirichlet L-functions and Dedekind zeta functions are the
+  entries shifted-moments-dirichlet-l-functions-lower-bound and
+  shifted-moments-dedekind-zeta-sharp-lower-bound.
+sources:
+  - authors: M. J. Curran
+    title: Lower bounds for shifted moments of the Riemann zeta function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.08725
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The entry shifted-moments-dedekind-zeta-sharp-lower-bound (a later paper) may contain this bound as the case where every field is Q; this entry records the original statement for zeta."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, shifted-moments]
+added: 2026-11-22

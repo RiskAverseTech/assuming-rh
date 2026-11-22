@@ -1,0 +1,47 @@
+id: random-multiplicative-coefficient-polynomial-irreducible
+title: A polynomial with random multiplicative coefficients is irreducible with high probability
+field: analytic-number-theory
+statement_plain: >
+  Let X_1 = 1, let X_p for primes p be independent uniform random signs, and
+  extend X_n multiplicatively, either to all n or to square-free n only (with
+  X_n = 0 otherwise). Let P_d(x) = X_1 x + X_2 x^2 + ... + X_d x^d. For every
+  eps > 0 there is a constant C(eps) such that P_d(x)/x is irreducible over
+  the integers with probability at least 1 - C(eps) d^(-1/2 + eps).
+statement_formal: |
+  \mathbb{P}\left[P_d(x)/x \text{ is irreducible over } \mathbb{Z}\right] \ge 1 - C(\varepsilon)\, d^{-1/2+\varepsilon}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes the Riemann hypothesis for the Dedekind zeta functions
+  of all number fields. The proof uses it for the fields Q(alpha), with alpha
+  a root of an irreducible factor of the polynomial, through a prime ideal
+  theorem with Riemann error term that converts the average number of roots
+  modulo primes into the number of irreducible factors (Propositions 2.1 and
+  2.2). These fields have degree up to d and are not abelian or Galois over
+  the rationals in general. The coding follows the entry
+  random-symmetric-matrix-characteristic-polynomial-irreducible, which uses
+  the hypothesis in the same way. A corollary for polynomials whose
+  coefficients are Legendre symbols modulo a random prime also cites a result
+  of Granville and Soundararajan under RH for Dirichlet L-functions.
+sources:
+  - authors: P. P. Varjú, M. W. Xu
+    title: A random polynomial with multiplicative coefficients is almost surely irreducible
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.04240
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The fields Q(alpha) are not Galois in general, so no waiting_on family fits exactly; galois-extensions is used for consistency with the related entry."
+    - "The paper says the bound is close to sharp only in the square-free model."
+lean:
+  proved: false
+  path: null
+tags: [random-polynomials, irreducibility, dedekind-zeta]
+added: 2026-11-22

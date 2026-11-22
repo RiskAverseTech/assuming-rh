@@ -1,0 +1,40 @@
+id: zeta-derivative-moments-at-zeros-sharp-upper-bound
+title: Sharp upper bound for moments of zeta'(rho) over the zeros
+field: analytic-number-theory
+statement_plain: >
+  Let N(T) be the number of nontrivial zeros rho of zeta with imaginary part
+  in (0, T]. For every real k > 0, the average of |zeta'(rho)|^(2k) over
+  these zeros is O((log T)^(k(k+2))) as T tends to infinity, with the implied
+  constant depending on k.
+statement_formal: |
+  \frac{1}{N(T)} \sum_{0 < \Im(\rho) \le T} \left|\zeta'(\rho)\right|^{2k} \ll_k (\log T)^{k(k+2)} \qquad (k > 0)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens the entry zeta-derivative-moments-at-zeros-upper-bound
+  (Milinovich), removing the epsilon in the exponent and allowing every real
+  k > 0. Together with the lower bound of Milinovich and Ng this gives the
+  order of magnitude (log T)^(k(k+2)) for natural numbers k, as conjectured
+  by Gonek and Hejhal (compare the entry
+  zeta-derivative-moments-at-zeros-sharp-lower-bound). The paper also
+  indicates a proof that the average of |zeta(rho + alpha)|^(2k) is
+  O((log T)^(k^2)) for complex alpha with |alpha| <= 1/log T (Theorem 1.2).
+sources:
+  - authors: S. Kirila
+    title: An upper bound for discrete moments of the derivative of the Riemann zeta-function
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1804.08826
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, zeros]
+added: 2026-11-22
