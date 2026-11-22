@@ -19,7 +19,10 @@ status_note: >
   approximate an averaged version of log zeta by a sum over prime powers.
   The same paper proves unconditionally the upper bound
   sup Re log zeta <= log log T + g(T) with probability tending to 1, for
-  any g tending to infinity (Theorem 1.3).
+  any g tending to infinity (Theorem 1.3). The statement for the real part
+  is now known without RH: Arguin, Belius, Bourgade, Radziwill and
+  Soundararajan (2016) prove it for intervals of length 2. The statements
+  for the imaginary part still rest on RH here.
 sources:
   - authors: J. Najnudel
     title: On the extreme values of the Riemann zeta function on random intervals of the critical line
@@ -28,6 +31,12 @@ sources:
     url: https://arxiv.org/abs/1611.05562
     hypothesis_location: Theorem 1.2
     role: conditional-proof
+  - authors: L.-P. Arguin, D. Belius, P. Bourgade, M. Radziwiłł, K. Soundararajan
+    title: Maximum of the Riemann zeta function on a short interval of the critical line
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1612.08575
+    role: refinement
 review:
   state: ai-classified
   checked_by: null
@@ -35,7 +44,7 @@ review:
   confidence: high
   open_questions:
     - >-
-      Later work by other authors may have established the statement for the real part without RH; this paper does not say so, and it was not checked. A reviewer should confirm whether part of this entry is now proved otherwise.
+      The note on the real part rests on the abstract of arXiv 1612.08575 (only the abstract was read). The entry stays unlocked because the imaginary part statements are not covered by that paper's abstract.
 lean:
   proved: false
   path: null

@@ -9,9 +9,11 @@ statement_plain: >
   2 and one other prime p is modular.
 statement_formal: null
 hypotheses_required: [ERH-Dedekind]
-status: still-conditional
-waiting_on: [galois-extensions]
+status: proved-otherwise
 status_note: >
+  Now known without any hypothesis: Serre's modularity conjecture was
+  proved in full by Khare and Wintenberger (2009). What follows describes
+  the earlier conditional proof of these cases.
   The paper writes only "the Generalized Riemann Hypothesis". It is used at
   one point: the base case of level 2 and weight 6 is reduced, in
   characteristic 5, to the modularity of a semistable abelian variety of
@@ -29,12 +31,19 @@ sources:
     url: https://arxiv.org/abs/math/0603439
     hypothesis_location: Theorem 7.1 (argument in Section 7.1 b)
     role: conditional-proof
+  - authors: C. Khare, J.-P. Wintenberger
+    title: Serre's modularity conjecture (I) and (II)
+    year: 2009
+    venue: Invent. Math. 178, 485-504 and 505-586
+    role: unconditional-proof
 review:
   state: ai-classified
   checked_by: null
   checked_on: null
   confidence: medium
   open_questions:
+    - >-
+      The move to proved-otherwise rests on the general fact that Serre's conjecture is a theorem of Khare and Wintenberger, as stated for example in the abstract of arXiv 2004.07587, which was read. The Khare-Wintenberger papers themselves were not read and their citation is given from memory.
     - >-
       Serre's modularity conjecture is generally understood to have since been proved in full, without any Riemann Hypothesis, by Khare and Wintenberger. The paper on disk does not name such a source for the even level case, so the status is left as still-conditional; a reviewer should consider changing it to proved-otherwise with the proper reference.
     - >-
