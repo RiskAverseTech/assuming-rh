@@ -1,0 +1,46 @@
+id: fourier-uniformity-multiplicative-functions-polylog-intervals
+title: Fourier uniformity of multiplicative functions in intervals of length a large power of log X
+field: analytic-number-theory
+statement_plain: >
+  For every eta > 0 there are constants C, K > 1 such that the following
+  holds. Let g be a complex-valued multiplicative function with |g| <= 1. If
+  the integral over x in [X, 2X] of the supremum over real alpha of
+  |sum_{x <= n <= x+H} g(n) e(alpha n)| is at least eta H X for some
+  H >= (log X)^K, then g is pretentious: D(g; C X^2/H^2, C) <= C, where
+  D(g; T, Q) is the Granville-Soundararajan distance from g to the functions
+  n^(it) chi(n) with |t| <= T and chi of modulus at most Q. In particular
+  the Mobius and Liouville functions satisfy the Fourier uniformity
+  conjecture in intervals of length H >= (log X)^(psi(X)) for any psi
+  tending to infinity.
+statement_formal: |
+  \int_X^{2X}\sup_{\alpha}\Bigl|\sum_{x\le n\le x+H} g(n)e(\alpha n)\Bigr|\,dx \ \ge\ \eta HX \ \text{ for some } H\ge(\log X)^K \quad\Longrightarrow\quad \mathbb{D}(g;\,CX^2/H^2,\,C)\le C
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says the hypothesis is used only in the proof of its mixing
+  lemma (Lemma 2.8), through Lemma 2.7: a bound for sums of
+  Lambda(n) chi(n) n^(it) over n <= P for a Dirichlet character chi,
+  including principal characters. The paper calls this the Riemann
+  Hypothesis for Dirichlet L-functions. RH for zeta is listed because the
+  principal character case is included.
+sources:
+  - authors: M. N. Walsh
+    title: Stability under scaling in the local phases of multiplicative functions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.07873
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The consequence for the Mobius and Liouville functions is taken from the abstract and the remark after Theorem 1.1; the theorem itself is the inverse statement.
+lean:
+  proved: false
+  path: null
+tags: [fourier-uniformity, multiplicative-functions, short-intervals, liouville-function]
+added: 2026-11-22

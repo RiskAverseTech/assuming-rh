@@ -1,0 +1,47 @@
+id: half-integral-weight-fourier-coefficients-sign-changes-positive-proportion
+title: Fourier coefficients of half-integral weight cusp forms change sign a positive proportion of the time along fundamental discriminants
+field: analytic-number-theory
+statement_plain: >
+  Let k >= 2 and let g be a Hecke cusp form of weight k + 1/2 and level 4 in
+  Kohnen's plus space, normalized to have real Fourier coefficients c(n).
+  Consider the fundamental discriminants of the form 8n with n > 0 odd and
+  squarefree. For all large X, the sequence of nonzero c(d) with d of this
+  form and d <= X has >> X sign changes. In particular c(d) < 0 for >> X such
+  d <= X and c(d) > 0 for >> X such d <= X.
+statement_formal: null
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper states that it assumes GRH for L(s, f x chi_d) for every
+  fundamental discriminant d with (-1)^k d > 0, where f is the level 1 Hecke
+  cusp form of weight 2k attached to g by the Shimura correspondence and
+  chi_d is the Kronecker symbol. Since k >= 2 the weight of f is at least 4,
+  so these are quadratic twists of modular L-functions of weight above 2.
+  The paper also proves unconditionally that there are >> X^(1 - eps) sign
+  changes (its Theorem 4 and the results of Section 1.1). The dataset entry
+  half-integral-weight-fourier-coefficients-decorrelation-primes is a
+  different result on the same coefficients.
+sources:
+  - authors: S. Lester, M. Radziwiłł
+    title: Signs of Fourier coefficients of half-integral weight modular forms
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1903.05811
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Theorem 1 as printed says "c(d) < 0" twice in its last sentence; the abstract makes clear that one of them is meant to be c(d) > 0, and the entry follows the abstract.
+    - >-
+      Whether the proof also uses RH for the Riemann zeta function or Dirichlet L-functions in auxiliary steps was not checked; the paper names only the twisted L-functions.
+lean:
+  proved: false
+  path: null
+tags: [half-integral-weight, sign-changes, modular-forms, quadratic-twists]
+added: 2026-11-22

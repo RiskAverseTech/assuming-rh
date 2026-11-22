@@ -1,0 +1,54 @@
+id: euler-kronecker-constant-asymptotic-lower-bound
+title: Asymptotic lower bound for the Euler-Kronecker constant of number fields
+field: algebraic-number-theory
+statement_plain: >
+  For a number field K with discriminant d_K let gamma_K = c_0 / c_(-1) be
+  the Euler-Kronecker constant, where c_(-1) (s-1)^(-1) + c_0 + ... is the
+  Laurent expansion of the Dedekind zeta function of K at s = 1. As K ranges
+  over number fields with |d_K| tending to infinity, the lim inf of
+  gamma_K / log sqrt(|d_K|) is at least -0.26049..., an explicit constant
+  built from the primes 2, 3, 5, 7. Without the hypothesis the same method
+  gives the lower bound -0.52227....
+statement_formal: |
+  \liminf_{K}\ \frac{\gamma_K}{\log\sqrt{|d_K|}}\ \ge\ -\,\frac{\log 2+\frac12\log 3+\frac14\log 5+\frac16\log 7}{\frac{\log 2}{\sqrt2-1}+\frac{\log 3}{\sqrt3-1}+\frac{\log 5}{\sqrt5-1}+\frac{\log 7}{\sqrt7-1}+\frac12(\gamma+\log 8\pi)} = -0.26049\ldots
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper writes "the generalized Riemann hypothesis" without defining it.
+  The proof uses it only through the Basic Inequality of Tsfasman and
+  Vladut for asymptotically exact families of number fields (cited as
+  GRH-Theorem 3.1 of their paper on infinite global fields), an inequality
+  for the Dedekind zeta functions of the fields in the family. So the
+  hypothesis is needed for the Dedekind zeta function of each field K under
+  consideration. For families of fields abelian over the rationals these
+  are products of Dirichlet L-functions, so the bound restricted to abelian
+  fields is covered; for all number fields it stays conditional. In the
+  formula gamma is Euler's constant. The paper also shows unconditionally
+  that the lim inf is at most -0.17849... (Theorem 2), and it improves
+  Ihara's bound of -1.
+sources:
+  - authors: M. A. Tsfasman
+    title: Asymptotic behaviour of the Euler-Kronecker constant
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0503347
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its hypothesis; that it is the Riemann Hypothesis for the Dedekind zeta functions of the fields in the family is inferred from the cited GRH Basic Inequality of Tsfasman and Vladut, which was not consulted.
+    - >-
+      Marked partial on the strength of the special case of families of abelian fields. A reviewer may prefer still-conditional, since the theorem is a lim inf over all number fields.
+    - >-
+      The displayed constant was reconstructed from garbled extracted text and checked numerically to equal 0.26049.
+lean:
+  proved: false
+  path: null
+tags: [euler-kronecker-constant, dedekind-zeta, discriminants, infinite-global-fields]
+added: 2026-11-22

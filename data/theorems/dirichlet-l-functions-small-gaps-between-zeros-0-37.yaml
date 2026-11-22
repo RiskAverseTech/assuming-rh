@@ -1,0 +1,49 @@
+id: dirichlet-l-functions-small-gaps-between-zeros-0-37
+title: Some Dirichlet L-functions have consecutive zeros closer than 0.37 times the average spacing
+field: analytic-number-theory
+statement_plain: >
+  Let mu_1 = 0.366... be the unique solution in (0, 1) of
+  mu + 2 * integral from 0 to mu of (sin(pi v)/(pi v))^2 dv = 1. For every
+  eps > 0 and all sufficiently large Q there are a modulus q in [Q, 2Q], a
+  primitive Dirichlet character chi modulo q, and two zeros 1/2 + i gamma
+  and 1/2 + i gamma' of L(s, chi) with |gamma|, |gamma'| <= 1 and
+  |gamma - gamma'| < (mu_1 + eps) 2 pi / log Q. Since 2 pi / log Q is the
+  average spacing of zeros at low height, some Dirichlet L-function has a
+  pair of zeros closer than 0.37 times the average spacing.
+statement_formal: |
+  |\gamma-\gamma'| < (\mu_1+\varepsilon)\,\frac{2\pi}{\log Q},\qquad \mu_1 + 2\int_0^{\mu_1}\Bigl(\frac{\sin \pi v}{\pi v}\Bigr)^{2}dv = 1,\quad \mu_1 = 0.366\ldots
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is the degree 1 case L_f = zeta of the paper's Theorem 2.1, which is
+  stated for the twists L_f(s, chi) of any primitive automorphic L-function
+  L_f of degree d and level N and assumes the Riemann Hypothesis for
+  L_f(s, chi) for all primitive chi of modulus coprime to N; the general
+  constant mu_d solves mu + 2 * integral from 0 to mu/d of
+  (sin(pi v)/(pi v))^2 dv = 1 and the gap bound is
+  (mu_d + eps) 2 pi / (d log Q). Only the zeta case, where the twists are
+  Dirichlet L-functions, is recorded here; the cases of degree d >= 2 need
+  the hypothesis for automorphic L-functions and are not covered. The
+  paper says it uses GRH both to place the zeros on the critical line and
+  to get square root cancellation in sums of mu(n) chi(n).
+sources:
+  - authors: J. B. Conrey, H. Iwaniec, K. Soundararajan
+    title: Small gaps between zeros of twisted L-functions
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1202.2671
+    hypothesis_location: Theorem 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Whether the trivial character (the Riemann zeta function itself) is among the L-functions whose zeros must lie on the line is not stated; the theorem's hypothesis names only primitive chi, so only GRH-Dirichlet is listed.
+lean:
+  proved: false
+  path: null
+tags: [zero-spacing, small-gaps, dirichlet-l-functions, asymptotic-large-sieve]
+added: 2026-11-22

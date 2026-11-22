@@ -1,0 +1,48 @@
+id: large-values-cubic-quartic-dirichlet-l-functions-prime-moduli
+title: Large central values of cubic and quartic Dirichlet L-functions of prime moduli
+field: analytic-number-theory
+statement_plain: >
+  For all sufficiently large X, the maximum of |L(1/2, chi)| over primes p
+  in (X, 2X] and cubic Dirichlet characters chi modulo p is at least
+  exp((sqrt(2)/pi + o(1)) (log log log X / log log X) sqrt(log X)). The same
+  holds for quartic characters modulo p with the constant sqrt(3/2)/pi in
+  place of sqrt(2)/pi.
+statement_formal: |
+  \max_{\substack{X<p\le 2X\\ \chi \bmod p,\ \chi^3=\chi_0}}\bigl|L(\tfrac12,\chi)\bigr| \ \ge\ \exp\!\left(\Bigl(\frac{\sqrt2}{\pi}+o(1)\Bigr)\frac{\log_3 X}{\log_2 X}\sqrt{\log X}\right),\qquad \max_{\substack{X<p\le 2X\\ \chi \bmod p,\ \chi^4=\chi_0}}\bigl|L(\tfrac12,\chi)\bigr| \ \ge\ \exp\!\left(\Bigl(\frac{\sqrt{3/2}}{\pi}+o(1)\Bigr)\frac{\log_3 X}{\log_2 X}\sqrt{\log X}\right)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  Here log_j is the j-fold iterated logarithm. The paper writes only "GRH".
+  It is used in Lemma 2.8, an estimate for smoothed sums of chi(c) over
+  cubic (or quartic) characters chi of prime modulus. The proof rewrites the
+  sum over the primes of Q(omega) (or Q(i)) and bounds the logarithmic
+  derivative of L(s, psi_c), where psi_c is the cubic (or quartic) residue
+  symbol Hecke character attached to c, under GRH. So the L-functions are
+  Hecke L-functions of cubic and quartic residue characters over Q(omega)
+  and Q(i), not Dirichlet L-functions. The formulas are as printed in the
+  paper's Theorem 1.1. Analogous results for quadratic characters are in
+  large-values-quadratic-dirichlet-l-functions-central-point.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Large values of cubic and quartic Dirichlet $L$-functions of prime moduli
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.02392
+    hypothesis_location: Theorem 1.1 (the hypothesis enters in Lemma 2.8)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.1 was read from the PDF. The shape (log_3 X / log_2 X) sqrt(log X) in the exponent is as printed there; the earlier results quoted in the introduction have sqrt(log X log_3 X / log_2 X) instead, so a reviewer may want to confirm against a later version.
+    - >-
+      Whether GRH for the cubic and quartic Dirichlet L-functions themselves is also used elsewhere in the proof was not checked; the only explicit uses found are in Lemma 2.8.
+lean:
+  proved: false
+  path: null
+tags: [large-values, resonance-method, cubic-characters, central-values]
+added: 2026-11-22

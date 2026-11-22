@@ -1,0 +1,43 @@
+id: simultaneous-nonvanishing-dirichlet-l-functions-galois-orbits
+title: Simultaneous nonvanishing of two twisted Dirichlet L-functions in a Galois orbit modulo a prime power
+field: analytic-number-theory
+statement_plain: >
+  Let q = p^k with p a fixed odd prime, let O be any Galois orbit of
+  primitive Dirichlet characters modulo q, and let eta_1, eta_2 be two
+  distinct imprimitive Dirichlet characters modulo q. Then, as k tends to
+  infinity, the number of chi in O with L(1/2, chi eta_1) L(1/2, chi eta_2)
+  nonzero is >> q, that is, a positive proportion of the orbit.
+statement_formal: |
+  \#\bigl\{\chi\in\mathcal{O}:\ L(\tfrac12,\chi\eta_1)\,L(\tfrac12,\chi\eta_2)\neq 0\bigr\} \gg q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used in two places, both for Dirichlet L-functions: the
+  sharp upper bound for the mollified moments of L(1/2, chi) over primitive
+  chi modulo q (Theorem 1.3, by the method of Soundararajan and Harper), and
+  a strong lower bound at s = 1 for the Dirichlet L-function of the product
+  character formed from eta_1 and eta_2, needed for the mollified second
+  moment (Theorem 1.2). The paper states that its twisted second moment
+  asymptotic (Theorem 1.5) is unconditional, and that it gives an
+  unconditional but weaker simultaneous nonvanishing result (Corollary 1.8).
+sources:
+  - authors: H. M. Bui, A. Florea, H. T. Ngo
+    title: Simultaneous nonvanishing of Dirichlet $L$-functions in Galois orbits
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2507.06609
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes "GRH" without a formal definition. That only Dirichlet L-functions are involved is read from the places where it is invoked (Remark 1.7, Section 5 and Section 7); the cited moment bound ([42, Theorem 1]) was not consulted, and it may also use RH for the Riemann zeta function.
+lean:
+  proved: false
+  path: null
+tags: [nonvanishing, dirichlet-l-functions, mollifier, galois-orbits]
+added: 2026-11-22

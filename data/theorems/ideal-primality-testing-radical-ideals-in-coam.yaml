@@ -1,0 +1,45 @@
+id: ideal-primality-testing-radical-ideals-in-coam
+title: Primality testing for radical and Cohen-Macaulay polynomial ideals is in coAM
+field: complexity-theory
+statement_plain: >
+  Let f_1, ..., f_m be polynomials in Z[x_1, ..., x_n] computed by an
+  algebraic circuit of size s with integer constants, and let I be the ideal
+  they generate. If I is radical or equidimensional Cohen-Macaulay and the
+  dimension of I is given, then deciding whether I is prime is in the
+  complexity class coAM. Without the dimension being given, the problem is in
+  the third level of the polynomial hierarchy, in Sigma_3^p intersected with
+  Pi_3^p.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper writes only "GRH". It says the result is conditional because of
+  its Theorem 2.21, a lower bound taken from Koiran for the number of primes
+  p <= x modulo which an integer polynomial has a root, whose proof rests on
+  the effective Chebotarev density theorem of Lagarias and Odlyzko. That is
+  the Riemann Hypothesis for Dedekind zeta functions of the splitting fields
+  of arbitrary integer polynomials, which are not abelian in general. This is the
+  same use as in nullstellensatz-polynomial-hierarchy and
+  parametric-nullstellensatz-in-am.
+sources:
+  - authors: A. Garg, R. Oliveira, N. Saxena
+    title: "Primes via Zeros: Interactive Proofs for Testing Primality of Natural Classes of Ideals"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2503.20071
+    hypothesis_location: Theorem 1.2 (the hypothesis enters through Theorem 2.21)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The classification follows the paper's own account that the dependence comes from the Lagarias-Odlyzko effective Chebotarev theorem via Koiran; those sources were not consulted.
+lean:
+  proved: false
+  path: null
+tags: [interactive-proofs, polynomial-ideals, arthur-merlin, chebotarev]
+added: 2026-11-22

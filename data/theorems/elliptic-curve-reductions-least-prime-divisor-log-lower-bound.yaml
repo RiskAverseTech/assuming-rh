@@ -1,0 +1,46 @@
+id: elliptic-curve-reductions-least-prime-divisor-log-lower-bound
+title: Least prime divisor of the number of points of reductions of an elliptic curve exceeds a constant times log p infinitely often
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over Q with no congruence obstruction modulo
+  any integer m >= 2 (that is, for no m is the number of points of E over
+  F_p divisible by a common factor forced by the mod m Galois image for all
+  good p). For a good prime p >= 5 let c_E(p) be the least prime divisor of
+  #E(F_p). Then for every real kappa with 0 < kappa < 1/8 there are
+  infinitely many primes p >= 5 of good reduction with
+  c_E(p) > kappa log p. The curve may have complex multiplication or not.
+statement_formal: |
+  c_E(p) > \kappa \log p \quad \text{for infinitely many primes } p, \qquad 0<\kappa<\tfrac18
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper says that by GRH it means the generalized Riemann hypothesis for
+  the Dedekind zeta functions of the number fields to which the Bach and
+  Sorenson bound is applied through its Theorem 32, an effective Chebotarev
+  theorem with avoidance. In the proof these are the fields obtained from
+  the division fields Q(E[M]), M a product of the primes up to n, by
+  adjoining the square root of rad(2 N_E M). They are not abelian over the
+  rationals in general. The paper describes the result as a quantitative
+  version of a theorem of Jones that c_E(p) is unbounded.
+sources:
+  - authors: S. M. Lee, J. Mayle, Rakvi
+    title: Congruence obstructions in the refined Koblitz conjecture
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.30573
+    hypothesis_location: Theorem 6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The plain-language gloss of "congruence obstruction" is a paraphrase; the paper's formal definition (in its Section 2) should be checked by a reviewer.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, koblitz-conjecture, chebotarev, division-fields]
+added: 2026-11-22

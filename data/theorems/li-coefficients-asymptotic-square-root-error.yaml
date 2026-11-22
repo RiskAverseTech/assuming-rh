@@ -1,0 +1,49 @@
+id: li-coefficients-asymptotic-square-root-error
+title: Asymptotic formula for the Li coefficients with error O(sqrt(n) log n)
+field: analytic-number-theory
+statement_plain: >
+  Let lambda_n be the Li coefficients of the Riemann zeta function, the sum
+  over the nontrivial zeros rho of 1 - (1 - 1/rho)^n. Then
+  lambda_n = (1/2) n log n + c n + O(sqrt(n) log n) with
+  c = (gamma - 1)/2 - (1/2) log(2 pi), where gamma is Euler's constant.
+statement_formal: |
+  \lambda_n = \tfrac12\,n\log n + \tfrac12\bigl(\gamma-1-\log 2\pi\bigr)\,n + O\!\left(\sqrt{n}\,\log n\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is the Riemann zeta case of the paper's Theorem 4.1, which is stated
+  for every function F in the Selberg class under the Riemann Hypothesis
+  for F: lambda_F(n) = (d_F/2) n log n + c_F n + O(sqrt(n) log n) with
+  c_F = (d_F/2)(gamma - 1) + (1/2) log(lambda Q_F^2), where d_F is the
+  degree, Q_F the conductor factor in the functional equation and lambda
+  the product of lambda_j^(2 lambda_j) over the gamma factors. For zeta the
+  paper gives d = 1, Q = pi^(-1/2), lambda = 1/2. Only the zeta case is
+  recorded here; the same statement for a primitive Dirichlet L-function
+  needs only the hypothesis for that L-function, and the general case needs
+  it for the Selberg class function in question. The paper says the zeta
+  case re-proves a formula of Voros and that for automorphic L-functions the
+  formula was established by Lagarias. This sharpens the error term o(n)
+  recorded in li-coefficients-asymptotic-growth.
+sources:
+  - authors: K. Mazhouda
+    title: The saddle-point method and the Li coefficients
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1506.01755
+    hypothesis_location: Theorem 4.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper presents the zeta case as a new proof of a known formula (Voros; Lagarias for automorphic L-functions). Whether the error term O(sqrt(n) log n) is itself due to Lagarias was not checked.
+    - >-
+      The constant for zeta was obtained by substituting the paper's values d = 1, Q = pi^(-1/2), lambda = 1/2 into c_F; it agrees with the constant in the existing entry.
+lean:
+  proved: false
+  path: null
+tags: [li-coefficients, li-criterion, selberg-class]
+added: 2026-11-22
