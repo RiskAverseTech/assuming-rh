@@ -1,0 +1,52 @@
+id: average-analytic-rank-quartic-twists-at-most-13-6
+title: Average analytic rank of the curves y^2 = x^3 - dx is at most 13/6
+field: arithmetic-geometry
+statement_plain: >
+  Let E_d be the elliptic curve y^2 = x^3 - dx and let d range over odd
+  fourth-power-free integers (or over those with root number +1, or those
+  with root number -1), weighted by w(d/D) for a non-negative Schwartz
+  function w with w(0) = 0 and compactly supported Fourier transform. Then
+  the lim sup as D tends to infinity of the weighted average of the analytic
+  rank of E_d is at most 13/6. Consequently at least 5/12 of the d with root
+  number -1 have analytic rank exactly 1.
+statement_formal: |
+  \limsup_{D\to\infty}\ \frac{1}{S_{\mathcal{F}^{*}}(w,D)}\sum_{d\in\mathcal{F}^{*}} r(E_d)\,w\!\left(\frac{d}{D}\right)\ \le\ \frac{13}{6}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the L-functions L(s, E_d) of
+  the elliptic curves in the family. These curves have complex
+  multiplication by Z[i], so L(s, E_d) = L(s - 1/2, xi_d) for a Hecke
+  character xi_d over Z[i] built from the quartic residue symbol; the
+  hypothesis can equally be read as GRH for these Hecke L-functions over
+  Q(i). No other L-function is named. The bound comes from a one-level
+  density theorem with Fourier support in (-3/5, 3/5) (Theorem 1.2).
+  Assuming in addition a conjecture on quartic Gauss sums at prime
+  arguments, a quartic analogue of Patterson's conjecture (Conjecture 1.4 of
+  the paper), the support extends to (-1, 1) and the bound improves to 3/2;
+  that stronger result is not what this entry records. Ranks here are
+  analytic ranks.
+sources:
+  - authors: C. David, L. Devin, A. Fazzari, E. Waxman
+    title: Average analytic rank for the $L$-functions of the elliptic curves $y^2=x^3-dx$
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2608.06286
+    hypothesis_location: "Theorem 1.1, first part (from Theorem 1.2)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Coding choice: the L-functions are both elliptic curve L-functions over Q (GRH-automorphic, modular-form-l-functions) and Hecke L-functions of Grossencharacters over Q(i) (GRH-Hecke). The entry uses the first because the paper states the hypothesis for L(s, E_d); a reviewer may prefer GRH-Hecke with power-residue-characters.
+    - >-
+      Theorem 1.1 assumes RH for d in the family, while a lemma in Section 4 assumes it for L(s, xi_d) for all odd integers d; the difference was not examined.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, one-level-density, complex-multiplication]
+added: 2026-11-22

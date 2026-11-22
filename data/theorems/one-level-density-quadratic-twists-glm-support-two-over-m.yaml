@@ -1,0 +1,50 @@
+id: one-level-density-quadratic-twists-glm-support-two-over-m
+title: One-level density of quadratic twists of a GL(M) L-function with support up to 2/M
+field: analytic-number-theory
+statement_plain: >
+  Let pi be a fixed self-contragredient cuspidal automorphic representation
+  of GL_M over Q, M >= 2, whose exterior square L-function has no pole at
+  s = 1 (delta(pi) = -1 in the paper's notation). For the family of twists
+  L(s, pi x chi_8d), d positive, odd and square-free, weighted by a smooth
+  function of d/X, the one-level density of low-lying zeros converges to the
+  integral of phi against the unitary symplectic density 1 - sin(2 pi x)/(2 pi x)
+  for every even Schwartz function phi whose Fourier transform is supported
+  in (-2/M, 2/M).
+statement_formal: |
+  \lim_{X\to\infty} D(X;\phi,w,\mathcal{F}) = \int_{\mathbb{R}} \phi(x)\left(1-\frac{\sin(2\pi x)}{2\pi x}\right)dx \qquad \bigl(\operatorname{supp}\hat\phi \subset (-2/M,\,2/M)\bigr)
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is the Ramanujan-Petersson conjecture for pi, in the
+  form |alpha_pi(p, j)| <= 1. The paper writes GRH without a formal
+  definition. It is used for the twisted L-functions L(s, pi x chi_8d) (to
+  order their zeros and to bound sums of a_pi(p) chi(p) log p over primes via
+  Theorem 5.15 of Iwaniec and Kowalski) and for the symmetric and exterior
+  square L-functions of pi (to evaluate the sum of a_pi(p^2) log p). The
+  result doubles the support (-1/M, 1/M) of Rubinstein for the one-level
+  density. The introduction restricts to M >= 3 because M = 1 and M = 2
+  were treated earlier by Ozluk and Snyder and by the same authors.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: One-level density of quadratic twists of L-functions
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2206.02302
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      GRH is not defined in the paper. The list of L-functions (twists of pi by quadratic Dirichlet characters, symmetric square and exterior square of pi) was read off from where the proof says 'under GRH'; other uses may have been missed.
+    - >-
+      The statement of Theorem 1.1 says M >= 2 while the introduction assumes M >= 3.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, low-lying-zeros, quadratic-twists]
+added: 2026-11-22

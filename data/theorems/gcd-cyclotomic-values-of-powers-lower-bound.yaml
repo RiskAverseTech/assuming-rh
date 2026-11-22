@@ -1,0 +1,46 @@
+id: gcd-cyclotomic-values-of-powers-lower-bound
+title: Large values of gcd(Phi_N(a^n), Phi_N(b^n))
+field: analytic-number-theory
+statement_plain: >
+  Let N be a positive integer with prime factors l_1, ..., l_r, and let a and
+  b be positive integers coprime to N, neither of which is an l_i-th power of
+  a rational number for any i. Then there are infinitely many positive
+  integers n with log gcd(Phi_N(a^n), Phi_N(b^n)) > exp(c log n / log log n),
+  where Phi_N is the N-th cyclotomic polynomial and c > 0 depends only on a,
+  b and N.
+statement_formal: |
+  \log\gcd\bigl(\Phi_N(a^n),\Phi_N(b^n)\bigr) > \exp\!\left(\frac{c\,\log n}{\log\log n}\right)\quad\text{for infinitely many } n
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The proof applies the conditional effective Chebotarev density theorem of
+  Lagarias and Odlyzko (in Serre's formulation) to the Galois extensions
+  F_d = Q(mu_{N d N_0}, a^(1/N_0), b^(1/N_0)) of Q, where N_0 is the radical
+  of N and d runs over squarefree products of small primes, and the paper
+  says it needs GRH for the Dedekind zeta function of F_d. These Kummer
+  fields are not abelian over Q. The cases N = 1 (Bugeaud, Corvaja and
+  Zannier, from Adleman, Pomerance and Rumely) and N = 2 (J. Cohen's thesis)
+  are unconditional. The paper says an attempt to remove the hypothesis with
+  the Bombieri-Vinogradov theorem has not succeeded, and it states a
+  generalization to gcd(Phi_M(a^n), Phi_N(b^n)) (Theorem 2.2) under the same
+  hypothesis.
+sources:
+  - authors: J. Cohen, J. Sonn
+    title: "On GCD(Φ_N(a^n),Φ_N(b^n))"
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1103.2207
+    hypothesis_location: Theorem 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [greatest-common-divisor, cyclotomic-polynomials, effective-chebotarev]
+added: 2026-11-22

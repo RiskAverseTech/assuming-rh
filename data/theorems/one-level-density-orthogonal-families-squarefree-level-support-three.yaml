@@ -1,0 +1,53 @@
+id: one-level-density-orthogonal-families-squarefree-level-support-three
+title: One-level density of even and odd newform families averaged over square-free level, support up to 3
+field: analytic-number-theory
+statement_plain: >
+  Fix an even weight k >= 4. Take the L-functions of primitive holomorphic
+  forms of weight k and level q with even (respectively odd) functional
+  equation, averaged over square-free q of size Q with a smooth weight. For
+  every even Schwartz function Phi whose Fourier transform is compactly
+  supported in (-3, 3), the one-level density of the zeros, normalized by
+  log Q / (2 pi), converges as Q tends to infinity to the prediction for
+  even (respectively odd) orthogonal symmetry. As a consequence, at least
+  69.8 percent of the even forms have L(1/2, f) nonzero and at least 97.8
+  percent of the odd forms have L'(1/2, f) nonzero, in the same averaged
+  sense.
+statement_formal: |
+  \lim_{Q\to\infty}\mathcal{OL}^{\pm}(Q)=\int_{-\infty}^{\infty}\Phi(x)\,dx+\frac12\int_{-\infty}^{\infty}\hat\Phi(x)\,dx\mp\frac12\int_{|x|>1}\hat\Phi(x)\,dx \qquad \bigl(\operatorname{supp}\hat\Phi\subset(-3,3)\bigr)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The main theorem says only "Assume GRH". Lemma 2.9 of the paper makes the
+  use explicit: GRH for Dirichlet L-functions L(s, chi) and for L(s, f) with
+  f a primitive holomorphic or Maass Hecke eigenform of level q (the Maass
+  forms enter through the Kuznetsov formula). The reduction to sums over
+  primes also quotes a step of Iwaniec, Luo and Sarnak that, per the entry
+  one-level-density-holomorphic-cusp-forms-support-two, uses the Riemann
+  Hypothesis for symmetric square L-functions. This extends the support
+  (-2, 2) of that entry for the even and odd families separately, at the
+  cost of an extra average over the level. The exact nonvanishing
+  proportions are 0.69818... and 0.97847... (Corollary 1.3).
+sources:
+  - authors: V. Chandee, X. Li, M. B. Milinovich
+    title: One-level densities of large even and odd orthogonal families of automorphic L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2605.17012
+    hypothesis_location: "Theorem 1.1 (L-functions named in Lemma 2.9)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Whether the proof needs the Riemann Hypothesis for symmetric square L-functions is inferred from its citation of equation (4.23) of Iwaniec, Luo and Sarnak (Lemma 4.1) and was not verified in that source.
+    - >-
+      The formula in statement_formal was reconstructed from garbled text (which integrals carry Phi and which carry its Fourier transform) using the even and odd orthogonal kernels given in the paper (integral of Phi against 1 + sin(2 pi x)/(2 pi x), respectively 1 - sin(2 pi x)/(2 pi x) + delta_0); check against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, low-lying-zeros, modular-forms, nonvanishing]
+added: 2026-11-22

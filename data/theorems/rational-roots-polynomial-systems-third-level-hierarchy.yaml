@@ -1,0 +1,53 @@
+id: rational-roots-polynomial-systems-third-level-hierarchy
+title: Deciding rational roots of most polynomial systems within the polynomial hierarchy
+field: complexity-theory
+statement_plain: >
+  Let F be a system of m polynomials in n variables with integer
+  coefficients, with complex zero set Z_F, and let K be the field generated
+  by the coordinates of the points of Z_F. Suppose F has the property that
+  it has no rational root exactly when Z_F is empty or Gal(K/Q) acts
+  transitively on Z_F. Then deciding whether F has a rational root can be
+  done in the complexity class P^(NP^NP), with input size measured in the
+  sparse encoding. Moreover, emptiness and finiteness of Z_F can be decided
+  in AM. When m >= n and the monomial structure is fixed, all but a fraction
+  O(log c / sqrt(c)) of systems with coefficients of absolute value at most
+  c have Z_F finite with transitive Galois action.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used for the running time bound, through an effective
+  Chebotarev density theorem (Oesterle's conditional version) applied to the
+  splitting field of a univariate polynomial encoding the roots of F; this
+  gives explicit estimates for the density of primes p modulo which F has a
+  root (Theorems 1.2 and 4.9). These splitting fields are arbitrary Galois
+  extensions of Q. The paper describes GRH as the generalization of the
+  Riemann Hypothesis to prime ideals in an arbitrary number field. The
+  genericity statement (Theorem 1.4) is unconditional. Without the
+  hypothesis the paper gives PSPACE for emptiness and finiteness of Z_F.
+  The related entry nullstellensatz-polynomial-hierarchy covers feasibility
+  over the complex numbers.
+sources:
+  - authors: J. M. Rojas
+    title: "Computational Arithmetic Geometry I: Sentences Nearly in the Polynomial Hierarchy"
+    year: 2001
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0005029
+    hypothesis_location: "Theorem 1.3 (resting on Theorem 1.2 and Theorem 4.9)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.3 says 'following the notation and assumptions above'; the surrounding text restricts attention to zero-dimensional Z_F, and it is not fully clear from the extracted text whether finiteness of Z_F is an explicit standing assumption of the theorem.
+    - >-
+      The extracted text shows the class as P with a stacked exponent; it was read as P^(NP^NP), matching the abstract.
+lean:
+  proved: false
+  path: null
+tags: [polynomial-systems, rational-points, effective-chebotarev]
+added: 2026-11-22

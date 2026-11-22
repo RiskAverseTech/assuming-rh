@@ -1,0 +1,54 @@
+id: character-sums-k-free-integers-limiting-distribution
+title: Limiting distribution of quadratic character sums over the k-free integers
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive real non-principal Dirichlet character, k >= 2 a
+  fixed integer, and f(n) = chi(n) for k-free n and 0 otherwise (or the same
+  with chi replaced by the modified character g_chi, which equals chi at
+  primes not dividing the modulus and 1 at primes dividing it). Then
+  e^(-y/(2k)) times the sum of f(n) over n <= e^y has a limiting distribution
+  as a function of y, and the sum of f(n) over n <= x is
+  O(x^(1/(2k)) (log x)^(1/2 + eps)) for every eps > 0 outside a set of x of
+  finite logarithmic measure.
+statement_formal: |
+  e^{-y/(2k)}\sum_{n\le e^{y}}f(n)\ \text{has a limiting distribution on } \mathbb{R},\qquad \sum_{n\le x}f(n)\ll_{\varepsilon}x^{\frac{1}{2k}}(\log x)^{\frac12+\varepsilon}\ \text{outside a set of finite logarithmic measure}
+hypotheses_required: [RH, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is a bound for negative discrete moments at the
+  zeros: for even k, the sum of |zeta'(rho)|^(-2) over zeros with
+  0 < gamma <= T is O(T^(1 + 1/k - eps)); for odd k, the same bound for the
+  sum of |L'(rho, chi)|^(-2) over the zeros of L(s, chi). In particular it
+  forces the relevant zeros to be simple. The Riemann Hypothesis is used for
+  zeta when k is even and for L(s, chi) when k is odd, because the Dirichlet
+  series of f has 1/zeta(ks) or 1/L(ks, chi) as a factor, together with
+  L(s, chi) in the numerator. The second statement is Theorem 1.4 of the
+  paper. The exponent 1/(2k) is the conjectured true order and improves on
+  the exponent 1/(k+1) + eps of the entry
+  modified-quadratic-character-sums-k-free-integers, which needs no extra
+  assumption. Under the Linear Independence conjecture the paper obtains
+  further results (Theorem 6.5), not recorded here.
+sources:
+  - authors: C. Bueno
+    title: Distribution of sums involving Dirichlet characters over the $k$-free integers
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2602.23100
+    hypothesis_location: "Theorem 1.3 (and Theorem 1.4)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The extra assumption is printed as a bound T^(1 + 1/k - eps) 'for all eps > 0'; it was read from the PDF and is recorded as printed, although the intended quantifier is probably 'for some eps > 0' (Lemma 4.1 says 'there is an eps').
+    - >-
+      Whether RH for zeta alone suffices for even k and GRH for L(s, chi) alone for odd k follows the paper's case split and the remark in the author's earlier paper; the theorem itself just says 'the generalized Riemann hypothesis'.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, k-free-integers, limiting-distribution]
+added: 2026-11-22
