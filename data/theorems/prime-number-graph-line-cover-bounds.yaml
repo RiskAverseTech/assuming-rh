@@ -1,0 +1,37 @@
+id: prime-number-graph-line-cover-bounds
+title: Lines covering the prime number graph
+field: analytic-number-theory
+statement_plain: >
+  Let L(n) be the minimum number of straight lines needed to cover the first
+  n points (k, p_k) of the prime number graph, and let B(n) be the largest
+  number of these points on a single line. For all large n, B(n) lies between
+  a constant times n^(1/4) / (log n)^(3/2) and a constant times
+  n^(3/4) (log n)^(1/2), and L(n) lies between a constant times
+  n^(1/4) / (log n)^(1/2) and a constant times n^(7/8) / (log n)^(1/4).
+statement_formal: |
+  \frac{n^{1/4}}{(\log n)^{3/2}} \ll B(n) \ll n^{3/4}(\log n)^{1/2}, \qquad \frac{n^{1/4}}{(\log n)^{1/2}} \ll L(n) \ll \frac{n^{7/8}}{(\log n)^{1/4}}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper proves bounds in terms of any admissible error term R(x) in the
+  Prime Number Theorem; RH is used only to take R(x) = sqrt(x) log x.
+  Weaker bounds of the same shape hold unconditionally.
+sources:
+  - authors: S. D. Kominers, R. Mrazović, C. Pomerance, P. Solé
+    title: Lines in the prime number graph
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2605.22752
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-number-graph, combinatorial-geometry]
+added: 2026-11-22

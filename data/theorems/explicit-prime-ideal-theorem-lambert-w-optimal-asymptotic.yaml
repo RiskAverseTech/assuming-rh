@@ -1,0 +1,54 @@
+id: explicit-prime-ideal-theorem-lambert-w-optimal-asymptotic
+title: Explicit prime ideal theorem with asymptotically optimal coefficients
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field of degree n with absolute discriminant D, root
+  discriminant delta = D^(1/n), and d = r1 + r2 - 1, and let psi_K(x) be the
+  sum of log N(p) over prime ideal powers of norm at most x. For all x at
+  least 3 there is an explicit bound for |psi_K(x) - x| in terms of the
+  Lambert W function whose expansion for fixed K and large x starts with
+  n (sqrt(x) / (2 pi)) [ (1/4) log^2 x - log x log log x ]. For all x at
+  least 3 one also has |psi_K(x) - x| <= (2.2543 sqrt(x) + 1.0155) log D
+  + (0.9722 sqrt(x) - 2.1042) n + x/10 + 9.0458 sqrt(x) + 7.0320
+  + max(0, d log x - 0.36133 n sqrt(x)).
+statement_formal: |
+  \begin{aligned}
+  &\text{For } x \ge 3, \text{ with } A := \tfrac{(\sqrt5-1)\pi\sqrt{x}}{2 n_K} + 21.3270 + \tfrac{33.3542}{n_K},\quad w := W\!\Bigl(\tfrac{e^{\sqrt5}}{2\pi}\,\delta_K A\Bigr),\quad T := 8.2822 + \tfrac{A}{w},\\
+  &\epsilon_K(x,T) := \max\Bigl(0,\ d_K\log x - 3.6133\, n_K \tfrac{\sqrt{x}}{T}\Bigr):\\
+  &|\psi_K(x) - x| \le \frac{\sqrt{x}}{\pi}\Bigl[\Bigl(\tfrac12\log^2\bigl(e^{w+1} + 33.5251\,\delta_K\bigr) - \tfrac12\log^2\delta_K + 3.9792\log\delta_K - 3.4969\Bigr) n_K + 25.5362\Bigr]\\
+  &\qquad\qquad + 1.0155\log\Delta_K - 2.1042\, n_K + 8.8590 + \epsilon_K(x,T),\\
+  &|\psi_K(x) - x| \le (2.2543\sqrt{x} + 1.0155)\log\Delta_K + (0.9722\sqrt{x} - 2.1042)\, n_K + \frac{x}{10} + 9.0458\sqrt{x} + 7.0320 + \epsilon_K(x,10).
+  \end{aligned}
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta function of
+  the field K. When K is abelian over the rationals this zeta function is a
+  product of the Riemann zeta function and Dirichlet L-functions, so that
+  case is covered; for a general number field the bound stays conditional.
+  This sharpens, for large x, the earlier bounds of the same authors
+  recorded in explicit-prime-ideal-theorem-chebyshev-function (the paper
+  compares the two numerically and notes the earlier bound can be better for
+  quadratic fields in some ranges).
+sources:
+  - authors: L. Grenié, G. Molteni
+    title: Explicit versions of the prime ideal theorem for Dedekind zeta functions under GRH, II
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1602.03515
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - This paper writes only "Assume GRH" and does not define it; from the title and the first paper of the series it was taken to mean the Riemann Hypothesis for the Dedekind zeta function of K only.
+    - The formula was transcribed from the PDF because the text extraction is garbled; the constants should be rechecked against the published version.
+lean:
+  proved: false
+  path: null
+tags: [prime-ideal-theorem, dedekind-zeta, explicit-bounds]
+added: 2026-11-22

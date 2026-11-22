@@ -1,0 +1,51 @@
+id: hecke-algebra-explicit-generators-squarefree-level
+title: Explicit finite generating sets for Hecke algebras of squarefree level
+field: arithmetic-geometry
+statement_plain: >
+  Let N be squarefree and k at least 4. The algebra of Hecke operators on the
+  full space M_k(Gamma_0(N)) of modular forms is spanned over C by T_1, ...,
+  T_n whenever n >= N X, where X is any number satisfying four explicit
+  inequalities in k, N, s = dim S_k(Gamma_0(N)) and e = dim E_k(Gamma_0(N)),
+  with alpha = 2605 + 87k + (248 + 6k) log N: X >= max(6(k+1)^2, N, 17.33);
+  X / log^4 X >= 60 k (alpha+1)^2 (e+1)(s+1) log(e+3) log(s+3);
+  X^(1/2) / log^2 X >= max(12 (alpha+1) s log(s+3), k e (alpha+1)^2 + 1);
+  X^(k/2) / log^2 X >= 24 k (alpha+1)(e+1) log(e+3).
+statement_formal: |
+  \begin{aligned}
+  &T_k(\Gamma_0(N)) = \mathrm{Span}_{\mathbb{C}}\{T_1,\dots,T_n\} \quad \text{whenever } n \ge NX, \text{ where}\\
+  &X \ge \max\{6(k+1)^2,\ N,\ 17.33\},\qquad \frac{X}{\log^4 X} \ge 60k(\alpha+1)^2(\epsilon_N+1)(s_N+1)\log(\epsilon_N+3)\log(s_N+3),\\
+  &\frac{X^{1/2}}{\log^2 X} \ge \max\{12(\alpha+1)s_N\log(s_N+3),\ k\epsilon_N(\alpha+1)^2+1\},\qquad \frac{X^{k/2}}{\log^2 X} \ge 24k(\alpha+1)(\epsilon_N+1)\log(\epsilon_N+3),\\
+  &\alpha = 2605+87k+(248+6k)\log N,\quad s_N = \dim S_k(\Gamma_0(N)),\quad \epsilon_N = \dim E_k(\Gamma_0(N)).
+  \end{aligned}
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper's Conjecture 2 is the Riemann Hypothesis for four named lists of
+  L-functions, for every divisor M of N: symmetric squares Sym^2(f) of
+  newforms f of weight k and level dividing M; Rankin-Selberg products f x g
+  of distinct such newforms; primitive Dirichlet characters of conductor
+  d > 1 dividing M; and twists f x chi of such newforms by such characters.
+  Only the Dirichlet part is covered. The result is stated for N squarefree
+  and k at least 4.
+sources:
+  - authors: B. Moore
+    title: Effective generation of Hecke algebras and explicit estimates of Sato-Tate type
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2312.03021
+    hypothesis_location: Corollary 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The restriction to squarefree N and k >= 4 is taken from the abstract and introduction; Corollary 4 itself does not repeat it.
+    - Theorem 3 gives a finer generating set (operators T_{pN/M} with p not dividing M, p <= X_M); only the simpler Corollary 4 is recorded.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, hecke-algebras, explicit-bounds]
+added: 2026-11-22

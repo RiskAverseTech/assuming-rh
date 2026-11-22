@@ -1,0 +1,39 @@
+id: elliptic-curves-squarefree-discriminant-smoothed-count
+title: Smoothed count of elliptic curves with squarefree 4A^3 + 27B^2 with power-saving error
+field: analytic-number-theory
+statement_plain: >
+  For integers A, B let Delta_{A,B} = 4A^3 + 27B^2. Let Gamma be a
+  nonnegative Schwartz function whose Fourier transform equals 1 at 0. Then
+  the sum over integer pairs (A, B) of Gamma(A/X^4) Gamma(B/X^6) times the
+  indicator that Delta_{A,B} is squarefree equals
+  X^10 (1/3) prod_{p>3} (1 - (2p-1)/p^3) + O(X^(7 - 5/27 + epsilon)) for
+  every epsilon > 0.
+statement_formal: |
+  \sum_{(A,B)\in\mathbb{Z}^2} \Gamma\!\Bigl(\frac{A}{X^4}\Bigr)\Gamma\!\Bigl(\frac{B}{X^6}\Bigr)\mu^2(\Delta_{A,B}) = X^{10}\cdot\frac13\cdot\prod_{p>3}\Bigl(1-\frac{2p-1}{p^3}\Bigr) + O\bigl(X^{7-5/27+\varepsilon}\bigr), \qquad \Delta_{A,B} = 4A^3+27B^2
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes the Riemann Hypothesis for all Dirichlet L-functions.
+  It improves, in smoothed form, the unconditional error term O(X^(7+epsilon))
+  of Baier and Browning for the count of curves y^2 = x^3 + Ax + B of
+  exponential height at most X with squarefree Delta.
+sources:
+  - authors: S. Baier
+    title: "Elliptic curves with square-free $Δ$"
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1503.01697
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - Whether the principal character (the Riemann zeta function) is also needed was not traced through the proof; the paper states its hypothesis as RH for all Dirichlet L-functions.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, squarefree-values, exponential-sums]
+added: 2026-11-22

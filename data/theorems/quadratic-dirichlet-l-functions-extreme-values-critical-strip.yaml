@@ -1,0 +1,45 @@
+id: quadratic-dirichlet-l-functions-extreme-values-critical-strip
+title: Extreme values of quadratic Dirichlet L-functions of prime modulus in the strip 1/2 < sigma < 1
+field: analytic-number-theory
+statement_plain: >
+  Let s = sigma + it with 1/2 < sigma < 1 and t real, and let chi_p be the
+  Legendre symbol modulo a prime p. For large x there are at least a
+  constant times sqrt(x) primes p <= x with log |L(s, chi_p)| at least
+  (beta(s) + o(1)) (log x)^(1-sigma) (log log x)^(-sigma), and at least a
+  constant times sqrt(x) primes q <= x with log |L(s, chi_q)| at most minus
+  the same quantity. Here beta(sigma) = (2 log 2)^(sigma-1) / (1 - sigma)
+  for t = 0 and beta(s) = beta(sigma) t^2 / ((1-sigma)^2 + 4 t^2) for t
+  nonzero.
+statement_formal: |
+  \#\Bigl\{p \le x:\ \log|L(s,\chi_p)| \ge (\beta(s)+o(1))\frac{(\log x)^{1-\sigma}}{(\log\log x)^{\sigma}}\Bigr\} \gg x^{1/2}, \qquad \#\Bigl\{q \le x:\ \log|L(s,\chi_q)| \le -(\beta(s)+o(1))\frac{(\log x)^{1-\sigma}}{(\log\log x)^{\sigma}}\Bigr\} \gg x^{1/2}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  GRH is used for Dirichlet L-functions: to count primes q with prescribed
+  Legendre symbols (p/q) for all primes p up to z (a result of Granville and
+  Soundararajan) and to approximate log L(s, chi_q) by a short sum over
+  primes. The same paper also proves, under RH for zeta alone (Theorem 1.2),
+  an asymptotic formula for complex moments of zeta(sigma + it) uniformly
+  for 1/2 + K / log log T <= sigma <= 1 - epsilon and exponents of size up
+  to b(K) (log T)^(2 sigma - 1). Its other main results are unconditional.
+sources:
+  - authors: Y. Lamzouri
+    title: "On the distribution of extreme values of zeta and $L$-functions in the strip $1/2<σ<1$"
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1005.4640
+    hypothesis_location: Theorem 1.8
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper has a second conditional result (Theorem 1.2, under RH) that could be a separate entry.
+    - The printed formula for beta(s) when t is nonzero was copied as it appears (checked against the PDF); it does not reduce to beta(sigma) as t tends to 0, which may be a feature of the method or a misprint.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, quadratic-characters, extreme-values, omega-results]
+added: 2026-11-22
