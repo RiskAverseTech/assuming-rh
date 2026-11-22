@@ -1,0 +1,36 @@
+id: selberg-central-limit-theorem-rate-of-convergence
+title: Rate of convergence in Selberg's central limit theorem for log|zeta(1/2+it)|
+field: analytic-number-theory
+statement_plain: >
+  Let tau be uniformly distributed on [T, 2T] and let Z be a standard normal
+  random variable. For T large enough, the Dudley (bounded Wasserstein)
+  distance between log|zeta(1/2 + i tau)| / sqrt((1/2) log log T) and Z is
+  O(sqrt(log log log log T) / sqrt(log log T)).
+statement_formal: |
+  d_{\mathcal D}\!\left(\frac{\log|\zeta(\tfrac12+i\tau)|}{\sqrt{\tfrac12\log\log T}},\ Z\right)\ \ll\ \frac{\sqrt{\log\log\log\log T}}{\sqrt{\log\log T}}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper states that this improves the rate
+  (log log log T)^2 / sqrt(log log T) obtained by the same author in an
+  earlier paper. The Riemann Hypothesis enters through a lemma of
+  Selberg that allows a mollifier closer to the critical line.
+sources:
+  - authors: A. Roberts
+    title: The Rate of Convergence for Selberg's Central Limit Theorem under the Riemann Hypothesis
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2308.09679
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [central-limit-theorem, value-distribution, zeta-function]
+added: 2026-11-22

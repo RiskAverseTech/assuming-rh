@@ -1,0 +1,43 @@
+id: iterated-argument-sn-two-sided-omega-results
+title: Two-sided large oscillations of the iterated argument functions S_n(t)
+field: analytic-number-theory
+statement_plain: >
+  Let S_0(t) = S(t) be 1/pi times the argument of zeta(1/2 + it) and let
+  S_n(t) be its n-th iterated integral, normalized as in the paper. Fix an
+  integer n >= 0 and beta with 0 < beta < 1. Then there is a positive
+  constant c depending on n and beta such that, for all large T and for each
+  sign, both the maximum of S_n(t) and the maximum of -S_n(t) over
+  T^beta <= t <= T are at least
+  c (log T)^(1/2) (log log log T)^(1/2) / (log log T)^(n + 1/2).
+statement_formal: |
+  \max_{T^{\beta}\le t\le T} \varepsilon\, S_n(t) \ \ge\ c_{n,\beta}\, \frac{(\log T)^{1/2}(\log\log\log T)^{1/2}}{(\log\log T)^{\,n+1/2}}, \qquad \varepsilon\in\{-1,1\}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper deduces this (Corollary 1.2) from its Theorem 1.1, a two-sided
+  lower bound for the maxima of S_n(t + h) - S_n(t) for n >= 1 and h in
+  [0, 1/log log T]. According to the paper, the case n = 0 recovers a result
+  of Chirre and Mahatab, the case of even n recovers another result of
+  theirs, and for odd n the direction that was missing at this order of
+  magnitude is new. It extends the entry
+  argument-of-zeta-extreme-values-resonance (Bondarenko and Seip), which
+  gives |S(t)| and the positive direction of S_1(t), to both signs and all n.
+sources:
+  - authors: S. Zhao
+    title: Two-Sided large oscillations of the argument of the Riemann zeta function and its iterates
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.19383
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [argument-of-zeta, omega-results, resonance-method]
+added: 2026-11-22

@@ -1,0 +1,58 @@
+id: generalized-brauer-siegel-explicit-truncation-error
+title: Explicit form of the generalized Brauer-Siegel theorem for families of number fields
+field: algebraic-number-theory
+statement_plain: >
+  Let K_i be an asymptotically exact family of number fields, let
+  g_i = log sqrt|D_i| be the genus of K_i, let phi_q be the limit of
+  (number of places of K_i of norm q) / g_i, and let kappa_i be the residue
+  of the Dedekind zeta function of K_i at s = 1. Then the limit kappa of
+  log(kappa_i) / g_i exists, and for x >= 2 the sum over prime powers
+  q <= x of phi_q log(q / (q - 1)) equals kappa + O(log x / sqrt(x)).
+statement_formal: |
+  \sum_{q\le x} \phi_q \log\frac{q}{q-1} \;=\; \kappa + O\!\left(\frac{\log x}{\sqrt{x}}\right), \qquad \kappa=\lim_{i\to\infty}\frac{\log \kappa_{K_i}}{g_{K_i}}
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is GRH for the Dedekind zeta functions of the fields K_i;
+  it enters through the prime ideal theorem with square-root error term for
+  each field. If every K_i is abelian over the rationals these zeta
+  functions are products of Dirichlet L-functions and the result is covered;
+  for other families it stays conditional. The corollary follows from the
+  paper's Theorem 7, a Mertens-type product formula for a single number
+  field with error n_K O(log x / sqrt(x)) + g_K O(1 / sqrt(x)) and absolute
+  implied constants; the entry explicit-mertens-theorems-number-fields
+  (Garcia and Lee) gives fully explicit constants for a statement of that
+  kind. The existence of the limit under GRH is the generalized
+  Brauer-Siegel theorem of Tsfasman and Vladut (see the entry
+  dedekind-zeta-limit-in-families-generalized-brauer-siegel); the new part
+  here is the rate. The paper also proves a version for varieties over
+  finite fields, which needs no hypothesis.
+sources:
+  - authors: P. Lebacque
+    title: Generalised Mertens and Brauer-Siegel Theorems
+    year: 2007
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0703570
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never writes out what GRH means; it is read here as the
+      Riemann Hypothesis for the Dedekind zeta function of each field in the
+      family, because the only place it is used is the prime ideal theorem
+      for those fields.
+    - >-
+      The dependence of the O-constant in Corollary 2 on the family is not
+      spelled out in the statement; from Theorem 7 it should depend only on
+      the limit of n_i / g_i.
+lean:
+  proved: false
+  path: null
+tags: [brauer-siegel, mertens-theorem, families-of-number-fields]
+added: 2026-11-22

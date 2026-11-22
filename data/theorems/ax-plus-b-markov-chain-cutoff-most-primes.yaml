@@ -1,0 +1,49 @@
+id: ax-plus-b-markov-chain-cutoff-most-primes
+title: Cut-off for the ax+b Markov chain modulo most primes
+field: analytic-number-theory
+statement_plain: >
+  Fix a probability measure mu on the integers supported on a finite set of
+  at least two elements, with entropy H(mu), and consider the Markov chain
+  x_{n+1} = a x_n + b_n modulo a prime p, where the b_n are independent with
+  law mu. For every epsilon in (0, 1) there is a set of primes of density at
+  most epsilon such that for every other prime p and for all but an
+  epsilon-fraction of the multipliers a in F_p^*, the total variation mixing
+  time T(delta) satisfies |T(delta) - log p / H(mu)| <= C sqrt(log p) for
+  all delta in (epsilon, 1 - epsilon), where C depends only on mu and
+  epsilon. So the chain has a cut-off at log p / H(mu).
+statement_formal: |
+  \Bigl|\,T(\delta)-\frac{\log p}{H(\mu)}\Bigr| \le C_{\mu,\varepsilon}\sqrt{\log p} \qquad \text{for all } \delta\in(\varepsilon,1-\varepsilon)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the Dedekind zeta function of
+  an arbitrary number field. It is applied to the fields Q[x]/(P) generated
+  by roots of integer polynomials P with coefficients given by the walk, to
+  count their roots modulo primes with a strong error term; these fields
+  are not abelian over the rationals in general. This is Corollary 4,
+  deduced from Theorem 3. The paper also proves unconditionally that the
+  mixing time is O(log p log log p) for most a and all p, and O(log p) for
+  most a and most p in a weaker sense.
+sources:
+  - authors: E. Breuillard, P. P. Varjú
+    title: Cut-off phenomenon for the ax+b Markov chain over a finite field
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/1909.09053
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The fields used are general number fields, not necessarily Galois; the
+      waiting_on code galois-extensions is the closest available family.
+lean:
+  proved: false
+  path: null
+tags: [markov-chains, mixing-time, cut-off, finite-fields]
+added: 2026-11-22

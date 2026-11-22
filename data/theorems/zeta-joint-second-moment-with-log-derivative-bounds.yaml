@@ -1,0 +1,40 @@
+id: zeta-joint-second-moment-with-log-derivative-bounds
+title: Bounds for the second moment of zeta times its logarithmic derivative near the critical line
+field: analytic-number-theory
+statement_plain: >
+  For a > 0 let I(a; T) be the integral over T <= t <= 2T of
+  |zeta'/zeta(1/2 + a/log T + it)|^2 |zeta(1/2 + it)|^2. If
+  (log T)^(-1/4 + epsilon) << a << 1 for some 0 < epsilon <= 1/4, then
+  f_1(a) + O((log T)^(-epsilon)) <= I(a; T) / (T (log T)^3)
+  <= f_2(a) + O(1/log T), where
+  f_1(a) = (-a^3 + 5a^2 - 10a - 10(e^(-a) - 1)) / (2a^3) = 1/3 - 5a/24 + ...
+  and f_2(a) = (e^a - e^(-a)(2a^2 + 2a + 1)) / (4a^3) = 1/3 - a/6 + ... .
+statement_formal: |
+  f_1(a)+O\!\left(\frac{1}{(\log T)^{\varepsilon}}\right)\le \frac{1}{T(\log T)^3}\int_T^{2T}\left|\frac{\zeta'}{\zeta}\Bigl(\tfrac12+\tfrac{a}{\log T}+it\Bigr)\right|^2\bigl|\zeta(\tfrac12+it)\bigr|^2\,dt\le f_2(a)+O\!\left(\frac{1}{\log T}\right), \quad f_1(a)=\frac{-a^3+5a^2-10a-10(e^{-a}-1)}{2a^3},\ f_2(a)=\frac{e^{a}-e^{-a}(2a^2+2a+1)}{4a^3}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is a weighted analogue of the bounds of Goldston, Gonek and
+  Montgomery for the unweighted second moment of zeta'/zeta near the
+  critical line. Both bounds tend to 1/3 as a tends to 0. The paper notes
+  that the ratios conjecture predicts an asymptotic with a function f(a)
+  lying strictly between f_1 and f_2, so neither bound is sharp.
+sources:
+  - authors: A. Fazzari
+    title: On the joint second moment of zeta and its logarithmic derivative
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.15918
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, logarithmic-derivative, pair-correlation]
+added: 2026-11-22

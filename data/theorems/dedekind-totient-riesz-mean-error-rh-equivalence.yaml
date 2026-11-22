@@ -1,0 +1,51 @@
+id: dedekind-totient-riesz-mean-error-rh-equivalence
+title: Riesz means of n/psi(n) for the Dedekind totient function and the Riemann Hypothesis
+field: analytic-number-theory
+statement_plain: >
+  Let psi(n) be the Dedekind totient function, the sum of d mu(n/d)^2 over
+  divisors d of n, and let S_k(x) be (1/k!) times the sum over l <= x of
+  (l/psi(l)) (1 - l/x)^k. Write
+  S_k(x) = zeta(4) h(1) x / ((k+1)! zeta(2)) + E_k(x), where h is the Euler
+  product defined in the paper. Then there is an integer k >= 2 such that
+  E_k(x) = O(x^(-1/2 + epsilon)) for every epsilon > 0.
+statement_formal: |
+  S_k(x)=\frac{1}{k!}\sum_{l\le x}\frac{l}{\psi(l)}\Bigl(1-\frac{l}{x}\Bigr)^{k}=\frac{\zeta(4)h(1)}{(k+1)!\,\zeta(2)}\,x+E_k(x), \qquad E_k(x)\ll x^{-1/2+\varepsilon} \ \text{ for some integer } k\ge 2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This statement is equivalent to RH. The bound under RH is quoted from
+  earlier work of Inoue and Kiuchi; the converse follows from the paper's
+  unconditional Theorem 1.3, E_k(x) = Omega_{+-}(x^(Theta - 1 - epsilon))
+  with Theta the supremum of the real parts of the zeros of zeta. The main
+  theorem of the paper (Theorem 1.1) assumes RH and also that all zeros of
+  zeta are simple, and writes E_k(x) for k >= 2 as an explicit sum over
+  zeros times x^(-1/2) plus a smaller error; Theorem 1.2 gives
+  E_k(x) = O(x^(-1/2)) if in addition the negative moment J_{-1/2}(T) of
+  zeta'(rho) is O(T^(1 + epsilon)). Those two results are not recorded here
+  because they need assumptions beyond RH.
+sources:
+  - authors: T. Inaba, S. Inoue
+    title: Riesz means of the Dedekind function II
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1705.05594
+    hypothesis_location: Corollary 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The direction from RH to the bound is due to Inoue and Kiuchi (the
+      paper's reference [3]) and is only quoted here; this paper adds the
+      converse.
+    - >-
+      The recorded result is the corollary, not the paper's main theorem,
+      which needs simplicity of the zeros as well as RH.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-totient, riesz-means, rh-equivalence]
+added: 2026-11-22

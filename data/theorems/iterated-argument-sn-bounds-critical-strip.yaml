@@ -1,0 +1,43 @@
+id: iterated-argument-sn-bounds-critical-strip
+title: Bounds for the argument of zeta and its antiderivatives inside the critical strip
+field: analytic-number-theory
+statement_plain: >
+  For 1/2 < alpha < 1 let S_{0,alpha}(t) = (1/pi) arg zeta(alpha + it), let
+  S_{n,alpha}(t) for n >= 1 be its n-th iterated integral in t (normalized as
+  in the paper), and let S_{-1,alpha}(t) = (1/pi) Re zeta'/zeta(alpha + it).
+  For fixed alpha and every n >= -1, as t tends to infinity,
+  |S_{n,alpha}(t)| <= (w_n / (2^(n+1) pi)) (1 + (2 alpha - 1)/(alpha (1 - alpha)) + o(1))
+  (log t)^(2 - 2 alpha) / (log log t)^(n+1), where w_n = 1 for odd n and
+  w_n = sqrt(2) for even n.
+statement_formal: |
+  |S_{n,\alpha}(t)| \le \frac{\omega_n}{2^{n+1}\pi}\left(1+\frac{2\alpha-1}{\alpha(1-\alpha)}+o(1)\right)\frac{(\log t)^{2-2\alpha}}{(\log\log t)^{n+1}}, \qquad \omega_n=\begin{cases}1,& n \text{ odd},\\ \sqrt2,& n \text{ even}.\end{cases}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Corollary 5 of the paper. It follows from Theorem 2, which gives
+  separate upper and lower bounds with explicit functions C^+_{n,alpha}(t)
+  and C^-_{n,alpha}(t) built from polylogarithms, uniformly in the range
+  (1 - alpha)^2 log log t >= c. Letting alpha tend to 1/2 recovers the
+  critical-line bounds of the entry iterated-argument-sn-bounds (Carneiro
+  and Chirre) with the error term improved by a factor log log log t; in
+  particular |S(t)| <= (1/4) log t / log log t + O(log t / (log log t)^2)
+  (Corollary 3).
+sources:
+  - authors: E. Carneiro, A. Chirre, M. B. Milinovich
+    title: Bandlimited approximations and estimates for the Riemann zeta-function
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1710.10362
+    hypothesis_location: Corollary 5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [argument-of-zeta, critical-strip, fourier-optimization]
+added: 2026-11-22

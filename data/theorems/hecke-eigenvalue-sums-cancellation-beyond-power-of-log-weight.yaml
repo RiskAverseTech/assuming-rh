@@ -1,0 +1,41 @@
+id: hecke-eigenvalue-sums-cancellation-beyond-power-of-log-weight
+title: Cancellation in sums of Hecke eigenvalues of cusp forms of large weight
+field: analytic-number-theory
+statement_plain: >
+  Let f be a Hecke cusp form of weight k for the full modular group with
+  normalized eigenvalues lambda_f(n). For
+  (log k)^2 (log log k)^8 <= y <= x <= k, the sum of lambda_f(n) over n <= x
+  equals the same sum restricted to n with all prime factors at most y, up
+  to an error O((log k)(log y)^4 x log x / sqrt(y)). As a consequence, the
+  sum of lambda_f(n) over n <= x is o(x log x) whenever
+  log x / log log k tends to infinity.
+statement_formal: |
+  \sum_{n\le x}\lambda_f(n)=\sum_{\substack{n\le x\\ P(n)\le y}}\lambda_f(n)+O\!\left(\frac{(\log k)(\log y)^4}{\sqrt{y}}\,x\log x\right), \qquad (\log k)^2(\log\log k)^8\le y\le x\le k
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is GRH for the single L-function L(s, f) of the weight k
+  Hecke cusp form f of level one. The paper also shows unconditionally that
+  the range log x / log log k tending to infinity is best possible: for
+  x = (log k)^A there are many forms f of weight k with the sum at least a
+  constant times x log x.
+sources:
+  - authors: Y. Lamzouri
+    title: Large sums of Hecke eigenvalues of holomorphic cusp forms
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1703.10582
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [hecke-eigenvalues, cusp-forms, friable-numbers]
+added: 2026-11-22

@@ -1,0 +1,41 @@
+id: binomial-products-partial-factorization-asymptotic
+title: Partial factorizations of the product of binomial coefficients in row n of Pascal's triangle
+field: analytic-number-theory
+statement_plain: >
+  Let G_n be the product of the binomial coefficients C(n, k) for
+  0 <= k <= n, and let G(n, x) be the product of the prime powers p^(v_p(G_n))
+  over primes p <= x. Then for all n >= 4 and all 0 < alpha <= 1,
+  log G(n, alpha n) = f_G(alpha) n^2 + O((1/alpha) n^(7/4) (log n)^2), with an
+  absolute implied constant, where
+  f_G(alpha) = 1/2 + (1/2) alpha^2 floor(1/alpha)^2
+  + (1/2) alpha^2 floor(1/alpha) - alpha floor(1/alpha).
+statement_formal: |
+  \log G(n,\alpha n) = f_G(\alpha)\,n^2 + O\!\left(\tfrac{1}{\alpha}\,n^{7/4}(\log n)^2\right), \qquad f_G(\alpha)=\tfrac12+\tfrac12\alpha^2\Bigl\lfloor\tfrac1\alpha\Bigr\rfloor^2+\tfrac12\alpha^2\Bigl\lfloor\tfrac1\alpha\Bigr\rfloor-\alpha\Bigl\lfloor\tfrac1\alpha\Bigr\rfloor
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the same theorem gives the remainder
+  O((1/alpha) n^2 exp(-c sqrt(log n))). The Riemann Hypothesis is used only
+  through the prime number theorem with square-root error term. The paper's
+  Theorem 4.1 gives the same bound for log G(n, x) uniformly in 1 <= x <= n,
+  and Theorems 1.5 and 1.6 give analogous conditional asymptotics for the
+  digit-sum statistics A(n, x) and B(n, x).
+sources:
+  - authors: L. Du, J. C. Lagarias
+    title: Partial Factorizations of Products of Binomial Coefficients
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.15439
+    hypothesis_location: Theorem 1.1 (2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [binomial-coefficients, prime-factorization, radix-expansions]
+added: 2026-11-22

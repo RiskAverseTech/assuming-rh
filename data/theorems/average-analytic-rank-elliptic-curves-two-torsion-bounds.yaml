@@ -1,0 +1,48 @@
+id: average-analytic-rank-elliptic-curves-two-torsion-bounds
+title: Average analytic rank of elliptic curves with a rational 2-torsion point or full 2-torsion
+field: arithmetic-geometry
+statement_plain: >
+  Order elliptic curves y^2 = x^3 + Ax + B over the rationals by naive
+  height, and let E_G(X) be those of height at most X whose rational points
+  contain a subgroup isomorphic to G. Then the lim sup of the average
+  analytic rank over E_G(X) is at most 9.5 for G = Z/2Z and at most 10.5 for
+  G = Z/2Z x Z/2Z.
+statement_formal: |
+  \limsup_{X\to\infty}\frac{1}{|\mathcal{E}_G(X)|}\sum_{E\in\mathcal{E}_G(X)} r_E \ \le\ \begin{cases} 9.5, & G=\mathbb{Z}/2\mathbb{Z},\\ 10.5, & G=\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}. \end{cases}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The hypothesis is GRH for the L-functions of the elliptic curves in the
+  family. These are the case n = 1 of the paper's Theorem 3 (Theorem 4.6),
+  which bounds all moments of the analytic rank for these two groups;
+  Theorem 2 bounds the proportion of curves of large rank. The paper's
+  Theorem 1 states that the average analytic rank is bounded for every
+  torsion group G, with bound 1/2 + 5 d(G) when |G| >= 5, but for
+  G = Z/nZ with n = 7, 8, 9, 10, 12 and for Z/2Z x Z/6Z and Z/2Z x Z/8Z it
+  also assumes two moment conditions on weighted class number sums (its
+  conditions (8) and (9)), so only the cases without that extra assumption
+  are recorded here.
+sources:
+  - authors: P. J. Cho, K. Jeong
+    title: Average analytic rank of elliptic curves with prescribed torsion
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2005.06862
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The values 9.5 and 10.5 are read from the sentence after the moment
+      formula in Theorem 3; the moment formula itself is garbled in the
+      text extraction and was not re-derived.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, torsion-subgroups, one-level-density]
+added: 2026-11-22
