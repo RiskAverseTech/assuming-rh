@@ -1,0 +1,45 @@
+id: k-fold-divisor-function-progressions-beyond-half-uniform-power-saving
+title: The k-fold divisor function in progressions beyond the square-root barrier with power saving uniform in k
+field: analytic-number-theory
+statement_plain: >
+  Let w = 1/1168, let a be a nonzero integer and k at least 4. Let D be the
+  set of squarefree d coprime to a such that the part of d composed of
+  primes up to X^(w^2) is less than X^w and the part composed of primes up
+  to X^w exceeds X^(71/584). Then the sum over d in D with d < X^(293/584)
+  of the absolute error in the distribution of the k-fold divisor function
+  tau_k(n), n up to X, in the residue class a mod d is O(X^(1 - w^2)), a
+  power saving that does not depend on k.
+statement_formal: |
+  \sum_{\substack{d \in \mathcal{D} \\ d < X^{293/584}}} \left| \sum_{\substack{n \le X \\ n \equiv a \,(\mathrm{mod}\, d)}} \tau_k(n) - \frac{1}{\varphi(d)} \sum_{\substack{n \le X \\ (n,d)=1}} \tau_k(n) \right| \ll X^{1-\varpi^2}, \qquad \varpi = \tfrac{1}{1168}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem is stated under the Generalized Lindelof Hypothesis for
+  Dirichlet L-functions, which the paper notes is weaker than (and implied
+  by) the Generalized Riemann Hypothesis for Dirichlet L-functions. The
+  hypothesis is used to bound L(1/2 + it, chi)^k on the critical line
+  uniformly in k. Unconditionally the same paper (Theorem 1) gets the
+  weaker saving X^(1 - theta_k) with theta_k = min(1/(12(k+2)), w^2).
+sources:
+  - authors: D. T. Nguyen
+    title: "Generalized divisor functions in arithmetic progressions: I"
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2308.06839
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 2 assumes only the Generalized Lindelof Hypothesis for Dirichlet L-functions; the entry records it under GRH-Dirichlet because that implies it. A reviewer may prefer to treat Lindelof-only results differently.
+    - >-
+      The implied constant in Theorem 2 is not described; in Theorem 1 it depends at most on a and k.
+lean:
+  proved: false
+  path: null
+tags: [divisor-function, arithmetic-progressions, level-of-distribution]
+added: 2026-11-22

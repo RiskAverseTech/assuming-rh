@@ -1,0 +1,49 @@
+id: first-moment-cubic-dirichlet-l-functions-secondary-term
+title: Secondary term in the first moment of primitive cubic Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let Phi be a smooth function compactly supported on the positive reals
+  with Mellin transform Phi^. The sum of L(1/2, chi) Phi(q/Q) over
+  primitive cubic Dirichlet characters chi mod q with q coprime to 3 equals
+  C_3 Phi^(1) Q + C_3' Phi^(5/6) Q^(5/6) + O(Q^(23/28 + epsilon)), where
+  C_3 is the main term constant of Gao and Zhao and C_3' is an explicit
+  constant that is strictly negative. So the secondary term of order
+  Q^(5/6) is nonzero whenever Phi is not identically zero.
+statement_formal: |
+  \sum_{(q,3)=1}\ \sum\nolimits^{*}_{\substack{\chi \bmod q \\ \chi^3=\chi_0}} L\!\left(\tfrac12,\chi\right)\Phi\!\left(\tfrac{q}{Q}\right) = C_3\,\widehat{\Phi}(1)\,Q + C_3'\,\widehat{\Phi}\!\left(\tfrac56\right)Q^{5/6} + O_{\Phi,\varepsilon}\!\left(Q^{23/28+\varepsilon}\right), \qquad C_3' < 0
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The theorem assumes the hypothesis for Dirichlet L-functions and for
+  Hecke L-functions associated with characters of finite order over
+  K = Q(sqrt(-3)). The Hecke characters arise from cubic residue symbols
+  over K. The paper says the hypothesis is used both in the estimate for a
+  ratio of L-functions and in the estimates for L-values that give the
+  initial domains of continuation. It sharpens the first moment formula of
+  Gao and Zhao, who obtained the main term with error O(Q^(7/8 + epsilon))
+  under the generalized Lindelof hypothesis; compare the entry
+  first-moment-primitive-quartic-sextic-dirichlet-l-functions.
+sources:
+  - authors: Z. Hong
+    title: A secondary term in the first moment of primitive cubic Dirichlet L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.01451
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      A very recent preprint (November 2026); the result has not been checked beyond reading the statement and the description of where the hypothesis is used.
+    - >-
+      Whether the Hecke L-functions used are only those of cubic residue characters over Q(sqrt(-3)) (as the method suggests) or of all finite order characters (as the hypothesis is worded) was not traced through the proof.
+lean:
+  proved: false
+  path: null
+tags: [moments-of-l-functions, cubic-characters, secondary-terms]
+added: 2026-11-22

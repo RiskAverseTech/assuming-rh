@@ -1,0 +1,47 @@
+id: infinitely-ramified-crystalline-galois-representations
+title: Infinitely ramified surjective p-adic Galois representations that are crystalline at p
+field: algebraic-number-theory
+statement_plain: >
+  Let E be a semistable elliptic curve over the rationals with good
+  reduction at 3. For primes p at least 5 in a set of density one, there
+  exist surjective representations of the absolute Galois group of the
+  rationals into GL_2(Z_p) that are ramified at infinitely many primes and
+  crystalline at p, and whose reduction mod p is the Galois action on the
+  p-torsion of E.
+statement_formal: |
+  \exists\, \rho : \mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \twoheadrightarrow \mathrm{GL}_2(\mathbb{Z}_p) \text{ ramified at infinitely many primes, crystalline at } p,\ \rho \bmod p \cong E[p]
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  Without the hypothesis the same paper (Theorem 1) constructs surjective
+  infinitely ramified representations but cannot say whether they are
+  crystalline or even potentially semistable at p. The hypothesis is used
+  through the effective Chebotarev density theorem of Lagarias and Odlyzko
+  (Theorem B of the paper, for a Galois extension L/K of number fields),
+  applied to non-abelian extensions cut out by mod p^k deformations, with
+  the conductor varying, to find pairs of primes that can be added to the
+  level simultaneously (Proposition 3). The paper notes that the
+  unconditional Lagarias-Odlyzko estimate cannot be used because it only
+  holds for x much larger than the discriminant.
+sources:
+  - authors: R. Ramakrishna
+    title: Infinitely ramified Galois representations
+    year: 2000
+    venue: Ann. of Math. 151, 793-815
+    url: https://arxiv.org/abs/math/0003241
+    hypothesis_location: Theorem 2, through Theorem B and Proposition 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes only "GRH"; the code ERH-Dedekind is read off from Theorem B (Lagarias-Odlyzko conditional Chebotarev for Galois extensions of number fields), which is the only place the hypothesis enters.
+lean:
+  proved: false
+  path: null
+tags: [galois-representations, deformation-theory, effective-chebotarev]
+added: 2026-11-22

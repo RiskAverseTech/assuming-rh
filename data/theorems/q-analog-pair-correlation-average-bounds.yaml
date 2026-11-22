@@ -1,0 +1,37 @@
+id: q-analog-pair-correlation-average-bounds
+title: Bounds for the average of the q-analog of Montgomery's pair correlation function
+field: analytic-number-theory
+statement_plain: >
+  Let F_Phi(alpha, Q) be the q-analog of Montgomery's pair correlation
+  function for zeros of primitive Dirichlet L-functions with conductors of
+  size Q, as defined by Chandee, Lee, Liu and Radziwill. For every b >= 1
+  and every sufficiently large fixed l (possibly depending on b), as Q
+  tends to infinity the average of F_Phi(alpha, Q) over alpha in
+  [b, b + l] lies between 0.982144 + o(1) and 1.077542 + o(1). The
+  conjectured value is 1.
+statement_formal: |
+  0.982144 + o(1) < \frac{1}{\ell}\int_{b}^{b+\ell} F_{\Phi}(\alpha, Q)\, d\alpha < 1.077542 + o(1) \qquad (Q \to \infty)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: null
+sources:
+  - authors: E. Quesada-Herrera
+    title: On the $q$-analogue of the pair correlation conjecture via Fourier optimization
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2108.10238
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The text on disk is arXiv version 2 (March 2022); the year given is that of the first arXiv version. The paper also discusses an analog for a family of modular form L-functions, which is not part of this entry.
+lean:
+  proved: false
+  path: null
+tags: [pair-correlation, dirichlet-l-functions, fourier-optimization]
+added: 2026-11-22

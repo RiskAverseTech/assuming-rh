@@ -1,0 +1,52 @@
+id: quadratic-iterates-irreducibility-second-implies-tenth
+title: Irreducibility of the tenth iterate of x^2 + c from the second
+field: arithmetic-geometry
+statement_plain: >
+  Let c be a rational number and f_c(x) = x^2 + c. If the second iterate of
+  f_c is irreducible over the rationals, then so is the tenth iterate. The
+  key conditional step is that A_7(c), the seventh iterate evaluated at 0,
+  is a square in the rationals only for c = 0; equivalently the genus 31
+  hyperelliptic curve y^2 = a_7(x) has only three rational points.
+statement_formal: |
+  f_c^{\circ 2} \text{ irreducible over } \mathbb{Q} \implies f_c^{\circ 10} \text{ irreducible over } \mathbb{Q}, \qquad f_c(x) = x^2 + c,\ c \in \mathbb{Q}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The same theorem proves unconditionally that irreducibility of the second
+  iterate implies irreducibility of the sixth, and that irreducibility of
+  the seventh implies irreducibility of the tenth. Only the step from the
+  sixth to the seventh iterate depends on the hypothesis. There it is used
+  solely to verify (with Magma) that the degree 63 number field obtained by
+  adjoining a root of a_7 has trivial class group (odd class number is
+  enough), which enters a 2-Selmer group computation. The paper does not
+  define the hypothesis further. Conditional class group computations rely
+  on GRH bounds for the norms of prime ideals generating the class group,
+  which is a statement about L-functions of class group characters of that
+  field. The paper says the Minkowski bound is far too large for an
+  unconditional computation to be feasible.
+sources:
+  - authors: M. Stoll
+    title: An application of "Selmer group Chabauty" to arithmetic dynamics
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1912.05893
+    hypothesis_location: Theorem 1.2, through Proposition 3.6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper only says "Assuming GRH, we can verify with Magma that K has trivial class group". Coding this as GRH-Hecke (class group characters of the one field K) follows the convention of the entry generalized-fermat-equation-2-3-11 and is this project's reading, not the paper's wording.
+    - >-
+      The text on disk is arXiv version 3 dated November 2026; the year given is that of the first arXiv version. No journal reference is printed.
+    - >-
+      The paper also mentions that class group computations for curves with g at least 11 in a later section assume GRH; these are not part of this entry.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-dynamics, rational-points, class-groups, selmer-groups]
+added: 2026-11-22

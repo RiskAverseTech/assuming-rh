@@ -1,0 +1,47 @@
+id: gromov-witten-vanishing-in-am
+title: Non-vanishing of Gromov-Witten invariants of partial flag varieties is in AM
+field: complexity-theory
+statement_plain: >
+  The problem of deciding whether a given genus zero, 3-pointed
+  Gromov-Witten invariant of a partial flag variety is nonzero lies in the
+  complexity class AM, and therefore in the second level of the polynomial
+  hierarchy.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The proof reduces the problem to a parametric Hilbert Nullstellensatz
+  with exponents (HNPE), shown to be in AM by reduction to the parametric
+  Hilbert Nullstellensatz, which is in AM under the hypothesis by a theorem
+  of Ait El Manssour, Balaji, Nosan, Shirmohammadi and Worrell extending
+  Koiran's theorem (see the entries nullstellensatz-polynomial-hierarchy
+  and parametric-nullstellensatz-in-am). The hypothesis enters only through
+  that cited theorem. The paper describes GRH loosely as the statement that
+  all nontrivial zeros of "L-functions L(s, chi_k)" have real part 1/2, and
+  says it is needed, following Koiran, to ensure enough primes with
+  particular modular constraints. Koiran's argument uses an effective
+  Chebotarev estimate for general number fields, so the entry is coded like
+  the existing Nullstellensatz entries. This generalizes the entry
+  schubert-vanishing-in-am-and-coam (the degree zero case).
+sources:
+  - authors: I. Pak, C. Robichaux, W. Xu
+    title: On Vanishing of Gromov--Witten Invariants
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.15715
+    hypothesis_location: "Theorem 1.1, through Theorem 3.3 and the cited Theorem 3.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's own one-line description of GRH (zeros of "L-functions L(s, chi_k)") is ambiguous and could be read as Dirichlet L-functions. The code ERH-Dedekind follows the existing entries for Koiran's theorem and its parametric extension, on which the proof depends; a reviewer should confirm against Koiran's paper.
+lean:
+  proved: false
+  path: null
+tags: [arthur-merlin, nullstellensatz, gromov-witten, schubert-calculus]
+added: 2026-11-22

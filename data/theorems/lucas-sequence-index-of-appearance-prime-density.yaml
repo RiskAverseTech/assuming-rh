@@ -1,0 +1,47 @@
+id: lucas-sequence-index-of-appearance-prime-density
+title: Density of primes with a given index of appearance in a Lucas sequence
+field: analytic-number-theory
+statement_plain: >
+  Let u be a nondegenerate Lucas sequence u_n = a_1 u_(n-1) + a_2 u_(n-2)
+  with u_0 = 0, u_1 = 1, whose discriminant D = a_1^2 + 4 a_2 is not a
+  square. For a prime p not dividing 2 a_2 D, let rho(p) be the least k with
+  p dividing u_k, and let the index of appearance be (p - (D|p)) / rho(p).
+  Then for every positive integer t the number of primes p up to x with
+  index of appearance equal to t is delta(t) x / log x plus an error
+  O(x / (log x)^2 + x log(2 log x) / (phi(t) (log x)^2)), for all x > t^3,
+  where delta(t) is a nonnegative constant depending on u and t and the
+  implied constant depends on u.
+statement_formal: |
+  \#\{p \le x : p \nmid 2a_2D_u,\ \iota_u(p) = t\} = \delta_u(t)\,\frac{x}{\log x} + O_u\!\left(\frac{x}{(\log x)^2} + \frac{x\log(2\log x)}{\varphi(t)(\log x)^2}\right) \quad (x > t^3)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH" and does not define it. The proof adapts
+  Hooley's proof of Artin's conjecture: it applies a conditional Chebotarev
+  density theorem (Theorem 3.1 of the paper, for finite Galois extensions
+  F/Q) to Kummer-type fields of the form K(zeta_n, gamma^(1/n)), where K is
+  the quadratic field of the Lucas sequence. These fields are not abelian
+  over the rationals. The result is the Lucas sequence analog of the
+  near-primitive root density results.
+sources:
+  - authors: C. Sanna
+    title: On the index of appearance of a Lucas sequence
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2212.06127
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper does not define its GRH; the code ERH-Dedekind is inferred from the conditional Chebotarev theorem it quotes (Theorem 3.1) and the Kummer fields it is applied to.
+lean:
+  proved: false
+  path: null
+tags: [lucas-sequences, artin-conjecture, rank-of-appearance]
+added: 2026-11-22

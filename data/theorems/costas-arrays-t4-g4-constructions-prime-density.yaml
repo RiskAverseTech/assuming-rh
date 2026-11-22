@@ -1,0 +1,50 @@
+id: costas-arrays-t4-g4-constructions-prime-density
+title: Density of primes admitting the T4 and G4 constructions of Costas arrays
+field: analytic-number-theory
+statement_plain: >
+  Let A = 0.3739558... be Artin's constant. The number T(x) of primes p up
+  to x for which the T4 construction of a Costas array applies (there is a
+  primitive root alpha mod p with alpha^2 + alpha = 1, equivalently p has a
+  Fibonacci primitive root) is asymptotic to (27/38) A pi(x), about
+  0.2657 pi(x). The number G(x) of primes p up to x for which the G4
+  construction applies is asymptotic to (9/38) A pi(x), about
+  0.08856 pi(x). In particular both constructions are valid for infinitely
+  many primes.
+statement_formal: |
+  T(x) \sim \frac{27}{38}\,\pi(x) \prod_{p} \left(1 - \frac{1}{p(p-1)}\right), \qquad G(x) \sim \frac{9}{38}\,\pi(x) \prod_{p} \left(1 - \frac{1}{p(p-1)}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes "Extended Riemann Hypothesis" without defining it. The
+  T4 count is the density of primes with a Fibonacci primitive root,
+  conjectured by Shanks and proved under the hypothesis by Lenstra (also
+  Sander); the paper deduces the G4 count by following Lenstra's method
+  with the extra condition p = 1 or 9 mod 20, and gives only a sketch.
+  Lenstra's work is a Hooley-type argument for Artin's conjecture, which
+  uses the Dedekind zeta functions of Kummer-type fields, here built over
+  Q(sqrt 5) from the golden ratio. These are not abelian over the
+  rationals.
+sources:
+  - authors: T. Trudgian, Q. Wang
+    title: The $T_{4}$ and $G_{4}$ constructions of Costas arrays
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1409.6827
+    hypothesis_location: Theorems 1 and 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The T4 asymptotic (Theorem 1) is due to Lenstra (1977), following a conjecture of Shanks; this paper restates it in the language of Costas arrays. Only Theorem 2 (G4) is new, and its proof is a brief indication ("we find that the asymptotic density should be") rather than a full argument.
+    - >-
+      The hypothesis code is inferred from the cited method of Lenstra (Hooley-type argument over Kummer fields); the paper itself never says which zeta functions are meant.
+lean:
+  proved: false
+  path: null
+tags: [costas-arrays, primitive-roots, artin-conjecture, fibonacci-primitive-roots]
+added: 2026-11-22

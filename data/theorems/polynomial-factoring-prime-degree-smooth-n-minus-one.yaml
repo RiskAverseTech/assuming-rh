@@ -1,0 +1,44 @@
+id: polynomial-factoring-prime-degree-smooth-n-minus-one
+title: Deterministic factoring of polynomials of prime degree n with n-1 smooth
+field: computational-number-theory
+statement_plain: >
+  Let n > 2 be prime, let r be the largest prime factor of n - 1, and let f
+  be a polynomial of degree n over the field with p elements. Then a
+  nontrivial factor of f can be found deterministically in time polynomial
+  in log p and n^r. In particular this is polynomial time when n - 1 is
+  smooth.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper says the hypothesis is needed only to find primitive r-th
+  nonresidues in a finite field F_q, which are used to extract r-th roots
+  (following Evdokimov). It does not say which L-functions this needs. The
+  algorithm works in extensions F_q of F_p, and finding power nonresidues
+  in extension fields is usually justified through Hecke L-functions of
+  power residue characters over cyclotomic fields, so the entry is coded
+  cautiously, in the same way as the entry deterministic-polynomial-factoring,
+  whose subexponential algorithm of Evdokimov this paper extends. The
+  hypothesis is needed for the algorithm to be deterministic and efficient.
+sources:
+  - authors: G. Ivanyos, M. Karpinski, N. Saxena
+    title: Schemes for Deterministic Polynomial Factoring
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0804.1974
+    hypothesis_location: Theorem 12
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only "GRH" and does not define it. The code GRH-Hecke is this project's reading of what finding r-th nonresidues in extension fields F_q requires; if nonresidues are only ever needed in prime fields, Dirichlet L-functions would suffice and the entry would be unlocked.
+lean:
+  proved: false
+  path: null
+tags: [algorithms, derandomization, finite-fields, polynomial-factoring]
+added: 2026-11-22
