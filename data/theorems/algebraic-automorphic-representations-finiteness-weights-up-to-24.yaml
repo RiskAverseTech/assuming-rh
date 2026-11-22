@@ -1,0 +1,46 @@
+id: algebraic-automorphic-representations-finiteness-weights-up-to-24
+title: Finiteness of cuspidal algebraic automorphic representations of GL_n with given conductor and weights in {0, ..., w}, n varying
+field: algebraic-number-theory
+statement_plain: >
+  Let w >= 0 be an integer, let E be a number field whose root discriminant
+  is less than r*(w) = 8 pi e^(gamma - H_w), where gamma is Euler's constant
+  and H_w is the w-th harmonic number, and let N be an ideal of the ring of
+  integers of E. Then there are only finitely many cuspidal algebraic
+  automorphic representations of GL_n over E, with n varying, whose
+  conductor is N and whose weights lie in {0, ..., w}. In particular, over
+  the rationals this holds for weights in {0, ..., 24}, and over Q(sqrt(-3))
+  for weights in {0, ..., 14}.
+statement_formal: |
+  r_E = |\mathrm{disc}\, E|^{1/[E:\mathbb{Q}]} < r^{*}(w) = 8\pi e^{-\psi(1+w)} \ \Longrightarrow\ \#\{\pi \text{ cuspidal algebraic on } \mathrm{GL}_n/E,\ n \ge 1 : \text{conductor } N,\ \text{weights in } \{0,\dots,w\}\} < \infty
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper's hypothesis (GRH) is: for any cuspidal algebraic automorphic
+  representation of GL_n over a number field, the zeros of the completed
+  Rankin-Selberg L-function of the representation with its dual have real
+  part 1/2. Unconditionally the paper proves the same finiteness under the
+  stronger condition that the root discriminant is less than a smaller
+  explicit constant r(w) (Theorem B, first part), which over the rationals
+  gives weights in {0, ..., 23} (Theorem A) and over Q(sqrt(-3)) weights in
+  {0, ..., 12}. The hypothesis improves these to 24 and 14 respectively;
+  r*(25) is less than 1, so the method stops at 24 over the rationals.
+sources:
+  - authors: G. Chenevier
+    title: An automorphic generalization of the Hermite-Minkowski theorem
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1802.05066
+    hypothesis_location: Theorem B (second assertion); the hypothesis (GRH) is defined after Proposition 4.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [automorphic-representations, rankin-selberg, explicit-formula, finiteness]
+added: 2026-11-22

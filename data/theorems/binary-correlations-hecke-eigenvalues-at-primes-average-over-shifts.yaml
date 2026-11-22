@@ -1,0 +1,52 @@
+id: binary-correlations-hecke-eigenvalues-at-primes-average-over-shifts
+title: Binary correlations of Hecke eigenvalues at primes are small on average over shifts up to H >= X^(2/3 + eps)
+field: analytic-number-theory
+statement_plain: >
+  Let lambda_f(n) be the normalized Hecke eigenvalues of a holomorphic cusp
+  form f of even weight k and let Lambda be the von Mangoldt function. For
+  X^(2/3 + eps) <= H <= X^(1 - eps) and any A >= 1, the sum over shifts h
+  with 1 <= |h| <= H of the squared modulus of the sum of
+  lambda_f(n) Lambda(n) lambda_f(m) Lambda(m) over X < n, m <= 2X with
+  n - m = h is O(H X^2 / (log X)^A), with a constant depending on A and k.
+statement_formal: |
+  \sum_{1 \le |h| \le H} \Bigl|\, \sum_{\substack{X < n,\, m \le 2X \\ n - m = h}} \lambda_f(n)\Lambda(n)\lambda_f(m)\Lambda(m) \Bigr|^2 \ \ll_{A,k}\ \frac{H X^2}{(\log X)^A}, \qquad X^{2/3+\varepsilon} \le H \le X^{1-\varepsilon}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes less than a Riemann Hypothesis: its Hypothesis 1 is a
+  Littlewood type zero-free region, namely that for every Dirichlet
+  character chi modulo q the twisted L-function L(s, f, chi) has no zeros
+  with |t| large and real part at least
+  1 - (log log(q|t|))^(1 + eps) / log(q|t|). The Riemann Hypothesis for the
+  twisted modular L-functions L(s, f, chi) implies this, which is how the
+  entry is coded. The paper remarks that for forms of CM type a
+  Vinogradov-Korobov type zero-free region is known, so that no hypothesis
+  is needed in that case. Under Hypothesis 1 together with a fourth moment
+  hypothesis for Dirichlet polynomials (which the abstract says follows
+  from GRH), Theorem 2 extends the range to X^(1/3 + eps) <= H. Theorem 3,
+  an average over the Hecke basis of weight k and level 1, is stated
+  without any hypothesis.
+sources:
+  - authors: J. Kim, K. Nath
+    title: On binary correlations of Fourier coefficients of holomorphic cusp forms at prime arguments
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.10594
+    hypothesis_location: Theorem 1 (Hypothesis 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem is stated under a zero-free region hypothesis, not under GRH; that GRH for L(s, f, chi) implies Hypothesis 1 is immediate but is not stated in the paper in these words. A reviewer should decide whether such weaker-than-GRH results belong in the dataset.
+    - >-
+      The abstract's claim that the fourth moment hypothesis of Theorem 2 follows from GRH is supported in the body only by Remark 1.4, which is phrased tentatively ("It seems that under Generalized Riemann Hypothesis").
+lean:
+  proved: false
+  path: null
+tags: [hecke-eigenvalues, correlations, zero-free-region, modular-forms]
+added: 2026-11-22

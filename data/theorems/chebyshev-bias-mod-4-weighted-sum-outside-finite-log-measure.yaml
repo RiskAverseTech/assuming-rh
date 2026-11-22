@@ -1,0 +1,51 @@
+id: chebyshev-bias-mod-4-weighted-sum-outside-finite-log-measure
+title: Chebyshev's bias modulo 4 for prime sums weighted by 1/sqrt(p), outside a set of finite logarithmic measure
+field: analytic-number-theory
+statement_plain: >
+  Let chi_4 be the non-trivial Dirichlet character modulo 4. There is a
+  constant c and a set S of real numbers of finite logarithmic measure such
+  that the sum of chi_4(p) / sqrt(p) over primes p <= x equals
+  -(1/2) log log x + c + o(1) as x tends to infinity outside S. Equivalently,
+  the sum of 1/sqrt(p) over primes p < x congruent to 3 modulo 4 exceeds the
+  same sum over primes congruent to 1 modulo 4 by (1/2) log log x + c + o(1)
+  for x outside S (with a possibly different constant).
+statement_formal: |
+  \sum_{p \le x} \frac{\chi_4(p)}{\sqrt{p}} = -\frac{1}{2}\log\log x + c + o(1) \qquad (x \to \infty,\ x \notin S), \qquad \int_S \frac{dt}{t} < \infty
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the single Dirichlet
+  L-function L(s, chi_4). This is Corollary A (Corollary 4.3), the special
+  case of the paper's general Theorem B (Theorem 4.2), which is stated for
+  any irreducible cuspidal automorphic representation pi of GL_n over Q with
+  entire L-function, assuming the Riemann Hypothesis for L(s, pi) and the
+  Ramanujan-Petersson conjecture for pi; only the special case for chi_4 is
+  recorded here, where the Ramanujan-Petersson conjecture holds trivially
+  (n = 1). The general theorem rests on Theorem A, an asymptotic for the
+  partial Euler product at the central point outside a set of finite
+  logarithmic measure, in the direction of a conjecture of Kaneko, Koyama
+  and Kurokawa. The companion result for elliptic curves by the same author
+  is the entry euler-product-elliptic-curve-original-bsd-asymptotic. The
+  entries chebyshev-bias and chebyshev-bias-weighted-natural-density concern
+  other formulations of the bias.
+sources:
+  - authors: A. Sheth
+    title: Euler Products at the Centre and Applications to Chebyshev's Bias
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.01512
+    hypothesis_location: Corollary A (Corollary 4.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Only the Dirichlet special case is recorded. The cases of the paper for modular forms and elliptic curves (Corollaries B and C) need the Riemann Hypothesis for L(s, Delta) and L(E, s), and Corollary C also assumes the Birch and Swinnerton-Dyer conjecture.
+lean:
+  proved: false
+  path: null
+tags: [chebyshev-bias, euler-products, prime-races]
+added: 2026-11-22

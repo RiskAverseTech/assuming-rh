@@ -1,0 +1,51 @@
+id: prime-ideals-short-intervals-cramer-type
+title: Cramér's short interval theorem for prime ideals, uniform in the number field
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field of degree n_K whose discriminant has absolute
+  value d_K, and let pi_K(x) count the prime ideals of K of norm at most x.
+  There are absolute constants x_0, c_1, c_2 > 0 such that for x >= x_0 and
+  c_1 (n_K log x + log d_K) sqrt(x) <= h <= x one has
+  pi_K(x + h) - pi_K(x) >= c_2 h / log x. Moreover
+  pi_K(x + h) - pi_K(x) is asymptotic to h / log x when
+  h / ((n_K log x + log d_K) sqrt(x)) tends to infinity with h <= x.
+statement_formal: |
+  \pi_K(x+h) - \pi_K(x) \ \ge\ c_2\, \frac{h}{\log x} \qquad \text{for } x \ge x_0,\quad c_1\,(n_K \log x + \log d_K)\sqrt{x} \le h \le x
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis (called DRH in the paper) is the Riemann Hypothesis for
+  the Dedekind zeta function of the field K only. So the statement is
+  unlocked when K is abelian over the rationals, for example quadratic or
+  cyclotomic, and stays conditional for general number fields. The same
+  paper proves the analogue for primes in arithmetic progressions
+  (Theorem 1) under the Riemann Hypothesis for the Dirichlet L-functions
+  modulo q: pi(x + h; q, a) - pi(x; q, a) >= c_2 h / (phi(q) log x) for
+  c_1 phi(q) sqrt(x) log x <= h <= x, with absolute constants; that result
+  needs only covered hypotheses. The constants are not made explicit; an
+  explicit result for arithmetic progressions is the entry
+  primes-in-progressions-explicit-short-intervals, and the classical case
+  K = Q is covered by cramer-prime-gap-bound and
+  dudek-primes-short-intervals.
+sources:
+  - authors: L. Grenié, G. Molteni, A. Perelli
+    title: Primes and prime ideals in short intervals
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1602.02906
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The entry primes-in-progressions-explicit-short-intervals named in the status note was seen only among the drafts of this sweep and may not yet be in the dataset.
+lean:
+  proved: false
+  path: null
+tags: [prime-ideals, short-intervals, dedekind-zeta]
+added: 2026-11-22

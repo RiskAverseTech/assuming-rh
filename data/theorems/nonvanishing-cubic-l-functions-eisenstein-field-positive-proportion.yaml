@@ -1,0 +1,51 @@
+id: nonvanishing-cubic-l-functions-eisenstein-field-positive-proportion
+title: A positive proportion of cubic Dirichlet L-functions over the Eisenstein field do not vanish at the central point
+field: analytic-number-theory
+statement_plain: >
+  Let omega = exp(2 pi i / 3) and let F be the family of primitive cubic
+  characters over Q(omega) given by the cubic residue symbols attached to
+  c = c_2 c_1^2, where c_1, c_2 in Z[omega] are congruent to 1 modulo 3,
+  square-free and coprime, with c_2 c_1^2 congruent to 1 modulo 9 and not
+  both equal to 1. Among the characters in F whose conductor has norm at
+  most X, the proportion with L(1/2, chi) not zero is, in the limit as X
+  tends to infinity, at least 3 e^(-e^(101.3)) / (sqrt(3) - 1)^2. In
+  particular a positive proportion of these L-functions do not vanish at
+  s = 1/2.
+statement_formal: |
+  \lim_{X \to \infty} \frac{\#\{\chi \in F : L(1/2, \chi) \ne 0,\ n_\chi \le X\}}{\#\{\chi \in F : n_\chi \le X\}} \ \ge\ \frac{3\, e^{-e^{101.3}}}{(\sqrt{3} - 1)^2}
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper assumes GRH for the L-functions L(s, chi) of the cubic
+  characters chi in the family F. These are Hecke L-functions of cubic
+  residue symbol characters over Q(omega), not Dirichlet L-functions over
+  the rationals, although the paper calls them cubic Dirichlet characters
+  over the Eisenstein field. The hypothesis is used for the sharp upper
+  bound on mollified moments (Theorem 1.2); the first mollified moment
+  (Theorem 1.3) is unconditional. The earlier result for a thin subfamily,
+  with proportion 2/13 from the one level density, is the entry
+  one-level-density-cubic-l-functions-eisenstein-field-support-13-11.
+sources:
+  - authors: A. M. Güloğlu, H. Yesilyurt
+    title: Mollified Moments of Cubic Dirichlet L-Functions over the Eisenstein Field
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2301.10979
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The constant is read from the text extraction of Theorem 1.1 as 3 e^(-e^(101.3)) / (sqrt(3) - 1)^2, consistent with the final computation of the paper (a factor e^(e^(101.3)) (1 - 1/sqrt(3))^2 in the denominator). The paper writes "lim" for the proportion; a liminf may be what is actually proved.
+    - >-
+      Lemma 2.8 also says "Assuming that GRH holds" for a non-principal cubic ray class character, without further specification; this is read as GRH for Hecke L-functions of cubic characters over Q(omega).
+lean:
+  proved: false
+  path: null
+tags: [non-vanishing, cubic-characters, mollified-moments, hecke-l-functions]
+added: 2026-11-22
