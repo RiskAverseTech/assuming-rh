@@ -1,0 +1,46 @@
+id: zeta-zeros-r-gaps-inoue-constants
+title: Large and small r-gaps between zeta zeros with constants 0.9065 and 0.4846
+field: analytic-number-theory
+statement_plain: >
+  Let 0 < gamma_1 <= gamma_2 <= ... be the ordinates of the zeros of the
+  Riemann zeta function in the upper half-plane. For every integer r >= 1,
+  the lim sup over n of (gamma_(n+r) - gamma_n) / (2 pi r / log gamma_n) is
+  greater than 1 + A_0 / sqrt(r) with A_0 = 0.9064997..., and the lim inf
+  is less than 1 - 0.484604 / sqrt(r). For r >= 2 the second constant can be
+  taken to be 0.61861.
+statement_formal: |
+  \limsup_{n\to\infty} \frac{\gamma_{n+r} - \gamma_n}{2\pi r/\log\gamma_n} > 1 + \frac{0.9064997}{r^{1/2}}, \qquad \liminf_{n\to\infty} \frac{\gamma_{n+r} - \gamma_n}{2\pi r/\log\gamma_n} < 1 - \frac{0.484604}{r^{1/2}} \qquad (r \ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens the constants 0.574271 and 0.299856 of Conrey and
+  Turnage-Butterbaugh (draft entry
+  zeta-zeros-r-gaps-selberg-explicit-constants) uniformly in r. For r = 1
+  the paper relies on earlier results under the same hypothesis, due to Bui
+  and Milinovich for large gaps and Preobrazhenskii for small gaps; the new
+  work is for r >= 2. The same paper proves unconditionally (Theorem 1)
+  the weaker statement with theta_1 / r^(2/3) and theta_2 / r^(2/3) for
+  unspecified absolute positive constants, which was announced by Selberg.
+sources:
+  - authors: S. Inoue
+    title: A note on r-gaps between zeros of the Riemann zeta-function
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.06613
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      For r between 1 and 20 the proof rests on numerical evaluation of integrals (Table 1 of the paper), as stated there.
+    - >-
+      A_0 is defined in the paper as a maximum over B > 0 whose formula is garbled in the text extraction; only its numerical value 0.9064997... is recorded.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, gaps-between-zeros, explicit-bounds]
+added: 2026-11-22

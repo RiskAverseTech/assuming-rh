@@ -1,0 +1,45 @@
+id: zeta-mean-value-at-shifted-zeros-small-shift
+title: Mean value of zeta(rho + delta) zeta(1 - rho + conj(delta)) over zeros for small shifts
+field: analytic-number-theory
+statement_plain: >
+  Let S(delta, T) be the sum over nontrivial zeros rho = beta + i gamma of
+  zeta with 0 < gamma < T of zeta(rho + delta) zeta(1 - rho + conj(delta)),
+  for a complex shift delta = delta(T). If delta log T tends to 0, then for
+  every epsilon > 0,
+  S(delta, T) = (|delta|^2 / 12) (T / (2 pi)) (log T)^4
+  + O(|delta|^3 T^(1 + epsilon) + |delta|^2 T (log T)^3).
+statement_formal: |
+  \sum_{0 < \gamma < T} \zeta(\rho + \delta)\,\zeta(1 - \rho + \bar\delta) = \frac{|\delta|^2}{12}\,\frac{T}{2\pi}\,\log^4 T + O\!\left(|\delta|^3 T^{1+\epsilon} + |\delta|^2 T \log^3 T\right) \qquad (\delta \log T \to 0)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper notes this gives an asymptotic when |delta| <= T^(-epsilon). It
+  is used, together with Theorem 2 of the paper (a longer asymptotic
+  formula under the same hypothesis for real part of delta between
+  -a / log T and 1/2 + a / log T), to complete a range left open by the
+  unconditional asymptotic of Garunkstis and Novikas. Related to the entry
+  zeta-discrete-mean-square-over-zero-ordinates, which treats a different
+  discrete mean value.
+sources:
+  - authors: R. Garunkstis, J. Paliulionyte
+    title: Mean values of the Riemann zeta function at shifted zeros under the Riemann Hypothesis
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.03297
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says the asymptotic was already known unconditionally (Garunkstis and Novikas) in essentially the same region with a gap, so part of the range of this theorem may be known without the hypothesis; the paper does not state exactly which part.
+    - >-
+      Author names are given without diacritics.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, discrete-moments, mean-values]
+added: 2026-11-22

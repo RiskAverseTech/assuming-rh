@@ -1,0 +1,41 @@
+id: zeta-large-deviations-gaussian-upper-bound
+title: Gaussian upper bound for large deviations of log|zeta| on the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let k > 0 and let V = V(T) be asymptotic to k log log T. For T large
+  enough, the proportion of t in [T, 2T] with log|zeta(1/2 + it)| > V is at
+  most C_k exp(-V^2 / log log T) / sqrt(log log T), where
+  C_k = exp(e^(ck)) for an absolute constant c > 0. In particular the
+  proportion of t in [T, 2T] with |zeta(1/2 + it)| > (log T)^k is at most
+  C_k (log T)^(-k^2) / sqrt(log log T).
+statement_formal: |
+  \frac{1}{T}\,\mathrm{meas}\bigl\{t \in [T, 2T] : \log|\zeta(\tfrac12 + it)| > V\bigr\} \le C_k\, \frac{e^{-V^2/\log\log T}}{\sqrt{\log\log T}}, \qquad V \sim k \log\log T, \quad C_k = \exp(e^{ck})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the level-set bound (log T)^(-k^2 + o(1)) of Soundararajan
+  behind the entry zeta-moments-near-sharp-upper-bound, and the paper
+  deduces from it (Corollary 1.2, for k at least 2) the moment bound of
+  Harper recorded in the entry zeta-moments-sharp-upper-bound-harper. The
+  paper says an upper bound of this form was proved unconditionally for
+  0 < k < 2 by Arguin and Bailey, and that a matching lower bound is known
+  for all k > 0.
+sources:
+  - authors: L.-P. Arguin, E. Bailey, A. Roberts
+    title: Conditional Upper Bounds for Large Deviations and Moments of the Riemann Zeta Function
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.25579
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, large-deviations, upper-bounds]
+added: 2026-11-22

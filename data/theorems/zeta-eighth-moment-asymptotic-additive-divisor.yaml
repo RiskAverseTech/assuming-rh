@@ -1,0 +1,45 @@
+id: zeta-eighth-moment-asymptotic-additive-divisor
+title: Asymptotic formula for the eighth moment of the Riemann zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let I_4(T) be the integral of |zeta(1/2 + it)|^8 over 0 <= t <= T. Then
+  I_4(T) is asymptotic to (24024 a_4 / 16!) T (log T)^16 as T tends to
+  infinity, where a_4 is the k = 4 case of a_k, the product over primes p
+  of (1 - 1/p)^(k^2) times the sum over m >= 0 of binom(k+m-1, m)^2 p^(-m).
+statement_formal: |
+  \int_0^T \left|\zeta\!\left(\tfrac12 + it\right)\right|^{8} dt \sim \frac{24024\, a_4}{16!}\, T(\log T)^{16}, \qquad a_4 = \prod_p \left(1 - \frac1p\right)^{16} \sum_{m=0}^{\infty} \binom{m+3}{m}^{2} p^{-m}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the paper's Conjecture 1, the quaternary additive
+  divisor conjecture: an asymptotic formula with a power-saving error term
+  O(P^C X^(1/2 + epsilon)) for smoothed sums of d_4(n) d_4(n + r),
+  uniformly for shifts 1 <= |r| << X^(1 - epsilon'). It supplies the main
+  term; the Riemann Hypothesis is used through the authors' sharp bound for
+  shifted moments (the entry zeta-shifted-moments-sharp-upper-bound) and
+  Harper's bound (the entry zeta-moments-sharp-upper-bound-harper) to
+  control error terms. The value agrees with the Keating-Snaith conjecture
+  for k = 4. The paper notes there are no numerical confirmations of
+  Conjecture 1.
+sources:
+  - authors: N. Ng, Q. Shen, P.-J. Wong
+    title: The eighth moment of the Riemann zeta function
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2204.13891
+    hypothesis_location: Theorem 1.1 (extra assumption in Conjecture 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The additive divisor conjecture is a substantial unproved input and supplies the main term; the entry is recorded because the conjecture is named and listed as PLUS-EXTRA.
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, eighth-moment, additive-divisor-problem]
+added: 2026-11-22
