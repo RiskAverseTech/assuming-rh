@@ -1,0 +1,49 @@
+id: cubic-field-counts-local-conditions-omega-result
+title: Omega result for the error term in counting cubic fields with a local condition
+field: analytic-number-theory
+statement_plain: >
+  Let N_p(X, T) be the number of non-Galois cubic fields K with
+  0 < D_K < X (or with -X < D_K < 0) in which the prime p has splitting
+  type T. Suppose that N_p(X, T) = A_p(T) X + B_p(T) X^(5/6) +
+  O(p^omega X^(theta + epsilon)) for every epsilon > 0, uniformly in p and
+  T, where A_p(T) and B_p(T) are the explicit main-term constants. Then
+  theta + omega >= 1/2.
+statement_formal: |
+  N_p^{\pm}(X,T) = A_p^{\pm}(T)\,X + B_p^{\pm}(T)\,X^{5/6} + O_{\varepsilon}\bigl(p^{\omega} X^{\theta+\varepsilon}\bigr) \ \text{ for all } p, T \quad \Longrightarrow \quad \theta + \omega \ge \tfrac12
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta function
+  zeta_K(s) of every non-Galois cubic field K in the family. These fields
+  are not abelian over Q: zeta_K(s) / zeta(s) is the L-function of a
+  two-dimensional Artin representation with image S_3, so the hypothesis
+  does not reduce to Dirichlet L-functions. It is used to bound the average
+  one-level density of the zeros by O(log X), which contradicts the
+  unconditional formula of Theorem 1.2 (with its new lower-order term) if
+  theta + omega < 1/2.
+sources:
+  - authors: P. J. Cho, D. Fiorilli, Y. Lee, A. Södergren
+    title: Omega results for cubic field counts via lower-order terms in the one-level density
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2102.08077
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem says "for each K in F(X)"; the entry reads this as all non-Galois cubic fields (all X), which is what the proof needs as X tends to infinity.
+    - >-
+      The uniformity in p and T in the assumed estimate (1.2) is this entry's reading of "admissible values"; the exact form used in the proof is the multi-prime version (2.3) in Section 2 of the paper.
+    - >-
+      waiting_on is single-field-zeta although the hypothesis is for a whole family of cubic fields; no family in the list fits better.
+lean:
+  proved: false
+  path: null
+tags: [cubic-fields, low-lying-zeros, omega-results]
+added: 2026-11-22

@@ -1,0 +1,52 @@
+id: hilbert-irreducibility-exponential-specializations-density-one
+title: Irreducibility of f(a_1^{n_1}, ..., a_r^{n_r}, X) for almost all exponents
+field: arithmetic-geometry
+statement_plain: >
+  Let f(t_1, ..., t_r, X) be a polynomial with integer coefficients, of
+  degree at least 1 in X, such that f(t_1^{m_1}, ..., t_r^{m_r}, X) is
+  irreducible over the algebraic closure of Q for all positive integers
+  m_1, ..., m_r (the pull-back condition (PB)). Let a_1, ..., a_r be integers
+  different from 0, 1 and -1. Then the proportion of integer vectors
+  (n_1, ..., n_r) in the box [-N, N]^r for which
+  f(a_1^{n_1}, ..., a_r^{n_r}, X) is irreducible in Q[X] tends to 1 as N
+  tends to infinity.
+statement_formal: |
+  \lim_{N \to \infty} \frac{\#\{\mathbf{n} \in ([-N,N] \cap \mathbb{Z})^r : f(a_1^{n_1}, \ldots, a_r^{n_r}, X) \in \mathbb{Q}[X] \text{ is irreducible}\}}{(2N+1)^r} = 1
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH" and does not define it. The hypothesis enters
+  through Lemma 3.5, which rests on the result (5) of Erdos and Murty (over
+  Q) and Jarviniemi (over number fields): the lower density of primes p for
+  which a has multiplicative order at least (p - 1)/l modulo p tends to 1 as
+  l grows. The paper cites this with a reference to Hooley's method, which
+  uses the zeta functions of Kummer fields obtained by adjoining roots of
+  unity and roots of a. The proof passes through an auxiliary number field
+  K (Theorem 2.1), so the Kummer fields are over K, not only over Q. For
+  r = 1 the paper notes that Debes proved the result unconditionally, in the
+  stronger form that f(a^n, X) is irreducible for all but finitely many n.
+  The paper also states a version over number fields (Theorem 2.2).
+sources:
+  - authors: L. Bary-Soroker, D. Garzoni, V. Matei
+    title: On the irreducibility of $f(2^n,3^m,X)$ and other such polynomials
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.04058
+    hypothesis_location: Theorem 1.1; used in Lemma 3.5 through equation (5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH covers. The code ERH-Dedekind for Kummer fields is inferred from the cited results of Erdos-Murty and Jarviniemi and the reference to Hooley; those papers were not consulted.
+    - >-
+      The entry states the case r = 1 as part of the theorem although the paper says that case is known unconditionally (Debes); the conditional content is r at least 2.
+lean:
+  proved: false
+  path: null
+tags: [hilbert-irreducibility, multiplicative-order, kummer-fields]
+added: 2026-11-22

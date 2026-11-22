@@ -1,0 +1,49 @@
+id: no-irreducible-mod-2-galois-representations-unramified-outside-2-low-dimension
+title: No irreducible mod 2 Galois representations of Q unramified outside 2 in dimensions 2, 3 and 4
+field: algebraic-number-theory
+statement_plain: >
+  There is no irreducible representation of the absolute Galois group of Q
+  into GL_d over the algebraic closure of F_2 that is unramified outside 2,
+  for d = 2, 3 or 4. The same holds for d = 5, 6, 7, 8 when the field cut
+  out by the representation is totally real, and there is no irreducible
+  totally real representation into GL_d over the algebraic closure of F_3
+  unramified outside 3 for d = 2, 3 or 4.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper says the dependence on GRH comes from the discriminant lower
+  bounds of Odlyzko, Poitou and Serre and Odlyzko's GRH-conditional tables.
+  Those bounds assume the Riemann Hypothesis for the Dedekind zeta function
+  of the number field they are applied to, here the Galois extension of Q
+  cut out by a hypothetical representation. Such a field is not abelian
+  over Q when the representation is irreducible of dimension at least 2, so
+  the hypothesis does not reduce to Dirichlet L-functions. The paper notes
+  that Moon proved the case p = 2, d at most 4 without GRH under the extra
+  assumption that the field cut out is totally real, and it proves
+  unconditionally that there is no irreducible representation into GSp_4(F_2)
+  unramified outside 2 (Theorem C).
+sources:
+  - authors: A. Ghitza, T. Yamauchi
+    title: The non-existence of some Galois representations of moderate dimension in small characteristic
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.00635
+    hypothesis_location: Theorem A; the use of GRH is explained at the end of Section 1 and in Section 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; that it means the Riemann Hypothesis for the Dedekind zeta functions of the fields cut out by the representations is read from its statement that the dependence comes from Odlyzko's discriminant bounds.
+    - >-
+      The waiting_on family galois-extensions is the closest fit; the proof uses discriminant bounds, not an effective Chebotarev theorem.
+lean:
+  proved: false
+  path: null
+tags: [galois-representations, discriminant-bounds, nonexistence]
+added: 2026-11-22

@@ -1,0 +1,46 @@
+id: prime-averages-endpoint-improving-single-log
+title: Sharp endpoint improving inequality for averages over the primes
+field: analytic-number-theory
+statement_plain: >
+  Let A_N f(x) = (1/N) sum_{1 <= n <= N} f(x - n) Lambda(n), where Lambda is
+  the von Mangoldt function. There is an absolute constant C such that for
+  every N > 30, every interval I of N integers and all subsets F, G of I,
+  (1/N) <A_N 1_F, 1_G> <= C u Log(u), where u = |F| |G| / N^2 and
+  Log x = 1 + |log x|. The power of the logarithm is best possible.
+statement_formal: |
+  N^{-1} \langle A_N \mathbf{1}_F, \mathbf{1}_G \rangle \le C\, \frac{|F|\,|G|}{N^2}\, \text{Log}\!\left(\frac{|F|\,|G|}{N^2}\right), \qquad \text{Log}\, x = 1 + |\log x|
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper describes GRH loosely as a statement about arbitrary
+  L-functions, but the only consequence it uses is its equation (1.1), the
+  estimate psi(x; q, a) = x / phi(q) + O(x^(1/2) log^2(qx)) for primes in
+  arithmetic progressions, which follows from the Riemann Hypothesis for
+  the zeta function and Dirichlet L-functions. It is applied to approximate
+  the exponential sum over primes on the major arcs (Lemma 4.5). Without
+  the hypothesis the paper proves the same inequality with Log squared.
+  Under the same hypothesis the paper also proves the corresponding sparse
+  bound for the maximal function sup_N |A_N f| (Theorem 1.3).
+sources:
+  - authors: M. T. Lacey, H. Mousavi, Y. Rahimi
+    title: Endpoint $ \ell ^{r}$ improving estimates for Prime averages
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2101.10401
+    hypothesis_location: Theorem 1.2; GRH enters through equation (1.1) in the proof of Lemma 4.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's one-line description of GRH mentions "an arbitrary L-function", but every use found in the text goes through equation (1.1) for primes in arithmetic progressions, so the entry is coded as zeta and Dirichlet L-functions only. A reviewer should confirm no other L-function is used.
+    - >-
+      The normalization of the pairing was read from the extracted text: the averages are written with the bracket notation <f>_I = |I|^{-1} sum |f|, so the right side is <f>_I <g>_I Log(<f>_I <g>_I).
+lean:
+  proved: false
+  path: null
+tags: [primes, harmonic-analysis, circle-method]
+added: 2026-11-22

@@ -1,0 +1,52 @@
+id: automorphic-l-function-zero-in-every-interval-45-32
+title: Every entire automorphic L-function has a critical zero in each interval of length 45.3236
+field: analytic-number-theory
+statement_plain: >
+  Let L(s) be the L-function of an irreducible unitary cuspidal automorphic
+  representation of GL_n over Q, normalized so that the critical line is
+  Re(s) = 1/2, and suppose L(s) is entire. Then for every real t_0 the
+  function L(1/2 + it) has a zero with t in the interval
+  [t_0, t_0 + 45.3236]. In particular the gap between consecutive zeros on
+  the critical line is at most 45.3236, whatever the degree and conductor.
+statement_formal: |
+  \forall\, t_0 \in \mathbb{R}\ \ \exists\, t \in [t_0,\ t_0 + 45.3236] : \quad L(\tfrac12 + it) = 0
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the one L-function in the
+  statement. The paper's L-functions are those of irreducible unitary
+  cuspidal automorphic representations of GL_n over Q, of any degree n; for
+  n = 1 these include primitive Dirichlet L-functions, but the content of
+  the theorem is the uniformity over all degrees. The paper's standing
+  conventions also assume the Ramanujan-Petersson conjecture, but it remarks
+  after Lemma 4.1 that any mild growth estimate on the coefficients is
+  sufficient, so that conjecture is not listed here as an extra assumption.
+  Miller had proved the same statement with 28 in place of 45.3236 when all
+  the archimedean parameters mu_j are real; the paper gives a numerical
+  degree 4 example with a gap of about 28.992, showing that Miller's bound
+  fails in general. The paper gives only a sketch of the proof and says a
+  slightly improved version is due to Bober.
+sources:
+  - authors: J. Bober, J. B. Conrey, D. W. Farmer, A. Fujii, S. Koutsoliotas, S. Lemurell, M. Rubinstein, H. Yoshida
+    title: The highest lowest zero of general L-functions
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1211.5996
+    hypothesis_location: Theorem 2.1 (L-functions and standing assumptions defined at the start of Section 2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper's definition of an L-function assumes the Ramanujan-Petersson conjecture together with GRH. The entry does not list PLUS-EXTRA because the paper says any mild growth estimate on the coefficients c(n) suffices; a reviewer should confirm that the known unconditional bounds are enough.
+    - >-
+      The proof in the paper is headed "Sketch of proof of Theorem 2.1"; the paper quotes the full results from references [FKL] and [B].
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-l-functions, explicit-formula, automorphic-l-functions]
+added: 2026-11-22

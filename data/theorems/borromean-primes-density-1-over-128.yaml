@@ -1,0 +1,46 @@
+id: borromean-primes-density-1-over-128
+title: Borromean triples of primes have density 1/128
+field: algebraic-number-theory
+statement_plain: >
+  Call a set of three distinct primes {p1, p2, p3} Borromean if each is
+  congruent to 1 mod 4, each is a quadratic residue modulo the others, and
+  the Redei triple symbol [p1, p2, p3] equals -1. Among all sets of three
+  distinct primes below x, the proportion that are Borromean tends to 1/128
+  as x tends to infinity.
+statement_formal: |
+  \lim_{x \to +\infty} \frac{\pi_{\text{Borr}}(x)}{\#\{\{p_1,p_2,p_3\} : p_i < x,\ p_i \ne p_j\}} = \frac{1}{128}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used through the effective Chebotarev density theorem
+  of Grenie and Molteni (Theorem 3.2 of the paper), which the paper states
+  for a general Galois extension under "GRH" and applies with error terms
+  uniform in p1 and p2 to two extensions of Q: the multiquadratic field
+  Q(sqrt(p1), sqrt(p2), sqrt(-1)) of degree 8, which is abelian, and the
+  field k(sqrt(-1)) of degree 16, where k is Redei's dihedral extension of
+  degree 8 attached to p1 and p2. The second field is not abelian over Q,
+  so its Dedekind zeta function is not a product of Dirichlet L-functions
+  only. The auxiliary count of pairs of primes (Theorem 2.1) is proved
+  without the hypothesis.
+sources:
+  - authors: Y. Ishida, A. Kuramoto, D. Zheng
+    title: The Density of Borromean Primes
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2403.17957
+    hypothesis_location: Theorem 3.1 (Main Theorem); used through Theorem 3.2 in Section 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The entry takes it to be the Riemann Hypothesis for the Dedekind zeta functions of the fields to which the effective Chebotarev theorem is applied. The zeta function of the degree 16 field factors into Dirichlet L-functions and L-functions of dihedral type (Hecke characters of quadratic fields), so GRH-Hecke for those characters would also suffice; this refinement is not in the paper.
+lean:
+  proved: false
+  path: null
+tags: [arithmetic-topology, redei-symbol, chebotarev]
+added: 2026-11-22

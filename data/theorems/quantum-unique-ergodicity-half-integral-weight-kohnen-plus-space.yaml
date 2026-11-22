@@ -1,0 +1,45 @@
+id: quantum-unique-ergodicity-half-integral-weight-kohnen-plus-space
+title: Quantum unique ergodicity for half-integral weight Hecke cusp forms in Kohnen's plus space
+field: analytic-number-theory
+statement_plain: >
+  Let g_k be a holomorphic cusp form of weight k + 1/2 for Gamma_0(4) that
+  lies in Kohnen's plus space, is an eigenfunction of the Hecke operators
+  T_{p^2} for all odd primes p, and is normalized to have Petersson norm 1.
+  Then for every compact subset D of Gamma_0(4)\H with boundary of measure
+  zero, the mass of y^(k + 1/2) |g_k(z)|^2 on D tends to
+  vol(D) / vol(Gamma_0(4)\H) as k tends to infinity. Consequently the zeros
+  of g_k become equidistributed with respect to hyperbolic measure.
+statement_formal: |
+  \iint_{D} y^{k+\frac12}\, |g_k(z)|^2 \, \frac{dx\,dy}{y^2} \ \longrightarrow\ \frac{\text{vol}(D)}{\text{vol}(\Gamma_0(4)\backslash\mathbb{H})} \qquad (k \to \infty)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper says exactly which L-functions are needed: L(s, f) for Hecke
+  cusp forms f of weight 2k for SL_2(Z) (the Shimura lifts), all quadratic
+  twists L(s, f x chi_d) by fundamental discriminants d with (-1)^k d > 0,
+  and the symmetric square L-function L(s, Sym^2 f). The weights 2k go to
+  infinity, so this is beyond weight 2 forms. The paper proves the
+  analogous statement for half-integral weight Hecke Maass cusp forms in
+  the Kohnen plus space (Theorem 2), assuming the Riemann Hypothesis for
+  the L-functions of weight 0 Hecke-Maass cusp forms for SL_2(Z), their
+  quadratic twists and their symmetric squares.
+sources:
+  - authors: S. Lester, M. Radziwiłł
+    title: Quantum unique ergodicity for half-integral weight automorphic forms
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1606.04119
+    hypothesis_location: Theorem 1 and the paragraph after it; Theorem 2 for the Maass case
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [quantum-unique-ergodicity, half-integral-weight, modular-forms]
+added: 2026-11-22
