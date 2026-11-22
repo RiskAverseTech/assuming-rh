@@ -1,0 +1,38 @@
+id: prime-counting-subadditivity-range-sqrt-x-log-squared
+title: "Second Hardy-Littlewood conjecture: subadditivity of pi(x) for y above sqrt(x) log^2 x"
+field: analytic-number-theory
+statement_plain: >
+  For every epsilon > 0 there is x_epsilon >= 2 such that
+  pi(x + y) <= pi(x) + pi(y) holds for all x >= x_epsilon and all y with
+  (2 + epsilon) sqrt(x) (log x)^2 / (8 pi) <= y <= x, where pi is the prime
+  counting function.
+statement_formal: |
+  \pi(x+y) \le \pi(x) + \pi(y) \qquad \text{for all } x \ge x_\varepsilon \text{ and } \frac{(2+\varepsilon)\sqrt{x}\,\log^{2}x}{8\pi} \le y \le x
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The proof links subadditivity of pi(x) to the error term in the Prime
+  Number Theorem and uses Schoenfeld's bound
+  |pi(x) - li(x)| < sqrt(x) log x / (8 pi) under RH (see the entry
+  schoenfeld-prime-counting-error). The paper's unconditional results cover
+  a narrower range of y, and Corollary 1.4 gives a version assuming RH only
+  up to a finite height.
+sources:
+  - authors: B. Chahal, E. Elma, N. Fellini, A. Vatwani, D. N. T. Vo
+    title: On the Second Hardy-Littlewood Conjecture
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2503.02766
+    hypothesis_location: Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [prime-counting-function, hardy-littlewood-conjecture, subadditivity]
+added: 2026-11-22

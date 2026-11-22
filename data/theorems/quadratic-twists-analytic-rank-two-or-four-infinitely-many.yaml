@@ -1,0 +1,38 @@
+id: quadratic-twists-analytic-rank-two-or-four-infinitely-many
+title: Infinitely many quadratic twists of any elliptic curve with analytic rank 2 or 4
+field: arithmetic-geometry
+statement_plain: >
+  Every elliptic curve E over the rationals has infinitely many quadratic
+  twists whose analytic rank (the order of vanishing of the L-function at
+  s = 1) is either 2 or 4.
+statement_formal: |
+  \#\{\, d \text{ squarefree} : \operatorname{ord}_{s=1} L(E^{d}, s) \in \{2, 4\} \,\} = \infty \quad \text{for every elliptic curve } E/\mathbb{Q}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the L-functions of the
+  quadratic twists of E; it is used to bound analytic ranks from above
+  through the explicit formula. Under the same hypothesis for the twists of
+  the congruent number curve y^2 = x^3 - x, the paper also shows that
+  infinitely many of them have odd analytic rank between 3 and 17
+  (Theorem 2).
+sources:
+  - authors: F. Naccarato
+    title: On elliptic curves with prescribed analytic rank at least $2$
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.21447
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, quadratic-twists]
+added: 2026-11-22

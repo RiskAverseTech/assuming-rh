@@ -1,0 +1,38 @@
+id: moments-quadratic-dirichlet-l-functions-moduli-8p-order-of-magnitude
+title: Order of magnitude of moments of quadratic Dirichlet L-functions of moduli 8p
+field: analytic-number-theory
+statement_plain: >
+  Let chi_{8p} be the quadratic character given by the Kronecker symbol
+  (8p / .). For every real k >= 0 and all large X, the sum over odd primes
+  p <= X of (log p) L(1/2, chi_{8p})^k is bounded above and below by
+  positive constants depending on k times X (log X)^(k(k+1)/2).
+statement_formal: |
+  \sum_{2 < p \le X} (\log p)\, L\!\left(\tfrac12, \chi_{8p}\right)^{k} \asymp_k X (\log X)^{k(k+1)/2} \qquad (k \ge 0 \text{ real})
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper assumes RH for zeta and GRH for L(s, chi_{8p}) for all odd
+  primes p. The lower bound is Theorem 1.1 and the upper bound Theorem 1.2;
+  both are conditional. The entries
+  second-moment-quadratic-l-functions-prime-conductor and
+  large-values-quadratic-dirichlet-l-functions-prime-moduli concern related
+  families of prime moduli.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Bounds for moments of quadratic Dirichlet $L$-functions of prime-related moduli
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2105.03601
+    hypothesis_location: Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [moments-of-l-functions, quadratic-characters, prime-moduli]
+added: 2026-11-22

@@ -1,0 +1,46 @@
+id: iterated-argument-sn-large-values-near-critical-line
+title: Large values of the iterated argument functions S_n(sigma, t) near the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let S(sigma, t) = (1/pi) arg zeta(sigma + it) and let S_n(sigma, t) be its
+  n-th iterated integral in t, normalized as in the paper. Fix 0 < beta < 1
+  and an integer n >= 0. For T large and
+  1/2 <= sigma <= 1/2 + 1/log log T, the maximum over T^beta <= t <= T of
+  delta_n S_n(sigma, t) is at least a positive constant times
+  sqrt(log T log log log T) / (log log T)^(n + 1/2). Here delta_n may be
+  taken as +1 or -1 if n is even, and delta_n = (-1)^((n+3)/2) if n is odd.
+statement_formal: |
+  \max_{T^{\beta}\le t\le T} \delta_n\, S_n(\sigma,t) \gg \frac{(\log T)^{1/2}(\log\log\log T)^{1/2}}{(\log\log T)^{n+1/2}}, \qquad \tfrac12 \le \sigma \le \tfrac12 + \frac{1}{\log\log T}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  At sigma = 1/2 and n = 0, 1 this recovers the bounds in the entry
+  argument-of-zeta-extreme-values-resonance (with both signs for S(t)); for
+  n >= 2 it gives Omega results for S_n(t) that improve Selberg's
+  conditional estimate by the factor sqrt(log log log t) and by a power of
+  log log t. It follows from the paper's Theorem 1 on the differences
+  S_n(sigma, t + h) - S_n(sigma, t). The paper notes (Corollary 3) that for
+  n >= 3 with n not congruent to 3 mod 4, the Omega_+ result for S_n(t)
+  holds unconditionally. The matching upper bounds are in the entry
+  iterated-argument-sn-bounds.
+sources:
+  - authors: A. Chirre, K. Mahatab
+    title: Large values of the argument of the Riemann zeta-function and its iterates
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.04288
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Corollary 3 of the paper makes part of the sigma = 1/2 case (the Omega_+ result for n >= 3, n not congruent to 3 mod 4) unconditional; the entry as stated, for all n and for sigma up to 1/2 + 1/log log T, remains conditional.
+lean:
+  proved: false
+  path: null
+tags: [argument-of-zeta, omega-results, resonance-method]
+added: 2026-11-22

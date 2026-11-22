@@ -1,0 +1,40 @@
+id: sum-of-divisors-strong-ramanujan-liminf
+title: Strong form of Ramanujan's theorem for the sum of divisors function
+field: analytic-number-theory
+statement_plain: >
+  Let sigma(n) be the sum of the divisors of n, gamma Euler's constant, and
+  T(n) = (e^gamma log log n - sigma(n)/n) sqrt(log n). Then the lim inf of
+  T(n) over all positive integers n is at least
+  c_1 = e^gamma (2 sqrt(2) - 4 - gamma + log(4 pi)), which is about 1.3932.
+  Consequently, for every epsilon > 0 and all sufficiently large n,
+  sigma(n) + (c_1 - epsilon) n / sqrt(log n) < e^gamma n log log n.
+statement_formal: |
+  \liminf_{n\to\infty}\left(e^{\gamma}\log\log n-\frac{\sigma(n)}{n}\right)\sqrt{\log n}\ \ge\ c_1 := e^{\gamma}\left(2\sqrt{2}-4-\gamma+\log 4\pi\right)\approx 1.3932
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Ramanujan proved the corresponding inequality for colossally abundant
+  numbers under RH; this paper extends it to all integers. It strengthens,
+  for large n, the inequality sigma(n) < e^gamma n log log n of the entry
+  robin-inequality, which holds for all n > 5040 if and only if RH is true.
+  The paper also shows that the behavior of its "highest abundant numbers"
+  differs according to whether RH is true or false (Theorem 2).
+sources:
+  - authors: O. R. Musin
+    title: Ramanujan's theorem and highest abundant numbers
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/1905.09327
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [sum-of-divisors, robin-inequality, colossally-abundant-numbers]
+added: 2026-11-22

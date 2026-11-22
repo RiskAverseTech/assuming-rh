@@ -1,0 +1,45 @@
+id: infinitary-mobius-function-summatory-bound
+title: Summatory function of the infinitary (modified) Mobius function
+field: analytic-number-theory
+statement_plain: >
+  Let mu_inf be the multiplicative function with
+  mu_inf(p^v) = (-1)^(number of ones in the binary expansion of v), whose
+  Dirichlet series is the product over j >= 0 of 1/zeta(2^j s), and let
+  M_inf(x) be the sum of mu_inf(n) over n <= x. Then
+  M_inf(x) = O(x^(1/2) exp((log x)^(1/2) (log log x)^14)).
+statement_formal: |
+  \sum_{n\le x}\mu_\infty(n) \ll x^{1/2}\exp\!\left((\log x)^{1/2}(\log\log x)^{14}\right), \qquad \sum_{n=1}^{\infty}\frac{\mu_\infty(n)}{n^{s}} = \prod_{j=0}^{\infty}\zeta(2^{j}s)^{-1}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The same theorem shows that the weaker bound
+  M_inf(x) = O(x^(1/2 + epsilon)) for every epsilon > 0 is equivalent to RH,
+  and gives under RH an explicit formula for M_inf(x) as a sum over zeta
+  zeros. The bound has the same shape as Soundararajan's bound for the
+  classical Mertens function (see the entry
+  mertens-function-bound-soundararajan). Unconditionally the paper proves
+  M_inf(x) = O(x exp(-c (log x)^(3/5) (log log x)^(-1/5))) and
+  M_inf(x) = Omega(x^(1/2)).
+sources:
+  - authors: R. Steuding, J. Steuding, L. Tóth
+    title: A modified Möbius $μ$-function
+    year: 2011
+    venue: Rend. Circ. Mat. Palermo 60, 13-21
+    url: https://arxiv.org/abs/1109.4242
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The proof of the bound (13) was not read in detail; the exponent 14 on log log x is copied from the theorem statement.
+    - >-
+      The comparison with Soundararajan's bound for the Mertens function is this entry's remark, not a claim checked against the paper's proof.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, summatory-functions, infinitary-divisors]
+added: 2026-11-22
