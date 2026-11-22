@@ -1,0 +1,53 @@
+id: shifted-moments-dedekind-zeta-sharp-upper-bound
+title: Sharp upper bound for shifted moments of Dedekind zeta functions
+field: analytic-number-theory
+statement_plain: >
+  Let K_1, ..., K_r be fixed number fields and a_1, ..., a_r positive real
+  exponents in a compact set. For large T and real shifts b_j with
+  |b_j| <= T/2, the integral over t in [T, 2T] of the product of
+  |zeta_{K_j}(1/2 + i(t + b_j))|^{a_j} is at most a constant times
+  T B(T, b, a), where B is an explicit product of Dedekind zeta values near
+  the 1-line. In particular, for a single number field K and fixed k > 0,
+  the 2k-th moment of zeta_K on the critical line is << T (log T)^(rho_K k^2),
+  where rho_K is the number of double cosets H\G/H for G = Gal(L/Q),
+  H = Gal(L/K) and L the Galois closure of K. For K Galois over Q the
+  exponent is [K : Q] k^2.
+statement_formal: |
+  \int_T^{2T} \left|\zeta_K\!\left(\tfrac12 + it\right)\right|^{2k} dt \ll_{K,k} T (\log T)^{\rho_K k^2}, \qquad \rho_K = |H \backslash G / H|
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is GRH for the Dedekind zeta function of L, the compositum
+  of the Galois closures of the K_j. When all the K_j are abelian over the
+  rationals, L is abelian and its zeta function is a product of the Riemann
+  zeta function and Dirichlet L-functions, so that case is covered. For
+  other fields (for example a non-Galois cubic field, where L has group S_3
+  and the exponent is 2 k^2) the bound stays conditional. The formal
+  statement shown is Corollary 1.4, the unshifted single-field case of
+  Theorem 1.1. The paper says the bound is conjecturally sharp, improves a
+  conditional bound of Milinovich and Turnage-Butterbaugh, and extends a
+  result of Hagen for solvable Galois extensions. The matching lower bound
+  under the same hypothesis is the entry
+  shifted-moments-dedekind-zeta-sharp-lower-bound.
+sources:
+  - authors: B. Durkan, N. Karak, K. Mahatab
+    title: Sharp Upper Bounds for Moments of Dedekind Zeta Functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.27516
+    hypothesis_location: Theorem 1.1 (and Corollaries 1.2 to 1.7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The factor B(T, b, a) of Theorem 1.1 is described only in words; its definition involves zeta functions of fixed fields of double-coset stabilizers.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, moments, shifted-moments]
+added: 2026-11-22

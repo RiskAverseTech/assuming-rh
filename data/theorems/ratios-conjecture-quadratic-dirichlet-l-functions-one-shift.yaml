@@ -1,0 +1,58 @@
+id: ratios-conjecture-quadratic-dirichlet-l-functions-one-shift
+title: Ratios conjecture for quadratic Dirichlet L-functions with one shift in numerator and denominator
+field: analytic-number-theory
+statement_plain: >
+  Let f be a smooth, fast-decaying weight and let R_D(X, alpha, beta; f) be
+  the sum over positive fundamental discriminants d of
+  f(d/X) L(1/2 + alpha, chi_d) / L(1/2 + beta, chi_d). For
+  0 < |Re(alpha)| < Re(beta) < 1/2, R_D equals the two main terms predicted
+  by the recipe of Conrey, Farmer and Zirnbauer (one of size X and one of
+  size X^(1 - alpha)) up to an error O(X^(1 - Re(alpha)/2 - Re(beta)/2 + eps)),
+  with the implied constant depending on alpha and beta.
+statement_formal: |
+  \begin{aligned}
+  R_D(X,\alpha,\beta;f) ={}& \frac{X\,\mathcal{M}f(1)\,\zeta(1+2\alpha)}{2\zeta(2)\,\zeta(1+\alpha+\beta)}\,P_D\bigl(\tfrac12+\beta,\tfrac12+\alpha\bigr) \\
+  &+ \frac{X^{1-\alpha}\,\mathcal{M}f(1-\alpha)\,\zeta(1-2\alpha)\,\pi^{\alpha}\,\Gamma_e\bigl(\tfrac12+\alpha\bigr)}{2\zeta(2)\,\zeta(1-\alpha+\beta)}\,P_D\bigl(\tfrac12+\beta,\tfrac12-\alpha\bigr) \\
+  &+ O_{\alpha,\beta}\bigl(X^{1-\mathrm{Re}(\alpha)/2-\mathrm{Re}(\beta)/2+\varepsilon}\bigr),
+  \end{aligned}
+  \qquad P_D(z,w)=\prod_p\Bigl(1+\frac{1-p^{z-w}}{(p^{z+w}-1)(p+1)}\Bigr),\quad \Gamma_e(s)=\frac{\Gamma\bigl(\frac{1-s}{2}\bigr)}{\Gamma\bigl(\frac{s}{2}\bigr)}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here Mf is the Mellin transform of f. The paper proves a stronger version
+  (Theorem 1.2) for the larger family of all Jacobi symbol characters chi_n
+  with n odd, valid for Re(alpha) > 0, Re(beta) > eps and
+  1 + Re(beta) > Re(alpha), with an error term uniform in the shifts. From
+  it the paper derives an asymptotic for the weighted average of
+  L'/L(1/2 + r, chi_n) over odd square-free n (Theorem 1.4) and the one-level
+  density of the family for test functions with Fourier support in (-2, 2),
+  including lower order terms (Corollary 1.5). The hypothesis is used
+  through Lindelof-type bounds for L(s, chi_n) and 1/L(s, chi_n) for real
+  characters chi_n, so only the zeta function and Dirichlet L-functions are
+  involved. Related entries:
+  one-level-density-quadratic-dirichlet-l-functions-ratios-conjecture, which
+  assumes the Ratios Conjecture, and
+  n-level-density-quadratic-dirichlet-l-functions-support-two.
+sources:
+  - authors: M. Čech
+    title: The Ratios conjecture for real Dirichlet characters and multiple Dirichlet series
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2110.04409
+    hypothesis_location: Theorem 1.1 (also Theorems 1.2 to 1.4 and Corollary 1.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper says only "GRH" without a formal definition; the codes are read from the estimates it records under GRH (Section 2), which concern L(s, chi_n) for quadratic characters. RH is listed because chi_n is principal when n is a square.
+    - >-
+      Theorem 1.1 is recorded because it is the shortest complete statement; the paper calls Theorem 1.2 the stronger result. The formula was checked against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [ratios-conjecture, quadratic-characters, multiple-dirichlet-series]
+added: 2026-11-22

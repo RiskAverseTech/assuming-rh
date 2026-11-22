@@ -1,0 +1,49 @@
+id: primes-in-progressions-omega-result-every-large-modulus
+title: Large deviations of primes in some residue class for every large modulus
+field: analytic-number-theory
+statement_plain: >
+  Let g be an increasing function from [1, infinity) to [3, infinity) that
+  tends to infinity and satisfies g(u) <= e^u. There are absolute constants
+  0 < c1 < c2 <= 1/2 such that for each large enough modulus q there exist a
+  residue a coprime to q and a value x_q with
+  g(c1 log x_q) <= q <= g(c2 log x_q) for which the sum of Lambda(n) over
+  n <= x_q with n = a mod q differs from 1/phi(q) times the sum of Lambda(n)
+  over n <= x_q coprime to q by >> (x_q log q)^(1/2) / phi(q)^(1/2) in
+  absolute value.
+statement_formal: |
+  \Bigl|\sum_{\substack{n\le x_q\\ n\equiv a \bmod q}}\Lambda(n)-\frac{1}{\varphi(q)}\sum_{\substack{n\le x_q\\ (n,q)=1}}\Lambda(n)\Bigr| \gg \frac{(x_q\log q)^{1/2}}{\varphi(q)^{1/2}}, \qquad g(c_1\log x_q)\le q\le g(c_2\log x_q)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper proves unconditionally that the same holds for a positive
+  proportion of moduli q; GRH gives it for every large q. Corollary 1.4 is
+  deduced from the paper's main conditional theorem (Theorem 1.3), which
+  gives lower bounds for the moments of the weighted moments M_n(x, q; eta)
+  of primes in progressions. The hypothesis concerns Dirichlet L-functions
+  only; the proofs use a slightly weaker form restricted to primitive
+  characters and independent of RH for the zeta function. A further result
+  of the paper (asymptotics for all moments of the limiting distribution)
+  also assumes Linear Independence and is not part of this entry.
+sources:
+  - authors: R. de la Bretèche, D. Fiorilli
+    title: Moments of moments of primes in arithmetic progressions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2010.05944
+    hypothesis_location: Corollary 1.4 (from Theorem 1.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The entry records Corollary 1.4 because it has a self-contained statement; Theorem 1.3, the main GRH theorem, is longer and involves weight functions and constants defined in the paper.
+    - >-
+      The year is that of the arXiv version on disk (v2, June 2023).
+lean:
+  proved: false
+  path: null
+tags: [primes-in-progressions, omega-results, moments]
+added: 2026-11-22

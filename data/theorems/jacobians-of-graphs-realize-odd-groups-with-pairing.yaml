@@ -1,0 +1,49 @@
+id: jacobians-of-graphs-realize-odd-groups-with-pairing
+title: Every finite abelian group with pairing of odd order is the Jacobian of a graph
+field: arithmetic-geometry
+statement_plain: >
+  Let Gamma be a finite abelian group of odd order equipped with a pairing.
+  Then there exists a finite graph G whose Jacobian, with its canonical
+  pairing, is isomorphic to Gamma as a group with pairing.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used at one point only (Proposition 19): for every prime
+  p > 10^9 there is a prime q congruent to 3 modulo 4 that is a quadratic
+  nonresidue modulo p and satisfies q < 2 sqrt(p). The proof applies the
+  conditional bound of Bach and Sorenson for the least prime with a given
+  Frobenius element to the biquadratic field Q(sqrt(-1), sqrt(p)) or
+  Q(sqrt(-1), sqrt(-p)), of discriminant (4p)^2, which gives
+  q < (8 log(4p) + 15)^2. This field is abelian over the rationals, so its
+  Dedekind zeta function is a product of the Riemann zeta function and
+  Dirichlet L-functions of conductor dividing 4p; that is why the entry is
+  coded with RH and GRH for Dirichlet L-functions. Smaller primes are
+  handled by a computer search and by explicit constructions. The paper
+  proves unconditionally that the conclusion holds for groups with pairing
+  whose order is not divisible by any prime in some finite set (Theorem 1).
+sources:
+  - authors: L. Gaudet, D. Jensen, D. Ranganathan, N. Wawrykow, T. Weisman
+    title: Realization of groups with pairing as Jacobians of finite graphs
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1410.5144
+    hypothesis_location: Theorem 2 (the hypothesis enters through Proposition 19)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says only "GRH" and cites Davenport; the reduction to Dirichlet L-functions is the drafter's reading of Proposition 19, based on the field in the Bach-Sorenson bound being biquadratic and hence abelian. A reviewer should confirm that the Bach-Sorenson theorem needs nothing beyond the zeros of the zeta function of that field.
+    - >-
+      The schema has no combinatorics or graph theory field; arithmetic-geometry was chosen because Jacobians of graphs come from tropical geometry.
+    - >-
+      The year is that of the arXiv version on disk (v2, September 2017).
+lean:
+  proved: false
+  path: null
+tags: [graph-jacobians, quadratic-nonresidues, chip-firing]
+added: 2026-11-22

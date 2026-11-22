@@ -1,0 +1,50 @@
+id: nonvanishing-elliptic-curve-l-functions-family-count
+title: Many elliptic curve L-functions in the family of all curves do not vanish at the central point
+field: analytic-number-theory
+statement_plain: >
+  Let S be the set of integer pairs (a, b) with b odd such that no prime p
+  has p^2 dividing a and p^3 dividing b, and let E_{a,b} be the elliptic
+  curve y^2 = x^3 + ax + b. For every eps > 0, the number of (a, b) in S with
+  1 <= a <= X^(1/3), 1 <= b <= X^(1/2) and L(1/2, E_{a,b}) nonzero is
+  >> X^(5/6 - eps). Consequently the number of elliptic curves of rank 0 with
+  conductor at most X is >> X^(5/6 - eps).
+statement_formal: |
+  \#\{(a,b)\in S:\ 1\le a\le X^{1/3},\ 1\le b\le X^{1/2},\ L(\tfrac12,E_{a,b})\neq 0\}\ \gg\ X^{5/6-\varepsilon}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [modular-form-l-functions, higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is that the root number of E_{a,b} is regularly
+  distributed as a and b vary in arithmetic progressions to all moduli up to
+  X^(2/9 + eps); the paper's precise (weaker) requirement is its bound (5), a
+  cancellation estimate for the root-number-weighted second part of the
+  approximate functional equation. This is not a Riemann Hypothesis. The
+  paper writes only "the Generalized Riemann Hypothesis"; the text uses it
+  for the L-functions L(s, E_{a,b}), for their symmetric-square L-functions,
+  and for Dirichlet L-functions. Theorem 1.4 of the paper, an asymptotic for
+  the average over the family of the first part of the approximate
+  functional equation with length U = X^nu, nu < 7/9, needs only the Riemann
+  Hypotheses and not the root number assumption.
+sources:
+  - authors: M. P. Young
+    title: On the nonvanishing of elliptic curve L-functions at the central point
+    year: 2005
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0412464
+    hypothesis_location: Theorem 1.1 (root number assumption made precise in (5); Corollary 1.2 for rank 0)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never lists in one place which L-functions its Generalized Riemann Hypothesis covers. The codes are read off from the proof text: elliptic curve and symmetric-square L-functions in Section 4.1 and Dirichlet L-functions in the character sum estimates.
+    - >-
+      The year is that of the arXiv version on disk (v3, October 2005); no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, nonvanishing, central-values]
+added: 2026-11-22

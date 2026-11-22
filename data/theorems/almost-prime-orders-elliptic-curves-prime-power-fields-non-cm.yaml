@@ -1,0 +1,47 @@
+id: almost-prime-orders-elliptic-curves-prime-power-fields-non-cm
+title: Almost prime values of |E(F_{p^l})| / |E(F_p)| for non-CM elliptic curves
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over Q without complex multiplication for which
+  a certain constant c_E defined in the paper is nonzero (this holds for
+  every Serre curve). Let l >= 3 be a prime, m_l = floor(5.1 (l - 1) + 1.2)
+  and n_l = floor(8.1 (l - 1) + 0.5). For large x, the number of primes
+  p <= x for which |E(F_{p^l})| / |E(F_p)| has at most m_l distinct prime
+  factors is >> x / (log x)^2, and the number of p <= x for which it has at
+  most n_l prime factors counted with multiplicity is >> x / (log x)^2. The
+  implied constants depend on E.
+statement_formal: |
+  \#\Bigl\{p\le x:\ \omega\Bigl(\frac{|E(\mathbb{F}_{p^\ell})|}{|E(\mathbb{F}_p)|}\Bigr)\le m_\ell\Bigr\}\gg_E\frac{x}{(\log x)^2},\qquad \#\Bigl\{p\le x:\ \Omega\Bigl(\frac{|E(\mathbb{F}_{p^\ell})|}{|E(\mathbb{F}_p)|}\Bigr)\le n_\ell\Bigr\}\gg_E\frac{x}{(\log x)^2}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes GRH for the Dedekind zeta functions of all division
+  fields Q(E[n]). It is used through the conditional effective Chebotarev
+  density theorem (in the form of Murty, Murty and Saradha) to get a level
+  of distribution for a linear sieve. The division fields of a non-CM curve
+  are non-abelian Galois extensions of the rationals. The paper remarks that
+  a zero-free half-plane Re(s) > 1/2 + eps for these zeta functions would
+  suffice with adjusted sieve parameters. Its results for the CM curve
+  y^2 = x^3 - x are unconditional.
+sources:
+  - authors: L. Xie
+    title: Almost Prime Orders of Elliptic Curves Over Prime Power Fields
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2504.18732
+    hypothesis_location: Theorem 1.7 (restated as Theorem 5.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The constant c_E is defined by formula (5.5) of the paper as a sum over divisors of an integer M_E attached to E; its definition is not reproduced in the entry.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, almost-primes, sieve-methods, koblitz-conjecture]
+added: 2026-11-22

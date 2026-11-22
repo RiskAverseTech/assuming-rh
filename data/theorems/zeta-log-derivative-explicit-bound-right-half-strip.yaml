@@ -1,0 +1,50 @@
+id: zeta-log-derivative-explicit-bound-right-half-strip
+title: Explicit bound for the logarithmic derivative of zeta for 0.6 <= sigma < 1
+field: analytic-number-theory
+statement_plain: >
+  For 0.6 <= sigma < 1 and t >= exp(exp(13)), |zeta'/zeta(sigma + it)| is at
+  most ((log t)^(2 - 2 sigma) - sigma 2^(1 - sigma)) / (1 - sigma)
+  + 0.518 (log t)^(2 - 2 sigma) + 4 (log t)^(3 - 4 sigma) + 90.
+statement_formal: |
+  \left|\frac{\zeta'}{\zeta}(\sigma+it)\right| \le \frac{(\log t)^{2-2\sigma}-\sigma 2^{1-\sigma}}{1-\sigma} + 0.518\,(\log t)^{2-2\sigma} + 4\,(\log t)^{3-4\sigma} + 90 \qquad (0.6\le\sigma<1,\ t\ge e^{e^{13}})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is the Riemann zeta case of Corollary 3 of the paper. The corollary is
+  stated for every function L in the Selberg class with a polynomial Euler
+  product of order m equal to its degree d_L, assuming the Generalized
+  Riemann Hypothesis for L, RH for zeta and the strong lambda-conjecture for
+  L. With tau = q_L |t|^(d_L), for tau >= exp(exp(13)) and |t| large enough it
+  gives |L'/L(s)| <= d_L ((log tau)^(2 - 2 sigma) - sigma 2^(1 - sigma)) / (1 - sigma)
+  + (1.796 - 1.278 d_L) (log tau)^(2 - 2 sigma) + 4 (log tau)^(3 - 4 sigma) + 90 d_L,
+  together with a companion bound for |log L(s)|. For zeta one has d_L = m = 1,
+  q_L = 1 and tau = t, the strong lambda-conjecture holds, and the hypothesis
+  is RH alone; the entry records only this case. For other L the result
+  needs the Riemann Hypothesis for L and is not covered in general. The
+  entry zeta-log-derivative-critical-strip-bound gives a bound with a sharper
+  leading constant but an inexplicit error term.
+sources:
+  - authors: N. Palojärvi, A. Simonič
+    title: Conditional estimates for L-functions in the Selberg class
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.01121
+    hypothesis_location: Corollary 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper states Corollary 3 for general L; the substitution d_L = m = 1, q_L = 1, tau = t (so 1.796 - 1.278 = 0.518) was done by the drafter and should be checked. The side condition |t| >= m_L + 2000 is implied by t >= exp(exp(13)).
+    - >-
+      The paper also has a zeta-specific Corollary 2 (t >= 10^6, sigma >= 1/2 + 1/log log t) whose constants depend on auxiliary functions defined elsewhere in the paper; it was not recorded.
+    - >-
+      Corollary 4 of the paper (an upper bound for the residue of a Dedekind zeta function under GRH and the Dedekind conjecture) was not recorded because the entry dedekind-zeta-residue-explicit-bounds already has a bound with essentially the same leading constant and no extra conjecture.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, logarithmic-derivative, explicit-bounds, selberg-class]
+added: 2026-11-22

@@ -1,0 +1,51 @@
+id: order-of-algebraic-numbers-modulo-rational-primes-multiquadratic
+title: Elements of multiquadratic fields have almost maximal order modulo almost all rational primes
+field: analytic-number-theory
+statement_plain: >
+  Let K be a multiquadratic Galois extension of Q and let alpha be an element
+  of K whose norm to Q is not 1 or -1 and such that alpha / sigma(alpha) is
+  not a root of unity for every non-identity sigma in Gal(K/Q). Let
+  ord_p(alpha) be the order of alpha in (O_K / p O_K)^*. For every function
+  f tending to infinity, the number of primes p <= X with ord_p(alpha) at
+  most exponent((O_K / p O_K)^*) / f(X) is o(Li(X)).
+statement_formal: |
+  \#\Bigl\{p\le X:\ \operatorname{ord}_p(\alpha)\le \frac{\operatorname{exponent}\bigl((\mathcal{O}_K/p\mathcal{O}_K)^{\times}\bigr)}{f(X)}\Bigr\}=o(\operatorname{Li}(X))
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  This is Corollary 1.6. It follows from the paper's main result, Theorem
+  1.4, which treats a Galois extension K of Q, a conjugacy class C of
+  elements of order 2 satisfying a group-theoretic condition, and the primes
+  p whose Artin symbol is C: for almost all such p the order of alpha modulo
+  p is almost p^2 - 1 (or almost p + 1 when alpha has norm 1). The paper
+  proves the analogous statement for the order modulo p of a rational matrix
+  with irreducible characteristic polynomial (Theorem 4.1). The paper does
+  not define GRH precisely; it is used through the conditional Chebotarev
+  density theorem in an argument of Hooley type, applied to fields such as
+  Q(zeta_q, N(alpha)^(1/q)) obtained by adjoining roots of unity and q-th
+  roots. These fields are not abelian over the rationals. Related entry:
+  order-of-unimodular-matrices-modulo-integers.
+sources:
+  - authors: N. Kimmel
+    title: Artin's Primitive Root Conjecture in Number Fields and For Matrices
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2306.15973
+    hypothesis_location: Theorem 1.4 and Corollary 1.6 (Theorem 2.1 is the conditional Chebotarev theorem used)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not state which L-functions its GRH covers; ERH-Dedekind for the Kummer-type fields in the proof is inferred from the use of the conditional Chebotarev density theorem.
+    - >-
+      The year is that of the arXiv version on disk (v3, November 2024).
+lean:
+  proved: false
+  path: null
+tags: [artin-conjecture, multiplicative-order, number-fields]
+added: 2026-11-22
