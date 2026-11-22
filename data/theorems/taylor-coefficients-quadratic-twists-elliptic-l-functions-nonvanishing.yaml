@@ -1,0 +1,43 @@
+id: taylor-coefficients-quadratic-twists-elliptic-l-functions-nonvanishing
+title: Taylor coefficients at s = 1 of L-functions of quadratic twists of an elliptic curve do not vanish
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals of conductor q, let d be the
+  discriminant of a quadratic field, and write the L-function of the twist
+  E^(d) as a Taylor series sum of c_m^(d) (s - 1)^m, with analytic rank r_d.
+  For any positive integer h, if |d| >= (2 pi / sqrt(q)) exp(h^3 e^(gamma+1)),
+  where gamma is Euler's constant, then c_m^(d) is nonzero for every m with
+  r_d <= m <= h, and its sign is w (-1)^m, where w is the root number of
+  E^(d).
+statement_formal: |
+  |d| \ge \frac{2\pi}{\sqrt{q}}\, e^{h^{3} e^{\gamma+1}} \ \Longrightarrow\ c^{(d)}_m \ne 0 \quad \text{for all } r_d \le m \le h
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The theorem assumes the Riemann Hypothesis for the single L-function
+  L(E^(d), s) of the quadratic twist, which is the L-function of a weight 2
+  newform. The proof uses the super-positivity of L-values of Yun and
+  Zhang. The threshold for |d| was read from the PDF because the text
+  extraction of the formula is garbled.
+sources:
+  - authors: T. Wei, S. Zhai
+    title: On the coefficients of the Taylor expansion of $L$-functions of elliptic curves
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2605.09251
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The introduction lets d be the discriminant of a quadratic field while Section 2 works with fundamental discriminants; the entry follows the introduction.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, quadratic-twists, l-function-derivatives]
+added: 2026-11-22

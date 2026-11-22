@@ -1,0 +1,46 @@
+id: order-of-cubic-algebraic-numbers-degree-two-reductions
+title: Cubic algebraic numbers have almost maximal order in degree two reductions for a positive proportion of primes
+field: analytic-number-theory
+statement_plain: >
+  Let alpha be an algebraic number of degree 3 and let S be the set of
+  primes p for which alpha has a reduction of degree 2 over F_p, assumed
+  infinite. For h > 0 let d(h) be the lower density, within S, of the primes
+  p such that every degree 2 reduction of alpha has multiplicative order at
+  least (p^2 - 1)/h. Then the limit of d(h) as h grows is at least
+  1 - log(sqrt(6)) >= 0.1041, and at least 1 - log(sqrt(3)) >= 0.4506 if
+  the norm of alpha is 1 or -1.
+statement_formal: |
+  \lim_{h\to\infty} d(h) \ \ge\ 1 - \log\sqrt{6} \ \ge\ 0.1041
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The proof is a variant of Hooley's argument for Artin's conjecture (see
+  the entry artin-primitive-root-conjecture). The hypothesis is used through
+  the conditional Chebotarev density theorem for Galois extensions of the
+  rationals, applied to Kummer-type fields obtained by adjoining q-th roots
+  of unity and q-th roots of alpha and its conjugates, which are not abelian
+  over the rationals. The paper writes only "GRH". The paper has further
+  conditional results (Theorems 3.2 and 3.4 to 3.9) that are not part of
+  this entry.
+sources:
+  - authors: O. Järviniemi
+    title: Orders of algebraic numbers in finite fields
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2106.09813
+    hypothesis_location: Theorem 3.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; the code is read off from its use of the Chebotarev density theorem for the Kummer-type fields described in Section 4.
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, artin-conjecture, finite-fields]
+added: 2026-11-22
