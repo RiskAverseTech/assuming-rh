@@ -1,0 +1,45 @@
+id: lenstra-norm-euclidean-criterion-fails-degree-62238
+title: Lenstra's norm-Euclidean criterion cannot hold in degree 62238 or more
+field: algebraic-number-theory
+statement_plain: >
+  Lenstra's criterion says that a number field K of degree n and
+  discriminant D is norm-Euclidean if
+  M > sigma_n Gamma(1 + n/2) (4 / (pi n))^(n/2) sqrt|D|, where M is the
+  number of exceptional units of K and sigma_n is the Rogers constant. This
+  inequality fails for every number field of degree n >= 62238, so the
+  criterion can never be applied in those degrees.
+statement_formal: |
+  M \le \sigma_n\,\Gamma\!\left(1+\frac{n}{2}\right)\left(\frac{4}{\pi n}\right)^{n/2}\sqrt{|\Delta|} \quad \text{for every number field } K \text{ of degree } n \ge 62238
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is GRH for Dedekind zeta functions. It enters through the
+  conditional lower bound for the discriminant of K (Serre's asymptotic
+  bound |D|^(1/n) >= 8 pi e^gamma + o(1), in the explicit form of Poitou),
+  combined with Lenstra's bound M <= 2^n. Only the zeta function of K itself
+  is involved, so for fields K abelian over the rationals the statement is
+  covered; for other fields it stays conditional. The paper also shows
+  (Theorem 1.3) that GRH can be replaced by a conjectural lower bound for
+  zeta_K at a point slightly to the right of 1.
+sources:
+  - authors: J. Pertile, V. V. Starichkova
+    title: On Lenstra's criterion for norm-Euclideanity of number fields and properties of Dedekind zeta-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.05568
+    hypothesis_location: Theorem 1.2 (hypothesis used through Lemma 4.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      That the discriminant bound of Lemma 4.1 needs the hypothesis only for the zeta function of K itself is the standard form of the Odlyzko-Serre-Poitou bounds; the lemma as printed says only 'Assume GRH holds'.
+lean:
+  proved: false
+  path: null
+tags: [norm-euclidean-fields, discriminant-bounds, dedekind-zeta]
+added: 2026-11-22

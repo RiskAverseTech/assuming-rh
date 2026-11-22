@@ -1,0 +1,48 @@
+id: ternary-goldbach-one-prime-below-log-fourth-power
+title: Ternary Goldbach with one prime at most (log N)^(4+eps)
+field: additive-number-theory
+statement_plain: >
+  Fix eps > 0. For large odd N, let R(N, y, U) be the number of
+  representations N = p1 + p2 + p3 with primes N - 2y < p1 <= N - y,
+  y < p2 <= 2y and p3 <= U. If sqrt(N) (log N)^(2+eps) <= y <= N/2 and
+  (log N)^(4+eps) <= U <= y / (log N)^eps, then R(N, y, U) has exact order
+  S(N) U y / (log U log y log N), where S(N) is the ternary Goldbach
+  singular series. In particular every sufficiently large odd integer is a
+  sum of three primes, one of which is at most (log N)^(4+eps).
+statement_formal: |
+  R(N,y,U) \asymp \frac{\mathfrak{S}(N)\,U\,y}{\log U\,\log y\,\log N}, \qquad \sqrt{N}\,(\log N)^{2+\varepsilon} \le y \le \tfrac{N}{2}, \quad (\log N)^{4+\varepsilon} \le U \le \frac{y}{(\log N)^{\varepsilon}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper's GRH (Conjecture 2.5) is that no Dirichlet L-function modulo
+  any q >= 1 has a zero with real part greater than 1/2; the modulus q = 1
+  gives the Riemann zeta function. Here S(N) is the product over primes p
+  not dividing N of 1 + 1/(p-1)^3 times the product over primes p dividing N
+  of 1 - 1/(p-1)^2. Unconditionally the same paper obtains an asymptotic
+  formula with U = N^(4/49) exp((log N)^(2/3+eps)), using a zero-density
+  estimate.
+sources:
+  - authors: M. Harm
+    title: On the Goldbach problem with restricted primes
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2605.19566
+    hypothesis_location: Theorem 2.6 and Corollary 2.7 (GRH is Conjecture 2.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Corollary 2.7 is printed as 'Assume Condition 2.1' (the zero-density condition), but it sits in the section on results under GRH and the abstract attributes U = (log N)^(4+eps) to GRH; this looks like a misprint and the entry treats the corollary as conditional on GRH.
+    - >-
+      Theorem 2.6 prints the range of y as sqrt(N) log^(2+eps) without an argument for the logarithm; log N is assumed, as in Lemma 5.4.
+    - >-
+      The theorem does not say 'N sufficiently large'; this is assumed because the statement is an order-of-magnitude estimate.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, ternary-goldbach, small-primes, circle-method]
+added: 2026-11-22

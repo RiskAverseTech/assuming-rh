@@ -1,0 +1,48 @@
+id: abelian-p-division-fields-elliptic-curves-uniform-bound
+title: Uniform bound on primes p for which the p-division field of an elliptic curve is abelian
+field: arithmetic-geometry
+statement_plain: >
+  Let F be a number field that contains no imaginary quadratic field (F has
+  no rational CM). Then there is a bound depending only on F such that if E
+  is an elliptic curve over F and p is a prime for which the p-division
+  field F(E[p]) is an abelian extension of F, then p is at most that bound.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  Unconditionally the paper shows that for p >= 17 with p not dividing the
+  discriminant of F, or p > (6[F:Q])! + 1, an abelian p-division field
+  forces the mod p image into a split or nonsplit Cartan subgroup. The
+  hypothesis is then used only through a theorem of Larson and Vaintrob
+  (Theorem 5 of the paper), whose exceptional case reads "GRH fails for
+  F[sqrt(-p)]"; it puts p in a finite set S_F. So what is needed is the
+  Riemann Hypothesis for the Dedekind zeta functions of the fields
+  F(sqrt(-p)). If F is abelian over the rationals these fields are abelian
+  too and that case is covered; for other F the result stays conditional.
+  The paper proves unconditionally (Theorem 2) the uniform bound in the
+  special case F(E[p]) = F(zeta_p). Over F = Q the complete list is known
+  unconditionally by Gonzalez-Jimenez and Lozano-Robledo.
+sources:
+  - authors: S. Allen, T. Genao
+    title: Uniform bounds on the level of cyclotomic division fields of elliptic curves
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2511.23381
+    hypothesis_location: Theorem 3, second sentence (hypothesis enters through Theorem 5, quoted from Larson and Vaintrob)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH'. That it is needed exactly for the fields F(sqrt(-p)) is taken from the statement of Theorem 5 as quoted from Larson and Vaintrob; their paper is not on disk and was not checked.
+    - >-
+      The bound is not given explicitly, so the conditional statement is a finiteness result.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, division-fields, galois-representations]
+added: 2026-11-22

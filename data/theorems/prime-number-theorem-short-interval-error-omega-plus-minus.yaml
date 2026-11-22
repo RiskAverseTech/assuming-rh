@@ -1,0 +1,46 @@
+id: prime-number-theorem-short-interval-error-omega-plus-minus
+title: Two-sided oscillation of psi(n + h) - psi(n) - h of size sqrt(h log N)
+field: analytic-number-theory
+statement_plain: >
+  Fix eta > 0 and eps > 0. For all sufficiently large N and every h with
+  (log N)^14 << h << N^(1/7 - eps), write h = N^alpha. Then there are
+  integers n1 and n2 in [N + 1, 2N] with
+  psi(n1 + h) - psi(n1) - h > (sqrt(1 - 5 alpha)/2 - eta) sqrt(h log N) and
+  psi(n2 + h) - psi(n2) - h < -(sqrt(1 - 5 alpha)/2 - eta) sqrt(h log N),
+  where psi is the Chebyshev function.
+statement_formal: |
+  \begin{aligned}
+  \psi(n_1+h)-\psi(n_1)-h &> \Bigl(\tfrac{\sqrt{1-5\alpha}}{2}-\eta\Bigr)(h\log N)^{1/2}, \\
+  \psi(n_2+h)-\psi(n_2)-h &< -\Bigl(\tfrac{\sqrt{1-5\alpha}}{2}-\eta\Bigr)(h\log N)^{1/2},
+  \end{aligned}
+  \qquad h = N^{\alpha},\ \log^{14} N \ll h \ll N^{1/7-\epsilon}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The abstract states the hypothesis as the Generalized Riemann Hypothesis
+  for Dirichlet L-functions. It enters through Hooley's conditional mean
+  square bound for the error term of primes in arithmetic progressions to a
+  single modulus (formula (1.47) of the paper). Before this, under the same
+  hypothesis only a lower bound for the absolute value
+  max |psi(y + h) - psi(y) - h| >> sqrt(h log x) was known.
+sources:
+  - authors: D. A. Goldston, C. Y. Yildirim
+    title: "Higher Correlations of Divisor Sums Related to Primes II: Variations of the error term in the prime number theorem"
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0412366
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The constant sqrt(1 - 5 alpha)/2 was read from the PDF because the extracted text of formula (1.48) is garbled.
+lean:
+  proved: false
+  path: null
+tags: [primes-in-short-intervals, omega-results, divisor-sums]
+added: 2026-11-22

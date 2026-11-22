@@ -1,0 +1,47 @@
+id: dirichlet-l-function-critical-strip-explicit-bounds
+title: Upper bound with explicit constant for log |L(sigma + it, chi)| inside the critical strip
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive non-principal Dirichlet character modulo q and fix
+  sigma with 1/2 < sigma < 1. Let C = C(t, chi) be the analytic conductor,
+  q (|it + a| + 3) with a = 0 or 1 according to the parity of chi. Then
+  log |L(sigma + it, chi)| is at most
+  (1/2) (1 + (2 sigma - 1)/(sigma (1 - sigma)) + o(1))
+  (log C)^(2 - 2 sigma) / log log C as C tends to infinity.
+statement_formal: |
+  \log|L(\sigma+it,\chi)| \le \frac{1}{2}\left(1 + \frac{2\sigma-1}{\sigma(1-\sigma)} + o(1)\right)\frac{(\log C(t,\chi))^{2-2\sigma}}{\log\log C(t,\chi)}, \qquad \tfrac12 < \sigma < 1 \text{ fixed},\ C(t,\chi) \to \infty
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper proves this for a general class of entire L-functions of degree
+  d that satisfy the generalized Riemann hypothesis, with the term
+  (2 sigma - 1)/(sigma (1 - sigma)) multiplied by d (Corollary 2, from
+  Theorem 1). The entry records only the special case d = 1 of Dirichlet
+  L-functions of primitive characters, which the paper names as an example;
+  the hypothesis is then needed only for L(s, chi) itself. Theorem 1 gives
+  uniform two-sided bounds with explicit error terms, and the same results
+  bound the iterated argument functions S_{n,sigma}(t). For L-functions of
+  higher degree the general theorem stays conditional.
+sources:
+  - authors: A. Chirre
+    title: A note on entire L-functions
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1805.01119
+    hypothesis_location: Corollary 2 (from Theorem 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The specialization of the analytic conductor to Dirichlet characters (degree 1, level q, gamma shift 0 or 1 by parity) is the standard one and was written out by the classifier; the paper only says its class includes L(s, chi) for non-principal primitive characters.
+    - >-
+      The formula was read from the PDF because the extracted text is garbled.
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, critical-strip, extremal-functions]
+added: 2026-11-22
