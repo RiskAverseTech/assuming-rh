@@ -1,0 +1,48 @@
+id: zeta-zeros-mesoscopic-linear-statistics-gaussian-field
+title: Mesoscopic linear statistics of zeta zeros converge to a Gaussian field with H^(1/2) covariance
+field: analytic-number-theory
+statement_plain: >
+  Let omega be uniform on (1, 2), let lambda_t tend to infinity with
+  lambda_t = o(log t), and for a test function f let S_t(f) be the sum of
+  f(lambda_t (gamma - omega t)) over ordinates gamma of the non-trivial
+  zeros of zeta, minus (log t / (2 pi lambda_t)) times the integral of f.
+  For test functions f_1, ..., f_k of finite H^(1/2) norm satisfying mild
+  decay and bounded variation conditions, the vector (S_t(f_1), ...,
+  S_t(f_k)) converges in distribution, without normalization, to a centered
+  Gaussian vector whose covariances are the H^(1/2) inner products of the
+  f_i. This is an analog of the strong Szego theorem.
+statement_formal: |
+  \big(S_t(f_1),\dots,S_t(f_k)\big) \xrightarrow{\ d\ } \big(S(f_1),\dots,S(f_k)\big), \qquad \mathbb{E}\big(S(f_h)S(f_\ell)\big) = \langle f_h, f_\ell\rangle_{H^{1/2}} = \mathrm{Re}\int_{\mathbb{R}} |u|\, \widehat{f_h}(u)\, \overline{\widehat{f_\ell}(u)}\, du
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann hypothesis for the zeta function. The
+  Fourier transform is normalized as (1/(2 pi)) times the integral of
+  f(x) e^(-iux) dx, and the precise conditions on the test functions are the
+  paper's (3), (4) and (5). When the variance sigma_t(f) diverges, the paper
+  also proves that S_t(f)/sigma_t(f) converges to a standard Gaussian under
+  a weaker bounded variation condition (Theorem 2), which includes
+  indicator functions and agrees with the unconditional central limit
+  theorems of Selberg and Fujii. The abstract says the results extend to
+  other L-functions; this entry records the zeta case only.
+sources:
+  - authors: P. Bourgade, J. Kuan
+    title: Strong Szegő asymptotics and zeros of the zeta function
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1203.5328
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The complex conjugate in the covariance formula is supplied by the editor for real test functions; the extracted text of the paper's formula is partly garbled.
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, linear-statistics, central-limit-theorem]
+added: 2026-11-22

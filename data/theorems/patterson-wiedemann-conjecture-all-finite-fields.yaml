@@ -1,0 +1,53 @@
+id: patterson-wiedemann-conjecture-all-finite-fields
+title: The generalized Patterson-Wiedemann conjecture on nonlinearity holds over every finite field
+field: algebraic-number-theory
+statement_plain: >
+  For a prime power q, let rho_q(n) be the largest possible Hamming
+  distance from a function F_q^n -> F_q to the set of affine functions
+  (equivalently the covering radius of the first-order Reed-Muller code of
+  length q^n over F_q), and put
+  mu_q(n) = (q^(n-1) (q - 1) - rho_q(n)) / q^(n/2 - 1). Then mu_q(n) tends
+  to 1 as n tends to infinity, for every prime power q.
+statement_formal: |
+  \lim_{n\to\infty} \mu_q(n) = 1 \ \text{ for all prime powers } q, \qquad \mu_q(n) = \frac{q^{n-1}(q-1) - \rho_q(n)}{q^{n/2-1}}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH". It is used through a single quoted result
+  of Moree: for each prime p, the primes r congruent to 3 modulo 4 for
+  which -p is a primitive root modulo r have a positive density, so there
+  are infinitely many of them. Results of this Artin primitive root type
+  are proved by Hooley's method, which uses the Riemann hypothesis for
+  Dedekind zeta functions of Kummer fields; hence the code. The paper
+  proves the same limit unconditionally whenever there is a prime r > 3,
+  r congruent to 3 modulo 4, with -p a primitive root modulo r^2, where p is
+  the characteristic (Theorem 1.1); this covers a set of characteristics p
+  of density 1 (Corollary 1.2). The case q = 2 is the original
+  Patterson-Wiedemann conjecture, proved earlier by the same author
+  unconditionally.
+sources:
+  - authors: K.-U. Schmidt
+    title: Highly nonlinear functions over finite fields
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1906.11678
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not say which L-functions its GRH covers. The code ERH-Dedekind (Kummer fields) is inferred from the fact that the only conditional input is Moree's theorem on primes in a progression with a prescribed primitive root (Proposition 2.2), a Hooley-type result; Moree's paper was not checked.
+    - >-
+      The proof needs only infinitely many such primes r for each p, not the density, so a weaker hypothesis might suffice.
+    - >-
+      The subject is combinatorics and coding theory; none of the allowed field values fits well.
+lean:
+  proved: false
+  path: null
+tags: [finite-fields, nonlinearity, primitive-roots, reed-muller-codes]
+added: 2026-11-22

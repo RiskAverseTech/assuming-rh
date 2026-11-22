@@ -1,0 +1,46 @@
+id: argument-gl3-l-functions-prime-level-gaussian-moments
+title: Gaussian moments of the argument of GL(3) L-functions on the critical line as the prime level grows
+field: analytic-number-theory
+statement_plain: >
+  Let pi run over an orthogonal basis B(N) of spherical cuspidal GL(3)
+  newforms of prime level N with trivial central character, and let
+  S(t, pi) = (1/pi) arg L(1/2 + it, pi). For fixed t > 0 and each fixed
+  positive integer n, the average of S(t, pi)^n over B(N), with spectral
+  weights h(mu_pi)/L(1, pi, Ad) for a suitable fixed test function h, equals
+  C_n (log log N)^(n/2) + O((log log N)^((n-1)/2)) for large primes N, where
+  C_n = n!/((n/2)! (2 pi)^n) for even n and C_n = 0 for odd n. Consequently
+  S(t, pi)/sqrt(log log N) converges in distribution, under these weights,
+  to a centered Gaussian of variance 1/(2 pi^2).
+statement_formal: |
+  \frac{1}{W_N} \sum_{\pi \in B(N)} \frac{h(\mu_\pi)\, S(t,\pi)^n}{L(1,\pi,\mathrm{Ad})} = C_n (\log\log N)^{n/2} + O_{t,n,h}\!\left((\log\log N)^{(n-1)/2}\right), \qquad W_N = \sum_{\pi \in B(N)} \frac{h(\mu_\pi)}{L(1,\pi,\mathrm{Ad})}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is GRH for the standard L-functions L(s, pi) of the
+  spherical cuspidal GL(3) newforms of prime level N and trivial central
+  character in the family. The test function h is fixed independently of N,
+  non-negative on the automorphic spectrum, in a class defined in the
+  paper's Section 3.1. This is a level-aspect analog of Selberg's theorem
+  on the moments of S(t).
+sources:
+  - authors: Q. Sun, H. Wang
+    title: A GL_3 level analog of Selberg's result for S(t)
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.23201
+    hypothesis_location: Theorem 1.1 and Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The title is transcribed from garbled extracted text (GL_3, S(t)); check the exact typography against the arXiv listing.
+lean:
+  proved: false
+  path: null
+tags: [argument-of-l-functions, gl3, central-limit-theorem]
+added: 2026-11-22

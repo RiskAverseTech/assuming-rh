@@ -1,0 +1,46 @@
+id: linear-constellations-primes-prescribed-primitive-roots
+title: Green-Tao asymptotics for linear constellations in primes with prescribed primitive roots
+field: additive-number-theory
+statement_plain: >
+  Let a_1, ..., a_t be integers, none equal to -1 or a perfect square, and
+  let Psi = (psi_1, ..., psi_t) be a system of affine-linear forms from Z^s
+  to Z^t of finite complexity and bounded size. For a convex set X inside
+  [-N, N]^s, the number of integer points n in X for which every psi_i(n)
+  is a prime having a_i as a primitive root, counted with logarithmic
+  weights, is vol(X intersect Psi^(-1)(R_+^t)) times an explicit singular
+  factor S(a, Psi), plus o(N^s).
+statement_formal: |
+  \sum_{n \in X \cap \mathbb{Z}^s} \prod_{i=1}^{t} \Lambda_{a_i}(\psi_i(n)) = \mathrm{vol}\big(X \cap \Psi^{-1}(\mathbb{R}_+^t)\big)\, \mathfrak{S}(a,\Psi) + o_{s,t,a,L}(N^s)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The hypothesis is Hooley's Riemann hypothesis HRH(a_i) for each i: for
+  all square-free k, the Dedekind zeta function of the Kummer field
+  Q(mu_k, a_i^(1/k)) satisfies the Riemann hypothesis. Here Lambda_a(n) is
+  log p if n is a power of a prime p with primitive root a, and 0 otherwise.
+  The singular factor is the product of the Artin densities delta(a_i, 0, 1),
+  a local density at the modulus D_a (the least common multiple of the
+  absolute discriminants of the fields Q(sqrt(a_i))) and local densities at
+  the primes not dividing D_a. The same paper proves unconditionally an
+  analog with prescribed Artin symbols in Galois number fields (Theorem
+  1.4).
+sources:
+  - authors: C. Frei, J. König, M. Tinková
+    title: Linear constellations in primes with arithmetic restrictions
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2408.17441
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, linear-equations-in-primes, artin-conjecture]
+added: 2026-11-22

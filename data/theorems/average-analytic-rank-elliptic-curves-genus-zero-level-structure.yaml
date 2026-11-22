@@ -1,0 +1,49 @@
+id: average-analytic-rank-elliptic-curves-genus-zero-level-structure
+title: Upper bound for the average analytic rank of elliptic curves over a number field with a genus zero level structure
+field: arithmetic-geometry
+statement_plain: >
+  Let K be a number field of degree d and let Gamma = Gamma_1(M, N) =
+  Gamma(M) intersect Gamma_1(MN) be a congruence subgroup whose
+  compactified moduli stack is the projective line over Z[1/(6MN)]. The
+  limsup of the average analytic rank of elliptic curves over K with
+  Gamma-level structure, ordered by naive height, is less than c(K, Gamma) + 1/2,
+  where c = 18d for Gamma_1(5), Gamma_1(6), Gamma(2) intersect Gamma_1(4)
+  and Gamma(3); 36d for Gamma_1(7), Gamma_1(8), Gamma(2) intersect
+  Gamma_1(6) and Gamma(4); 54d for Gamma_1(9), Gamma_1(10) and Gamma(3)
+  intersect Gamma_1(6); 72d for Gamma_1(12) and Gamma(2) intersect
+  Gamma_1(8); and 90d for Gamma(5).
+statement_formal: |
+  \limsup_{X\to\infty} \frac{1}{|\mathcal{E}_{K,\Gamma}(X)|} \sum_{E \in \mathcal{E}_{K,\Gamma}(X)} r_E < c(K,\Gamma) + \frac12
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The paper assumes GRH for the Hasse-Weil L-functions L(E/K, s) of
+  elliptic curves E over the number field K. The extra assumption is the
+  Hasse-Weil conjecture for these L-functions (analytic continuation and
+  the functional equation), which the paper notes is known over Q by the
+  modularity theorem and over several other classes of fields, but not for
+  a general number field. For K = Q the bound is 18.5 for Gamma_1(5) and
+  Gamma_1(6). The entry average-analytic-rank-elliptic-curves-number-fields
+  treats all elliptic curves over K without a level structure.
+sources:
+  - authors: P. J. Cho, K. Jeong, J. Park
+    title: The average analytic rank of elliptic curves with prescribed level structure
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2312.05817
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Over K = Q the Hasse-Weil conjecture is a theorem, so in that case only GRH for L-functions of elliptic curves over Q is needed; the entry is stated for general K.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, level-structure]
+added: 2026-11-22

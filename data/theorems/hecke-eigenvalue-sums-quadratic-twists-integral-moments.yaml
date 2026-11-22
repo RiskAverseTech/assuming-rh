@@ -1,0 +1,48 @@
+id: hecke-eigenvalue-sums-quadratic-twists-integral-moments
+title: Optimal upper bounds for integral moments of Hecke eigenvalue sums twisted by quadratic characters
+field: analytic-number-theory
+statement_plain: >
+  Let f be a fixed holomorphic Hecke eigenform of weight divisible by 4 for
+  SL_2(Z) with normalized eigenvalues lambda_f(n), and Phi a smooth
+  non-negative compactly supported weight. For every integer m >= 4 and
+  large Y <= X, the sum over odd positive square-free d <= X of the m-th
+  power of |sum_n chi_d(n) lambda_f(n) Phi(n/Y)| is
+  O(X Y^(m/2) (log X)^(m(m-3)/2)).
+statement_formal: |
+  \sum\nolimits^{*}_{0 < d \le X} \left| \sum_{n \ge 1} \chi_d(n)\, \lambda_f(n)\, \Phi\!\left(\tfrac{n}{Y}\right) \right|^{m} \ll X\, Y^{m/2} (\log X)^{m(m-3)/2}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper writes only "GRH". The proof of the upper bound reduces to
+  bounds for shifted moments of the twisted modular L-functions
+  L(s, f x chi_d) on the critical line, quoted from earlier work of Gao and
+  Zhao under GRH (the paper's Proposition 2.7). The paper proves
+  unconditionally a matching lower bound for even m >= 4 in the range
+  X^eps << Y << X^(2/3 - alpha), so the exponent is optimal there; under
+  GRH the lower bound extends to Y << X^(1 - alpha). The entry
+  twisted-quadratic-character-sums-prime-modulus-moments is the analogous
+  result for characters of prime modulus.
+sources:
+  - authors: P. Gao, Y. Zhao
+    title: Bounds for integral moments of quadratic twists of Fourier coefficients of modular forms
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.20085
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The shifted moment bounds are quoted from another paper (reference [6], Corollary 1.4), which was not checked; if that proof also uses GRH for the symmetric square L-function of f or for Dirichlet L-functions, the codes stay within GRH-automorphic plus GRH-Dirichlet and the status is unchanged.
+    - >-
+      The introduction describes the sum as over odd, positive, square-free d, while the starred sum is defined earlier as over fundamental discriminants; the entry follows the description given with the definition of T_m.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, quadratic-twists, modular-forms]
+added: 2026-11-22

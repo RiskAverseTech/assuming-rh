@@ -1,0 +1,47 @@
+id: hurwitz-zeta-rational-parameter-moments-sharp-order
+title: Sharp order of the moments of the Hurwitz zeta function with rational parameter on the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let alpha = a/q with gcd(a, q) = 1 and 1 <= a <= q, and let
+  zeta(s, alpha) be the Hurwitz zeta function. For every real k > 1/2, the
+  integral of |zeta(1/2 + it, alpha)|^(2k) over 1 <= t <= T is bounded above
+  and below by constant multiples of T (log T)^(k^2). The upper bound holds
+  for every k > 0.
+statement_formal: |
+  T(\log T)^{k^2} \ll \int_1^T \left|\zeta\!\left(\tfrac12+it, \alpha\right)\right|^{2k} dt \ll T(\log T)^{k^2} \qquad \left(\alpha = \tfrac{a}{q},\ k > \tfrac12\right)
+hypotheses_required: [GRH-Dirichlet, RH]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann hypothesis for all Dirichlet L-functions
+  modulo q, which includes the principal character and so the Riemann zeta
+  function. It enters because zeta(s, a/q) is a linear combination of the
+  L(s, chi) with chi modulo q. This removes the epsilon in the exponent of
+  the upper bound of Sahay, who had the result for positive integers k
+  under the same hypothesis. The corollary is deduced from the paper's main
+  theorems, which give the sharp order of mixed moments of products of
+  distinct cuspidal automorphic L-functions of GL(m) over Q under GRH and
+  the Generalized Ramanujan Conjecture for those L-functions; for Dirichlet
+  L-functions the Ramanujan Conjecture is trivially true. The paper also
+  deduces sharp moment bounds for Dedekind zeta functions of solvable
+  Galois extensions of Q (Corollary 4).
+sources:
+  - authors: M. V. Hagen
+    title: Sharp conditional moment bounds for products of L-functions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2409.19780
+    hypothesis_location: Corollary 5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper's headline results are Theorems 1 and 2 on products of automorphic L-functions (GRH-automorphic plus the Generalized Ramanujan Conjecture). This entry records only Corollary 5, the special case that needs Dirichlet L-functions alone.
+lean:
+  proved: false
+  path: null
+tags: [hurwitz-zeta-function, moments-of-l-functions, dirichlet-l-functions]
+added: 2026-11-22

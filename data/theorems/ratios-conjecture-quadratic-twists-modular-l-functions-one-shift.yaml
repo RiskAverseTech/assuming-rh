@@ -1,0 +1,48 @@
+id: ratios-conjecture-quadratic-twists-modular-l-functions-one-shift
+title: Ratios conjecture with one shift for quadratic twists of a modular L-function in a range of the shifts
+field: analytic-number-theory
+statement_plain: >
+  Let f be a holomorphic Hecke eigenform for SL_2(Z) and chi_n the
+  quadratic character (n/.) for odd positive n. For a non-negative Schwartz
+  weight w and shifts with 0 < Re(alpha) < 1/2 and Re(beta) > eps, the sum
+  over odd n of w(n/X) L^(2)(1/2 + alpha, f x chi_n) / L^(2)(1/2 + beta,
+  f x chi_n), with Euler factors at 2 removed, equals
+  X w-hat(1) L^(2)(1 + 2 alpha, sym^2 f) P(1, 1/2 + alpha, 1/2 + beta; f)
+  plus an error O((1 + |alpha|)^eps |beta|^eps X^(N + eps)), where
+  N = max(1 - 2 Re(alpha), 1 - 2 Re(beta)) and P is an explicit Euler
+  product. The main term agrees with the prediction of the ratios
+  conjecture.
+statement_formal: |
+  \sum_{(n,2)=1} \frac{L^{(2)}\!\left(\tfrac12+\alpha, f\otimes\chi_n\right)}{L^{(2)}\!\left(\tfrac12+\beta, f\otimes\chi_n\right)}\, w\!\left(\tfrac{n}{X}\right) = X\,\widehat{w}(1)\, L^{(2)}(1+2\alpha, \mathrm{sym}^2 f)\, P\!\left(1, \tfrac12+\alpha, \tfrac12+\beta; f\right) + O\!\left((1+|\alpha|)^{\varepsilon} |\beta|^{\varepsilon} X^{\max\{1-2\mathrm{Re}(\alpha),\, 1-2\mathrm{Re}(\beta)\}+\varepsilon}\right)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper writes only "GRH". Its estimate (2.16) uses it for the twisted
+  modular L-functions L(s, f x psi) with psi a quadratic Dirichlet
+  character, for quadratic Dirichlet L-functions L(s, psi) (including the
+  Riemann zeta function, the case of the principal character) and for the
+  symmetric square L-function of f. The error term is weaker than the
+  X^(1/2 + eps) predicted by the ratios conjecture, but there is no
+  restriction on the imaginary parts of the shifts. The entry
+  ratios-conjecture-quadratic-dirichlet-l-functions-one-shift is the
+  analogous result for quadratic Dirichlet L-functions.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Ratios conjecture for quadratic twist of modular L-functions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2304.14600
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [ratios-conjecture, quadratic-twists, multiple-dirichlet-series]
+added: 2026-11-22

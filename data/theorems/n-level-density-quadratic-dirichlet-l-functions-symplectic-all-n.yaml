@@ -1,0 +1,47 @@
+id: n-level-density-quadratic-dirichlet-l-functions-symplectic-all-n
+title: n-level density of quadratic Dirichlet L-functions agrees with the symplectic prediction for all n when the Fourier support sum is below 2
+field: analytic-number-theory
+statement_plain: >
+  Consider the family L(s, chi_8d) with d odd and square-free,
+  X <= d <= 2X, averaged with a smooth weight. For every n and every
+  Schwartz test function f on R^n, even in all variables, whose Fourier
+  transform is supported in |u_1| + ... + |u_n| < 2, the n-level density of
+  the low-lying zeros (scaled by log X / (2 pi)) converges as X tends to
+  infinity to the integral of f against the n-level density of the unitary
+  symplectic ensemble, as predicted by the Katz-Sarnak Density Conjecture.
+statement_formal: |
+  \lim_{X\to\infty} \left\langle W_f^{(n)} \right\rangle_{D(X)} = \int_{\mathbb{R}^n} f(x)\, W^{(n)}_{USp}(x)\, dx, \qquad W^{(n)}_{USp}(x) = \det\big(K(x_i,x_j)\big)_{i,j=1}^{n}, \quad K(x,y) = \frac{\sin \pi(x-y)}{\pi(x-y)} - \frac{\sin \pi(x+y)}{\pi(x+y)}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes "Assume GRH"; the hypothesis enters through Gao's
+  theorem (the entry
+  n-level-density-quadratic-dirichlet-l-functions-support-two), which gives
+  the limit as a combinatorial expression A(f) under GRH for quadratic
+  Dirichlet L-functions. This paper completes that entry: it proves that
+  A(f) equals the symplectic prediction for every n, by comparison with a
+  function field analog (hyperelliptic curves over finite fields) and the
+  Katz-Sarnak equidistribution theorem; that identification itself does not
+  use any unproved hypothesis. Gao had checked n <= 3 and Levinson and
+  Miller n <= 7.
+sources:
+  - authors: A. Entin, E. Roditty-Gershon, Z. Rudnick
+    title: Low-lying zeros of quadratic Dirichlet L-functions, hyper-elliptic curves and Random Matrix Theory
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1208.5962
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper does not define GRH; it is taken to be GRH for Dirichlet L-functions as in Gao's and Rubinstein's work on the same family, which this paper quotes.
+lean:
+  proved: false
+  path: null
+tags: [n-level-density, quadratic-characters, low-lying-zeros]
+added: 2026-11-22

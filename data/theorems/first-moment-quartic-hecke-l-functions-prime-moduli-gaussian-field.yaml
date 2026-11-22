@@ -1,0 +1,52 @@
+id: first-moment-quartic-hecke-l-functions-prime-moduli-gaussian-field
+title: First moment of quartic Hecke L-functions of prime moduli over the Gaussian field with error exponent 12/13
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and let chi_pi be the quartic residue symbol attached to a
+  prime element pi of Z[i] with pi congruent to 1 modulo 16. For a
+  non-negative Schwartz weight w, the sum over such primes of
+  Lambda_K(pi) L(1/2, chi_pi) w(N(pi)/X) equals an explicit constant times X,
+  with an error term O(X^(12/13 + eps)). More generally the same holds at
+  1/2 + alpha for Re(alpha) > -1/11 with error exponent
+  max(1/2, 5/6 - Re(alpha), 12/13 - (11/13) Re(alpha)).
+statement_formal: |
+  \sum_{\varpi \equiv 1 \bmod 16} \Lambda_K(\varpi)\, L\!\left(\tfrac12, \chi_{4,\varpi}\right) w\!\left(\tfrac{N(\varpi)}{X}\right) = \frac{\widehat{w}(1)\, X}{\# h_{(16)}} \cdot \frac{\zeta_K^{(4)}(2)}{1 - 2^{-1/2}} + O\!\left(X^{12/13+\varepsilon}\right)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper writes only "GRH". It is used for the L-functions of quartic
+  Hecke characters of Q(i) (the symbols chi_pi and the dual symbols
+  chi^(m)), where it supplies Lindelof-type bounds for L and 1/L and for
+  L'/L (the paper's estimate (2.12)). These are Hecke L-functions over Q(i),
+  not Dirichlet L-functions. The first moment is the limit beta to infinity
+  of the paper's main result (Theorem 1.1), a ratios-conjecture formula with
+  one shift in the numerator and one in the denominator. Here h_(16) is the
+  ray class group of Q(i) modulo 16, w-hat is the Mellin transform and the
+  superscript on zeta_K means the Euler factor at 1 + i is removed; this
+  reading of the notation is taken from the paper's conventions. The paper
+  says the exponent 12/13 improves an earlier result of the same authors on
+  quartic Hecke L-functions.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Ratios conjecture of quartic L-functions of prime moduli
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2402.17198
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says for which L-functions GRH is assumed; the code is read off from the estimates (2.12), which concern quartic Hecke characters of Q(i) only.
+    - >-
+      The superscript (j) on the Dedekind zeta function in the main term (with j = 4 fixed) is read as removing the Euler factors at primes dividing 4; check against the paper's Section 2.
+lean:
+  proved: false
+  path: null
+tags: [moments-of-l-functions, quartic-characters, ratios-conjecture]
+added: 2026-11-22
