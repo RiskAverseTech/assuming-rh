@@ -8,6 +8,7 @@ import path from 'node:path';
 import katex from 'katex';
 import { ROOT, validateDir, loadTaxonomy, loadProofStatus, loadWaiting } from '../scripts/lib.mjs';
 import { problemPage } from './pages/problem.mjs';
+import { softwarePage } from './pages/software.mjs';
 
 const SITE = path.join(ROOT, 'site');
 const OUT = path.join(ROOT, 'dist');
@@ -232,6 +233,7 @@ function buildHome() {
     <li><a href="browse.html">Browse all entries</a>, with filters for status, hypothesis, field and review state.</li>
     <li><a href="problem.html">Read about the problem</a>: the statement, what was tried before, and what the announced proof reports doing.</li>
     <li><a href="waiting.html">See what is still waiting</a>, grouped by what would have to be proved next.</li>
+    <li><a href="software.html">Software caveats</a>: whether "correct assuming GRH" in a computer algebra system can now be dropped.</li>
     <li><a href="about.html">Read the method</a>: the hypothesis taxonomy and how entries are classified.</li>
     <li><a href="data.html">Download the dataset</a> as JSON or CSV.</li>
     <li>Found a mistake? Every entry page has a "suggest a correction" link.</li>
@@ -619,6 +621,12 @@ page({
   description: 'What the Riemann Hypothesis says, what was tried before, and what the announced proof reports doing.',
   math: true,
   body: problemPage({ m: (s) => tex(s, false), M: (s) => `<div class="formal">${tex(s, true)}</div>`, esc, entryLink: (id, label) => (byId[id] ? `<a href="theorems/${id}.html">${esc(label)}</a>` : esc(label)) }),
+});
+page({
+  file: 'software.html',
+  title: 'Software caveats',
+  description: 'Where computer algebra systems assume GRH, and whether the announced proof would let that caveat be dropped.',
+  body: softwarePage({ esc, entryLink: (id, label) => { if (!byId[id]) throw new Error(`software page links to missing entry ${id}`); return `<a href="theorems/${id}.html">${esc(label)}</a>`; } }),
 });
 buildWaiting();
 buildAbout();
