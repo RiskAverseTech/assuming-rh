@@ -38,5 +38,6 @@ review:
 lean:
   proved: false
   path: null
+related: [p-practical-numbers-density-zero]
 tags: [cyclotomic-polynomials, multiplicative-order, finite-fields]
 added: 2026-11-22

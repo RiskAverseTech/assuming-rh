@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [linnik-sphere-lattice-points-variance-bound]
 tags: [lattice-points, sums-of-three-squares, quadratic-characters]
 added: 2026-11-22

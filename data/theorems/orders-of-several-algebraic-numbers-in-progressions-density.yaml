@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [multiplicative-index-prescribed-set-frobenius-density, order-of-g-mod-p-arbitrary-residue-class-density]
 tags: [multiplicative-order, kummer-theory, chebotarev, artin-conjecture]
 added: 2026-11-22

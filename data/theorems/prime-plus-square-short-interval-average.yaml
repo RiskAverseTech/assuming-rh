@@ -35,5 +35,6 @@ review:
 lean:
   proved: false
   path: null
+related: [prime-plus-square-exceptional-set-bound]
 tags: [primes, short-intervals, circle-method]
 added: 2026-11-21

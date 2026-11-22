@@ -47,5 +47,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, serre-open-image-explicit-conductor-bound]
 tags: [elliptic-curves, galois-representations, effective-chebotarev]
 added: 2026-11-22

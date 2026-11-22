@@ -46,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [shimura-varieties, andre-oort, special-points, effective-chebotarev]
 added: 2026-11-21

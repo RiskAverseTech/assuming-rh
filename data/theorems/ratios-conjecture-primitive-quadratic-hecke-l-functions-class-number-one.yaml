@@ -51,5 +51,6 @@ review:
 lean:
   proved: false
   path: null
+related: [ratios-conjecture-quadratic-dirichlet-l-functions-one-shift]
 tags: [ratios-conjecture, hecke-l-functions, quadratic-characters, moments]
 added: 2026-11-22

@@ -36,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+related: [squarefree-variance-short-intervals-rh-equivalence]
 tags: [squarefull-numbers, short-intervals, variance]
 added: 2026-11-21

@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-shifted-moments-sharp-upper-bound, zeta-shifted-moments-upper-bound-chandee]
 tags: [zeta-moments, shifted-moments, upper-bounds]
 added: 2026-11-22

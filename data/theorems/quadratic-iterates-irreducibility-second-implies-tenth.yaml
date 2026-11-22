@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [generalized-fermat-equation-2-3-11]
 tags: [arithmetic-dynamics, rational-points, class-groups, selmer-groups]
 added: 2026-11-22

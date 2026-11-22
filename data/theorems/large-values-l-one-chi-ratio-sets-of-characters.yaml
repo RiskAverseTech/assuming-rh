@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [littlewood-l1-chi-bounds]
 tags: [dirichlet-l-functions, extreme-values, value-at-one]
 added: 2026-11-21

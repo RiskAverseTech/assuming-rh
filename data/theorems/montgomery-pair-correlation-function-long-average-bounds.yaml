@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [q-analog-pair-correlation-average-bounds]
 tags: [zeta-zeros, pair-correlation, fourier-optimization]
 added: 2026-11-22

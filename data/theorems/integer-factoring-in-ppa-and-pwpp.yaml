@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [deterministic-square-roots-mod-p, least-quadratic-nonresidue]
 tags: [integer-factoring, search-problems, quadratic-residues]
 added: 2026-11-21

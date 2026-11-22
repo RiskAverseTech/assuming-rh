@@ -34,7 +34,6 @@ sources:
     doi: 10.1007/BF01389788
     hypothesis_location: "Theorem 9.1, for rings of S-integers"
     role: refinement
-related: [artin-primitive-root-conjecture]
 review:
   state: ai-classified
   checked_by: null
@@ -44,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [artin-primitive-root-conjecture]
 tags: [euclidean-domains, number-fields, units]
 added: 2026-11-21

@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [least-prime-frobenius-traces-opposite-sign, least-prime-opposite-sign-frobenius-traces-bucur-kedlaya]
 tags: [abelian-varieties, frobenius-traces, least-prime, sato-tate]
 added: 2026-11-22

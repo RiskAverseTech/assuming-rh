@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [first-moment-primitive-quartic-sextic-dirichlet-l-functions]
 tags: [moments-of-l-functions, cubic-characters, secondary-terms]
 added: 2026-11-22

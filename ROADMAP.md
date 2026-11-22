@@ -8,13 +8,14 @@ A running list. Items move up as they get done. New ideas are added at the botto
 - **Random audit.** 15 entries checked independently against their papers.
 - **"What would move next".** The Still waiting page counts how many waiting entries each further result (Dedekind zeta functions, then Hecke, then Artin L-functions) would finish.
 - **Full arXiv screen.** Every arXiv abstract that names the hypothesis has been screened and 816 papers opened. The Method page says what this does and does not cover.
+- **Links between entries.** A `rests_on` field for real dependencies (recorded by hand for a first 22 entries), automatic related links from the notes, reverse links on every entry page, and a Connections page listing the results other entries point to most.
 - **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
 
 ## Next
 
 1. **First human-checked entries.** Even a handful signed off by a named number theorist changes how the whole dataset is read. Nothing else on this list matters as much.
 2. **Lean proofs of the implications.** Proving "RH implies X" needs only Mathlib's statement of RH, not the proof archive, so the missing license is not a blocker. Start with Robin's inequality (a formalization already exists to link to), Miller's test and the least non-residue bound.
-3. **Dependencies between entries.** Record which results rest on which, such as Miller's test on the non-residue bound. This turns the list into a graph and shows which few results carry many others.
+3. **More dependencies between entries.** The first links are in. Most real dependencies (which results rest on effective Chebotarev, on Hooley's method, on the least non-residue bound) are still unrecorded and need reading the proofs.
 4. **Make it citable.** Tagged releases, a changelog, a citation file and a DOI through Zenodo, so a paper can cite a fixed version.
 5. **Wider coverage through citations.** Sweep the papers that cite the key sources (Bach, Lagarias and Odlyzko, Hooley) in place of keyword searches, which missed the classics.
 

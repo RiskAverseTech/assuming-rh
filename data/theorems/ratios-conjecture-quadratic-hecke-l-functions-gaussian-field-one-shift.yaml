@@ -58,5 +58,6 @@ review:
 lean:
   proved: false
   path: null
+related: [first-moment-quadratic-hecke-l-functions-gaussian-field-secondary-term, ratios-conjecture-quadratic-dirichlet-l-functions-one-shift]
 tags: [ratios-conjecture, hecke-l-functions, gaussian-field, multiple-dirichlet-series]
 added: 2026-11-22

@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [knottedness-in-np, three-sphere-recognition-in-conp]
 tags: [knot-theory, complexity, chebotarev]
 added: 2026-11-21

@@ -46,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [dedekind-zeta-residue-explicit-bounds, zeta-log-derivative-critical-strip-bound]
 tags: [riemann-zeta, logarithmic-derivative, explicit-bounds, selberg-class]
 added: 2026-11-22

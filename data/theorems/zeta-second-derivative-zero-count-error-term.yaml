@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-zero-count-error-term]
 tags: [riemann-zeta, zeta-derivatives, zero-counting]
 added: 2026-11-22

@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-simple-zeros-proportion-19-27]
 tags: [modular-forms, simple-zeros, zeros-of-l-functions]
 added: 2026-11-21

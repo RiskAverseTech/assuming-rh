@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [shifted-moments-dirichlet-l-functions-lower-bound, shifted-moments-quadratic-dirichlet-l-functions-upper-bound, zeta-moments-near-sharp-upper-bound]
 tags: [zeta-function, moments, shifted-moments]
 added: 2026-11-21

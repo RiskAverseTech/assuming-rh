@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [large-values-quadratic-dirichlet-l-functions-central-point]
 tags: [quadratic-characters, central-values, resonance-method]
 added: 2026-11-22

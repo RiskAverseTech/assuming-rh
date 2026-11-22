@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [weighted-central-limit-theorem-log-zeta]
 tags: [riemann-zeta, value-distribution, central-limit-theorem]
 added: 2026-11-22

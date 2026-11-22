@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [bounded-elementary-generation-sl2-s-integers]
 tags: [bounded-generation, elementary-matrices, s-integers]
 added: 2026-11-22

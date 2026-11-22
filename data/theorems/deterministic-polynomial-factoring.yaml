@@ -37,7 +37,6 @@ sources:
     venue: "Algorithmic Number Theory (ANTS-I), Lecture Notes in Comput. Sci. 877"
     doi: 10.1007/3-540-58691-1_58
     role: conditional-proof
-related: [deterministic-square-roots-mod-p]
 review:
   state: ai-classified
   checked_by: null
@@ -51,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [deterministic-square-roots-mod-p]
 tags: [algorithms, derandomization, finite-fields, polynomial-factoring]
 added: 2026-11-21

@@ -22,7 +22,6 @@ sources:
     venue: Invent. Math. 130, 415-454
     doi: 10.1007/s002220050191
     role: conditional-proof
-related: [littlewood-l1-chi-bounds]
 review:
   state: ai-classified
   checked_by: null
@@ -34,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+related: [littlewood-l1-chi-bounds]
 tags: [quadratic-forms, ramanujan, elliptic-curves]
 added: 2026-11-21

@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [mertens-function-bound-soundararajan]
 tags: [mobius-function, mertens-function, negative-moments]
 added: 2026-11-22

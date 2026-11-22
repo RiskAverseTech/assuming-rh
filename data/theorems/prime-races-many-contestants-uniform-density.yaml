@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [prime-races-three-or-more-competitors-bias-size]
 tags: [prime-races, linear-independence, logarithmic-density]
 added: 2026-11-22

@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [sato-tate-effective-error-term-symmetric-powers]
 tags: [elliptic-curves, sato-tate, frobenius-traces]
 added: 2026-11-22

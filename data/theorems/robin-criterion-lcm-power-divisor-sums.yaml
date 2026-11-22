@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [robin-inequality, robin-inequality-odd-integers]
 tags: [robin-inequality, sum-of-divisors, rh-equivalent]
 added: 2026-11-21

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [hilbert-class-polynomial-crt-algorithm]
 tags: [cm-method, class-polynomials, elliptic-curves, algorithms]
 added: 2026-11-21

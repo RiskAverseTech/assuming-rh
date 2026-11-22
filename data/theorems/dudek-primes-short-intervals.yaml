@@ -28,7 +28,6 @@ sources:
     doi: 10.4171/CMH/467
     hypothesis_location: Theorem 5
     role: refinement
-related: [cramer-prime-gap-bound]
 review:
   state: ai-classified
   checked_by: null
@@ -38,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [cramer-prime-gap-bound]
 tags: [primes, prime-gaps, explicit-bounds]
 added: 2026-11-21

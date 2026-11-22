@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [deterministic-polynomial-factoring]
 tags: [algorithms, derandomization, finite-fields, polynomial-factoring]
 added: 2026-11-22

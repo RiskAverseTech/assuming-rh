@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [argument-of-zeta-extreme-values-resonance]
 tags: [argument-of-zeta, omega-results, resonance-method]
 added: 2026-11-22

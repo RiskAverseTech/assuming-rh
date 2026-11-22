@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [prime-plus-square-short-interval-average]
 tags: [waring-goldbach, short-intervals, circle-method]
 added: 2026-11-22

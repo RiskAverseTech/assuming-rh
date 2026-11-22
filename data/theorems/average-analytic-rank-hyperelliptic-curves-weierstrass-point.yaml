@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [average-analytic-rank-elliptic-curves-number-fields]
 tags: [hyperelliptic-curves, analytic-rank, average-rank]
 added: 2026-11-22

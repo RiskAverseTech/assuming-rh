@@ -17,7 +17,6 @@ sources:
     year: 1920
     venue: Ark. Mat. Astr. Fys. 15, no. 5
     role: conditional-proof
-related: [dudek-primes-short-intervals]
 review:
   state: ai-classified
   checked_by: null
@@ -27,5 +26,6 @@ review:
 lean:
   proved: false
   path: null
+related: [dudek-primes-short-intervals]
 tags: [primes, prime-gaps]
 added: 2026-11-21

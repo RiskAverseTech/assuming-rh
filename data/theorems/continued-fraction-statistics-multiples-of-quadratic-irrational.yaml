@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [order-of-unimodular-matrices-modulo-integers]
 tags: [continued-fractions, quadratic-irrationals, multiplicative-order]
 added: 2026-11-22

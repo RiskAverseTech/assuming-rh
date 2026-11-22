@@ -17,7 +17,6 @@ sources:
     venue: Springer, Graduate Texts in Mathematics 74
     hypothesis_location: Chapter 20
     role: survey
-related: [least-prime-in-arithmetic-progression]
 review:
   state: ai-classified
   checked_by: null
@@ -29,5 +28,6 @@ review:
 lean:
   proved: false
   path: null
+related: [least-prime-in-arithmetic-progression]
 tags: [primes, arithmetic-progressions]
 added: 2026-11-21

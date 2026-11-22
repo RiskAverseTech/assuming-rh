@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-negative-moments-at-zeros-lower-bound, zeta-derivative-negative-second-moment-at-zeros-lower-bound]
 tags: [zeta-moments, negative-moments, gonek-conjecture]
 added: 2026-11-22

@@ -34,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-moments-at-zeros-upper-bound]
 tags: [zeta-zeros, moments, zeta-derivative]
 added: 2026-11-21

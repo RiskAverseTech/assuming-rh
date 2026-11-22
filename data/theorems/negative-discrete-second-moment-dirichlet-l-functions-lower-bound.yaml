@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-at-zeros-small-values, zeta-derivative-moments-at-zeros-upper-bound]
 tags: [dirichlet-l-functions, discrete-moments, simple-zeros]
 added: 2026-11-21

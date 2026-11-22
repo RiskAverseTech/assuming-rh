@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [deterministic-polynomial-factoring, polynomial-factoring-prime-degree-smooth-n-minus-one]
 tags: [polynomial-factoring, finite-fields, deterministic-algorithms]
 added: 2026-11-22

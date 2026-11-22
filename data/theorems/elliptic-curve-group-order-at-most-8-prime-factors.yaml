@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [koblitz-conjecture-upper-bound-constant-22]
 tags: [elliptic-curves, koblitz-conjecture, almost-primes, sieve-methods]
 added: 2026-11-22

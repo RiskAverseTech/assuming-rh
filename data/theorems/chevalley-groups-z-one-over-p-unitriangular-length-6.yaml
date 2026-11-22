@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [primitive-root-primes-in-progression-density]
 tags: [chevalley-groups, bounded-generation, primitive-roots]
 added: 2026-11-22

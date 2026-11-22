@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [mertens-function-bound-soundararajan]
 tags: [mobius-function, summatory-functions, infinitary-divisors]
 added: 2026-11-22

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [two-variable-artin-conjecture-density]
 tags: [artin-conjecture, primitive-roots, prime-density]
 added: 2026-11-22

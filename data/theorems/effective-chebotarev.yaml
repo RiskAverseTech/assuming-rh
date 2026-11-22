@@ -33,7 +33,6 @@ sources:
     doi: 10.1007/BF01390234
     hypothesis_location: "Introduction, inequality (1.2), which recalls the conditional bound. The paper's own theorems are unconditional."
     role: refinement
-related: [primes-in-arithmetic-progressions-error, nullstellensatz-polynomial-hierarchy]
 review:
   state: ai-classified
   checked_by: null
@@ -45,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [primes-in-arithmetic-progressions-error, nullstellensatz-polynomial-hierarchy]
 tags: [chebotarev, prime-ideals, explicit-bounds]
 added: 2026-11-21

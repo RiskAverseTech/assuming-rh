@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [ratios-conjecture-quadratic-dirichlet-l-functions-one-shift]
 tags: [ratios-conjecture, quadratic-twists, multiple-dirichlet-series]
 added: 2026-11-22

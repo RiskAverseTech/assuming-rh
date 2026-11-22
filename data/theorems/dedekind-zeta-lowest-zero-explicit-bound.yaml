@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [dedekind-zeta-lowest-zero-height-large-degree]
 tags: [dedekind-zeta, low-lying-zeros, number-fields]
 added: 2026-11-21

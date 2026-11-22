@@ -67,5 +67,7 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [galois-orbits-special-subvarieties-shimura-lower-bound]
+related: [andre-oort-curves-in-shimura-varieties, andre-oort-products-of-modular-curves]
 tags: [andre-oort, shimura-varieties, special-points]
 added: 2026-11-22
