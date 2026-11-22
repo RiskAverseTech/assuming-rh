@@ -1,0 +1,49 @@
+id: murmuration-density-quadratic-hecke-l-functions-gaussian-field
+title: Murmuration density for quadratic Hecke L-functions of the Gaussian field
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i), let Phi be a non-negative smooth function with compact
+  support in the positive reals, and for y > 0 and 3/4 < delta < 1 let
+  M_Phi(y, X, delta) be (log X)/X^(1+delta) times the sum, over primary
+  primes w of Z[i] with norm in [yX, yX + X^delta] and square-free c in Z[i]
+  coprime to 1+i, of Phi(N(c)/X) times the quadratic symbol
+  (i(1+i)^5 c / w) times sqrt(N(w)). Then as X tends to infinity
+  M_Phi(y, X, delta) converges to an explicit limit: (1/4) times the sum
+  over primary l of mu(l)/N(l^2) times the sum over nonzero k in Z[i] of
+  (-1)^N(k) times a Fourier-type transform of Phi at N(k)/(sqrt(2y) N(l)).
+statement_formal: |
+  \lim_{X\to\infty}\frac{\log X}{X^{1+\delta}}\sum_{\substack{N(\varpi)\in[yX,\,yX+X^{\delta}]\\ \varpi \text{ primary}}}\ \sum_{\substack{c\in\mathcal{O}_K\\ (c,1+i)=1}}\mu_{[i]}^2(c)\,\Phi\Bigl(\frac{N(c)}{X}\Bigr)\Bigl(\frac{i(1+i)^5c}{\varpi}\Bigr)\sqrt{N(\varpi)} \;=\; \frac14\sum_{l \text{ primary}}\frac{\mu_{[i]}(l)}{N(l^2)}\sum_{\substack{k\in\mathcal{O}_K\\ k\neq 0}}(-1)^{N(k)}\,\widetilde{\Phi}\Bigl(\frac{N(k)}{\sqrt{2y}\,N(l)}\Bigr)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper writes only "GRH". It is used for sums over primes of
+  non-principal Hecke characters of trivial infinite type over Q(i) (the
+  quadratic symbols in the family), which needs the Riemann Hypothesis for
+  their Hecke L-functions, and for the prime ideal theorem in Q(i). The
+  transform of Phi is defined in equation (1.2) of the paper. The paper also
+  shows the limit tends to 0 as y tends to 0 and to
+  -(transform of Phi at 0)/(3 zeta_K(2)) as y tends to infinity. The
+  analogous result for quadratic Dirichlet characters is attributed to Lee,
+  Oliver and Pozdnyakov.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Murmurations of quadratic Hecke $L$-functions of the Gaussian field
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.20853
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; the L-functions were identified from the bound (3.4) and the prime ideal theorem used in Section 3. The displayed formula was read from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [murmurations, hecke-l-functions, gaussian-field]
+added: 2026-11-22

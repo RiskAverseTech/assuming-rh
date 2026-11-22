@@ -1,0 +1,43 @@
+id: large-values-quadratic-hecke-l-functions-gaussian-field-prime-moduli
+title: Large central values of quadratic Hecke L-functions with prime-related moduli over the Gaussian field
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and, for q in Z[i], let chi_((1+i)^5 q) be the quadratic
+  Hecke character given by the quadratic residue symbol. For all large X
+  there is a prime element q of Z[i] with X < N(q) <= 2X such that
+  L(1/2, chi_((1+i)^5 q)) is at least
+  exp((sqrt(2) + o(1)) sqrt(log X log log log X / log log X)).
+statement_formal: |
+  \max_{\substack{q \text{ prime} \\ X<N(q)\le 2X}} L\bigl(\tfrac12,\chi_{(1+i)^5 q}\bigr) \ \ge\ \exp\left(\bigl(\sqrt{2}+o(1)\bigr)\sqrt{\frac{\log X\,\log_3 X}{\log_2 X}}\right)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The paper writes only "GRH". It is used in Lemma 2.5 for the Hecke
+  L-functions over Q(i) of the quadratic characters psi_c attached to
+  elements c of Z[i] (a bound for L'/L to the right of the critical line),
+  and for the prime ideal count in Q(i). These are Hecke L-functions of a
+  quadratic field, not Dirichlet L-functions over the rationals. This is the
+  Gaussian-field analogue of the dataset entry
+  large-values-quadratic-dirichlet-l-functions-prime-moduli.
+sources:
+  - authors: P. Gao
+    title: Large values of quadratic Hecke $L$-functions with prime-related moduli of the Gaussian field
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.23390
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; the L-functions were identified from the proof of Lemma 2.5.
+lean:
+  proved: false
+  path: null
+tags: [hecke-l-functions, large-values, resonance-method, gaussian-field]
+added: 2026-11-22

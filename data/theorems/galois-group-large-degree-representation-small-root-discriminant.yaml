@@ -1,0 +1,42 @@
+id: galois-group-large-degree-representation-small-root-discriminant
+title: Galois groups of fields of small root discriminant have a large degree irreducible representation
+field: algebraic-number-theory
+statement_plain: >
+  There is a positive constant C such that for every Galois extension L/K
+  of number fields, the group Gal(L/K) has an irreducible complex
+  representation of degree at least
+  C (log [L:Q])^(1/5) / ((log rd_L)^(2/5) [K:Q]^(3/5)), where rd_L is the
+  root discriminant of L.
+statement_formal: |
+  \max_{\rho \in \operatorname{Irr}(\operatorname{Gal}(L/K))} \dim\rho \ \ge\ \frac{C_2\,(\log [L:\mathbb{Q}])^{1/5}}{(\log \mathrm{rd}_L)^{2/5}\,[K:\mathbb{Q}]^{3/5}}
+hypotheses_required: [GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The theorem assumes that all Artin L-functions are entire (Artin's
+  conjecture, recorded as the extra assumption) and satisfy the Riemann
+  Hypothesis. No waiting_on family fits the Riemann Hypothesis for Artin
+  L-functions of general Galois extensions, so only extra-assumption is
+  listed. The same paper proves unconditionally a weaker lower bound of
+  order log log [L:Q] / log log log [L:Q] (Theorem 1.1).
+sources:
+  - authors: J. Rouse, F. Thorne
+    title: On the existence of large degree Galois representations for fields of small discriminant
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1211.1353
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The constant C_2 is not made explicit.
+lean:
+  proved: false
+  path: null
+tags: [artin-l-functions, root-discriminant, galois-representations]
+added: 2026-11-22
