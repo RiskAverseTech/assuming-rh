@@ -1,0 +1,37 @@
+id: argument-of-zeta-omega-plus-minus-resonance
+title: Large positive and large negative values of the argument of the zeta function
+field: analytic-number-theory
+statement_plain: >
+  Let S(t) be 1/pi times the argument of zeta(1/2 + it). For each fixed beta
+  with 0 < beta < 1 there is a constant c > 0 such that, for all sufficiently
+  large T, both the maximum of S(t) and the maximum of -S(t) over
+  T^beta <= t <= T are at least c sqrt(log T log log log T / log log T).
+statement_formal: |
+  \max_{T^{\beta}\le t\le T} \pm S(t) \ge c\,\sqrt{\frac{\log T\,\log\log\log T}{\log\log T}}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens the entry argument-of-zeta-extreme-values-resonance (Bondarenko
+  and Seip), which gives the same lower bound for the maximum of |S(t)| but
+  does not say which sign occurs; here both signs are obtained. This improves
+  Montgomery's conditional result
+  S(t) = Omega_{+-}(sqrt(log t / log log t)).
+sources:
+  - authors: A. Chirre, K. Mahatab
+    title: Large Oscillations of the Argument of the Riemann Zeta-function
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1904.11051
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, argument-of-zeta, omega-results]
+added: 2026-11-22

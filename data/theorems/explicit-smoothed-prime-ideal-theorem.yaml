@@ -1,0 +1,45 @@
+id: explicit-smoothed-prime-ideal-theorem
+title: Explicit smoothed prime ideal theorem for number fields
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field other than Q, of degree n and absolute discriminant
+  D, let psi_K be its Chebyshev function and psi_K^(1)(x) the integral of
+  psi_K from 0 to x. For every x >= 3, |psi_K^(1)(x) - x^2/2| is at most
+  x^(3/2) (0.5375 log D - 1.0355 n + 5.3879) + (n - 1) x log x
+  + x (1.0155 log D - 2.1041 n + 8.3419) + log D - 1.415 n + 4.
+  For K = Q the bound is 0.0462 x^(3/2) + 1.838 x.
+statement_formal: |
+  \left|\psi_K^{(1)}(x) - \frac{x^2}{2}\right| \le x^{3/2}\left(0.5375\log\Delta_K - 1.0355\,n_K + 5.3879\right) + (n_K-1)\,x\log x + x\left(1.0155\log\Delta_K - 2.1041\,n_K + 8.3419\right) + \log\Delta_K - 1.415\,n_K + 4 \qquad (x \ge 3,\ K \ne \mathbb{Q})
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann hypothesis for the Dedekind zeta function of
+  K, whose nontrivial zeros appear in the explicit formula. When K is abelian
+  over the rationals this zeta function is a product of the Riemann zeta
+  function and Dirichlet L-functions, so that case is covered, and the bound
+  for K = Q needs RH only. For a general number field the bound stays
+  conditional. The same theorem gives a bound of the same shape for the
+  second smoothing psi_K^(2)(x) - x^3/3. Companion to the unsmoothed entry
+  explicit-prime-ideal-theorem-chebyshev-function by the same authors.
+sources:
+  - authors: L. Grenié, G. Molteni
+    title: Explicit smoothed prime ideals theorems under GRH
+    year: 2015
+    venue: Math. Comp. (to appear)
+    url: https://arxiv.org/abs/1312.4465
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The absolute value bars around psi_K^(1)(x) - x^2/2 are lost in the text extraction of Theorem 1.1; they are taken from the abstract."
+    - "The text only says 'To appear in Math. Comp. 2015'; volume and pages are not printed."
+lean:
+  proved: false
+  path: null
+tags: [prime-ideals, explicit-bounds, dedekind-zeta]
+added: 2026-11-22

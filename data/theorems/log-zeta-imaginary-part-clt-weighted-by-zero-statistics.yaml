@@ -1,0 +1,44 @@
+id: log-zeta-imaginary-part-clt-weighted-by-zero-statistics
+title: Central limit theorem for Im log zeta weighted by linear statistics of zeros
+field: analytic-number-theory
+statement_plain: >
+  Let phi be an even function, real on the real line and not identically
+  zero, whose Fourier transform is smooth and supported in (-2/k, 2/k) for an
+  even nonnegative integer k. Let N_phi(t) be the sum of
+  phi((log T / (2 pi)) (gamma - t)) over the zeros 1/2 + i gamma of zeta. If
+  tau is sampled from [T, 2T] with density proportional to
+  |N_phi(t) - phi^(0)|^k, then Im log zeta(1/2 + i tau) divided by
+  sqrt((1/2) log log T) converges in distribution to a standard real Gaussian
+  as T tends to infinity.
+statement_formal: |
+  \frac{\Im \log\zeta(\tfrac12 + i\tau_k)}{\sqrt{\tfrac12 \log\log T}} \xrightarrow{T\to\infty} \mathcal{N}(0,1), \qquad \tau_k \sim \frac{|N_\varphi(t) - \hat\varphi(0)|^k}{C_{\varphi,k}}\,dt \text{ on } [T,2T], \quad \operatorname{supp}\hat\varphi \subseteq \left(-\tfrac{2}{k}, \tfrac{2}{k}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Corollary 1.4, deduced from the joint moment formula of Theorem 1.2
+  for (Im log zeta)^l (N_phi - phi^(0))^k. Without RH the same paper proves
+  the complex version (Theorem 1.1 and Corollary 1.3) only for Fourier
+  support in (-2/(k+2), 2/(k+2)); RH extends the support to (-2/k, 2/k) for
+  the imaginary part. A different weighted central limit theorem (weight
+  |zeta|^2) is the entry weighted-central-limit-theorem-log-zeta.
+sources:
+  - authors: A. Fazzari, M. Gerspach, P. Minelli
+    title: Selberg's Central Limit Theorem weighted by Linear Statistics of Zeta Zeros
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2507.04150
+    hypothesis_location: Theorem 1.2 and Corollary 1.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "Theorem 1.2 as printed has main term mu_l mu_k sigma^k (log log T)^(l/2), while Corollary 1.4 normalizes by sqrt((1/2) log log T); the two differ by a factor 2^(-l/2). The entry records the corollary; a reader should check which normalization is intended."
+    - "For k = 0 the support condition (-2/k, 2/k) is vacuous; the paper states the result for even nonnegative k."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, central-limit-theorem, zeros]
+added: 2026-11-22

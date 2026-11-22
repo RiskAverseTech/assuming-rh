@@ -1,0 +1,44 @@
+id: primes-in-neighboring-short-intervals-bivariate-gaussian
+title: Primes in two neighboring short intervals are jointly Gaussian with negative correlation
+field: analytic-number-theory
+statement_plain: >
+  Fix a sufficiently small delta > 0. For x in [2, X], consider the pair
+  (psi(x) - psi(x - delta x) - delta x, psi(x + delta x) - psi(x) - delta x)
+  divided by sqrt((delta log(1/delta) + (1 - gamma - log 2 pi) delta) x),
+  where gamma is Euler's constant. As X tends to infinity, the logarithmic
+  density of the x for which this pair lies in a Borel set B equals the
+  mass of B under the centered bivariate Gaussian with unit variances and
+  covariance -log 2 / log(1/delta), up to an error O(1 / log^2(1/delta)).
+statement_formal: |
+  \lim_{X\to\infty} \frac{1}{\log X} \int_{S_{X,\delta;B}} \frac{dx}{x} = \frac{1}{2\pi\sqrt{\det\mathcal{C}}} \int_B \exp\!\left(-\tfrac12 \langle \mathcal{C}^{-1}\mathbf{x}, \mathbf{x}\rangle\right) d\mathbf{x} + O\!\left(\frac{1}{\log^2\frac{1}{\delta}}\right), \qquad \mathcal{C} = \begin{pmatrix} 1 & -\frac{\log 2}{\log(1/\delta)} \\ -\frac{\log 2}{\log(1/\delta)} & 1 \end{pmatrix}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Linear Independence conjecture (LI): the
+  positive ordinates of the nontrivial zeros of zeta are linearly independent
+  over the rationals. Here S_{X,delta;B} is the set of x in [2, X] for which
+  the normalized pair lies in B. This is Corollary 1.1, a special case of the
+  paper's Theorems 3.1 and 3.2 on the joint distribution in any fixed number
+  of disjoint short intervals. A further result for a single shorter interval
+  (Theorem 10.1) needs a quantitative form of LI as well.
+sources:
+  - authors: S.-K. Leung
+    title: Joint distribution of primes in multiple short intervals
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2401.04000
+    hypothesis_location: Corollary 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The normalization and covariance matrix were read from the PDF because the text extraction of the display is garbled."
+lean:
+  proved: false
+  path: null
+tags: [primes, short-intervals, linear-independence]
+added: 2026-11-22

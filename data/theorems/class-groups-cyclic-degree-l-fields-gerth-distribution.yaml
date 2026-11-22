@@ -1,0 +1,46 @@
+id: class-groups-cyclic-degree-l-fields-gerth-distribution
+title: Distribution of the l-power part of class groups of cyclic degree l fields (Gerth's conjecture)
+field: algebraic-number-theory
+statement_plain: >
+  Let l be an odd prime and A a finitely generated torsion module over
+  Z_l[zeta_l]. Among cyclic degree l fields K ordered by the radical of the
+  discriminant, the proportion for which
+  ((1 - zeta_l) Cl(K))[(1 - zeta_l)^infinity] is isomorphic to A tends to
+  the product over i >= 2 of (1 - l^(-i)), divided by |A| times the number
+  of automorphisms of A as a Z_l[zeta_l]-module.
+statement_formal: |
+  \lim_{X\to\infty} \frac{\left|\{K \text{ cyclic of degree } l : \mathrm{rad}(D_K) < X,\ ((1-\zeta_l)\mathrm{Cl}(K))[(1-\zeta_l)^\infty] \cong A\}\right|}{\left|\{K \text{ cyclic of degree } l : \mathrm{rad}(D_K) < X\}\right|} = \frac{\prod_{i=2}^{\infty}\left(1 - l^{-i}\right)}{|A|\,\left|\mathrm{Aut}_{\mathbb{Z}_l[\zeta_l]}(A)\right|}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH" and does not define it. It says GRH is needed
+  because no suitable large sieve for l-th power residue symbols is
+  available; in the proof (Theorem 11.6) it is used through the effective
+  Chebotarev density theorem of Lagarias and Odlyzko, applied to composita
+  of the Kummer-type fields Q(zeta_l, p^(1/l)) with cyclic degree l fields
+  and an auxiliary Galois field. These fields are not abelian over the
+  rationals. The result is the analog for cyclic degree l fields of Smith's
+  theorem on 2-power class groups of imaginary quadratic fields, and gives
+  the distribution conjectured by Gerth.
+sources:
+  - authors: P. Koymans, C. Pagano
+    title: On the distribution of $\text{Cl}(K)[l^\infty]$ for degree $l$ cyclic fields
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1812.06884
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "GRH is not defined in the paper; the coding ERH-Dedekind is inferred from the one place where it is visibly used (Lagarias-Odlyzko Chebotarev in Section 11). Other uses that 'make proofs easier and shorter' were not traced."
+    - "The paper says the assumption may be removable with a suitable large sieve for l-th power residue symbols."
+lean:
+  proved: false
+  path: null
+tags: [class-groups, cohen-lenstra, cyclic-fields]
+added: 2026-11-22

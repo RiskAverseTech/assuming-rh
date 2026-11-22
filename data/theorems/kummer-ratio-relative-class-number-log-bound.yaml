@@ -1,0 +1,41 @@
+id: kummer-ratio-relative-class-number-log-bound
+title: Kummer's ratio for the relative class number of prime cyclotomic fields is within a factor e^0.41 log q
+field: algebraic-number-theory
+statement_plain: >
+  Let q be a prime, h_1(q) the relative class number of the cyclotomic field
+  Q(zeta_q), G(q) = 2q (q / (4 pi^2))^((q-1)/4), and R(q) = h_1(q) / G(q)
+  the Kummer ratio. There is an effectively computable prime q_1 such that
+  for every prime q >= q_1, both R(q) and 1/R(q) are less than
+  e^0.41 log q.
+statement_formal: |
+  \max\{R(q),\, R(q)^{-1}\} < e^{0.41}\log q \quad (q \ge q_1 \text{ prime}), \qquad R(q) = \frac{h_1(q)}{G(q)} = \prod_{\chi(-1)=-1} L(1,\chi), \quad G(q) = 2q\left(\frac{q}{4\pi^2}\right)^{\frac{q-1}{4}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dirichlet L-functions of
+  the odd characters modulo the prime q only (the paper's RH_odd(q)).
+  Unconditionally the same theorem gives e^0.41 (log q) l(q) when there is no
+  Siegel zero among these L-functions, for any function l(q) tending to
+  infinity, and a bound with (log q)^2 and an explicit Siegel zero factor
+  otherwise. The paper remarks that 0.41 can be sharpened to 0.39. Kummer
+  conjectured that R(q) tends to 1.
+sources:
+  - authors: N. Kandhil, A. Languasco, P. Moree, S. Saad Eddin, A. Sedunova
+    title: The Kummer ratio of the relative class number for prime cyclotomic fields
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2402.13829
+    hypothesis_location: Theorem 1, part 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The threshold q_1 is effectively computable but not given explicitly in the theorem."
+lean:
+  proved: false
+  path: null
+tags: [class-numbers, cyclotomic-fields, dirichlet-l-functions]
+added: 2026-11-22

@@ -1,0 +1,42 @@
+id: third-moment-log-zeta-keating-snaith-constants
+title: Third moment of the real and imaginary parts of log zeta on the critical line
+field: analytic-number-theory
+statement_plain: >
+  The average over t in [T, 2T] of (Re log zeta(1/2 + it))^3 equals
+  c_P + c_Z + O(1/log T), where c_Z = -pi^2/4 and c_P is 3/4 times the sum
+  over primes p and integers m >= 2 of (1/(m p^m)) times the sum of 1/(k l)
+  over k + l = m. The average of (Im log zeta(1/2 + it))^3 is O(1/log T).
+statement_formal: |
+  \frac{1}{T}\int_T^{2T} \left(\Re\log\zeta(\tfrac12+it)\right)^3 dt = c_P + c_Z + O\!\left(\frac{1}{\log T}\right), \qquad \frac{1}{T}\int_T^{2T} \left(\Im\log\zeta(\tfrac12+it)\right)^3 dt = O\!\left(\frac{1}{\log T}\right), \qquad c_Z = -\frac{\pi^2}{4},\quad c_P = \frac34 \sum_{p,\, m\ge 2} \frac{1}{m p^m} \sum_{k+\ell=m} \frac{1}{k\ell}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Besides RH the theorem assumes three conjectures on zeros of zeta, each
+  with error term O(1/log T): Montgomery's pair correlation conjecture
+  (Conjecture 1.2), Hejhal's triple correlation conjecture (Conjecture 1.3),
+  and a "twisted pair correlation" conjecture (Conjecture 1.5) introduced in
+  the paper. The paper proves the twisted conjecture in a limited range under
+  RH and in a larger range under RH and a uniform Hardy-Littlewood
+  conjecture. The constants match predictions of Keating and Snaith.
+sources:
+  - authors: A. Fazzari, M. Gerspach
+    title: The third moment of the logarithm of zeta and a twisted pair correlation conjecture
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.20099
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The extra conjectures carry most of the content of the theorem; the twisted pair correlation conjecture is new to this paper."
+    - "The range of the inner sum over k + l = m (positive integers k, l) is read from the displayed formula and not spelled out in the text."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, pair-correlation]
+added: 2026-11-22
