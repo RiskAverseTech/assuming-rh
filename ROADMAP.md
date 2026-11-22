@@ -1,11 +1,12 @@
 # Roadmap: what would make this more valuable
 
-A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 21 November 2026.
+A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 22 November 2026.
 
 ## Done
 
 - **A "Still waiting" view.** Entries the announced proof does not finish, grouped by which L-functions a future proof would have to reach.
 - **Random audit.** 15 entries checked independently against their papers.
+- **"What would move next".** The Still waiting page counts how many waiting entries each further result (Dedekind zeta functions, then Hecke, then Artin L-functions) would finish.
 - **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
 
 ## Next
