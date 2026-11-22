@@ -1,0 +1,55 @@
+id: siegel-cusp-forms-fundamental-fourier-coefficients-log-saving-bound
+title: Fundamental Fourier coefficients of Siegel cusp forms of degree 2 are bounded with a logarithmic saving
+field: analytic-number-theory
+statement_plain: >
+  Let F be a Siegel cusp form of degree 2, even weight k > 2 and odd
+  squarefree level N (for the congruence subgroup Gamma_0^(2)(N)). For
+  fundamental matrices S, meaning that disc(S) = -4 det(S) is a fundamental
+  discriminant, the Fourier coefficient a(F, S) is at most a constant
+  depending on F and eps times
+  |disc(S)|^(k/2 - 1/2) / (log |disc(S)|)^(1/8 - eps).
+statement_formal: |
+  |a(F,S)| \ll_{F,\varepsilon} \frac{|\text{disc}(S)|^{\frac{k}{2}-\frac12}}{(\log|\text{disc}(S)|)^{\frac18-\varepsilon}}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is the refined Gan-Gross-Prasad conjecture for
+  Bessel periods of holomorphic cusp forms on SO_5 (in the form of Liu),
+  used through the paper's Hypothesis G. A footnote says a proof of this
+  conjecture had been announced by Furusawa and Morimoto. The detailed
+  statement (Theorem 5.14) lists the L-functions needing GRH:
+  L(s, pi x AI(Lambda)), L(s, ad(pi) x AI(Lambda^2)), L(s, ad(pi) x chi_d),
+  L(s, std(pi) x AI(Lambda^2)), L(s, std(pi) x chi_d), L(s, sigma x chi_d)
+  and L(s, chi_d), where pi is an automorphic representation of GSp_4
+  arising from the space of forms, sigma is a cuspidal representation of
+  GL_2, chi_d is the quadratic Dirichlet character of an imaginary quadratic
+  field K, and AI(Lambda) is the automorphic induction of a class group
+  character Lambda of K. The paper notes that the exponent k/2 - 1/2 is
+  what the generalized Lindelof hypothesis alone gives, so this is the first
+  bound beyond that barrier; a similar bound for Yoshida lifts is due to
+  Blomer and Brumley. The same paper proves unconditionally that these
+  coefficients have at least X^(1 - eps) sign changes and large values.
+sources:
+  - authors: J. Jääsaari, S. Lester, A. Saha
+    title: On fundamental Fourier coefficients of Siegel cusp forms of degree 2
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2012.09563
+    hypothesis_location: Theorem C (precise form Theorem 5.14)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The refined Gan-Gross-Prasad conjecture for (SO(5), SO(2)) may now be a theorem of Furusawa and Morimoto (the paper only reports an announcement). If so, PLUS-EXTRA and extra-assumption should be removed.
+    - >-
+      Theorem C in the introduction requires N odd; Theorem 5.14 is stated for squarefree N >= 1. The entry follows Theorem C.
+lean:
+  proved: false
+  path: null
+tags: [siegel-modular-forms, fourier-coefficients, bessel-periods]
+added: 2026-11-22

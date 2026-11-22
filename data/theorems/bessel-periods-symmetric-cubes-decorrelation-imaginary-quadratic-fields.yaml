@@ -1,0 +1,48 @@
+id: bessel-periods-symmetric-cubes-decorrelation-imaginary-quadratic-fields
+title: Decorrelation of SO(5) x SO(2) Bessel periods of symmetric cubes averaged over imaginary quadratic fields
+field: analytic-number-theory
+statement_plain: >
+  Let f_1, ..., f_m be pairwise distinct even weight Hecke eigenforms, let
+  phi_i be a form in the symmetric cube lift Sym^3 f_i, viewed on
+  PGSp(4) = SO(3,2), and let B_K(phi_i, 1; psi) be its global Bessel period
+  for the imaginary quadratic field K = Q(sqrt(d)) and the trivial
+  character. The average over squarefree |d| with D <= -d <= 2D, d in a
+  fixed admissible residue class a modulo M_0 = lcm(8, M_1, ..., M_m), of the
+  product of |B_K(phi_i, 1; psi)| over i is O((log D)^(-m/8 + eps)).
+statement_formal: |
+  \frac{1}{D}\sum_{\substack{K=\mathbb{Q}(\sqrt{d}),\ D\le -d\le 2D\\ \mu(|d|)^2=1,\ d\equiv a\ (\text{mod } M_0)}}\ \prod_{i=1}^{m}\bigl|B_K(\varphi_i,1;\psi)\bigr| \ \ll_{f_1,\dots,f_m,\psi_1,\dots,\psi_m,\varepsilon}\ (\log D)^{-\frac{m}{8}+\varepsilon}
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem names its hypothesis: GRH for L(s, chi_d),
+  L(s, Sym^k f_i) for k = 2, 4, 6, L(s, Sym^3 f_i x chi_d) and
+  L(s, Sym^3 f_i x Sym^3 f_j) for i different from j, for all d in the
+  range with d congruent to a modulo M_0. A lemma in the proof (Lemma 4.3)
+  also assumes RH for zeta. Here M_i is the level of Sym^3 f_i and a is
+  congruent to 1 modulo 4 and coprime to M_0. The link between Bessel
+  periods and central L-values is the refined Gan-Gross-Prasad formula for
+  (SO(5), SO(2)), which the paper cites as proved by Furusawa and Morimoto,
+  so it is not an extra assumption. The proof bounds a 1/2-th moment of
+  products of quadratic twists by Soundararajan's method.
+sources:
+  - authors: S. Hua, X. Miao
+    title: Decorrelation of $\mathrm{SO}(5)\times \mathrm{SO}(2)$ Bessel periods for symmetric cubes of $\mathrm{GL}(2)$
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.15964
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem requires the forms to be "algebraic regular" in the sense of Clozel; the entry says only "even weight Hecke eigenforms" and omits the exact normalization of the Bessel period.
+lean:
+  proved: false
+  path: null
+tags: [bessel-periods, symmetric-cube, quadratic-twists, moments]
+added: 2026-11-22

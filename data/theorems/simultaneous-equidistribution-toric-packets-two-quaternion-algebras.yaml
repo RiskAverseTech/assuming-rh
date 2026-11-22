@@ -1,0 +1,61 @@
+id: simultaneous-equidistribution-toric-packets-two-quaternion-algebras
+title: Simultaneous equidistribution of toric packets on two distinct quaternionic quotients
+field: analytic-number-theory
+statement_plain: >
+  Let B_1 and B_2 be non-isomorphic quaternion algebras over Q with maximal
+  orders, G_j the projective unit group of B_j, and E a quadratic field
+  with optimal embeddings of its ring of integers into both. The diagonal
+  toric packets attached to E in the adelic quotient of G_1 x G_2 at
+  maximal level become equidistributed, as the discriminant D of E tends to
+  infinity, when tested against smooth compactly supported functions in the
+  discrete spectrum, with an error O((log D)^(-1/4 + eps)) times a Sobolev
+  norm of the test function. For example, for two distinct definite
+  quaternion algebras of class number 1 with norm forms Q_1 and Q_2, the
+  joint class group orbits of primitive points with Q_1(x) = Q_2(y) = d,
+  rescaled by d^(-1/2), equidistribute on the product of the two quotient
+  ellipsoids as d runs through admissible fundamental values.
+statement_formal: |
+  \int_{[\Delta T_\iota]} f(tg)\,dt = \int_{[G]} f(g)\,dg + O_{\varepsilon}\bigl(S_{\infty,d}(f)\,(\log D)^{-1/4+\varepsilon}\bigr)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem says "under the Generalized Riemann Hypothesis" without
+  restricting it to a family. Its analytic core (Theorem 3) bounds a
+  fractional moment of L(1/2, pi_1 x chi) L(1/2, pi_2 x chi) over the
+  characters chi of the extended class group of E, where pi_1 and pi_2 are
+  cuspidal automorphic representations of PGL_2 over Q of square-free
+  level; GRH is used for these Rankin-Selberg L-functions L(s, pi_j x chi)
+  at the central point (Lemma 6) and for L-functions at s = 1 (Lemma 5,
+  stated for the extended Selberg class). The Ramanujan conjecture is not
+  assumed. The "additional technical assumptions" of the abstract are
+  restrictions built into the statement (maximal orders, optimal
+  embeddings, base field Q, test functions in the discrete spectrum), not
+  further conjectures. Theorem 2 gives the same rate when B_1 = B_2 is
+  allowed and the two embeddings are twisted by distinct powers, under a
+  torsion condition on the class group. The later paper recorded in
+  mixing-conjecture-linnik-points-sphere treats the case of one algebra
+  with a class group shift.
+sources:
+  - authors: V. Blomer, F. Brumley
+    title: Simultaneous equidistribution of toric periods and fractional moments of L-functions
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2009.07093
+    hypothesis_location: Theorem 1 (analytic input Theorem 3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not list every L-function to which GRH is applied; GRH-automorphic is the cautious code. The L-functions L(s, pi x chi) with chi a class group character are Rankin-Selberg L-functions of GL_2 x GL_2 type via automorphic induction.
+    - >-
+      The statement of the general theorem is simplified; the precise definitions of the packets, the level structure K and the Sobolev norm S_{infinity,d} are in Section 1.3 of the paper.
+lean:
+  proved: false
+  path: null
+tags: [equidistribution, toric-periods, quaternion-algebras, fractional-moments]
+added: 2026-11-22

@@ -1,0 +1,51 @@
+id: joint-mass-two-holomorphic-hecke-eigenforms-asymptotic
+title: The joint mass of two distinct holomorphic Hecke eigenforms is asymptotically 1
+field: analytic-number-theory
+statement_plain: >
+  Let f and g be holomorphic Hecke eigenforms for SL_2(Z) of weights k and
+  l, normalized so that their Petersson norms squared equal the volume of
+  SL_2(Z)\H, and orthogonal if k = l. Then the average over SL_2(Z)\H of
+  y^(k + l) |f(z)|^2 |g(z)|^2 equals 1 + O((log(k + l))^(-1/4 + eps)) as
+  max(k, l) tends to infinity.
+statement_formal: |
+  \frac{1}{\text{vol}(\Gamma\backslash\mathbb{H})}\int_{\Gamma\backslash\mathbb{H}} y^{k+\ell}\,|f(z)|^2\,|g(z)|^2\,d\mu z = 1+O\bigl((\log(k+\ell))^{-1/4+\varepsilon}\bigr)
+hypotheses_required: [GRH-automorphic, RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is the generalized Ramanujan conjecture for GL(2)
+  Hecke-Maass cusp forms (the n-th Hecke eigenvalue is bounded by the number
+  of divisors of n). The paper writes "GRH" without restricting it to a
+  family. In the proof it is applied, by Soundararajan's method and
+  Littlewood-type bounds, to L(s, u_j), L(s, Sym^2 f x u_j) and
+  L(s, Sym^2 g x u_j) for Hecke-Maass cusp forms u_j, to symmetric square and
+  other symmetric power L-functions of f and g at s = 1, and, for the
+  Eisenstein contribution, to zeta(s) and L(s, Sym^2 f) on the critical
+  line. This confirms the case of two forms with exponents (1, 1) of the
+  paper's conjecture on joint moments. Under GRH alone the paper also
+  proves (Theorem 1.8) that the integral of y^(2k) f(z)^2 times the complex
+  conjugate of g(z)^2 over SL_2(Z)\H is O((log k)^(-1/4 + eps)) for
+  orthogonal f and g of the same weight k, and it deduces a first moment
+  asymptotic for triple product L-functions under GRH and GRC (Theorem
+  1.9).
+sources:
+  - authors: B. Huang
+    title: Joint distribution of Hecke eigenforms
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2406.03073
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not give a complete list of the L-functions to which GRH is applied; the list in status_note was collected from Lemmas 2.3 to 2.6 and Section 3 and may be incomplete.
+lean:
+  proved: false
+  path: null
+tags: [hecke-eigenforms, quantum-unique-ergodicity, triple-product-l-functions]
+added: 2026-11-22

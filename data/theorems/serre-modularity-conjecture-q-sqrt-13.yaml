@@ -1,0 +1,53 @@
+id: serre-modularity-conjecture-q-sqrt-13
+title: Serre's modularity conjecture over Q(sqrt(13)) for odd conductor
+field: arithmetic-geometry
+statement_plain: >
+  Let K = Q(sqrt(13)) and let l be an odd prime. Every continuous,
+  absolutely irreducible, totally odd representation of the absolute Galois
+  group of K into GL_2 of an algebraic closure of F_l with odd conductor is
+  modular: it is isomorphic to the reduction of the Galois representation of
+  a Hilbert modular form.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions, kummer-fields]
+status_note: >
+  The paper writes only "the generalized Riemann hypothesis" and says it is
+  used twice. First, in the base case (Theorem 2.8, mod 3 representations
+  unramified outside 3), through Odlyzko's GRH lower bounds for root
+  discriminants (Corollary 2.7) applied to the number fields cut out by the
+  representation, which are non-abelian Galois extensions of Q; this needs
+  the Riemann Hypothesis for their Dedekind zeta functions. Second, to find
+  an auxiliary "good dihedral prime" q such that the fundamental unit of K
+  generates a subgroup of index at most 2 modulo a prime above q
+  (Proposition 3.12); this is an Artin primitive root type statement proved
+  by following Roskam and a result of Murty, which uses GRH for Kummer
+  extensions K(zeta_l, nu^(1/l)). This entry records Theorem 5.2. Theorem
+  5.1 gives the same conclusion by a proof that extends to other real
+  quadratic fields of narrow class number one, but assumes in addition a
+  modularity lifting theorem in a mixed reducible case (the paper's
+  Assumption 1). The paper remarks that recent zero-free regions for
+  Dedekind zeta functions do not seem to suffice for an unconditional proof.
+sources:
+  - authors: L. Dieulefait, A. Pacetti
+    title: Serre's conjectures for $\Q(\sqrt{13})$
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.38884
+    hypothesis_location: Theorem 5.2 (GRH used in Theorem 2.8 and Proposition 3.12)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH covers. ERH-Dedekind is inferred from the two uses (Odlyzko discriminant bounds and a Hooley-type argument following Roskam and Murty); the cited result of Murty was not read.
+    - >-
+      The abstract says the result assumes GRH "and a minor technical result", while Theorem 5.2 as stated assumes only GRH. The entry follows Theorem 5.2.
+lean:
+  proved: false
+  path: null
+tags: [serre-conjecture, hilbert-modular-forms, galois-representations]
+added: 2026-11-22

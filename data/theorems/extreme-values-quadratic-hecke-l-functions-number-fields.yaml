@@ -1,0 +1,58 @@
+id: extreme-values-quadratic-hecke-l-functions-number-fields
+title: Large values of quadratic Hecke L-functions near the central point, attained by X^(1 - o(1)) characters
+field: analytic-number-theory
+statement_plain: >
+  Let K be a fixed number field and let chi_a run through a family of
+  quadratic Hecke characters of K indexed by squarefree ideals a in a fixed
+  narrow ray class with X < N(a) <= 2X, whose conductors have norm
+  comparable to X. Write V(X) = sqrt(log X logloglog X / loglog X) and
+  sigma_A = 1/2 + A / loglog X. For every fixed A >= 0, the maximum of
+  L(sigma_A, chi_a) over the family is at least
+  exp((e^(-A) + o(1)) V(X)), and for every fixed 0 < c < 1 at least
+  X^(1 - o(1)) characters in the family satisfy
+  L(sigma_A, chi_a) >= exp(c e^(-A) V(X)). Taking A = 0 gives the central
+  point.
+statement_formal: |
+  \max_{a\in\Omega(X)} L\bigl(\sigma_A(X),\chi_a\bigr)\ \ge\ \exp\Bigl\{(e^{-A}+o(1))\sqrt{\tfrac{\log X\,\log_3 X}{\log_2 X}}\Bigr\},\qquad \#\Bigl\{a\in\Omega(X): L\bigl(\sigma_A(X),\chi_a\bigr)\ge e^{c\,e^{-A}\mathcal{V}(X)}\Bigr\}\ \ge\ X^{1-o(1)}
+hypotheses_required: [GRH-Hecke]
+status: partial
+waiting_on: [class-group-characters]
+status_note: >
+  The paper defines its hypothesis GRH_K as GRH for all finite-order Hecke
+  L-functions over K, and explains that characters of ray class groups
+  beyond the quadratic ones are needed in a reciprocity argument. For a
+  general number field these are not Dirichlet L-functions and the result
+  stays conditional. The case K = Q is covered: Corollary 1.2 assumes only
+  GRH for Dirichlet L-functions and gives the same two statements for
+  positive fundamental discriminants D = 8a in (X, 2X] with a squarefree
+  and congruent to 1 modulo 8, and hence for all positive fundamental
+  discriminants in (X, 2X]. In the formula, log_j is the j-fold iterated
+  logarithm and V(X) is the square root shown on the left. At the central
+  point over Q this sharpens the constant 1/2 of the entry
+  large-values-quadratic-dirichlet-l-functions-central-point to 1; the
+  paper says the constant 1 for the maximum was already obtained by Dong,
+  Wang, Zhang and Zhao, and that its new contribution there is the count of
+  X^(1 - o(1)) characters. The same paper proves unconditional analogs
+  over global function fields, and under GRH_K large value results in the
+  strip 1/2 < sigma < 1 and at s = 1 (Theorems 1.4 and 1.5).
+sources:
+  - authors: Z. Dong, L. Liu
+    title: Extreme values of quadratic Hecke $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2609.16807
+    hypothesis_location: Theorem 1.1 (Corollary 1.2 for the case K = Q)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The exact family (the component Omega of squarefree ideals in the identity class of a narrow ray modulus, with a fixed totally positive d) is defined in Proposition 2.1 of the paper and is only summarized here.
+lean:
+  proved: false
+  path: null
+tags: [extreme-values, hecke-l-functions, quadratic-characters, resonance-method]
+added: 2026-11-22

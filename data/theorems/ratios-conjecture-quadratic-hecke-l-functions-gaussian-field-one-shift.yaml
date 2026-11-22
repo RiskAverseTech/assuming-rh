@@ -1,0 +1,62 @@
+id: ratios-conjecture-quadratic-hecke-l-functions-gaussian-field-one-shift
+title: Ratios conjecture for quadratic Hecke L-functions over the Gaussian field with one shift in numerator and denominator
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i), let chi_m be the quadratic residue symbol (m/.) in Z[i], and
+  let w be a non-negative Schwartz function with Mellin transform w-hat.
+  For 0 < Re(alpha) < 1/2 and Re(beta) > eps, the sum over primary n in
+  Z[i] of w(N(n)/X) L(1/2 + alpha, chi_{(1+i)^2 n}) /
+  L(1/2 + beta, chi_{(1+i)^2 n}) equals the two main terms predicted by the
+  ratios conjecture, one of size X and one of size X^(1 - alpha), up to an
+  error O((1 + |alpha|)^eps |beta|^eps X^(N(alpha, beta) + eps)) with
+  N(alpha, beta) = max(1 - 2 Re(alpha), 1 - 2 Re(beta)).
+statement_formal: |
+  \begin{aligned}
+  \sum_{n\ \text{primary}}\frac{L\bigl(\tfrac12+\alpha,\chi_{(1+i)^2n}\bigr)}{L\bigl(\tfrac12+\beta,\chi_{(1+i)^2n}\bigr)}\,w\!\left(\frac{N(n)}{X}\right)
+  ={}& X\,\widehat{w}(1)\,\frac{\pi\,\zeta_K^{(2)}(1+2\alpha)}{8\,\zeta_K^{(2)}(1+\alpha+\beta)}\prod_{(\varpi,2)=1}\left(1+\frac{N(\varpi)^{\alpha-\beta}-1}{N(\varpi)^{1+\alpha-\beta}\bigl(N(\varpi)^{1+\alpha+\beta}-1\bigr)}\right) \\
+  &+ X^{1-\alpha}\,\widehat{w}(1-\alpha)\,\frac{\pi^{2\alpha+1}\,\Gamma(1-2\alpha)\Gamma(\alpha)}{\Gamma(1-\alpha)\Gamma(2\alpha)}\cdot\frac{P\bigl(\tfrac32-\alpha+\beta\bigr)\,\zeta_K(1-2\alpha)}{\zeta_K(2)\,\zeta_K(1-\alpha+\beta)}\cdot\frac{2^{\alpha+\beta-2}}{3\cdot 2^{1-\alpha+\beta}-2} \\
+  &+ O\!\left((1+|\alpha|)^{\varepsilon}|\beta|^{\varepsilon}X^{\max\{1-2\Re(\alpha),\,1-2\Re(\beta)\}+\varepsilon}\right),
+  \end{aligned}
+  \qquad P(z)=\prod_{\varpi}\left(1+\frac{1}{\bigl(N(\varpi)^{z-1/2}-1\bigr)\bigl(N(\varpi)+1\bigr)}\right)
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The theorem says "Assume the truth of GRH". In the proof it is used
+  through the bounds 1/|L(s, chi_n)| << (|s| N(n))^eps for
+  Re(s) >= 1/2 + eps and |(w - 1) L(w, chi_n)| << |w - 1| (|w| N(n))^eps
+  for Re(w) >= 1/2, for the quadratic Hecke characters chi_n of Q(i) of
+  trivial infinite type. These are Hecke L-functions over Q(i) and in
+  general not Dirichlet L-functions, so the result stays conditional; for
+  trivial chi_n the function is zeta_K, a product of zeta and the Dirichlet
+  L-function modulo 4. Here varpi runs over primes of Z[i], zeta_K^(2)
+  omits the Euler factor at 1 + i, and primary means congruent to 1 modulo
+  (1 + i)^3. This is the Gaussian field analog of the entry
+  ratios-conjecture-quadratic-dirichlet-l-functions-one-shift; compare also
+  first-moment-quadratic-hecke-l-functions-gaussian-field-secondary-term.
+  The same paper proves unconditionally (Theorem 1.2 and Corollary 1.3) the
+  smoothed first moment of L(1/2 + alpha, chi_{(1+i)^2 n}) over all primary
+  n with error O(X^(1/2 + eps)).
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Ratios conjecture for quadratic Hecke $L$-functions in the Gaussian field
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2210.08840
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper prints the weight as w(N(c)/X) although the sum is over n; the entry writes w(N(n)/X), assuming a misprint.
+    - >-
+      The formula was transcribed from the PDF; the constants in the second main term should be rechecked by a reviewer.
+lean:
+  proved: false
+  path: null
+tags: [ratios-conjecture, hecke-l-functions, gaussian-field, multiple-dirichlet-series]
+added: 2026-11-22
