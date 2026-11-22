@@ -130,6 +130,10 @@ The site is plain HTML that reads fine without JavaScript. A small script adds f
 
 The stack is deliberately small: three pinned dependencies (`js-yaml`, `ajv`, `katex`) and about 400 lines of build script. Fewer packages means less supply-chain risk and less to maintain.
 
+## How to cite
+
+Cite a tagged version, and keep each entry's review state with anything you quote from it. Citation details are in `CITATION.cff`, which GitHub shows under "Cite this repository". Changes between versions are in `CHANGELOG.md`.
+
 ## License
 
 Code: MIT, see [LICENSE](LICENSE). Dataset: CC BY 4.0, see [LICENSE-DATA](LICENSE-DATA).

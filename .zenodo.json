@@ -1,0 +1,26 @@
+{
+  "title": "Assuming RH: a map of theorems conditional on the Riemann Hypothesis",
+  "upload_type": "dataset",
+  "description": "<p>An open dataset recording, for theorems proved assuming the Riemann Hypothesis or a generalization, exactly which hypothesis each proof uses, and whether the proof announced in November 2026 would make the result unconditional.</p><p>Entries are drafted by an AI system from the text of each paper and labeled with their review state. As of this version no entry has been checked by a person. Read the README before relying on any entry.</p>",
+  "creators": [
+    {
+      "name": "Jaz"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "Riemann Hypothesis",
+    "generalized Riemann hypothesis",
+    "number theory",
+    "conditional theorems",
+    "L-functions"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://riskaversetech.github.io/assuming-rh/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

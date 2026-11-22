@@ -7,7 +7,8 @@ authors:
 repository-code: "https://github.com/RiskAverseTech/assuming-rh"
 url: "https://riskaversetech.github.io/assuming-rh/"
 license: CC-BY-4.0
-date-released: 2026-11-21
+version: 0.2.0
+date-released: 2026-11-22
 abstract: >-
   An open dataset recording, for theorems proved assuming the Riemann
   Hypothesis or a generalization, exactly which hypothesis each proof uses,
