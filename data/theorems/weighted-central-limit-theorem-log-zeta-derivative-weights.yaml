@@ -1,0 +1,44 @@
+id: weighted-central-limit-theorem-log-zeta-derivative-weights
+title: Central limit theorem for log|zeta| weighted by the second or fourth power of a derivative of zeta
+field: analytic-number-theory
+statement_plain: >
+  Let m be a non-negative integer and let k be 1 or 2. As t varies in
+  [T, 2T], the distribution of log|zeta(1/2 + it)| with respect to the
+  weighted measure |zeta^(m)(1/2 + it)|^(2k) dt, where zeta^(m) is the m-th
+  derivative, is asymptotically Gaussian with mean k log log T and variance
+  (1/2) log log T.
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Corollary 1 of the paper and extends the entry
+  weighted-central-limit-theorem-log-zeta, which is the case k = 1, m = 0
+  by the same author. The paper's Theorem 1 gives the same conclusion for
+  every positive integer k, but for k > 2 it also assumes a conjecture of
+  Hughes and Young on twisted and shifted 2k-th moments of zeta
+  (Conjecture 1 of the paper); the paper says that conjecture is known for
+  k = 1 and k = 2, which is why only the Riemann Hypothesis is needed
+  here. The paper also says the shifted version (Theorem 2, weight
+  |zeta(1/2 + it + i alpha)|^(2k) with |alpha| < 1) holds under RH alone
+  when k is at most 2.
+sources:
+  - authors: A. Fazzari
+    title: Weighted value distributions of the Riemann zeta function on the critical line
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2101.08036
+    hypothesis_location: Corollary 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The statement is asymptotic with no rate of convergence given in the corollary.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, value-distribution, central-limit-theorem]
+added: 2026-11-22

@@ -1,0 +1,44 @@
+id: quadratic-twists-analytic-rank-below-any-unbounded-function
+title: Almost all quadratic twists of an elliptic curve have analytic rank below any unbounded increasing function
+field: arithmetic-geometry
+statement_plain: >
+  Fix an elliptic curve E over the rationals and let E_D be its quadratic
+  twist by an integer D. For every unbounded increasing function f on the
+  real numbers, the set of integers D for which the analytic rank of E_D
+  exceeds f(D) has density zero.
+statement_formal: null
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the L-function L(E_D, s) of
+  every quadratic twist E_D of the fixed curve E. These are L-functions of
+  elliptic curves over the rationals, not Dirichlet L-functions. The
+  corollary is deduced from the paper's Main Theorem, an upper bound for
+  weighted k-th moments of the analytic rank of E_D valid for k up to
+  o(log log log x). Assuming in addition the Birch and Swinnerton-Dyer
+  conjecture, the paper deduces (Corollary 2) the same density zero
+  statement for the number of integral points on the twists. Compare the
+  entry average-analytic-rank-quadratic-twists-at-most-3-2, which bounds
+  the first moment.
+sources:
+  - authors: S. Wong
+    title: Moments of the rank of elliptic curves
+    year: 2003
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0303369
+    hypothesis_location: Corollary 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The text on disk is marked as a draft (arXiv version 1). The published version was not checked, and the paper does not say whether "density" is natural density over all integers D or over square-free D only.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, quadratic-twists]
+added: 2026-11-22

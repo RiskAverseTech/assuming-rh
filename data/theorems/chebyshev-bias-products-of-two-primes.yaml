@@ -1,0 +1,48 @@
+id: chebyshev-bias-products-of-two-primes
+title: Chebyshev's bias is reversed and weaker for products of two primes
+field: analytic-number-theory
+statement_plain: >
+  Let pi_2(x; q, a) count the integers up to x that are congruent to a
+  modulo q and are a product of two primes (equal primes allowed). For
+  distinct reduced classes a and b modulo q, the set of n with
+  pi_2(n; q, a) > pi_2(n; q, b) has a logarithmic density delta_2(q; a, b).
+  It equals 1/2 if a and b are both quadratic residues or both
+  non-residues modulo q. If a is a non-residue and b is a residue, then
+  1 - delta(q; a, b) < delta_2(q; a, b) < 1/2, where delta(q; a, b) is the
+  corresponding density for primes. For example delta_2(4; 3, 1) is about
+  0.10572.
+statement_formal: |
+  1 - \delta(q;a,b) < \delta_2(q;a,b) < \tfrac{1}{2} \quad (a \text{ a quadratic non-residue},\ b \text{ a quadratic residue mod } q)
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the Grand Simplicity Hypothesis for the modulus
+  q: the imaginary parts of the nontrivial zeros of the Dirichlet
+  L-functions modulo q are linearly independent over the rationals. The
+  Riemann Hypothesis is assumed only for the Dirichlet L-functions modulo
+  q. These are the same two assumptions as in Rubinstein and Sarnak's work
+  on primes (entry chebyshev-bias). The paper's Theorem 2 relates the two
+  races under a weaker extra assumption: the zeros of each L(s, chi) are
+  simple and L(1/2, chi) is nonzero.
+sources:
+  - authors: K. Ford, J. Sneed
+    title: Chebyshev's bias for products of two primes
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/0908.0093
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The value 0.10572 is a numerical estimate quoted from the paper, obtained with the methods of Rubinstein and Sarnak.
+lean:
+  proved: false
+  path: null
+tags: [prime-races, chebyshev-bias, semiprimes]
+added: 2026-11-22

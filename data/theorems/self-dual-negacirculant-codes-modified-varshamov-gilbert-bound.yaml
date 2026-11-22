@@ -1,0 +1,49 @@
+id: self-dual-negacirculant-codes-modified-varshamov-gilbert-bound
+title: Infinite families of self-dual double and four-negacirculant codes meeting a modified Varshamov-Gilbert bound
+field: analytic-number-theory
+statement_plain: >
+  Let q be a prime power congruent to 3 modulo 4 and let H_q be the q-ary
+  entropy function. There are infinite families of self-dual
+  double-negacirculant codes over F_q of length 2n, with n = 2p and p a
+  prime congruent to 3 modulo 4, whose relative distance delta satisfies
+  H_q(delta) >= 1/8, and infinite families of self-dual four-negacirculant
+  codes over F_q of length 4n whose relative distance delta satisfies
+  H_q(delta) >= 1/16.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The hypothesis is used only to guarantee infinitely many primes p
+  congruent to 3 modulo 4 that have q as a primitive root, so that x^(2p) + 1
+  factors over F_q into three self-reciprocal irreducible factors. The
+  paper takes this from Moree's theorem on primes in arithmetic
+  progressions with a prescribed primitive root, which it says is proved
+  under GRH. The paper does not define GRH. Results of this kind are proved
+  by Hooley's method, which uses the Dedekind zeta functions of Kummer
+  fields Q(zeta_k, g^(1/k)); these are not abelian over the rationals. The
+  enumeration and distance arguments are unconditional. Compare the entry
+  metacyclic-codes-asymptotically-good.
+sources:
+  - authors: M. Shi, L. Qian, P. Sole
+    title: On self-dual negacirculant codes of index two and four
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1709.07546
+    hypothesis_location: Theorem 5.2 (hypothesis stated in its proof)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 5.2 does not name GRH in its statement; the hypothesis appears in the first sentence of the proof and in the abstract. The code ERH-Dedekind is inferred from the cited theorem of Moree (Hooley's method), which was not read.
+    - >-
+      The theorem also requires ord_{4p}(q) = p - 1 (hypotheses of Theorem 3.2). The paper does not spell out how Moree's theorem is applied when q is a proper prime power, nor why the relevant density is positive.
+lean:
+  proved: false
+  path: null
+tags: [coding-theory, primitive-roots, artin-conjecture]
+added: 2026-11-22
