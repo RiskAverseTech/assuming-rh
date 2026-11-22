@@ -1,0 +1,43 @@
+id: nonvanishing-hecke-maass-l-functions-special-points-half
+title: At least half of Hecke-Maass L-functions do not vanish at their special points
+field: analytic-number-theory
+statement_plain: >
+  Let B be an orthonormal basis of even or odd Hecke-Maass cusp forms f on
+  the modular surface, with Laplace eigenvalue 1/4 + t_f^2 and t_f > 0, and
+  let s_f = 1/2 + i t_f. Within the even forms, and within the odd forms, the
+  proportion of f with t_f <= T for which L(s_f, f) is nonzero is at least
+  1/2 in the limit inferior as T tends to infinity. Unconditionally the same
+  paper proves the proportion 2/pi^2, about 20 percent.
+statement_formal: |
+  \liminf_{T \to \infty} \frac{\#\{f \in B_{\delta} : t_f \le T,\ L(s_f, f) \ne 0\}}{\#\{f \in B_{\delta} : t_f \le T\}} \ge \frac12 \qquad (\delta = 0, 1)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes the Riemann hypothesis for every L(s, f) with f a
+  Hecke-Maass cusp form for SL(2, Z) in the basis, and for all Dirichlet
+  L-functions including the Riemann zeta function. The Maass form
+  L-functions are not covered. The Dirichlet hypothesis is used to extend the
+  support in the one-level density at s_f beyond (-1, 1) (Theorem 10); the
+  hypothesis for L(s, f) is used to pass from the density theorem to
+  non-vanishing. A short-interval version (Theorem 4) holds under the same
+  assumptions.
+sources:
+  - authors: Z. Qi
+    title: On the Effective Non-vanishing of Hecke--Maass L-functions at Special Points
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2507.14566
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [maass-forms, nonvanishing, one-level-density]
+added: 2026-11-22

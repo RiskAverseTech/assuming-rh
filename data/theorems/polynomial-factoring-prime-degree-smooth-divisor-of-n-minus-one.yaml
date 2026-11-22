@@ -1,0 +1,47 @@
+id: polynomial-factoring-prime-degree-smooth-divisor-of-n-minus-one
+title: Deterministic factoring of prime degree polynomials when n-1 has a large smooth divisor
+field: computational-number-theory
+statement_plain: >
+  Let f be a polynomial of prime degree n over a finite field F_q. Suppose
+  n - 1 has an r-smooth divisor s (every prime factor of s is at most r) with
+  s >= sqrt(n / l) + 1 for a positive integer l. Then a nontrivial factor of f
+  can be found deterministically in time polynomial in log q and
+  n^(r + log l).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  Sharpens the entry polynomial-factoring-prime-degree-smooth-n-minus-one,
+  where all of n - 1 had to be smooth: here a smooth divisor of size about
+  sqrt(n) is enough. The paper states its hypothesis as the Riemann
+  Hypothesis for all Dirichlet L-functions, and says it is used to find
+  primitive r-th nonresidues in finite fields F_q and so to compute r-th
+  roots, by a result of Huang. Finding power nonresidues in extension fields
+  is usually justified through Hecke L-functions of power residue characters
+  over cyclotomic fields, so the entry is coded cautiously, in the same way as
+  the earlier entry and as deterministic-polynomial-factoring. The hypothesis
+  is needed for the algorithm to be deterministic and to run in the stated
+  time. A corollary gives infinitely many primes n for which every degree n
+  polynomial is factored in time poly(log q, n^(log log n)).
+sources:
+  - authors: M. Arora, G. Ivanyos, M. Karpinski, N. Saxena
+    title: Deterministic Polynomial Factoring and Association Schemes
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1205.5653
+    hypothesis_location: Theorem 1.1; hypothesis defined in Section 3.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper defines GRH for Dirichlet L-functions only. The extra code GRH-Hecke is this project's reading of what Huang's root-finding result needs in extension fields F_q; if Dirichlet L-functions suffice, the entry would be unlocked.
+lean:
+  proved: false
+  path: null
+tags: [polynomial-factoring, finite-fields, deterministic-algorithms]
+added: 2026-11-22

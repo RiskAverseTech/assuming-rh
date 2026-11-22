@@ -1,0 +1,47 @@
+id: sparse-polynomial-p-adic-roots-np-hard-randomized
+title: Deciding p-adic rational roots of sparse univariate polynomials is NP-hard under randomized reductions
+field: complexity-theory
+statement_plain: >
+  Consider the problem of deciding, given a prime p and a univariate integer
+  polynomial in sparse encoding (input size counting the bits of the
+  coefficients, the exponents and p), whether the polynomial has a root in
+  the field Q_p of p-adic numbers. If this problem lies in a complexity class
+  C, then NP is contained in the union of BPP and C. In particular a quantum
+  polynomial time algorithm for it would put NP inside BQP.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem is stated under the Flat Primes Hypothesis: for absolute
+  constants C' >= C >= 1 and every n, the set of 1 + k Q_n with k up to
+  2^(n^C) contains at least 2^(n^C) / n^(C') primes, where Q_n is the product
+  of the first n primes. The paper shows this follows from the Riemann
+  Hypothesis for the Dedekind zeta functions of the cyclotomic fields
+  Q(omega_{Q_n}), through the conditional effective Chebotarev theorem for
+  primes congruent to 1 modulo Q_n. Cyclotomic fields are abelian over the
+  rationals, so their zeta functions are products of Dirichlet L-functions
+  and the hypothesis is covered. The hypothesis is used to find, in
+  randomized polynomial time, a prime in the progression 1 mod Q_n for the
+  reduction. The same theorem shows unconditionally that the binomial case of
+  the problem is in BQP.
+sources:
+  - authors: J. M. Rojas
+    title: A Number Theoretic Interpolation Between Quantum and Classical Complexity Classes
+    year: 2006
+    venue: Preprint
+    url: https://arxiv.org/abs/quant-ph/0604089
+    hypothesis_location: Theorem 1; hypothesis in Section 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem assumes the Flat Primes Hypothesis, which the paper says is implied by GRH for the cyclotomic fields but could hold even if that fails. The entry records the theorem as a consequence of that GRH, not of the weaker hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [np-hardness, p-adic-numbers, sparse-polynomials, primes-in-progressions]
+added: 2026-11-22

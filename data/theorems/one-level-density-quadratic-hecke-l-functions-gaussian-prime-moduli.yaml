@@ -1,0 +1,51 @@
+id: one-level-density-quadratic-hecke-l-functions-gaussian-prime-moduli
+title: One-level density of quadratic Hecke L-functions to prime moduli over the Gaussian field
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and consider the family of Hecke L-functions
+  L(s, chi_{(1+i)^5 w}) of the quadratic characters attached to primary primes
+  w of Z[i]. For every even Schwartz function phi whose Fourier transform is
+  supported in (-1, 1), the weighted one-level density of low-lying zeros of
+  this family over N(w) of size X tends, as X tends to infinity, to the
+  integral of phi against the unitary symplectic density
+  1 - sin(2 pi x) / (2 pi x). As a corollary, at least 75 percent of the
+  primes w with N(w) <= X have L(1/2, chi_{(1+i)^5 w}) nonzero, as X tends
+  to infinity.
+statement_formal: |
+  \lim_{X \to \infty} D(\phi; w, X) = \int_{\mathbb{R}} \phi(x)\left(1 - \frac{\sin(2\pi x)}{2\pi x}\right) dx \qquad (\operatorname{supp}\hat\phi \subset (-1, 1))
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  Theorem 1.1 assumes GRH for the L-functions in the family, which are Hecke
+  L-functions of quadratic characters of Q(i) with prime modulus. The proof
+  also uses a conditional estimate (Lemma 2.2) for sums of chi(w) log N(w)
+  over primes w, for Hecke characters chi of Q(i) of trivial infinite type,
+  and estimates under GRH involving the Dedekind zeta function of Q(i), which
+  is the product of the Riemann zeta function and one Dirichlet L-function.
+  These Hecke L-functions are not Dirichlet L-functions, so the result is not
+  covered. The same paper gives lower order terms under the ratios conjecture
+  (Theorem 1.2), which is not recorded here.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: One level density of low-lying zeros of quadratic Hecke L-functions to prime moduli
+    year: 2020
+    venue: Hardy-Ramanujan Journal 43 (2020), 173-187
+    url: https://arxiv.org/abs/2005.04811
+    hypothesis_location: Theorem 1.1 and Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.1 names GRH only "for all the L-functions in F", but Lemma 2.2 is stated for general Hecke characters of trivial infinite type; the entry lists the wider set the lemmas use.
+    - >-
+      The waiting family power-residue-characters is used here for quadratic residue characters over Q(i); check that this is the intended family.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, hecke-l-functions, nonvanishing]
+added: 2026-11-22

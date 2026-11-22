@@ -1,0 +1,46 @@
+id: chevalley-groups-z-one-over-p-unitriangular-length-6
+title: Unitriangular factorization of length 6 for Chevalley groups over Z[1/p]
+field: algebraic-number-theory
+statement_plain: >
+  Let Phi be a reduced irreducible root system and p a rational prime. Then
+  the simply connected Chevalley group G = G(Phi, Z[1/p]) is the product of
+  six unitriangular subgroups, G = U U^- U U^- U U^-, where U and U^- are the
+  unipotent radicals of the standard Borel subgroup and of its opposite.
+statement_formal: |
+  G\bigl(\Phi, \mathbb{Z}[\tfrac1p]\bigr) = \Bigl(U\bigl(\Phi, \mathbb{Z}[\tfrac1p]\bigr)\, U^{-}\bigl(\Phi, \mathbb{Z}[\tfrac1p]\bigr)\Bigr)^{3}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "Generalised Riemann's Hypothesis". The proof reduces
+  to SL(2, Z[1/p]) and uses the fact that every residue class c mod d with d
+  coprime to p contains infinitely many primes q for which p is a primitive
+  root modulo q. The paper takes this from the conditional results on Artin's
+  conjecture in arithmetic progressions (it cites Moree and a later complete
+  proof). Those results follow Hooley's method, which needs the Riemann
+  Hypothesis for Dedekind zeta functions of Kummer fields; compare the entry
+  primitive-root-primes-in-progression-density. The same paper proves
+  unconditionally a factorization of length 4 over rings of stable rank 1.
+sources:
+  - authors: N. A. Vavilov, A. V. Smolensky, B. Sury
+    title: Unitriangular factorisations of Chevalley groups
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1107.5414
+    hypothesis_location: Theorem 2 (via Lemma 6 and Lemma 7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not say which L-functions its hypothesis covers. The code ERH-Dedekind is this project's reading of the cited conditional theorem on primitive roots in arithmetic progressions.
+    - >-
+      Only the existence of infinitely many primes q in a progression with p a primitive root is used, not a density. If that weaker statement were known unconditionally for the needed progressions the theorem would follow, but the paper does not claim this.
+lean:
+  proved: false
+  path: null
+tags: [chevalley-groups, bounded-generation, primitive-roots]
+added: 2026-11-22

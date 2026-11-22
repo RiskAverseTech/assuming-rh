@@ -1,0 +1,49 @@
+id: cubic-field-count-error-term-two-thirds-minus-1-51
+title: Counting cubic fields with error term X^(2/3 - 1/51 + epsilon)
+field: analytic-number-theory
+statement_plain: >
+  Let N^+(X) and N^-(X) be the numbers of non-Galois cubic fields K, up to
+  isomorphism, with 0 < Disc(K) <= X and with -X <= Disc(K) < 0. Then
+  N^{+-}(X) = C_1 X + C_2 X^(5/6) + O(X^(2/3 - 1/51 + epsilon)) for every
+  epsilon > 0, with the known explicit constants C_1 and C_2 (depending on
+  the sign). For the count weighted by a smooth compactly supported function
+  the error term is O(X^(1/2 + epsilon)).
+statement_formal: |
+  N^{\pm}(X) = C_1^{\pm} X + C_2^{\pm} X^{5/6} + O_{\epsilon}\!\left(X^{2/3 - 1/51 + \epsilon}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta functions of
+  all quadratic and cubic extensions of the rationals. Quadratic fields are
+  abelian and covered, but non-Galois cubic fields are not: zeta_K(s)/zeta(s)
+  is then the L-function of a two-dimensional Artin representation, and the
+  proof bounds averages of its coefficients. The previous unconditional error
+  term was O(X^(2/3 + epsilon)) (Bhargava, Taniguchi and Thorne); the paper
+  also proves an unconditional exponent slightly below 2/3 (Theorem 1.1) and
+  an intermediate exponent 2/3 - tau/(18 + 15 tau) from a zero-free half
+  plane Re(s) > 1 - tau (Theorem 1.10). Compare the entry
+  cubic-field-counts-local-conditions-omega-result.
+sources:
+  - authors: V. Ahlquist
+    title: Averages of Artin characters and their relation to the Davenport--Heilbronn theorem
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.01837
+    hypothesis_location: Theorem 1.3 (and Theorem 1.4 for the smooth count)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper cites a 2026 preprint claiming a zero-free half plane Re(s) > 1 - 1/32 for every Dedekind zeta function, from which its Theorem 1.10 would give exponent 2/3 - 1/591 without GRH. This does not reach the exponent recorded here, and the cited claim was not checked.
+    - >-
+      Same hypothesis also gives the one-level density of the family zeta_K(s)/zeta(s) for test functions with Fourier support in (-1, 1) (Theorem 1.12); not recorded as a separate entry.
+lean:
+  proved: false
+  path: null
+tags: [cubic-fields, davenport-heilbronn, arithmetic-statistics]
+added: 2026-11-22

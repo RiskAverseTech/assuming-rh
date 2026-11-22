@@ -1,0 +1,46 @@
+id: trinomial-x-n-minus-x-minus-1-splits-mod-small-prime
+title: The trinomial x^n - x - 1 has n distinct roots modulo a prime of size exp(O(n log n))
+field: algebraic-number-theory
+statement_plain: >
+  For every n >= 2 there is a prime p with
+  log p <= (2n + 1 + o(1)) log n such that x^n - x - 1 has exactly n distinct
+  roots in the field F_p. Hence there is an infinite family of primes p for
+  which this trinomial has n distinct roots in F_p with n at least a constant
+  times log p / log log p.
+  Unconditionally the paper gets only n at least a constant times
+  log log p / log log log p.
+statement_formal: |
+  \#\{x \in \mathbb{F}_p : x^n - x - 1 = 0\} = n \quad \text{for some prime } p \text{ with } \log p \le (2n + 1 + o(1)) \log n, \qquad \text{so } n = \Omega\!\left(\frac{\log p}{\log\log p}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper writes only "GRH". It is used through the conditional bound of
+  Lagarias, Montgomery and Odlyzko for the least prime that splits completely
+  in the splitting field L of x^n - x - 1, namely p = O((log d_L)^2). That
+  bound needs the Riemann Hypothesis for the Dedekind zeta function of L,
+  which is a non-abelian Galois extension of the rationals for n >= 3, so
+  the result is not covered. Compare the entry effective-chebotarev.
+sources:
+  - authors: Q. Cheng, S. Gao, J. M. Rojas, D. Wan
+    title: Sparse Univariate Polynomials with Many Roots Over Finite Fields
+    year: 2016
+    venue: Preprint
+    url: https://arxiv.org/abs/1411.6346
+    hypothesis_location: Theorem 1.3 (b), via Theorem 3.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The code ERH-Dedekind is read from the cited theorem of Lagarias, Montgomery and Odlyzko, which assumes the hypothesis for the Dedekind zeta function of the splitting field.
+    - >-
+      The paper does not state the Galois group of x^n - x - 1; that the splitting field is non-abelian for n >= 3 is this project's remark, not the paper's.
+lean:
+  proved: false
+  path: null
+tags: [sparse-polynomials, finite-fields, effective-chebotarev]
+added: 2026-11-22

@@ -1,0 +1,47 @@
+id: one-level-density-holomorphic-newforms-arbitrary-level
+title: One-level density of low-lying zeros for holomorphic newforms of arbitrary level
+field: analytic-number-theory
+statement_plain: >
+  Fix an even weight k and let H_k^*(N) be the set of holomorphic newforms of
+  weight k, level N and trivial nebentypus. For every Schwartz function phi
+  whose Fourier transform is supported in (-2, 2), the average over
+  H_k^*(N) of the one-level density of low-lying zeros of L(s, f) tends, as N
+  tends to infinity through arbitrary integers (not only square-free ones), to
+  the integral of phi against the orthogonal density W_1(O)(x) = 1 +
+  (1/2) delta_0(x).
+statement_formal: |
+  \lim_{N \to \infty} \frac{1}{|H_k^{\star}(N)|} \sum_{f \in H_k^{\star}(N)} D_1(f; \phi) = \int_{-\infty}^{\infty} \phi(x)\, W_1(O)(x)\,dx, \qquad W_1(O)(x) = 1 + \tfrac12 \delta_0(x), \quad \operatorname{supp}\hat\phi \subset (-2, 2)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes the Generalized Riemann Hypothesis for L(s, f) and
+  L(s, sym^2 f) for the newforms f in the family, and for all Dirichlet
+  L-functions. The paper's Remark 1.5 says the hypothesis for L(s, sym^2 f)
+  bounds lower order terms, and the hypothesis for Dirichlet L-functions is
+  needed when Kloosterman sums are expanded in Dirichlet characters; without
+  the latter the result still holds in a more restricted range of support.
+  This extends the square-free level case of Iwaniec, Luo and Sarnak (entry
+  one-level-density-holomorphic-cusp-forms-support-two) to arbitrary level,
+  but without splitting the family by the sign of the functional equation.
+sources:
+  - authors: O. Barrett, P. Burkhardt, J. DeWitt, R. Dorward, S. J. Miller
+    title: One-Level density for holomorphic cusp forms of arbitrary level
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1604.03224
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The Dirichlet L-function hypothesis includes the principal character, so the Riemann zeta function may also be involved; the paper does not list RH for zeta separately and the entry follows the paper.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, one-level-density, modular-forms]
+added: 2026-11-22

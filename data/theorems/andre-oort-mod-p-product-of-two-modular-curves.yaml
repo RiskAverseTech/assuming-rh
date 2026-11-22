@@ -1,0 +1,44 @@
+id: andre-oort-mod-p-product-of-two-modular-curves
+title: A mod p variant of the Andre-Oort conjecture for the product of two modular curves
+field: arithmetic-geometry
+statement_plain: >
+  Let p be a prime and let Sigma be a set of finite closed subsets of the
+  affine plane over F_p that are reductions at p of CM points of the affine
+  plane over Z (points whose two coordinates are j-invariants of CM elliptic
+  curves). Let Z be the Zariski closure of the union of these subsets. Then
+  every irreducible component of dimension 1 of Z is special: it is a fiber of
+  one of the two projections, or an irreducible component of the image of the
+  reduction mod p of some modular curve Y_0(n).
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the generalized Riemann hypothesis for quadratic fields.
+  It is used through the conditional effective Chebotarev theorem of Lagarias
+  and Odlyzko, applied to a compositum of quadratic fields to find a small
+  prime that splits in two quadratic orders. The paper's Remark 1.3 notes
+  that the zeta function of such a compositum is the product of the Riemann
+  zeta function and the L-functions of its quadratic subfields, so only RH
+  and quadratic Dirichlet L-functions are needed. This is a positive
+  characteristic analog of the entry andre-oort-products-of-modular-curves.
+sources:
+  - authors: B. Edixhoven, R. Richard
+    title: A mod p variant of the André-Oort conjecture
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1807.03607
+    hypothesis_location: Theorem 1.2; used in the proof of Theorem 4.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The characteristic zero Andre-Oort conjecture is now known unconditionally, but the paper on disk does not say whether this mod p variant has been proved without the hypothesis.
+lean:
+  proved: false
+  path: null
+tags: [andre-oort, modular-curves, complex-multiplication]
+added: 2026-11-22
