@@ -1,0 +1,39 @@
+id: zeta-sums-high-moments-upper-bound
+title: Upper bound for high moments of the zeta sums sum of n^(-it) over n up to Y
+field: analytic-number-theory
+statement_plain: >
+  For real m, T, Y > 0 let S_m(T, Y) be the integral over t in [T, 2T] of
+  |sum over n <= Y of n^(-it)|^(2m). For every fixed real m > 2 and every
+  fixed eps > 0, for large T and large Y <= (1 - eps) T,
+  S_m(T, Y) << T Y^m (log T)^((m-1)^2).
+statement_formal: |
+  \int_T^{2T}\Bigl|\sum_{n\le Y} n^{-it}\Bigr|^{2m}dt \ll T\,Y^{m}(\log T)^{(m-1)^2},\qquad m>2,\ Y\le(1-\varepsilon)T
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The proof follows Szabo's treatment of moments of Dirichlet character sums
+  and uses Curran's upper bound for shifted moments of the Riemann zeta
+  function under RH. The paper notes that by Holder's inequality the result
+  gives S_m(T, Y) << T Y^m (log T)^(O(1)) for every m > 0. The analogous
+  bound for Dirichlet character sums is in the entry
+  character-sum-high-moments-arbitrary-length-sharp-upper-bound.
+sources:
+  - authors: P. Gao
+    title: Upper bounds for moments of zeta sums
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.12506
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - "The dependence of the implied constant on m and eps is not written out in the theorem."
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, zeta-sums]
+added: 2026-11-22

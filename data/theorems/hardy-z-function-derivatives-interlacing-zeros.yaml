@@ -1,0 +1,43 @@
+id: hardy-z-function-derivatives-interlacing-zeros
+title: Zeros of consecutive derivatives of Hardy's Z-function interlace, for zeta and Dirichlet L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let F be the Riemann zeta function or the L-function of a primitive
+  Dirichlet character, and let Z_F(t) = e^(i theta_F(t)) F(1/2 + it) be its
+  real-valued Hardy Z-function. For every integer k >= 0 there is a T = T(k)
+  such that for t >= T the derivative Z_F^(k+1) has exactly one zero between
+  any two consecutive zeros of Z_F^(k).
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Only a special case is recorded. Theorem 1.1 of the paper is stated for
+  every L-function F in the extended Selberg class (Dirichlet series with
+  analytic continuation and a functional equation of the standard gamma
+  factor type; no Euler product is needed) and assumes the Riemann
+  hypothesis for that F. Zeta and primitive Dirichlet L-functions belong to
+  this class, and for them the hypothesis is RH or GRH for the one Dirichlet
+  L-function concerned. For other members of the class the result needs the
+  Riemann hypothesis for that L-function and is not covered. According to
+  the paper, the case F = zeta is due to K. Matsuoka (unpublished, 2012).
+sources:
+  - authors: H. Kobayashi
+    title: On Hardy's Z-function and its derivatives associated with the extended Selberg class
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.06248
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The zeta case is attributed by the paper to Matsuoka; this paper re-proves it and extends it. The Dirichlet L-function case is a specialization made for this entry, not stated separately in the paper."
+    - "The paper writes T = T(k); the threshold presumably also depends on F."
+lean:
+  proved: false
+  path: null
+tags: [hardy-z-function, zeros-of-derivatives, selberg-class]
+added: 2026-11-22

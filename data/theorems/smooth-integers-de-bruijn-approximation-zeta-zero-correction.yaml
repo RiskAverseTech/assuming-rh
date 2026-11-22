@@ -1,0 +1,46 @@
+id: smooth-integers-de-bruijn-approximation-zeta-zero-correction
+title: Smooth integer counts equal de Bruijn's approximation times a correction factor from zeta zeros
+field: analytic-number-theory
+statement_plain: >
+  Let Psi(x, y) count the y-smooth integers up to x, let Lambda(x, y) be de
+  Bruijn's approximation, u = log x / log y, and beta = 1 - xi(u)/log y where
+  e^xi(u) = 1 + u xi(u). Let G(s, y) = zeta(s, y)/F(s, y), where zeta(s, y)
+  is the product over primes p <= y of (1 - p^(-s))^(-1) and
+  F(s, y) = rho-hat((s - 1) log y) zeta(s) (s - 1) log y, rho-hat being the
+  Laplace transform of the Dickman function. Fix eps in (0, 1). For x large
+  enough in terms of eps and (log x)^(2 + eps) <= y <= x^(1 - eps),
+  Psi(x, y) = Lambda(x, y) G(beta, y) (1 + O_eps(log(u + 1) (|psi(y) - y| +
+  sqrt(y)) / (y log y))), where psi is the Chebyshev function.
+statement_formal: |
+  \Psi(x,y)=\Lambda(x,y)\,G(\beta,y)\left(1+O_\varepsilon\!\left(\frac{\log(u+1)}{y\log y}\left(|\psi(y)-y|+y^{1/2}\right)\right)\right),\qquad (\log x)^{2+\varepsilon}\le y\le x^{1-\varepsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Theorem 1.2 of the same paper gives, also under RH,
+  Psi(x, y) = Lambda(x, y) G(beta, y) (1 + O_eps((log y)^3 / sqrt(y) +
+  (log x)^3 (log y)^3 / y^2)) for (log x)^(4/3 + eps) <= y <= (log x)^3 and eps
+  in (0, 1/3). Together the two theorems show Psi(x, y) is asymptotic to
+  Lambda(x, y) G(beta, y) once y / ((log x)^(3/2) (log log x)^(-1/2)) tends
+  to infinity, extending the range y >= (log x)^(2 + eps) in which Saias
+  showed under RH that Psi is asymptotic to Lambda itself. The paper says RH
+  is invoked only at the very end, to estimate the factor G_1 of G and its
+  derivatives.
+sources:
+  - authors: O. Gorodetsky
+    title: Smooth integers and de Bruijn's approximation Λ
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2212.01949
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [smooth-numbers, de-bruijn-approximation, zeta-zeros]
+added: 2026-11-22

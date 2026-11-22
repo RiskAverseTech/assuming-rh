@@ -1,0 +1,43 @@
+id: generalized-fibonacci-sequences-complete-modulo-infinitely-many-primes
+title: Generalized Fibonacci sequences with Q not 1 or -1 hit every residue class modulo infinitely many primes
+field: analytic-number-theory
+statement_plain: >
+  Let P and Q be nonzero integers such that P^2 - 4Q is not a perfect square
+  and Q is not 1 or -1. Let F_0 = 0, F_1 = 1 and
+  F_{n+1} = P F_n - Q F_{n-1}. Then there are infinitely many primes p such
+  that the sequence F_n takes every residue class modulo p.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH". The hypothesis enters through Artin-type
+  results proved by Hooley's method: for Q not a perfect square the paper
+  attributes the result to Somer, using that Q is a primitive root for
+  infinitely many primes with P^2 - 4Q a non-residue, and for Q a perfect
+  square other than 1 the paper uses Moree's theorem on primitive roots
+  modulo primes in arithmetic progressions. These need the Riemann
+  hypothesis for Dedekind zeta functions of Kummer fields. Part (i) of the
+  same theorem, that for Q = 1 or -1 the sequence is complete modulo only
+  finitely many primes, is unconditional.
+sources:
+  - authors: M. Javaheri, N. A. Krylov
+    title: Complete Generalized Fibonacci Sequences Modulo Primes
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1812.01048
+    hypothesis_location: Theorem 2 (ii)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper does not define GRH. The code ERH-Dedekind is inferred from the cited results of Hooley and Moree, which use Dedekind zeta functions of Kummer fields."
+    - "The case where Q is not a perfect square is attributed by the paper to Somer."
+lean:
+  proved: false
+  path: null
+tags: [linear-recurrences, primitive-roots, artin-conjecture]
+added: 2026-11-22

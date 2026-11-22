@@ -1,0 +1,43 @@
+id: number-field-generator-small-height-ruppert-bound
+title: Every number field has a generator of height at most B(d) times the discriminant to the power 1/(2d)
+field: algebraic-number-theory
+statement_plain: >
+  For each integer d >= 2 there is an effectively computable number B(d)
+  such that every number field k of degree d over Q has an element alpha
+  with k = Q(alpha) and absolute multiplicative Weil height
+  H(alpha) <= B(d) |Delta_k|^(1/(2d)), where Delta_k is the discriminant of
+  k. This answers a question of Ruppert.
+statement_formal: |
+  k=\mathbb{Q}(\alpha)\quad\text{and}\quad H(\alpha)\le B(d)\,|\Delta_k|^{1/(2d)}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes the Generalized Riemann Hypothesis for the Dedekind zeta
+  function of the Galois closure l of k over Q, and applies the effective
+  Chebotarev density theorem of Lagarias and Odlyzko to find rational
+  primes with a prime factor of residue degree 1 in k. If k is such that l
+  is abelian over Q (that is, k itself is abelian), the hypothesis reduces
+  to GRH for Dirichlet L-functions. Theorem 1.2 of the same paper proves
+  unconditionally that if k has at least one real embedding then the bound
+  holds with (2/pi)^(s/d) in place of B(d), s being the number of complex
+  places, so the conditional content concerns totally complex fields.
+sources:
+  - authors: J. D. Vaaler, M. Widmer
+    title: A note on generators of number fields
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1203.4976
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [heights, number-fields, chebotarev]
+added: 2026-11-22

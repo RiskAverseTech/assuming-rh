@@ -1,0 +1,39 @@
+id: niven-numbers-additive-basis
+title: Base-g Niven numbers form an additive basis
+field: additive-number-theory
+statement_plain: >
+  Let g be an integer at least 2. A natural number is a base-g Niven number
+  if it is divisible by the sum of its base-g digits. There is a positive
+  integer C_g such that every natural number is the sum of at most C_g
+  base-g Niven numbers.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper assumes Hooley's Riemann Hypothesis HRH(g_0): the Riemann
+  hypothesis for the Dedekind zeta functions of the fields
+  Q(zeta_m, g_0^(1/m)) for all squarefree m, where g = g_0^(2^u) with g_0 not
+  a square. It is used only through a theorem of Frei, Koymans and Sofos on
+  writing integers as sums of three primes that all have g_0 as a primitive
+  root. The rest of the proof is elementary. The paper does not determine
+  the order C_g of the basis.
+sources:
+  - authors: C. Sanna
+    title: Additive bases and Niven numbers
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2101.07593
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [niven-numbers, additive-basis, primitive-roots]
+added: 2026-11-22

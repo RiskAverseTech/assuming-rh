@@ -1,0 +1,48 @@
+id: zeta-zeros-r-gaps-positive-proportion-explicit-constants
+title: A positive proportion of r-gaps between zeta zeros are large and small, with explicit constants
+field: analytic-number-theory
+statement_plain: >
+  Let gamma_1 <= gamma_2 <= ... be the positive ordinates of the zeros of
+  the Riemann zeta function. For every r >= 1 and every
+  lambda < 1 + 0.2160 / sqrt(r), a positive proportion of the zeros with
+  gamma_n in [T, 2T] have gamma_{n+r} - gamma_n > 2 pi lambda r / log T. For
+  every mu > 1 - 0.1638 / sqrt(r), a positive proportion have
+  gamma_{n+r} - gamma_n <= 2 pi mu r / log T. For large r both constants may
+  be replaced by 0.2643.
+statement_formal: |
+  \tilde\lambda_r\ge 1+\frac{0.2160}{\sqrt r},\qquad \tilde\mu_r\le 1-\frac{0.1638}{\sqrt r}\qquad (r\ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  In the paper's notation D(mu, r, T) is the number of gamma_n in [T, 2T]
+  with gamma_{n+r} - gamma_n <= 2 pi mu r / log T, divided by
+  (T / 2 pi) log T; lambda-tilde_r is the supremum of lambda with
+  lim sup D(lambda, r, T) < 1 and mu-tilde_r is the infimum of mu with
+  lim inf D(mu, r, T) > 0. Without RH the same paper proves the weaker
+  bounds 1 + Theta / r^(2/3) and 1 - theta / r^(2/3) with
+  Theta = theta = 2.36 * 10^(-6). For r = 1 the paper notes that its
+  conditional constants are superseded by existing conditional results (it
+  quotes Wu's 1.6989 and 0.6553 for a positive proportion of gaps); the new
+  content is for general r. Conrey and Turnage-Butterbaugh had proved under
+  RH the corresponding statement for infinitely many gaps rather than a
+  positive proportion.
+sources:
+  - authors: T. Zhao
+    title: Density results for r-gaps between zeros of the Riemann zeta-function
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2603.17334
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - "The paper states the result through the quantities lambda-tilde_r and mu-tilde_r; the plain statement is a paraphrase of their definitions and the meaning of 'large r' is not quantified."
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, gaps-between-zeros, argument-of-zeta]
+added: 2026-11-22
