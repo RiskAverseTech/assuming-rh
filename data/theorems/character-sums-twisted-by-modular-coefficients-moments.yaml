@@ -1,0 +1,48 @@
+id: character-sums-twisted-by-modular-coefficients-moments
+title: Moments of character sums twisted by Fourier coefficients of a modular form
+field: analytic-number-theory
+statement_plain: >
+  Let f be a fixed holomorphic Hecke eigenform of weight divisible by 4 for
+  SL(2, Z) with normalized Hecke eigenvalues lambda_f(n). For every real
+  m > 2 and all large Y <= q, the sum over primitive Dirichlet characters chi
+  modulo q of |sum_{n <= Y} chi(n) lambda_f(n)|^(2m) is at most a constant
+  times phi(q) Y^m (log q)^((m-1)^2). The paper also proves upper bounds for
+  shifted moments of L(1/2 + i t_j, f x chi) over the same characters, and
+  analogous results for quadratic twists.
+statement_formal: |
+  \sum_{\chi \in X_q^{*}} \Bigl| \sum_{n \le Y} \chi(n) \lambda_f(n) \Bigr|^{2m} \ll \varphi(q)\, Y^{m} (\log q)^{(m-1)^2} \qquad (m > 2,\ Y \le q)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper writes "GRH" in the theorem. In the proofs it is assumed for the
+  twisted modular L-functions L(s, f x chi), for the twisted symmetric square
+  L-functions L(s, sym^2 f x chi), and for Dirichlet L-functions L(s, chi)
+  (Lemma 2.5 and Proposition 2.10); one bound for the Riemann zeta function
+  near the 1-line is also taken under the Riemann hypothesis. The form f has
+  level 1 and weight divisible by 4, so its L-functions are outside the
+  weight 2 family. The bound is the analog for modular coefficients of
+  Szabo's bound for moments of plain character sums.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Bounds for Moments of Twisted Fourier coefficients of Modular Forms
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2412.12515
+    hypothesis_location: Theorem 1.5 (from Theorem 1.1 and Corollary 1.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The theorem does not list which L-functions its GRH covers; the list in status_note is read from the lemmas of Section 2.
+    - >-
+      Theorem 1.6 gives a companion bound X Y^m (log X)^(2m^2 - 3m + 2) for quadratic twists chi_{8d}; not recorded as a separate entry.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, moments, modular-forms, shifted-moments]
+added: 2026-11-22

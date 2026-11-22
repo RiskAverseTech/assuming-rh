@@ -1,0 +1,50 @@
+id: prime-number-races-weakly-inclusive-relatively-independent-zeros
+title: Prime number races with any number of contestants have logarithmic densities under a weak independence condition
+field: analytic-number-theory
+statement_plain: >
+  Fix q >= 3 and let Z(q) be the multiset of non-negative ordinates of zeros
+  of the Dirichlet L-functions of the non-principal characters modulo q.
+  Suppose there are ordinates gamma_1, ..., gamma_M in Z(q) whose rational
+  span meets the rational span of the remaining ordinates only in 0, and such
+  that every non-principal character chi modulo q has some gamma_m that is a
+  zero ordinate of L(s, chi) and of no other L(s, chi') modulo q. Then for all
+  distinct invertible classes a_0, ..., a_D modulo q, the set of x with
+  pi(x; q, a_0) > pi(x; q, a_1) > ... > pi(x; q, a_D) has a logarithmic
+  density, and the set of x where two of these counts are tied has
+  logarithmic density zero.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is a weak form of the Linear Independence hypothesis:
+  the existence of finitely many zero ordinates that are relatively
+  independent of all the others over the rationals and that single out each
+  non-principal character modulo q. The paper says this is weaker than full
+  Linear Independence (Rubinstein and Sarnak) and than the condition of
+  Martin and Ng (entry inclusive-prime-number-races), since it allows
+  rational linear relations among the chosen ordinates; it gives existence
+  of the densities (weak inclusiveness), not their positivity. The Riemann
+  Hypothesis part is for the Dirichlet L-functions modulo q only. It follows
+  from an unconditional theorem on almost periodic functions (Theorem 1).
+sources:
+  - authors: L. Devin
+    title: Limiting properties of the distribution of primes in an arbitrarily large number of residue classes
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1909.03975
+    hypothesis_location: Corollary 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Whether "Dirichlet L-functions modulo q" in the corollary includes the principal character (that is, the Riemann zeta function) is not spelled out; the code GRH-Dirichlet covers both readings.
+lean:
+  proved: false
+  path: null
+tags: [prime-races, chebyshev-bias, linear-independence]
+added: 2026-11-22

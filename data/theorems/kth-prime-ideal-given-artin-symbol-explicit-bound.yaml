@@ -1,0 +1,47 @@
+id: kth-prime-ideal-given-artin-symbol-explicit-bound
+title: Explicit bound for the k-th prime ideal with a given Artin symbol
+field: algebraic-number-theory
+statement_plain: >
+  Let L/K be a Galois extension of number fields with group G, let C be a
+  conjugacy class of G and Delta_L the absolute discriminant of L. Order by
+  norm the prime ideals p_1, p_2, ... of K that are unramified in L and have
+  Artin symbol C. Then for every k >= 0 the norm of p_{k+1} is at most
+  (1.075 log Delta_L + sqrt(2 (|G|/|C|) k log((|G|/|C|) k)) + 2 |G|/|C| + 15)^2,
+  where k log k is read as 0 for k = 0. In particular there is such a prime
+  ideal of norm at most (1.075 log Delta_L + 2 |G|/|C| + 15)^2.
+statement_formal: |
+  N\mathfrak{p}_{k+1} \le \left(1.075\,\log\Delta_L + \sqrt{2\,\tfrac{|G|}{|C|}\,k\,\log\!\left(\tfrac{|G|}{|C|}\,k\right)} + 2\,\tfrac{|G|}{|C|} + 15\right)^{2} \qquad (k \ge 0)
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is the Riemann hypothesis for Dedekind zeta functions (here
+  for the field L). The result is covered when L is abelian over the
+  rationals, where the zeta function of L is a product of Dirichlet
+  L-functions, and stays conditional for other L. The proof builds on the
+  authors' explicit Chebotarev theorem (entry
+  explicit-chebotarev-psi-bound-grenie-molteni). The paper notes that for
+  k = 0 the constant 1.075 is weaker than the bound of Bach and Sorenson
+  (entry least-prime-ideal-with-given-artin-symbol); the new content is the
+  bound for the k-th prime ideal with k >= 1.
+sources:
+  - authors: L. Grenié, G. Molteni
+    title: Conditional upper bound for the k-th prime ideal with given Artin symbol
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/1906.01994
+    hypothesis_location: Theorem in Section 1 (unnumbered)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The theorem says "Assume GRH holds" and the abstract specifies Dedekind zeta functions; the proof works with Artin L-functions induced from a cyclic subgroup, which divide the Dedekind zeta function of L. The entry takes the hypothesis for the zeta function of L.
+lean:
+  proved: false
+  path: null
+tags: [effective-chebotarev, prime-ideals, explicit-bounds]
+added: 2026-11-22

@@ -1,0 +1,53 @@
+id: supersingular-isogeny-path-endomorphism-ring-equivalence
+title: The supersingular l-isogeny path problem is equivalent to the endomorphism ring problem
+field: complexity-theory
+statement_plain: >
+  For supersingular elliptic curves over F_{p^2}, the problem of finding a
+  path between two given curves in the l-isogeny graph (l-IsogenyPath), the
+  problem of computing four endomorphisms generating the endomorphism ring
+  (EndRing), and the problem of finding a maximal order of the quaternion
+  algebra isomorphic to the endomorphism ring (MaxOrder) are equivalent under
+  reductions of polynomial expected time. As a tool, the quaternion analog of
+  the path problem (finding a connecting ideal of prescribed norm between two
+  maximal orders) is solved in polynomial expected time.
+statement_formal: null
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper writes "the generalised Riemann hypothesis" without defining it.
+  It is used through the conditional effective Chebotarev theorem of Lagarias
+  and Odlyzko to count primes represented by a positive definite binary
+  quadratic form of discriminant D (Theorem 3.1), which concerns ring class
+  fields of imaginary quadratic orders and so class group characters, and
+  through a conditional bound on primes in arithmetic progressions on average
+  adapted from the literature (Theorem 4.4). The hypothesis is used for the
+  correctness and expected running time of the rigorous replacement for the
+  heuristic algorithm of Kohel, Lauter, Petit and Tignol. The entry
+  supersingular-endring-maxorder-equivalence records that the EndRing and
+  MaxOrder part was later proved without the hypothesis, and says that the
+  link with the l-isogeny path problem is still known only conditionally;
+  that link is what this entry records.
+sources:
+  - authors: B. Wesolowski
+    title: The supersingular isogeny path and endomorphism ring problems are equivalent
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2111.01481
+    hypothesis_location: "Theorems 7.2, 7.4, 8.1 and 8.3 (the reductions); Theorems 3.1, 4.2 and 6.3 (tools)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Overlaps with the existing entry supersingular-endring-maxorder-equivalence, which lists this paper as the historical conditional proof of the EndRing and MaxOrder equivalence. Kept as a separate entry because the l-isogeny path equivalence is a different statement that the existing entry describes as still conditional; a reviewer may prefer to merge them.
+    - >-
+      The paper does not say which L-functions its hypothesis covers. The codes are read from the cited tools: Chebotarev for ring class fields (Hecke L-functions of class group characters) and primes in arithmetic progressions (Dirichlet L-functions).
+lean:
+  proved: false
+  path: null
+tags: [isogeny-graphs, supersingular-curves, endomorphism-rings, cryptography]
+added: 2026-11-22
