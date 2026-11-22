@@ -1,0 +1,54 @@
+id: divisor-moments-polynomials-in-eigenform-coefficients-at-primes
+title: Order of magnitude of divisor moments of polynomial values at prime-indexed Fourier coefficients of a non-CM eigenform
+field: analytic-number-theory
+statement_plain: >
+  Let f be a non-CM cuspidal eigenform of weight k >= 2 and level N with
+  trivial nebentypus and trivial inner twist, with coefficient field K_f,
+  and let F be a polynomial over the integers of K_f, written as
+  c F_1^(e_1) ... F_s^(e_s) with distinct primitive irreducible F_i. Let
+  d_{K_f} count the integral ideals dividing an ideal. For each positive
+  integer m, the average of d_{K_f}(F(a_f(p)))^m over primes p <= x not
+  dividing N with F(a_f(p)) non-zero has order of magnitude
+  (log x)^(K_m), where K_m is the sum over i of ((e_i + 1)^m - 1). For
+  square-free F this is (log x)^(s (2^m - 1)).
+statement_formal: |
+  \frac{1}{\#\Pi(x)} \sum_{p \in \Pi(x)} d_{K_f}\bigl(F(a_f(p))\bigr)^m \ \asymp_{F,f,m}\ (\log x)^{K_m}, \qquad K_m = \sum_{i=1}^{s}\bigl((e_i+1)^m - 1\bigr), \quad \Pi(x) = \{p \le x : p \nmid N,\ F(a_f(p)) \ne 0\}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  This is Theorem 1.5 of the paper in the case I = [0, pi], that is with no
+  restriction on the Sato-Tate angle, where the paper assumes GRH for
+  Dedekind zeta functions. In the proof the hypothesis enters through the
+  effective Chebotarev density theorem of Lagarias and Odlyzko applied to
+  the fields cut out by the mod-ideal Galois representations of f, which
+  are Galois over Q with groups inside GL_2 of finite rings and are not
+  abelian, and through a bound of Serre for the number of primes with
+  F(a_f(p)) = 0. For a proper sub-interval I of Sato-Tate angles the paper
+  needs in addition its Hypothesis A and GRH for the L-functions of
+  symmetric powers of f twisted by Artin characters; that case is not
+  recorded here. The paper says the result generalizes an earlier theorem
+  of the same author for square-free F and rational coefficients.
+sources:
+  - authors: W. Lee
+    title: Local vanishing density of order $1$ and Divisor moments
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.10489
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The formula K_m = sum over i of ((e_i + 1)^m - 1) is the one the paper gives after Theorem 1.4 for the same definition (2) of K_m; Theorem 1.5 defines kappa_v as the number of indices i with v <= e_i, which gives the same value.
+    - >-
+      The range of m (positive integers) is taken from the general Theorem 1.3; Theorem 1.5 itself does not restate it.
+lean:
+  proved: false
+  path: null
+tags: [divisor-function, modular-forms, chebotarev, galois-representations]
+added: 2026-11-22

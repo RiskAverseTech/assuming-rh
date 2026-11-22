@@ -1,0 +1,50 @@
+id: average-analytic-rank-non-hyperelliptic-twists-genus-2-curve
+title: Average analytic rank at most 1/2 + 18 for a non-hyperelliptic twist family of the genus 2 curve y^2 = x^6 + 1
+field: arithmetic-geometry
+statement_plain: >
+  Let C_d (d a positive square-free integer other than 1 and 3) be the
+  explicit one-parameter family of twists of the genus 2 curve
+  y^2 = x^6 + 1 of type D_12^A defined in the paper, no two of which are
+  hyperelliptic twists of each other, and let g_d be the analytic rank of
+  C_d. For every fixed sigma > 0, the average of g_d over d < X is at most
+  1/2 + (6 + o(1)) / sigma + O(1/log X + X^(3 sigma/2 - 1/2) / log X +
+  X^(sigma/2 - 1/2) / log X). Letting sigma approach 1/3, the average
+  analytic rank of the family is asymptotically at most 1/2 + 18.
+statement_formal: |
+  \frac{1}{|S(X)|} \sum_{d \in S(X)} g_d \ \le\ \frac12 + (6 + o(1))\frac{1}{\sigma} + O\!\left(\frac{1}{\log X} + \frac{X^{\frac{3\sigma}{2}-\frac12}}{\log X} + \frac{X^{\frac{\sigma}{2}-\frac12}}{\log X}\right)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Hasse-Weil L-function
+  L(C_d, s) of each genus 2 curve C_d in the family (equivalently of its
+  Jacobian), a degree 4 L-function over Q. The paper notes that these
+  L-functions have analytic continuation and a functional equation because
+  the Jacobian of C_d has complex multiplication; the Frobenius traces are
+  expressed through those of the elliptic curve y^2 = x^3 + 1, which has
+  complex multiplication by Q(sqrt(-3)). The L-functions are therefore of
+  Hecke Grossencharacter type and are not Dirichlet L-functions. The paper
+  conjectures that the true average is 1/2.
+sources:
+  - authors: K. Jeong, J. Park
+    title: Goldfeld conjecture for non-hyperelliptic direction
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2602.21985
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The hypothesis is coded GRH-automorphic because it concerns Hasse-Weil L-functions of genus 2 curves. Since the Jacobians have complex multiplication, GRH-Hecke for the corresponding Grossencharacters would be an equally reasonable code; the paper does not identify the Hecke characters explicitly.
+    - >-
+      The bound 1/2 + 18 is the paper's own summary ("we have an upper bound 18 + 1/2"); it comes from taking sigma close to 1/3 so that the error terms tend to zero.
+lean:
+  proved: false
+  path: null
+tags: [analytic-rank, genus-2-curves, one-level-density, twists]
+added: 2026-11-22

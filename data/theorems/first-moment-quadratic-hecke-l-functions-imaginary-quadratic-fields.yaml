@@ -1,0 +1,57 @@
+id: first-moment-quadratic-hecke-l-functions-imaginary-quadratic-fields
+title: Smoothed first moment of quadratic Hecke L-functions over imaginary quadratic fields of class number one with error O(X^(1/4 + eps))
+field: analytic-number-theory
+statement_plain: >
+  Let K be an imaginary quadratic field of class number one, let Phi be a
+  fixed non-negative smooth function with compact support in the positive
+  reals, and let chi_2^(n) denote the quadratic residue symbol character
+  attached to a non-zero integer n of K. Then the sum over all non-zero n in
+  O_K of L(1/2, chi chi_2^(n)) Phi(N(n)/X), averaged over the two
+  characters chi in the set C_K defined in the paper, equals
+  X Q_K(log X) + O(X^(1/4 + eps)) for every eps > 0, where Q_K is a linear
+  polynomial whose coefficients depend only on K and on the Mellin transform
+  of Phi and its derivative at 1.
+statement_formal: |
+  \frac12 \sum_{\chi \in C_K} \sum_{0 \ne n \in \mathcal{O}_K} L\!\left(\tfrac12, \chi \cdot \chi_2^{(n)}\right) \Phi\!\left(\frac{N(n)}{X}\right) = X\, Q_K(\log X) + O\!\left(X^{1/4+\varepsilon}\right)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  This is Corollary 1.2, the limit as alpha tends to 0 of Theorem 1.1, which
+  gives two explicit main terms for the shifted moment at 1/2 + alpha with
+  error O((1 + |alpha|)^(1 + eps) |alpha - 1/2|^(-1) X^(1/4 - Re(alpha) + eps)).
+  The hypothesis is used to bound 1/L(s, chi) for Re(s) >= 1/2 + eps for
+  quadratic Hecke characters chi of the imaginary quadratic field K. These
+  are in general not Dirichlet L-functions. Principal characters also occur
+  in the argument, for which the L-function is essentially the Dedekind
+  zeta function of K, a product of two Dirichlet L-functions. The paper
+  remarks that its proof gives the error term O(X^(1/2 + eps))
+  unconditionally, and its results for cubic, quartic and sextic families
+  (Theorem 1.3) are unconditional. The sum is over all non-zero n, not only
+  square-free n, so the characters are not all primitive. The analogue over
+  the rationals by the same authors is the entry
+  first-moment-quadratic-dirichlet-l-functions-quarter-power-error.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: First moment of central values of Hecke $L$-functions with Fixed Order Characters
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2306.10726
+    hypothesis_location: Theorem 1.1 and Corollary 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.1 is worded "for any imaginary quadratic number field K", but the introduction restricts to the nine fields of class number one (d in -1, -2, -3, -7, -11, -19, -43, -67, -163); the entry follows the restriction.
+    - >-
+      The closest waiting_on family is power-residue-characters (quadratic residue symbols over K); it is not an exact fit since K is cyclotomic only for d = -1 and d = -3.
+    - The year is taken from the arXiv identifier; the version on disk is v3, dated December 2025.
+lean:
+  proved: false
+  path: null
+tags: [moments, quadratic-hecke-characters, central-values, hecke-l-functions]
+added: 2026-11-22

@@ -1,0 +1,44 @@
+id: least-elkies-prime-explicit-bound
+title: The least Elkies prime of an elliptic curve over F_q is at most (2 log 4q + 4)^2
+field: computational-number-theory
+statement_plain: >
+  Let E be an elliptic curve over the finite field F_q with trace of
+  Frobenius t, and assume t^2 - 4q is not a perfect square. A prime l not
+  dividing q is called an Elkies prime if t^2 - 4q is a non-zero square
+  modulo l. For q >= 10^9 the least Elkies prime is at most
+  (2 log 4q + 4)^2. Moreover the number N_E(X) of Elkies primes up to X
+  satisfies N_E(X) = pi(X)/2 + O(sqrt(X) (log qX)^2 / log X).
+statement_formal: |
+  \ell_{\min}(E) \le (2\log 4q + 4)^2 \quad (q \ge 10^9), \qquad N_E(X) = \frac{\pi(X)}{2} + O\!\left(\frac{\sqrt{X}\,(\log qX)^2}{\log X}\right)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The proof rests on an explicit bound, derived from work of Bach, for
+  smoothed sums of Lambda(n) and of Lambda(n) chi(n) for primitive Dirichlet
+  characters chi, applied to the quadratic character attached to
+  t^2 - 4q; so the hypothesis is used for the Riemann zeta function and for
+  Dirichlet L-functions of quadratic characters only. The paper says this
+  is the first explicit bound of this kind and that Satoh and Galbraith
+  had earlier shown O((log q)^(2 + epsilon)). The first bound is Theorem 1
+  and the counting estimate is Theorem 2.
+sources:
+  - authors: M. E. Lippmann, K. J. McGown
+    title: The Counting function for Elkies primes
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2311.17231
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes "Assume GRH" without defining it. The classification as zeta plus Dirichlet L-functions is read off from Proposition 1, the only place where the hypothesis enters, which concerns Lambda(n) and Lambda(n) chi(n) for Dirichlet characters chi.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, point-counting, explicit-bounds, quadratic-characters]
+added: 2026-11-22
