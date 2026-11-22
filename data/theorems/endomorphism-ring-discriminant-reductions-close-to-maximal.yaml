@@ -1,0 +1,42 @@
+id: endomorphism-ring-discriminant-reductions-close-to-maximal
+title: The discriminant of the endomorphism ring of most reductions of a non-CM elliptic curve is close to maximal
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over Q of conductor N without complex
+  multiplication. For a prime p not dividing N let a_p be the trace of
+  Frobenius and Delta_p the discriminant of the ring of F_p-endomorphisms of
+  the reduction of E modulo p, so that |Delta_p| <= 4p - a_p^2. Then for any
+  function f tending to infinity, the number of primes p <= x not dividing N
+  with |Delta_p| >= (4p - a_p^2) / f(p) is asymptotic to pi(x). That is, for
+  a density 1 set of primes the absolute discriminant is within any slowly
+  growing factor of its maximal possible value.
+statement_formal: |
+  \#\Bigl\{p\le x:\ p\nmid N_E,\ |\Delta_p|\ \ge\ \frac{4p-a_p^2}{f(p)}\Bigr\}\ \sim\ \pi(x)\qquad\text{for every } f \text{ with } \lim_{x\to\infty}f(x)=\infty
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The theorem assumes that GRH holds for the division fields of E. It is
+  used through the effective Chebotarev density theorem in subfields of the
+  division fields Q(E[n]), including inside an application of the square
+  sieve. These fields have Galois groups that are subgroups of GL_2(Z/nZ)
+  and are not abelian over the rationals in general.
+sources:
+  - authors: A. C. Cojocaru, M. Fitzpatrick
+    title: The absolute discriminant of the endomorphism ring of most reductions of a non-CM elliptic curve is close to maximal
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2003.01253
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, endomorphism-rings, chebotarev, division-fields]
+added: 2026-11-22

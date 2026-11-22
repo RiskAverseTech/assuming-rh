@@ -1,0 +1,54 @@
+id: orders-of-several-algebraic-numbers-in-progressions-density
+title: Density of primes where the orders of several algebraic numbers lie in given arithmetic progressions
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field and a_1, ..., a_r elements of K^* generating a
+  subgroup of rank r. Let F/K be a finite Galois extension, C a union of
+  conjugacy classes of Gal(F/K), and for each i let e_i and d_i >= 2 be
+  integers. Let P(x) count the primes p of K of norm at most x whose
+  Frobenius class in F/K lies in C and such that the multiplicative order of
+  a_i modulo p is congruent to e_i modulo d_i for every i. Then P(x) equals an
+  explicit constant, given by a convergent multiple series over Kummer
+  extensions of F, times x / log x, up to an error
+  O(x / (log x)^(1 + 1/(r+1))) whose constant depends only on K, F, the a_i
+  and the d_i.
+statement_formal: |
+  P(x) = \frac{x}{\log x}\sum_{T}\sum_{N}\frac{\bigl(\prod_i \mu(n_i)\bigr)\,c(N,T)}{[F_{w,N,T}:K]} + O\!\left(\frac{x}{(\log x)^{1+\frac{1}{r+1}}}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  In the formula N = (n_1, ..., n_r) and T = (t_1, ..., t_r) run over
+  r-tuples of positive integers, w = lcm(d_1 t_1, ..., d_r t_r), F_(w,N,T) is
+  F with the w-th and the n_i t_i-th roots of unity and the n_i t_i-th roots
+  of the a_i adjoined, and c(N,T) counts certain automorphisms of
+  F_(w,N,T) over K. The paper defines its GRH as the extended Riemann
+  hypothesis for the Dedekind zeta function of a number field, used through
+  the effective Chebotarev density theorem for these Kummer extensions,
+  which are in general not abelian over the rationals. The paper presents
+  the result as a generalization of a 2006 theorem of Ziegler (the case
+  r = 1). The same paper gives analogous asymptotics for primes where the
+  index of each a_i is prescribed (Theorems 3 and 4). Related dataset
+  entries: order-of-g-mod-p-arbitrary-residue-class-density and
+  multiplicative-index-prescribed-set-frobenius-density.
+sources:
+  - authors: P. Sgobba
+    title: On the distribution of the order and index for the reductions of algebraic numbers
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2006.05417
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The definition of c(N,T) in the extracted text is garbled; it is described in words in status_note and not reproduced as a formula.
+lean:
+  proved: false
+  path: null
+tags: [multiplicative-order, kummer-theory, chebotarev, artin-conjecture]
+added: 2026-11-22

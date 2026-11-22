@@ -1,0 +1,57 @@
+id: horizontal-isogeny-graphs-abelian-varieties-rapid-mixing
+title: Horizontal isogeny graphs of ordinary abelian varieties mix rapidly
+field: arithmetic-geometry
+statement_plain: >
+  Let A be an absolutely simple ordinary abelian variety of dimension g over
+  a finite field, with endomorphism ring an order O of conductor f in the CM
+  field K of discriminant d_K. Let H be a subgroup of the class group Cl(O),
+  m an ideal of O, and H(A) the orbit of A under H. For every eps > 0 there
+  is a bound B = O((g [Cl(O):H] log(d_K N(f m)))^(2+eps)) such that, in the
+  isogeny graph on H(A) whose edges come from the ideals of prime norm at
+  most B coprime to f m with class in H, a random walk of length at least
+  log(2|H| / |W|^(1/2)) from any vertex ends in a given subset W with
+  probability between |W|/(2|H|) and 3|W|/(2|H|). In particular the graph is
+  connected.
+statement_formal: |
+  B = O\!\left(\bigl(g\,[\mathrm{Cl}(\mathcal{O}):H]\,\log(d_K N(\mathfrak{f}\mathfrak{m}))\bigr)^{2+\varepsilon}\right)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper writes only "the Generalized Riemann Hypothesis". The theorem is
+  deduced from an eigenvalue estimate for Cayley graphs of subgroups H of
+  narrow ray class groups of a number field (Theorem 1.2: the eigenvalue of
+  a character chi of H is delta(chi) li(B) / [G:H] + O(n B^(1/2) log(B d_K N m))).
+  Its proof applies a prime-sum estimate (Theorem 5.15 of Iwaniec and
+  Kowalski) to characters of the narrow ray class group, so the L-functions
+  are Hecke L-functions of ray class characters of K, here a CM field. This
+  extends to subgroups the result recorded in
+  expander-cayley-graphs-narrow-ray-class-groups, and to abelian varieties
+  the elliptic curve result in
+  isogeny-graphs-expander-dlog-random-reducibility. The paper applies it to
+  random self-reducibility of the discrete logarithm problem for genus 2
+  Jacobians (Theorem 1.3). See also
+  ray-class-subgroup-generators-small-primes.
+sources:
+  - authors: D. Jetchev, B. Wesolowski
+    title: Horizontal isogeny graphs of ordinary abelian varieties and the discrete logarithm problem
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1506.00522
+    hypothesis_location: Theorem 1.1 (via Theorem 1.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its hypothesis covers. Hecke L-functions of ray class characters is read from the proof of Theorem 1.2 (Section 3.2); the cited theorem of Iwaniec and Kowalski was not consulted.
+    - >-
+      The statement of Theorem 1.1 writes N(fm) with m an ideal in O introduced just before the theorem; the role of m is as printed there.
+lean:
+  proved: false
+  path: null
+tags: [isogeny-graphs, expander-graphs, abelian-varieties, class-groups]
+added: 2026-11-22

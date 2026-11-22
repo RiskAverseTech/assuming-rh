@@ -1,0 +1,42 @@
+id: divisors-of-given-degree-of-t-n-minus-1-over-fp
+title: "Few n for which T^n - 1 has a divisor of a given degree over F_p"
+field: analytic-number-theory
+statement_plain: >
+  Fix a prime p and let 3 <= m <= x. If m <= x^(1 - 1/log log x), the number
+  of n <= x for which T^n - 1 has a divisor of degree m in F_p[T] is
+  O_p(x / (log m)^(1/13)). If x^(1 - 1/log log x) < m <= x, the number of
+  such n is O_p(x / (log m)^(2/35)).
+statement_formal: |
+  \#\{n\le x:\ T^n-1 \text{ has a divisor of degree } m \text{ in } \mathbb{F}_p[T]\} \ll_p \begin{cases} x/(\log m)^{1/13}, & 3\le m\le x^{1-1/\log\log x},\\ x/(\log m)^{2/35}, & x^{1-1/\log\log x}< m\le x. \end{cases}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper states that GRH always means the Riemann Hypothesis for
+  Dedekind zeta functions. It enters through conditional results on the
+  multiplicative order of p modulo primes (Lemma 4.1, attributed to Kurlberg
+  and Pomerance, and the lemmas built on it), which concern Kummer-type
+  fields. The analogous bound over Q (Theorem 1.2 of the paper) is
+  unconditional. The related dataset entry p-practical-numbers-density-zero
+  concerns n for which every degree occurs.
+sources:
+  - authors: P. Pollack, L. Thompson
+    title: On the degrees of divisors of T^n-1
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1206.2084
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says only "Dedekind zeta functions" without naming the fields. That they are Kummer-type fields Q(zeta_n, p^(1/n)) is inferred from the cited Kurlberg-Pomerance lemma on the order of a modulo primes, which was not consulted.
+lean:
+  proved: false
+  path: null
+tags: [cyclotomic-polynomials, multiplicative-order, finite-fields]
+added: 2026-11-22
