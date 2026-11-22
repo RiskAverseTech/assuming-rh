@@ -1,0 +1,46 @@
+id: montgomery-conjecture-primes-progressions-from-pair-correlation
+title: Montgomery's conjecture for primes in progressions from a pair correlation bound
+field: analytic-number-theory
+statement_plain: >
+  For every fixed epsilon > 0 and every a coprime to q, the error term in
+  the prime number theorem for arithmetic progressions satisfies
+  psi(x; q, a) - x/phi(q) = O(x^epsilon sqrt(x/q)) for x sufficiently large,
+  uniformly for 1 <= q <= x^(1 - epsilon). As a consequence the sum over
+  q up to x^(1 - 4 epsilon) of the maximum over a of
+  |psi(x; q, a) - x/phi(q)| is O(x^(1 - epsilon)), a form of the
+  Elliott-Halberstam conjecture, and the number of characters chi mod q
+  with L(1/2, chi) = 0 is O(q^(1/2 + epsilon)).
+statement_formal: |
+  \psi(x;q,a) - \frac{x}{\varphi(q)} \ll_{\varepsilon} x^{\varepsilon}\sqrt{\frac{x}{q}} \qquad \text{uniformly for } (a,q)=1,\ 1 \le q \le x^{1-\varepsilon}
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Besides the Generalized Riemann Hypothesis for Dirichlet L-functions, the
+  proof assumes a pair correlation bound for zeros of Dirichlet L-functions
+  (Conjecture 2 of the paper): F_q(x, T) and F_q^+(x, T) are
+  O(phi(q) T x^epsilon) uniformly for a coprime to q, 1 <= q <= x^(1 - epsilon)
+  and x^epsilon <= T < x, where F_q is Yildirim's q-analog of Montgomery's
+  pair correlation function. The estimate proved is Montgomery's conjecture
+  in the corrected form of Friedlander and Granville. Under GRH alone the
+  paper proves the pair correlation bound only for T between x and
+  exp(sqrt(x)) (Theorem 2).
+sources:
+  - authors: N. Kandhil, A. Languasco, P. Moree
+    title: "Pair Correlation of zeros of Dirichlet $L$-Functions: A possible path towards the conjectures of Chowla, Elliott-Halberstam and Montgomery"
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2411.19762
+    hypothesis_location: "Theorem 4 (also Corollary 5 and Theorem 6); the extra assumption is Conjecture 2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primes-in-progressions, pair-correlation, elliott-halberstam]
+added: 2026-11-22

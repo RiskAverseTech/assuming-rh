@@ -1,0 +1,49 @@
+id: galois-orbits-cm-points-siegel-polynomial-lower-bound
+title: Polynomial lower bound for Galois orbits of CM points on the Siegel modular variety
+field: arithmetic-geometry
+statement_plain: >
+  For every g there is a constant delta_g > 0 such that, for every
+  g-dimensional principally polarized abelian variety B with complex
+  multiplication, the Galois orbit of the corresponding point x of the
+  Siegel modular variety A_(g,1) has size at least a constant (depending on
+  g) times Disc(Z(End(B)))^delta_g, where Z(End(B)) is the center of the
+  endomorphism ring of B.
+statement_formal: |
+  |\mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \cdot x| \gg_g \mathrm{Disc}(Z(\mathrm{End}(B)))^{\delta_g}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper's hypothesis is "the Generalized Riemann Hypothesis for CM
+  fields". It is used (Theorem 7.6) to produce many rational primes of size
+  a small power of the discriminant that split completely in the CM field K,
+  whose images generate many distinct ideal classes. CM fields of degree
+  2g are in general not abelian over the rationals. The same paper proves
+  the bound unconditionally for g at most 6 (the abstract says g at most 5).
+  This sharpens Yafaev's earlier conditional lower bound, which was a power
+  of log of the discriminant.
+sources:
+  - authors: J. Tsimerman
+    title: Brauer-Siegel for Arithmetic Tori and lower bounds for Galois orbits of special points
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1103.5619
+    hypothesis_location: Theorem 1.1 (second sentence), proved through Theorem 7.6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper says only "GRH for CM fields". Counting rational primes that split completely in K is a Chebotarev statement for the Galois closure of K, so the Dedekind zeta function of the Galois closure (also a CM field) is presumably what is needed; the paper does not spell this out.
+    - >-
+      The abstract states the unconditional range as g at most 5 while Theorem 1.1 in the text on disk (arXiv v3) says g at most 6.
+    - >-
+      Lower bounds for Galois orbits of CM points on A_g have since been reported proved unconditionally by other methods (averaged Colmez formula). The paper on disk contains no evidence for this, so the status was left as still-conditional; a reviewer should check whether this should become proved-otherwise.
+lean:
+  proved: false
+  path: null
+tags: [cm-points, galois-orbits, andre-oort, class-groups]
+added: 2026-11-22

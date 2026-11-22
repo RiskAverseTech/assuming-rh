@@ -1,0 +1,51 @@
+id: twisted-modular-l-values-simultaneous-large-small-positive-proportion
+title: Joint weighted central limit theorem for central values of twists of two modular L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let f and g be fixed distinct holomorphic newforms of the same weight on
+  Gamma_0(N), let q be a prime tending to infinity, and let c > 0 be fixed.
+  Then a positive proportion (at least a constant times q) of the Dirichlet
+  characters chi mod q satisfy both |L(1/2, f x chi)| > exp(c sqrt(log log q))
+  and |L(1/2, g x chi)| > exp(c sqrt(log log q)), and a positive proportion
+  satisfy 0 < |L(1/2, f x chi)| < exp(-c sqrt(log log q)) and
+  0 < |L(1/2, g x chi)| < exp(-c sqrt(log log q)). This follows from a
+  central limit theorem: with respect to a measure on characters weighted
+  by the mollified product of the two central values, the pair
+  (log|L(1/2, f x chi)|, log|L(1/2, g x chi)|), each divided by
+  sqrt((1/2) log log q), converges to a pair of independent standard
+  Gaussians with error O((log log q)^(-1/2 + epsilon)).
+statement_formal: |
+  \#\bigl\{\chi \bmod q : |L(\tfrac12, f\otimes\chi)| > e^{c\sqrt{\log\log q}},\ |L(\tfrac12, g\otimes\chi)| > e^{c\sqrt{\log\log q}}\bigr\} \gg_{f,g,c} q
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes the hypothesis for L(s, f x chi), L(s, g x chi),
+  L(s, Sym^2 f x chi), L(s, Sym^2 g x chi) and L(s, chi) for all characters
+  chi modulo q. It says the only place the hypothesis is required is to
+  bound the moments of the weight (Proposition 1.3). The analogous central
+  limit theorem for Dirichlet L-functions alone (Theorem 1.2 of the paper)
+  is unconditional.
+sources:
+  - authors: H. M. Bui, N. Evans, S. Lester, K. Pratt
+    title: Weighted central limit theorems for central values of $L$-functions
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.06829
+    hypothesis_location: "Theorem 1.4 and Corollary 1.5; the L-functions are named after Proposition 1.3"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The entry states Corollary 1.5 as the headline because Theorem 1.4 needs the definition of the weighted measure; the paper works with prime q throughout.
+    - >-
+      Section 5 names a slightly different list of L-functions for the single-form moment bound (including L(s, Sym^2 f x chi^2) and L(s, chi^2)); all are twists of f, Sym^2 f or Dirichlet L-functions.
+lean:
+  proved: false
+  path: null
+tags: [central-values, modular-forms, central-limit-theorem, twists]
+added: 2026-11-22
