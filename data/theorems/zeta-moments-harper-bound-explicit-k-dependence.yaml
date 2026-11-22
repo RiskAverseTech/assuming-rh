@@ -1,0 +1,36 @@
+id: zeta-moments-harper-bound-explicit-k-dependence
+title: Explicit dependence on k in the sharp upper bound for zeta moments
+field: analytic-number-theory
+statement_plain: >
+  Let k >= 0 be fixed. For all large T, the integral of
+  |zeta(1/2 + it)|^(2k) over T <= t <= 2T is at most an absolute constant
+  times exp(exp(18.63 k)) T (log T)^(k^2).
+statement_formal: |
+  \int_T^{2T} \left|\zeta\left(\tfrac12+it\right)\right|^{2k} dt \ll e^{e^{18.63k}}\, T(\log T)^{k^2} \quad \text{with an absolute implied constant}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the entry zeta-moments-sharp-upper-bound-harper: Harper's
+  bound C(k) T (log T)^(k^2) has C(k) = exp(exp(O(k))), and this paper
+  makes the O(k) explicit as 18.63 k by optimizing the steps of Harper's
+  proof.
+sources:
+  - authors: T. Tao
+    title: Optimization of the implicit constant for upper bounds for moments of the Riemann zeta function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2407.20023
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The theorem says "k fixed, T large" with an absolute implied constant; how large T must be in terms of k is not stated in the theorem.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, moments, explicit-bounds]
+added: 2026-11-22

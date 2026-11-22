@@ -1,0 +1,43 @@
+id: iterated-integrals-log-zeta-large-deviations
+title: Large deviation bounds for iterated integrals of log zeta on the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let m be a positive integer and let eta_m(1/2 + it) be the m-th iterated
+  integral in t of log zeta(1/2 + it) (normalized as in the paper, so that
+  its imaginary part is pi S_m(t)). For T and V larger than a constant
+  depending on m, the measure of the t in [T, 2T] with
+  |eta_m(1/2 + it)| > V is at most a constant times
+  T exp(-c V^2 (log V)^(2m)) when
+  V <= (log T)^(m/(2m+1)) (log log T)^(-(2m^2+2m)/(2m+1)), with c an absolute
+  positive constant. For larger V the measure is at most a constant times
+  T exp(-c' V^(1/(m+1)) (log T)^(m/(m+1)) log(e V^((2m+1)/(2m+2)) (log V)^m / (log T)^(m/(2m+2)))).
+statement_formal: |
+  \frac{1}{T}\,\mathrm{meas}\{t \in [T,2T] : |\eta_m(\tfrac12+it)| > V\} \ll \exp\left(-c_7 V^2 (\log V)^{2m}\right) \qquad \left(V \le (\log T)^{\frac{m}{2m+1}} (\log\log T)^{-\frac{2m^2+2m}{2m+1}}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper's main approximation formula (Theorem 1) and several of its
+  consequences are unconditional, including the analogous bounds for
+  S_1(t) (Corollary 2); this corollary for general m is stated under the
+  Riemann Hypothesis for the Riemann zeta function only. Related bounds for
+  the size of S_m(t) are in the entry iterated-argument-sn-bounds.
+sources:
+  - authors: S. Inoue
+    title: On the logarithm of the Riemann zeta-function and its iterated integrals
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1909.03643
+    hypothesis_location: Corollary 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The second range formula was transcribed from extracted text with stacked exponents; it should be checked against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, large-deviations, iterated-integrals]
+added: 2026-11-22

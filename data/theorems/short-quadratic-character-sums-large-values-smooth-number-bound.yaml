@@ -1,0 +1,46 @@
+id: short-quadratic-character-sums-large-values-smooth-number-bound
+title: Large values of short quadratic character sums in terms of smooth numbers
+field: analytic-number-theory
+statement_plain: >
+  Let X be large and log X <= x <= exp((log X)^(1/2)). Then there is a
+  fundamental discriminant d with X < d <= 2X for which the sum of chi_d(n)
+  over n <= x is at least Psi(x, (1/4 + o(1)) log X log_2 X /
+  max(log_2 x - log_3 X, log_3 X)), where Psi(x, y) counts the integers up
+  to x all of whose prime factors are at most y and log_j is the j-fold
+  iterated logarithm.
+statement_formal: |
+  \max_{\substack{X<d\le 2X\\ d\in\mathcal F}}\ \sum_{n\le x}\chi_d(n)\ \ge\ \Psi\!\left(x,\ \Bigl(\tfrac14+o(1)\Bigr)\frac{\log X\,\log_2 X}{\max\{\log_2 x-\log_3 X,\ \log_3 X\}}\right) \qquad \bigl(\log X\le x\le \exp((\log X)^{1/2})\bigr)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used through Lemma 2.2, an estimate with error
+  O(X^(1/2 + epsilon)) for the sum of chi_d(n) over fundamental
+  discriminants |d| <= X, quoted from Darbar and Maiti. This is the analog
+  for real primitive characters of a result of Munsch for all characters
+  modulo a prime. The paper's Theorems 1.2 and 1.3, for longer sums, are
+  superseded by the existing entry
+  quadratic-character-sums-large-values-sqrt-2-constant, which improves
+  their constant 1 to sqrt(2) and 2.
+sources:
+  - authors: Z. Dong, Y. Zhang
+    title: Large quadratic character sums
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.07651
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH or Psi(x, y). Psi is taken to be the usual count of y-smooth integers up to x, and the code GRH-Dirichlet follows the related existing entries; whether the Darbar-Maiti lemma also needs RH for zeta was not checked.
+    - >-
+      The displayed formula is partly garbled in the extracted text; it was reconstructed from Theorem 1.1 and the parallel statement of Munsch's bound in the introduction, not from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, character-sums, resonance-method]
+added: 2026-11-22

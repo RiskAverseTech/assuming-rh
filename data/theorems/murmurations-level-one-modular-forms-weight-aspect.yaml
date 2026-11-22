@@ -1,0 +1,49 @@
+id: murmurations-level-one-modular-forms-weight-aspect
+title: Murmurations of level 1 modular forms in the weight aspect
+field: analytic-number-theory
+statement_plain: >
+  Let H_k(1) be the normalized Hecke eigenforms of level 1 and weight k,
+  with normalized eigenvalues lambda_f(p), and let N(k) =
+  (exp(psi(k/2)) / (2 pi))^2 be the analytic conductor, psi being the
+  digamma function. Fix eps in (0, 1/12), delta in {0, 1} and a compact
+  interval E of positive reals of positive length. For
+  K^(5/6 + eps) < H < K^(1 - eps) and N = N(K), the average of lambda_f(p),
+  weighted by log p, over primes p with p/N in E and forms f in H_k(1) with
+  |k - K| <= H and k congruent to 2 delta mod 4, equals
+  ((-1)^delta / sqrt(N)) (nu(E)/|E| + o(1)) as K tends to infinity, where
+  nu(E) is an explicit quantity given by a sum over reduced fractions a/q
+  with q squarefree and (a/q)^(-2) in E.
+statement_formal: |
+  \frac{\sum_{p/N\in E}\log p\sum_{k\equiv 2\delta\,(4),\,|k-K|\le H}\sum_{f\in H_k(1)}\lambda_f(p)}{\sum_{p/N\in E}\log p\sum_{k\equiv 2\delta\,(4),\,|k-K|\le H}\sum_{f\in H_k(1)}1}=\frac{(-1)^\delta}{\sqrt N}\left(\frac{\nu(E)}{|E|}+o_{E,\varepsilon}(1)\right),\qquad \nu(E)=\frac{1}{\zeta(2)}\sum\nolimits^{*}_{\substack{a,q\ge 1,\ \gcd(a,q)=1\\ (a/q)^{-2}\in E}}\frac{\mu(q)^2}{\varphi(q)^2\sigma(q)}\Bigl(\frac qa\Bigr)^{3}
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes "GRH for the L-functions of Dirichlet characters and
+  modular forms". The modular forms are the level 1 holomorphic eigenforms
+  of large weight k, whose L-functions L(s, f) are used to bound sums of
+  lambda_f(p) over primes; GRH for Dirichlet L-functions is used for the
+  sums of values L(1, psi_(t^2 - 4n)) of quadratic character L-functions
+  that the trace formula produces (Lemma 4.5, Proposition 5.1). The star
+  on the sum in nu(E) means that terms at the endpoints of E are halved.
+sources:
+  - authors: J. Bober, A. R. Booker, M. Lee, D. Lowry-Duda
+    title: Murmurations of modular forms in the weight aspect
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.07746
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Whether the Riemann zeta function itself is also needed (as the L-function of the trivial character) was not checked; the paper's phrase "L-functions of Dirichlet characters" is taken to include it if so, and RH is not listed separately.
+lean:
+  proved: false
+  path: null
+tags: [murmurations, modular-forms, hecke-eigenvalues]
+added: 2026-11-22

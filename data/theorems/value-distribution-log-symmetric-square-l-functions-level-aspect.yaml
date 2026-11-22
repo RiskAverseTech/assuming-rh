@@ -1,0 +1,53 @@
+id: value-distribution-log-symmetric-square-l-functions-level-aspect
+title: Value distribution of logarithms of symmetric square L-functions of newforms in the level aspect
+field: analytic-number-theory
+statement_plain: >
+  Let k be even with 2 <= k < 12 or k = 14, let q be a prime, and let f run
+  over the primitive forms of weight k and level q^m. Fix sigma > 1/2 and
+  r = 2 (or r = 1). There is an explicitly constructed continuous
+  nonnegative function M_sigma(Sym^r, u) on the real line such that, as
+  q^m tends to infinity (q fixed and m growing, or m fixed and q growing),
+  the Petersson-weighted average over f of Psi(log L_{P_q}(Sym^r f, sigma)),
+  where L_{P_q} is the partial symmetric power L-function without the Euler
+  factor at q, converges to the integral of M_sigma(Sym^r, u) Psi(u)
+  du / sqrt(2 pi), for every Psi that is bounded and continuous or
+  compactly supported and Riemann integrable.
+statement_formal: |
+  \operatorname{Avg}\,\Psi\bigl(\log L_{\mathbb P_q}(\mathrm{Sym}^r_f,\sigma)\bigr)=\int_{\mathbb R}\mathcal M_\sigma(\mathrm{Sym}^r,u)\,\Psi(u)\,\frac{du}{\sqrt{2\pi}}\qquad (r=1,2,\ \sigma>1/2)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper's Assumption (GRH) is that L(Sym^r f, s) has no zero with real
+  part greater than 1/2, for the primitive forms f of weight k (2 <= k < 12
+  or k = 14) and level q^m; for this theorem r = 1 or 2, so the L-functions
+  are L(s, f) and the symmetric square L-functions. The paper says the main
+  point is r = 2 and that for r = 1 a stronger result was proved
+  unconditionally by M. Mine (its reference [20]). In the case where q is
+  fixed the function M_sigma depends on q. A second theorem treats all
+  symmetric powers for linear test functions Psi(u) = c u, assuming GRH for
+  L(Sym^r f, s) and a bound on the number of forms whose symmetric power
+  L-function has poles.
+sources:
+  - authors: P. Lebacque, K. Matsumoto, M. Mine, Y. Umegaki
+    title: On the value-distribution of the logarithms of symmetric power L-functions in the level aspect
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2209.11918
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      For r = 1 the paper says the result is known unconditionally in stronger form (reference [20], M. Mine); the entry is therefore about the symmetric square case, and the r = 1 case was not split off as proved-otherwise.
+    - >-
+      The average is restricted to forms whose symmetric power L-function is entire, which for r = 1, 2 is all primitive forms according to the paper.
+lean:
+  proved: false
+  path: null
+tags: [symmetric-power-l-functions, value-distribution, m-functions]
+added: 2026-11-22

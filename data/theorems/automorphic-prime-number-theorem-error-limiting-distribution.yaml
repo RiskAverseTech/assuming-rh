@@ -1,0 +1,49 @@
+id: automorphic-prime-number-theorem-error-limiting-distribution
+title: Limiting distribution for the error term in the prime number theorem of an automorphic L-function
+field: analytic-number-theory
+statement_plain: >
+  Let pi be an irreducible unitary cuspidal automorphic representation of
+  GL_d over the rationals, let psi(x, pi) be the sum of Lambda(n) a_pi(n)
+  over n <= x, and let delta(x, pi) be x^(1 + i tau_0)/(1 + i tau_0) when
+  L(s, pi) = zeta(s - i tau_0) and 0 otherwise. Then the function
+  e^(-y/2) (psi(e^y, pi) - delta(e^y, pi)) of y has a limiting distribution.
+statement_formal: |
+  E_1(y,\pi) = e^{-y/2}\bigl(\psi(e^y,\pi) - \delta(e^y,\pi)\bigr) \ \text{ has a limiting distribution.}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the single L-function
+  L(s, pi) of a cuspidal automorphic representation of GL_d over Q, for any
+  d. The case L(s, pi) = zeta(s) is Wintner's 1935 theorem under RH, and the
+  paper notes the case of a modular newform of weight k and level N. The
+  paper's general theorems on almost periodic functions (Theorems 1.2 and
+  1.4) are unconditional. Its other applications (weighted sums of the
+  Mobius and Liouville functions, the Mobius function in arithmetic
+  progressions) assume, besides RH or GRH for Dirichlet L-functions, a
+  conjectural bound T^theta with theta < 3 - sqrt(3) for the sum of
+  |zeta'(rho)|^(-2) or its Dirichlet analog, and are not part of this
+  entry.
+sources:
+  - authors: A. Akbary, N. Ng, M. Shahabi
+    title: Limiting distributions of the classical error terms of prime number theory
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1306.1657
+    hypothesis_location: Corollary 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      For d = 1 the L-functions are zeta and Dirichlet L-functions, where the result would be unlocked; the entry is coded for the general GL_d statement.
+    - >-
+      The proof (Section 3.1) was only skimmed; it appears to use no assumption beyond GRH for L(s, pi).
+lean:
+  proved: false
+  path: null
+tags: [limiting-distribution, automorphic-l-functions, prime-number-theorem]
+added: 2026-11-22

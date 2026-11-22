@@ -1,0 +1,38 @@
+id: two-dirichlet-l-functions-linearly-independent-values-at-shifted-zeta-zeros
+title: Values of two Dirichlet L-functions at shifted zeta zeros are linearly independent for a positive proportion
+field: analytic-number-theory
+statement_plain: >
+  Let chi_1 and chi_2 be primitive Dirichlet characters modulo distinct
+  primes q and l, and let 1/2 < sigma < 1. For a positive proportion of the
+  nontrivial zeros 1/2 + i gamma of the Riemann zeta function with
+  gamma > 0, the values L(sigma + i gamma, chi_1) and
+  L(sigma + i gamma, chi_2) are linearly independent over the real numbers;
+  in particular their arguments differ.
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Only the Riemann Hypothesis for the Riemann zeta function is assumed; it
+  fixes the real part of the sample points. No hypothesis is placed on the
+  two Dirichlet L-functions. The authors write that they assume RH because
+  it simplifies the proof and suspect it is not essential. The paper's
+  other main result (Theorem 1.2, on the critical line) is unconditional.
+sources:
+  - authors: N. Laaksonen, Y. N. Petridis
+    title: On the value distribution of two Dirichlet L-functions
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1505.00623
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, zeta-zeros, value-distribution]
+added: 2026-11-22

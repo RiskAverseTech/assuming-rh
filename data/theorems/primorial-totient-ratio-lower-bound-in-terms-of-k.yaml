@@ -1,0 +1,41 @@
+id: primorial-totient-ratio-lower-bound-in-terms-of-k
+title: Explicit lower bound for N_k / phi(N_k) at the k-th primorial in terms of k
+field: analytic-number-theory
+statement_plain: >
+  Let N_k be the product of the first k primes, phi Euler's totient function
+  and gamma the Euler-Mascheroni constant, and write log_2 k = log log k.
+  For every integer k >= 3.900491 x 10^30,
+  N_k / phi(N_k) > e^gamma (log k + log_2 k + (log_2 k - 1)/log k
+  - ((log_2 k)^2 - 4 log_2 k + 5) / (2 (log k)^2)).
+statement_formal: |
+  \frac{N_k}{\varphi(N_k)} > e^{\gamma}\left(\log k+\log_2 k+\frac{\log_2 k-1}{\log k}-\frac{\log_2^2 k-4\log_2 k+5}{2\log^2 k}\right)\qquad (k\ge 3.900491\times 10^{30})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper's main results are unconditional; in particular it proves this
+  same inequality without any hypothesis for k >= exp(exp(5.879)), about
+  1.734 x 10^155 (Theorem 1.2). The Riemann Hypothesis only lowers the
+  threshold to 3.900491 x 10^30. It enters through Nicolas's criterion
+  (RH is equivalent to N_k / phi(N_k) > e^gamma log log N_k for all k).
+  The paper deduces under RH the matching lower bound for sigma(N_k)/N_k
+  with e^gamma replaced by 6 e^gamma / pi^2 in the same range (Proposition
+  5.6). Related dataset entry: nicolas-euler-function-explicit-bound.
+sources:
+  - authors: C. Axler
+    title: Inequalities involving the primorial counting function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2406.04018
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [primorials, euler-totient, explicit-bounds]
+added: 2026-11-22

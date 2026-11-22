@@ -1,0 +1,43 @@
+id: log-derivative-quadratic-dirichlet-l-functions-at-one-omega-result
+title: Large values of the logarithmic derivative of quadratic Dirichlet L-functions at s = 1
+field: analytic-number-theory
+statement_plain: >
+  For all sufficiently large N, the maximum of -(L'/L)(1, chi_d) over
+  fundamental discriminants d with N < |d| <= 2N is at least
+  log log N + log log log N + C + o(1), where
+  C = log(1/4 - delta) - gamma - 1 - sum over primes p of (log p)/(p^2 - 1),
+  delta is any fixed number in (0, 1/4) and gamma is Euler's constant.
+statement_formal: |
+  \max_{\substack{d \text{ fundamental discriminant} \\ N < |d| \le 2N}} -\frac{L'}{L}(1,\chi_d) \ge \log\log N + \log\log\log N + C + o(1), \qquad C = \log\left(\tfrac14 - \delta\right) - \gamma - 1 - \sum_{p} \frac{\log p}{p^2-1}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper says this confirms, under GRH, the lower bound half of a
+  conjecture of Mourtada and Murty on the maximum of -(L'/L)(1, chi_d). The
+  paper does not define GRH; it is applied to the quadratic Dirichlet
+  L-functions L(s, chi_d) (a Perron formula argument) and through a
+  character sum estimate over fundamental discriminants quoted from Darbar
+  and Maiti. The matching conditional upper bound of Ihara, Murty and
+  Shimura type is in the entry log-derivative-dirichlet-l-function-at-one.
+  The paper also gives a count of such d (Theorem 2) and a version for
+  sigma near 1 (Theorem 3).
+sources:
+  - authors: Z. Dong, H. Li
+    title: Large values of logarithmic derivatives of quadratic Dirichlet L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2603.21256
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper never states which L-functions GRH covers; from the proof it is used only for Dirichlet L-functions of quadratic characters (and the quoted Darbar-Maiti lemma), so GRH-Dirichlet was chosen.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, logarithmic-derivative, omega-results]
+added: 2026-11-22
