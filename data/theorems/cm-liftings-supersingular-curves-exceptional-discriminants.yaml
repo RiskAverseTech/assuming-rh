@@ -1,0 +1,56 @@
+id: cm-liftings-supersingular-curves-exceptional-discriminants
+title: "Fundamental discriminants whose CM curves do not reduce onto all supersingular curves in characteristic p"
+field: arithmetic-geometry
+statement_plain: >
+  For a prime p, let E_p be the finite set of negative fundamental
+  discriminants D, with p not split in the quadratic order O_D, for which
+  reduction modulo a prime above p from elliptic curves with complex
+  multiplication by O_D to supersingular elliptic curves in characteristic p
+  is not surjective. For every prime p up to 107, every D in E_p has |D| <
+  3.257 x 10^25. Moreover E_17 has exactly 91 elements, the largest |D|
+  being 89563, and E_19 has exactly 45 elements, the largest |D| being
+  27955.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [modular-form-l-functions]
+status_note: >
+  The paper defines its GRH as the Generalized Riemann Hypothesis for
+  Dirichlet L-functions together with the Generalized Riemann Hypothesis for
+  the L-series of weight 2 primitive newforms. Following Ono and
+  Soundararajan, it is used to bound explicitly the central values of
+  quadratic twists L(G_i, D, s) of weight 2 newforms (and L(1, chi_D), which
+  controls the class number), giving an effective bound D_p beyond which the
+  reduction map is surjective; the finitely many smaller discriminants are
+  then checked by computer. The algorithm terminates unconditionally; only
+  its correctness depends on the hypothesis. The Dirichlet part is covered,
+  the newform part is not. The paper also lists the set E_11 explicitly
+  (Theorem 1.3(1)).
+sources:
+  - authors: B. Kane
+    title: "CM liftings of Supersingular Elliptic Curves"
+    year: 2009
+    venue: Preprint
+    url: https://arxiv.org/abs/0904.1608
+    hypothesis_location: Theorem 1.2 and Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The list for p = 11 in Theorem 1.3(1) is printed with the item
+      "427499" between 235 and 595, which looks like a missing comma (427,
+      499); for that reason the p = 11 list is not reproduced in the
+      statement.
+    - >-
+      The L-functions of the weight 2 newforms involved are those of level
+      dividing 4p in the Shimura correspondence setting, twisted by
+      quadratic characters; the exact levels were not checked in detail.
+lean:
+  proved: false
+  path: null
+tags: [supersingular-curves, complex-multiplication, quadratic-twists, explicit-bounds]
+added: 2026-11-22

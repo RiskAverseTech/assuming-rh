@@ -1,0 +1,54 @@
+id: generalized-fermat-equation-5-5-11-13-and-7-7-11
+title: "The generalized Fermat equations x^5 + y^5 = z^11, x^5 + y^5 = z^13 and x^7 + y^7 = z^11"
+field: arithmetic-geometry
+statement_plain: >
+  The equations x^5 + y^5 = z^11, x^5 + y^5 = z^13 and x^7 + y^7 = z^11 have
+  no non-trivial primitive integer solutions, that is, no solutions in
+  coprime integers with xyz different from 0.
+statement_formal: |
+  x^5+y^5=z^{l}\ (l\in\{11,13\}),\quad x^7+y^7=z^{11},\quad \gcd(x,y,z)=1 \implies xyz=0
+hypotheses_required: [ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper defines GRH as the generalized Riemann hypothesis for Dedekind
+  zeta functions and says it is used for class group and unit group
+  computations (in MAGMA), which feed 2-descent rank bounds for Jacobians of
+  hyperelliptic curves before applying Chabauty-Coleman. Section 5.3 names
+  the fields: for x^5 + y^5 = z^l they are Q[t]/(t^22 + 2 t^11 - 4) and
+  Q[t]/(t^26 + 22 t^13 - 4), and for x^7 + y^7 = z^11 fields of absolute
+  degree 33. These are not abelian over the rationals. Conditional class
+  group computations rest on GRH bounds for the norms of prime ideals
+  generating the class group, which concern L-functions of class group
+  characters of those fields; GRH-Hecke is listed for that reason, as in the
+  existing entry generalized-fermat-equation-2-3-11. The authors say the
+  hypothesis could be removed by verifying the class groups unconditionally,
+  which they consider feasible for degree 22 and perhaps 26 but not for
+  degree 33. The same paper proves the cases (5,5,7), (5,5,19) and (7,7,5)
+  unconditionally.
+sources:
+  - authors: S. R. Dahmen, S. Siksek
+    title: "Perfect powers expressible as sums of two fifth or seventh powers"
+    year: 2014
+    venue: Preprint
+    url: https://arxiv.org/abs/1309.4030
+    hypothesis_location: Theorem 3 (Corollary 5.2 and Corollary 5.10)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper states its hypothesis for Dedekind zeta functions only; the
+      additional code GRH-Hecke reflects this project's reading of how
+      conditional class group algorithms work and should be confirmed.
+    - >-
+      Whether the class groups of the degree 22 and 26 fields have since
+      been verified unconditionally is not known from the paper on disk.
+lean:
+  proved: false
+  path: null
+tags: [generalized-fermat-equation, class-groups, chabauty]
+added: 2026-11-22

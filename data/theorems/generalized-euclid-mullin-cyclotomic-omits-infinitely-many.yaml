@@ -1,0 +1,56 @@
+id: generalized-euclid-mullin-cyclotomic-omits-infinitely-many
+title: "The second generalized Euclid-Mullin sequence of Phi_m(cx) omits infinitely many primes that are 1 mod m"
+field: analytic-number-theory
+statement_plain: >
+  Let m be a positive integer and c an integer such that the cyclotomic
+  polynomial f(x) = Phi_m(cx) is a generalized Euclid-Mullin polynomial for
+  the progression 1 mod m (for m other than 1, 2, 3, 6 this means c is not
+  -1, 0 or 1). Define a sequence of primes by letting p_n be the largest
+  prime divisor of f(p_1 ... p_(n-1)) that is 1 mod m and does not divide
+  f(0). Then this sequence omits infinitely many primes that are 1 mod m.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind, GRH-Dirichlet]
+status: partial
+waiting_on: [kummer-fields]
+status_note: >
+  Covered case: m > 2. The paper states that for m > 2 the proof reduces to
+  the Generalized Lindelof Hypothesis for Dirichlet L-functions (used for
+  quadratic character sum estimates, Theorem 2.5), which follows from GRH
+  for Dirichlet L-functions. For m = 1 and m = 2 the theorem follows from
+  Theorem 1.4, which is unconditional unless f has the form c(ax + b^8)^k
+  with a odd or divisible by 32; in that remaining case the proof uses ERH,
+  defined in the paper as the Riemann Hypothesis for the Dedekind zeta
+  function of every number field, applied to Kummer extensions Q(q^(1/l),
+  e^(2 pi i/l)) (Lemma 3.1 and Theorem 3.2) to construct characters of odd
+  prime order l with prescribed values; these fields are not abelian over
+  the rationals. The paper also proves the statement unconditionally for m
+  in {1, ..., 10, 12, 14, 18} with some restrictions on c when m is 1 or 2
+  (Theorem 1.7).
+sources:
+  - authors: A. R. Booker, O. Simon
+    title: "A generalisation of the Euclid-Mullin sequences"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2601.21901
+    hypothesis_location: Theorem 1.6 (proof in Section 5; ERH enters through Theorem 3.2, GLH through Theorem 2.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The split into a case needing only Dirichlet L-functions (m > 2) and a
+      case needing Kummer fields (m = 1, 2 with f of the exceptional shape)
+      is taken from the sentence after Theorem 1.6 and from the proofs in
+      Section 5; a reviewer should confirm that no step for m > 2 uses
+      Theorem 3.2.
+    - >-
+      The description of the admissible c is simplified: the exact set S(m)
+      for m = 1, 2, 3, 6 is given in Proposition 1.5 of the paper.
+lean:
+  proved: false
+  path: null
+tags: [euclid-mullin, prime-sequences, character-sums]
+added: 2026-11-22

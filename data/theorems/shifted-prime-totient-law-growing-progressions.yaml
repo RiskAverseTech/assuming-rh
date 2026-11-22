@@ -1,0 +1,57 @@
+id: shifted-prime-totient-law-growing-progressions
+title: "Distribution of phi(p-1)/(p-1) over primes in progressions with modulus up to x^(1/2-delta)"
+field: analytic-number-theory
+statement_plain: >
+  Fix 0 < delta < 1/2. Let (B_l) be independent Bernoulli variables indexed
+  by odd primes l with P(B_l = 1) = 1/(l-1). For coprime b and Q let G_{Q,b}
+  be the distribution function of A_{Q,b} times the product over primes l
+  not dividing 2Q of (1 - 1/l)^(B_l), where A_{Q,b} is 1/2 times the product
+  of (1 - 1/l) over odd primes l dividing Q with b = 1 mod l. Then,
+  uniformly for Q <= x^(1/2-delta) and reduced classes b mod Q, the
+  proportion of primes p <= x, p = b mod Q, with phi(p-1)/(p-1) <= t differs
+  from G_{Q,b}(t) by O_delta(D(Q) log log x / log x) uniformly in t, where
+  D(Q) is the product of (l-1)/(l-2) over odd primes l dividing Q. In
+  particular the difference is O_delta((log log x)^2 / log x).
+statement_formal: |
+  \sup_{t}\Bigl|\frac{\#\{p\le x:\ p\equiv b \bmod Q,\ \varphi(p-1)/(p-1)\le t\}}{\pi(x;Q,b)}-G_{Q,b}(t)\Bigr| \ll_\delta D(Q)\,\frac{\log\log x}{\log x} \ll_\delta \frac{(\log\log x)^2}{\log x},\qquad Q\le x^{1/2-\delta}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem assumes GRH for Dirichlet L-functions. It enters only through
+  Theorem A.2 of the paper, the prime number theorem in arithmetic
+  progressions with square-root error term, applied to count primes p with
+  prescribed divisibility patterns of p - 1 at individual moduli up to about
+  x^(1/2); that theorem assumes GRH for every primitive Dirichlet L-function
+  whose conductor divides the modulus. The paper's main results are
+  unconditional (for fixed Q, and for Q up to a power of log x by
+  Siegel-Walfisz); the hypothesis only extends the range of Q. The same
+  theorem also covers a second statistic c(p) coming from matrices over F_p
+  and gives moment estimates (8.69).
+sources:
+  - authors: V. S. Sehrawat
+    title: "Arithmetic limiting laws over shifted primes: Hausdorff dimension zero, Fourier decay, and absolute continuity"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2603.11196
+    hypothesis_location: Theorem 8.30, via Theorem A.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The source is a preprint of several hundred pages whose abstract
+      describes its main results as unconditional; this conditional theorem
+      is a secondary refinement and its proof was read only at the level of
+      which hypothesis is invoked.
+    - >-
+      The definitions of G_{Q,b}, A_{Q,b} and D(Q) were assembled from
+      Chapter 1, Theorem 2.16 and Section 8 of the paper; the formulas are
+      partly stacked in the extracted text.
+lean:
+  proved: false
+  path: null
+tags: [shifted-primes, euler-totient, limiting-distributions]
+added: 2026-11-22

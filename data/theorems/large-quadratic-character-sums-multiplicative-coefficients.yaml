@@ -1,0 +1,52 @@
+id: large-quadratic-character-sums-multiplicative-coefficients
+title: "Large values of quadratic character sums twisted by a completely multiplicative function"
+field: analytic-number-theory
+statement_plain: >
+  Let f be a completely multiplicative function with |f(n)| = 1 for all n
+  and Re(f(n) conj(f(m))) >= 0 for all m, n. Write log_2 and log_3 for
+  iterated logarithms. If exp(4 sqrt(log X log_2 X) log_3 X) <= x <=
+  exp((log X)^(1/2+eps)), then the maximum over fundamental discriminants d
+  with X < |d| <= 2X of |sum_{n <= x} f(n) chi_d(n)| is at least sqrt(x)
+  exp((sqrt(2)/2 + o(1)) sqrt(log X / log_2 X)). If exp((log X)^(1/2+eps)) <
+  x <= X^(1/2), the maximum is at least sqrt(x) exp((1 + o(1))
+  sqrt(log(sqrt(X)/x) log_3(sqrt(X)/x) / log_2(sqrt(X)/x))).
+statement_formal: |
+  \max_{\substack{X<|d|\le 2X\\ d\in\mathcal D}}\Bigl|\sum_{n\le x} f(n)\chi_d(n)\Bigr| \ge \sqrt{x}\,\exp\Bigl(\Bigl(\tfrac{\sqrt2}{2}+o(1)\Bigr)\sqrt{\frac{\log X}{\log_2 X}}\Bigr),\qquad e^{4\sqrt{\log X\log_2 X}\,\log_3 X}\le x\le e^{(\log X)^{1/2+\varepsilon}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper writes only "GRH". The single place it is used is Lemma 2.1
+  (quoted from another paper), an asymptotic with error O(X^(1/2+eps)) for
+  the sum of chi_d(n) over fundamental discriminants |d| <= X, for a fixed
+  integer n. Such an estimate comes from the Dirichlet L-function of the
+  quadratic character attached to n, so the hypothesis is read here as GRH
+  for Dirichlet L-functions. The rest of the argument is a resonance method
+  and is unconditional.
+sources:
+  - authors: Z. Dong, Y. Song, W. Wang, H. Zhang, S. Zhao
+    title: "Large quadratic character sums with multiplicative coefficients"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.20192
+    hypothesis_location: Theorem 1.1 and Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its GRH, and Lemma 2.1 is cited from
+      reference [2] without proof; that the cited lemma needs only quadratic
+      Dirichlet L-functions (and possibly the Riemann zeta function) was not
+      checked in the cited source.
+    - >-
+      The lower limit of the range in Theorem 1.1 was read from the PDF page image as
+      exp(4 sqrt(log X log_2 X) log_3 X), with log_3 X outside the square root; the
+      text layer is ambiguous on this point.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, omega-results, resonance-method]
+added: 2026-11-22

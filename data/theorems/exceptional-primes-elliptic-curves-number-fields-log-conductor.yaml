@@ -1,0 +1,57 @@
+id: exceptional-primes-elliptic-curves-number-fields-log-conductor
+title: "Largest non-surjective prime of a non-CM elliptic curve over a number field is O_K(log N_E)"
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve without complex multiplication over a number
+  field K, and let N_E be the absolute value of the norm of its conductor.
+  Call a prime l exceptional if the Galois representation on the l-torsion
+  of E is not surjective onto GL_2(F_l). Then every exceptional prime
+  satisfies l <= C'(K) log N_E + C''(K) with constants depending only on K
+  (not known to be effectively computable), and also l <= C(K) log N_E (log
+  log N_E)^3 + C_1(K) with effectively computable constants. The product of
+  all exceptional primes is at most a constant depending on K times 4^(a_E)
+  (log N_E)^14, where a_E is the number of primes of additive reduction.
+statement_formal: |
+  \ell \ll_K \log N_E \qquad\text{for every exceptional prime } \ell
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes "the Generalized Riemann Hypothesis (GRH)" throughout
+  without defining it. It is used through the effective Chebotarev theorem
+  of Lagarias and Odlyzko (Theorem 9 and Corollary 10) for Galois extensions
+  L/K cut out by mod l and mod p representations of E, which are not abelian
+  over the rationals; the effective bound for the smallest unexceptional
+  prime follows Serre's method. This answers a question of Serre and extends
+  to number fields the bound in the existing entry
+  serre-surjectivity-mod-l-conductor-bound (the case K = Q, with the extra
+  (log log)^3 factor).
+sources:
+  - authors: E. Larson, D. Vaintrob
+    title: "On the Surjectivity of Galois Representations Associated to Elliptic Curves over Number Fields"
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1204.0046
+    hypothesis_location: Theorem 1 and Theorem 2 (GRH is assumed for the whole paper from the end of the introduction)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH covers. ERH-Dedekind is
+      inferred from its reliance on the Lagarias-Odlyzko effective
+      Chebotarev theorem; the proof also uses a result from the authors'
+      earlier paper [6], which was not checked for further hypotheses.
+    - >-
+      The paper uses two different symbols for effective and non-effective
+      implied constants, which the text extraction renders identically; the
+      assignment (Theorem 1 non-effective, Theorem 2 effective) follows the
+      introduction.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, galois-representations, serre-open-image, chebotarev]
+added: 2026-11-22

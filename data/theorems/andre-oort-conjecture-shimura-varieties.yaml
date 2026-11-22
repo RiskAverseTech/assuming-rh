@@ -1,0 +1,71 @@
+id: andre-oort-conjecture-shimura-varieties
+title: "The Andre-Oort conjecture for arbitrary Shimura varieties"
+field: arithmetic-geometry
+statement_plain: >
+  Let (G, X) be a Shimura datum, K a compact open subgroup of G(A_f), and
+  Sigma any set of special points (more generally, of special subvarieties)
+  of the Shimura variety Sh_K(G, X). Then every irreducible component of the
+  Zariski closure of Sigma is a special subvariety.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: proved-otherwise
+status_note: >
+  Now known without any hypothesis: Pila, Shankar and Tsimerman report
+  proving the Andre-Oort conjecture in full generality (2021). What follows
+  describes the earlier conditional proof.
+  The paper assumes "the Generalized Riemann Hypothesis (GRH) for CM
+  fields". It enters in two places: through the lower bound of Ullmo and
+  Yafaev for the degrees of Galois orbits of special subvarieties (quoted as
+  Theorem 2.4.4; that bound is the existing entry
+  galois-orbits-special-subvarieties-shimura-lower-bound), and through an
+  effective Chebotarev statement (Proposition 10.1.2) giving many small
+  primes that split in a number field L that is Galois over the rationals,
+  used to choose a prime for a Hecke correspondence. The fields are
+  splitting fields of tori attached to CM points; they are Galois CM fields
+  and in general not abelian over the rationals. The same theorem holds
+  without the hypothesis under an alternative assumption (2): the
+  Mumford-Tate groups of the points lie in one GL_n(Q)-conjugacy class for
+  some faithful representation. The existing entries
+  andre-oort-curves-in-shimura-varieties and
+  andre-oort-products-of-modular-curves record special cases of this
+  statement as proved-otherwise, citing Pila, Shankar and Tsimerman (arXiv
+  2109.08788); see the open question.
+sources:
+  - authors: B. Klingler, A. Yafaev
+    title: "The André-Oort conjecture"
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1209.0936
+    hypothesis_location: Theorem 1.2.1 and Theorem 1.2.2, assumption (1)
+    role: conditional-proof
+  - authors: J. Pila, A. N. Shankar, J. Tsimerman (with an appendix by H. Esnault and M. Groechenig)
+    title: Canonical Heights on Shimura Varieties and the André-Oort Conjecture
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2109.08788
+    role: unconditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The move to proved-otherwise rests on the abstract of the Pila, Shankar and Tsimerman paper, which says it proves the Andre-Oort conjecture in full generality. Only the abstract was read, and its publication status was not checked.
+    - >-
+      This entry very likely should have status proved-otherwise: existing
+      dataset entries for special cases cite Pila, Shankar and Tsimerman
+      (2021, arXiv 2109.08788) as proving the Andre-Oort conjecture in full
+      generality. The paper on disk (2013) does not name an unconditional
+      source, so under the drafting rules the status was left as
+      still-conditional. A maintainer should change the status and add that
+      source.
+    - >-
+      The paper does not define "GRH for CM fields" further. ERH-Dedekind
+      for Galois CM fields is inferred from Proposition 10.1.2 (effective
+      Chebotarev for split primes in a Galois number field).
+lean:
+  proved: false
+  path: null
+tags: [andre-oort, shimura-varieties, special-points]
+added: 2026-11-22

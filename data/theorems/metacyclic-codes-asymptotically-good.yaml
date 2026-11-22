@@ -1,0 +1,54 @@
+id: metacyclic-codes-asymptotically-good
+title: "Metacyclic codes over a prime field form an asymptotically good family"
+field: analytic-number-theory
+statement_plain: >
+  Let q be a prime and s > 1 an integer such that q does not divide s if q =
+  1 mod 4, and 4q does not divide s if q = 3 mod 4 or q = 2. For every delta
+  with 0 < delta < H_q^(-1)((s-1)/s^2), where H_q is the q-ary entropy
+  function, there is a sequence of metacyclic codes over F_q (left ideals in
+  the group algebras of metacyclic groups G(m, s, r) of order ms, with m
+  prime) of rate 1/s and relative Hamming distance delta. In particular
+  metacyclic codes are asymptotically good.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The theorem is stated assuming Conjecture 2.1 of the paper: for suitable a
+  and s there are infinitely many primes m = 1 mod s having a as a primitive
+  root. The paper notes that this conjecture holds under GRH (Theorem 2.2,
+  combining Lenstra and Moree), where GRH is defined as the Riemann
+  hypothesis for Dedekind zeta functions of number fields. The underlying
+  proof is Hooley's method, which uses the zeta functions of Kummer fields
+  Q(zeta_n, a^(1/n)); these are not abelian over the rationals. The
+  hypothesis is needed only to guarantee infinitely many primes m with q
+  primitive modulo m and s dividing m - 1. Corollary 3.6 extends the
+  conclusion to fields of prime power order.
+sources:
+  - authors: M. Borello, P. Moree, P. Solé
+    title: "Asymptotic performance of metacyclic codes"
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1906.07446
+    hypothesis_location: Theorem 3.5 (assuming Conjecture 2.1, which holds under GRH by Theorem 2.2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The result is in coding theory; the schema has no matching field
+      value, so analytic-number-theory was used because the hypothesis
+      enters through Artin's primitive root conjecture in arithmetic
+      progressions.
+    - >-
+      The paper mentions Heath-Brown's unconditional result for all but two
+      unspecified prime values of a; whether it gives the needed primes in
+      the progression 1 mod s for some q is not discussed in the paper.
+lean:
+  proved: false
+  path: null
+tags: [artin-conjecture, coding-theory, primitive-roots]
+added: 2026-11-22

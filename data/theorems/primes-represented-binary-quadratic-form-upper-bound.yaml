@@ -1,0 +1,48 @@
+id: primes-represented-binary-quadratic-form-upper-bound
+title: "Brun-Titchmarsh type bound for primes represented by a reduced binary quadratic form when x > (D/a)^(1+eps)"
+field: analytic-number-theory
+statement_plain: >
+  Let f(u, v) = a u^2 + b u v + c v^2 be a reduced positive definite
+  integral binary quadratic form of discriminant -D, and let pi_f(x) be the
+  number of primes up to x represented by f. For every eps > 0 and x >=
+  (D/a)^(1+eps), pi_f(x) < (4/(1 - theta)) (delta_f x / (h(-D) log x)) (1 +
+  O_eps(log log x / log x)), where theta = (1 + eps/2) log D / log x - log a
+  / log x lies in (0, 1), h(-D) is the class number, and delta_f is 1 if f
+  is properly equivalent to its opposite and 1/2 otherwise.
+statement_formal: |
+  \pi_f(x) < \frac{4}{1-\theta}\cdot\frac{\delta_f\,x}{h(-D)\log x}\Bigl\{1+O_\varepsilon\Bigl(\frac{\log\log x}{\log x}\Bigr)\Bigr\},\qquad x\ge (D/a)^{1+\varepsilon},\quad \theta=\Bigl(1+\frac{\varepsilon}{2}\Bigr)\frac{\log D}{\log x}-\frac{\log a}{\log x}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states explicitly (Remark (iii) after Theorem 1.1) that it
+  assumes GRH only for the quadratic Dirichlet L-function L(s, chi_{-D}),
+  where chi_{-D} is the Kronecker symbol, and not for the Hecke L-functions
+  of the ring class field that the classical asymptotic of Lagarias and
+  Odlyzko needs. The hypothesis is used for character sum and error term
+  bounds (Lemmas 4.2 to 4.5) inside a lattice point count combined with
+  Selberg's sieve. Without the hypothesis the same theorem holds in the
+  smaller range x >= (D^2/a)^(1+eps). Theorem 1.3 gives the analogous bound
+  for short intervals.
+sources:
+  - authors: A. Zaman
+    title: "Primes represented by positive definite binary quadratic forms"
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1710.08914
+    hypothesis_location: Theorem 1.1 with phi = 0
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The formula for theta is stacked in the extracted text; the reading
+      theta = (1 + 2 phi + eps/2) log D / log x - log a / log x with phi = 0
+      was checked against the PDF text layout only.
+lean:
+  proved: false
+  path: null
+tags: [binary-quadratic-forms, brun-titchmarsh, selberg-sieve]
+added: 2026-11-22

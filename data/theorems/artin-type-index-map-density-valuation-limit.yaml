@@ -1,0 +1,59 @@
+id: artin-type-index-map-density-valuation-limit
+title: "Densities for Artin-type index conditions determined by valuations are limits of finite-level densities"
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field, W_1, ..., W_n finitely generated subgroups of
+  positive rank of its multiplicative group, F/K a finite Galois extension
+  and C a conjugacy-stable subset of its Galois group. Let H be a set of
+  n-tuples of positive integers that is determined by valuations, meaning H
+  is the intersection over square-free Q > 1 of the sets H_Q of tuples
+  having the same l-adic valuations as some element of H for all primes l
+  dividing Q. Then the density of the primes p of K with Frobenius in C
+  whose index tuple (Ind_p W_1, ..., Ind_p W_n) lies in H equals the limit,
+  as Q runs over products of all primes up to x with x growing, of the
+  density of the primes with Frobenius in C whose index tuple lies in H_Q;
+  it also equals the limit of the Haar measures of the corresponding sets of
+  automorphisms of the cyclotomic-Kummer extensions.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH" and builds on the earlier paper of Järviniemi
+  and Perucca (existing entry
+  index-map-preimages-finite-or-positive-density), whose theorem that these
+  densities exist (quoted here as Theorem 8) is where the hypothesis enters,
+  through an effective Chebotarev density theorem for cyclotomic-Kummer
+  extensions K(zeta_m, W_i^(1/m)) following Hooley and Lenstra. These fields
+  are not abelian over the rationals. Further conditional results in the
+  paper: for H almost cut by valuations the density is a product of local
+  Haar measures (Proposition 23) and, for separated groups, a multiple of an
+  Artin-type constant (Remark 24). The paper remarks that some index
+  conditions, for example k-free index with k at least 2, can be treated
+  unconditionally by a method of Pappalardi.
+sources:
+  - authors: O. Järviniemi, A. Perucca, P. Sgobba
+    title: "Unified treatment of Artin-type problems II"
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.15614
+    hypothesis_location: Theorem 12 (resting on Theorem 8, quoted from the first paper of the series)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its GRH. ERH-Dedekind for cyclotomic-Kummer
+      extensions is inferred from the first paper of the series, as in the
+      existing entry for that paper.
+    - >-
+      The plain statement paraphrases formula (17) of Theorem 12; the set S
+      there is the set S_{C,H} of Section 3.3.
+lean:
+  proved: false
+  path: null
+tags: [artin-conjecture, kummer-fields, chebotarev]
+added: 2026-11-22
