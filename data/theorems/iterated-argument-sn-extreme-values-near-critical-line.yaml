@@ -1,0 +1,44 @@
+id: iterated-argument-sn-extreme-values-near-critical-line
+title: Extreme values of the iterated argument S_n(sigma, t) of zeta near the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let S(sigma, t) be 1/pi times the argument of zeta(sigma + it) and let
+  S_n(sigma, t) be its n-th iterated antiderivative in t, normalized as in
+  the paper. Fix beta with 0 <= beta < 1. For all sufficiently large T and
+  1/2 <= sigma <= 1/2 + 1/log log T there are positive constants c_n such
+  that the maximum over T^beta <= t <= T of S_n(sigma, t) (if n is 1 mod 4)
+  or of |S_n(sigma, t)| (otherwise) is at least
+  c_n (log T)^(1 - sigma) (log log log T)^sigma / (log log T)^(sigma + n).
+statement_formal: |
+  \max_{T^{\beta}\le t\le T}\,\bigl|S_n(\sigma,t)\bigr|\ \ge\ c_n\,\frac{(\log T)^{1-\sigma}(\log\log\log T)^{\sigma}}{(\log\log T)^{\sigma+n}}\qquad \left(\tfrac12\le\sigma\le\tfrac12+\tfrac{1}{\log\log T}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  For n congruent to 1 modulo 4 the bound holds for the maximum of
+  S_n(sigma, t) itself, without the absolute value. The cases sigma = 1/2
+  and n = 0 or 1 recover the theorem of Bondarenko and Seip recorded in the
+  entry argument-of-zeta-extreme-values-resonance; this result extends it to
+  all n >= 0 and to a neighborhood of the critical line. On the critical
+  line it gives S_n(t) = Omega((log t log log log t)^(1/2) /
+  (log log t)^(n + 1/2)), with Omega_+ when n is 1 mod 4 (Corollary 3); the
+  paper says no omega results for S_n(t) with n >= 2 were known before.
+  Upper bounds for S_n(t) are in the entry iterated-argument-sn-bounds.
+sources:
+  - authors: A. Chirre
+    title: Extreme values for $S_n(\sigma,t)$ near the critical line
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1807.11642
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, argument-of-zeta, extreme-values, resonance-method]
+added: 2026-11-22

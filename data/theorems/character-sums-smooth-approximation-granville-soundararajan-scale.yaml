@@ -1,0 +1,54 @@
+id: character-sums-smooth-approximation-granville-soundararajan-scale
+title: Smooth-number approximation to character sums at the Granville-Soundararajan cutoff for sums of length at least a power of q
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a non-principal character modulo q (not necessarily
+  primitive), chi_0 the principal character, S(x, chi) the sum of chi(n)
+  over n <= x, and Psi(x, y; f) the sum of f(n) over n <= x with all prime
+  factors at most y. Fix 0 < a <= 1, C > 6 and 0 < g < (C - 6)/4, and put
+  y = log q + (log x)^2 (log log q)^C. Then uniformly for q^a <= x <= q,
+  |S(x, chi)| + |Psi(x, y; chi)| is at most a constant times
+  Psi(x, y; chi_0) exp(-g (log x) (log log log q) / log log q). In
+  particular S(x, chi) = Psi(x, y; chi) + o(Psi(x, y; chi_0)).
+statement_formal: |
+  |S(x,\chi)|+|\Psi(x,y;\chi)|\ll_{a,C,\gamma}\Psi(x,y;\chi_0)\,\exp\!\left(-\gamma\,\frac{(\log x)\log\log\log q}{\log\log q}\right),\qquad q^{a}\le x\le q,\quad y=\log q+(\log x)^{2}(\log\log q)^{C}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the single L-function
+  L(s, chi). This establishes, in the range q^a <= x <= q, the approximation
+  conjectured by Granville and Soundararajan with the smaller cutoff y of
+  order (log q)^2 (log log q)^C, where the entry
+  short-character-sums-smooth-number-approximation needs
+  y >= (log q)^2 (log x)^2 (log log q)^12; the error is measured against the
+  count of y-smooth integers coprime to q. The paper proves the analogous
+  statement for the sums of n^(-it) over n <= x under RH for zeta, uniformly
+  for T^a <= x <= T and 2T <= t <= 5T (Theorem 1.6). It also proves
+  unconditionally that the uniform upper-bound form of the
+  Granville-Soundararajan conjecture, imposed on all non-principal
+  characters including imprimitive ones, implies the Riemann Hypothesis for
+  every primitive non-principal Dirichlet L-function (Theorem 1.2).
+sources:
+  - authors: Z. Dong, S. Zhao, G.-L. Zhou
+    title: Smooth approximations to character sums and zeta sums
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2611.11389
+    hypothesis_location: Theorem 1.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Very recent preprint (November 2026). For an imprimitive chi the
+      hypothesis "RH for L(s, chi)" is read as RH for the L-function of the
+      inducing primitive character; the paper says the estimates include
+      imprimitive characters.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, smooth-numbers, dirichlet-characters]
+added: 2026-11-22

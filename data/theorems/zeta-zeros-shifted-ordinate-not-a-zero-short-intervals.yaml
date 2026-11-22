@@ -1,0 +1,35 @@
+id: zeta-zeros-shifted-ordinate-not-a-zero-short-intervals
+title: In short intervals some zeta zero ordinate shifted by a fixed y is not a zero ordinate
+field: analytic-number-theory
+statement_plain: >
+  Fix a real y not equal to 0 and C > 0. There is T_* depending on y and C
+  such that for every T >= T_*, with eps = T^(-C / log log T), there is a
+  gamma in [T, T(1 + eps)] with zeta(1/2 + i gamma) = 0 and
+  zeta(1/2 + i(gamma + y)) not equal to 0.
+statement_formal: |
+  \forall\, T\ge T_*(y,C)\ \ \exists\,\gamma\in\left[T,\ T(1+\varepsilon)\right],\ \varepsilon=T^{-C/\log\log T}:\qquad \zeta\!\left(\tfrac12+i\gamma\right)=0\ \text{ and }\ \zeta\!\left(\tfrac12+i(\gamma+y)\right)\ne 0
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper is motivated by the question of how often a gap between zero
+  ordinates can equal a prescribed y; it proves the theorem by studying sums
+  of x^rho zeta(rho + iy) over zeros rho.
+sources:
+  - authors: W. D. Banks
+    title: Shifting the ordinates of zeros of the Riemann zeta function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.11084
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, zero-ordinates]
+added: 2026-11-22

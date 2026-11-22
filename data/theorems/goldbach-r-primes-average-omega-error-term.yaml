@@ -1,0 +1,52 @@
+id: goldbach-r-primes-average-omega-error-term
+title: The error term in the average number of representations as a sum of r primes is Omega(x^(r-1))
+field: additive-number-theory
+statement_plain: >
+  Let G_r(n) be the sum of Lambda(k_1) ... Lambda(k_r) over all
+  k_1 + ... + k_r = n, and let H_r(x) be -r times the sum over the
+  non-trivial zeros rho of zeta of
+  x^(r-1+rho) / (rho (1 + rho) ... (r - 1 + rho)). Then the sum of G_r(n)
+  over n <= x equals x^r / r! + H_r(x) + Omega(x^(r-1)); that is, the
+  remainder after the main term and the sum over zeros is not o(x^(r-1)).
+statement_formal: |
+  \sum_{n\le x}G_r(n)=\frac{x^{r}}{r!}-r\sum_{\rho}\frac{x^{r-1+\rho}}{\rho(1+\rho)\cdots(r-1+\rho)}+\Omega\!\left(x^{r-1}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This complements the upper bound O(x^(r-1) log^3 x) for the same remainder
+  recorded in the entry goldbach-k-primes-average-order. The paper deduces
+  it from its Theorem 2 (3): under RH the generating Dirichlet series
+  Phi_2(s) has a singularity at 2 rho_1, where rho_1 is the first zero of
+  zeta, with a quantitative lower bound for its growth there. The paper also
+  proves under RH that Phi_r has a natural boundary at Re s = r - 1 for all
+  r >= 2 if and only if Phi_2 has one at Re s = 1; that Phi_2 does have this
+  natural boundary is shown only under an extra conjecture on sums of two
+  zero ordinates, and is not recorded here.
+sources:
+  - authors: G. Bhowmik, J.-C. Schlage-Puchta
+    title: Meromorphic Continuation of the Goldbach generating function
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1002.4806
+    hypothesis_location: Corollary 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Corollary 1 does not print the range of r; from the context (the paper
+      treats sums of r primes for r >= 2) it is read as every r >= 2. The
+      paper gives no separate written proof of the corollary beyond the
+      remark that it follows from the singularity estimate (1).
+    - >-
+      For r = 2 the entry goldbach-average-explicit-formula-error-n-log-cubed
+      reports a stronger Omega(N log log N) result by the same authors from a
+      different paper.
+lean:
+  proved: false
+  path: null
+tags: [goldbach, omega-results, explicit-formula]
+added: 2026-11-22

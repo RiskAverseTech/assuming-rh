@@ -1,0 +1,53 @@
+id: weil-height-lower-bound-low-lying-zeros-dedekind-zeta
+title: Lower bound for the Weil height of an algebraic integer from low-lying zeros of the Dedekind zeta function
+field: algebraic-number-theory
+statement_plain: >
+  Let alpha be a non-zero algebraic integer, K = Q(alpha), n_K its degree
+  and h the Weil height. Let N_K(T) be the number of zeros of zeta_K in the
+  critical strip with imaginary part of absolute value less than T, and
+  lambda_K(T) the sum of 1/(1 + t^2) over the imaginary parts t of those
+  zeros. Then 2 n_K h(alpha) is at least
+  (3.67 / n_K) (lambda_K(2) - N_K(2)/5) - log n_K + O(1), with an absolute
+  implied constant.
+statement_formal: |
+  2\,n_K\,h(\alpha)\ \ge\ \frac{3.67}{n_K}\left(\lambda_K(2)-\frac15 N_K(2)\right)-\log n_K+O(1)
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The paper defines GRH as the statement that all non-trivial zeros of
+  zeta_K(s) lie on the line Re(s) = 1/2, for the field K = Q(alpha) in the
+  statement. So the result is unlocked when Q(alpha) is abelian over the
+  rationals and stays conditional otherwise; the paper's interest is in
+  non-Galois fields. As a consequence, algebraic integers with
+  N_K(1) >= n_K log n_K satisfy h(alpha) >= 0.55 (log n_K)/n_K + O(1), so
+  Lehmer's conjecture holds for them. The paper's Theorem 1.2 gives, under
+  the same hypothesis, Lehmer's conjecture for algebraic integers whose
+  field has many prime ideals of small norm.
+sources:
+  - authors: A. B. Dixit, S. Kala
+    title: Lower bound on height of algebraic numbers and low lying zeros of the Dedekind zeta-function
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2309.15872
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The formula of Theorem 1.1 was read from the PDF because the extracted
+      text is garbled. The O(1) term makes the bound non-trivial only when
+      the field has many low-lying zeros.
+    - >-
+      The proof of Theorem 1.2 also invokes the Riemann Hypothesis for the
+      Riemann zeta function (prime counting error term); Theorem 1.1, the
+      statement recorded here, appears to use only zeta_K.
+lean:
+  proved: false
+  path: null
+tags: [weil-height, lehmer-conjecture, dedekind-zeta, low-lying-zeros]
+added: 2026-11-22

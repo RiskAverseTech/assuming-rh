@@ -1,0 +1,46 @@
+id: sums-of-prime-powers-short-interval-average
+title: Average number of representations as a sum of r >= 3 prime powers over short intervals
+field: additive-number-theory
+statement_plain: >
+  Let k = (k_1, ..., k_r) with integers 2 <= k_1 <= ... <= k_r and r >= 3,
+  let R(n; k) be the sum of Lambda(m_1) ... Lambda(m_r) over all
+  n = m_1^(k_1) + ... + m_r^(k_r), let rho = 1/k_1 + ... + 1/k_r and
+  G(k) the product of Gamma(1 + 1/k_j). Then, as N tends to infinity, the
+  sum of R(n; k) over N < n <= N + H equals
+  (G(k)/Gamma(rho)) H N^(rho - 1)
+  + O(H^2 N^(rho - 2) + H^(1/2) N^(rho - 1/2 - 1/(2 k_r)) (log N)^3),
+  uniformly for H with H / (N^(1 - 1/k_r) (log N)^6) tending to infinity and
+  H < N^(1 - eps).
+statement_formal: |
+  \sum_{n=N+1}^{N+H}R(n;\mathbf{k})=\frac{G(\mathbf{k})}{\Gamma(\rho)}\,HN^{\rho-1}+O_{\mathbf{k}}\!\left(H^{2}N^{\rho-2}+H^{1/2}N^{\rho-\frac12-\frac{1}{2k_r}}(\log N)^{3}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the paper proves the asymptotic formula only for
+  N^(1 - 5/(6 k_r) + eps) < H < N^(1 - eps) (Theorem 1.1); the Riemann
+  Hypothesis allows the shorter range above and a power-saving error. The
+  entry prime-plus-two-prime-squares-short-intervals is a related result
+  for one specific problem, where one exponent is 1.
+sources:
+  - authors: M. Cantarini, A. Gambini, A. Zaccagnini
+    title: A note on an average additive problem with prime numbers
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1901.04481
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Theorem 1.2 as printed begins "For every eps > 0 there exists a
+      constant C = C(eps) > 0" although no C appears in its formula; the
+      statement is recorded without that clause.
+lean:
+  proved: false
+  path: null
+tags: [waring-goldbach, short-intervals, prime-powers]
+added: 2026-11-22

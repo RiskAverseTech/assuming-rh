@@ -1,0 +1,46 @@
+id: prime-gaps-limsup-below-21-25-sqrt-p-log-p
+title: Large gaps between consecutive primes are asymptotically below (21/25) sqrt(p) log p
+field: analytic-number-theory
+statement_plain: >
+  Let p_n be the n-th prime. The lim sup of
+  (p_(n+1) - p_n) / (sqrt(p_n) log p_n) is less than 21/25. More generally,
+  for any alpha >= 0 and c = (21/25)(1 + 2 alpha), the interval
+  (x, x + c sqrt(x) log x] contains more than alpha sqrt(x) primes for all
+  sufficiently large x.
+statement_formal: |
+  \limsup_{n\to\infty}\frac{p_{n+1}-p_n}{\sqrt{p_n}\,\log p_n}<\frac{21}{25}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens, for large primes, the explicit bound recorded in the entry
+  dudek-primes-short-intervals, whose status note already quotes the same
+  paper's Theorem 5: a prime in [x, x + (22/25) sqrt(x) log x] for every
+  x >= 4. The paper bounds the lim sup by 1/C^+(B), where C^+ is the value of
+  a Fourier extremal problem and B is a constant from the Brun-Titchmarsh
+  inequality with 1 <= B <= 36/11, and shows this is below 21/25. The general
+  statement is Theorem 3 with the case alpha = 0 giving Corollary 4; for
+  alpha = 1 it improves Dudek's constant 3 to 63/25.
+sources:
+  - authors: E. Carneiro, M. B. Milinovich, K. Soundararajan
+    title: Fourier optimization and prime gaps
+    year: 2018
+    venue: Preprint
+    url: https://arxiv.org/abs/1708.04122
+    hypothesis_location: Theorem 3 and Corollary 4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The explicit bound with 22/25 (Theorem 5 of this paper) is already
+      quoted inside the entry dudek-primes-short-intervals, which lists this
+      paper as a refinement source without its arXiv link. A reviewer may
+      prefer to merge this asymptotic statement into that entry.
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-gaps, fourier-optimization]
+added: 2026-11-22
