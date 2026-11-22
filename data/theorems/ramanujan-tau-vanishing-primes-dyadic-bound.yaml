@@ -1,0 +1,52 @@
+id: ramanujan-tau-vanishing-primes-dyadic-bound
+title: Explicit bound for primes p in (x, 2x] with tau(p) = 0
+field: analytic-number-theory
+statement_plain: >
+  Let tau be Ramanujan's tau function. For every x at least 10^50, the number
+  of primes p with x < p <= 2x and tau(p) = 0 is at most
+  1.22 * 10^(-5) x^(3/4) / sqrt(log x).
+statement_formal: |
+  \#\{x < p \le 2x : \tau(p) = 0\} \le 1.22 \times 10^{-5}\, \frac{x^{3/4}}{\sqrt{\log x}} \quad (x \ge 10^{50})
+hypotheses_required: [RH, GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The corollary assumes the paper's Conjecture 2.1 for f = Delta, the weight
+  12 level 1 cusp form: for every n at least 0 and every primitive Dirichlet
+  character chi of the conductor used, the twisted symmetric power L-function
+  L(s, Sym^n Delta x chi) has the predicted conductor, gamma factor,
+  analytic continuation and functional equation (parts 1 to 5) and satisfies
+  GRH (part 6). The case n = 0 covers the Riemann zeta function and Dirichlet
+  L-functions; the cases n at least 1 are automorphic L-functions on
+  GL(n+1). The paper's Remark 2.2 says parts 1 to 5 are now known for
+  L(s, Sym^n f) for all n at least 1. The proof applies an explicit
+  Sato-Tate estimate for primes in an arithmetic progression (Theorem 2.3)
+  to the 33 residue classes modulo 23 * 49 * 3094972416000 allowed by
+  Serre's congruence conditions. The same corollary gives a longer explicit
+  bound for x at least 1.2 * 10^36. This is the progression analogue of the
+  entry sato-tate-explicit-error-constant-3-33; the paper compares the
+  result with the leading constant 9.3 in the bound of Rouse and Thorner
+  for the number of primes up to x with vanishing coefficient.
+sources:
+  - authors: T. Hammonds, C. Kothari, N. Luntzlara, S. J. Miller, J. Thorner, H. Wieman
+    title: The Explicit Sato-Tate Conjecture For Primes In Arithmetic Progressions
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/1906.07903
+    hypothesis_location: Corollary 1.3 (hypotheses in Conjecture 2.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Remark 2.2 says parts 1 to 5 of Conjecture 2.1 are known for the untwisted L(s, Sym^n f). It does not say so explicitly for the twists by Dirichlet characters, so PLUS-EXTRA was not listed; a reviewer may prefer to add it, as in the entry sato-tate-explicit-error-constant-3-33.
+    - >-
+      The proof needs only characters modulo the single modulus 23 * 49 * 3094972416000, but Conjecture 2.1 is stated for general primitive characters.
+lean:
+  proved: false
+  path: null
+tags: [ramanujan-tau, sato-tate, explicit-bounds, lehmer-conjecture]
+added: 2026-11-22

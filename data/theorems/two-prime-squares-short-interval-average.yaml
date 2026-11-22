@@ -1,0 +1,41 @@
+id: two-prime-squares-short-interval-average
+title: Average number of representations as a sum of two prime squares in short intervals
+field: additive-number-theory
+statement_plain: >
+  Let r''(n) be the sum of log p1 log p2 over all representations
+  n = p1^2 + p2^2 with p1, p2 prime. Then the sum of r''(n) over
+  N < n <= N + H equals (pi/4) H + O(H^2 / N + H^(1/2) N^(1/4) (log N)^(3/2))
+  as N tends to infinity, uniformly for H with H / (N^(1/2) (log N)^3)
+  tending to infinity and H = o(N).
+statement_formal: |
+  \sum_{n=N+1}^{N+H} r''_{2,2}(n) = \frac{\pi}{4} H + O\!\left(\frac{H^2}{N} + H^{1/2} N^{1/4} (\log N)^{3/2}\right), \qquad r''_{2,2}(n) = \sum_{p_1^2 + p_2^2 = n} \log p_1 \log p_2
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Companion to the entry prime-plus-square-short-interval-average by the
+  same authors, which treats a prime plus a square. The same paper proves,
+  under the same hypothesis, the analogue for a prime square plus a square
+  with error O(H^2 / N + H log log N / (log N)^(1/2)) for H between
+  N^(1/2) (log N)^2 and o(N) (Theorem 3), and unconditional versions for H
+  between N^(7/12 + epsilon) and N^(1 - epsilon) (Theorems 2 and 4).
+sources:
+  - authors: A. Languasco, A. Zaccagnini
+    title: "Short intervals asymptotic formulae for binary problems with primes and powers, II: density 1"
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1504.04709
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The displayed formula in the text extraction is broken across lines; the error term H^2/N + H^(1/2) N^(1/4) (log N)^(3/2) was confirmed against the proof (equations (26) and (29)).
+lean:
+  proved: false
+  path: null
+tags: [waring-goldbach, short-intervals, circle-method]
+added: 2026-11-22

@@ -1,0 +1,48 @@
+id: smooth-numbers-short-intervals-asymptotic-polylog-smoothness
+title: Asymptotic density of smooth numbers in intervals of length x^theta, theta > 1/2
+field: analytic-number-theory
+statement_plain: >
+  Let Psi(x, y) count the integers up to x all of whose prime factors are at
+  most y, let u = log x / log y, and let alpha = alpha(x, y) be the saddle
+  point of Hildebrand and Tenenbaum. For every theta with 1/2 < theta <= 1
+  there is a constant K = K(theta) > 2 such that, uniformly for
+  x^theta <= h <= x and (log x)^K <= y <= 2x,
+  (Psi(x + h, y) - Psi(x, y)) / h equals alpha Psi(x, y) / x times
+  1 + O(min(1/u + h log(u + 1) / (x log y), log(u + 1) / log y)), with the
+  implied constant depending on theta.
+statement_formal: |
+  \frac{\Psi(x+h, y) - \Psi(x, y)}{h} = \alpha\,\frac{\Psi(x,y)}{x}\left(1 + O_\theta\!\left(\min\left\{\frac{1}{u} + \frac{h\log(u+1)}{x\log y},\ \frac{\log(u+1)}{\log y}\right\}\right)\right), \qquad x^\theta \le h \le x, \quad (\log x)^K \le y \le 2x
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  A different statement from the entry
+  smooth-numbers-in-sqrt-length-intervals, which gives a lower bound in
+  intervals of length about sqrt(x) for larger y; this entry is an
+  asymptotic formula for longer intervals and y as small as a power of
+  log x. Unconditionally the same paper proves the asymptotic for
+  theta > 17/30 and y at least exp(C (log x)^(2/3) (log log x)^(4/3))
+  (Theorem 1.1). Theorem 1.3 also gives a second estimate with a main term
+  f_theta(x, y) and error saving a power x^(-1/K), and says that for any
+  L > 2 the result holds for y at least (log x)^L with some
+  theta = theta(L) < 1.
+sources:
+  - authors: K. Younis
+    title: Asymptotics for smooth numbers in short intervals
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2409.05761
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The displayed formula is garbled in the text extraction and was read from page 3 of the PDF.
+lean:
+  proved: false
+  path: null
+tags: [smooth-numbers, short-intervals, saddle-point-method]
+added: 2026-11-22

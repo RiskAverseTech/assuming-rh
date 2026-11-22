@@ -1,0 +1,41 @@
+id: zeta-shifted-moments-general-shifts-sharp-upper-bound
+title: Sharp upper bound for shifted moments of the Riemann zeta function with arbitrary shifts and exponents
+field: analytic-number-theory
+statement_plain: >
+  Let beta_1, ..., beta_m be nonnegative reals and let alpha_1, ..., alpha_m
+  be real shifts, possibly depending on T, with |alpha_k| <= T/2. Then for T
+  large in terms of beta, the integral over T <= t <= 2T of the product of
+  |zeta(1/2 + i(t + alpha_k))|^(2 beta_k) is at most a constant depending on
+  beta times T (log T)^(beta_1^2 + ... + beta_m^2) times the product over
+  j < k of |zeta(1 + i(alpha_j - alpha_k) + 1/log T)|^(2 beta_j beta_k).
+statement_formal: |
+  \int_T^{2T} \prod_{k=1}^m \left|\zeta\!\left(\tfrac12 + i(t+\alpha_k)\right)\right|^{2\beta_k} dt \ll_{\beta} T(\log T)^{\beta_1^2 + \cdots + \beta_m^2} \prod_{1 \le j < k \le m} \left|\zeta\!\left(1 + i(\alpha_j - \alpha_k) + \tfrac{1}{\log T}\right)\right|^{2\beta_j\beta_k}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Sharpens and extends the entry zeta-shifted-moments-sharp-upper-bound (Ng,
+  Shen and Wong, two shifts with equal exponents) to any number of shifts
+  and arbitrary nonnegative exponents, and gives a stronger bound when the
+  differences |alpha_j - alpha_k| are unbounded. It also removes the
+  (log T)^epsilon loss and the restrictions on the shifts in the entry
+  zeta-shifted-moments-upper-bound-chandee. The paper says matching lower
+  bounds are obtained in a subsequent paper, so the bound is sharp.
+sources:
+  - authors: M. J. Curran
+    title: Correlations of the Riemann zeta function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.10123
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, shifted-moments, upper-bounds]
+added: 2026-11-22

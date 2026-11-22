@@ -1,0 +1,44 @@
+id: mobius-of-gcd-sum-error-term-439-1032
+title: Error term x^(439/1032) for the sum of mu(gcd(m, n)) over mn <= x
+field: analytic-number-theory
+statement_plain: >
+  Let S(x) be the sum of mu(gcd(m, n)) over all pairs of positive integers
+  with mn <= x, where mu is the Mobius function. Then for every
+  epsilon > 0,
+  S(x) = (x / zeta(2)^2) (log x + 2 gamma - 1 - 4 zeta'(2) / zeta(2))
+  + O(x^(439/1032 + epsilon)), where gamma is Euler's constant.
+statement_formal: |
+  \sum_{mn \le x} \mu(\gcd(m,n)) = \frac{x}{\zeta(2)^2}\left(\log x + 2\gamma - 1 - 4\,\frac{\zeta'(2)}{\zeta(2)}\right) + O\!\left(x^{439/1032 + \varepsilon}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Unconditionally the paper proves the error term
+  O(x^(1/2) exp(-A (log x log log x)^(1/3))) (Theorem 2). The exponent
+  439/1032 = 0.42538... comes from Theorem 3, which under the hypothesis
+  expresses the error through the error term of the Dirichlet divisor
+  problem, combined with the unconditional divisor bound with exponent
+  131/416. Under the same hypothesis the paper also bounds the mean square
+  of the error term by T^(3/2) exp(A log T / log log T) (Theorem 4).
+sources:
+  - authors: I. Kiuchi, S. Saad Eddin
+    title: The summatory function of the Möbius function involving the greatest common divisor
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2403.02792
+    hypothesis_location: Corollary 1 (deduced from Theorem 3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Corollary 1 is printed without restating the hypothesis; it is deduced from Theorem 3, which assumes the Riemann hypothesis, and the paper's proof section treats it that way.
+    - >-
+      The main term is taken from Theorem 1 of the paper; the paper writes the error term as E_mu(x) = S_mu(x) - M_mu(x).
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, gcd-sums, error-terms]
+added: 2026-11-22

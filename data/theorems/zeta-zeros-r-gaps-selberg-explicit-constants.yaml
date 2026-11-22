@@ -1,0 +1,46 @@
+id: zeta-zeros-r-gaps-selberg-explicit-constants
+title: Large and small r-gaps between zeta zeros with explicit constants
+field: analytic-number-theory
+statement_plain: >
+  Let 0 < gamma_1 <= gamma_2 <= ... be the ordinates of the zeros of the
+  Riemann zeta function in the upper half-plane. For every natural number r
+  there are infinitely many n with
+  (gamma_(n+r) - gamma_n) / (2 pi r / log gamma_n) > 1 + 0.574271 / sqrt(r)
+  and infinitely many n with
+  (gamma_(n+r) - gamma_n) / (2 pi r / log gamma_n) < 1 - 0.299856 / sqrt(r).
+  For r sufficiently large both constants may be replaced by 0.9065.
+statement_formal: |
+  \frac{\gamma_{n+r} - \gamma_n}{2\pi r/\log\gamma_n} > 1 + \frac{\Theta}{\sqrt{r}} \quad \text{and} \quad \frac{\gamma_{n+r} - \gamma_n}{2\pi r/\log\gamma_n} < 1 - \frac{\vartheta}{\sqrt{r}} \quad \text{each for infinitely many } n, \qquad \Theta = 0.574271, \ \vartheta = 0.299856
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is the first published proof of a result announced by Selberg. The
+  existing gap entries (for example zeta-zeros-gaps-2-7327-and-0-5154 and
+  zeta-zeros-large-gaps-3-072) concern consecutive zeros, the case r = 1,
+  where they are sharper; this entry covers all r. A remark in the paper
+  improves the constants to 0.599648 and 0.379674. Inoue (arXiv 2303.06613)
+  later improved them under the same hypothesis to 0.9064997 and 0.484604
+  for all r, see the draft entry zeta-zeros-r-gaps-inoue-constants, and
+  proved unconditionally the weaker form with theta / r^(2/3) in place of
+  the constants over sqrt(r) and unspecified theta.
+sources:
+  - authors: J. B. Conrey, C. L. Turnage-Butterbaugh
+    title: On r-gaps between zeros of the Riemann zeta-function
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1708.00030
+    hypothesis_location: Theorem (the paper's only theorem, unnumbered)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Superseded in its constants by the companion draft entry from arXiv 2303.06613; a reviewer may wish to merge the two.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, gaps-between-zeros, explicit-bounds]
+added: 2026-11-22

@@ -1,0 +1,45 @@
+id: zeta-negative-moments-shifted-asymptotic
+title: Asymptotic formula for negative moments of the Riemann zeta function off the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let k > 0, C > 0 and epsilon > 0, and let alpha be at least the larger of
+  C (log log T)^(4/k + epsilon) / (log T)^(1/(2k)) and
+  (1 + epsilon) log log T / (2 log T). Then (1/T) times the integral of
+  |zeta(1/2 + alpha + it)|^(-2k) over T <= t <= 2T is asymptotic to
+  zeta(1 + 2 alpha)^(k^2) times the product over primes p of
+  (1 - p^(-1 - 2 alpha))^(k^2) (1 + sum over j >= 1 of
+  mu_k(p^j)^2 / p^((1 + 2 alpha) j)), where mu_k(n) is the n-th Dirichlet
+  coefficient of zeta(s)^(-k).
+statement_formal: |
+  \frac{1}{T}\int_T^{2T} \left|\zeta\!\left(\tfrac12 + \alpha + it\right)\right|^{-2k} dt = (1 + o(1))\, \zeta(1+2\alpha)^{k^2} \prod_p \left(1 - \frac{1}{p^{1+2\alpha}}\right)^{k^2} \left(1 + \sum_{j=1}^{\infty} \frac{\mu_k(p^j)^2}{p^{(1+2\alpha)j}}\right), \qquad \alpha \ge \max\left\{ C\,\frac{(\log\log T)^{4/k+\varepsilon}}{(\log T)^{1/(2k)}},\ \frac{(1+\varepsilon)\log\log T}{2\log T} \right\}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper presents this as partial progress toward a conjecture of Gonek
+  on negative moments, settling it in certain ranges. Under the same
+  hypothesis it also proves upper bounds for smaller shifts alpha
+  (Theorems 1.2 and 1.3) and a bound for partial sums of the generalized
+  Mobius function mu_k (Theorem 1.5). No earlier entry treats negative
+  moments of zeta as an integral over t; the entries
+  zeta-derivative-negative-moments-at-zeros-lower-bound and
+  zeta-derivative-negative-second-moment-at-zeros-lower-bound concern
+  discrete negative moments of the derivative at the zeros.
+sources:
+  - authors: H. M. Bui, A. Florea
+    title: Negative moments of the Riemann zeta-function
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2302.07226
+    hypothesis_location: Theorem 1.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-moments, negative-moments, gonek-conjecture]
+added: 2026-11-22

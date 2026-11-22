@@ -1,0 +1,48 @@
+id: elliptic-curve-group-order-at-most-8-prime-factors
+title: Group orders |E(F_p)| with at most 8 prime factors, with the Koblitz constant
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over Q without complex multiplication that is
+  not Q-isogenous to a curve with non-trivial Q-torsion, and let C be the
+  constant in Koblitz's conjecture for E. Then for x at least some x_0(E),
+  the number of primes p <= x for which |E(F_p)| is coprime to a certain
+  integer M_E and has at most 8 prime factors counted with multiplicity is
+  at least 2.778 C x / (log x)^2.
+statement_formal: |
+  \#\bigl\{p \le x : (|E(\mathbb{F}_p)|, M_E) = 1,\ \Omega(|E(\mathbb{F}_p)|) \le 8\bigr\} \ge 2.778\, \frac{C_E^{\mathrm{twin}}\, x}{(\log x)^2} \qquad (x \ge x_0(E))
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The hypothesis is used for the Dedekind zeta functions of the division
+  fields Q(E[n]), through an effective Chebotarev density theorem that
+  supplies the level of distribution for a weighted linear sieve. These
+  fields are non-abelian Galois extensions of the rationals. The paper
+  proves the result under a weaker assumption, its Hypothesis 3.4 with any
+  theta in [1/2, 11/21): no zeros with real part greater than theta. The
+  paper says this improves the 9 prime factors of Steuding and Weng. Under
+  the same assumptions Theorem 1.3 bounds the number of p <= x with
+  |E(F_p)| prime by (5 / (1 - theta) + epsilon) C x / (log x)^2, which
+  under GRH improves the constant 22 of the entry
+  koblitz-conjecture-upper-bound-constant-22 to 10 for these curves.
+sources:
+  - authors: C. David, J. Wu
+    title: Almost prime values of the order of elliptic curves over finite fields
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0812.2860
+    hypothesis_location: Corollary 1.2 (hypothesis stated as Hypothesis 3.4)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Hypothesis 3.4 is worded for Dedekind zeta functions and Artin L-functions satisfying Artin's conjecture. The Artin L-functions actually used are abelian ones for subextensions of Q(E[l]), which divide the Dedekind zeta function of Q(E[l]), and Theorem 3.9 is stated for Dedekind zeta functions of the fields Q(E[n]) only, so only ERH-Dedekind is listed.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, koblitz-conjecture, almost-primes, sieve-methods]
+added: 2026-11-22
