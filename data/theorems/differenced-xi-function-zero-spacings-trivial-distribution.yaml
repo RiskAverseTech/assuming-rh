@@ -1,0 +1,39 @@
+id: differenced-xi-function-zero-spacings-trivial-distribution
+title: Zeros of averaged and differenced shifts of the Riemann xi-function lie on the critical line and are asymptotically equally spaced
+field: analytic-number-theory
+statement_plain: >
+  For real h with 0 < |h| < 1/2, let A_h(s) = (xi(s + h) + xi(s - h))/2 and
+  B_h(s) = (xi(s + h) - xi(s - h))/(2i), where xi is the Riemann
+  xi-function. All zeros of A_h and B_h lie on the line Re(s) = 1/2, they
+  are simple, and the zeros of A_h and B_h interlace. Moreover, for each
+  k >= 1, the joint distribution of k consecutive normalized zero spacings
+  of A_h (and of B_h) up to height T converges, as T tends to infinity, to
+  the point mass at (1, 1, ..., 1). The same holds for the rotated
+  combinations A_(h,theta) and B_(h,theta).
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann hypothesis for the zeta function. For
+  |h| >= 1/2 the paper proves the same statements unconditionally. The
+  paper indicates analogous results for primitive Dirichlet characters
+  under the Riemann hypothesis for L(s, chi) (its Section 5).
+sources:
+  - authors: J. C. Lagarias
+    title: Zero Spacing Distributions for Differenced L-Functions
+    year: 2006
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0601653
+    hypothesis_location: Theorem 2.1 (2) and Theorem 4.1 (2)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeros-of-zeta, zero-spacings, de-branges-spaces]
+added: 2026-11-22

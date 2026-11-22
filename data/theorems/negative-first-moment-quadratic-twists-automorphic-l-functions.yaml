@@ -1,0 +1,48 @@
+id: negative-first-moment-quadratic-twists-automorphic-l-functions
+title: Negative first moment of quadratic twists of automorphic L-functions to the right of the central point
+field: analytic-number-theory
+statement_plain: >
+  Let pi be a fixed self-contragredient automorphic representation of GL(M)
+  over Q for which the pole of L(s, pi x pi) at s = 1 comes from the
+  symmetric square factor, and let chi_n be the quadratic character (n/.)
+  for odd positive n. For a smooth compactly supported weight w and
+  0 < alpha <= 1/2, the sum over odd n of w(n/X) / L^(2)(1/2 + alpha,
+  pi x chi_n), where the Euler factor at 2 is removed, equals
+  X w-hat(1) P(1/2 + alpha; pi) + O((1 + |alpha|)^(1+eps) X^(1 - 2 alpha + eps)),
+  with P an explicit Euler product.
+statement_formal: |
+  \sum_{(n,2)=1} \frac{1}{L^{(2)}\!\left(\tfrac12+\alpha, \pi\otimes\chi_n\right)}\, w\!\left(\tfrac{n}{X}\right) = X\,\widehat{w}(1)\, P\!\left(\tfrac12+\alpha;\pi\right) + O\!\left((1+|\alpha|)^{1+\varepsilon} X^{1-2\alpha+\varepsilon}\right), \qquad P(z;\pi) = \frac12 \prod_{p>2}\left(1 + \left(1-\frac1p\right)\sum_{k=1}^{\infty} \frac{a_\pi(p^{2k})}{p^{2kz}}\right)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is the Ramanujan-Petersson conjecture for pi (all
+  Satake parameters of absolute value at most 1). The paper writes only
+  "GRH"; it is used for the twisted L-functions L(s, pi x chi) with chi a
+  quadratic Dirichlet character, to bound 1/L and the partial sums of its
+  coefficients, and for quadratic Dirichlet L-functions (the paper's bound
+  (2.7)). The coefficients a_pi(n) are those of the Dirichlet series of
+  1/L(s, pi). The condition on pi is written delta(pi) = -1 in the paper.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Negative first moment of quadratic twists of L-functions
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2303.05055
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not list the L-functions covered by its GRH; the codes are read off from where "under GRH" appears in Sections 2 and 3.
+    - >-
+      The paper says only "a self-contragredient representation of GL_M over Q"; it is presumably cuspidal automorphic, as the surrounding discussion suggests.
+lean:
+  proved: false
+  path: null
+tags: [negative-moments, quadratic-twists, multiple-dirichlet-series]
+added: 2026-11-22

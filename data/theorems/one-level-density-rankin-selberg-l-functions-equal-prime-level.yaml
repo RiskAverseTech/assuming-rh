@@ -1,0 +1,42 @@
+id: one-level-density-rankin-selberg-l-functions-equal-prime-level
+title: One-level density of GL(2) x GL(2) Rankin-Selberg L-functions of equal prime level for support beyond (-1, 1)
+field: analytic-number-theory
+statement_plain: >
+  Let k1, k2 be even integers and consider the family of Rankin-Selberg
+  L-functions L(s, f x g) with f and g cuspidal newforms of weights k1, k2
+  and the same prime level N. As N tends to infinity through the primes,
+  the average one-level density of the low-lying zeros converges to the
+  symplectic density predicted by Katz and Sarnak, for test functions whose
+  Fourier transform is supported in (-5/4, 5/4) when k1 and k2 differ, and
+  in (-29/28, 29/28) when k1 = k2.
+statement_formal: |
+  \lim_{N\to\infty} \frac{1}{|H(k_1,N,k_2,N)|} \sum_{f\otimes g \in H(k_1,N,k_2,N)} D(f\otimes g;\phi) = \int_{-\infty}^{\infty} \phi(x)\left(1 - \frac{\sin 2\pi x}{2\pi x}\right) dx
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes GRH for L(s, f x g), L(s, sym^2 f), L(s, sym^2 g) and
+  L(s, sym^2 f x sym^2 g), and, for this theorem, also GRH for Dirichlet
+  L-functions (used in its Section 6 to bound sums of Kloosterman sums). For
+  levels N1, N2 that need not be equal, the paper proves the same limit only
+  for support in (-1/2, 1/2) (Theorem 1.1), without the Dirichlet
+  hypothesis.
+sources:
+  - authors: A. Shashkov
+    title: Low lying zeros of Rankin-Selberg L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2308.16302
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, rankin-selberg, low-lying-zeros]
+added: 2026-11-22
