@@ -1,0 +1,48 @@
+id: nonvanishing-dirichlet-l-functions-short-moduli-averages-above-half
+title: More than half of Dirichlet L-functions are non-vanishing at 1/2 on average over short ranges of moduli
+field: analytic-number-theory
+statement_plain: >
+  Fix eta_1, eta_2 >= 0 with 86 eta_1 + 6 eta_2 < 50/1093. There is a constant
+  c* = c*(eta_1, eta_2) > 0 such that the following holds for every epsilon >
+  0 and all large Q. Average over moduli q in a window of width about
+  Q^(1 - eta_1) around Q (given by a smooth weight) and in a residue class a
+  mod D with D at most Q^(eta_2) and gcd(a, D) = 1. Then the weighted number
+  of primitive characters chi mod q with L(1/2, chi) nonzero is at least
+  (1/2 + c* - epsilon) times the weighted number of all primitive characters.
+  As eta_1 and eta_2 tend to 0, c* tends to 25/2236.
+statement_formal: |
+  \sum_{q \equiv a \bmod D} \Psi\!\left(\tfrac{q}{Q}\right) H_{Q^{\eta_1}}\!\left(\tfrac{q}{Q}\right) \sum_{\substack{\chi \bmod q \text{ primitive} \\ L(1/2,\chi) \ne 0}} 1 \;\ge\; \left(\tfrac12 + c^*(\eta_1,\eta_2) - \varepsilon\right) \sum_{q \equiv a \bmod D} \Psi\!\left(\tfrac{q}{Q}\right) H_{Q^{\eta_1}}\!\left(\tfrac{q}{Q}\right) \sum_{\chi \bmod q \text{ primitive}} 1
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  Here Psi is a fixed nonnegative smooth function supported in [1/2, 3/2]
+  with Psi(1) > 0 and H_T is the 1-periodic function equal to T(1 - T|t|) for
+  |t| <= 1/T and 0 for 1/T <= |t| <= 1/2. The printed statement of Theorem
+  1.4 does not repeat the hypothesis, but the paper introduces it as an
+  improvement of Theorem 1.1 under GRH and its proof begins "Assume GRH".
+  The paper's other main results (non-vanishing proportion close to 1/2 and
+  a one-level density with support beyond (-2, 2), both over short ranges of
+  moduli) are unconditional.
+sources:
+  - authors: D. Basak
+    title: Non-vanishing and One Level Density for Dirichlet $L$-functions Along Short Averages
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2409.12474
+    hypothesis_location: Theorem 1.4 (hypothesis stated in the sentence before it and at the start of its proof)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; since the only L-functions in the paper are Dirichlet L-functions, it is read as GRH for those.
+    - >-
+      Theorem 1.4 as printed uses epsilon without introducing it; it is read as an arbitrary positive number, as in Theorem 1.1.
+lean:
+  proved: false
+  path: null
+tags: [nonvanishing, dirichlet-l-functions, one-level-density]
+added: 2026-11-22

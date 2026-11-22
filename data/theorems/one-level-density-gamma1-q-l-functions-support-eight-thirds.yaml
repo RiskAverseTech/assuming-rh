@@ -1,0 +1,44 @@
+id: one-level-density-gamma1-q-l-functions-support-eight-thirds
+title: One-level density for Gamma_1(q) L-functions with Fourier support up to 8/3
+field: analytic-number-theory
+statement_plain: >
+  Let q be prime and k >= 3 odd. Consider the family of L-functions of Hecke
+  cusp forms f of weight k for Gamma_0(q) with nebentypus chi, as chi runs
+  over the odd characters modulo q, with the harmonic average over f and the
+  average over chi. For every even Schwartz function phi whose Fourier
+  transform is supported in (-8/3, 8/3), the one-level density of the
+  low-lying zeros (scaled by log q / (2 pi)) tends to the integral of phi as
+  q grows, which is the unitary prediction of Katz and Sarnak.
+statement_formal: |
+  \frac{2}{\varphi(q)} \sum_{\substack{\chi \bmod q \\ \chi(-1) = -1}} \; \sum\nolimits^{h}_{f \in H_k(q,\chi)} \; \sum_{\gamma_f} \phi\!\left(\frac{\gamma_f \log q}{2\pi}\right) = \int_{-\infty}^{\infty} \phi(x)\,dx + o(1) \qquad (\operatorname{supp}\hat\phi \subset (-\tfrac83, \tfrac83))
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes GRH throughout, introduced for the L-functions L(s, f)
+  of the newforms f in H_k(q, chi) (weight k >= 3 odd, prime level q,
+  nebentypus chi). It also uses GRH for Dirichlet L-functions L(s, chi) with
+  chi modulo q (Lemma 2.4) to bound prime sums twisted by characters. As an
+  application (Corollary 1.2) the harmonic proportion of forms in the family
+  with non-vanishing central value is at least 5/8.
+sources:
+  - authors: A. Paul
+    title: One-level density of zeros of $Γ_1(q)$ $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.20066
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not list in one place every L-function for which GRH is assumed. The two families named here (L(s, f) and L(s, chi) with chi mod q) are the ones found in the text; contour shifts in Sections 4 and 5 were not all checked for further L-functions.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, modular-forms, low-lying-zeros]
+added: 2026-11-22

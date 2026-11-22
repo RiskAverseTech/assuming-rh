@@ -1,0 +1,50 @@
+id: duke-short-sum-theorem-artin-l-functions-explicit
+title: Explicit form of Duke's short-sum theorem for entire Artin L-functions
+field: analytic-number-theory
+statement_plain: >
+  Let L(s, chi) be an entire Artin L-function whose character chi has degree
+  d and conductor N. Then log L(1, chi) differs from the sum of chi(p)/p over
+  primes p up to (log N)^(1/2) by at most 13.53 d in absolute value.
+statement_formal: |
+  \left| \log L(1,\chi) - \sum_{p \le (\log N)^{1/2}} \frac{\chi(p)}{p} \right| \le 13.53\, d
+hypotheses_required: [RH, GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The theorem is stated for an entire Artin L-function L(s, chi) that
+  satisfies GRH. The extra assumption is that L(s, chi) is entire, which for
+  a general character is Artin's holomorphy conjecture; it is known in
+  cases such as monomial characters. The proof also uses an explicit Mertens
+  theorem under the Riemann Hypothesis for zeta. No waiting_on family fits
+  the Riemann Hypothesis for a general Artin L-function, so only the extra
+  assumption is listed there. As a corollary the paper bounds the residue
+  kappa_K of the Dedekind zeta function of a number field K of degree n >= 2
+  for which zeta_K / zeta is entire:
+  1 / (e^(17.81 (n - 1)) log log |D_K|) <= kappa_K <=
+  (e^(17.81) log log |D_K|)^(n - 1); the existing entry
+  dedekind-zeta-residue-explicit-bounds records sharper constants from a
+  later paper. For abelian characters over Q the L-function is a Dirichlet
+  L-function and the statement would be covered.
+sources:
+  - authors: S. R. Garcia, E. S. Lee
+    title: "Explicit estimates for Artin $L$-functions: Duke's short-sum theorem and Dedekind Zeta Residues"
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2101.11853
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Whether entireness of the Artin L-function should count as PLUS-EXTRA is a judgment call: it is a condition on the object in the theorem, and the result is unconditional on that point whenever Artin's conjecture is known for chi. A reviewer may prefer hypotheses [RH, GRH-Artin] alone once a waiting_on family for Artin L-functions exists.
+    - >-
+      The statement that entireness is known for monomial characters is general background, not taken from this paper; the paper itself notes that zeta_K / zeta is entire when K is normal or has solvable Galois closure.
+lean:
+  proved: false
+  path: null
+tags: [artin-l-functions, explicit-bounds, dedekind-zeta]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: cm-newforms-rational-coefficients-finiteness
+title: Finiteness of CM newforms with rational coefficients in each weight, up to twisting
+field: arithmetic-geometry
+statement_plain: >
+  For each fixed weight there are only finitely many newforms with complex
+  multiplication and rational Fourier coefficients, up to twisting.
+  Equivalently, for each fixed infinity-type there are only finitely many
+  Hecke characters of imaginary quadratic fields with rational coefficients,
+  up to twisting.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper's hypothesis is the extended Riemann hypothesis for odd real
+  Dirichlet characters. The paper shows unconditionally (Theorem 2.4) that
+  such forms of infinity-type l correspond to imaginary quadratic fields K
+  whose class group exponent divides l, and then uses Weinberger's result
+  that the exponent tends to infinity with the discriminant, which holds
+  under a Siegel-Landau condition on the zeros of L(s, chi_K) and in
+  particular under the Riemann hypothesis for L(s, chi_K). The paper states
+  that for weights 2, 3, 4, 5, 6, 2^r + 1 and 3 * 2^r + 1 the finiteness
+  holds unconditionally, by Weinberger, Boyd-Kisilevsky and Heath-Brown.
+sources:
+  - authors: M. Schütt
+    title: CM newforms with rational coefficients
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0511228
+    hypothesis_location: Theorem 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper notes that a weaker Siegel-Landau condition on the zeros of L(s, chi_K) would suffice; the entry records the hypothesis as stated in the theorem.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, complex-multiplication, class-groups]
+added: 2026-11-22

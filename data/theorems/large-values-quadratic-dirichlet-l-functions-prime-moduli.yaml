@@ -1,0 +1,43 @@
+id: large-values-quadratic-dirichlet-l-functions-prime-moduli
+title: Large central values of quadratic Dirichlet L-functions with moduli 8q, q prime
+field: analytic-number-theory
+statement_plain: >
+  Let chi_{8q} be the quadratic Dirichlet character given by the Kronecker
+  symbol (8q/.), which is primitive modulo 8q for an odd prime q. For all
+  sufficiently large X there is a prime q with X < q <= 2X for which
+  L(1/2, chi_{8q}) is at least
+  exp((1/2 + o(1)) sqrt(log X logloglog X / loglog X)).
+statement_formal: |
+  \max_{\substack{q \text{ prime} \\ X < q \le 2X}} L(\tfrac12, \chi_{8q}) \ge \exp\left( \left(\tfrac12 + o(1)\right) \sqrt{\frac{\log X \, \log\log\log X}{\log\log X}} \right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This carries the long resonator approach of Darbar and Maiti (existing
+  entry large-values-quadratic-dirichlet-l-functions-central-point, where
+  the maximum is over all fundamental discriminants) to the thinner family
+  of prime-related moduli, with the same lower bound. The paper says the
+  result implies the Darbar-Maiti bound and, for the analogous family
+  L(1/2, chi_q), improves an unconditional bound of Fan, Hua and Xie. The
+  hypothesis is used in Lemma 2.4, a smoothed sum of chi_{8q}(c) log q over
+  primes q.
+sources:
+  - authors: P. Gao
+    title: Large values of quadratic Dirichlet $L$-functions of prime-related moduli
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.15635
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. That only Dirichlet L-functions are needed is read from Lemma 2.4, the one lemma that carries the hypothesis, whose proof was not checked in detail.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, central-values, resonance-method]
+added: 2026-11-22
