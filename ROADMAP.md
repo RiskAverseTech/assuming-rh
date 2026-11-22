@@ -7,6 +7,7 @@ A running list. Items move up as they get done. New ideas are added at the botto
 - **A "Still waiting" view.** Entries the announced proof does not finish, grouped by which L-functions a future proof would have to reach.
 - **Random audit.** 15 entries checked independently against their papers.
 - **"What would move next".** The Still waiting page counts how many waiting entries each further result (Dedekind zeta functions, then Hecke, then Artin L-functions) would finish.
+- **Full arXiv screen.** Every arXiv abstract that names the hypothesis has been screened and 816 papers opened. The Method page says what this does and does not cover.
 - **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
 
 ## Next
