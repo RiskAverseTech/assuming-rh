@@ -1,0 +1,42 @@
+id: quadratic-character-sums-large-values-sqrt-2-constant
+title: Large values of quadratic character sums with constant sqrt(2)
+field: analytic-number-theory
+statement_plain: >
+  Let X be large and let x satisfy
+  exp(4 sqrt(log X log log X) log log log X) < x < exp((log X)^(1/2 + eps)).
+  Then some fundamental discriminant d with X < |d| <= 2X has
+  sum_{n <= x} chi_d(n) >= sqrt(x) exp((sqrt(2) + o(1)) sqrt(log X / log log X)).
+  The same lower bound holds for the dual sums over n <= |d|/x, normalized
+  by sqrt(|d|/x).
+statement_formal: |
+  \max_{\substack{X<|d|\le 2X \\ d \in \mathcal{F}}} \frac{1}{\sqrt{x}} \sum_{n\le x} \chi_d(n) \ \ge\ \exp\!\left\{ \bigl(\sqrt{2}+o(1)\bigr) \sqrt{\frac{\log X}{\log_2 X}} \right\}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This improves the constant 1 in an earlier conditional bound of Dong and
+  Zhang to sqrt(2). The hypothesis is used through a conditional estimate of
+  Darbar and Maiti for the average of chi_d(n) over fundamental
+  discriminants d. The paper's Theorem 1.2 gives a similar improvement
+  (constant 2) in the longer range exp((log X)^(1/2 + eps)) < x < X^(1/2)
+  and is not part of this entry. The range of x was read from the PDF.
+sources:
+  - authors: Z. Dong, R. Wang, W. Wang, H. Zhang, S. Zhao
+    title: Large values of quadratic character sums
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2608.15773
+    hypothesis_location: Theorem 1.1, through Lemma 2.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. It is taken to mean Dirichlet L-functions because the only stated use is the Darbar-Maiti estimate for averages of quadratic Dirichlet characters; whether that estimate also needs the Riemann zeta function was not checked.
+lean:
+  proved: false
+  path: null
+tags: [character-sums, quadratic-characters, resonance-method]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: globally-primitive-elements-primitive-roots-number-fields
+title: Globally primitive elements of a number field are primitive roots for a positive density of primes
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field and let x be a nonzero element of K that is
+  globally primitive, meaning that x is not an l-th power in K for any prime
+  l. Then x is a primitive root modulo p for a set of primes p of K of
+  positive density.
+statement_formal: |
+  \delta_{K,x} = \sum_{m=1}^{\infty} \frac{\mu(m)}{[K_m : K]} > 0, \qquad K_m = K\bigl(\zeta_m, x^{1/m}\bigr)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The hypothesis is used through Lenstra's generalization of Hooley's
+  theorem (see the entry artin-primitive-root-conjecture), which gives the
+  density of primes for which x is a primitive root as the
+  inclusion-exclusion sum over the Kummer fields K(zeta_m, x^(1/m)). The
+  paper then shows without any hypothesis that this sum is positive when x
+  is globally primitive. The paper writes only "GRH". The rest of the paper,
+  on locally imprimitive points of elliptic curves, is not part of this
+  entry.
+sources:
+  - authors: N. Jones, F. Pappalardi, P. Stevenhagen
+    title: Locally imprimitive points on elliptic curves
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2304.03964
+    hypothesis_location: Theorem 1.1, proved in Section 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH; the code follows the standard hypothesis in Lenstra's theorem, which the paper cites for the existence of the density.
+lean:
+  proved: false
+  path: null
+tags: [primitive-roots, artin-conjecture, number-fields]
+added: 2026-11-22

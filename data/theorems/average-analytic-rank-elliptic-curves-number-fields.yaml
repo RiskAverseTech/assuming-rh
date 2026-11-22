@@ -1,0 +1,38 @@
+id: average-analytic-rank-elliptic-curves-number-fields
+title: The average analytic rank of elliptic curves over a number field of degree d is at most (9d + 1)/2
+field: arithmetic-geometry
+statement_plain: >
+  Let K be a number field of degree d. The average analytic rank of
+  isomorphism classes of elliptic curves over K, ordered by naive height, is
+  at most (9d + 1)/2.
+statement_formal: null
+hypotheses_required: [GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the Hasse-Weil L-functions
+  L(E/K, s) of all elliptic curves E over K. The extra assumption is that
+  all elliptic curves over K are modular, so that these L-functions are
+  automorphic and satisfy the functional equation used in the explicit
+  formula; this is not known for a general number field. Over the rationals
+  better conditional bounds are known (see the entry
+  average-analytic-rank-elliptic-curves-at-most-2).
+sources:
+  - authors: T. Phillips
+    title: Average analytic ranks of elliptic curves over number fields
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2205.09527
+    hypothesis_location: Theorem 1.1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, analytic-rank, number-fields]
+added: 2026-11-22

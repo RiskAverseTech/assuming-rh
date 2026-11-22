@@ -1,0 +1,43 @@
+id: mobius-liouville-fourier-series-holder-exponent-one-quarter
+title: The Mobius and Liouville Fourier series are Holder continuous with exponent 1/4 - eps
+field: analytic-number-theory
+statement_plain: >
+  The Fourier series F(mu; t) = sum of mu(n) e(nt)/n and
+  F(lambda; t) = sum of lambda(n) e(nt)/n, with the Mobius and Liouville
+  functions as coefficients, are Holder continuous with exponent 1/4 - eps
+  for every eps > 0. The graphs of their absolute values, real parts and
+  imaginary parts over [0, 1] have upper box-counting dimension at most 7/4.
+statement_formal: |
+  F(\mu;t) = \sum_{n=1}^{\infty} \frac{\mu(n)\, e^{2\pi i n t}}{n} \in C^{1/4-\epsilon}, \qquad \overline{\dim}_B\, \mathrm{graph}\,|F(\mu;\cdot)| \le \tfrac{7}{4}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used only through the Baker-Harman bound
+  sum_{n <= x} mu(n) e(nt) = O(x^(3/4 + eps)), uniform in t, and its
+  analogue for the Liouville function; the paper's unconditional Theorem 1.1
+  turns such a bound into Holder continuity and a dimension bound. The paper
+  notes that the Holder continuity of the Mobius series was stated in a
+  different form by Veech. The paper does not define its Generalized Riemann
+  Hypothesis; the bound at t = 0 is a bound for the Mertens function, so the
+  Riemann zeta function is needed as well as Dirichlet L-functions.
+sources:
+  - authors: E. K. Chrontsios Garitsis, A. J. Hildebrand
+    title: Hölder continuity and dimensions of fractal Fourier series
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.09806
+    hypothesis_location: Corollary 5.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. That the Baker-Harman bound needs only Dirichlet L-functions and the Riemann zeta function is the standard reading and was not checked in the Baker-Harman paper.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, exponential-sums, fourier-series, fractal-dimension]
+added: 2026-11-22

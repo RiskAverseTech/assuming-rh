@@ -1,0 +1,38 @@
+id: half-interval-fractional-parts-even-monomials-mod-p
+title: Fractional parts of even powers modulo p on a half-interval, error sqrt(p) log log p
+field: analytic-number-theory
+statement_plain: >
+  Let m >= 2 be an even integer and p an odd prime, and let f_m(p) be the
+  number of integers k with 1 <= k < p/2 such that the fractional part of
+  k^m / p exceeds 1/2. Then f_m(p) = p/4 + O_m(sqrt(p) log log p).
+statement_formal: |
+  f_m(p) := \#\Bigl\{ 1 \le k < \tfrac{p}{2} : \Bigl\{ \tfrac{k^m}{p} \Bigr\} > \tfrac12 \Bigr\} = \frac{p}{4} + O_m\bigl(\sqrt{p}\,\log\log p\bigr) \qquad (m \ge 2 \text{ even})
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The proof writes the error as a sum of at most m - 1 incomplete sums of
+  non-principal Dirichlet characters modulo p and bounds each by the
+  conditional Montgomery-Vaughan estimate sqrt(p) log log p. The paper also
+  proves without any hypothesis that for m = 2 the error is at least
+  C sqrt(p) log log p for infinitely many primes p congruent to 3 mod 4, so
+  the conditional bound has the right order and Sun's conjectured O(sqrt(p))
+  error fails.
+sources:
+  - authors: X. Guo, C. Lin, Z. Xu
+    title: On the Fractional Parts of Polynomials Modulo $p$
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.21259
+    hypothesis_location: Theorem 1.7
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [character-sums, fractional-parts, residues-mod-p]
+added: 2026-11-22

@@ -1,0 +1,40 @@
+id: simultaneous-nonvanishing-four-dirichlet-l-functions
+title: Four Dirichlet L-functions are simultaneously nonzero on the critical line for a positive proportion of characters
+field: analytic-number-theory
+statement_plain: >
+  Let q be a prime, let chi_1, ..., chi_4 be even primitive Dirichlet
+  characters with pairwise coprime squarefree moduli D_1, ..., D_4 <= D, and
+  let t be real. If D^272 (1+|t|)^10 << q^(11/16 - eps) and
+  D^188 (1+|t|) << q^(25/32 - eps), then the number of even primitive
+  characters chi mod q for which L(1/2 + it, chi chi_j) is nonzero for all
+  four j is >> q, a positive proportion.
+statement_formal: |
+  \#\Bigl\{ \chi \bmod q \ \text{even primitive} : \prod_{j=1}^{4} L\bigl(\tfrac12+it, \chi\chi_j\bigr) \ne 0 \Bigr\} \gg q
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is needed to approximate the four Dirichlet L-functions by
+  short Euler products in the mollified fourth moment and for the sharp
+  upper bound for a mollified sixth moment. The paper also proves, with no
+  hypothesis and under the same conditions on D, t and q, the weaker lower
+  bound q^(1/3 - eps) (D(1+|t|))^(-2/3) for the number of such characters.
+  The exponents 272 and 188 were read from the PDF.
+sources:
+  - authors: H. M. Bui, A. Florea, M. B. Milinovich
+    title: Simultaneous non-vanishing of Dirichlet L-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2604.11941
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [non-vanishing, dirichlet-l-functions, mollifiers]
+added: 2026-11-22

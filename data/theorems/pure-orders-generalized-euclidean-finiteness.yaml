@@ -1,0 +1,43 @@
+id: pure-orders-generalized-euclidean-finiteness
+title: Only finitely many pure orders Z[m^(1/d)] of each degree are generalized Euclidean
+field: algebraic-number-theory
+statement_plain: >
+  Call an order O in a number field generalized Euclidean if division with
+  a remainder of smaller absolute norm is possible for every pair alpha,
+  beta in O with beta nonzero whose ideal (alpha, beta) is principal. For
+  each fixed integer d >= 2 there are only finitely many integers m such
+  that T^d - m is irreducible over the rationals and the order Z[m^(1/d)]
+  is generalized Euclidean.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  For even d the paper proves the statement without any hypothesis (its
+  Theorem 2), so the hypothesis is needed only for odd d. There it is used
+  through the conditional effective Chebotarev density theorem (Serre),
+  applied to the Kummer field Q(m^(1/p), zeta_p), where p is the least prime
+  factor of d, to find two primes below |m|^(1/6) modulo which m is not a
+  p-th power. That field is not abelian over the rationals. The paper writes
+  only "GRH".
+sources:
+  - authors: C. F. Adajar, K. J. McGown, P. Pollack, E. Treviño
+    title: Orders in the Euclidean Court
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.25793
+    hypothesis_location: Theorem 3, proved from Lemma 9 and Proposition 11
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. The code is read off from the one place it is used, the Chebotarev bound for the field Q(m^(1/p), zeta_p).
+lean:
+  proved: false
+  path: null
+tags: [euclidean-domains, orders, power-residues]
+added: 2026-11-22
