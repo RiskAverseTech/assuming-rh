@@ -1,0 +1,47 @@
+id: dedekind-zeta-residue-prime-splitting-approximation-2-324
+title: Computing the residue of the Dedekind zeta function from the splitting of small primes
+field: computational-number-theory
+statement_plain: >
+  Let K be a number field of degree n > 1 with absolute discriminant D, and
+  let kappa_K be the residue at s = 1 of its Dedekind zeta function. There
+  is an explicit function f_K(X), computed from the splitting in K of the
+  rational primes below X, such that for every real X >= 69 the difference
+  |log kappa_K - f_K(X)| is at most
+  (2.324 log D / (sqrt(X) log(3X))) ((1 + 3.88/log(X/9)) (1 + 2/sqrt(log D))^2
+  + 4.26 (n - 1)/(sqrt(X) log D)).
+statement_formal: |
+  \bigl|\log\kappa_K - f_K(X)\bigr| \le \frac{2.324\,\log\Delta_K}{\sqrt{X}\,\log(3X)} \left( \Bigl(1 + \frac{3.88}{\log(X/9)}\Bigr)\Bigl(1 + \frac{2}{\sqrt{\log\Delta_K}}\Bigr)^{2} + \frac{4.26\,(n-1)}{\sqrt{X}\,\log\Delta_K} \right) \quad (X \ge 69)
+hypotheses_required: [RH, ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The theorem assumes that the Dedekind zeta function of K and the Riemann
+  zeta function have no zeros with real part above 1/2. When K is abelian
+  over the rationals its zeta function is a product of the Riemann zeta
+  function and Dirichlet L-functions, so that case is covered; for a general
+  number field the bound stays conditional. Here
+  f_K(X) = 3 (B_K(X) - B_K(X/9)) / (2 sqrt(X) log(3X)), where B_K(X) is the
+  sum over prime ideal powers p^m of norm below X of
+  (log Np / Np^(m/2)) (sqrt(X) log X / (Np^(m/2) log Np^m) - 1), minus the
+  same sum for the field Q. The result improves the leading constant 8.324
+  in an earlier conditional bound of Bach, which shortens one step of
+  Buchmann's class group algorithm.
+sources:
+  - authors: K. Belabas, E. Friedman
+    title: Computing the residue of the Dedekind zeta function
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1305.0035
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, residue, explicit-bounds, algorithms]
+added: 2026-11-22

@@ -1,0 +1,47 @@
+id: zeta-maximum-and-moments-polylog-intervals-theta-above-3
+title: Maximum and moments of zeta on intervals of length (log T)^theta with theta above 3
+field: analytic-number-theory
+statement_plain: >
+  Fix theta > 3, beta > 0 and epsilon > 0, and let tau be uniform on
+  [T, 2T]. As T tends to infinity, with probability tending to 1 the maximum
+  of |zeta(1/2 + i tau + i h)| over |h| <= (log T)^theta is at most
+  (log T)^(sqrt(1 + theta) + epsilon), and the integral of
+  |zeta(1/2 + i tau + i h)|^beta over |h| <= (log T)^theta is at most
+  (log T)^(f(beta) + epsilon), where f(beta) = beta^2/4 + theta for
+  beta <= 2 sqrt(1 + theta) and f(beta) = beta sqrt(1 + theta) - 1 for larger
+  beta.
+statement_formal: |
+  \mathbb{P}\Bigl( \max_{|h| \le \log^{\theta} T} \bigl|\zeta(\tfrac12 + i\tau + ih)\bigr| > (\log T)^{\sqrt{1+\theta}+\varepsilon} \Bigr) = o(1), \qquad \mathbb{P}\Bigl( \int_{-\log^{\theta}T}^{\log^{\theta}T} \bigl|\zeta(\tfrac12 + i\tau + ih)\bigr|^{\beta}\,dh > (\log T)^{f_\theta(\beta)+\varepsilon} \Bigr) = o(1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper proves these upper bounds for every theta > -1 "if theta <= 3 or
+  if the Riemann hypothesis holds", so the hypothesis is needed only for
+  theta > 3; for -1 < theta <= 0 the exponents are 1 + theta for the maximum
+  and a different formula for the moments. The matching lower bounds (the
+  maximum is at least (log T)^(sqrt(1 + theta) - epsilon) and the moment at
+  least (log T)^(f(beta) - epsilon), with probability tending to 1) are
+  proved with no hypothesis for all theta > -1, so under RH both quantities
+  are determined to leading order for all theta > -1. RH enters through
+  Soundararajan's conditional bound for the moments of zeta on [T, 2T]. The
+  entry zeta-maximum-short-random-intervals-leading-order concerns intervals
+  of bounded length (theta = 0), where this paper needs no hypothesis.
+sources:
+  - authors: L.-P. Arguin, F. Ouimet, M. Radziwiłł
+    title: Moments of the Riemann zeta function on short intervals of the critical line
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1901.04061
+    hypothesis_location: Theorem 1.1 and Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, moments, extreme-values, short-intervals]
+added: 2026-11-22

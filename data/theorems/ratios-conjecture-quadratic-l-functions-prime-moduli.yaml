@@ -1,0 +1,60 @@
+id: ratios-conjecture-quadratic-l-functions-prime-moduli
+title: Ratios conjecture with one shift for quadratic L-functions of prime-related moduli
+field: analytic-number-theory
+statement_plain: >
+  Let K be Q or an imaginary quadratic field of class number one, of degree
+  d_K, let w be a non-negative Schwartz function, and for a primary prime pi
+  of O_K let chi^(c_K pi) be the primitive quadratic character attached to
+  c_K pi (for K = Q, c_K = 8 and pi runs over odd primes). For
+  -1/4 < Re(alpha) < 1/2, Re(beta) > 0 and Re(alpha) + Re(beta) > 0, the sum
+  over primary primes pi of log N(pi) L(1/2 + alpha, chi^(c_K pi)) /
+  L(1/2 + beta, chi^(c_K pi)) w(N(pi)/X) equals an explicit main term of size
+  X plus an explicit term of size X^(1 - alpha), with error
+  O(|1 + alpha|^(3 - d_K/2 + eps) |1 + beta|^eps X^(E + eps)), where
+  E = max(1/2, 1 - Re(alpha) - Re(beta), 1 - Re(alpha)/2 - Re(beta)/2,
+  3/4 - Re(alpha)/2, 1 - Re(beta)) < 1.
+statement_formal: |
+  \begin{aligned} \sum_{\varpi \text{ primary}} \frac{\Lambda_K(\varpi)\, L(\frac12+\alpha, \chi^{(c_K\varpi)})}{L(\frac12+\beta, \chi^{(c_K\varpi)})}\, w\Bigl(\frac{N(\varpi)}{X}\Bigr) &= X\,\widehat{w}(1)\,\frac{\zeta_K^{(2)}(1+2\alpha)}{\zeta_K^{(2)}(1+\alpha+\beta)} + X^{1-\alpha}\,\widehat{w}(1-\alpha)\,B_K^{-\alpha}\,\Gamma_K\bigl(\tfrac12+\alpha\bigr)\,\frac{\zeta_K^{(2)}(1-2\alpha)}{\zeta_K^{(2)}(1-\alpha+\beta)} \\ &\quad + O\bigl(|1+\alpha|^{3-d_K/2+\varepsilon}\,|1+\beta|^{\varepsilon}\,X^{E(\alpha,\beta)+\varepsilon}\bigr) \end{aligned}
+hypotheses_required: [RH, GRH-Dirichlet, GRH-Hecke]
+status: partial
+waiting_on: [power-residue-characters]
+status_note: >
+  Covered case: K = Q, which the theorem names explicitly. There the family
+  consists of the quadratic Dirichlet L-functions L(s, chi^(8p)) for odd
+  primes p, and the proof uses GRH for L(s, chi^(8m)) for positive odd m,
+  which are Dirichlet L-functions of real characters (the Riemann zeta
+  function up to finitely many Euler factors when the character is
+  trivial). For K = Q(sqrt(d)) with d in {-1, -2, -3, -7, -11, -19, -43,
+  -67, -163} the characters are quadratic residue symbols over K, which are
+  Hecke characters and in general not Dirichlet characters, so those cases
+  stay conditional. In the formula zeta_K^(2) is the zeta function of K
+  without Euler factors at 2; Gamma_K(s) is Gamma((1-s)/2)/Gamma(s/2) for
+  K = Q and Gamma(1-s)/Gamma(s) otherwise; B_K is |D_K| N(c_K)/pi for K = Q
+  and |D_K| N(c_K)/(2 pi)^2 otherwise. Consequences proved in the paper
+  under the same hypothesis include the first moment of central values over
+  prime-related moduli with error O(X^(3/4 + eps)) and a one-level density
+  formula. The paper remarks that the first moment result may be provable
+  unconditionally.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: Ratios conjecture of quadratic Hecke $L$-functions of prime-related moduli
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2404.05081
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes "GRH" without a formal definition. It was read from the bounds (2.5), stated "under GRH, for any primary n", as GRH for the quadratic L-functions L(s, chi^(c_K m)) over the field K in question. A reviewer should confirm that the K = Q case uses nothing beyond Dirichlet L-functions and the Riemann zeta function.
+    - >-
+      Only Q(i) and Q(sqrt(-3)) are cyclotomic; power-residue-characters is used as the closest waiting_on family for quadratic residue symbols over the other imaginary quadratic fields.
+lean:
+  proved: false
+  path: null
+tags: [ratios-conjecture, quadratic-characters, prime-moduli, moments]
+added: 2026-11-22
