@@ -1,0 +1,44 @@
+id: prime-divisors-generic-linear-recurrences-positive-lower-density
+title: Prime divisors of generic linear recurrences have positive lower density
+field: analytic-number-theory
+statement_plain: >
+  Let d >= 3 and let P be an integer polynomial of degree d whose Galois
+  group is the symmetric group S_d and such that the quotient of no two
+  roots of P is a root of unity. Let (a_n) be a linearly recursive sequence
+  of integers with characteristic polynomial P. Then the set of primes that
+  divide at least one term a_n has lower density at least 1/(d - 1) among
+  the primes.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper states that the GRH used is that the non-trivial zeros of the
+  Dedekind zeta function of any number field lie on the line Re(s) = 1/2.
+  It is used only in Lemmas 3.1 and 3.2, which say that an algebraic number
+  alpha that is not a root of unity has order at least (p - 1)/C modulo
+  almost all degree one primes as C grows. This is an argument of Hooley
+  type over Kummer extensions of Q(alpha).
+sources:
+  - authors: O. Järviniemi
+    title: Positive lower density for prime divisors of generic linear recurrences
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2102.04042
+    hypothesis_location: Theorem 1.1 (and Theorem 1.2); the hypothesis is stated after Theorem 1.2 and used in Lemma 3.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper states the hypothesis for all number fields. That the fields
+      actually used are Kummer extensions of Q(alpha) is inferred from the
+      form of Lemma 3.2 and its cited sources, not stated outright.
+lean:
+  proved: false
+  path: null
+tags: [linear-recurrences, prime-divisors, artin-conjecture]
+added: 2026-11-22

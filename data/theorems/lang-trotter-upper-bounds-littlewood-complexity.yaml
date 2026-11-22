@@ -1,0 +1,58 @@
+id: lang-trotter-upper-bounds-littlewood-complexity
+title: Lang-Trotter upper bounds x^(5/7) and x^(2/3) via Littlewood complexity
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication, and let pi(a, x) be the number of primes p < x of good
+  reduction with Frobenius trace a_p(E) = a. Then for every epsilon > 0,
+  pi(a, x) = O(x^(5/7 + epsilon)) when a is not 0, and
+  pi(0, x) = O(x^(2/3 + epsilon)).
+statement_formal: |
+  \pi(a,x) = O\!\left(x^{5/7+\epsilon}\right)\ (a\neq 0),\qquad \pi(0,x) = O\!\left(x^{2/3+\epsilon}\right)
+hypotheses_required: [GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is Artin's holomorphy conjecture. The paper assumes
+  the Riemann Hypothesis for Artin L-functions together with the Artin
+  conjecture, for the irreducible representations of the Galois groups of
+  the division fields of E, and uses them through an effective Chebotarev
+  theorem whose error term involves the Littlewood complexity of the
+  conjugacy-invariant set. A footnote says that the claim that this form
+  of Chebotarev can be proved without the Artin conjecture is erroneous.
+  These are the elliptic curve case of Corollaire 17, which treats abelian
+  varieties of dimension g under extra hypotheses. The bounds sharpen those
+  in the existing entries lang-trotter-upper-bounds-serre and
+  lang-trotter-upper-bounds-zywina. The paper notes that Elkies proved
+  pi(0, x) = O(x^(3/4)) unconditionally.
+sources:
+  - authors: J. Bellaïche
+    title: Théorème de Chebotarev et complexité de Littlewood
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1308.1022
+    hypothesis_location: Corollaire 17 and the paragraph after it (elliptic curve case); effective Chebotarev is Théorème 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      No waiting_on family fits the Riemann Hypothesis for Artin L-functions
+      of division fields of elliptic curves; extra-assumption is listed for
+      the Artin conjecture, following the existing entry
+      prime-ideal-races-bias-from-higher-roots.
+    - >-
+      The elliptic curve bounds are stated in the introduction and in a
+      remark after Corollaire 17 rather than as a numbered theorem; the
+      paper asserts that the hypotheses of the corollary hold for non-CM
+      elliptic curves.
+    - >-
+      This is the 2013 arXiv version; a later published version may differ.
+lean:
+  proved: false
+  path: null
+tags: [lang-trotter, chebotarev, elliptic-curves]
+added: 2026-11-22

@@ -1,0 +1,54 @@
+id: generalized-primitive-roots-almost-primes-density
+title: Density of almost-primes for which a given integer is a generalized primitive root
+field: analytic-number-theory
+statement_plain: >
+  An integer a is a generalized primitive root modulo n if it generates a
+  subgroup of maximal size in the multiplicative group modulo n. Fix l >= 1
+  and an integer a that is neither -1 nor a perfect square. Let N_{a,l}(x)
+  be the number of l-almost primes (integers with at most l prime factors
+  counted with multiplicity) up to x for which a is a generalized primitive
+  root. Then N_{a,l}(x) = c(a, l) x (log log x)^(l-1) / ((l-1)! log x) (1 + o(1)),
+  where c(a, l) is an explicit constant given by an Euler product times a
+  correction factor depending on a. So the set has an asymptotic density
+  c(a, l) among the l-almost primes.
+statement_formal: |
+  N_{a,\ell}(x) = \frac{x(\log\log x)^{\ell-1}}{(\ell-1)!\,\log x}\ \prod_{p}\bigl(1-W_\ell(p)\bigr)\,\bigl(1+V_\ell(a_1)\bigr)\,(1+o(1))
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes GRH and uses it through a lemma of Hooley, which it
+  describes as conditional on the generalized Riemann Hypothesis for
+  certain number fields; in Hooley's method these are the Kummer fields
+  Q(zeta_q, a^(1/q)) and the hypothesis concerns their Dedekind zeta
+  functions. The case l = 1 recovers the main term of Hooley's theorem on
+  Artin's conjecture (existing entry artin-primitive-root-conjecture). In
+  the formal statement, W_l(p) depends only on p, l and the largest h with
+  a an h-th power, and V_l(a_1) depends on the squarefree part a_1 of a;
+  their definitions are in Theorem 1 of the paper.
+sources:
+  - authors: P. Péringuey
+    title: Sur une généralisation de la conjecture d'Artin parmi les presque-premiers
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2208.13240
+    hypothesis_location: Théorème 1; the hypothesis enters through Lemme 3 (Hooley)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper is in French and does not define GRH formally; it refers to
+      "certain number fields" as in Hooley's work. The identification with
+      Dedekind zeta functions of Kummer fields follows Hooley's method.
+    - >-
+      The explicit definitions of W_l(p) and V_l(a_1) are long and the text
+      extraction of them is garbled, so they are not reproduced here.
+lean:
+  proved: false
+  path: null
+tags: [artin-conjecture, primitive-roots, almost-primes]
+added: 2026-11-22

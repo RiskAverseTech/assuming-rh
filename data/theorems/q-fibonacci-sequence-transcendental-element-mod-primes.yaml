@@ -1,0 +1,39 @@
+id: q-fibonacci-sequence-transcendental-element-mod-primes
+title: The q-Fibonacci values F_p(g) mod p give a transcendental element of the ring of integers modulo infinitely large primes
+field: algebraic-number-theory
+statement_plain: >
+  Let F_n(q) be Schur's q-Fibonacci polynomials, defined by F_0 = 0, F_1 = 1
+  and F_(n+2)(q) = F_(n+1)(q) + q^n F_n(q). Let A be the quotient of the
+  product of the rings Z/pZ over all primes p by their direct sum. For every
+  square-free integer g > 1, the element (F_p(g) mod p)_p of A is
+  A-transcendental, meaning that it is not a root of any non-zero polynomial
+  with rational coefficients.
+statement_formal: null
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper states GRH as the Riemann Hypothesis for Dedekind zeta functions
+  and assumes it for the Kummer fields Q(zeta_s, g^(1/r)) with r dividing s.
+  It is used through Moree's density result on primes whose residual index
+  of g lies in a prescribed set, which is of Hooley type. The congruence
+  relating F_p to ordinary Fibonacci numbers (Theorem 1.1) is unconditional.
+sources:
+  - authors: T. Anzawa, H. Funakura
+    title: Congruences of the $q$-Fibonacci sequence related with its transcendence
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2301.02838
+    hypothesis_location: Theorem 1.2 (restated as Theorem 3.15); hypothesis in Conjecture 3.9 and Remark 3.10
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [q-fibonacci, residual-index, artin-conjecture]
+added: 2026-11-22

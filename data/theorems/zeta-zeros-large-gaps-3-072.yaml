@@ -1,0 +1,40 @@
+id: zeta-zeros-large-gaps-3-072
+title: Gaps between zeta zeros larger than 3.072 times the average
+field: analytic-number-theory
+statement_plain: >
+  Let gamma <= gamma' be consecutive ordinates of zeros of the Riemann zeta
+  function and let lambda be the lim sup of (gamma' - gamma) log(gamma) / (2 pi).
+  Then lambda > 3.072. So infinitely often two consecutive zeros are at
+  least 3.072 times the average spacing apart.
+statement_formal: |
+  \lambda = \limsup_{\gamma} \, (\gamma' - \gamma)\frac{\log\gamma}{2\pi} > 3.072
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states its hypothesis as: the non-trivial zeros of the
+  Dirichlet L-functions are on the line Re(s) = 1/2. This sharpens the
+  bound lambda > 3.033 of Bui recorded in the existing entry
+  zeta-zeros-large-gaps-3-033, and the earlier lambda > 3 of Ng, both under
+  the same hypothesis.
+sources:
+  - authors: S. Feng, X. Wu
+    title: On large gaps between zeros of the Riemann zeta-function
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1112.6038
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Later papers may have improved the constant 3.072; none is named in
+      this paper.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, large-gaps, zero-spacing]
+added: 2026-11-22

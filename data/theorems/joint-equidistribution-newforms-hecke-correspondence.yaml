@@ -1,0 +1,47 @@
+id: joint-equidistribution-newforms-hecke-correspondence
+title: Joint equidistribution of newforms under the Hecke correspondence
+field: analytic-number-theory
+statement_plain: >
+  Let B be an indefinite quaternion division algebra over Q, Y_1 the compact
+  hyperbolic surface of a maximal order, Y_q the cover attached to an Eichler
+  order of prime level q, and i_q the embedding of Y_q into Y_1 x Y_1 given
+  by the two natural covering maps (the Hecke correspondence). For any
+  sequence of L^2-normalized Hecke-Maass newforms F_q on Y_q, the pushforward
+  under i_q of the measure |F_q|^2 mu_q converges to the uniform measure
+  mu_1 x mu_1 as q tends to infinity through primes, with an effective rate
+  (log q)^(-1/4 + epsilon) for any epsilon > 0.
+statement_formal: null
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper states GRH as Conjecture B for a general class of L-functions
+  L(s, pi) (in the sense of Iwaniec and Kowalski, Section 5.7). In the proof
+  it is applied to the triple product L-functions L(s, F x F x phi) and
+  L(s, f_1 x f_2 x phi) at the central point, following Soundararajan's
+  method, and to symmetric square and other L-functions at s = 1; the paper
+  notes that the L-functions involved have degree up to 12. The Ramanujan
+  conjecture is not assumed; the Kim-Sarnak bound is used instead.
+sources:
+  - authors: A. C. Nordentoft, R. Toma
+    title: Joint equidistribution of newforms
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2509.01602
+    hypothesis_location: Theorem 1.1 (via Theorem 4.9); GRH is stated as Conjecture B in Section 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The full list of L-functions to which GRH is applied was not traced
+      through every lemma; the status_note names those identified in the
+      introduction and in Sections 4 and 6.
+lean:
+  proved: false
+  path: null
+tags: [quantum-unique-ergodicity, equidistribution, triple-product-l-functions]
+added: 2026-11-22

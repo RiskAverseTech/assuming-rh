@@ -1,0 +1,58 @@
+id: polynomial-factoring-p-schemes-composition-factors-gamma-k
+title: Deterministic polynomial factoring over finite fields in time governed by the noncyclic composition factors of a lifted Galois group
+field: computational-number-theory
+statement_plain: >
+  There is a deterministic algorithm that, given a polynomial f of degree n
+  over a finite field F_q together with a lifted polynomial of f (a
+  polynomial of the same degree over a number ring that reduces to f),
+  computes the complete factorization of f over F_q in time polynomial in n,
+  log q and k^(log k). Here k is the smallest positive integer such that
+  every noncyclic composition factor of the Galois group of the lifted
+  polynomial is isomorphic to a subgroup of the symmetric group Sym(k). In
+  particular the algorithm runs in polynomial time when k = 2^(O(sqrt(log n))).
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet, GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  Classified cautiously, following the existing entry
+  deterministic-polynomial-factoring, whose results this theorem refines
+  and generalizes (Huang, Rónyai, Evdokimov). The thesis itself describes
+  GRH as the statement that all non-trivial zeros of Dirichlet L-functions
+  lie on the line Re(z) = 1/2, and says that every statement made under GRH
+  only needs its Hypothesis (*): finite fields F_(p^d) can be constructed
+  deterministically in time polynomial in d log p, and k-th power
+  non-residues of F_(p^d) can be found deterministically in time polynomial
+  in k and d log p. For the proof that GRH implies Hypothesis (*) it cites
+  Huang and Lagarias-Montgomery-Odlyzko. Finding power non-residues in
+  extension fields is the step for which this dataset does not treat
+  Dirichlet L-functions as known to suffice. The hypothesis is used for the
+  running time and correctness of these subroutines.
+sources:
+  - authors: Z. Guo
+    title: $\mathcal{P}$-schemes and Deterministic Polynomial Factoring over Finite Fields
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1706.10028
+    hypothesis_location: Theorem 8.3 (informal version Theorem 1.3); the role of GRH and Hypothesis (*) are in Section 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The thesis states GRH for Dirichlet L-functions only, which read
+      literally would make this entry unlocked. The code GRH-Hecke is kept
+      because Hypothesis (*) asks for power non-residues in extension fields
+      F_(p^d), and the cited proofs (Huang; Lagarias, Montgomery, Odlyzko)
+      use L-functions of number fields. A number theorist should decide
+      whether Dirichlet L-functions suffice for Hypothesis (*).
+    - >-
+      The text on disk is a thesis; no journal reference is printed.
+lean:
+  proved: false
+  path: null
+tags: [polynomial-factoring, finite-fields, algorithms, galois-groups]
+added: 2026-11-22
