@@ -1,0 +1,46 @@
+id: norm-forms-gap-moments-number-fields
+title: Moments of gaps between norm-forms of a number field up to exponent 2
+field: analytic-number-theory
+statement_plain: >
+  Let K be a number field and n_1 < n_2 < ... the positive integers that are
+  norms of algebraic integers of K (norm-forms), and let delta_K(x) be the
+  product of (1 - 1/p) over primes p up to x that are not norms of integral
+  ideals of K. For every gamma in [1, 2), the sum of (n_{i+1} - n_i)^gamma
+  over n_i <= x has order x delta_K(x)^(1-gamma). Also, for 2 <= h_0 <=
+  delta_K(X) X, the number of x in [X, 2X] for which the interval
+  (x, x + h_0 / delta_K(X)] contains at most delta h_0 norm-forms is at
+  most a constant times X h_0^(-1+epsilon).
+statement_formal: |
+  \sum_{n_i \le x} (n_{i+1} - n_i)^{\gamma} \asymp_{\gamma,K} x\,\delta_K(x)^{1-\gamma} \quad (1 \le \gamma < 2), \qquad \delta_K(X) := \prod_{\substack{p \le X \\ p \ne N\mathfrak{a}}} \Bigl(1 - \frac1p\Bigr)
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper assumes the Riemann Hypothesis for all Hecke L-functions. In the
+  proof (Lemma 13.1) the L-functions that occur are Hecke (Groessencharacter)
+  L-functions over subfields Omega of an extension H(K) attached to K, for
+  characters of the cyclic groups Gal(H(K)/Omega). Unconditionally the paper
+  proves the gap-moment estimate for gamma in [1, 3/2) and an exceptional
+  set bound X h_0^(-1/2+epsilon).
+sources:
+  - authors: K. Matomäki, M. Radziwiłł
+    title: Multiplicative functions in short intervals II
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.04290
+    hypothesis_location: Theorem 1.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper prints the right side of (8) as x delta_K(X)^(1-gamma) with a capital X; it was read as delta_K(x).
+    - The exact definition of the field H(K) used in Lemma 13.1 was not traced; the needed Hecke L-functions live over its subfields, so the class-group-characters family is an approximation and the result may also need Hecke L-functions over non-abelian intermediate fields.
+    - For K = Q(i) (sums of two squares) the relevant L-functions may reduce to Dirichlet L-functions; the paper does not state this special case conditionally, so no partial status was claimed.
+lean:
+  proved: false
+  path: null
+tags: [norm-forms, gaps, multiplicative-functions]
+added: 2026-11-22

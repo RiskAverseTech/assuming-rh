@@ -1,0 +1,41 @@
+id: zeta-second-derivative-zero-count-error-term
+title: Counting zeros of the second derivative of zeta with a sharper error term
+field: analytic-number-theory
+statement_plain: >
+  Let N_2(T) be the number of non-real zeros of zeta''(s) with imaginary part
+  in (0, T], counted with multiplicity. Then for T at least 2,
+  N_2(T) = (T / (2 pi)) log(T / (4 pi)) - T / (2 pi)
+  + O(log T / (log log T)^(1/2)).
+statement_formal: |
+  N_2(T) = \frac{T}{2\pi}\log\frac{T}{4\pi} - \frac{T}{2\pi} + O\!\left(\frac{\log T}{(\log\log T)^{1/2}}\right) \quad (T \ge 2)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Extends to the second derivative Akatsuka's result for zeta'(s) under RH;
+  the unconditional formula of Berndt has error O(log T). For the first
+  derivative a sharper error term is recorded in
+  zeta-derivative-zero-count-error-term. The same paper proves under RH
+  (Theorem 1) that the sum of (beta'' - 1/2) over zeros beta'' + i gamma''
+  of zeta'' with 0 < gamma'' <= T equals
+  (2T / (2 pi)) log log(T / (2 pi)) + (1 / (2 pi)) ((1/2) log 2 - 2 log log 2) T
+  - 2 Li(T / (2 pi)) + O((log log T)^2), for T > 2 pi.
+sources:
+  - authors: A. I. Suriajaya
+    title: On the Zeros of the Second Derivative of the Riemann Zeta Function under the Riemann Hypothesis
+    year: 2013
+    venue: Preprint
+    url: https://arxiv.org/abs/1309.7160
+    hypothesis_location: Theorem 3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - Later work may give a sharper error term for higher derivatives (as Ge did for the first derivative); the paper on disk does not address this.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, zeta-derivatives, zero-counting]
+added: 2026-11-22

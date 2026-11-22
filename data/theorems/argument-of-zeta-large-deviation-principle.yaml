@@ -1,0 +1,41 @@
+id: argument-of-zeta-large-deviation-principle
+title: Large deviation principle and exponential moments for Im log zeta on the critical line
+field: analytic-number-theory
+statement_plain: >
+  For every real h, (2 / log log T) times the logarithm of the average over
+  T <= t <= 2T of exp(h Im log zeta(1/2 + it)) tends to h^2 / 2 as T tends
+  to infinity. Equivalently in large deviation form: for h > 0,
+  (2 / log log T) times the logarithm of the proportion of t in [T, 2T]
+  with Im log zeta(1/2 + it) >= h (log log T) / 2 tends to -h^2 / 2.
+statement_formal: |
+  \frac{1}{(\log\log T)/2}\,\log\Bigl(\frac1T\int_T^{2T} e^{h\,\operatorname{Im}\log\zeta(1/2+it)}\,dt\Bigr) \to \frac{h^2}{2} \quad (T\to\infty,\ h\in\mathbb{R})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Deduced from the paper's Theorem 1.2 (mod-Gaussian convergence in the
+  complex plane for a weighted Dirichlet polynomial over primes, under RH)
+  via the Gaertner-Ellis theorem. The paper notes that the analogous
+  statement for Re log zeta(1/2 + it) follows from earlier work, with the
+  upper bound due to Soundararajan under RH. The entry
+  argument-of-zeta-large-deviations-lower-bound treats a different, larger
+  range of deviations with non-sharp constants.
+sources:
+  - authors: M. Wahl
+    title: On the mod-Gaussian convergence of a sum over primes
+    year: 2012
+    venue: Preprint
+    url: https://arxiv.org/abs/1201.5295
+    hypothesis_location: Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper also proves under RH a characteristic function estimate with explicit error (Corollary 1.1) and the mod-Gaussian statement Theorem 1.2; only the large deviation corollaries are recorded.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, argument-of-zeta, large-deviations]
+added: 2026-11-22

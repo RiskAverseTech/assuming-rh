@@ -1,0 +1,46 @@
+id: generalized-fermat-equation-13-13-7
+title: "The generalized Fermat equation x^13 + y^13 = z^7"
+field: arithmetic-geometry
+statement_plain: >
+  The only solutions of x^13 + y^13 = z^7 in coprime integers x, y, z are
+  the trivial ones (1, -1, 0), (-1, 1, 0), (1, 0, 1), (-1, 0, -1),
+  (0, 1, 1) and (0, -1, -1).
+statement_formal: |
+  x^{13}+y^{13}=z^{7},\quad x,y,z\in\mathbb{Z},\ \gcd(x,y,z)=1 \implies xyz=0
+hypotheses_required: [ERH-Dedekind, GRH-Hecke]
+status: still-conditional
+waiting_on: [class-group-characters]
+status_note: >
+  The paper writes only "GRH" and says it is used for the class group
+  computations (in Magma) underlying the 2-Selmer rank computation for the
+  Jacobian J_7 of the hyperelliptic curve C_7: Y^2 = X^7 + constant over
+  the cubic subfield K of Q(zeta_13), before applying Chabauty. The class
+  groups are those of the degree 7 extensions of K cut out by the curve,
+  which are not abelian over the rationals in general. Conditional class
+  group computations rest on GRH bounds for the norms of prime ideals
+  generating the class group, which concern L-functions of class group
+  characters; GRH-Hecke is listed for that reason, as in the existing
+  entries generalized-fermat-equation-2-3-11 and
+  generalized-fermat-equation-5-5-11-13-and-7-7-11. The case of exponent 5
+  is proved unconditionally in the same paper.
+sources:
+  - authors: A. J. Best, S. R. Dahmen, N. Freitas
+    title: "On the generalized Fermat equation $x^{13} + y^{13} = z^n$"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2510.12092
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper does not define GRH or name the number fields whose class groups are computed; the codes follow the convention of the two existing generalized Fermat entries.
+    - The hypothesis could presumably be removed by certifying the class groups unconditionally; the paper does not say whether this is feasible.
+lean:
+  proved: false
+  path: null
+tags: [generalized-fermat-equation, chabauty, class-groups]
+added: 2026-11-22

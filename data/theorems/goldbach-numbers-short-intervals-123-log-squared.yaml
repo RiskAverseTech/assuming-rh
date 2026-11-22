@@ -1,0 +1,32 @@
+id: goldbach-numbers-short-intervals-123-log-squared
+title: A Goldbach number in every interval of length 123 log^2 x
+field: additive-number-theory
+statement_plain: >
+  For every x at least 2, the interval (x, x + 123 (log x)^2] contains an
+  even integer that is the sum of two primes.
+statement_formal: |
+  \text{For all } x \ge 2 \text{ there is an even } n = p_1 + p_2 \text{ with } x < n \le x + 123\log^2 x .
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  Improves the constant 9696 obtained under RH by Cully-Hugill and Dudek to
+  123, as stated in the paper.
+sources:
+  - authors: A. Chirre, M. V. Hagen
+    title: On Goldbach numbers in short intervals
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.23534
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [goldbach, short-intervals, explicit-bounds]
+added: 2026-11-22

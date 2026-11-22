@@ -1,0 +1,40 @@
+id: zeta-joint-moments-with-derivatives-sharp-upper-bound
+title: Sharp upper bounds for joint moments of zeta and its derivatives
+field: analytic-number-theory
+statement_plain: >
+  Let n be a positive integer, k > 2, and h_1, ..., h_n nonnegative reals
+  with h = h_1 + ... + h_n at most k. The integral over T <= t <= 2T of
+  |zeta(1/2+it)|^(2k-2h) times the product over j of
+  |zeta^(j)(1/2+it)|^(2 h_j) is at most a constant times
+  T (log T)^(k^2 + 2 sum_j j h_j). With the lower bound proved in the same
+  paper, the joint moment of zeta and its first derivative has order exactly
+  T (log T)^(k^2 + 2h) for all 0 <= h <= k.
+statement_formal: |
+  \int_T^{2T} |\zeta(\tfrac12+it)|^{2k-2h}\prod_{j=1}^{n}|\zeta^{(j)}(\tfrac12+it)|^{2h_j}\,dt \ll_{k,n,h_1,\dots,h_n} T(\log T)^{k^2+2\sum_{j=1}^{n} j h_j}, \qquad h=\sum_j h_j \le k
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper proves the same bound unconditionally for k at most 2; RH is
+  needed only for k > 2, where the proof relies on Harper's sharp
+  conditional bound for the 2k-th moment of zeta (see
+  zeta-moments-sharp-upper-bound-harper). The matching lower bound
+  (Theorem 1.2, first derivative only, 0 <= h < k + 1/2) is unconditional.
+sources:
+  - authors: M. J. Curran, A. Heycock
+    title: Sharp bounds for joint moments of the Riemann zeta function
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2403.00902
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, moments, zeta-derivatives]
+added: 2026-11-22

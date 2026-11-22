@@ -1,0 +1,35 @@
+id: zeta-moments-at-relative-extrema-critical-line
+title: Moments of zeta at its relative extrema between consecutive zeros
+field: analytic-number-theory
+statement_plain: >
+  For each zero ordinate gamma in (0, T] let gamma+ be the next ordinate and
+  take the maximum of |zeta(1/2 + i tau)|^(2k) over gamma <= tau <= gamma+.
+  For every natural number k and every epsilon > 0, the average of these
+  maxima over the N(T) zeros up to height T lies between constants times
+  (log T)^(k^2 - epsilon) and (log T)^(k^2 + epsilon), for all sufficiently
+  large T.
+statement_formal: |
+  (\log T)^{k^2-\varepsilon} \ll_{k,\varepsilon} \frac{1}{N(T)}\sum_{0<\gamma\le T}\ \max_{\gamma\le\tau_\gamma\le\gamma^{+}} \bigl|\zeta(\tfrac12+i\tau_\gamma)\bigr|^{2k} \ll_{k,\varepsilon} (\log T)^{k^2+\varepsilon}
+hypotheses_required: [RH]
+status: unlocked
+status_note: null
+sources:
+  - authors: M. B. Milinovich
+    title: Moments of the Riemann zeta-function at its relative extrema on the critical line
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/1106.1154
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The paper predates sharper conditional moment bounds for zeta; the epsilon in the upper bound might be removable with later results, but the paper does not say so.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, moments, extreme-values]
+added: 2026-11-22
