@@ -1,0 +1,56 @@
+id: congruence-subgroup-growth-simple-algebraic-groups
+title: Exact congruence subgroup growth constant for arithmetic groups of simple algebraic groups
+field: algebraic-number-theory
+statement_plain: >
+  Let G be an absolutely simple, connected, simply connected algebraic group
+  over a number field k, let S be a finite set of valuations of k containing
+  the archimedean ones such that Gamma = G(O_S) is infinite, and let
+  C_n(Gamma) be the number of congruence subgroups of Gamma of index at most
+  n. Then log C_n(Gamma) divided by (log n)^2 / log log n tends to
+  gamma(G) = (sqrt(R(R+1)) - R)^2 / (4 R^2), where R is the number of positive
+  roots divided by the rank of the split form of G. For SL_d this constant is
+  (sqrt(d(d+2)) - d)^2 / (4 d^2).
+statement_formal: |
+  \lim_{n\to\infty}\frac{\log C_n(\Gamma)}{(\log n)^2/\log\log n}=\gamma(G)=\frac{\bigl(\sqrt{R(R+1)}-R\bigr)^2}{4R^2},\qquad R=\frac{|\Phi_+|}{l}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The upper bound (limsup at most gamma(G), Theorem 2 A) is proved
+  unconditionally and is the main content of the paper. The hypothesis is
+  needed only for the lower bound (Theorem 2 B(1)). The paper also proves the
+  lower bound unconditionally when there is a Galois field K over Q such
+  that G is an inner form over K and either Gal(K/Q) has an abelian subgroup
+  of index at most 4 or [K : Q] < 42 (Theorem 2 B(2)); in particular the
+  result is unconditional for split G over k = Q, so the abelian case that
+  the covered hypotheses would reach is already known. The paper calls its
+  hypothesis GRH for Artin L-functions in the introduction and GRH for
+  number fields in the abstract; the lower bound argument is the one of
+  Goldfeld, Lubotzky and Pyber recorded in the entry
+  congruence-subgroup-growth-sl2-s-integers, which this result generalizes
+  from SL_2 to all such G. The paper also deduces, assuming GRH and Serre's
+  congruence subgroup conjecture, the same limit for the subgroup growth of
+  every lattice in a non-compact higher rank simple Lie group (Theorem 3).
+sources:
+  - authors: A. Lubotzky, N. Nikolov
+    title: Subgroup growth of lattices in semisimple Lie groups
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0406164
+    hypothesis_location: Theorem 2, part B(1) (proved in Section 4 from Theorem 9)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper names its hypothesis as GRH for Artin L-functions but does not say which L-functions the lower bound argument uses; the code ERH-Dedekind follows the companion paper of Goldfeld, Lubotzky and Pyber (zeta functions of a Galois field K and its cyclotomic extensions). A reviewer may prefer GRH-Artin.
+    - >-
+      The definition R = |Phi_+| / l was reconstructed from garbled text and checked against the stated values for SL_d and SL_2.
+lean:
+  proved: false
+  path: null
+tags: [subgroup-growth, arithmetic-groups, congruence-subgroups]
+added: 2026-11-22

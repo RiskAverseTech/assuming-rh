@@ -1,0 +1,44 @@
+id: zeta-critical-line-explicit-bound-log-2-over-2
+title: Explicit bound for zeta on the critical line with leading constant (log 2)/2
+field: analytic-number-theory
+statement_plain: >
+  For all t >= exp(exp(19)), |zeta(1/2 + it)| is at most
+  exp( (log 2 / 2) log t / log log t + 1.455 log t / (log log t)^2 ).
+statement_formal: |
+  \left|\zeta\!\left(\tfrac12+it\right)\right| \le \exp\!\left(\frac{\log 2}{2}\,\frac{\log t}{\log\log t} + 1.455\,\frac{\log t}{(\log\log t)^2}\right) \qquad (t \ge e^{e^{19}})
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Corollary 2.1, the Riemann zeta case of the paper's bounds for
+  log |L(s)| for functions L in the Selberg class, which in general assume
+  the Generalized Riemann Hypothesis for L together with RH for zeta (and,
+  for the explicit versions, a polynomial Euler product and the strong
+  lambda-conjecture). Only the zeta case is recorded here. The leading
+  constant (log 2)/2 is that of Chandee and Soundararajan; the paper says its
+  corollary is better than Chandee's earlier explicit bound for all
+  t >= exp(exp(19)). Related entries: explicit-s-s1-zeta-critical-line-bounds
+  (explicit, all t >= 2 pi, leading constant 0.995) and
+  zeta-critical-line-bound-lower-order-terms (not explicit in t).
+sources:
+  - authors: N. Palojärvi, A. Simonič
+    title: Conditional estimates for L-functions in the Selberg class II
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2410.22711
+    hypothesis_location: Corollary 2.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The proof of Corollary 2.1 in the paper is a short sketch (a numerical choice of parameters in the proof of Theorem 4); the constants 1.455 and exp(exp(19)) are taken from the statement as printed.
+    - >-
+      The paper has many other conditional results for general Selberg class functions; only this zeta corollary is recorded.
+lean:
+  proved: false
+  path: null
+tags: [riemann-zeta, critical-line, explicit-bounds]
+added: 2026-11-22

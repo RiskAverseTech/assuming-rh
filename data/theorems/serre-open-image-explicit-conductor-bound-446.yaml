@@ -1,0 +1,51 @@
+id: serre-open-image-explicit-conductor-bound-446
+title: Improved explicit bound for the largest non-surjective prime of an elliptic curve
+field: arithmetic-geometry
+statement_plain: >
+  Let E be an elliptic curve over the rationals without complex
+  multiplication and with conductor N_E. The mod l Galois representation of
+  E is surjective for every prime l greater than
+  446 log rad(2 N_E) + 2254, where rad(n) is the product of the primes
+  dividing n.
+statement_formal: |
+  C_E\le 446\log\operatorname{rad}(2N_E)+2254
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  This sharpens the bound 964 log rad(2 N_E) + 5760 of Mayle and Wang
+  recorded in the entry serre-open-image-explicit-conductor-bound. The
+  paper says that by GRH it means the conjecture for Artin L-functions of
+  Galois extensions. It is used through the explicit conditional Chebotarev
+  bound of Bach and Sorenson for the least prime with given Frobenius in a
+  Galois extension of Q, applied to fields cut out by quotients of the
+  deviation group of the 2-adic representations of two elliptic curves;
+  these fields are not abelian over the rationals in general. The key steps
+  are improved effective isogeny theorems: for non-isogenous E and E' with
+  mod 2 representations non-isomorphic or absolutely irreducible there is a
+  prime p of good reduction with a_p(E) different from a_p(E') and
+  p <= (124 log rad(2 N_E N_E') + 561)^2 (Theorem 1.3), and for non-CM
+  quadratic twists p <= (223 log rad(2 N_E N_E') + 1127)^2 (Theorem 1.5).
+sources:
+  - authors: I. Chen, J. Swidinsky
+    title: Improved bounds for Serre's open image theorem
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2501.00202
+    hypothesis_location: Theorem 1.7 (via Theorems 1.3 and 1.5 and Proposition 2.7)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper phrases its hypothesis as GRH for Artin L-functions of Galois extensions. The code ERH-Dedekind is used, as in the Mayle-Wang entry, because the Chebotarev bounds it relies on concern the zeros of the Dedekind zeta function of the Galois field; a reviewer may prefer GRH-Artin.
+    - >-
+      The arXiv version on disk is dated 31 December 2024, so the year is given as 2024.
+lean:
+  proved: false
+  path: null
+tags: [elliptic-curves, galois-representations, effective-chebotarev]
+added: 2026-11-22

@@ -1,0 +1,47 @@
+id: random-symmetric-matrix-characteristic-polynomial-irreducible
+title: The characteristic polynomial of a random symmetric sign matrix is irreducible with high probability
+field: algebraic-number-theory
+statement_plain: >
+  Let M_n be an n by n random symmetric matrix whose entries on and above the
+  diagonal are independent and equal to +1 or -1 with probability 1/2 each.
+  There is an absolute constant c > 0 such that the characteristic polynomial
+  det(t I_n - M_n) is irreducible with probability at least
+  1 - 2 exp(-c n^(1/4)).
+statement_formal: |
+  \mathbb{P}\bigl[\det(tI_n - M_n)\ \text{is irreducible}\bigr] \ \ge\ 1 - 2\exp\!\left(-c\,n^{1/4}\right)
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [galois-extensions]
+status_note: >
+  The paper assumes the Riemann Hypothesis for the Dedekind zeta functions
+  of all number fields. It is used, following Breuillard and Varju and
+  Eberhard, for the fields Q(omega) where omega runs over the roots of the
+  characteristic polynomial: a prime-counting estimate with Riemann error
+  term in these fields converts information on the number of roots modulo
+  primes p up to exp(c n^(1/4)) into the number of irreducible factors.
+  These fields have degree up to n and are not abelian over the rationals in
+  general. The rank and singularity estimates over F_p that form the main
+  technical part of the paper (Theorem 1.2) are unconditional.
+sources:
+  - authors: A. Ferber, V. Jain, A. Sah, M. Sawhney
+    title: "Random symmetric matrices: rank distribution and irreducibility of the characteristic polynomial"
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2106.04049
+    hypothesis_location: Theorem 1.1 (the hypothesis enters in Appendix A through Propositions A.2 and A.3)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The fields Q(omega) are in general not Galois, so galois-extensions is the closest waiting_on family but not an exact fit.
+    - >-
+      The schema has no probability or combinatorics field; algebraic-number-theory was chosen because the statement is about irreducibility of an integer polynomial.
+lean:
+  proved: false
+  path: null
+tags: [random-matrices, irreducibility, characteristic-polynomial]
+added: 2026-11-22
