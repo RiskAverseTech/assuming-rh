@@ -1,0 +1,41 @@
+id: lagarias-sequence-prime-divisors-density
+title: "Density of primes dividing the Lagarias sequence 3, 1, 4, 5, 9, ..."
+field: analytic-number-theory
+statement_plain: >
+  Let x_0 = 3, x_1 = 1 and x_(n+1) = x_n + x_(n-1). The set of primes that
+  divide some term of this sequence has a natural density, equal to
+  (1573727/1569610) times the product over all primes p of (1 - p/(p^3 -
+  1)), which is approximately 0.577470679956.
+statement_formal: |
+  \delta = \frac{1573727}{1569610}\prod_{p\ \text{prime}}\Bigl(1-\frac{p}{p^{3}-1}\Bigr) \approx 0.577470679956
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The proof combines Chebotarev partitioning with Hooley's method for
+  Artin's primitive root conjecture. The paper says the hypothesis is needed
+  for estimates of the remainder term in the prime number theorem for the
+  Kummer-type fields F_j (fields such as Q(zeta_ij, r^(1/ij), q^(1/i))),
+  which are not abelian over the rationals. The product over primes is the
+  Stephens constant.
+sources:
+  - authors: "P. Moree, P. Stevenhagen"
+    title: "Prime divisors of the Lagarias sequence"
+    year: 1999
+    venue: Preprint
+    url: https://arxiv.org/abs/math/9912253
+    hypothesis_location: "Theorem (Section 1)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper writes 'generalized Riemann hypothesis' without a formal definition; the description in Section 3 (remainder terms in the prime number theorem for the fields F_j, as in Hooley) points to Dedekind zeta functions of Kummer-type fields.
+lean:
+  proved: false
+  path: null
+tags: [recurrence-sequences, prime-divisors, hooley-method]
+added: 2026-11-22

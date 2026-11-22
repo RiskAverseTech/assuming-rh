@@ -1,0 +1,53 @@
+id: chebotarev-moments-non-gaussian-frobenius-groups
+title: "Non-Gaussian moments in the Chebotarev density theorem for doubly transitive Frobenius groups"
+field: analytic-number-theory
+statement_plain: >
+  Let L/K be a Galois extension of number fields whose group G is a doubly
+  transitive Frobenius group of order d(d+1) with abelian complement, and
+  let M_{2m,1}(U) be the weighted average over u up to scale U of the 2m-th
+  moment, over conjugacy classes, of the centered and smoothed error term in
+  the Chebotarev density theorem at e^u. For fixed m, the liminf as U tends
+  to infinity of M_{2m,1}(U) / M_{2,1}(U)^m is at least (1 + o(1)) mu_{2m}
+  d^(m-2) / ([K:Q] log rd_L)^m as d tends to infinity, where mu_{2m} is the
+  2m-th Gaussian moment and rd_L the root discriminant of L. So the moments
+  are not Gaussian once [K:Q] log rd_L = o(d^(1 - epsilon)), for example for
+  K = Q and L = Q(a^(1/p), zeta_p) with primes a, p tending to infinity such
+  that p^2 does not divide a^(p-1) - 1.
+statement_formal: |
+  \liminf_{U\to\infty}\frac{M_{2m,1}(U;L/K,\Phi,\eta)}{M_{2,1}(U;L/K,\Phi,\eta)^{m}} \ \ge\ (1+o_{d\to\infty}(1))\,\frac{\mu_{2m}\,d^{\,m-2}}{([K:\mathbb{Q}]\log \mathrm{rd}_L)^{m}}
+hypotheses_required: [GRH-Artin]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper defines GRH as the Riemann Hypothesis for all Artin L-functions
+  L(s, L/K, chi) of the extension. Artin's holomorphy conjecture is not an
+  extra assumption here: the paper notes that all irreducible
+  representations of a doubly transitive Frobenius group are monomial, so it
+  holds. The explicit non-Gaussian family consists of the Kummer fields
+  Q(a^(1/p), zeta_p), whose Artin L-functions include one of degree p - 1
+  that is not a Dirichlet L-function. The theorem also gives an explicit
+  lower bound for M_{2m,1} with error terms (formula (10)), valid when rd_L
+  >= e^(Cm).
+sources:
+  - authors: "R. de la Bretèche, D. Fiorilli, F. Jouve"
+    title: "Moments in the Chebotarev density theorem: non-Gaussian families"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2301.12826
+    hypothesis_location: "Theorem 1.2"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The statement is technical (smooth weights eta and Phi from classes defined in the paper); the plain statement here summarizes the second display of Theorem 1.2 and should be checked against the paper.
+    - >-
+      waiting_on is set to kummer-fields because the paper's explicit family is Kummer fields; the theorem itself covers any extension with a doubly transitive Frobenius Galois group.
+lean:
+  proved: false
+  path: null
+tags: [chebotarev, artin-l-functions, moments]
+added: 2026-11-22

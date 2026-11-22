@@ -1,0 +1,49 @@
+id: shifted-moments-cubic-quartic-dirichlet-l-functions-upper-bound
+title: "Upper bounds for shifted moments of cubic and quartic Dirichlet L-functions"
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer k >= 1 and positive reals a_1, ..., a_k, A. For large X and
+  real t_1, ..., t_k with |t_j| <= X^A, the sum over moduli q <= X coprime
+  to 3 and primitive cubic Dirichlet characters chi mod q of the product of
+  |L(1/2 + i t_j, chi)|^(a_j) is << X (log X)^((a_1^2 + ... + a_k^2)/4)
+  times the product over j < l of |zeta(1 + i(t_j - t_l) + 1/log X)|^(a_j
+  a_l / 2). The same bound holds for moduli coprime to 2 and primitive
+  quartic characters chi whose square is still primitive. The implied
+  constants do not depend on X or the t_j.
+statement_formal: |
+  \sum_{\substack{q\le X\\ (q,3)=1}}\ \sum\nolimits^{*}_{\substack{\chi \bmod q\\ \chi^3=\chi_0}}\ \prod_{j=1}^{k}\bigl|L(\tfrac12+it_j,\chi)\bigr|^{a_j}
+  \ll X(\log X)^{(a_1^2+\cdots+a_k^2)/4}\prod_{1\le j<l\le k}\bigl|\zeta\bigl(1+i(t_j-t_l)+\tfrac{1}{\log X}\bigr)\bigr|^{a_ja_l/2}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is applied to the Dirichlet L-functions L(s, chi) of the
+  primitive cubic and quartic characters being averaged (Lemmas 2.8 to
+  2.10). This is the shifted version of the unshifted bound in the existing
+  entry moments-cubic-quartic-dirichlet-l-functions-order-of-magnitude. As
+  an application the paper bounds the 2m-th moments of smoothed cubic and
+  quartic character sums of length Y by X Y^m (log X)^((m-1)^2) for real m >
+  2 (Theorem 1.3); the intermediate Corollary 1.2 also uses a bound for
+  zeta(1 + it) that the paper says holds under the Riemann Hypothesis.
+sources:
+  - authors: "P. Gao, L. Zhao"
+    title: "Shifted moments of cubic and quartic Dirichlet L-functions"
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.14534
+    hypothesis_location: "Theorem 1.1"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper writes only 'GRH' without saying for which L-functions. The lemmas that carry the hypothesis are stated for primitive Dirichlet characters, so GRH-Dirichlet is used here; the Riemann Hypothesis for zeta enters Corollary 1.2 and Theorem 1.3 through the bound (2.3). Either way the status is unlocked.
+    - >-
+      The absolute values in the statement were restored from context; the extracted text of the displayed formula is garbled.
+lean:
+  proved: false
+  path: null
+tags: [moments-of-l-functions, cubic-characters, quartic-characters]
+added: 2026-11-22

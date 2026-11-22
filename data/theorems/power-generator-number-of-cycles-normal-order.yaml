@@ -1,0 +1,43 @@
+id: power-generator-number-of-cycles-normal-order
+title: "Normal order of the number of cycles of the power generator"
+field: analytic-number-theory
+statement_plain: >
+  Fix an integer l >= 2 and let C(l, n) be the number of cycles of the map x
+  -> x^l on the integers modulo n. Then C(l, n) = exp((1 + o(1)) (log log
+  n)^2 log log log n) as n tends to infinity through a set of integers of
+  asymptotic density 1.
+statement_formal: |
+  C(\ell,n) = \exp\!\bigl((1+o(1))\,(\log\log n)^2\,\log\log\log n\bigr) \quad \text{for almost all } n
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The lower bound is proved unconditionally in the same theorem. The
+  hypothesis is needed only for the matching upper bound, which is deduced
+  from Theorem 28 of Kurlberg and Pomerance on the order of l modulo
+  lambda(n) (the existing entry power-generator-period-normal-order). The
+  paper says that by GRH it means the Riemann Hypothesis for Kummerian
+  fields as used by Hooley in his conditional proof of the Artin conjecture.
+  Unconditionally the paper shows C(l, n) <= n^(1/2 - epsilon(n)) for almost
+  all n.
+sources:
+  - authors: "G. Martin, C. Pomerance"
+    title: "The iterated Carmichael λ-function and the number of cycles of the power generator"
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0406335
+    hypothesis_location: "Theorem 2 (last sentence); hypothesis defined in the introduction"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper says 'Riemann Hypothesis for Kummerian fields' without separating Dedekind zeta functions from Artin L-functions; ERH-Dedekind is chosen as in Hooley's method, and the status is the same under either reading.
+lean:
+  proved: false
+  path: null
+tags: [power-generator, carmichael-function, normal-order]
+added: 2026-11-22

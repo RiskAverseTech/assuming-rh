@@ -1,0 +1,41 @@
+id: class-number-indefinite-forms-bound-by-fundamental-unit
+title: "Upper bound for class numbers of indefinite binary quadratic forms in terms of the fundamental unit"
+field: analytic-number-theory
+statement_plain: >
+  Let h(d) be the class number of indefinite binary quadratic forms of
+  positive discriminant d and eps_d = (t + u sqrt(d))/2 the fundamental
+  unit, where (t, u) is the smallest positive solution of t^2 - d u^2 = 4.
+  Then h(d) <= (2 e^gamma / 3 + o(1)) eps_d log log eps_d / log eps_d as d
+  tends to infinity, where gamma is Euler's constant.
+statement_formal: |
+  h(d) \le \Bigl(\frac{2e^{\gamma}}{3}+o(1)\Bigr)\,\frac{\varepsilon_d\,\log\log\varepsilon_d}{\log\varepsilon_d}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used to approximate L(1, chi_d) by an Euler product over
+  primes up to (log d)^2 (Littlewood). The bound saves a factor 3 over the
+  one that follows directly from Littlewood's bound. The paper shows
+  unconditionally that there are many discriminants with h(d) >= (e^gamma/3
+  + o(1)) eps_d log log eps_d / log eps_d (Corollary 1.6), so the
+  conditional bound is within a factor 2 of best possible; the constant
+  e^gamma/3 holds as an upper bound under a conjecture of Littlewood
+  instead.
+sources:
+  - authors: "Y. Lamzouri"
+    title: "Large moments and extreme values of class numbers of indefinite binary quadratic forms"
+    year: 2017
+    venue: Preprint
+    url: https://arxiv.org/abs/1609.01630
+    hypothesis_location: "Theorem 1.4 (first bound)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [class-numbers, real-quadratic-fields, l-one-chi]
+added: 2026-11-22

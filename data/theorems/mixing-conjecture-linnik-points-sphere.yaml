@@ -1,0 +1,51 @@
+id: mixing-conjecture-linnik-points-sphere
+title: "The Michel-Venkatesh mixing conjecture for integral points on the sphere"
+field: analytic-number-theory
+statement_plain: >
+  For a squarefree locally admissible integer d, let R_d be the set of
+  primitive integer points on the sphere of radius sqrt(d), taken modulo a
+  subgroup of SO3(Z) of index at most 2, with its action of the class group
+  of E = Q(sqrt(-d)). For an ideal class [s], the rescaled set of pairs
+  ([x], [s].[x]) with [x] in R_d becomes equidistributed in the product of
+  two copies of the quotient sphere with respect to the product measure as d
+  tends to infinity, provided the smallest norm q of an integral ideal in
+  the class [s] also tends to infinity.
+statement_formal: null
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper assumes "the generalized Riemann hypothesis" without restricting
+  it to a named family. The L-functions it is applied to include the Rankin-
+  Selberg L-functions L(s, pi x chi) of a GL2 automorphic representation pi
+  (the Jacquet-Langlands transfer of a form on the quaternion algebra)
+  twisted by class group characters chi of the imaginary quadratic field,
+  and automorphic L-functions at s = 1 (Lemma 6.1 is stated for L-functions
+  in the extended Selberg class). The general result (Theorems 2.1 and 4.2)
+  covers Heegner points on compact arithmetic surfaces attached to maximal
+  orders in rational quaternion algebras, with an effective rate, and in the
+  indefinite case additionally assumes the Ramanujan conjecture for PGL2;
+  the sphere case recorded here needs only the Riemann hypothesis.
+sources:
+  - authors: "V. Blomer, F. Brumley, I. Khayutin"
+    title: "The mixing conjecture under GRH"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2212.06280
+    hypothesis_location: "Theorem 1.1 (detailed version: Theorem 4.2)"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not list exactly which L-functions need the hypothesis; part of the use is inside a cited paper of Blomer and Brumley that was not read. GRH-automorphic is the cautious code.
+    - >-
+      The entry records only the definite (sphere) case of Theorem 1.1; the indefinite case would also need PLUS-EXTRA for the Ramanujan conjecture.
+lean:
+  proved: false
+  path: null
+tags: [equidistribution, heegner-points, class-groups, mixing]
+added: 2026-11-22

@@ -1,0 +1,45 @@
+id: zeta-zeros-detect-dirichlet-l-function-zeros
+title: "Ordinates of zeta zeros detect the zeros of a Dirichlet L-function"
+field: analytic-number-theory
+statement_plain: >
+  For x > 1, real t and alpha > 0 let Z(x; t, alpha) be the sum, over
+  ordinates gamma of nontrivial zeros of zeta with 0 < gamma - t <= 2 pi
+  alpha x, of (gamma - t)^(-1/2) e(((gamma - t)/(2 pi)) log((gamma - t)/(2
+  pi alpha e))) (1 - log((gamma - t)/(2 pi alpha)) / log x), where e(u) =
+  exp(2 pi i u). Let chi be a non-principal Dirichlet character mod q >= 3
+  with nonzero Gauss sum tau(chi), let t be a real number that is not the
+  ordinate of a zeta zero, and let m(t, chi) be the order of vanishing of
+  L(s, chi) at s = 1/2 + it. Then the sum over a = 1, ..., q of conj(chi)(a)
+  Z(x; t, a/q) equals (e^(pi i/4) conj(tau(chi)) / (2 sqrt(2 pi))) m(t, chi)
+  log x + O(1) as x tends to infinity.
+statement_formal: |
+  \sum_{a=1}^{q}\overline{\chi}(a)\,Z(x;t,a/q) = \frac{e^{\pi i/4}\,\overline{\tau(\chi)}}{2\sqrt{2\pi}}\,m(t,\chi)\,\log x + O(1)
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The formula assumes the Riemann Hypothesis for zeta and for the one
+  Dirichlet L-function L(s, chi). The same theorem also shows that, under
+  the Riemann Hypothesis for zeta alone, the Riemann Hypothesis for L(s,
+  chi) is equivalent to the bound O(x^epsilon) for the left side. Theorem 1
+  gives the corresponding statement for all characters mod q at once.
+sources:
+  - authors: "M. Suzuki"
+    title: "Detecting zeros of Dirichlet L-functions via the Riemann zeta-function"
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.17701
+    hypothesis_location: "Theorem 2 (second part, formula (1.7))"
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The complex conjugation bars on chi(a) and tau(chi) are lost in the extracted text and were read from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, dirichlet-l-functions, linnik-sprindzuk]
+added: 2026-11-22
