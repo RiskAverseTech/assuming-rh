@@ -1,0 +1,50 @@
+id: riesz-sums-mobius-oscillation-order-one-over-delta
+title: Oscillations of Riesz sums of the Mobius function of small order delta
+field: analytic-number-theory
+statement_plain: >
+  There is an absolute constant c > 0 such that for all sufficiently small
+  delta > 0, the Riesz sum of the Mobius function,
+  sum over n <= y of mu(n) (1 - n/y)^delta, divided by sqrt(y), has lim sup
+  at least c/delta and lim inf at most -c/delta as y tends to infinity.
+statement_formal: |
+  \limsup_{y\to\infty}\frac{1}{\sqrt{y}}\sum_{n\le y}\mu(n)\left(1-\frac{n}{y}\right)^{\delta}\ \ge\ \frac{c}{\delta}, \qquad \liminf_{y\to\infty}\frac{1}{\sqrt{y}}\sum_{n\le y}\mu(n)\left(1-\frac{n}{y}\right)^{\delta}\ \le\ -\frac{c}{\delta}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  Besides RH the theorem assumes three things that no Riemann Hypothesis
+  gives: that all nontrivial zeros of zeta are simple; the Linear
+  Independence conjecture (the positive ordinates of the zeros are linearly
+  independent over the rationals); and the bound that the sum of
+  1/|zeta'(rho)| over zeros with |Im rho| <= T is O(T^(1 + epsilon)) for
+  every epsilon > 0 (the paper's equation (8.3), a weaker form of the
+  Gonek-Hejhal conjecture). The paper remarks that (8.3) can be replaced by
+  the convergence of certain series over the zeros. Theorems 8.6 and 8.7
+  give the same statement for the Liouville function and for the error term
+  of the Riesz sum of d(n)^2. The Voronoi summation formulas that form the
+  main part of the paper do not assume RH.
+sources:
+  - authors: S. Chorge, A. Dixit
+    title: Voronoi summation formulas, oscillations of Riesz sums, and Ramanujan-Guinand and Cohen type identities
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2410.04506
+    hypothesis_location: Theorem 8.5
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The first author's surname is printed as Chorge in the paper's running head and as Charge in the arXiv metadata; the paper's spelling is used.
+    - >-
+      The title is taken from the arXiv metadata (with the dotless i of Voronoi written as a plain i); check it against the printed title.
+    - >-
+      Most of the strength of the conclusion comes from the Linear Independence conjecture rather than from RH.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, riesz-sums, linear-independence, oscillations]
+added: 2026-11-22

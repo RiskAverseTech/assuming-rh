@@ -1,0 +1,41 @@
+id: zeta-higher-derivatives-zero-count-error-term
+title: Counting zeros of the k-th derivative of zeta with error O(log T / log log T)
+field: analytic-number-theory
+statement_plain: >
+  For every positive integer k, let N_k(T) be the number of zeros of the
+  k-th derivative of the Riemann zeta function with positive real part and
+  imaginary part in (0, T]. Then
+  N_k(T) = (T / (2 pi)) log(T / (4 pi e)) + O_k(log T / log log T) as T
+  tends to infinity.
+statement_formal: |
+  N_k(T) = \frac{T}{2\pi}\log\frac{T}{4\pi e} + O_k\!\left( \frac{\log T}{\log\log T} \right) \qquad (k \ge 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This extends the entry zeta-derivative-zero-count-error-term, which is the
+  case k = 1 (due to Ge), to all positive integers k with the same error
+  term. According to the paper, Berndt proved the formula unconditionally
+  with error O_k(log T), and the earlier conditional error term for general
+  k was O_k(log T / sqrt(log log T)). Theorem 2 of the paper relates the
+  error term to that of the zero counting function of zeta itself, and the
+  method also gives a zero counting formula for the derivative of Selberg
+  zeta functions, which is not recorded here.
+sources:
+  - authors: F. Ge, A. I. Suriajaya
+    title: Note on the number of zeros of $ζ^{(k)}(s)$
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.14617
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [zeta-derivatives, zero-counting, zeta-zeros]
+added: 2026-11-22

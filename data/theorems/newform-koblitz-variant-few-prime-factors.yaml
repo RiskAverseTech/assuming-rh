@@ -1,0 +1,53 @@
+id: newform-koblitz-variant-few-prime-factors
+title: A Koblitz-type result for newforms of weight at least 4
+field: analytic-number-theory
+statement_plain: >
+  Let f be a newform of weight k >= 4 on Gamma_0(M) with trivial
+  Nebentypus, integer Fourier coefficients a_p(f) and no complex
+  multiplication, and let N_p(f) = p^(k-1) + 1 - a_p(f) for primes p not
+  dividing M. Then the number of primes p <= X for which N_p(f) has at most
+  [5k + 1 + sqrt(log k)] distinct prime factors is at least a positive
+  constant times X / (log X)^2. For the Ramanujan tau function,
+  p^11 + 1 - tau(p) has at most 62 distinct prime factors for infinitely
+  many primes p.
+statement_formal: |
+  \#\left\{ p \le X : \omega\bigl(N_p(f)\bigr) \le \left[ 5k + 1 + \sqrt{\log k} \right] \right\} \ge c_1(f)\, \frac{X}{(\log X)^{2}}, \qquad N_p(f) = p^{k-1} + 1 - a_p(f)
+hypotheses_required: [ERH-Dedekind, GRH-Artin, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [galois-extensions, extra-assumption]
+status_note: >
+  The extra assumption is Artin's Holomorphy Conjecture for Artin
+  L-functions. The paper assumes "GRH and Artin's Holomorphy Conjecture for
+  Artin L-functions"; both enter through the effective Chebotarev density
+  theorem of Murty, Murty and Saradha, applied to the fields cut out by the
+  mod l Galois representations of f, which are not abelian over Q. Under
+  GRH for Artin L-functions alone (Theorem 6.1.1) the paper gets the weaker
+  bound [8k + 1 + sqrt(log k)], which gives 98 in place of 62 for the tau
+  function. With total number of prime factors Omega in place of omega, the
+  bound under both assumptions is [8k + 1 + sqrt(log k)]. Compare the entry
+  newform-coefficient-differences-few-prime-factors.
+sources:
+  - authors: K. Joshi
+    title: Remarks on the Fourier coefficients of modular forms
+    year: 2010
+    venue: Preprint
+    url: https://arxiv.org/abs/1005.2998
+    hypothesis_location: Theorem 2.2.2 (Theorem 1.3.1 in the introduction)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never spells out GRH beyond 'GRH for Artin L-functions'. ERH-Dedekind is listed because the Chebotarev theorem it cites is normally stated under the Riemann Hypothesis for the Dedekind zeta functions of the fields involved; the cited source was not checked.
+    - >-
+      The extracted text garbles the square root sign; the bound [5k + 1 + sqrt(log k)] was read from the abstract and Theorem 1.3.1 together with the arXiv metadata.
+    - >-
+      The definition of N_p(f) at primes dividing the level uses chi_0(p) p^(k-1); the entry states it for primes not dividing M.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, koblitz-conjecture, weighted-sieve, chebotarev]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: baez-duarte-distance-upper-bound-inverse-sqrt-log
+title: Upper bound for the Baez-Duarte distance d_N
+field: analytic-number-theory
+statement_plain: >
+  Let e_n(t) = {t/n} (fractional part) and let d_N be the distance, in the
+  Hilbert space L^2 of the positive half-line with measure dt/t^2, between
+  the indicator function of [1, infinity) and the linear span of
+  e_1, ..., e_N. Then for every delta > 0 and all N >= 3,
+  d_N^2 is at most a constant depending on delta times
+  (log log N)^(5/2 + delta) / sqrt(log N).
+statement_formal: |
+  d_N^2 \ll_{\delta} (\log\log N)^{5/2+\delta}\,(\log N)^{-1/2} \qquad (N \ge 3,\ \delta > 0)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  By the criterion in the entry baez-duarte-strong-nyman-beurling-criterion,
+  d_N tends to 0 if and only if RH holds; this entry gives a rate under RH.
+  It improves the earlier conditional bound d_N^2 = O((log log N)^(-2/3))
+  quoted in the paper. Burnol's unconditional lower bound is
+  d_N^2 >= (C + o(1)) / log N, and the entry
+  nyman-beurling-distance-optimal-constant concerns the conjectured true
+  order 1 / log N under additional assumptions.
+sources:
+  - authors: M. Balazard, A. de Roton
+    title: Sur un critère de Báez-Duarte pour l'hypothèse de Riemann
+    year: 2008
+    venue: Preprint
+    url: https://arxiv.org/abs/0812.1689
+    hypothesis_location: Théorème (Section 1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The paper is in French; the statement was translated from the unnumbered Théorème in Section 1.
+lean:
+  proved: false
+  path: null
+tags: [nyman-beurling, baez-duarte-criterion, mobius-function]
+added: 2026-11-22

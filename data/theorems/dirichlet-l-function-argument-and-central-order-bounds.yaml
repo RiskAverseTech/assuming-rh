@@ -1,0 +1,49 @@
+id: dirichlet-l-function-argument-and-central-order-bounds
+title: Bounds for the argument and the central order of vanishing of a Dirichlet L-function
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character modulo q > 2 and
+  S(t, chi) = (1/pi) arg L(1/2 + it, chi). Then
+  |S(t, chi)| <= (1/4 + o(1)) log(q(|t| + 1)) / log log(q(|t| + 1)), and the
+  order of vanishing of L(s, chi) at s = 1/2 is at most
+  (1/2 + o(1)) log q / log log q.
+statement_formal: |
+  |S(t,\chi)| \le \left(\tfrac14 + o(1)\right)\frac{\log q(|t|+1)}{\log\log q(|t|+1)}, \qquad \operatorname{ord}_{s=1/2} L(s,\chi) \le \left(\tfrac12 + o(1)\right)\frac{\log q}{\log\log q}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This is Example 8 of the paper, the special case for primitive Dirichlet
+  characters of Theorem 5, which is stated for a general class of
+  L-functions L(s, pi) of degree m with local parameters bounded by
+  p^theta, assuming the generalized Riemann hypothesis for that L-function:
+  |S(t, pi)| <= (1/4 + theta/2) log C(t, pi) / log log C(t, pi)^(3/m) plus a
+  lower order term, where C(t, pi) is the analytic conductor. Only the
+  Dirichlet case is recorded here; the general case needs the hypothesis
+  for the L-function in question. The hypothesis is needed only for
+  L(s, chi) itself. For the Riemann zeta function the bound
+  |S(t)| <= (1/4 + o(1)) log t / log log t (Theorem 1, re-proved here) is
+  already in the entry iterated-argument-sn-bounds. The paper also bounds
+  the height of the lowest zero (Theorem 7); compare
+  dirichlet-l-function-lowest-zero-explicit-loglog-bound. The companion
+  bound for S_1(t, chi) is in s1-dirichlet-l-function-bound.
+sources:
+  - authors: E. Carneiro, V. Chandee, M. B. Milinovich
+    title: A note on the zeros of zeta and $L$-functions
+    year: 2015
+    venue: Preprint
+    url: https://arxiv.org/abs/1503.00955
+    hypothesis_location: Theorem 5 and Example 8
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Example 8 writes the error as o(1) without making it explicit; in Theorem 5 it is O(log log log C / log log C) with C the analytic conductor.
+lean:
+  proved: false
+  path: null
+tags: [argument-of-l-functions, order-of-vanishing, beurling-selberg]
+added: 2026-11-22

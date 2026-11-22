@@ -1,0 +1,38 @@
+id: singular-moduli-not-roots-of-rational-trinomials
+title: "Riffaut's conjecture: singular moduli of degree at least 3 are not roots of rational trinomials"
+field: algebraic-number-theory
+statement_plain: >
+  A singular modulus (the j-invariant of an elliptic curve with complex
+  multiplication) of degree at least 3 over the rationals cannot be a root
+  of a trinomial t^m + A t^n + B with rational coefficients, m > n > 0 and
+  B nonzero.
+statement_formal: null
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is used to show that for a primitive odd real Dirichlet
+  character chi modulo m >= 10^10, with m having at most two prime factors,
+  there is a prime p <= 4 sqrt(m) / log m with chi(p) = 1 (Proposition 9.2);
+  the proof uses RH for zeta (Lemma 9.4) and GRH for the Dirichlet
+  L-function of chi. Unconditionally the paper proves that a "trinomial
+  discriminant" exceeds 10^11 in absolute value, has the form -p or -pq, and
+  that at most one exists beyond 10^160.
+sources:
+  - authors: Y. Bilu, F. Luca, A. Pizarro-Madariaga
+    title: Trinomials, singular moduli and Riffaut's conjecture
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2003.06547
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [singular-moduli, complex-multiplication, least-prime-quadratic-residue]
+added: 2026-11-22
