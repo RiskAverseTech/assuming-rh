@@ -1,0 +1,40 @@
+id: shifted-prime-divisor-function-maximal-order-golden-ratio
+title: Large values of the shifted-prime divisor function with the golden ratio constant
+field: analytic-number-theory
+statement_plain: >
+  Let omega*(n) be the number of primes p such that p - 1 divides n. Then
+  there are infinitely many n with
+  omega*(n) > exp((log((1 + sqrt(5))/2) + o(1)) log n / log log n).
+statement_formal: |
+  \omega^*(n) > \exp\!\left(\left(\log\frac{1+\sqrt5}{2}+o(1)\right)\frac{\log n}{\log\log n}\right)\quad\text{for infinitely many } n
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The paper states its hypothesis as the Generalized Riemann Hypothesis for
+  Dirichlet L-functions, used for the count of primes up to x congruent to
+  1 modulo d uniformly in d up to about sqrt(x). This sharpens Prachar's
+  bound with constant (1/2) log 2 under the same hypothesis. The same paper
+  proves unconditionally the bound with constant 0.6736 log 2, which already
+  exceeds Prachar's conditional constant; the conditional constant
+  log((1 + sqrt(5))/2) is about 0.694 log 2. The paper remarks that the
+  conditional bound still holds under the Density Hypothesis, which is
+  weaker than GRH.
+sources:
+  - authors: S. Fan, P. Pollack
+    title: The maximal order of the shifted-prime divisor function
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2510.14167
+    hypothesis_location: Theorem 1.1, inequality (1.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [shifted-primes, divisor-functions, primes-in-progressions]
+added: 2026-11-22

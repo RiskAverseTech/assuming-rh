@@ -1,0 +1,49 @@
+id: continued-fraction-statistics-multiples-of-quadratic-irrational
+title: Continued fractions of m x for a quadratic irrational x are Gauss-Kuzmin typical for almost all m
+field: analytic-number-theory
+statement_plain: >
+  Let x be a quadratic irrational. For a finite pattern w of positive
+  integers let D(y, w) be the asymptotic frequency of w in the continued
+  fraction expansion of y, and let c_w be the value of D(y, w) for Lebesgue
+  almost every y (the Gauss-Kuzmin frequency). Then there are a set S of
+  positive integers of density one and delta > 0 such that for every pattern
+  w, |D(m x, w) - c_w| < C(w, x) m^(-delta) for all m in S. The same holds
+  with S a density one subset of the primes.
+statement_formal: |
+  m\in S \implies |D(mx,w)-c_w| < C(w,x)\,m^{-\delta}
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper writes only "GRH" and does not define it. The hypothesis enters
+  solely through Kurlberg's theorem (quoted as Theorem 12) that a hyperbolic
+  matrix in SL2(Z) has order at least N^(1 - epsilon) modulo N for a density
+  one set of integers N and of primes, applied to the fundamental unit of
+  the real quadratic order. That theorem is the existing entry
+  order-of-unimodular-matrices-modulo-integers, where the hypothesis is the
+  Riemann Hypothesis for Dedekind zeta functions of the Kummer-type fields
+  K(zeta_n, eps^(1/n)). The code here is inherited from that entry.
+sources:
+  - authors: M. Aka
+    title: Continued Fractions of Arithmetic Sequences of Quadratics
+    year: 2019
+    venue: Preprint
+    url: https://arxiv.org/abs/1812.09163
+    hypothesis_location: Theorem 2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never says which L-functions its GRH covers. The code
+      ERH-Dedekind is taken from the cited theorem of Kurlberg as recorded in
+      the existing entry order-of-unimodular-matrices-modulo-integers, not
+      from this paper's text.
+lean:
+  proved: false
+  path: null
+tags: [continued-fractions, quadratic-irrationals, multiplicative-order]
+added: 2026-11-22

@@ -1,0 +1,51 @@
+id: dedekind-zeta-zeros-short-window-explicit-count
+title: Explicit bound for the number of zeros of a Dedekind zeta function in a short window, and for their multiplicity
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a number field of degree n with absolute discriminant D, and let
+  n_K(T; a) be the number of non-trivial zeros of zeta_K with imaginary part
+  in [T - a, T + a]. Put Q = log D + (log T + 20) n + 11. Then
+  n_K(T; 1/2) <= Q/4 + (1.4 n + 2.2) Q^(3/4) - 4 n for T >= 10.5, and
+  n_K(T; 1) <= Q/2 + (4 n + 2.9) sqrt(Q) - 9 n for T >= 11. The multiplicity
+  of any zero at height T >= 10 is at most
+  (3/20) Q + (1.2 n + 0.9) sqrt(Q) - 2.9 n.
+statement_formal: |
+  n_K(T;1) \le \tfrac12 Q + (4n_K+2.9)\sqrt{Q} - 9n_K \quad (T\ge 11),\qquad Q := \log\Delta_K + (\log T+20)\,n_K + 11
+hypotheses_required: [ERH-Dedekind]
+status: partial
+waiting_on: [single-field-zeta]
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dedekind zeta function
+  of the field K itself: the proof uses that each term Re(2/(s - rho)) of a
+  sum over the zeros of zeta_K is positive for Re(s) > 1/2. So the bounds
+  are unlocked for fields K that are abelian over the rationals and stay
+  conditional for general number fields. The displayed inequalities are the
+  worked examples of the general bounds (1.3) and (1.4) of Theorem 1.1,
+  which hold for every window half-width a in (0, 2); the paper also gives
+  a multiplicity bound of order Q log log Q / log Q (Corollary 1.2).
+sources:
+  - authors: L. Grenié, G. Molteni
+    title: Zeros of Dedekind zeta functions under GRH
+    year: 2015
+    venue: To appear in Math. Comp. 2015
+    url: https://arxiv.org/abs/1407.1375
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Marked partial on the strength of the abelian special case, following
+      the existing entry dedekind-zeta-lowest-zero-explicit-bound. A reviewer
+      may prefer still-conditional.
+    - >-
+      The venue is as printed on the arXiv version ("To appear in Math.
+      Comp. 2015"); volume and pages are not in the text.
+lean:
+  proved: false
+  path: null
+tags: [dedekind-zeta, zero-counting, explicit-bounds]
+added: 2026-11-22

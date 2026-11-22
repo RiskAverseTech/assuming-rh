@@ -1,0 +1,41 @@
+id: spectral-gap-hecke-congruence-covers-schottky-surfaces
+title: Explicit spectral gap for Hecke congruence covers of arithmetic Schottky surfaces
+field: analytic-number-theory
+statement_plain: >
+  Let Gamma be a Schottky subgroup of SL2(Z) whose limit set has Hausdorff
+  dimension delta > 3/4, let X be the hyperbolic surface Gamma\H and X_0(p)
+  its cover by the subgroup of matrices in Gamma that are upper triangular
+  modulo p. For a surface Y let Omega(Y) be the multiset of s in (1/2, delta]
+  such that s(1 - s) is an L^2 eigenvalue of the Laplacian on Y. Then for
+  every fixed eta > 0 there is a density one set of primes p for which
+  Omega(X_0(p)) and Omega(X) agree, with multiplicity, on the interval
+  [5 delta/6 + eta, delta]. The number of exceptional primes up to x is
+  O(x^(1 - 3 eta/delta + epsilon)) for every epsilon > 0.
+statement_formal: |
+  \Omega(X_0(p)) \cap \left[\tfrac{5}{6}\delta+\eta,\ \delta\right] = \Omega(X) \cap \left[\tfrac{5}{6}\delta+\eta,\ \delta\right]
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dirichlet L-functions of
+  the Kronecker symbols chi_d; the paper says its proof only requires the
+  characters chi_d with d congruent to 0 or 1 modulo 4. It is used to bound
+  sums of chi_d(p) over primes p in (x/2, x] by x^(1/2 + epsilon) d^epsilon.
+sources:
+  - authors: L. Soares
+    title: Explicit spectral gap for Hecke congruence covers of arithmetic Schottky surfaces
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2305.02228
+    hypothesis_location: Theorem 1.4 (elaborated as Theorem 3.1)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [spectral-gap, hyperbolic-surfaces, thin-groups, quadratic-characters]
+added: 2026-11-22

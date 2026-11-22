@@ -1,0 +1,43 @@
+id: dirichlet-l-function-lowest-zero-explicit-loglog-bound
+title: Explicit bound for the lowest zero of a primitive Dirichlet L-function
+field: analytic-number-theory
+statement_plain: >
+  Let chi be a primitive Dirichlet character of modulus q >= 10^24, and let
+  |gamma_chi| be the smallest absolute value of the imaginary part of a
+  non-trivial zero of L(s, chi). Then |gamma_chi| is at most
+  (pi/2) / (log log q - 1.43) times sqrt(log log q / (log log q - 2)).
+  Asymptotically, |gamma_chi| <= pi / (2 log log q)
+  + pi (log 4 + 1) / (2 (log log q)^2) + O(1 / (log log q)^3).
+statement_formal: |
+  |\gamma_\chi| \le \frac{\pi/2}{\log\log q-1.43}\sqrt{\frac{\log\log q}{\log\log q-2}}\qquad (q\ge 10^{24})
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the Dirichlet L-function
+  L(s, chi) itself, used through the explicit formula with a test function
+  chosen by the positivity technique. The asymptotic form (Theorem 1)
+  removes a log log log q factor from the error term of an earlier bound
+  quoted in the paper. Section 7 of the paper generalizes some results to a
+  larger class of L-functions; this entry records only the Dirichlet case.
+sources:
+  - authors: T. Zhao
+    title: The positivity technique and low-lying zeros of Dirichlet $L$-functions
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2503.15832
+    hypothesis_location: Theorem 19 (explicit) and Theorem 1 (asymptotic)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The year 2026 is the date of the arXiv version on disk (v2); the first
+      version is from 2025.
+lean:
+  proved: false
+  path: null
+tags: [low-lying-zeros, dirichlet-l-functions, explicit-bounds]
+added: 2026-11-22

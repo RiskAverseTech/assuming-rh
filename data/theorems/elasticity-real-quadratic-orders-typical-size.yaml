@@ -1,0 +1,47 @@
+id: elasticity-real-quadratic-orders-typical-size
+title: The typical elasticity of an order in a real quadratic field is (log f)^(1/2 + o(1))
+field: algebraic-number-theory
+statement_plain: >
+  Let K be a fixed real quadratic field with discriminant D, and for a
+  positive integer f let O_f = Z + f O_K be the order of conductor f. The
+  elasticity rho(O_f) is the supremum of r/s over all equalities between a
+  product of r irreducibles and a product of s irreducibles in O_f. Call f
+  split-free if no prime p dividing f has Kronecker symbol (D/p) = 1. Then
+  rho(O_f) = (log f)^(1/2 + O(1/log log log log f)) for all split-free
+  f <= x outside a set of size o(x / sqrt(log x)).
+statement_formal: |
+  \rho(\mathcal{O}_f) = (\log f)^{\frac12 + O(1/\log_4 f)}\quad\text{for almost all split-free } f
+hypotheses_required: [ERH-Dedekind]
+status: still-conditional
+waiting_on: [kummer-fields]
+status_note: >
+  The paper says that GRH refers throughout to the Riemann Hypothesis for
+  Dedekind zeta functions. It is used in Section 6 through Serre's
+  conditional Chebotarev density theorem applied to Galois extensions built
+  from roots of unity and q-th roots of a unit of K, by the method Hooley
+  introduced for Artin's primitive root conjecture, to count inert primes p
+  for which the unit has small order modulo p. The companion result for
+  imaginary quadratic fields (Theorem 1.1) is unconditional.
+sources:
+  - authors: S. Fan, P. Pollack
+    title: The typical elasticity of a quadratic order
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2411.09063
+    hypothesis_location: Theorem 1.2; GRH is defined in footnote 3 and used in Section 6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The size of the exceptional set, o(x / sqrt(log x)), was read from a
+      line where the square root sign is displaced in the text extraction
+      and should be confirmed against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-orders, elasticity, factorization, artin-conjecture]
+added: 2026-11-22

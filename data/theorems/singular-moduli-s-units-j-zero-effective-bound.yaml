@@ -1,0 +1,39 @@
+id: singular-moduli-s-units-j-zero-effective-bound
+title: Effective finiteness of singular moduli that are S-units for the primes 1 mod 3 and one further prime
+field: arithmetic-geometry
+statement_plain: >
+  Let S_0 be the set of rational primes congruent to 1 modulo 3, let l >= 5
+  be any prime, and let S_l be S_0 together with l. Then there is an
+  effectively computable bound B(l) such that every singular modulus j (the
+  j-invariant of a complex elliptic curve with complex multiplication) that
+  is an S_l-unit has discriminant of absolute value at most B(l). In
+  particular there are only finitely many such singular moduli.
+statement_formal: null
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis in Theorem 1.4 is the Riemann Hypothesis for the Dirichlet
+  L-functions attached to imaginary quadratic fields, that is, for the
+  Kronecker symbols of negative discriminant. The proof needs only a weaker
+  consequence (property P(k) in Theorem 5.5): a bound of the shape
+  L'(1, chi)/L(1, chi) = O(log log |D|) for these characters. The analogous
+  results in the paper for j - j_0 with j_0 other than 0 are unconditional.
+sources:
+  - authors: F. Campagna
+    title: Effective bounds on differences of singular moduli that are S-units
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2102.06396
+    hypothesis_location: Theorem 1.4 (deduced from Theorem 5.5)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [singular-moduli, complex-multiplication, s-units]
+added: 2026-11-22
