@@ -23,7 +23,6 @@ sources:
     venue: Math. Comp. 55, 355-380
     doi: 10.1090/S0025-5718-1990-1023756-8
     role: conditional-proof
-related: [least-quadratic-nonresidue]
 review:
   state: ai-classified
   checked_by: null
@@ -35,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+related: [least-quadratic-nonresidue]
 tags: [algorithms, derandomization, quadratic-residues]
 added: 2026-11-21

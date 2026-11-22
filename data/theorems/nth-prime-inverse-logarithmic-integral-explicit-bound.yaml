@@ -33,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [schoenfeld-prime-counting-error]
 tags: [primes, nth-prime, explicit-bounds, rh-equivalent]
 added: 2026-11-21

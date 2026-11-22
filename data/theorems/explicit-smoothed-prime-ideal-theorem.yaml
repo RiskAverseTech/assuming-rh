@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [explicit-prime-ideal-theorem-chebyshev-function]
 tags: [prime-ideals, explicit-bounds, dedekind-zeta]
 added: 2026-11-22

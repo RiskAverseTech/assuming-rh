@@ -27,7 +27,6 @@ sources:
     venue: Ann. of Math. 160, 781-793
     doi: 10.4007/annals.2004.160.781
     role: unconditional-proof
-related: [miller-deterministic-primality]
 review:
   state: ai-classified
   checked_by: null
@@ -37,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+related: [miller-deterministic-primality]
 tags: [primality, algorithms, complexity]
 added: 2026-11-21

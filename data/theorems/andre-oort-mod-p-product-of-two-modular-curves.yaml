@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [andre-oort-products-of-modular-curves]
 tags: [andre-oort, modular-curves, complex-multiplication]
 added: 2026-11-22

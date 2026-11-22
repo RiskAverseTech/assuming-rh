@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [modified-quadratic-character-sums-k-free-integers]
 tags: [character-sums, k-free-integers, limiting-distribution]
 added: 2026-11-22

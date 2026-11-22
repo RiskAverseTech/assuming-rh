@@ -53,5 +53,6 @@ review:
 lean:
   proved: false
   path: null
+related: [serre-surjectivity-mod-l-conductor-bound]
 tags: [elliptic-curves, galois-representations, serre-open-image, chebotarev]
 added: 2026-11-22

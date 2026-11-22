@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-small-gaps-0-50895]
 tags: [zeta-derivative, zeta-zeros, zero-gaps]
 added: 2026-11-21

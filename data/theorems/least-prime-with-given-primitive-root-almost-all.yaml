@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [least-prime-with-given-primitive-root]
 tags: [primitive-roots, artin-conjecture, larger-sieve]
 added: 2026-11-21

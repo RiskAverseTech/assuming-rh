@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [average-analytic-rank-quadratic-twists-at-most-3-2]
 tags: [elliptic-curves, analytic-rank, quadratic-twists]
 added: 2026-11-22

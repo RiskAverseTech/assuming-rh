@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [littlewood-l1-chi-bounds]
 tags: [zeta-one-line, dirichlet-l-functions, derivatives, extreme-values]
 added: 2026-11-22

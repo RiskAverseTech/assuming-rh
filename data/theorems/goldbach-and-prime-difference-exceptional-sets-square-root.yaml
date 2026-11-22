@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [prime-plus-square-exceptional-set-bound]
 tags: [goldbach, exceptional-sets, prime-differences, quasi-riemann-hypothesis]
 added: 2026-11-21

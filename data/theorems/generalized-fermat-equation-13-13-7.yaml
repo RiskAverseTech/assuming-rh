@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [generalized-fermat-equation-2-3-11, generalized-fermat-equation-5-5-11-13-and-7-7-11]
 tags: [generalized-fermat-equation, chabauty, class-groups]
 added: 2026-11-22

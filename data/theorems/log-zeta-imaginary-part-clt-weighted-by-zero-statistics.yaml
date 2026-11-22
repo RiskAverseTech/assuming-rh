@@ -40,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [weighted-central-limit-theorem-log-zeta]
 tags: [zeta-function, central-limit-theorem, zeros]
 added: 2026-11-22

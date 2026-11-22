@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-gaps-2-7327-and-0-5154, zeta-zeros-small-gaps-0-50895]
 tags: [zeta-zeros, zero-gaps, large-gaps]
 added: 2026-11-21

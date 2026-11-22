@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, newform-coefficient-differences-few-prime-factors]
 tags: [modular-forms, fourier-coefficients, largest-prime-factor, effective-chebotarev]
 added: 2026-11-22

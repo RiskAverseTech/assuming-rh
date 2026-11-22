@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [quadratic-character-sum-moments-sharp-upper-bound]
 tags: [character-sums, moments, dirichlet-l-functions]
 added: 2026-11-21

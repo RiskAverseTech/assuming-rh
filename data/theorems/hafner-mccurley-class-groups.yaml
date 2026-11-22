@@ -26,7 +26,6 @@ sources:
     doi: 10.1090/S0894-0347-1989-1002631-0
     hypothesis_location: "Theorem 1 (main result) and Theorem 2 (generators of the class group, quoted from Schoof)"
     role: conditional-proof
-related: [bach-class-group-generators]
 review:
   state: ai-classified
   checked_by: null
@@ -40,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [bach-class-group-generators]
 tags: [class-groups, algorithms, quadratic-fields]
 added: 2026-11-21

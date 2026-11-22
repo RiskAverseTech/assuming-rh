@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [frobenius-fields-abelian-varieties-power-saving]
 tags: [abelian-surfaces, split-reductions, chebotarev]
 added: 2026-11-21

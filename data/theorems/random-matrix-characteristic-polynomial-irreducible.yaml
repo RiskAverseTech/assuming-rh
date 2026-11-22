@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [random-symmetric-matrix-characteristic-polynomial-irreducible]
 tags: [random-matrices, irreducibility, galois-groups]
 added: 2026-11-22

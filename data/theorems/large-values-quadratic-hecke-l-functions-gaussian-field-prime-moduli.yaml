@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [large-values-quadratic-dirichlet-l-functions-prime-moduli]
 tags: [hecke-l-functions, large-values, resonance-method, gaussian-field]
 added: 2026-11-22

@@ -57,5 +57,6 @@ review:
 lean:
   proved: false
   path: null
+related: [mixing-conjecture-linnik-points-sphere]
 tags: [equidistribution, toric-periods, quaternion-algebras, fractional-moments]
 added: 2026-11-22

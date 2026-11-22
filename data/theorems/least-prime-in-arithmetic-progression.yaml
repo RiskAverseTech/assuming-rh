@@ -35,7 +35,6 @@ sources:
     doi: 10.1090/S0025-5718-96-00763-6
     hypothesis_location: "Corollary 3.4 and Theorem 5.3"
     role: conditional-proof
-related: [primes-in-arithmetic-progressions-error]
 review:
   state: ai-classified
   checked_by: null
@@ -47,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [primes-in-arithmetic-progressions-error]
 tags: [primes, arithmetic-progressions, explicit-bounds]
 added: 2026-11-21

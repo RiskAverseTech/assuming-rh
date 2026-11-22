@@ -51,5 +51,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [no-semistable-abelian-varieties-good-outside-6-or-10]
 tags: [serre-conjecture, modularity, galois-representations]
 added: 2026-11-22

@@ -49,5 +49,6 @@ review:
 lean:
   proved: false
   path: null
+related: [shifted-moments-dedekind-zeta-sharp-lower-bound]
 tags: [dedekind-zeta, moments, shifted-moments]
 added: 2026-11-22

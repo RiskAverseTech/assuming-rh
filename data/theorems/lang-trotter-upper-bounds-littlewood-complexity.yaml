@@ -54,5 +54,6 @@ review:
 lean:
   proved: false
   path: null
+related: [lang-trotter-upper-bounds-serre, lang-trotter-upper-bounds-zywina, prime-ideal-races-bias-from-higher-roots]
 tags: [lang-trotter, chebotarev, elliptic-curves]
 added: 2026-11-22

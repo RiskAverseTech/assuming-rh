@@ -52,5 +52,6 @@ review:
 lean:
   proved: false
   path: null
+related: [congruence-subgroup-growth-sl2-s-integers]
 tags: [subgroup-growth, arithmetic-groups, congruence-subgroups]
 added: 2026-11-22

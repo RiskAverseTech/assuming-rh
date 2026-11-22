@@ -29,7 +29,6 @@ sources:
     venue: Springer, Graduate Texts in Mathematics 74
     hypothesis_location: Chapters 14 and 21
     role: survey
-related: [littlewood-l1-chi-bounds, idoneal-numbers-complete]
 review:
   state: ai-classified
   checked_by: null
@@ -41,5 +40,6 @@ review:
 lean:
   proved: false
   path: null
+related: [littlewood-l1-chi-bounds, idoneal-numbers-complete]
 tags: [siegel-zeros, real-characters, effective-constants]
 added: 2026-11-21

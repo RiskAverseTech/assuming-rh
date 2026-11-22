@@ -47,5 +47,6 @@ review:
 lean:
   proved: false
   path: null
+related: [second-moment-quadratic-twists-modular-l-functions]
 tags: [quadratic-twists, moments, modular-forms]
 added: 2026-11-22

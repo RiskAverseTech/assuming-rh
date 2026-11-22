@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [variance-primes-progressions-limiting-distribution]
 tags: [primes-in-progressions, short-intervals, second-moment]
 added: 2026-11-21

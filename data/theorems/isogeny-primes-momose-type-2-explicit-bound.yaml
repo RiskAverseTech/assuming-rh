@@ -46,5 +46,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, isogeny-primes-quadratic-fields-sqrt-minus-10-5-7]
 tags: [elliptic-curves, isogenies, effective-chebotarev, explicit-bounds]
 added: 2026-11-21

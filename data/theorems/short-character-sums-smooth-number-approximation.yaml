@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [character-sums-maximal-size-explicit-constant, polya-vinogradov-loglog-improvement]
 tags: [character-sums, smooth-numbers, dirichlet-characters]
 added: 2026-11-21

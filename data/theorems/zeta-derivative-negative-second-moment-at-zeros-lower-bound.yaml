@@ -36,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+related: [negative-discrete-second-moment-dirichlet-l-functions-lower-bound]
 tags: [zeros-of-zeta, zeta-derivative, discrete-moments, simple-zeros]
 added: 2026-11-21

@@ -39,5 +39,6 @@ review:
 lean:
   proved: false
   path: null
+related: [artin-primitive-root-conjecture]
 tags: [primitive-roots, artin-conjecture, number-fields]
 added: 2026-11-22

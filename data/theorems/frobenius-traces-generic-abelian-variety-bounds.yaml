@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [frobenius-traces-products-non-cm-elliptic-curves, lang-trotter-upper-bounds-zywina]
 tags: [abelian-varieties, frobenius-traces, lang-trotter, chebotarev]
 added: 2026-11-21

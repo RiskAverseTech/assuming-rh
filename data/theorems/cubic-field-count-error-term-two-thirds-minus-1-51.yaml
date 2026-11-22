@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [cubic-field-counts-local-conditions-omega-result]
 tags: [cubic-fields, davenport-heilbronn, arithmetic-statistics]
 added: 2026-11-22

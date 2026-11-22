@@ -45,5 +45,7 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [modular-polynomials-isogeny-volcanoes]
+related: [effective-chebotarev]
 tags: [elliptic-curves, point-counting, elkies-primes, effective-chebotarev]
 added: 2026-11-21

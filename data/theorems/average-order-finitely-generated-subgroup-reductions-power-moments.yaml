@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [average-multiplicative-order-arnold-problem]
 tags: [multiplicative-order, kummer-fields, chebotarev]
 added: 2026-11-22

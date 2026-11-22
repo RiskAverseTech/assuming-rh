@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [quantum-unique-ergodicity-half-integral-weight-kohnen-plus-space]
 tags: [quantum-unique-ergodicity, siegel-modular-forms, saito-kurokawa-lifts]
 added: 2026-11-22

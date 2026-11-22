@@ -49,5 +49,6 @@ review:
 lean:
   proved: false
   path: null
+related: [supersingular-endring-maxorder-equivalence]
 tags: [isogeny-graphs, supersingular-curves, endomorphism-rings, cryptography]
 added: 2026-11-22

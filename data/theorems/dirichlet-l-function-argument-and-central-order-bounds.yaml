@@ -45,5 +45,6 @@ review:
 lean:
   proved: false
   path: null
+related: [dirichlet-l-function-lowest-zero-explicit-loglog-bound, iterated-argument-sn-bounds, s1-dirichlet-l-function-bound]
 tags: [argument-of-l-functions, order-of-vanishing, beurling-selberg]
 added: 2026-11-22

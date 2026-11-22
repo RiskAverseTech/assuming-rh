@@ -34,5 +34,6 @@ review:
 lean:
   proved: false
   path: null
+related: [large-values-quadratic-dirichlet-l-functions-prime-moduli, second-moment-quadratic-l-functions-prime-conductor]
 tags: [moments-of-l-functions, quadratic-characters, prime-moduli]
 added: 2026-11-22

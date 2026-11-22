@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [second-moment-quadratic-l-functions-prime-conductor]
 tags: [moments, quadratic-characters, central-values]
 added: 2026-11-21

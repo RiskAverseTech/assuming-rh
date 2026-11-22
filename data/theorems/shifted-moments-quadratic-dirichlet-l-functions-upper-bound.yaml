@@ -50,5 +50,6 @@ review:
 lean:
   proved: false
   path: null
+related: [quadratic-character-sum-moments-prime-moduli, quadratic-character-sum-moments-sharp-upper-bound, shifted-moments-dirichlet-l-functions-lower-bound]
 tags: [moments, quadratic-characters, shifted-moments, character-sums]
 added: 2026-11-21

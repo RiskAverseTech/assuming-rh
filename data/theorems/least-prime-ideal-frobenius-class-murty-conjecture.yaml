@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev, least-prime-ideal-with-given-artin-symbol]
 tags: [chebotarev, least-prime-ideal, artin-l-functions]
 added: 2026-11-22

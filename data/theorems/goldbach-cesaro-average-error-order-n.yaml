@@ -35,5 +35,6 @@ review:
 lean:
   proved: false
   path: null
+related: [goldbach-average-equivalent-to-rh, goldbach-average-explicit-formula-error-n-log-cubed]
 tags: [goldbach, mean-values, zeta-zeros]
 added: 2026-11-21

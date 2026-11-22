@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-gaps-2-7327-and-0-5154, zeta-zeros-large-gaps-3-072, zeta-zeros-r-gaps-inoue-constants]
 tags: [zeta-zeros, gaps-between-zeros, explicit-bounds]
 added: 2026-11-22

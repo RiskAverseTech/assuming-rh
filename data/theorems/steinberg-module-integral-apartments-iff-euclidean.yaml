@@ -36,5 +36,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [euclidean-number-rings]
 tags: [steinberg-module, euclidean-domains, arithmetic-groups]
 added: 2026-11-22

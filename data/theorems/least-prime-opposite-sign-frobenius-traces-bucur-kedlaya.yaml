@@ -48,5 +48,6 @@ review:
 lean:
   proved: false
   path: null
+related: [least-prime-frobenius-traces-opposite-sign]
 tags: [elliptic-curves, frobenius-traces, least-prime, sato-tate]
 added: 2026-11-21

@@ -51,5 +51,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [ratios-conjecture-quadratic-dirichlet-l-functions-one-shift]
 tags: [murmurations, quadratic-characters, explicit-formula]
 added: 2026-11-22

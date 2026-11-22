@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [one-level-density-holomorphic-cusp-forms-support-two]
 tags: [nonvanishing, modular-forms, central-values]
 added: 2026-11-22

@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [smooth-solutions-a-plus-b-equals-c-asymptotic]
 tags: [smooth-numbers, abc-equation, circle-method]
 added: 2026-11-22

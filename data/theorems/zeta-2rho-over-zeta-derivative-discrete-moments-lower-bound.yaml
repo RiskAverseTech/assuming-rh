@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-derivative-negative-second-moment-at-zeros-lower-bound]
 tags: [zeta-zeros, discrete-moments, simple-zeros]
 added: 2026-11-22

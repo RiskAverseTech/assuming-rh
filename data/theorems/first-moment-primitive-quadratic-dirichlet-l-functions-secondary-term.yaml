@@ -44,5 +44,6 @@ review:
 lean:
   proved: false
   path: null
+related: [first-moment-quadratic-dirichlet-l-functions-quarter-power-error]
 tags: [moments, quadratic-characters, central-values, multiple-dirichlet-series]
 added: 2026-11-22

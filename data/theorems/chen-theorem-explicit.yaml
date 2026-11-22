@@ -22,7 +22,6 @@ sources:
     url: https://arxiv.org/abs/2211.08844
     hypothesis_location: Theorem 3
     role: conditional-proof
-related: [ternary-goldbach]
 review:
   state: ai-classified
   checked_by: null
@@ -34,5 +33,6 @@ review:
 lean:
   proved: false
   path: null
+related: [ternary-goldbach]
 tags: [goldbach, chen-theorem, explicit-bounds]
 added: 2026-11-21

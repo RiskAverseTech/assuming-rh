@@ -53,5 +53,6 @@ review:
 lean:
   proved: false
   path: null
+related: [artin-primitive-root-conjecture, near-primitive-roots-density, primitive-root-primes-in-progression-density]
 tags: [artin-conjecture, monoid-rings, primitive-roots]
 added: 2026-11-21

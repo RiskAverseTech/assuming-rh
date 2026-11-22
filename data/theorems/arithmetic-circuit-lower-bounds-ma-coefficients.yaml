@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+rests_on: [nullstellensatz-polynomial-hierarchy]
 tags: [arithmetic-circuits, lower-bounds, nullstellensatz]
 added: 2026-11-21

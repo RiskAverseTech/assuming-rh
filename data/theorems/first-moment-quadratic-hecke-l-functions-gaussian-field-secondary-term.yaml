@@ -52,5 +52,6 @@ review:
 lean:
   proved: false
   path: null
+related: [first-moment-quadratic-dirichlet-l-functions-quarter-power-error, fourth-moment-quadratic-hecke-l-functions-gaussian-field]
 tags: [moments, hecke-l-functions, gaussian-field]
 added: 2026-11-22

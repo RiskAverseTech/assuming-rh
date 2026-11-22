@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-zeros-pair-correlation-counting-bounds, zeta-zeros-shifted-form-factor-integral-bounds]
 tags: [zeta-zeros, pair-correlation, fourier-optimization]
 added: 2026-11-22

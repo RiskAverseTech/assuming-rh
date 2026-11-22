@@ -51,5 +51,6 @@ review:
 lean:
   proved: false
   path: null
+related: [one-level-density-quadratic-dirichlet-l-functions-lower-order-terms]
 tags: [one-level-density, low-lying-zeros, hecke-l-functions, gaussian-field]
 added: 2026-11-22

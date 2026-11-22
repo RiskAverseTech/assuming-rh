@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [dudek-primes-short-intervals]
 tags: [primes, prime-gaps, fourier-optimization]
 added: 2026-11-22

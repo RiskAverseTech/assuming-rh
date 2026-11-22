@@ -41,5 +41,6 @@ review:
 lean:
   proved: false
   path: null
+related: [point-counting-modular-curve-x1-polynomial-time]
 tags: [modular-forms, algorithms, arakelov-theory]
 added: 2026-11-22

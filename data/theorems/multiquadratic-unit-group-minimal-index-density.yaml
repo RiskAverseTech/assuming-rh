@@ -42,5 +42,6 @@ review:
 lean:
   proved: false
   path: null
+related: [artin-primitive-root-conjecture]
 tags: [artin-type, unit-groups, multiquadratic-fields]
 added: 2026-11-21

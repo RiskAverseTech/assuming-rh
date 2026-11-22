@@ -43,5 +43,6 @@ review:
 lean:
   proved: false
   path: null
+related: [effective-chebotarev]
 tags: [galois-representations, deformation-theory, effective-chebotarev]
 added: 2026-11-22

@@ -37,5 +37,6 @@ review:
 lean:
   proved: false
   path: null
+related: [zeta-moments-near-sharp-upper-bound, zeta-moments-sharp-upper-bound-harper]
 tags: [zeta-moments, large-deviations, upper-bounds]
 added: 2026-11-22

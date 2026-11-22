@@ -217,6 +217,15 @@
         }
       }
     },
+    "rests_on": {
+      "description": "Ids of entries whose result this entry's proof uses as an ingredient. Stricter than related.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
     "related": {
       "description": "Ids of related entries.",
       "type": "array",
