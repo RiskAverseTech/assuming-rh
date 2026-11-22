@@ -1,0 +1,47 @@
+id: zeta-2rho-over-zeta-derivative-discrete-moments-lower-bound
+title: Lower bounds for the discrete moments of zeta(2 rho)/zeta'(rho) over zeta zeros
+field: analytic-number-theory
+statement_plain: >
+  Let rho = 1/2 + i gamma run over the non-trivial zeros of the Riemann zeta
+  function. For every fixed rational k >= 1, the sum of
+  |zeta(2 rho) / zeta'(rho)|^(2k) over zeros with 0 < gamma <= T is at least
+  a positive constant (depending on k) times T (log T)^((k-1)^2). For k = 1
+  the sum is at least (1/(4 pi) - eps) T for any fixed eps > 0 and all
+  sufficiently large T.
+statement_formal: |
+  \sum_{0<\gamma\le T}\left|\frac{\zeta(2\rho)}{\zeta'(\rho)}\right|^{2k}\gg_k T(\log T)^{(k-1)^2}\quad (k\ge 1 \text{ rational}),\qquad \sum_{0<\gamma\le T}\left|\frac{\zeta(2\rho)}{\zeta'(\rho)}\right|^{2}\ge\left(\frac{1}{4\pi}-\varepsilon\right)T
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is that all non-trivial zeros of the Riemann zeta
+  function are simple; without it the terms 1/zeta'(rho) are not defined. It
+  is not a Riemann Hypothesis. Ng conjectured that the k = 1 sum is
+  asymptotic to T/(2 pi), so the explicit bound is half the conjectured
+  size; the paper says this k = 1 bound was previously established in the
+  PhD thesis of S. Sinha and gives a new proof. For every fixed real k >= 1
+  the paper gets the lower bound T (log T)^((k-1)^2 - eps) (Corollary 7).
+  The entry zeta-derivative-negative-second-moment-at-zeros-lower-bound is
+  the parallel result of Milinovich and Ng for the sum of 1/|zeta'(rho)|^2.
+sources:
+  - authors: A. Pearce-Crump
+    title: Lower bounds for discrete moments in a conjecture of Ng
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2606.12376
+    hypothesis_location: Theorem 3 and Theorem 6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Recent preprint (2026). The attribution of the k = 1 bound to Sinha's
+      thesis is taken from Remark 8 of the paper.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, discrete-moments, simple-zeros]
+added: 2026-11-22

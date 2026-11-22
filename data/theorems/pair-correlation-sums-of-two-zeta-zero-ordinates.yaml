@@ -1,0 +1,44 @@
+id: pair-correlation-sums-of-two-zeta-zero-ordinates
+title: Pair correlation function for sums of two ordinates of zeta zeros
+field: analytic-number-theory
+statement_plain: >
+  Let Z_2(T) be the multiset of ordered pairs (g1, g2) of positive ordinates
+  of zeta zeros with g1 + g2 <= T, counted with multiplicity, and let
+  w(u) = 4/(u^2 + 4). Define G_2(alpha, T) as 3 (2 pi / (T log T))^3 times
+  the sum over pairs g, g' in Z_2(T) of T^(i alpha (S - S')) w(S - S'),
+  where S and S' are the sums of the two entries of g and g'. Then for
+  T >= 100, G_2(alpha, T) equals
+  (log T / T^(2 alpha) + 4 alpha^3 / (3 T^alpha)) (1 + O(1 / log log T)), uniformly for
+  0 <= alpha <= 2/3 - 2 log log T / log T.
+statement_formal: |
+  G_2(\alpha,T)=\left(\frac{\log T}{T^{2\alpha}}+\frac{4\alpha^{3}}{3T^{\alpha}}\right)\left(1+O\!\left(\frac{1}{\log\log T}\right)\right)\quad\text{uniformly for } 0\le\alpha\le\frac23-\frac{2\log\log T}{\log T}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This extends Montgomery's pair correlation theorem for
+  F(alpha) = (1 + o(1)) T^(-2 alpha) log T + alpha + o(1), 0 <= alpha < 1, to
+  differences between sums of two ordinates. The paper notes that the result
+  points to an absence of level repulsion among such sums.
+sources:
+  - authors: W. D. Banks
+    title: Pair correlation for sums of two ordinates of zeros of the Riemann zeta function
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2502.20569
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The second term 4 alpha^3 / (3 T^alpha) and the normalization of G_2
+      were read from the PDF (version 2) because the extracted text is
+      garbled; they are recorded as printed.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, pair-correlation]
+added: 2026-11-22

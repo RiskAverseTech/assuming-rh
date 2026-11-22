@@ -1,0 +1,47 @@
+id: zeta-log-derivative-2k-th-moment-near-critical-line
+title: Even moments of the logarithmic derivative of zeta at distance a/log T from the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let K be a positive integer and let I_K(a, T) be the integral over t from
+  T to 2T of |zeta'/zeta(1/2 + a/log T + it)|^(2K). Then
+  (2a)^(2K-1) I_K(a, T) / (T (log T)^(2K)), in the limit T to infinity
+  followed by a to 0 from above, equals the binomial coefficient
+  C(2K-2, K-1).
+statement_formal: |
+  \lim_{a\to 0^+}\lim_{T\to\infty}\frac{(2a)^{2K-1}}{T(\log T)^{2K}}\int_T^{2T}\left|\frac{\zeta'}{\zeta}\!\left(\frac12+\frac{a}{\log T}+it\right)\right|^{2K}dt=\binom{2K-2}{K-1}
+hypotheses_required: [RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the paper's 2K-tuple Essential Simplicity
+  hypothesis (ES 2K). Let N(K, v, T) be the number of 2K-tuples of zeta zeros
+  with ordinates in [T, 2T], pairwise within v / log T of each other, and not
+  all carrying the same label in the list of zeros counted with multiplicity.
+  (ES 2K) says that the limit of N(K, v, T) / N(T) as T tends to infinity
+  tends to 0 as v tends to 0. Roughly, there are not too many small gaps
+  between zeros. It is not a Riemann Hypothesis. The statement was
+  conjectured by Bailey, Bettin, Blower, Conrey, Prokhorov, Rubinstein and
+  Snaith; the paper says the case K = 1 is essentially a result of Goldston,
+  Gonek and Montgomery under RH and their Essential Simplicity hypothesis.
+sources:
+  - authors: F. Ge
+    title: Mean values of the logarithmic derivative of the Riemann zeta-function near the critical line
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2211.08571
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The text extraction garbles the closeness condition in (ES 2K); the
+      form v / log T used here was read from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, logarithmic-derivative, moments]
+added: 2026-11-22

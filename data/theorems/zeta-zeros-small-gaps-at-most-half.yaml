@@ -1,0 +1,41 @@
+id: zeta-zeros-small-gaps-at-most-half
+title: Consecutive zeta zeros come within half the average spacing
+field: analytic-number-theory
+statement_plain: >
+  Let 0 < gamma_1 <= gamma_2 <= ... be the positive ordinates of the
+  non-trivial zeros of the Riemann zeta function, counted with multiplicity.
+  Then the lim inf of (gamma_(n+1) - gamma_n) log(gamma_n) / (2 pi) is at
+  most 1/2.
+statement_formal: |
+  \mu:=\liminf_{n\to\infty}\frac{(\gamma_{n+1}-\gamma_n)\log\gamma_n}{2\pi}\le\frac12
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the entry zeta-zeros-small-gaps-0-50895 (Inoue, mu < 0.50895)
+  and the small-gap part of zeta-zeros-gaps-2-7327-and-0-5154. The paper
+  applies the resonance method to a quotient of shifted zeta functions
+  instead of to the count of zeros in a short interval; it notes that the
+  usual Montgomery-Odlyzko criterion cannot reach the half-spacing bound.
+sources:
+  - authors: A. Bondarenko, W. Heap
+    title: Half-sized gaps between zeros of the Riemann zeta function
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.26038
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Very recent preprint (October 2026) that has not been through peer
+      review as far as the text shows; the authors acknowledge the use of an
+      AI assistant for exploratory calculations.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, small-gaps, resonance-method]
+added: 2026-11-22

@@ -1,0 +1,43 @@
+id: prime-gap-sequence-is-graphic
+title: The sequence of prime gaps is graphic for every length
+field: analytic-number-theory
+statement_plain: >
+  Let p_n be the n-th prime and p_0 = 1. For every n >= 2 there is a simple
+  graph on n vertices whose vertex degrees are p_1 - p_0, ..., p_n - p_(n-1),
+  and every such graph contains (p_(n+1) - p_n)/2 independent edges.
+statement_formal: null
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  These are Conjectures 1.1 and 1.2 of Toroczkai as stated in the paper. The
+  paper proves both unconditionally for all sufficiently large n; the
+  Riemann Hypothesis is used to cover every n >= 2, because the
+  unconditional threshold is far beyond the reach of computation. The
+  conditional proof uses the prime gap bound of Carneiro, Milinovich and
+  Soundararajan (see dudek-primes-short-intervals) and an explicit form of a
+  theorem of Selberg proved in the paper: under RH, for x >= 2 and N > 0 the
+  sum of the gaps p_(l+1) - p_l >= N with x <= p_l <= 2x is less than
+  163 x (log x)^2 / N.
+sources:
+  - authors: P. L. Erdős, G. Harcos, S. R. Kharel, P. Maga, T. R. Mezei, Z. Toroczkai
+    title: The sequence of prime gaps is graphic
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2205.00580
+    hypothesis_location: Theorem 1.1 (restated as Theorem 1.6)
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The result is combinatorial; the schema has no combinatorics field, so
+      analytic-number-theory was used. The proof for small n also relies on
+      computations and published prime gap records, which were not checked.
+lean:
+  proved: false
+  path: null
+tags: [primes, prime-gaps, graph-theory]
+added: 2026-11-22

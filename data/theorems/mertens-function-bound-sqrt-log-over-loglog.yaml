@@ -1,0 +1,43 @@
+id: mertens-function-bound-sqrt-log-over-loglog
+title: Partial sums of the Mobius function are at most sqrt(x) exp(C sqrt(log x / log log x))
+field: analytic-number-theory
+statement_plain: >
+  There is a constant C > 0 such that the sum of the Mobius function mu(n)
+  over n <= x is O( sqrt(x) exp( C sqrt(log x / log log x) ) ). More
+  generally, for every positive integer k, with mu_k(n) the Dirichlet
+  coefficients of zeta(s)^(-k), the sum of mu_k(n) over n <= x is
+  O( sqrt(x) exp( C (log x / log log x)^(k/(k+1)) ) ) for some C = C(k).
+statement_formal: |
+  \sum_{n\le x}\mu_k(n)\ll\sqrt{x}\,\exp\!\left(C\left(\frac{\log x}{\log\log x}\right)^{k/(k+1)}\right),\qquad\text{in particular}\quad \sum_{n\le x}\mu(n)\ll\sqrt{x}\,\exp\!\left(C\sqrt{\frac{\log x}{\log\log x}}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This sharpens the entry mertens-function-bound-soundararajan, whose bound
+  is sqrt(x) exp((log x)^(1/2) (log log x)^14); the paper says Balazard and
+  de Roton had reduced the exponent 14 to 5/2 + eps, and that the new
+  argument removes the log log x factor in the exponent. The proof uses the paper's upper bounds for negative moments of
+  zeta close to the critical line. The same paper proves, under RH, the
+  bound (1/T) int_T^{2T} |zeta(1/2 + alpha + it)|^(-2k) dt << alpha^(-k^2)
+  for fixed 0 < k < 1/2 when 1 << alpha log T << log log T (Theorem 1.1),
+  and results on the minimum of zeta in short intervals.
+sources:
+  - authors: H. M. Bui, A. Florea, A. Heycock
+    title: Small values of the Riemann zeta-function near the critical line
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2610.27591
+    hypothesis_location: Theorem 1.4
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      Recent preprint (October 2026); the long proof was not checked.
+lean:
+  proved: false
+  path: null
+tags: [mobius-function, mertens-function, negative-moments]
+added: 2026-11-22

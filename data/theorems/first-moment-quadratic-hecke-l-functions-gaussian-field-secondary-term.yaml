@@ -1,0 +1,56 @@
+id: first-moment-quadratic-hecke-l-functions-gaussian-field-secondary-term
+title: First moment of quadratic Hecke L-functions over the Gaussian field with a secondary term and error X^(1/4 + eps)
+field: analytic-number-theory
+statement_plain: >
+  Let K = Q(i) and let chi_{(1+i)^5 d} be the primitive quadratic Hecke
+  character attached to an odd square-free d in Z[i]. Let Phi be a
+  non-negative smooth function supported in [1/2, 2]. Then the sum over
+  primary square-free d of L(1/2, chi_{(1+i)^5 d}) Phi(N(d)/X) equals
+  X Q_1(log X) + X^(1/3) Q_2(log X) + O(X^(1/4 + eps)) for every eps > 0,
+  where Q_1 and Q_2 are linear polynomials.
+statement_formal: |
+  \sum\nolimits^{*}_{d\ \text{primary}} L\!\left(\tfrac12,\chi_{(1+i)^5 d}\right)\Phi\!\left(\frac{N(d)}{X}\right)=X\,Q_1(\log X)+X^{1/3}\,Q_2(\log X)+O_{\varepsilon}\!\left(X^{1/4+\varepsilon}\right)
+hypotheses_required: [GRH-Hecke, GRH-Dirichlet, RH]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  This is Corollary 1.3. The paper's Corollary 1.2 gives the same formula
+  with error O(X^(beta/2 + eps)), where beta is the supremum of the real
+  parts of the zeros of zeta_K for K = Q(i), assuming the Lindelof
+  hypothesis for Hecke L-functions of primitive characters of trivial
+  infinite type over Q(i). The Riemann Hypothesis for zeta_K gives
+  beta = 1/2; zeta_K is the product of the Riemann zeta function and the
+  Dirichlet L-function of the character modulo 4, so that part is covered.
+  The Lindelof hypothesis is deduced in the paper from GRH for the Hecke
+  L-functions over Q(i), which are in general not Dirichlet L-functions, so
+  the result stays conditional. It is the Gaussian field analog of the
+  result of Cech for quadratic Dirichlet L-functions over square-free
+  conductors; compare the entries
+  first-moment-quadratic-dirichlet-l-functions-quarter-power-error and
+  fourth-moment-quadratic-hecke-l-functions-gaussian-field.
+sources:
+  - authors: P. Gao, L. Zhao
+    title: First Moment of Quadratic Hecke $L$-Functions with Lower Order Term
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2512.22509
+    hypothesis_location: Corollary 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not spell out which L-functions its "GRH" in
+      Corollary 1.3 covers; it is read here as RH for zeta_K with K = Q(i)
+      together with GRH for the Hecke L-functions over Q(i) for which the
+      Lindelof hypothesis is assumed. A proof that obtained the Lindelof
+      bound for these Hecke L-functions another way would need only RH for
+      zeta_K.
+lean:
+  proved: false
+  path: null
+tags: [moments, hecke-l-functions, gaussian-field]
+added: 2026-11-22
