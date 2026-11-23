@@ -2,6 +2,11 @@
 
 Corrections matter more than new entries. If you know one of these results well, checking its entry is the most useful thing you can do.
 
+
+## Checking an entry
+
+The most useful contribution is to compare one entry with its source paper and report what you found, including when the entry is right. Every entry page has an "I checked this entry" button, and the site's Help check page lists the entries most worth checking first.
+
 ## Suggest a correction
 
 Open the entry on the site and use "Suggest a correction", or open a correction issue in this repository. Say what is wrong and, if you can, point to the theorem or section of the paper that settles it.

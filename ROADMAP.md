@@ -1,6 +1,6 @@
 # Roadmap: what would make this more valuable
 
-A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 22 November 2026.
+A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 23 November 2026.
 
 ## Done
 
@@ -9,6 +9,9 @@ A running list. Items move up as they get done. New ideas are added at the botto
 - **"What would move next".** The Still waiting page counts how many waiting entries each further result (Dedekind zeta functions, then Hecke, then Artin L-functions) would finish.
 - **Full arXiv screen.** Every arXiv abstract that names the hypothesis has been screened and 816 papers opened. The Method page says what this does and does not cover.
 - **Links between entries.** A `rests_on` field for real dependencies (recorded by hand for a first 22 entries), automatic related links from the notes, reverse links on every entry page, and a Connections page listing the results other entries point to most.
+- **Help check page.** A ranked list of the entries most worth a human check (where a second, independent AI reading of the paper disagreed with ours), a report form for people who check an entry, and the second reading published as data.
+- **Software caveats page.** Where PARI/GP, SageMath and Magma assume GRH, and why the announced proof does not remove that for class groups.
+- **Reference list sweep.** Papers cited by the papers already read, scanned in full text.
 - **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
 
 ## Next

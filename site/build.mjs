@@ -26,6 +26,21 @@ const waiting = loadWaiting();
 const waitBy = Object.fromEntries(waiting.map((w) => [w.code, w]));
 entries.sort((a, b) => a.title.localeCompare(b.title));
 const byId = Object.fromEntries(entries.map((e) => [e.id, e]));
+// Second reading by an independent model, used only to rank entries for human checking.
+const second = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'meta', 'second-reading.json'), 'utf8'));
+const covered = (e) => e.hypotheses_required.every((h) => h === 'RH' || h === 'GRH-Dirichlet');
+const checkReason = (e) => {
+  const r = second.readings[e.id];
+  if (!r || e.review.state !== 'ai-classified') return null;
+  if (e.status === 'unlocked' && r.beyond >= 0.5) return 'more';
+  if ((e.status === 'still-conditional' || e.status === 'partial') && !e.hypotheses_required.includes('PLUS-EXTRA') && r.dirichlet_only >= 0.7) return 'less';
+  if (!e.hypotheses_required.includes('PLUS-EXTRA') && r.extra_assumption >= 0.8) return 'extra';
+  return null;
+};
+function checkUrl(e) {
+  const q = new URLSearchParams({ template: 'check.yml', title: `Checked: ${e.title}`, entry: e.id });
+  return `${cfg.repo_url}/issues/new?${q}`;
+}
 // Reverse links, computed at build time.
 const usedBy = {};
 const referredBy = {};
@@ -119,7 +134,7 @@ function banner() {
 </aside>`;
 }
 function page({ file, title, description, body, math = false }) {
-  const nav = [['index.html', 'Home'], ['problem.html', 'The problem'], ['browse.html', 'Browse'], ['waiting.html', 'Still waiting'], ['about.html', 'Method'], ['data.html', 'Data']];
+  const nav = [['index.html', 'Home'], ['problem.html', 'The problem'], ['browse.html', 'Browse'], ['waiting.html', 'Still waiting'], ['about.html', 'Method'], ['check.html', 'Help check'], ['data.html', 'Data']];
   const root = file.includes('/') ? '../' : '';
   const fix = (html) => (root ? html.replace(/(href|src|action)="(?!https?:|#|mailto:|\.\.\/)([^"]+)"/g, `$1="${root}$2"`) : html);
   const html = `<!doctype html>
@@ -245,6 +260,7 @@ function buildHome() {
     <li><a href="connections.html">See which results carry the most others</a>.</li>
     <li><a href="about.html">Read the method</a>: the hypothesis taxonomy and how entries are classified.</li>
     <li><a href="data.html">Download the dataset</a> as JSON or CSV.</li>
+    <li><a href="check.html">Help check</a>: the entries most worth an expert's ten minutes, and how to report what you find.</li>
     <li>Found a mistake? Every entry page has a "suggest a correction" link.</li>
   </ul>
 </section>`,
@@ -370,7 +386,8 @@ function buildEntry(e) {
       <dt>Added</dt><dd>${fmtDate(e.added)}</dd>
     </dl>
     ${r.open_questions.length ? `<h3>Open questions</h3><ul>${r.open_questions.map((q) => `<li>${rich(q)}</li>`).join('')}</ul>` : ''}
-    <p><a class="button" href="${esc(correctionUrl(e))}" rel="noopener">Suggest a correction</a></p>
+    ${checkReason(e) ? `<p class="muted">A second automated reading of the paper disagreed with this classification, so this entry is on the list to <a href="check.html">check first</a>.</p>` : ''}
+    <p><a class="button" href="${esc(correctionUrl(e))}" rel="noopener">Suggest a correction</a> <a class="button" href="${esc(checkUrl(e))}" rel="noopener">I checked this entry</a></p>
   </section>
 
   ${(() => {
@@ -596,6 +613,54 @@ function buildConnections() {
   });
 }
 
+function buildCheck() {
+  const pct = (x) => `${Math.round(x * 100)}%`;
+  const groups = [
+    ['more', 'Marked unlocked here; the second reading says more is needed', 'These matter most. A wrong "unlocked" label is the costliest mistake this site can make. In many of them the paper states its theorem for a wider class of L-functions and the entry records only the Dirichlet case, or the paper names a Dedekind zeta function of a field that is abelian over the rationals, which factors into Dirichlet L-functions. Both are judgments of this project, not words of the paper.', (r) => r.beyond, 'says more is needed'],
+    ['less', 'Marked as waiting here; the second reading says Dirichlet L-functions are enough', 'If the second reading is right, these entries are unlocked and the site is being too cautious.', (r) => r.dirichlet_only, 'says Dirichlet only'],
+    ['extra', 'The second reading sees a further unproved assumption that the entry does not list', 'Sometimes this is a real omission. Sometimes the paper only mentions the conjecture in passing.', (r) => r.extra_assumption, 'sees a further assumption'],
+  ];
+  const lists = groups.map(([key, title, why, score, label]) => ({ key, title, why, label, items: entries.filter((e) => checkReason(e) === key).map((e) => ({ e, s: score(second.readings[e.id]) })).sort((x, y) => y.s - x.s || x.e.title.localeCompare(y.e.title)) }));
+  const total = lists.reduce((n, l) => n + l.items.length, 0);
+  const read = entries.filter((e) => second.readings[e.id]).length;
+  const checked = entries.filter((e) => e.review.state !== 'ai-classified').length;
+  page({
+    file: 'check.html',
+    title: 'Help check',
+    description: 'The entries most worth a human check, and how to report one.',
+    body: `
+<h1>Help check these first</h1>
+<p class="lede">${checked === 0 ? 'No entry on this site has been checked by a person yet.' : 'Most entries on this site have not been checked by a person.'} If you know some number theory and have ten minutes, this page says where they are best spent.</p>
+<p>${checked} of ${entries.length} entries are human-checked so far.</p>
+
+<h2 id="how">How to check an entry</h2>
+<ol>
+  <li>Open the entry and its source paper.</li>
+  <li>Find the theorem, and find where its proof uses the hypothesis. The question is which L-functions the hypothesis is needed for: only the Riemann zeta function and Dirichlet L-functions, or others as well.</li>
+  <li>Press "I checked this entry" on the entry page and say what you found. A report that the entry is right is as useful as a correction.</li>
+</ol>
+<p>Reports are public GitHub issues. With your agreement the entry will record who checked it.</p>
+
+<h2 id="first">The one question that matters most</h2>
+<p>Much of this site rests on a single classification: that <a href="theorems/bach-class-group-generators.html">Bach's bound on generators of the class group</a> stays conditional even for quadratic fields, because its proof applies the hypothesis to L-functions of class group characters, which are not Dirichlet L-functions. The <a href="software.html">Software caveats</a> page and many "still waiting" entries follow from it. If you can confirm or refute that in a sentence, please do.</p>
+
+<h2 id="why">Why these entries</h2>
+<p>${esc(second.about.what)} The model was ${esc(second.about.model)}, run on ${fmtDate(second.about.date)} over the ${read} entries for which the paper text was on file.</p>
+<p>The two readings agree on most entries. The ${total} below are those where they differ, which makes them the likeliest places for a mistake, in either reading. A disagreement is not evidence that the entry is wrong.</p>
+
+${lists.map((l) => `<section aria-labelledby="g-${l.key}">
+  <h2 id="g-${l.key}">${esc(l.title)} <span class="count-inline">${l.items.length}</span></h2>
+  <p>${esc(l.why)}</p>
+  <ul class="wait-list">
+    ${l.items.map(({ e, s }) => `<li><a href="theorems/${e.id}.html">${esc(e.title)}</a> ${statusBadge(e)} <span class="muted">second reading ${esc(l.label)}: ${pct(s)}</span></li>`).join('\n    ')}
+  </ul>
+</section>`).join('\n')}
+
+<h2 id="data">The data</h2>
+<p>The second reading of every entry is in the repository as <code>data/meta/second-reading.json</code>. It is not part of any entry's classification and changes no status.</p>`,
+  });
+}
+
 function buildData() {
   const dataDir = path.join(OUT, 'data');
   fs.mkdirSync(dataDir, { recursive: true });
@@ -679,5 +744,6 @@ page({
 buildWaiting();
 buildAbout();
 buildData();
+buildCheck();
 buildConnections();
 console.log(`Built ${entries.length} entry pages into dist/`);
