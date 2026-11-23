@@ -1,0 +1,47 @@
+id: montgomery-pair-correlation-form-factor-theorem
+title: Montgomery's theorem on the pair correlation form factor F(alpha) for alpha up to 1
+field: analytic-number-theory
+statement_plain: >
+  Let F(alpha) = F(alpha, T) be (T log T / (2 pi))^(-1) times the sum over
+  pairs of ordinates gamma, gamma' in (0, T] of zeros of the Riemann zeta
+  function of T^(i alpha (gamma - gamma')) w(gamma - gamma'), with
+  w(u) = 4/(4 + u^2). Then F(alpha) is real, even and nonnegative, and
+  F(alpha) = alpha + o(1) + (1 + o(1)) T^(-2 alpha) log T as T tends to
+  infinity, uniformly for 0 <= alpha <= 1.
+statement_formal: |
+  F(\alpha) = \Bigl(\frac{T}{2\pi}\log T\Bigr)^{-1} \sum_{0<\gamma,\gamma'\le T} T^{i\alpha(\gamma-\gamma')}\, w(\gamma-\gamma') = \alpha + o(1) + (1+o(1))\,T^{-2\alpha}\log T \qquad (0 \le \alpha \le 1)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  This is Montgomery's 1973 theorem; the source here is an expository
+  account by Goldston that re-proves it from Montgomery's explicit formula.
+  The theorem is stated uniformly for 0 <= alpha <= 1 - epsilon, and the
+  text right after it says that a sieve bound for prime twins extends the
+  range to 0 <= alpha <= 1. The same notes deduce that at least two thirds
+  of the zeros are simple and that liminf (gamma_{n+1} - gamma_n) log
+  gamma_n / (2 pi) <= 0.6072...; both are weaker than the existing entries
+  zeta-simple-zeros-proportion-19-27 and zeta-zeros-small-gaps-0-50895.
+  Related entry: montgomery-form-factor-integral-bounded-intervals-bounds.
+sources:
+  - authors: D. A. Goldston
+    title: Notes on pair correlation of zeros and prime numbers
+    year: 2004
+    venue: Preprint
+    url: https://arxiv.org/abs/math/0412313
+    hypothesis_location: Theorem 1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The source is a survey; the theorem is due to H. L. Montgomery (1973), with the extension of the range to alpha = 1 attributed in the notes to Goldston and Montgomery. The original papers were not consulted.
+    - >-
+      The notes say they will appear in a Cambridge University Press volume; the venue is recorded as Preprint because no final reference is printed.
+lean:
+  proved: false
+  path: null
+tags: [zeta-zeros, pair-correlation, survey]
+added: 2026-11-22

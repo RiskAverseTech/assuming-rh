@@ -1,0 +1,37 @@
+id: riemann-von-mangoldt-explicit-formula-error-constant-4-150
+title: Explicit error term in the truncated Riemann-von Mangoldt formula
+field: analytic-number-theory
+statement_plain: >
+  For log x >= 1000 and max{51, log x} < T < (sqrt(x) - 2)/2, the Chebyshev
+  function satisfies psi(x) = x - (sum of x^rho / rho over the nontrivial
+  zeros rho of zeta with |Im rho| <= T) + E, where |E| <= 4.150 x log x / T.
+statement_formal: |
+  \left| \psi(x) - x + \sum_{|\gamma| \le T} \frac{x^{\rho}}{\rho} \right| \le 4.150\,\frac{x \log x}{T} \qquad \left(\log x \ge 1000,\ \max\{51, \log x\} < T < \frac{\sqrt{x}-2}{2}\right)
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper's main results are unconditional: the same formula with error
+  M x log x / T for explicit M and x_M (Theorem 1.2, for example M = 5.03
+  for x >= 40 with the same range of T), obtained from explicit zero-free
+  regions. Assuming the Riemann Hypothesis only improves the constant, to
+  4.150 for log x >= 1000.
+sources:
+  - authors: M. Cully-Hugill, D. R. Johnston
+    title: On the error term in the explicit formula of Riemann-von Mangoldt
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2111.10001
+    hypothesis_location: Theorem 5.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The year is that of the arXiv version on disk (v5, January 2024); no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [explicit-formula, explicit-bounds, chebyshev-function]
+added: 2026-11-22

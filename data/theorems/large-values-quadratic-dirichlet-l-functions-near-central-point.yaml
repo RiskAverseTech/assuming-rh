@@ -1,0 +1,41 @@
+id: large-values-quadratic-dirichlet-l-functions-near-central-point
+title: Large values of quadratic Dirichlet L-functions just to the right of the central point
+field: analytic-number-theory
+statement_plain: >
+  Let A > 0 and sigma = 1/2 + A / log log X. For all sufficiently large X,
+  the maximum of L(sigma, chi_d) over fundamental discriminants d with
+  X < |d| <= 2X is at least
+  exp((lambda(A) + o(1)) sqrt(log X logloglog X / loglog X)), where
+  lambda(A) = 1 / (2 (e - 1) e^A).
+statement_formal: |
+  \max_{\substack{d \text{ fundamental discriminant} \\ X < |d| \le 2X}} L(\sigma,\chi_d) \ge \exp\left( (\lambda(A)+o(1)) \sqrt{\frac{\log X\,\log\log\log X}{\log\log X}} \right), \qquad \sigma = \frac12 + \frac{A}{\log\log X},\quad \lambda(A) = \frac{1}{2(e-1)e^{A}}
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This extends the central point result in the entry
+  large-values-quadratic-dirichlet-l-functions-central-point (Darbar and
+  Maiti) to sigma within A / log log X of 1/2, with a smaller constant in
+  the exponent. As there, the hypothesis enters through the estimate for
+  sums of chi_d(n) over fundamental discriminants quoted from Darbar and
+  Maiti (Lemma 2.1), which concerns Dirichlet L-functions of quadratic
+  characters.
+sources:
+  - authors: Z. Dong, Z. Li, Y. Song, S. Zhao
+    title: Large values of quadratic Dirichlet L-functions near the central point
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.12205
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The paper writes only "GRH" without saying for which L-functions; GRH-Dirichlet is inferred from the quoted lemma and from the existing entry for the Darbar-Maiti paper.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, extreme-values, resonance-method]
+added: 2026-11-22

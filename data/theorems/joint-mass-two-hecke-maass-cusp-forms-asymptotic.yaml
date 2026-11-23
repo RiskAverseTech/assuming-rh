@@ -1,0 +1,48 @@
+id: joint-mass-two-hecke-maass-cusp-forms-asymptotic
+title: The joint mass of two orthogonal Hecke-Maass cusp forms is asymptotically 1
+field: analytic-number-theory
+statement_plain: >
+  Let f and g be two orthogonal real-valued Hecke-Maass cusp forms for
+  SL_2(Z) with spectral parameters t_f and t_g, each normalized so that the
+  average of its square over SL_2(Z)\H is 1. Then the average of
+  f(z)^2 g(z)^2 over SL_2(Z)\H equals 1 + O((log(t_f + t_g))^(-1/4 + eps))
+  as max(t_f, t_g) tends to infinity.
+statement_formal: |
+  \frac{1}{\text{vol}(\Gamma\backslash\mathbb{H})}\int_{\Gamma\backslash\mathbb{H}} f(z)^2 g(z)^2\,d\mu z = 1+O_\varepsilon\bigl((\log(t_f+t_g))^{-1/4+\varepsilon}\bigr)
+hypotheses_required: [GRH-automorphic, RH, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [higher-automorphic, extra-assumption]
+status_note: >
+  The extra assumption is the generalized Ramanujan conjecture (GRC) for
+  Hecke-Maass cusp forms. The paper writes "GRH" without restricting it to
+  a family. In the proof it is applied, through Watson's formula and
+  Soundararajan's method for moments, to L(s, u_j), L(s, Sym^2 f x u_j) and
+  L(s, Sym^2 g x u_j) for Hecke-Maass cusp forms u_j, to
+  L(s, Sym^4 f x Sym^2 u_j) and similar Rankin-Selberg L-functions, to
+  symmetric square L-functions at s = 1, and, for the Eisenstein
+  contribution, to products involving zeta(1/2 + it) and
+  L(1/2 + it, Sym^2 f). This is the Maass form analogue of the dataset
+  entry joint-mass-two-holomorphic-hecke-eigenforms-asymptotic. The paper's
+  other main result (Theorem 1.4, on the integral of psi f^2 g) assumes the
+  generalized Lindelof hypothesis instead and is not recorded.
+sources:
+  - authors: S. Hua, B. Huang, L. Li
+    title: Joint value distribution of Hecke-Maass forms
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2405.00996
+    hypothesis_location: Theorem 1.6
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      RH for the Riemann zeta function is listed because the Eisenstein series contribution involves zeta(1/2 + it); the paper does not list the L-functions for which GRH is assumed, so the list in status_note is read off the proof.
+lean:
+  proved: false
+  path: null
+tags: [maass-forms, quantum-chaos, l4-norm, triple-product-l-functions]
+added: 2026-11-22

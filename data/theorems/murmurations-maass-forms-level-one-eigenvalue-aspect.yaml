@@ -1,0 +1,49 @@
+id: murmurations-maass-forms-level-one-eigenvalue-aspect
+title: Murmurations for Maass forms of weight 0 and level 1 in the eigenvalue aspect
+field: analytic-number-theory
+statement_plain: >
+  Let f_j run over Hecke-Maass cusp forms of weight 0 and level 1 with
+  Laplace eigenvalue 1/4 + r_j^2, Hecke eigenvalues a_j(n) and parity
+  eps_j = +1 or -1, and let N = N(R) = R^2/(4 pi^2) + O(1) be the analytic
+  conductor. Fix a compact interval E of positive reals of positive length
+  and let R^(5/6 + delta) < H < R^(1 - delta). Then, as R tends to infinity,
+  the sum of log p times eps_j a_j(p) over primes p with p/N in E and forms
+  with |r_j - R| <= H, divided by the same sum with eps_j a_j(p) replaced by
+  1, equals nu(E)/(|E| sqrt(N)) + o(1/sqrt(N)), where nu(E) is an explicit
+  sum over pairs (a, q) with q^2/a^2 in E.
+statement_formal: |
+  \frac{\sum_{p/N\in E}\log p \sum_{|r_j-R|\le H}\epsilon_j a_j(p)}{\sum_{p/N\in E}\log p\sum_{|r_j-R|\le H}1}=\frac{1}{\sqrt N}\,\frac{\nu(E)}{|E|}+o_E\!\left(\frac{1}{\sqrt N}\right),\qquad \nu(E)=\frac{1}{\zeta(2)}\sum\nolimits^{*}_{q^2/a^2\in E}\frac{\mu(q)^2}{\varphi(q)^2\sigma(q)}\left(\frac aq\right)^{-3}
+hypotheses_required: [GRH-Dirichlet, GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem assumes GRH for the L-functions of Dirichlet characters and
+  of Maass forms. GRH for the L-functions of the Maass cusp forms f_j
+  (Lemma 2.4) controls the error from using an analytic test function in
+  the Selberg trace formula, and the paper remarks that it could be removed
+  with more work; GRH for Dirichlet L-functions (Lemma 3.1, Proposition
+  4.1) is used for averages of class numbers L(1, psi_D). The star on the
+  sum defining nu(E) means that terms at the endpoints of E are halved. The
+  limiting density is the same as in the weight aspect for holomorphic
+  forms.
+sources:
+  - authors: A. R. Booker, M. Lee, D. Lowry-Duda, A. Seymour-Howell, N. Zubrilina
+    title: Murmurations of Maass forms
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2409.00765
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The summation conditions on a and q in nu(E) (for example coprimality) are exactly as printed in equation (1.3), which shows only q^2/a^2 in E; the formula was read from the PDF.
+lean:
+  proved: false
+  path: null
+tags: [murmurations, maass-forms, trace-formula]
+added: 2026-11-22

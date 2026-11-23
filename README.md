@@ -53,9 +53,10 @@ As of 22 November 2026:
 
 - **arXiv abstracts.** arXiv's own search finds about 1,870 abstracts that mention the Riemann Hypothesis or a generalization by name, including the abbreviations GRH and ERH. All of them were screened for a conditional result, by keyword filters and by reading excerpts of the abstracts.
 - **Papers opened.** 816 papers were opened and their main theorems read. Most entries come from these. The rest were set aside: unconditional, already covered by a sharper entry, the hypothesis only mentioned, or no way to tell which L-functions were meant.
+- **Reference lists.** Those papers cite 524 further arXiv papers that the abstract search had not found. All 524 were downloaded and their full text scanned for a conditional theorem; 46 were then read.
 - **Classic papers.** A small number of older journal papers were added by hand from the published text.
 
-Not covered: papers that use the hypothesis without naming it in the abstract; anything that is not on arXiv, which includes most of the literature before the 1990s; secondary results of a paper beyond its headline conditional theorem; and whatever the screening, done by an AI system, missed.
+Not covered: papers that use the hypothesis without naming it in the abstract, unless one of the papers already read cites them on arXiv; anything that is not on arXiv, which includes most of the literature before the 1990s; secondary results of a paper beyond its headline conditional theorem; and whatever the screening, done by an AI system, missed.
 
 ## The hypothesis taxonomy
 

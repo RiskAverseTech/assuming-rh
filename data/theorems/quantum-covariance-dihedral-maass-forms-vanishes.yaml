@@ -1,0 +1,47 @@
+id: quantum-covariance-dihedral-maass-forms-vanishes
+title: Vanishing quantum covariance for dihedral Maass forms
+field: analytic-number-theory
+statement_plain: >
+  Let F = Q(sqrt(D)) be a real quadratic field of narrow class number 1 with
+  D = 1 mod 4 a product of two distinct primes congruent to 3 mod 4, and let
+  phi_k be the L^2-normalized dihedral Maass newforms on Gamma_0(D) attached
+  to the Hecke Groessencharacters Xi_k of F. For a test function psi put
+  mu_k(psi) = <psi, |phi_k|^2>. If psi_1 and psi_2 are orthogonal even
+  Hecke-Maass cuspidal newforms on Gamma_0(D), then the quantum covariance
+  Q(psi_1, psi_2; K; Phi), the sum over integers k of
+  mu_k(psi_1) mu_k(psi_2) Phi(k/K) with Phi smooth and supported in [1/2, 2],
+  tends to 0 as K tends to infinity.
+statement_formal: |
+  Q(\psi_1,\psi_2;K;\Phi) := \sum_{k \in \mathbb{Z}} \mu_k(\psi_1)\,\mu_k(\psi_2)\,\Phi\left(\frac{k}{K}\right) \longrightarrow 0 \qquad (K \to \infty)
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper names the L-functions for which GRH is assumed in the key
+  moment bound (Proposition 6.1, Remark 6.3): the Rankin-Selberg
+  L-functions L(s, psi_j x phi_2k) and L(s, sym^2 psi_j x phi_2k) for
+  K < k <= 2K. The proof also uses the bound 1/L(1, phi_2k) << log log k
+  under GRH for the L-functions of the dihedral forms themselves. The
+  paper's main result, an asymptotic formula for the weighted quantum
+  variance (Theorem 1.1), is unconditional, and its unweighted form assumes
+  the Generalized Ramanujan Conjecture rather than a Riemann Hypothesis.
+sources:
+  - authors: B. Huang, S. Lester
+    title: Quantum variance for dihedral Maass forms
+    year: 2020
+    venue: Preprint
+    url: https://arxiv.org/abs/2007.02055
+    hypothesis_location: Theorem 1.3
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The theorem statement does not repeat the level; the forms psi_1, psi_2 are taken on Gamma_0(D) with trivial nebentypus as in Proposition 6.1, which is what the statement here assumes.
+lean:
+  proved: false
+  path: null
+tags: [quantum-variance, maass-forms, rankin-selberg]
+added: 2026-11-22

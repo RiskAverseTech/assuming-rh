@@ -1,0 +1,48 @@
+id: prime-race-density-asymptotic-series-variance
+title: Asymptotic formula for the densities in two-way prime number races modulo q
+field: analytic-number-theory
+statement_plain: >
+  Let a be a nonsquare and b a square among the reduced residues modulo q,
+  and let delta(q; a, b) be the logarithmic density of the set of x with
+  pi(x; q, a) > pi(x; q, b). Then delta(q; a, b) = 1/2 + rho(q) /
+  sqrt(2 pi V(q; a, b)) + O(rho(q)^3 / V(q; a, b)^(3/2)), where rho(q) is
+  the number of real characters modulo q and V(q; a, b) is the sum over
+  characters chi modulo q of |chi(b) - chi(a)|^2 b(chi), with b(chi) the sum
+  of 1/(1/4 + gamma^2) over the zeros 1/2 + i gamma of L(s, chi). More
+  generally there is an asymptotic series in powers of 1/V(q; a, b) with
+  error O_K(rho(q)^(2K+3) / V(q; a, b)^(K+3/2)) for every K >= 0.
+statement_formal: |
+  \delta(q;a,b) = \frac12 + \frac{\rho(q)}{\sqrt{2\pi V(q;a,b)}} + O\left(\frac{\rho(q)^3}{V(q;a,b)^{3/2}}\right), \qquad V(q;a,b) = \sum_{\chi \bmod q} |\chi(b)-\chi(a)|^2 \sum_{\gamma:\ L(1/2+i\gamma,\chi)=0} \frac{1}{\tfrac14+\gamma^2}
+hypotheses_required: [GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the linear independence hypothesis (LI): the
+  nonnegative imaginary parts of the nontrivial zeros of Dirichlet
+  L-functions are linearly independent over the rationals. The paper states
+  GRH for Dirichlet L-functions. Under GRH alone the same paper proves
+  (Theorem 1.4 and Proposition 3.6) an exact finite formula for the variance
+  and V(q; a, b) = 2 phi(q) log q + O(phi(q) log log q), so the density
+  approaches 1/2 at the rate rho(q) / sqrt(4 pi phi(q) log q). This refines
+  the Rubinstein and Sarnak result that delta(q; a, b) tends to 1/2 (see
+  the entry chebyshev-bias).
+sources:
+  - authors: D. Fiorilli, G. Martin
+    title: "Inequities in the Shanks-Rényi prime number race: an asymptotic formula for the densities"
+    year: 2011
+    venue: Preprint
+    url: https://arxiv.org/abs/0912.4908
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - The year is that of the arXiv version on disk (v3, 2011); no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [prime-number-races, chebyshev-bias, linear-independence]
+added: 2026-11-22

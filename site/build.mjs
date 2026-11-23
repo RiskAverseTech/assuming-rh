@@ -471,12 +471,13 @@ function buildAbout() {
 <p>As of 22 November 2026:</p>
 <ul>
   <li><strong>arXiv abstracts.</strong> arXiv's own search finds about 1,870 abstracts that mention the Riemann Hypothesis or a generalization by name, including the abbreviations GRH and ERH. All of them were screened for a conditional result, by keyword filters and by reading excerpts of the abstracts.</li>
-  <li><strong>Papers opened.</strong> 816 papers were opened and their main theorems read. ${entries.filter((e) => e.sources.some((x) => (x.url || '').includes('arxiv.org/abs/'))).length} of the ${entries.length} entries cite an arXiv paper. The other opened papers were set aside: unconditional, already covered by a sharper entry, the hypothesis only mentioned, or no way to tell which L-functions were meant.</li>
+  <li><strong>Papers opened.</strong> 816 papers found this way were opened and their main theorems read. ${entries.filter((e) => e.sources.some((x) => (x.url || '').includes('arxiv.org/abs/'))).length} of the ${entries.length} entries cite an arXiv paper. The other opened papers were set aside: unconditional, already covered by a sharper entry, the hypothesis only mentioned, or no way to tell which L-functions were meant.</li>
+  <li><strong>Reference lists.</strong> Those papers cite 524 further arXiv papers that the abstract search had not found. All 524 were downloaded and their full text scanned for a conditional theorem; 46 were then read.</li>
   <li><strong>Classic papers.</strong> A small number of older journal papers were added by hand from the published text.</li>
 </ul>
 <p>What this does not cover:</p>
 <ul>
-  <li>Papers that use the hypothesis without naming it in the abstract.</li>
+  <li>Papers that use the hypothesis without naming it in the abstract, unless one of the papers already read cites them on arXiv.</li>
   <li>Anything that is not on arXiv, which includes most of the literature before the 1990s and many journal papers since.</li>
   <li>Secondary results. Usually only the headline conditional theorem of a paper is recorded.</li>
   <li>Mistakes in the screening. The filters and the reading were done by an AI system and can have missed papers.</li>

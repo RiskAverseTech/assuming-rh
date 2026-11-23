@@ -1,0 +1,46 @@
+id: zeta-log-derivative-near-one-line-large-values-measure
+title: Measure of the set where the logarithmic derivative of zeta is large near the 1-line
+field: analytic-number-theory
+statement_plain: >
+  Fix beta in (0, 1), A > 0 and x > 0, write log_2 and log_3 for the
+  iterated logarithms, and put sigma_A = 1 - A / log_2 T. Let M(T, x) be the
+  set of t in [T^beta, T] with
+  -Re (zeta'/zeta)(sigma_A + it) >=
+  (log_2 T / log_3 T) (((e^A - 1)/A) log_3 T - x). Then the measure of
+  M(T, x) is at least T^(1 - (1 - beta) e^(-x) + o(1)) as T tends to
+  infinity.
+statement_formal: |
+  \text{meas}\Bigl\{t\in[T^\beta,T] : -\text{Re}\,\frac{\zeta'}{\zeta}(\sigma_A+it)\ge \frac{\log_2 T}{\log_3 T}\Bigl(\frac{e^A-1}{A}\log_3 T-x\Bigr)\Bigr\}\ \ge\ T^{\,1-(1-\beta)e^{-x}+o(1)},\qquad \sigma_A=1-\frac{A}{\log_2 T}
+hypotheses_required: [RH]
+status: unlocked
+status_note: >
+  The paper's omega theorems (Theorems 1.1 and 1.3: the maximum of
+  -Re zeta'/zeta(sigma_A + it) on [T^beta, T] is at least
+  ((e^A - 1)/A) log_2 T + O(log_2 T / log_3 T), and the analogue for
+  Dirichlet characters modulo a large prime q) are unconditional. RH is used
+  only for this measure bound. The paper also proves the analogue for
+  Dirichlet L-functions under GRH (Theorem 1.4): for prime q tending to
+  infinity, at least q^(1 - e^(-x) + o(1)) characters chi mod q satisfy
+  -Re (L'/L)(sigma_A, chi) >= (log_2 q / log_3 q)(((e^A - 1)/A) log_3 q - x),
+  with sigma_A = 1 - A / log_2 q.
+sources:
+  - authors: Z. Li, S. Zhao
+    title: Omega theormes for logarithmic derivatives of zeta and L-functions near the 1-line
+    year: 2024
+    venue: Preprint
+    url: https://arxiv.org/abs/2404.17250
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions:
+    - >-
+      The theorem does not restate that A is a fixed positive real; this is taken from Theorem 1.1 and the surrounding text.
+lean:
+  proved: false
+  path: null
+tags: [zeta-function, logarithmic-derivative, large-values, resonance-method]
+added: 2026-11-22

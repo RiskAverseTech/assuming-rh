@@ -1,0 +1,42 @@
+id: large-values-quadratic-dirichlet-l-functions-prime-moduli-constant-one
+title: Large central values of quadratic Dirichlet L-functions with moduli 8q, q prime, with constant 1
+field: analytic-number-theory
+statement_plain: >
+  Let chi_{8q} be the quadratic Dirichlet character given by the Kronecker
+  symbol (8q/.) for an odd prime q. For all sufficiently large X there is a
+  prime q with X < q <= 2X for which L(1/2, chi_{8q}) is at least
+  exp((1 + o(1)) sqrt(log X logloglog X / loglog X)).
+statement_formal: |
+  \max_{\substack{q \text{ prime} \\ X < q \le 2X}} L(\tfrac12, \chi_{8q}) \ge \exp\left( \bigl(1 + o(1)\bigr) \sqrt{\frac{\log X \, \log\log\log X}{\log\log X}} \right)
+hypotheses_required: [GRH-Dirichlet]
+status: unlocked
+status_note: >
+  This sharpens the existing entry
+  large-values-quadratic-dirichlet-l-functions-prime-moduli (Gao), improving
+  the constant 1/2 to 1. The hypothesis is used in Lemma 2.2, a smoothed sum
+  of chi_{8q}(c) log q over primes q with error O(X^(1/2 + epsilon)
+  log(c + 2)), quoted from Gao's paper. The proof combines the resonance
+  method with a bound for GCD sums over square-free integers.
+sources:
+  - authors: Z. Dong, W. Wang, H. Zhang, S. Zhao
+    title: Extreme values of quadratic Dirichlet L-functions with prime-related moduli
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.25403
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define GRH. That only Dirichlet L-functions are needed is read from Lemma 2.2, the one lemma that carries the hypothesis, whose proof is in the cited paper of Gao and was not checked.
+    - >-
+      The theorem prints the range as X < |q| <= 2X; since q is an odd prime this is read as X < q <= 2X.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, central-values, resonance-method]
+added: 2026-11-22

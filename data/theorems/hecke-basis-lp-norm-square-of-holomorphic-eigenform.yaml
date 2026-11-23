@@ -1,0 +1,49 @@
+id: hecke-basis-lp-norm-square-of-holomorphic-eigenform
+title: Upper bound for the l^p norm of the Hecke basis coefficients of the square of a holomorphic Hecke eigenform
+field: analytic-number-theory
+statement_plain: >
+  Let f be an L^2-normalized holomorphic Hecke eigenform of even weight
+  k >= 12 for SL_2(Z), and let H_(2k) be an L^2-normalized Hecke basis of
+  the cusp forms of weight 2k. For every p > 0 and eps > 0, the sum over h
+  in H_(2k) of |<f^2, h>|^p, raised to the power 1/p, is
+  O(k^(1/p - 1/2) (log k)^(-(2 - p)/4 + (p + 1) eps)) as k tends to
+  infinity. In particular it tends to 0 for every p > 2.
+statement_formal: |
+  \Bigl(\sum_{h\in H_{2k}} |\langle f^2,h\rangle|^p\Bigr)^{1/p} \ll_{\varepsilon} k^{\frac1p-\frac12}\,(\log k)^{-\frac{2-p}{4}+(p+1)\varepsilon}
+hypotheses_required: [GRH-automorphic]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The paper names the L-functions: GRH is assumed for L(s, h),
+  L(s, Sym^2 f x h), L(s, Sym^4 f x h), L(s, Sym^2 f) and L(s, Sym^4 f) for
+  all h in H_(2k). This is the second half of Theorem 1.9 (estimate (1.5)).
+  The first half bounds the same norm for a product f g of two eigenforms
+  with exponent -(2 - p)/8 in place of -(2 - p)/4, and needs in addition the
+  analytic continuation of L(s, Sym^2 f x Sym^2 g x Sym^2 h) and GRH for
+  more L-functions; it is not recorded here. The paper deduces l^p bounds
+  for general quadratic forms in eigenforms (Theorem 1.4) and that such a
+  form is not a combination of boundedly many Hecke eigenforms (Theorem
+  1.6).
+sources:
+  - authors: S. Hua
+    title: Quadratic forms of modular forms
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2507.21951
+    hypothesis_location: Theorem 1.9
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The consequence for p > 2 is stated in the paper for quadratic forms (Theorem 1.4); here it is read off the bound (1.5).
+    - >-
+      The proof also uses the bound (log log k)^(-1) << L(1, Sym^2 phi) << (log log k)^3 under GRH for eigenforms phi, which is covered by the listed symmetric square L-functions.
+lean:
+  proved: false
+  path: null
+tags: [modular-forms, triple-product-l-functions, moments]
+added: 2026-11-22

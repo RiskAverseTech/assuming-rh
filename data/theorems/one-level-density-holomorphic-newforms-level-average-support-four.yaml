@@ -1,0 +1,53 @@
+id: one-level-density-holomorphic-newforms-level-average-support-four
+title: One-level density of holomorphic newforms averaged over all levels of size Q, support up to 4
+field: analytic-number-theory
+statement_plain: >
+  Fix a weight k >= 3. Take the L-functions of the holomorphic Hecke
+  newforms of weight k and level q with trivial nebentypus, with harmonic
+  weights, averaged over all levels q of size Q against a smooth weight.
+  For every even Schwartz function Phi whose Fourier transform is compactly
+  supported in (-4, 4), the one-level density of the low-lying zeros,
+  normalized by log q / (2 pi), converges as Q tends to infinity to the
+  integral of Phi(x) (1 + delta_0(x)/2) dx, the prediction for orthogonal
+  symmetry.
+statement_formal: |
+  \lim_{Q\to\infty} \frac{1}{N(Q)} \sum_{q} \Psi\!\left(\frac qQ\right) \sum_{f\in H_k(q)}^{h}\ \sum_{\gamma_f} \Phi\!\left(\frac{\gamma_f}{2\pi}\log q\right) = \int_{-\infty}^{\infty}\Phi(x)\Bigl(1+\tfrac12\delta_0(x)\Bigr)\,dx \qquad \bigl(\operatorname{supp}\hat\Phi\subset(-4,4)\bigr)
+hypotheses_required: [GRH-automorphic, GRH-Dirichlet]
+status: still-conditional
+waiting_on: [higher-automorphic]
+status_note: >
+  The theorem says only "Assume GRH". The lemmas make the use explicit:
+  GRH for Dirichlet L-functions L(s, chi) with chi mod q and for L(s, f)
+  with f a primitive holomorphic or Maass Hecke eigenform of level q
+  (Lemmas 2.6 and 2.7; the Maass forms enter through the Kuznetsov
+  formula), and GRH for the symmetric square L-functions L(s, sym^2 f)
+  (Section 4.1). Here Psi is a fixed smooth weight compactly supported on
+  the positive reals and N(Q) is the corresponding weighted count of forms.
+  This doubles the support (-2, 2) of Iwaniec, Luo and Sarnak (existing
+  entry one-level-density-holomorphic-cusp-forms-support-two) thanks to the
+  extra average over the level. Later work building on it is recorded in
+  low-lying-zeros-centered-moments-level-averaged-family and
+  one-level-density-orthogonal-families-squarefree-level-support-three.
+sources:
+  - authors: S. Baluyot, V. Chandee, X. Li
+    title: Low-lying zeros of a large orthogonal family of automorphic L-functions
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2310.07606
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper never lists in one place every L-function for which GRH is assumed; the list here is assembled from Lemmas 2.6 and 2.7 and the proof in Section 4.1. Whether RH for zeta is also used was not determined.
+    - >-
+      The Maass forms have arbitrary level and the holomorphic forms weight k >= 3, so the modular-form-l-functions family (weight 2) does not apply.
+lean:
+  proved: false
+  path: null
+tags: [one-level-density, low-lying-zeros, modular-forms]
+added: 2026-11-22

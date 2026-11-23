@@ -1,0 +1,51 @@
+id: prime-ideal-races-abelian-families-two-way-density-criterion
+title: Limiting two-way race densities in families of abelian number fields
+field: analytic-number-theory
+statement_plain: >
+  Let (L_n) be a family of abelian extensions of Q with Galois groups G_n
+  and absolute discriminants d_{L_n} tending to infinity, let r(G_n) be the
+  number of elements of G_n with square 1, and suppose
+  r(G_n)/sqrt(log d_{L_n}) tends to a limit l in [0, infinity]. If l = 0,
+  then for every pair of distinct elements a, b of G_n the logarithmic
+  density of the set of x where the Frobenius class a has fewer primes up to
+  x than the class b tends to 1/2, uniformly in the pair. If l is not 0,
+  there are a_n, b_n in G_n for which this density tends to the standard
+  normal distribution function evaluated at l/sqrt(2).
+statement_formal: |
+  \lim_{n\to\infty}\frac{r(G_n)}{\sqrt{\log d_{L_n}}}=\ell\neq 0 \ \Longrightarrow\ \exists\, a_n,b_n\in G_n:\quad \lim_{n\to\infty}\delta^{(2)}_{L_n/\mathbb Q}(a_n,b_n)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\ell/\sqrt2}e^{-x^2/2}\,dx
+hypotheses_required: [RH, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is the paper's hypothesis LI: the positive ordinates
+  of the zeros of the Artin L-functions of the nontrivial irreducible
+  characters of Gal(L_n/Q) are linearly independent over Q, and these
+  L-functions do not vanish at 1/2. GRH is assumed for all Artin
+  L-functions L(s, L_n/Q, chi); since L_n is abelian over Q these are the
+  Riemann zeta function and Dirichlet L-functions, so the Riemann
+  Hypothesis part is covered and only LI remains. The paper's other main
+  results (Theorems B, C, D and 2.7, on races with three or more
+  competitors) rest on the same hypotheses.
+sources:
+  - authors: A. Bailleul, M. Hayani
+    title: Prime ideal races with several competitors
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2508.04087
+    hypothesis_location: Theorem A
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The identification of the Artin L-functions of an abelian extension of Q with Dirichlet L-functions is standard (Kronecker-Weber) but is not spelled out in the paper, which says only that they are Hecke L-functions.
+    - >-
+      The plain statement paraphrases the paper's definition of a uniformly 2-moderate family (Definition 1.1); the direction of the inequality in the race follows the paper's set P_{L/K}(C_1, C_2).
+lean:
+  proved: false
+  path: null
+tags: [prime-races, chebyshev-bias, abelian-extensions]
+added: 2026-11-22

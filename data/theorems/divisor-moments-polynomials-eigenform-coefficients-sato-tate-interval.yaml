@@ -1,0 +1,56 @@
+id: divisor-moments-polynomials-eigenform-coefficients-sato-tate-interval
+title: Divisor moments of polynomial values at prime-indexed newform coefficients with Sato-Tate angle in an interval
+field: analytic-number-theory
+statement_plain: >
+  Let f be a non-CM newform of weight k >= 2 and level N with integral
+  Fourier coefficients a_f(n), write a_f(p) = 2 p^((k-1)/2) cos theta_f(p),
+  and let F be a product of s pairwise distinct irreducible polynomials with
+  integer coefficients. Let I be a proper subinterval of [0, pi] of positive
+  Sato-Tate measure and m >= 1. Then the average of d(F(a_f(p)))^m over the
+  primes p <= x not dividing N with theta_f(p) in I and F(a_f(p)) nonzero
+  has order of magnitude (log x)^(s (2^m - 1)), with implied constants
+  independent of I. Here d is the number of divisors function.
+statement_formal: |
+  \frac{1}{\#\Pi(x,I;F,f)}\sum_{p\in\Pi(x,I;F,f)} d\bigl(F(a_f(p))\bigr)^m \asymp_{f,F,m} (\log x)^{s(2^m-1)},\qquad \Pi(x,I;F,f)=\{p\le x : p\nmid N,\ \theta_f(p)\in I,\ F(a_f(p))\ne 0\}
+hypotheses_required: [ERH-Dedekind, GRH-automorphic, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [galois-extensions, higher-automorphic, extra-assumption]
+status_note: >
+  The paper's Remark 1.2 says GRH means two things: the Riemann Hypothesis
+  for Dedekind zeta functions (used for the analytic continuation of a zeta
+  function attached to cycle types and for the effective Chebotarev theorem
+  in the fields cut out by the mod delta Galois representations of f), and
+  GRH for L(s, Sym^m f x chi) for every irreducible character chi of a
+  Galois group Gal(K/Q) inside GL_2(Z/delta). The extra assumption is the
+  paper's Hypothesis A: these L-functions L(s, Sym^m f x chi) have the
+  expected gamma factors, entire continuation of order 1, functional
+  equation and conductor bound. For I = [0, pi] Hypothesis A is not needed,
+  and that case is contained in the dataset entry
+  divisor-moments-polynomials-in-eigenform-coefficients-at-primes (from a
+  later paper of the same author, which also allows non-square-free F and
+  non-rational coefficient fields); this entry records the version with a
+  Sato-Tate restriction. For F(T) = T the paper says the theorem recovers an
+  earlier result of Lau and the same author.
+sources:
+  - authors: W. Lee
+    title: Divisor moments of polynomials in Fourier coefficients of modular forms
+    year: 2026
+    venue: Preprint
+    url: https://arxiv.org/abs/2607.18832
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      Remark 1.2 does not say whether GRH for L(s, Sym^m f x chi) is also assumed when I = [0, pi]; Lemma 6.1 (the case I = [0, pi]) uses only effective Chebotarev, and Lemma 6.2 (general I) uses GRH and Hypothesis A.
+    - >-
+      The later paper arXiv:2611.10489 also treats proper subintervals I under similar hypotheses; its existing dataset entry does not record that case, so this entry may overlap with it.
+lean:
+  proved: false
+  path: null
+tags: [divisor-function, modular-forms, sato-tate, chebotarev]
+added: 2026-11-22

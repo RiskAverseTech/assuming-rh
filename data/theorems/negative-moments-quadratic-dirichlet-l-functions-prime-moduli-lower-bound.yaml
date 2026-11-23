@@ -1,0 +1,44 @@
+id: negative-moments-quadratic-dirichlet-l-functions-prime-moduli-lower-bound
+title: Lower bounds for negative moments of quadratic Dirichlet L-functions with moduli 8p
+field: analytic-number-theory
+statement_plain: >
+  Let chi_{8p} be the Kronecker symbol (8p/.) for an odd prime p. For every
+  real k < 0 and large X, the sum over primes 2 < p <= X of
+  (log p) |L(1/2, chi_{8p})|^(2k) is at least a positive constant depending
+  on k times X (log X)^(2k(2k+1)/2).
+statement_formal: |
+  \sum_{2<p\le X} (\log p)\,\bigl|L(\tfrac12,\chi_{8p})\bigr|^{2k} \gg_k X(\log X)^{\frac{2k(2k+1)}{2}} \qquad (k<0)
+hypotheses_required: [RH, GRH-Dirichlet, PLUS-EXTRA]
+status: still-conditional
+waiting_on: [extra-assumption]
+status_note: >
+  The extra assumption is Chowla's conjecture that the central values of
+  these quadratic Dirichlet L-functions do not vanish, which is needed for
+  the negative powers to make sense. Besides it the theorem assumes RH for
+  zeta and GRH for L(s, chi_{8p}) for all odd primes p. The first half of
+  the same theorem gives the matching lower bound for the family
+  L(1/2, chi_{8d}), d odd, positive and square-free, assuming only Chowla's
+  conjecture and no Riemann Hypothesis.
+sources:
+  - authors: P. Gao
+    title: Lower bounds for negative moments of quadratic Dirichlet L-functions
+    year: 2022
+    venue: Preprint
+    url: https://arxiv.org/abs/2203.06845
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      If some central value vanished the sum would be infinite under the natural convention, so the role of Chowla's conjecture is to make the statement meaningful; a reviewer may prefer to treat it differently from other extra assumptions.
+    - >-
+      The exponent 2k(2k+1)/2 was read from the extracted text and not checked against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [quadratic-characters, negative-moments, central-values]
+added: 2026-11-22

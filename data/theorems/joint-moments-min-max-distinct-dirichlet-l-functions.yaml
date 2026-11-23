@@ -1,0 +1,46 @@
+id: joint-moments-min-max-distinct-dirichlet-l-functions
+title: Moments of the minimum and maximum of distinct Dirichlet L-functions on the critical line
+field: analytic-number-theory
+statement_plain: >
+  Let chi_1, ..., chi_r be distinct primitive Dirichlet characters (one of
+  them may be trivial, giving the Riemann zeta function). For every k > 0
+  and epsilon > 0, the integral over T <= t <= 2T of
+  (min_j |L(1/2 + it, chi_j)|)^(2k) is at most a constant times
+  T (log T)^(k^2/r + epsilon), and the integral of
+  (max_j |L(1/2 + it, chi_j)|)^(-2k) is at least a constant times
+  T (log T)^(k^2/r - epsilon). The integrals of
+  exp(2k min_j Im log L(1/2 + it, chi_j)) and of
+  exp(-2k max_j Im log L(1/2 + it, chi_j)) both lie between
+  T (log T)^(k^2/r - epsilon) and T (log T)^(k^2/r + epsilon), up to
+  constants depending on the characters, k and epsilon.
+statement_formal: |
+  \int_T^{2T} \Bigl(\min_{1\le j\le r} |L(\tfrac12+it,\chi_j)|\Bigr)^{2k} dt \ll T(\log T)^{k^2/r+\varepsilon}, \qquad \int_T^{2T} \Bigl(\max_{1\le j\le r} |L(\tfrac12+it,\chi_j)|\Bigr)^{-2k} dt \gg T(\log T)^{k^2/r-\varepsilon}
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The hypothesis is the Riemann Hypothesis for the L-functions L(s, chi_j)
+  in the statement, which includes the Riemann zeta function when one
+  character is trivial. Without any hypothesis the same theorem gives these
+  bounds only for sufficiently small k, with exponents k^2/r plus or minus
+  B k^3. The theorem is a special case of the paper's Theorems 2.4 and 2.5
+  for a general class of L-functions; only the Dirichlet case is recorded
+  here.
+sources:
+  - authors: S. Inoue, J. Li
+    title: Joint value distribution of L-functions on the critical line
+    year: 2021
+    venue: Preprint
+    url: https://arxiv.org/abs/2102.12724
+    hypothesis_location: Theorem 1.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: high
+  open_questions: []
+lean:
+  proved: false
+  path: null
+tags: [dirichlet-l-functions, moments, joint-value-distribution]
+added: 2026-11-22

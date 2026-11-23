@@ -1,0 +1,49 @@
+id: gaussian-prime-angles-limiting-logarithmic-distribution
+title: Limiting distribution for the discrepancy of angles of Gaussian primes
+field: analytic-number-theory
+statement_plain: >
+  For a prime p = 1 mod 4 let theta_p in [0, pi] be the angle of a Gaussian
+  prime a + 2ib above p normalized by a + 2ib = 1 mod (2 + 2i). Let phi be
+  an even 2 pi-periodic function whose Fourier coefficients satisfy
+  phi^(m) << |m|^(-1-epsilon) for some epsilon > 0. Then the normalized
+  error term E_phi(x) = (log x / sqrt(x)) (sum of phi(theta_p) over primes
+  p <= x with p = 1 mod 4, minus Li(x) times the integral of phi(t) dt/(2 pi)
+  over [0, pi]) has a limiting logarithmic distribution as x tends to
+  infinity.
+statement_formal: |
+  E_\varphi(x) := \frac{\log x}{\sqrt{x}} \Biggl( \sum_{\substack{p \le x \\ p \equiv 1 \bmod 4}} \varphi(\theta_p) - \mathrm{Li}(x) \int_0^{\pi} \varphi(t)\,\frac{dt}{2\pi} \Biggr) \ \text{ admits a limiting logarithmic distribution as } x \to \infty .
+hypotheses_required: [GRH-Hecke]
+status: still-conditional
+waiting_on: [power-residue-characters]
+status_note: >
+  The L-functions are the Hecke L-functions L(s, xi_m), m >= 0, of the
+  powers of the angle character xi on Z[i] of conductor (2 + 2i) (infinite
+  order Hecke characters of Q(i)), together with their "second moment"
+  L-functions as required by the paper's general Theorem 2.2. These are not
+  Dirichlet L-functions, except for m = 0. The same theorem gives a formula
+  for the mean of the limiting distribution under the further assumption
+  that the order of vanishing of each L(s, xi^m) at s = 1/2 is exactly given
+  by the sign of its functional equation; that part is not recorded here.
+  Theorem 3.2 of the paper is an analogous statement comparing primes
+  1 mod 8 with primes 5 mod 8.
+sources:
+  - authors: L. Devin
+    title: Discrepancies in the distribution of Gaussian primes
+    year: 2025
+    venue: Preprint
+    url: https://arxiv.org/abs/2105.02492
+    hypothesis_location: Theorem 3.1
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - The waiting_on list has no family for Hecke characters of infinite order over Q(i); power-residue-characters was chosen as the closest GRH-Hecke family, following the entry cubic-gauss-sums-patterson-conjecture.
+    - The year is that of the arXiv version on disk (v3, dated October 2025); no journal reference is printed in the text.
+lean:
+  proved: false
+  path: null
+tags: [gaussian-primes, chebyshev-bias, hecke-characters]
+added: 2026-11-22

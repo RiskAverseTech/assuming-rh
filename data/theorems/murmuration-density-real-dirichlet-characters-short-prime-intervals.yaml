@@ -1,0 +1,50 @@
+id: murmuration-density-real-dirichlet-characters-short-prime-intervals
+title: Murmuration density for real Dirichlet characters averaged over primes in short intervals
+field: analytic-number-theory
+statement_plain: >
+  Let G be the set of odd squarefree integers, chi_{8d} the Kronecker symbol
+  (8d/.), and Phi >= 0 a smooth Schwartz function with compact support. For
+  y > 0 and 3/4 < delta < 1 let M_Phi(y, X, delta) be (log X)/X^(1 + delta)
+  times the sum over primes p in [yX, yX + X^delta] and d in G of
+  Phi(d/X) chi_{8d}(p) sqrt(p). Then as X tends to infinity this converges
+  to (1/2) sum over odd a >= 1 of mu(a)/a^2 times the sum over m >= 1 of
+  (-1)^m Phi~(m^2/(2 a^2 y)), where Phi~(xi) is the integral of
+  (cos(2 pi xi x) + sin(2 pi xi x)) Phi(x) dx over the real line.
+statement_formal: |
+  \lim_{X\to\infty} \frac{\log X}{X^{1+\delta}} \sum_{\substack{p\in[yX,\,yX+X^{\delta}]\\ p \text{ prime}}}\ \sum_{d\in\mathcal G} \Phi\!\left(\frac dX\right)\chi_{8d}(p)\sqrt p \;=\; \frac12 \sum_{\substack{a\ge 1\\ (a,2)=1}} \frac{\mu(a)}{a^{2}} \sum_{m=1}^{\infty} (-1)^m\, \widetilde\Phi\!\left(\frac{m^{2}}{2a^{2}y}\right), \qquad \widetilde\Phi(\xi)=\int_{-\infty}^{\infty}\bigl(\cos(2\pi\xi x)+\sin(2\pi\xi x)\bigr)\Phi(x)\,dx
+hypotheses_required: [RH, GRH-Dirichlet]
+status: unlocked
+status_note: >
+  The theorem says "assuming the Generalized Riemann hypothesis" without
+  naming a family. The hypothesis enters through Lemma 2.10, a bound for
+  sums of chi_d(p) over primes in short intervals (quadratic Dirichlet
+  L-functions), and through the Riemann Hypothesis for zeta, used to count
+  primes in the interval [yX, yX + X^delta] and in the proof of Corollary
+  1.3. The paper's Theorem 1.1 on complex characters normalized by Gauss
+  sums is unconditional for geometric intervals of conductors and assumes
+  RH only for short intervals. A different murmuration formula for
+  quadratic characters is the existing entry
+  murmurations-quadratic-dirichlet-characters-explicit-formula.
+sources:
+  - authors: K.-H. Lee, T. Oliver, A. Pozdnyakov
+    title: Murmurations of Dirichlet characters
+    year: 2023
+    venue: Preprint
+    url: https://arxiv.org/abs/2307.00256
+    hypothesis_location: Theorem 1.2
+    role: conditional-proof
+review:
+  state: ai-classified
+  checked_by: null
+  checked_on: null
+  confidence: medium
+  open_questions:
+    - >-
+      The paper does not define its Generalized Riemann hypothesis. That only zeta and quadratic Dirichlet L-functions are needed is read from Lemma 2.10 (which cites Granville and Soundararajan) and from the uses of the Riemann hypothesis for prime counts; the full proof was not checked line by line.
+    - >-
+      The formula was transcribed from the extracted text of equations (1.6) and (1.7) and cross-checked against equation (1.9), not against the PDF.
+lean:
+  proved: false
+  path: null
+tags: [murmurations, quadratic-characters, primes-in-short-intervals]
+added: 2026-11-22
