@@ -11,7 +11,7 @@ summary: >
   statement certifying that both the statement and the proof of the Riemann
   Hypothesis are correct. No account of the argument that mathematicians can
   read has been reviewed.
-last_updated: 2026-11-21
+last_updated: 2026-11-23
 claims:
   - The Riemann Hypothesis, stated with Mathlib's own definition.
   - GRH for every Dirichlet L-function, for all characters and separately for primitive characters.
@@ -22,11 +22,19 @@ caveats:
     statement is Mathlib's own, vetted by experts, and the proof was compared
     against it with two independent tools and checked by several proof
     checkers, two of which are formally verified. The statement does not
-    mention the extension to Dirichlet L-functions. In the public discussion
-    the same tools were reported to accept those theorems as well, but they
-    are stated with definitions written by the author and have had less
-    scrutiny. Entries that need GRH for Dirichlet L-functions rest on that
-    part.
+    mention the extension to Dirichlet L-functions.
+  - >
+    For the Dirichlet part, the first check used statements written for the
+    community repository after the announcement. The community has since
+    added a second comparison against a statement of the Generalized Riemann
+    Hypothesis for Dirichlet L-functions written by other people in November
+    2025, in the formal-conjectures project. Its notes report that one
+    checker accepted the proof against that statement on a build of the
+    published archive, measured by a volunteer on the original Lean version,
+    and that nobody has yet repeated this on the current version. So the
+    Dirichlet part now rests on an independently written statement, but with
+    less checking behind it than the Riemann Hypothesis itself. Entries that
+    need GRH for Dirichlet L-functions rest on that part.
   - >
     Checked by machine is not the same as understood. No human-readable
     account of the argument has been reviewed. The joint statement itself
@@ -46,6 +54,9 @@ sources:
   - label: "Community copy of the Lean code"
     url: https://github.com/leanprover-community/riemann-hypothesis
     accessed: 2026-11-21
+  - label: "Community repository, README and verification notes, including the comparison against the formal-conjectures statement (read directly)"
+    url: https://github.com/leanprover-community/riemann-hypothesis/blob/main/verification/NOTES.md
+    accessed: 2026-11-23
   - label: "Checker results collected by Andrew Sutherland (linked in the discussion, not read directly)"
     url: https://math.mit.edu/~drew/grh/
     accessed: 2026-11-21
