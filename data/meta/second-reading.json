@@ -1,0 +1,4097 @@
+{
+ "about": {
+  "what": "A second, independent reading of each paper excerpt by a different AI model. It saw only the paper text around the theorem and the hypothesis, never this project's classification. It is one AI checking another, not a verification.",
+  "model": "jev-1.14.0 (TypeSafe AI)",
+  "date": "2026-11-23",
+  "question_which": "For which L-functions is the hypothesis assumed in this theorem: only zeta and Dirichlet L-functions; also others; or not stated in the excerpt.",
+  "question_extra": "Besides a Riemann Hypothesis, does the theorem also assume another unproved conjecture."
+ },
+ "readings": {
+  "abelian-p-division-fields-elliptic-curves-uniform-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.6,
+   "not_stated": 0.39,
+   "extra_assumption": 0.08
+  },
+  "abelian-varieties-constrained-torsion-finiteness": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "algebraic-automorphic-representations-finiteness-weights-up-to-24": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "alladi-johnson-constants-mostly-negative": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.12
+  },
+  "almost-prime-orders-elliptic-curves-prime-power-fields-non-cm": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.9
+  },
+  "almost-ramanujan-graphs-every-degree": {
+   "dirichlet_only": 0.18,
+   "beyond": 0.02,
+   "not_stated": 0.8,
+   "extra_assumption": 0.07
+  },
+  "analytic-rank-distribution-elliptic-curves-explicit": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.15
+  },
+  "andre-oort-conjecture-shimura-varieties": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.91,
+   "not_stated": 0.09,
+   "extra_assumption": 0.06
+  },
+  "andre-oort-curves-in-shimura-varieties": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.86,
+   "not_stated": 0.12,
+   "extra_assumption": 0.06
+  },
+  "andre-oort-mod-p-product-of-two-modular-curves": {
+   "dirichlet_only": 0.05,
+   "beyond": 0.94,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "andre-oort-products-of-modular-curves": {
+   "dirichlet_only": 0.08,
+   "beyond": 0.79,
+   "not_stated": 0.13,
+   "extra_assumption": 0.06
+  },
+  "andrica-logarithmic-variant": {
+   "dirichlet_only": 0.66,
+   "beyond": 0.0,
+   "not_stated": 0.34,
+   "extra_assumption": 0.04
+  },
+  "arboreal-galois-groups-pcf-polynomials-exponential-lower-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.34,
+   "not_stated": 0.65,
+   "extra_assumption": 0.19
+  },
+  "argument-dirichlet-l-function-high-moments-tsang-range": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.04
+  },
+  "argument-gl3-l-functions-prime-level-gaussian-moments": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.11
+  },
+  "argument-of-zeta-exponential-moments-upper-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.04
+  },
+  "argument-of-zeta-extreme-values-resonance": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "argument-of-zeta-large-deviation-principle": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.06
+  },
+  "argument-of-zeta-large-deviations-lower-bound": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.04
+  },
+  "argument-of-zeta-large-values-very-short-intervals": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.05
+  },
+  "argument-of-zeta-near-zeros-central-limit-theorem": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.85
+  },
+  "argument-of-zeta-omega-plus-minus-resonance": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "arithmetic-circuit-lower-bounds-ma-coefficients": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.16,
+   "not_stated": 0.82,
+   "extra_assumption": 0.07
+  },
+  "arithmetic-progressions-in-product-sets-complex-numbers": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.73,
+   "not_stated": 0.26,
+   "extra_assumption": 0.13
+  },
+  "artin-conjecture-abelian-varieties-frobenius-condition": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "artin-conjecture-index-prime-factors-generating-function": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.96,
+   "not_stated": 0.04,
+   "extra_assumption": 0.16
+  },
+  "artin-density-ratio-uniform-bounds": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.15
+  },
+  "artin-l-function-value-at-one-loglog-bounds": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "artin-type-index-map-density-valuation-limit": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.41,
+   "not_stated": 0.58,
+   "extra_assumption": 0.11
+  },
+  "automorphic-l-function-zero-in-every-interval-45-32": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.86,
+   "not_stated": 0.14,
+   "extra_assumption": 0.79
+  },
+  "automorphic-prime-number-theorem-error-limiting-distribution": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.22
+  },
+  "average-analytic-rank-elliptic-curves-at-most-2": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "average-analytic-rank-elliptic-curves-at-most-25-14": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.52
+  },
+  "average-analytic-rank-elliptic-curves-genus-zero-level-structure": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.71
+  },
+  "average-analytic-rank-elliptic-curves-number-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.86
+  },
+  "average-analytic-rank-elliptic-curves-two-torsion-bounds": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.18
+  },
+  "average-analytic-rank-hyperelliptic-curves-weierstrass-point": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.92
+  },
+  "average-analytic-rank-non-hyperelliptic-twists-genus-2-curve": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.13
+  },
+  "average-analytic-rank-quadratic-twists-at-most-3-2": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "average-analytic-rank-quartic-twists-at-most-13-6": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.81
+  },
+  "average-exponent-elliptic-curve-reductions": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "average-least-prime-negative-hecke-eigenvalue": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.22
+  },
+  "average-multiplicative-order-arnold-problem": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "average-order-finitely-generated-subgroup-reductions-power-moments": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.1
+  },
+  "ax-plus-b-markov-chain-cutoff-most-primes": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "baez-duarte-distance-upper-bound-inverse-sqrt-log": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.1
+  },
+  "baez-duarte-sequential-riesz-criterion": {
+   "dirichlet_only": 0.87,
+   "beyond": 0.0,
+   "not_stated": 0.13,
+   "extra_assumption": 0.13
+  },
+  "baez-duarte-strong-nyman-beurling-criterion": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "balazard-saias-yor-truncated-integral-decay-rate": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.04
+  },
+  "bessel-periods-symmetric-cubes-decorrelation-imaginary-quadratic-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "binary-correlations-hecke-eigenvalues-at-primes-average-over-shifts": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.98,
+   "not_stated": 0.0,
+   "extra_assumption": 0.59
+  },
+  "binomial-products-partial-factorization-asymptotic": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.04
+  },
+  "borromean-primes-density-1-over-128": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.63,
+   "not_stated": 0.34,
+   "extra_assumption": 0.11
+  },
+  "bounded-elementary-generation-sl2-s-integers": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.09,
+   "not_stated": 0.9,
+   "extra_assumption": 0.04
+  },
+  "bounded-gaps-primes-cyclic-elliptic-curve-reduction": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.82,
+   "not_stated": 0.17,
+   "extra_assumption": 0.13
+  },
+  "bounded-gaps-primes-with-given-primitive-root": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "brun-constant-upper-bound-2-1594": {
+   "dirichlet_only": 0.06,
+   "beyond": 0.05,
+   "not_stated": 0.89,
+   "extra_assumption": 0.06
+  },
+  "carmichael-lambda-function-no-unique-value": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "carmichael-number-recognition-in-polynomial-time": {
+   "dirichlet_only": 0.51,
+   "beyond": 0.02,
+   "not_stated": 0.47,
+   "extra_assumption": 0.11
+  },
+  "cf-normal-absolutely-abnormal-numbers": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.37,
+   "not_stated": 0.6,
+   "extra_assumption": 0.16
+  },
+  "character-sum-high-moments-arbitrary-length-sharp-upper-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "character-sums-k-free-integers-limiting-distribution": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.91
+  },
+  "character-sums-maximal-size-explicit-constant": {
+   "dirichlet_only": 0.61,
+   "beyond": 0.35,
+   "not_stated": 0.04,
+   "extra_assumption": 0.16
+  },
+  "character-sums-smooth-approximation-granville-soundararajan-scale": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "character-sums-twisted-by-modular-coefficients-moments": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.88,
+   "not_stated": 0.11,
+   "extra_assumption": 0.13
+  },
+  "chebotarev-moments-non-gaussian-frobenius-groups": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.15
+  },
+  "chebyshev-bias-dihedral-two-power-towers-extreme-and-moderate": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.96
+  },
+  "chebyshev-bias-mod-4-weighted-sum-outside-finite-log-measure": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.97
+  },
+  "chebyshev-bias-products-of-two-primes": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.97
+  },
+  "chebyshev-bias-weighted-natural-density": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "chevalley-groups-z-one-over-p-unitriangular-length-6": {
+   "dirichlet_only": 0.04,
+   "beyond": 0.49,
+   "not_stated": 0.47,
+   "extra_assumption": 0.43
+  },
+  "class-group-generators-norm-bound-4-01": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.93,
+   "not_stated": 0.05,
+   "extra_assumption": 0.12
+  },
+  "class-group-generators-norm-bound-below-4": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.93,
+   "not_stated": 0.06,
+   "extra_assumption": 0.09
+  },
+  "class-group-unit-group-subexponential-all-number-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "class-groups-cyclic-degree-l-fields-gerth-distribution": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.21,
+   "not_stated": 0.78,
+   "extra_assumption": 0.13
+  },
+  "class-number-count-imaginary-quadratic-odd-average": {
+   "dirichlet_only": 0.21,
+   "beyond": 0.73,
+   "not_stated": 0.06,
+   "extra_assumption": 0.15
+  },
+  "class-number-indefinite-forms-bound-by-fundamental-unit": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.07,
+   "not_stated": 0.17,
+   "extra_assumption": 0.86
+  },
+  "cm-elliptic-curve-torsion-odd-degree-upper-order": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.01,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "cm-liftings-supersingular-curves-exceptional-discriminants": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "cm-method-low-space-elliptic-curve-construction": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "cm-newforms-rational-coefficients-finiteness": {
+   "dirichlet_only": 0.92,
+   "beyond": 0.08,
+   "not_stated": 0.0,
+   "extra_assumption": 0.28
+  },
+  "cm-newforms-rationality-fields-bounded-degree-finiteness": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.02,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "complex-dimension-polynomial-hierarchy-zero-free-region": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.94,
+   "not_stated": 0.05,
+   "extra_assumption": 0.59
+  },
+  "congruence-subgroup-growth-simple-algebraic-groups": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "congruence-subgroup-growth-sl2-s-integers": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "conjugacy-width-anisotropic-spin-arithmetic-groups": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.21,
+   "not_stated": 0.79,
+   "extra_assumption": 0.17
+  },
+  "consecutive-primes-mutual-primitive-roots": {
+   "dirichlet_only": 0.14,
+   "beyond": 0.27,
+   "not_stated": 0.59,
+   "extra_assumption": 0.16
+  },
+  "continued-fraction-statistics-multiples-of-quadratic-irrational": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.11,
+   "not_stated": 0.87,
+   "extra_assumption": 0.09
+  },
+  "coprime-universal-ternary-forms-primes-5-23-29-31": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "costas-arrays-t4-g4-constructions-prime-density": {
+   "dirichlet_only": 0.48,
+   "beyond": 0.1,
+   "not_stated": 0.42,
+   "extra_assumption": 0.14
+  },
+  "cubic-field-count-error-term-two-thirds-minus-1-51": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.16
+  },
+  "cubic-field-counts-local-conditions-omega-result": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.24
+  },
+  "cubic-gauss-sums-patterson-conjecture": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "cyclic-isogenies-elliptic-curves-quadratic-field-sqrt-213": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.86,
+   "not_stated": 0.13,
+   "extra_assumption": 0.47
+  },
+  "cyclically-covering-subspaces-average-codimension-lower-bound": {
+   "dirichlet_only": 0.24,
+   "beyond": 0.16,
+   "not_stated": 0.6,
+   "extra_assumption": 0.36
+  },
+  "cyclotomic-identity-testing-in-bpp": {
+   "dirichlet_only": 0.21,
+   "beyond": 0.07,
+   "not_stated": 0.72,
+   "extra_assumption": 0.07
+  },
+  "d4-versus-s4-quartic-extensions-ratio-lower-bound": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.92,
+   "not_stated": 0.06,
+   "extra_assumption": 0.12
+  },
+  "dedekind-psi-primorial-lower-bound": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.0,
+   "not_stated": 0.15,
+   "extra_assumption": 0.06
+  },
+  "dedekind-totient-riesz-mean-error-rh-equivalence": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.08
+  },
+  "dedekind-zeta-limit-in-families-generalized-brauer-siegel": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "dedekind-zeta-lowest-zero-explicit-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.11
+  },
+  "dedekind-zeta-lowest-zero-height-large-degree": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.95,
+   "not_stated": 0.03,
+   "extra_assumption": 0.13
+  },
+  "dedekind-zeta-residue-explicit-bounds": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.1
+  },
+  "dedekind-zeta-residue-prime-splitting-approximation-2-324": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.16
+  },
+  "dedekind-zeta-zeros-short-window-explicit-count": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "differenced-xi-function-zero-spacings-trivial-distribution": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.01,
+   "not_stated": 0.14,
+   "extra_assumption": 0.15
+  },
+  "diophantine-approximation-prime-denominator-quadratic-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "dirichlet-l-function-argument-and-central-order-bounds": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.97,
+   "not_stated": 0.02,
+   "extra_assumption": 0.15
+  },
+  "dirichlet-l-function-critical-strip-explicit-bounds": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.85,
+   "not_stated": 0.14,
+   "extra_assumption": 0.09
+  },
+  "dirichlet-l-function-derivative-zero-count-error-term": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.19
+  },
+  "dirichlet-l-function-explicit-critical-line-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.85,
+   "not_stated": 0.15,
+   "extra_assumption": 0.44
+  },
+  "dirichlet-l-function-lowest-zero-explicit-loglog-bound": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.13
+  },
+  "dirichlet-l-functions-distinct-and-simple-zeros-proportion": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "dirichlet-l-functions-small-gaps-between-zeros-0-37": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.97,
+   "not_stated": 0.0,
+   "extra_assumption": 0.19
+  },
+  "divisor-moments-polynomials-eigenform-coefficients-sato-tate-interval": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.87
+  },
+  "divisor-moments-polynomials-in-eigenform-coefficients-at-primes": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.81
+  },
+  "divisors-of-given-degree-of-t-n-minus-1-over-fp": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "duke-short-sum-theorem-artin-l-functions-explicit": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.69
+  },
+  "dynamically-irreducible-polynomials-modulo-primes-density-bound": {
+   "dirichlet_only": 0.17,
+   "beyond": 0.02,
+   "not_stated": 0.81,
+   "extra_assumption": 0.08
+  },
+  "effective-chebotarev-quasi-riemann-hypothesis": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.29
+  },
+  "effective-sato-tate-abelian-varieties": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.92
+  },
+  "eight-class-groups-imaginary-quadratic-cohen-lenstra-distribution": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.17
+  },
+  "eighth-moment-dirichlet-l-functions": {
+   "dirichlet_only": 0.81,
+   "beyond": 0.04,
+   "not_stated": 0.15,
+   "extra_assumption": 0.11
+  },
+  "elasticity-real-quadratic-orders-typical-size": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "elementary-generation-sl2-s-integers-five-six-seven": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "elite-primes-counting-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.25
+  },
+  "elkies-curve-mordell-weil-rank-28": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "elliptic-curve-group-order-at-most-8-prime-factors": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.71
+  },
+  "elliptic-curve-group-order-divisible-by-m-deterministic": {
+   "dirichlet_only": 0.25,
+   "beyond": 0.07,
+   "not_stated": 0.68,
+   "extra_assumption": 0.06
+  },
+  "elliptic-curve-least-maximal-order-point-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "elliptic-curve-point-counts-products-many-representations": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "elliptic-curve-prime-races-highly-biased-unbounded-rank": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.93
+  },
+  "elliptic-curve-rank-bounds": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.71
+  },
+  "elliptic-curve-rank-stability-cyclic-prime-degree-extensions": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.49,
+   "not_stated": 0.49,
+   "extra_assumption": 0.12
+  },
+  "elliptic-curve-reductions-least-prime-divisor-log-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "elliptic-curves-squarefree-discriminant-smoothed-count": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.05
+  },
+  "endomorphism-ring-discriminant-reductions-close-to-maximal": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.09
+  },
+  "endomorphism-rings-ordinary-curves-subexponential": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.22,
+   "not_stated": 0.75,
+   "extra_assumption": 0.07
+  },
+  "equal-frobenius-fields-non-isogenous-elliptic-curves": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.88
+  },
+  "euclidean-systems-ray-classes-generating-sets": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.37,
+   "not_stated": 0.61,
+   "extra_assumption": 0.21
+  },
+  "euler-factorial-series-linear-forms-nonvanishing": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.98,
+   "not_stated": 0.0,
+   "extra_assumption": 0.88
+  },
+  "euler-kronecker-constant-asymptotic-lower-bound": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.62,
+   "not_stated": 0.35,
+   "extra_assumption": 0.11
+  },
+  "euler-kronecker-constants-abelian-cubic-fields-extreme-values": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "euler-kronecker-constants-narrow-ray-class-fields-average": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "euler-phi-not-divisible-by-prime-naive-vs-ramanujan": {
+   "dirichlet_only": 0.38,
+   "beyond": 0.33,
+   "not_stated": 0.29,
+   "extra_assumption": 0.16
+  },
+  "euler-product-elliptic-curve-original-bsd-asymptotic": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "evasiveness-sparse-monotone-graph-properties": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.81
+  },
+  "even-integers-prime-plus-almost-prime-31-factors": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.01,
+   "not_stated": 0.14,
+   "extra_assumption": 0.1
+  },
+  "exceptional-primes-elliptic-curves-number-fields-log-conductor": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.49,
+   "not_stated": 0.51,
+   "extra_assumption": 0.07
+  },
+  "expander-cayley-graphs-narrow-ray-class-groups": {
+   "dirichlet_only": 0.41,
+   "beyond": 0.41,
+   "not_stated": 0.18,
+   "extra_assumption": 0.08
+  },
+  "explicit-bounds-for-l-functions-at-one": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.97
+  },
+  "explicit-chebotarev-psi-bound-grenie-molteni": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "explicit-mertens-function-bound": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.06
+  },
+  "explicit-mertens-function-power-saving-bound": {
+   "dirichlet_only": 0.71,
+   "beyond": 0.03,
+   "not_stated": 0.26,
+   "extra_assumption": 0.11
+  },
+  "explicit-mertens-theorems-number-fields": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.08
+  },
+  "explicit-pnt-short-intervals": {
+   "dirichlet_only": 0.84,
+   "beyond": 0.0,
+   "not_stated": 0.16,
+   "extra_assumption": 0.04
+  },
+  "explicit-prime-counting-in-arithmetic-progressions": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.32
+  },
+  "explicit-prime-ideal-theorem-chebyshev-function": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "explicit-prime-ideal-theorem-lambert-w-optimal-asymptotic": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.93,
+   "not_stated": 0.06,
+   "extra_assumption": 0.1
+  },
+  "explicit-s-s1-zeta-critical-line-bounds": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "explicit-smoothed-prime-ideal-theorem": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "extremal-primes-non-cm-elliptic-curves-upper-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.56
+  },
+  "extreme-values-quadratic-hecke-l-functions-number-fields": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "factoring-pq-elliptic-curve-rank-one-small-parameter": {
+   "dirichlet_only": 0.14,
+   "beyond": 0.18,
+   "not_stated": 0.68,
+   "extra_assumption": 0.89
+  },
+  "farey-lattice-counting-error-term-five-halves": {
+   "dirichlet_only": 0.57,
+   "beyond": 0.0,
+   "not_stated": 0.43,
+   "extra_assumption": 0.06
+  },
+  "first-moment-cubic-dirichlet-l-functions-secondary-term": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "first-moment-cubic-hecke-l-functions-prime-moduli-eisenstein-field": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.88,
+   "not_stated": 0.11,
+   "extra_assumption": 0.3
+  },
+  "first-moment-primitive-quadratic-dirichlet-l-functions-secondary-term": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.01,
+   "not_stated": 0.05,
+   "extra_assumption": 0.94
+  },
+  "first-moment-primitive-quartic-sextic-dirichlet-l-functions": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.13
+  },
+  "first-moment-quadratic-dirichlet-l-functions-quarter-power-error": {
+   "dirichlet_only": 0.89,
+   "beyond": 0.01,
+   "not_stated": 0.1,
+   "extra_assumption": 0.09
+  },
+  "first-moment-quadratic-hecke-l-functions-gaussian-field-secondary-term": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.76
+  },
+  "first-moment-quadratic-hecke-l-functions-imaginary-quadratic-fields": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.92,
+   "not_stated": 0.07,
+   "extra_assumption": 0.16
+  },
+  "first-moment-quartic-hecke-l-functions-prime-moduli-gaussian-field": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.92,
+   "not_stated": 0.08,
+   "extra_assumption": 0.27
+  },
+  "four-dirichlet-l-functions-simultaneously-large-central-values": {
+   "dirichlet_only": 0.83,
+   "beyond": 0.04,
+   "not_stated": 0.13,
+   "extra_assumption": 0.09
+  },
+  "fourier-uniformity-multiplicative-functions-polylog-intervals": {
+   "dirichlet_only": 0.86,
+   "beyond": 0.0,
+   "not_stated": 0.14,
+   "extra_assumption": 0.12
+  },
+  "fourth-moment-holomorphic-hecke-cusp-forms-bounded": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "fourth-moment-quadratic-dirichlet-l-functions-asymptotic": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.04,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "fourth-moment-quadratic-hecke-l-functions-gaussian-field": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.33
+  },
+  "fractional-moments-dirichlet-l-functions-upper-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "frobenius-fields-abelian-varieties-power-saving": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "frobenius-sign-separation-abelian-varieties": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.92
+  },
+  "frobenius-traces-generic-abelian-variety-bounds": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.79,
+   "not_stated": 0.19,
+   "extra_assumption": 0.81
+  },
+  "frobenius-traces-products-non-cm-elliptic-curves": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.13
+  },
+  "galois-group-large-degree-representation-small-root-discriminant": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.84
+  },
+  "galois-orbits-cm-points-siegel-polynomial-lower-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.87,
+   "not_stated": 0.12,
+   "extra_assumption": 0.09
+  },
+  "galois-orbits-special-subvarieties-shimura-lower-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.89,
+   "not_stated": 0.1,
+   "extra_assumption": 0.11
+  },
+  "gauss-class-number-mean-value-error-118-181": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.48
+  },
+  "gaussian-prime-angles-limiting-logarithmic-distribution": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.94,
+   "not_stated": 0.05,
+   "extra_assumption": 0.78
+  },
+  "gcd-cyclotomic-values-of-powers-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.21
+  },
+  "generalized-bent-functions-nonexistence-infinitely-many-primes": {
+   "dirichlet_only": 0.28,
+   "beyond": 0.33,
+   "not_stated": 0.39,
+   "extra_assumption": 0.56
+  },
+  "generalized-brauer-siegel-explicit-truncation-error": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.88,
+   "not_stated": 0.1,
+   "extra_assumption": 0.13
+  },
+  "generalized-euclid-mullin-cyclotomic-omits-infinitely-many": {
+   "dirichlet_only": 0.14,
+   "beyond": 0.83,
+   "not_stated": 0.03,
+   "extra_assumption": 0.37
+  },
+  "generalized-fermat-equation-13-13-7": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.35,
+   "not_stated": 0.64,
+   "extra_assumption": 0.16
+  },
+  "generalized-fermat-equation-2-3-11": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.7,
+   "not_stated": 0.27,
+   "extra_assumption": 0.15
+  },
+  "generalized-fermat-equation-5-5-11-13-and-7-7-11": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "generalized-fibonacci-sequences-complete-modulo-infinitely-many-primes": {
+   "dirichlet_only": 0.09,
+   "beyond": 0.2,
+   "not_stated": 0.71,
+   "extra_assumption": 0.26
+  },
+  "generalized-primitive-roots-almost-primes-density": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.46,
+   "not_stated": 0.52,
+   "extra_assumption": 0.15
+  },
+  "generalized-skewes-numbers-prime-races-upper-bound": {
+   "dirichlet_only": 0.91,
+   "beyond": 0.0,
+   "not_stated": 0.09,
+   "extra_assumption": 0.94
+  },
+  "genus-2-curves-jacobian-square-cm-elliptic-curve-46": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.27,
+   "not_stated": 0.71,
+   "extra_assumption": 0.06
+  },
+  "gerth-conjecture-p-torsion-cyclic-degree-p-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.23
+  },
+  "globally-primitive-elements-primitive-roots-number-fields": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.59,
+   "not_stated": 0.4,
+   "extra_assumption": 0.1
+  },
+  "goldbach-and-prime-difference-exceptional-sets-square-root": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "goldbach-average-equivalent-to-rh": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.23
+  },
+  "goldbach-average-explicit-formula-error-n-log-cubed": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.06
+  },
+  "goldbach-average-oscillation-term-size": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.39
+  },
+  "goldbach-average-over-multiples-of-q": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "goldbach-cesaro-average-error-order-n": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.06
+  },
+  "goldbach-k-primes-average-order": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.06
+  },
+  "goldbach-mean-value-primes-in-progressions": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "goldbach-numbers-short-intervals-123-log-squared": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.04
+  },
+  "goldbach-r-primes-average-omega-error-term": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.88
+  },
+  "grid-line-segments-count-error-term-five-halves": {
+   "dirichlet_only": 0.51,
+   "beyond": 0.0,
+   "not_stated": 0.49,
+   "extra_assumption": 0.04
+  },
+  "gromov-witten-vanishing-in-am": {
+   "dirichlet_only": 0.8,
+   "beyond": 0.14,
+   "not_stated": 0.06,
+   "extra_assumption": 0.05
+  },
+  "grosswald-conjecture-least-primitive-root": {
+   "dirichlet_only": 0.28,
+   "beyond": 0.09,
+   "not_stated": 0.63,
+   "extra_assumption": 0.07
+  },
+  "half-integral-weight-fourier-coefficients-decorrelation-primes": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.35
+  },
+  "half-integral-weight-fourier-coefficients-sign-changes-positive-proportion": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.22
+  },
+  "half-interval-fractional-parts-even-monomials-mod-p": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.01,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "hardy-function-derivative-maximum-lower-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "hardy-z-function-derivatives-interlacing-zeros": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.92,
+   "not_stated": 0.08,
+   "extra_assumption": 0.08
+  },
+  "hecke-algebra-explicit-generators-squarefree-level": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.48
+  },
+  "hecke-basis-lp-norm-square-of-holomorphic-eigenform": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.69
+  },
+  "hecke-eigenvalue-squares-piatetski-shapiro-primes": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.35
+  },
+  "hecke-eigenvalue-sums-cancellation-beyond-power-of-log-weight": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "hecke-eigenvalue-sums-quadratic-twists-integral-moments": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.53,
+   "not_stated": 0.44,
+   "extra_assumption": 0.08
+  },
+  "hilbert-class-polynomial-crt-algorithm": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.2,
+   "not_stated": 0.77,
+   "extra_assumption": 0.07
+  },
+  "hilbert-irreducibility-exponential-specializations-density-one": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.36,
+   "not_stated": 0.63,
+   "extra_assumption": 0.07
+  },
+  "horizontal-isogeny-graphs-abelian-varieties-rapid-mixing": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.71,
+   "not_stated": 0.28,
+   "extra_assumption": 0.09
+  },
+  "hurwitz-zeta-rational-parameter-moments-sharp-order": {
+   "dirichlet_only": 0.79,
+   "beyond": 0.2,
+   "not_stated": 0.01,
+   "extra_assumption": 0.89
+  },
+  "ideal-primality-testing-radical-ideals-in-coam": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.19,
+   "not_stated": 0.8,
+   "extra_assumption": 0.06
+  },
+  "imaginary-multiquadratic-fields-class-group-exponent-3": {
+   "dirichlet_only": 0.45,
+   "beyond": 0.38,
+   "not_stated": 0.17,
+   "extra_assumption": 0.13
+  },
+  "imaginary-quadratic-fields-polya-index-two-161": {
+   "dirichlet_only": 0.38,
+   "beyond": 0.16,
+   "not_stated": 0.46,
+   "extra_assumption": 0.1
+  },
+  "inclusive-prime-number-races": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.34
+  },
+  "index-map-preimages-finite-or-positive-density": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.37,
+   "not_stated": 0.62,
+   "extra_assumption": 0.05
+  },
+  "index-of-g-mod-p-residue-class-density-close-to-average": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.26,
+   "not_stated": 0.72,
+   "extra_assumption": 0.3
+  },
+  "index-of-minus-one-a-mod-p-finiteness-criterion": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.45,
+   "not_stated": 0.54,
+   "extra_assumption": 0.34
+  },
+  "infinitary-mobius-function-summatory-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.08
+  },
+  "infinitely-ramified-crystalline-galois-representations": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.68,
+   "not_stated": 0.3,
+   "extra_assumption": 0.12
+  },
+  "integer-factoring-in-ppa-and-pwpp": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "integral-of-log-zeta-critical-line-dense": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "isogeny-graphs-expander-dlog-random-reducibility": {
+   "dirichlet_only": 0.06,
+   "beyond": 0.84,
+   "not_stated": 0.1,
+   "extra_assumption": 0.11
+  },
+  "isogeny-graphs-ordinary-elliptic-curves-expanders": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.43,
+   "not_stated": 0.54,
+   "extra_assumption": 0.15
+  },
+  "isogeny-primes-momose-type-2-explicit-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.38,
+   "not_stated": 0.61,
+   "extra_assumption": 0.06
+  },
+  "isogeny-primes-quadratic-fields-sqrt-minus-10-5-7": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.35,
+   "not_stated": 0.63,
+   "extra_assumption": 0.08
+  },
+  "iterated-argument-sn-bounds": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "iterated-argument-sn-bounds-critical-strip": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "iterated-argument-sn-extreme-values-near-critical-line": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.05
+  },
+  "iterated-argument-sn-large-values-near-critical-line": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.05
+  },
+  "iterated-argument-sn-second-moment-second-order-term": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.06
+  },
+  "iterated-argument-sn-two-sided-omega-results": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.04
+  },
+  "iterated-integrals-log-zeta-large-deviations": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.06
+  },
+  "jacobians-of-graphs-realize-odd-groups-with-pairing": {
+   "dirichlet_only": 0.1,
+   "beyond": 0.5,
+   "not_stated": 0.4,
+   "extra_assumption": 0.08
+  },
+  "joint-equidistribution-newforms-hecke-correspondence": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.92,
+   "not_stated": 0.08,
+   "extra_assumption": 0.26
+  },
+  "joint-mass-two-hecke-maass-cusp-forms-asymptotic": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.88,
+   "not_stated": 0.12,
+   "extra_assumption": 0.96
+  },
+  "joint-mass-two-holomorphic-hecke-eigenforms-asymptotic": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.7,
+   "not_stated": 0.29,
+   "extra_assumption": 0.96
+  },
+  "joint-moments-min-max-distinct-dirichlet-l-functions": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.1,
+   "not_stated": 0.14,
+   "extra_assumption": 0.13
+  },
+  "joint-sato-tate-effective-error-term": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.16
+  },
+  "k-fold-divisor-function-progressions-beyond-half-uniform-power-saving": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "kaplansky-ternary-forms-represent-all-odd-integers": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.91,
+   "not_stated": 0.09,
+   "extra_assumption": 0.16
+  },
+  "keating-snaith-lower-bound-cubic-hecke-l-functions-eisenstein-field": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "koblitz-conjecture-upper-bound-constant-22": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.8
+  },
+  "kth-prime-ideal-given-artin-symbol-explicit-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.05
+  },
+  "kummer-ratio-relative-class-number-log-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.18
+  },
+  "l-one-chi-explicit-bounds-all-moduli": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.12
+  },
+  "l-torsion-class-groups-almost-all-fields-over-base": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.29,
+   "not_stated": 0.7,
+   "extra_assumption": 0.18
+  },
+  "lagarias-sequence-prime-divisors-density": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.72,
+   "not_stated": 0.27,
+   "extra_assumption": 0.09
+  },
+  "landau-function-inverse-logarithmic-integral-bound": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.05
+  },
+  "lang-trotter-upper-bounds-littlewood-complexity": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.92
+  },
+  "lang-trotter-upper-bounds-serre": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "lang-trotter-upper-bounds-zywina": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.9,
+   "not_stated": 0.1,
+   "extra_assumption": 0.38
+  },
+  "large-quadratic-character-sums-multiplicative-coefficients": {
+   "dirichlet_only": 0.35,
+   "beyond": 0.14,
+   "not_stated": 0.51,
+   "extra_assumption": 0.13
+  },
+  "large-values-cubic-quartic-dirichlet-l-functions-prime-moduli": {
+   "dirichlet_only": 0.41,
+   "beyond": 0.46,
+   "not_stated": 0.13,
+   "extra_assumption": 0.09
+  },
+  "large-values-derivatives-quadratic-dirichlet-l-functions-central-point": {
+   "dirichlet_only": 0.69,
+   "beyond": 0.07,
+   "not_stated": 0.24,
+   "extra_assumption": 0.09
+  },
+  "large-values-l-one-chi-ratio-sets-of-characters": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.06
+  },
+  "large-values-quadratic-character-sums-beyond-square-root": {
+   "dirichlet_only": 0.19,
+   "beyond": 0.23,
+   "not_stated": 0.58,
+   "extra_assumption": 0.23
+  },
+  "large-values-quadratic-dirichlet-l-functions-central-point": {
+   "dirichlet_only": 0.68,
+   "beyond": 0.08,
+   "not_stated": 0.24,
+   "extra_assumption": 0.09
+  },
+  "large-values-quadratic-dirichlet-l-functions-near-central-point": {
+   "dirichlet_only": 0.5,
+   "beyond": 0.05,
+   "not_stated": 0.45,
+   "extra_assumption": 0.12
+  },
+  "large-values-quadratic-dirichlet-l-functions-prime-moduli": {
+   "dirichlet_only": 0.78,
+   "beyond": 0.02,
+   "not_stated": 0.2,
+   "extra_assumption": 0.09
+  },
+  "large-values-quadratic-dirichlet-l-functions-prime-moduli-constant-one": {
+   "dirichlet_only": 0.78,
+   "beyond": 0.01,
+   "not_stated": 0.21,
+   "extra_assumption": 0.14
+  },
+  "large-values-quadratic-hecke-l-functions-gaussian-field-prime-moduli": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.88,
+   "not_stated": 0.11,
+   "extra_assumption": 0.09
+  },
+  "least-elkies-prime-explicit-bound": {
+   "dirichlet_only": 0.2,
+   "beyond": 0.15,
+   "not_stated": 0.65,
+   "extra_assumption": 0.08
+  },
+  "least-prime-frobenius-traces-opposite-sign": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.33
+  },
+  "least-prime-ideal-frobenius-class-murty-conjecture": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.96
+  },
+  "least-prime-ideal-in-ideal-class-sardari": {
+   "dirichlet_only": 0.06,
+   "beyond": 0.93,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "least-prime-in-progression-fourier-optimization-eight-ninths": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.72
+  },
+  "least-prime-lambda-root-composite-modulus": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.13
+  },
+  "least-prime-opposite-sign-frobenius-traces-bucur-kedlaya": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.72
+  },
+  "least-prime-with-given-primitive-root": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.16
+  },
+  "least-prime-with-given-primitive-root-almost-all": {
+   "dirichlet_only": 0.12,
+   "beyond": 0.2,
+   "not_stated": 0.68,
+   "extra_assumption": 0.16
+  },
+  "least-pseudopower-upper-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "least-quadratic-nonresidue-fourier-optimization": {
+   "dirichlet_only": 0.67,
+   "beyond": 0.05,
+   "not_stated": 0.28,
+   "extra_assumption": 0.08
+  },
+  "least-quadratic-nonresidue-pair-correlation": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.96
+  },
+  "legendre-symbol-short-interval-sums-higher-moments": {
+   "dirichlet_only": 0.51,
+   "beyond": 0.01,
+   "not_stated": 0.48,
+   "extra_assumption": 0.06
+  },
+  "lenstra-norm-euclidean-criterion-fails-degree-62238": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.35
+  },
+  "li-coefficients-asymptotic-growth": {
+   "dirichlet_only": 0.16,
+   "beyond": 0.32,
+   "not_stated": 0.52,
+   "extra_assumption": 0.06
+  },
+  "li-coefficients-asymptotic-square-root-error": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.82,
+   "not_stated": 0.18,
+   "extra_assumption": 0.11
+  },
+  "li-criterion-zero-free-half-planes": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.04
+  },
+  "linear-constellations-primes-prescribed-primitive-roots": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "linnik-goldbach-two-primes-five-powers-of-two": {
+   "dirichlet_only": 0.23,
+   "beyond": 0.0,
+   "not_stated": 0.77,
+   "extra_assumption": 0.08
+  },
+  "linnik-goldbach-two-primes-seven-powers-of-two": {
+   "dirichlet_only": 0.2,
+   "beyond": 0.0,
+   "not_stated": 0.8,
+   "extra_assumption": 0.09
+  },
+  "linnik-sphere-lattice-points-variance-bound": {
+   "dirichlet_only": 0.05,
+   "beyond": 0.95,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "liouville-function-short-intervals-mean-square": {
+   "dirichlet_only": 0.72,
+   "beyond": 0.0,
+   "not_stated": 0.28,
+   "extra_assumption": 0.04
+  },
+  "liouville-goldbach-shusterman-problem": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "liouville-weighted-sums-polya-counterexample-density": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.95
+  },
+  "log-cyclotomic-unit-lattice-dual-basis-norm": {
+   "dirichlet_only": 0.88,
+   "beyond": 0.02,
+   "not_stated": 0.1,
+   "extra_assumption": 0.08
+  },
+  "log-derivative-dirichlet-l-function-at-one": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.55
+  },
+  "log-derivative-quadratic-dirichlet-l-functions-at-one-omega-result": {
+   "dirichlet_only": 0.72,
+   "beyond": 0.06,
+   "not_stated": 0.22,
+   "extra_assumption": 0.14
+  },
+  "log-zeta-imaginary-part-clt-weighted-by-zero-statistics": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.06
+  },
+  "log-zeta-second-moment-critical-line-second-order-term": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.76
+  },
+  "long-prime-dirichlet-polynomials-gaussian-moments": {
+   "dirichlet_only": 0.74,
+   "beyond": 0.0,
+   "not_stated": 0.26,
+   "extra_assumption": 0.05
+  },
+  "low-lying-zeros-centered-moments-level-averaged-family": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.87
+  },
+  "low-lying-zeros-dirichlet-l-functions-quarter-spacing": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.45
+  },
+  "lucas-sequence-index-of-appearance-prime-density": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.48,
+   "not_stated": 0.5,
+   "extra_assumption": 0.09
+  },
+  "mass-equidistribution-saito-kurokawa-lifts": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.09
+  },
+  "mean-square-pnt-error-limsup-0-8603": {
+   "dirichlet_only": 0.78,
+   "beyond": 0.0,
+   "not_stated": 0.22,
+   "extra_assumption": 0.05
+  },
+  "mersenne-divisors-reciprocal-sum-by-order-of-two": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.62
+  },
+  "mertens-constant-in-arithmetic-progressions": {
+   "dirichlet_only": 0.19,
+   "beyond": 0.78,
+   "not_stated": 0.03,
+   "extra_assumption": 0.45
+  },
+  "mertens-function-bound-soundararajan": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.05
+  },
+  "mertens-function-bound-sqrt-log-over-loglog": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.05
+  },
+  "metacyclic-codes-asymptotically-good": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.79
+  },
+  "mills-constant-least-value-digits": {
+   "dirichlet_only": 0.79,
+   "beyond": 0.0,
+   "not_stated": 0.21,
+   "extra_assumption": 0.05
+  },
+  "mixed-fourth-moment-maass-form-eisenstein-series": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.48,
+   "not_stated": 0.52,
+   "extra_assumption": 0.97
+  },
+  "mixing-conjecture-linnik-points-sphere": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.62,
+   "not_stated": 0.37,
+   "extra_assumption": 0.11
+  },
+  "mobius-like-multiplicative-function-sum-one-third": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.05
+  },
+  "mobius-liouville-fourier-series-holder-exponent-one-quarter": {
+   "dirichlet_only": 0.15,
+   "beyond": 0.1,
+   "not_stated": 0.75,
+   "extra_assumption": 0.33
+  },
+  "mobius-of-gcd-sum-error-term-439-1032": {
+   "dirichlet_only": 0.87,
+   "beyond": 0.0,
+   "not_stated": 0.13,
+   "extra_assumption": 0.06
+  },
+  "mobius-sums-progressions-halupczok-suger-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.1
+  },
+  "mobius-sums-progressions-soundararajan-strength-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "mod-l-galois-images-elliptic-curves-las-vegas-algorithm": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.97,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "modified-quadratic-character-sums-k-free-integers": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.82
+  },
+  "modular-form-coefficients-polynomial-time-all-congruence-subgroups": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "modular-l-functions-simple-zeros-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "modular-l-functions-zeros-uniform-distribution": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.13
+  },
+  "modular-polynomials-isogeny-volcanoes": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "module-sivp-worst-case-to-average-case": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "moments-cubic-quartic-dirichlet-l-functions-order-of-magnitude": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.02,
+   "not_stated": 0.0,
+   "extra_assumption": 0.89
+  },
+  "moments-quadratic-dirichlet-l-functions-moduli-8p-order-of-magnitude": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.93
+  },
+  "moments-symmetric-square-l-functions-order-of-magnitude": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.96,
+   "not_stated": 0.04,
+   "extra_assumption": 0.38
+  },
+  "monoid-two-three-not-matsuda-positive-type": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.22
+  },
+  "montgomery-conjecture-primes-progressions-from-pair-correlation": {
+   "dirichlet_only": 0.71,
+   "beyond": 0.0,
+   "not_stated": 0.29,
+   "extra_assumption": 0.95
+  },
+  "montgomery-form-factor-integral-bounded-intervals-bounds": {
+   "dirichlet_only": 0.87,
+   "beyond": 0.0,
+   "not_stated": 0.13,
+   "extra_assumption": 0.04
+  },
+  "montgomery-pair-correlation-form-factor-theorem": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.11
+  },
+  "montgomery-pair-correlation-function-long-average-bounds": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.31
+  },
+  "multiplicative-functions-variance-progressions-all-prime-moduli": {
+   "dirichlet_only": 0.89,
+   "beyond": 0.0,
+   "not_stated": 0.11,
+   "extra_assumption": 0.13
+  },
+  "multiplicative-index-prescribed-set-frobenius-density": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.5,
+   "not_stated": 0.49,
+   "extra_assumption": 0.25
+  },
+  "multiplicative-order-benford-law": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.97,
+   "not_stated": 0.02,
+   "extra_assumption": 0.09
+  },
+  "multiquadratic-unit-group-minimal-index-density": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.85,
+   "not_stated": 0.15,
+   "extra_assumption": 0.09
+  },
+  "multivariable-artin-conjecture-stephens-constant-density": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.11
+  },
+  "murmuration-density-quadratic-hecke-l-functions-gaussian-field": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.96,
+   "not_stated": 0.04,
+   "extra_assumption": 0.08
+  },
+  "murmuration-density-real-dirichlet-characters-short-prime-intervals": {
+   "dirichlet_only": 0.75,
+   "beyond": 0.03,
+   "not_stated": 0.22,
+   "extra_assumption": 0.26
+  },
+  "murmurations-level-one-modular-forms-weight-aspect": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.16
+  },
+  "murmurations-maass-forms-level-one-eigenvalue-aspect": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.98,
+   "not_stated": 0.0,
+   "extra_assumption": 0.31
+  },
+  "murmurations-quadratic-dirichlet-characters-explicit-formula": {
+   "dirichlet_only": 0.65,
+   "beyond": 0.26,
+   "not_stated": 0.09,
+   "extra_assumption": 0.46
+  },
+  "n-level-density-quadratic-dirichlet-l-functions-support-two": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.09
+  },
+  "n-level-density-quadratic-dirichlet-l-functions-symplectic-all-n": {
+   "dirichlet_only": 0.75,
+   "beyond": 0.04,
+   "not_stated": 0.21,
+   "extra_assumption": 0.11
+  },
+  "near-primitive-roots-density": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.37,
+   "not_stated": 0.61,
+   "extra_assumption": 0.2
+  },
+  "negative-discrete-second-moment-dirichlet-l-functions-lower-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.92
+  },
+  "negative-first-moment-quadratic-twists-automorphic-l-functions": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.98
+  },
+  "negative-moments-quadratic-dirichlet-l-functions-prime-moduli-lower-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.01,
+   "not_stated": 0.0,
+   "extra_assumption": 0.9
+  },
+  "new-isogenies-elliptic-curves-coprime-degree-extensions": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.71,
+   "not_stated": 0.28,
+   "extra_assumption": 0.11
+  },
+  "newform-coefficient-differences-few-prime-factors": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.29
+  },
+  "newform-koblitz-variant-few-prime-factors": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.98
+  },
+  "nicolas-euler-function-explicit-bound": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "niven-numbers-additive-basis": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.12
+  },
+  "no-irreducible-mod-2-galois-representations-unramified-outside-2-low-dimension": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.31,
+   "not_stated": 0.68,
+   "extra_assumption": 0.05
+  },
+  "no-semistable-abelian-varieties-good-outside-6-or-10": {
+   "dirichlet_only": 0.06,
+   "beyond": 0.58,
+   "not_stated": 0.36,
+   "extra_assumption": 0.09
+  },
+  "nonvanishing-central-values-cusp-forms-more-than-nine-sixteenths": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.6
+  },
+  "nonvanishing-cubic-l-functions-eisenstein-field-positive-proportion": {
+   "dirichlet_only": 0.74,
+   "beyond": 0.23,
+   "not_stated": 0.03,
+   "extra_assumption": 0.1
+  },
+  "nonvanishing-dirichlet-l-functions-short-moduli-averages-above-half": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.13
+  },
+  "nonvanishing-elliptic-curve-l-functions-family-count": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.94,
+   "not_stated": 0.06,
+   "extra_assumption": 0.82
+  },
+  "nonvanishing-hecke-maass-l-functions-special-points-half": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.98,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "nonvanishing-quadratic-l-functions-prime-modulus": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.01,
+   "not_stated": 0.03,
+   "extra_assumption": 0.31
+  },
+  "nonvanishing-quadratic-twists-modular-l-functions-moduli-8p": {
+   "dirichlet_only": 0.04,
+   "beyond": 0.84,
+   "not_stated": 0.12,
+   "extra_assumption": 0.55
+  },
+  "norm-euclidean-cyclic-quintic-septic-fields": {
+   "dirichlet_only": 0.1,
+   "beyond": 0.15,
+   "not_stated": 0.75,
+   "extra_assumption": 0.17
+  },
+  "norm-euclidean-galois-cubic-fields-classification": {
+   "dirichlet_only": 0.2,
+   "beyond": 0.79,
+   "not_stated": 0.01,
+   "extra_assumption": 0.61
+  },
+  "norm-forms-gap-moments-number-fields": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "novak-primes-counting-bound": {
+   "dirichlet_only": 0.19,
+   "beyond": 0.05,
+   "not_stated": 0.76,
+   "extra_assumption": 0.09
+  },
+  "nth-prime-inverse-logarithmic-integral-explicit-bound": {
+   "dirichlet_only": 0.77,
+   "beyond": 0.0,
+   "not_stated": 0.23,
+   "extra_assumption": 0.04
+  },
+  "number-field-generator-small-height-ruppert-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "nyman-beurling-distance-optimal-constant": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.72
+  },
+  "nyman-beurling-mobius-integral-approximation": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "nyman-criterion-constant-function": {
+   "dirichlet_only": 0.84,
+   "beyond": 0.0,
+   "not_stated": 0.16,
+   "extra_assumption": 0.04
+  },
+  "odd-order-character-sums-granville-soundararajan-bound": {
+   "dirichlet_only": 0.83,
+   "beyond": 0.14,
+   "not_stated": 0.03,
+   "extra_assumption": 0.14
+  },
+  "odd-order-character-sums-polya-vinogradov-improvement": {
+   "dirichlet_only": 0.66,
+   "beyond": 0.02,
+   "not_stated": 0.32,
+   "extra_assumption": 0.06
+  },
+  "odd-order-character-sums-sharp-bound": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.01,
+   "not_stated": 0.23,
+   "extra_assumption": 0.07
+  },
+  "one-level-density-cubic-l-functions-eisenstein-field-support-13-11": {
+   "dirichlet_only": 0.54,
+   "beyond": 0.44,
+   "not_stated": 0.02,
+   "extra_assumption": 0.11
+  },
+  "one-level-density-gamma1-q-l-functions-support-eight-thirds": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.97,
+   "not_stated": 0.03,
+   "extra_assumption": 0.1
+  },
+  "one-level-density-hilbert-modular-forms-support-three-halves": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.29
+  },
+  "one-level-density-holomorphic-cusp-forms-support-two": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.83,
+   "not_stated": 0.17,
+   "extra_assumption": 0.39
+  },
+  "one-level-density-holomorphic-newforms-arbitrary-level": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.31
+  },
+  "one-level-density-holomorphic-newforms-level-average-support-four": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.68,
+   "not_stated": 0.3,
+   "extra_assumption": 0.14
+  },
+  "one-level-density-orthogonal-families-squarefree-level-support-three": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.94,
+   "not_stated": 0.05,
+   "extra_assumption": 0.14
+  },
+  "one-level-density-quadratic-dirichlet-l-functions-lower-order-terms": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.01,
+   "not_stated": 0.06,
+   "extra_assumption": 0.45
+  },
+  "one-level-density-quadratic-dirichlet-l-functions-ratios-conjecture": {
+   "dirichlet_only": 0.82,
+   "beyond": 0.01,
+   "not_stated": 0.17,
+   "extra_assumption": 0.98
+  },
+  "one-level-density-quadratic-hecke-l-functions-gaussian-field-lower-order-terms": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "one-level-density-quadratic-hecke-l-functions-gaussian-prime-moduli": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "one-level-density-quadratic-twists-glm-support-two-over-m": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.98
+  },
+  "one-level-density-rankin-selberg-l-functions-equal-prime-level": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.19
+  },
+  "one-level-density-sextic-hecke-l-functions-support-45-43": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "open-image-products-non-cm-elliptic-curves-explicit-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "order-of-algebraic-numbers-modulo-rational-primes-multiquadratic": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.46,
+   "not_stated": 0.52,
+   "extra_assumption": 0.09
+  },
+  "order-of-cubic-algebraic-numbers-degree-two-reductions": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.54,
+   "not_stated": 0.45,
+   "extra_assumption": 0.09
+  },
+  "order-of-g-mod-p-arbitrary-residue-class-density": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.57,
+   "not_stated": 0.42,
+   "extra_assumption": 0.07
+  },
+  "order-of-g-mod-p-residue-classes-mod-4-density": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.92,
+   "not_stated": 0.05,
+   "extra_assumption": 0.26
+  },
+  "order-of-unimodular-matrices-modulo-integers": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "orders-of-several-algebraic-numbers-in-progressions-density": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "p-practical-numbers-density-zero": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.95,
+   "not_stated": 0.04,
+   "extra_assumption": 0.08
+  },
+  "pagerank-return-probability-lps-graphs-cycle-correction": {
+   "dirichlet_only": 0.9,
+   "beyond": 0.09,
+   "not_stated": 0.01,
+   "extra_assumption": 0.1
+  },
+  "pair-correlation-sums-of-two-zeta-zero-ordinates": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.06
+  },
+  "parametric-nullstellensatz-in-am": {
+   "dirichlet_only": 0.11,
+   "beyond": 0.02,
+   "not_stated": 0.87,
+   "extra_assumption": 0.06
+  },
+  "patterson-wiedemann-conjecture-all-finite-fields": {
+   "dirichlet_only": 0.08,
+   "beyond": 0.09,
+   "not_stated": 0.83,
+   "extra_assumption": 0.12
+  },
+  "pi-minus-li-integral-explicit-two-sided-bounds": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "pi-minus-li-integral-negative-rh-equivalence": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.0,
+   "not_stated": 0.15,
+   "extra_assumption": 0.04
+  },
+  "piltz-divisor-error-term-no-sign-change-intervals": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.31
+  },
+  "pnt-short-intervals-explicit-lee": {
+   "dirichlet_only": 0.92,
+   "beyond": 0.0,
+   "not_stated": 0.08,
+   "extra_assumption": 0.03
+  },
+  "point-counting-modular-curve-x1-polynomial-time": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.64,
+   "not_stated": 0.35,
+   "extra_assumption": 0.07
+  },
+  "polynomial-factoring-cross-balance-test": {
+   "dirichlet_only": 0.69,
+   "beyond": 0.1,
+   "not_stated": 0.21,
+   "extra_assumption": 0.05
+  },
+  "polynomial-factoring-p-schemes-composition-factors-gamma-k": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.01,
+   "not_stated": 0.03,
+   "extra_assumption": 0.07
+  },
+  "polynomial-factoring-prime-degree-smooth-divisor-of-n-minus-one": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.02,
+   "not_stated": 0.05,
+   "extra_assumption": 0.34
+  },
+  "polynomial-factoring-prime-degree-smooth-n-minus-one": {
+   "dirichlet_only": 0.25,
+   "beyond": 0.1,
+   "not_stated": 0.65,
+   "extra_assumption": 0.05
+  },
+  "pomerance-p-integers-largest-is-30": {
+   "dirichlet_only": 0.88,
+   "beyond": 0.0,
+   "not_stated": 0.12,
+   "extra_assumption": 0.06
+  },
+  "power-generator-number-of-cycles-normal-order": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.92,
+   "not_stated": 0.07,
+   "extra_assumption": 0.17
+  },
+  "power-generator-period-normal-order": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.13
+  },
+  "prime-averages-endpoint-improving-single-log": {
+   "dirichlet_only": 0.18,
+   "beyond": 0.42,
+   "not_stated": 0.4,
+   "extra_assumption": 0.53
+  },
+  "prime-counting-subadditivity-range-sqrt-x-log-squared": {
+   "dirichlet_only": 0.72,
+   "beyond": 0.0,
+   "not_stated": 0.28,
+   "extra_assumption": 0.06
+  },
+  "prime-divisors-generic-linear-recurrences-positive-lower-density": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "prime-frobenius-traces-non-cm-elliptic-curve-upper-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.55
+  },
+  "prime-gap-sequence-is-graphic": {
+   "dirichlet_only": 0.37,
+   "beyond": 0.01,
+   "not_stated": 0.62,
+   "extra_assumption": 0.05
+  },
+  "prime-gaps-in-arithmetic-progressions-constant": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.46
+  },
+  "prime-gaps-limsup-below-21-25-sqrt-p-log-p": {
+   "dirichlet_only": 0.5,
+   "beyond": 0.0,
+   "not_stated": 0.5,
+   "extra_assumption": 0.1
+  },
+  "prime-generation-few-random-bits-uniform": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "prime-geodesic-theorem-short-intervals-modular-surface": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.02,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "prime-ideal-races-abelian-families-two-way-density-criterion": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.97,
+   "not_stated": 0.01,
+   "extra_assumption": 0.94
+  },
+  "prime-ideal-races-bias-from-higher-roots": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.96
+  },
+  "prime-ideals-short-intervals-cramer-type": {
+   "dirichlet_only": 0.14,
+   "beyond": 0.86,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "prime-lattice-points-in-ovals-remainder-bound": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.97
+  },
+  "prime-number-graph-line-cover-bounds": {
+   "dirichlet_only": 0.53,
+   "beyond": 0.0,
+   "not_stated": 0.47,
+   "extra_assumption": 0.05
+  },
+  "prime-number-races-weakly-inclusive-relatively-independent-zeros": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.01,
+   "not_stated": 0.0,
+   "extra_assumption": 0.7
+  },
+  "prime-number-theorem-error-large-values-measure-bound": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.12
+  },
+  "prime-number-theorem-short-interval-error-omega-plus-minus": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.1
+  },
+  "prime-plus-non-squarefree-every-integer-above-24": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "prime-plus-square-exceptional-set-bound": {
+   "dirichlet_only": 0.1,
+   "beyond": 0.06,
+   "not_stated": 0.84,
+   "extra_assumption": 0.08
+  },
+  "prime-plus-square-short-interval-average": {
+   "dirichlet_only": 0.62,
+   "beyond": 0.0,
+   "not_stated": 0.38,
+   "extra_assumption": 0.05
+  },
+  "prime-plus-two-prime-squares-short-intervals": {
+   "dirichlet_only": 0.45,
+   "beyond": 0.0,
+   "not_stated": 0.55,
+   "extra_assumption": 0.05
+  },
+  "prime-primitive-roots-short-intervals-almost-all-moduli": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.02,
+   "not_stated": 0.22,
+   "extra_assumption": 0.08
+  },
+  "prime-race-density-asymptotic-series-variance": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.02,
+   "not_stated": 0.04,
+   "extra_assumption": 0.98
+  },
+  "prime-race-limiting-distribution-gaussian-rate": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.98
+  },
+  "prime-races-many-contestants-extreme-biases": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.98
+  },
+  "prime-races-many-contestants-uniform-density": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.97
+  },
+  "prime-races-three-or-more-competitors-bias-size": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.97
+  },
+  "prime-times-kth-power-counting-error": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.04
+  },
+  "primes-between-consecutive-powers-above-squares": {
+   "dirichlet_only": 0.9,
+   "beyond": 0.0,
+   "not_stated": 0.1,
+   "extra_assumption": 0.05
+  },
+  "primes-in-baker-harman-pintz-interval-explicit-threshold": {
+   "dirichlet_only": 0.71,
+   "beyond": 0.0,
+   "not_stated": 0.29,
+   "extra_assumption": 0.13
+  },
+  "primes-in-neighboring-short-intervals-bivariate-gaussian": {
+   "dirichlet_only": 0.86,
+   "beyond": 0.0,
+   "not_stated": 0.14,
+   "extra_assumption": 0.98
+  },
+  "primes-in-pi-versus-li-race-relative-density": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.97
+  },
+  "primes-in-progressions-explicit-short-intervals": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.01,
+   "not_stated": 0.23,
+   "extra_assumption": 0.06
+  },
+  "primes-in-progressions-omega-result-every-large-modulus": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.71
+  },
+  "primes-represented-binary-quadratic-form-upper-bound": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.05,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "primes-short-intervals-dudek-grenie-molteni": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.04
+  },
+  "primitive-dirichlet-l-functions-simple-zeros-eleven-twelfths": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.14
+  },
+  "primitive-root-primes-in-progression-density": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.6,
+   "not_stated": 0.38,
+   "extra_assumption": 0.15
+  },
+  "primitive-root-primes-in-progression-uniform-error": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.2
+  },
+  "primorial-totient-ratio-lower-bound-in-terms-of-k": {
+   "dirichlet_only": 0.78,
+   "beyond": 0.0,
+   "not_stated": 0.22,
+   "extra_assumption": 0.05
+  },
+  "product-of-two-primes-residue-class-small-first-prime": {
+   "dirichlet_only": 0.74,
+   "beyond": 0.0,
+   "not_stated": 0.26,
+   "extra_assumption": 0.09
+  },
+  "psi-theta-error-bound-lee-nosal": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.03
+  },
+  "pure-orders-generalized-euclidean-finiteness": {
+   "dirichlet_only": 0.07,
+   "beyond": 0.57,
+   "not_stated": 0.36,
+   "extra_assumption": 0.14
+  },
+  "q-analog-pair-correlation-average-bounds": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "q-fibonacci-sequence-transcendental-element-mod-primes": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "quadratic-character-sum-moments-prime-moduli": {
+   "dirichlet_only": 0.87,
+   "beyond": 0.0,
+   "not_stated": 0.13,
+   "extra_assumption": 0.13
+  },
+  "quadratic-character-sum-moments-sharp-upper-bound": {
+   "dirichlet_only": 0.52,
+   "beyond": 0.06,
+   "not_stated": 0.42,
+   "extra_assumption": 0.1
+  },
+  "quadratic-character-sums-large-values-sqrt-2-constant": {
+   "dirichlet_only": 0.4,
+   "beyond": 0.16,
+   "not_stated": 0.44,
+   "extra_assumption": 0.1
+  },
+  "quadratic-dirichlet-l-functions-extreme-values-critical-strip": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.02,
+   "not_stated": 0.02,
+   "extra_assumption": 0.55
+  },
+  "quadratic-fields-nonsolvable-maximal-unramified-extension-22268-1567": {
+   "dirichlet_only": 0.08,
+   "beyond": 0.22,
+   "not_stated": 0.7,
+   "extra_assumption": 0.09
+  },
+  "quadratic-form-from-genus-polynomial-time": {
+   "dirichlet_only": 0.59,
+   "beyond": 0.02,
+   "not_stated": 0.39,
+   "extra_assumption": 0.08
+  },
+  "quadratic-iterates-irreducibility-second-implies-tenth": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.41,
+   "not_stated": 0.57,
+   "extra_assumption": 0.11
+  },
+  "quadratic-twists-analytic-rank-below-any-unbounded-function": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.68
+  },
+  "quadratic-twists-analytic-rank-two-or-four-infinitely-many": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.15
+  },
+  "quantum-covariance-dihedral-maass-forms-vanishes": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.63
+  },
+  "quantum-subexponential-isogeny-construction": {
+   "dirichlet_only": 0.12,
+   "beyond": 0.37,
+   "not_stated": 0.51,
+   "extra_assumption": 0.18
+  },
+  "quantum-unique-ergodicity-half-integral-weight-kohnen-plus-space": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.26
+  },
+  "quantum-unique-ergodicity-optimal-rate-maximal-orders": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.53
+  },
+  "radical-identity-testing-in-conp": {
+   "dirichlet_only": 0.04,
+   "beyond": 0.33,
+   "not_stated": 0.63,
+   "extra_assumption": 0.09
+  },
+  "ramanujan-prime-counting-inequality-largest-counterexample": {
+   "dirichlet_only": 0.78,
+   "beyond": 0.0,
+   "not_stated": 0.22,
+   "extra_assumption": 0.04
+  },
+  "ramanujan-tau-vanishing-primes-dyadic-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.69
+  },
+  "random-matrix-characteristic-polynomial-irreducible": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.1
+  },
+  "random-multiplicative-coefficient-polynomial-irreducible": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.05
+  },
+  "random-multiplicative-functions-modular-coefficients-high-moments": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.38,
+   "not_stated": 0.59,
+   "extra_assumption": 0.09
+  },
+  "random-symmetric-matrix-characteristic-polynomial-irreducible": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "random-zero-one-polynomials-irreducible-large-degree": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.07
+  },
+  "rational-homology-spheres-large-injectivity-radius": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.32,
+   "not_stated": 0.66,
+   "extra_assumption": 0.91
+  },
+  "rational-roots-polynomial-systems-third-level-hierarchy": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.6,
+   "not_stated": 0.39,
+   "extra_assumption": 0.15
+  },
+  "ratios-conjecture-primitive-quadratic-hecke-l-functions-class-number-one": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.9,
+   "not_stated": 0.1,
+   "extra_assumption": 0.2
+  },
+  "ratios-conjecture-quadratic-dirichlet-l-functions-one-shift": {
+   "dirichlet_only": 0.7,
+   "beyond": 0.02,
+   "not_stated": 0.28,
+   "extra_assumption": 0.45
+  },
+  "ratios-conjecture-quadratic-hecke-l-functions-gaussian-field-one-shift": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.9,
+   "not_stated": 0.1,
+   "extra_assumption": 0.23
+  },
+  "ratios-conjecture-quadratic-l-functions-prime-moduli": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.93,
+   "not_stated": 0.06,
+   "extra_assumption": 0.19
+  },
+  "ratios-conjecture-quadratic-twists-modular-l-functions-one-shift": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.77,
+   "not_stated": 0.22,
+   "extra_assumption": 0.26
+  },
+  "ray-class-subgroup-generators-small-primes": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "real-cyclotomic-class-numbers-prime-conductor-to-241": {
+   "dirichlet_only": 0.06,
+   "beyond": 0.56,
+   "not_stated": 0.38,
+   "extra_assumption": 0.06
+  },
+  "riemann-von-mangoldt-explicit-formula-error-constant-4-150": {
+   "dirichlet_only": 0.91,
+   "beyond": 0.0,
+   "not_stated": 0.09,
+   "extra_assumption": 0.04
+  },
+  "riesz-sums-mobius-oscillation-order-one-over-delta": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.97
+  },
+  "ripley-function-lattice-points-sphere-upper-bound": {
+   "dirichlet_only": 0.05,
+   "beyond": 0.12,
+   "not_stated": 0.83,
+   "extra_assumption": 0.13
+  },
+  "robin-criterion-lcm-power-divisor-sums": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.0,
+   "not_stated": 0.15,
+   "extra_assumption": 0.04
+  },
+  "robin-inequality-odd-integers": {
+   "dirichlet_only": 0.71,
+   "beyond": 0.0,
+   "not_stated": 0.29,
+   "extra_assumption": 0.07
+  },
+  "root-discriminant-lower-bound-odlyzko-serre": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.94,
+   "not_stated": 0.05,
+   "extra_assumption": 0.09
+  },
+  "rsa-challenge-numbers-not-squarefull": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.03,
+   "not_stated": 0.0,
+   "extra_assumption": 0.09
+  },
+  "s-units-from-subfields-norm-relations": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.29,
+   "not_stated": 0.69,
+   "extra_assumption": 0.06
+  },
+  "s1-dirichlet-l-function-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.81,
+   "not_stated": 0.19,
+   "extra_assumption": 0.14
+  },
+  "sarkozy-shifted-primes-power-saving-89-90": {
+   "dirichlet_only": 0.63,
+   "beyond": 0.04,
+   "not_stated": 0.33,
+   "extra_assumption": 0.19
+  },
+  "satellite-knot-recognition-in-np": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.29,
+   "not_stated": 0.69,
+   "extra_assumption": 0.07
+  },
+  "sato-tate-effective-error-term-symmetric-powers": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.15
+  },
+  "sato-tate-explicit-error-constant-3-33": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.71
+  },
+  "schinzel-wojcik-problem-equal-orders-modulo-primes": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.98,
+   "not_stated": 0.02,
+   "extra_assumption": 0.18
+  },
+  "schubert-vanishing-in-am-and-coam": {
+   "dirichlet_only": 0.66,
+   "beyond": 0.29,
+   "not_stated": 0.05,
+   "extra_assumption": 0.05
+  },
+  "sea-point-counting-almost-all-reductions-fixed-curve": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.29,
+   "not_stated": 0.69,
+   "extra_assumption": 0.3
+  },
+  "second-moment-derivative-quadratic-twists-modular-l-functions": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.18
+  },
+  "second-moment-primes-individual-progression-lower-bound": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.42
+  },
+  "second-moment-quadratic-l-functions-prime-conductor": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.4
+  },
+  "second-moment-quadratic-twists-modular-l-functions": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.99,
+   "not_stated": 0.0,
+   "extra_assumption": 0.17
+  },
+  "selberg-central-limit-theorem-rate-of-convergence": {
+   "dirichlet_only": 0.88,
+   "beyond": 0.0,
+   "not_stated": 0.12,
+   "extra_assumption": 0.04
+  },
+  "selberg-mean-value-pnt-intervals-explicit": {
+   "dirichlet_only": 0.92,
+   "beyond": 0.0,
+   "not_stated": 0.08,
+   "extra_assumption": 0.04
+  },
+  "self-conjugate-6-cores-positivity": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.4
+  },
+  "self-dual-negacirculant-codes-modified-varshamov-gilbert-bound": {
+   "dirichlet_only": 0.25,
+   "beyond": 0.02,
+   "not_stated": 0.73,
+   "extra_assumption": 0.19
+  },
+  "serre-conjecture-weight-2-semistable-level-2p": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.43,
+   "not_stated": 0.56,
+   "extra_assumption": 0.11
+  },
+  "serre-modularity-conjecture-q-sqrt-13": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.8,
+   "not_stated": 0.19,
+   "extra_assumption": 0.21
+  },
+  "serre-open-image-explicit-conductor-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.91,
+   "not_stated": 0.08,
+   "extra_assumption": 0.06
+  },
+  "serre-open-image-explicit-conductor-bound-446": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.09
+  },
+  "serre-open-image-non-split-cartan-galois-number-fields": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.06
+  },
+  "serre-surjectivity-mod-l-conductor-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.97,
+   "not_stated": 0.02,
+   "extra_assumption": 0.1
+  },
+  "shifted-exponentials-almost-always-composite": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.97
+  },
+  "shifted-moments-cubic-quartic-dirichlet-l-functions-upper-bound": {
+   "dirichlet_only": 0.9,
+   "beyond": 0.0,
+   "not_stated": 0.1,
+   "extra_assumption": 0.06
+  },
+  "shifted-moments-dedekind-zeta-sharp-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "shifted-moments-dedekind-zeta-sharp-upper-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.17
+  },
+  "shifted-moments-dirichlet-l-functions-lower-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.1
+  },
+  "shifted-moments-quadratic-dirichlet-l-functions-upper-bound": {
+   "dirichlet_only": 0.82,
+   "beyond": 0.03,
+   "not_stated": 0.15,
+   "extra_assumption": 0.06
+  },
+  "shifted-prime-divisor-function-maximal-order-golden-ratio": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.07
+  },
+  "shifted-prime-totient-law-growing-progressions": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.19
+  },
+  "short-character-sums-smooth-number-approximation": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.09
+  },
+  "short-quadratic-character-sums-large-values-smooth-number-bound": {
+   "dirichlet_only": 0.46,
+   "beyond": 0.14,
+   "not_stated": 0.4,
+   "extra_assumption": 0.07
+  },
+  "siegel-cusp-forms-degree-2-fourier-coefficients-sup-norm": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.96,
+   "not_stated": 0.04,
+   "extra_assumption": 0.26
+  },
+  "siegel-cusp-forms-fundamental-fourier-coefficients-log-saving-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.94
+  },
+  "simultaneous-equidistribution-toric-packets-two-quaternion-algebras": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.92,
+   "not_stated": 0.08,
+   "extra_assumption": 0.16
+  },
+  "simultaneous-nonvanishing-dirichlet-l-functions-galois-orbits": {
+   "dirichlet_only": 0.92,
+   "beyond": 0.0,
+   "not_stated": 0.08,
+   "extra_assumption": 0.06
+  },
+  "simultaneous-nonvanishing-four-dirichlet-l-functions": {
+   "dirichlet_only": 0.69,
+   "beyond": 0.13,
+   "not_stated": 0.18,
+   "extra_assumption": 0.12
+  },
+  "singular-moduli-not-roots-of-rational-trinomials": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.26
+  },
+  "singular-moduli-s-units-j-zero-effective-bound": {
+   "dirichlet_only": 0.75,
+   "beyond": 0.24,
+   "not_stated": 0.01,
+   "extra_assumption": 0.14
+  },
+  "smooth-integers-de-bruijn-approximation-zeta-zero-correction": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.05
+  },
+  "smooth-numbers-dickman-approximation-sharp-ranges": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.44
+  },
+  "smooth-numbers-in-sqrt-length-intervals": {
+   "dirichlet_only": 0.83,
+   "beyond": 0.0,
+   "not_stated": 0.17,
+   "extra_assumption": 0.05
+  },
+  "smooth-numbers-short-intervals-asymptotic-polylog-smoothness": {
+   "dirichlet_only": 0.44,
+   "beyond": 0.0,
+   "not_stated": 0.56,
+   "extra_assumption": 0.05
+  },
+  "smooth-sato-tate-central-limit-elliptic-curve-families": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "smooth-solutions-a-plus-b-equals-c-asymptotic": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "smoothed-goldbach-average-multiples-of-q": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "sparse-polynomial-p-adic-roots-np-hard-randomized": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.69
+  },
+  "spectral-gap-hecke-congruence-covers-schottky-surfaces": {
+   "dirichlet_only": 0.82,
+   "beyond": 0.17,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "split-abelian-surfaces-finite-fields-count": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.1,
+   "not_stated": 0.87,
+   "extra_assumption": 0.09
+  },
+  "split-cartan-modular-curve-level-p-squared-rational-points": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.98,
+   "not_stated": 0.01,
+   "extra_assumption": 0.08
+  },
+  "split-reductions-abelian-surface-bound-41-42": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.95
+  },
+  "squarefree-orders-cm-elliptic-curves-error-5-6": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.16
+  },
+  "squarefree-variance-short-intervals-rh-equivalence": {
+   "dirichlet_only": 0.76,
+   "beyond": 0.03,
+   "not_stated": 0.21,
+   "extra_assumption": 0.48
+  },
+  "squarefull-counting-function-sum-over-zeros": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.94
+  },
+  "squarefull-variance-short-intervals-asymptotic": {
+   "dirichlet_only": 0.86,
+   "beyond": 0.01,
+   "not_stated": 0.13,
+   "extra_assumption": 0.51
+  },
+  "squarefull-variance-short-intervals-quasi-rh-equivalence": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.01,
+   "not_stated": 0.05,
+   "extra_assumption": 0.3
+  },
+  "steinberg-module-integral-apartments-iff-euclidean": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.39,
+   "not_stated": 0.59,
+   "extra_assumption": 0.08
+  },
+  "subset-sum-near-linear-time-low-space": {
+   "dirichlet_only": 0.34,
+   "beyond": 0.04,
+   "not_stated": 0.62,
+   "extra_assumption": 0.07
+  },
+  "sum-of-divisors-strong-ramanujan-liminf": {
+   "dirichlet_only": 0.75,
+   "beyond": 0.01,
+   "not_stated": 0.24,
+   "extra_assumption": 0.05
+  },
+  "sum-of-newform-coefficients-at-primes-exponential-lower-bound": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.16
+  },
+  "sum-of-square-roots-slp-one-dimensional-reduction": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.33,
+   "not_stated": 0.64,
+   "extra_assumption": 0.09
+  },
+  "sums-of-k-primes-explicit-formula-k-at-least-5": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.23
+  },
+  "sums-of-prime-powers-short-interval-average": {
+   "dirichlet_only": 0.64,
+   "beyond": 0.0,
+   "not_stated": 0.36,
+   "extra_assumption": 0.04
+  },
+  "sums-of-three-nonunit-squares-classification": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.75
+  },
+  "sums-of-two-squares-residue-bias": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.02,
+   "not_stated": 0.0,
+   "extra_assumption": 0.18
+  },
+  "sup-norm-newforms-pgl-n-prime-level-bulk": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.92,
+   "not_stated": 0.08,
+   "extra_assumption": 0.23
+  },
+  "supersingular-curves-over-fp-ibukiyama-prime-bound": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.6,
+   "not_stated": 0.39,
+   "extra_assumption": 0.14
+  },
+  "supersingular-endomorphism-ring-from-one-endomorphism": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.13,
+   "not_stated": 0.86,
+   "extra_assumption": 0.07
+  },
+  "supersingular-endomorphism-ring-sqrt-p-algorithm": {
+   "dirichlet_only": 0.03,
+   "beyond": 0.14,
+   "not_stated": 0.83,
+   "extra_assumption": 0.06
+  },
+  "supersingular-endring-maxorder-equivalence": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.13,
+   "not_stated": 0.85,
+   "extra_assumption": 0.04
+  },
+  "supersingular-inseparable-endomorphism-sqrt-p": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.17,
+   "not_stated": 0.82,
+   "extra_assumption": 0.06
+  },
+  "supersingular-isogeny-path-endomorphism-ring-equivalence": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.23,
+   "not_stated": 0.76,
+   "extra_assumption": 0.1
+  },
+  "taylor-coefficients-quadratic-twists-elliptic-l-functions-nonvanishing": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.08
+  },
+  "ternary-goldbach-missing-digit-piatetski-shapiro-hooley-primes": {
+   "dirichlet_only": 0.21,
+   "beyond": 0.04,
+   "not_stated": 0.75,
+   "extra_assumption": 0.15
+  },
+  "ternary-goldbach-one-prime-below-log-fourth-power": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.29
+  },
+  "ternary-goldbach-prime-and-two-isolated-primes": {
+   "dirichlet_only": 0.27,
+   "beyond": 0.01,
+   "not_stated": 0.72,
+   "extra_assumption": 0.11
+  },
+  "ternary-goldbach-two-piatetski-shapiro-primes-missing-digit-prime": {
+   "dirichlet_only": 0.2,
+   "beyond": 0.01,
+   "not_stated": 0.79,
+   "extra_assumption": 0.09
+  },
+  "thin-sets-type-ii-integral-points-monic-polynomials": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.99,
+   "not_stated": 0.01,
+   "extra_assumption": 0.18
+  },
+  "third-moment-log-zeta-keating-snaith-constants": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.97
+  },
+  "three-sphere-recognition-in-conp": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "titchmarsh-divisor-problem-power-saving-error": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.05
+  },
+  "toral-cycles-real-quadratic-generate-modular-curve-homology": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.86,
+   "not_stated": 0.13,
+   "extra_assumption": 0.06
+  },
+  "torsion-free-subgroup-index-polylog-covolume": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.39,
+   "not_stated": 0.6,
+   "extra_assumption": 0.05
+  },
+  "trinomial-x-n-minus-x-minus-1-splits-mod-small-prime": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.42,
+   "not_stated": 0.56,
+   "extra_assumption": 0.07
+  },
+  "triple-correlation-cusp-form-coefficients-bound": {
+   "dirichlet_only": 0.5,
+   "beyond": 0.09,
+   "not_stated": 0.41,
+   "extra_assumption": 0.53
+  },
+  "trivial-tate-shafarevich-reductions-error-39-40": {
+   "dirichlet_only": 0.02,
+   "beyond": 0.3,
+   "not_stated": 0.68,
+   "extra_assumption": 0.16
+  },
+  "twisted-modular-l-values-simultaneous-large-small-positive-proportion": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.18
+  },
+  "twisted-quadratic-character-sums-prime-modulus-moments": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.96,
+   "not_stated": 0.03,
+   "extra_assumption": 0.09
+  },
+  "two-dirichlet-l-functions-linearly-independent-values-at-shifted-zeta-zeros": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.07
+  },
+  "two-prime-squares-short-interval-average": {
+   "dirichlet_only": 0.82,
+   "beyond": 0.01,
+   "not_stated": 0.17,
+   "extra_assumption": 0.05
+  },
+  "two-variable-artin-conjecture-density": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.93,
+   "not_stated": 0.07,
+   "extra_assumption": 0.06
+  },
+  "value-distribution-log-symmetric-square-l-functions-level-aspect": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.14
+  },
+  "value-distribution-twisted-modular-l-functions-m-function": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.11
+  },
+  "variance-primes-progressions-limiting-distribution": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.97
+  },
+  "waring-two-squares-three-biquadrates": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.04,
+   "not_stated": 0.01,
+   "extra_assumption": 0.98
+  },
+  "weak-mertens-conjecture-gonek-hejhal": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.95
+  },
+  "weakly-prime-additive-length-four": {
+   "dirichlet_only": 0.28,
+   "beyond": 0.15,
+   "not_stated": 0.57,
+   "extra_assumption": 0.34
+  },
+  "weighted-central-limit-theorem-log-zeta": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.05
+  },
+  "weighted-central-limit-theorem-log-zeta-derivative-weights": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.86
+  },
+  "weighted-moments-primes-short-intervals-lower-bound": {
+   "dirichlet_only": 0.89,
+   "beyond": 0.0,
+   "not_stated": 0.11,
+   "extra_assumption": 0.07
+  },
+  "weil-height-lower-bound-low-lying-zeros-dedekind-zeta": {
+   "dirichlet_only": 0.0,
+   "beyond": 1.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.06
+  },
+  "xi-derivative-zeros-small-and-large-gaps": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.09
+  },
+  "xyz-conjecture-smooth-abc-solutions-exponent-8": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.64
+  },
+  "zeros-of-hecke-eigenforms-equidistribution": {
+   "dirichlet_only": 0.0,
+   "beyond": 0.94,
+   "not_stated": 0.06,
+   "extra_assumption": 0.1
+  },
+  "zeta-2rho-over-zeta-derivative-discrete-moments-lower-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.93
+  },
+  "zeta-and-dirichlet-l-function-derivatives-one-line-upper-bound": {
+   "dirichlet_only": 1.0,
+   "beyond": 0.0,
+   "not_stated": 0.0,
+   "extra_assumption": 0.54
+  },
+  "zeta-approximated-by-short-euler-products": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.08
+  },
+  "zeta-critical-line-bound-lower-order-terms": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-critical-line-explicit-bound-log-2-over-2": {
+   "dirichlet_only": 0.21,
+   "beyond": 0.58,
+   "not_stated": 0.21,
+   "extra_assumption": 0.11
+  },
+  "zeta-critical-strip-log-bound": {
+   "dirichlet_only": 0.85,
+   "beyond": 0.0,
+   "not_stated": 0.15,
+   "extra_assumption": 0.04
+  },
+  "zeta-derivative-at-zeros-small-values": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.16
+  },
+  "zeta-derivative-discrete-mean-square-lower-order-terms": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.06
+  },
+  "zeta-derivative-fourth-moment-at-zeros-order-of-magnitude": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.07
+  },
+  "zeta-derivative-moments-at-zeros-sharp-lower-bound": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "zeta-derivative-moments-at-zeros-sharp-upper-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.04
+  },
+  "zeta-derivative-moments-at-zeros-upper-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.04
+  },
+  "zeta-derivative-negative-moments-at-zeros-lower-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.96
+  },
+  "zeta-derivative-negative-second-moment-at-zeros-lower-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.96
+  },
+  "zeta-derivative-zero-between-close-zeta-zeros": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "zeta-derivative-zero-count-error-term": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-derivative-zero-distance-to-zeta-zero-loglog-saving": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-discrete-mean-square-over-zero-ordinates": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-distinct-zeros-small-gaps-0-991": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-eighth-moment-asymptotic-additive-divisor": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.97
+  },
+  "zeta-higher-derivative-moments-at-zeros-lower-bound": {
+   "dirichlet_only": 0.89,
+   "beyond": 0.0,
+   "not_stated": 0.11,
+   "extra_assumption": 0.07
+  },
+  "zeta-higher-derivatives-zero-count-error-term": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.01,
+   "not_stated": 0.03,
+   "extra_assumption": 0.05
+  },
+  "zeta-joint-moments-with-derivatives-sharp-upper-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.07
+  },
+  "zeta-joint-second-moment-with-log-derivative-bounds": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.06
+  },
+  "zeta-kth-derivative-zeros-real-parts-sum": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-large-deviations-gaussian-upper-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.04
+  },
+  "zeta-large-values-near-zeros-count": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.84
+  },
+  "zeta-large-values-triple-log-length-segments": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.06
+  },
+  "zeta-log-derivative-2k-th-moment-near-critical-line": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.95
+  },
+  "zeta-log-derivative-critical-strip-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.03
+  },
+  "zeta-log-derivative-explicit-bound-right-half-strip": {
+   "dirichlet_only": 0.01,
+   "beyond": 0.91,
+   "not_stated": 0.08,
+   "extra_assumption": 0.89
+  },
+  "zeta-log-derivative-near-one-line-large-values-measure": {
+   "dirichlet_only": 0.82,
+   "beyond": 0.0,
+   "not_stated": 0.18,
+   "extra_assumption": 0.08
+  },
+  "zeta-maximum-and-moments-polylog-intervals-theta-above-3": {
+   "dirichlet_only": 0.9,
+   "beyond": 0.0,
+   "not_stated": 0.1,
+   "extra_assumption": 0.08
+  },
+  "zeta-maximum-short-random-intervals-leading-order": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-maximum-very-short-intervals-triple-log": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.05
+  },
+  "zeta-mean-value-at-shifted-zeros-small-shift": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-modulus-horizontal-monotonicity": {
+   "dirichlet_only": 0.92,
+   "beyond": 0.0,
+   "not_stated": 0.08,
+   "extra_assumption": 0.05
+  },
+  "zeta-moments-at-relative-extrema-critical-line": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-moments-harper-bound-explicit-k-dependence": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.04
+  },
+  "zeta-moments-near-sharp-upper-bound": {
+   "dirichlet_only": 0.93,
+   "beyond": 0.0,
+   "not_stated": 0.07,
+   "extra_assumption": 0.05
+  },
+  "zeta-moments-sharp-upper-bound-harper": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.03
+  },
+  "zeta-moments-short-intervals-near-sharp-upper-bound": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.04
+  },
+  "zeta-negative-moments-shifted-asymptotic": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-one-line-explicit-bound-chirre-molero": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.03
+  },
+  "zeta-one-line-short-interval-lp-norm-bounds": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.05
+  },
+  "zeta-second-derivative-zero-count-error-term": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-shifted-moments-general-shifts-sharp-upper-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-shifted-moments-sharp-lower-bound": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.05
+  },
+  "zeta-shifted-moments-sharp-upper-bound": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.04
+  },
+  "zeta-shifted-moments-upper-bound-chandee": {
+   "dirichlet_only": 0.95,
+   "beyond": 0.0,
+   "not_stated": 0.05,
+   "extra_assumption": 0.05
+  },
+  "zeta-simple-zeros-proportion-19-27": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-sums-high-moments-upper-bound": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-universality-polylog-short-intervals": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-zero-ordinates-subsequences-uniform-distribution": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.9
+  },
+  "zeta-zeros-detect-dirichlet-l-function-zeros": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.56
+  },
+  "zeta-zeros-gaps-2-7327-and-0-5154": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.07
+  },
+  "zeta-zeros-large-gaps-2-9": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-zeros-large-gaps-3-033": {
+   "dirichlet_only": 0.28,
+   "beyond": 0.1,
+   "not_stated": 0.62,
+   "extra_assumption": 0.72
+  },
+  "zeta-zeros-large-gaps-3-072": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.01,
+   "not_stated": 0.01,
+   "extra_assumption": 0.78
+  },
+  "zeta-zeros-mesoscopic-central-limit-theorem-linear-statistics": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.09
+  },
+  "zeta-zeros-mesoscopic-linear-statistics-gaussian-field": {
+   "dirichlet_only": 0.94,
+   "beyond": 0.0,
+   "not_stated": 0.06,
+   "extra_assumption": 0.09
+  },
+  "zeta-zeros-pair-correlation-bogomolny-keating-smooth-test-functions": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.14
+  },
+  "zeta-zeros-pair-correlation-counting-bounds": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.15
+  },
+  "zeta-zeros-r-gaps-inoue-constants": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.07
+  },
+  "zeta-zeros-r-gaps-positive-proportion-explicit-constants": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.05
+  },
+  "zeta-zeros-r-gaps-selberg-explicit-constants": {
+   "dirichlet_only": 0.98,
+   "beyond": 0.0,
+   "not_stated": 0.02,
+   "extra_assumption": 0.08
+  },
+  "zeta-zeros-shifted-form-factor-integral-bounds": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.82
+  },
+  "zeta-zeros-shifted-ordinate-not-a-zero-short-intervals": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.05
+  },
+  "zeta-zeros-short-interval-count-goldston-gonek": {
+   "dirichlet_only": 0.99,
+   "beyond": 0.0,
+   "not_stated": 0.01,
+   "extra_assumption": 0.03
+  },
+  "zeta-zeros-small-gaps-0-50895": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.06
+  },
+  "zeta-zeros-small-gaps-at-most-half": {
+   "dirichlet_only": 0.96,
+   "beyond": 0.0,
+   "not_stated": 0.04,
+   "extra_assumption": 0.04
+  },
+  "zeta-zeros-tail-bound-counts-short-windows": {
+   "dirichlet_only": 0.97,
+   "beyond": 0.0,
+   "not_stated": 0.03,
+   "extra_assumption": 0.07
+  }
+ }
+}

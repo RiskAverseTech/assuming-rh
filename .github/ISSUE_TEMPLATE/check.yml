@@ -1,0 +1,36 @@
+name: I checked an entry
+description: Report that you compared an entry with its source paper, whether or not you found a problem.
+title: "Checked: "
+labels: [human-check]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry id
+      description: The slug of the entry, as in the page address.
+      placeholder: bach-class-group-generators
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: What did you find?
+      options:
+        - The entry is right as it stands
+        - The status or hypotheses are wrong
+        - The statement is wrong or imprecise
+        - I could not tell
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you compare?
+      description: For example the theorem number, and where in the proof the hypothesis is used. If something is wrong, say what it should be.
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: Name for credit (optional)
+      description: If you would like the entry to record who checked it. Leave blank to stay anonymous.
