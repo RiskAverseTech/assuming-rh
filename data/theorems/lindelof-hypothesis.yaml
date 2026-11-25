@@ -13,6 +13,15 @@ status_note: >
   RH implies the Lindelöf hypothesis. The converse is not known. This entry
   covers the zeta function only, not Lindelöf-type bounds for other
   L-functions.
+  The implication from RH is formalized in Lean 4 in the repository cited
+  below, stated with Mathlib's own definition of the Riemann Hypothesis:
+  zeta(1/2 + it) is O(|t|^epsilon) for every positive epsilon, as t tends to
+  plus or minus infinity. This project built that repository from source on
+  25 November 2026 and confirmed that the theorems depend only on Lean's
+  three standard axioms.
+  What is checked is the implication from the hypothesis to this result. It
+  is not a check of the announced proof, and the build was run by an AI
+  system, not reviewed by a person.
 sources:
   - authors: E. C. Titchmarsh (revised by D. R. Heath-Brown)
     title: The Theory of the Riemann Zeta-function, 2nd edition
@@ -20,14 +29,21 @@ sources:
     venue: Oxford University Press
     hypothesis_location: Chapter XIV
     role: survey
+  - authors: AIOvernight (GitHub)
+    title: "rh-implies-lindelof: Lean 4 formalization of Littlewood's theorem that the Riemann Hypothesis implies the Lindelöf hypothesis"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/AIOvernight/rh-implies-lindelof
+    hypothesis_location: "Theorems lindelof_of_riemannHypothesis and lindelof_atBot_of_riemannHypothesis, stated against Mathlib's RiemannHypothesis"
+    role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "lindelof_of_riemannHypothesis and lindelof_atBot_of_riemannHypothesis in https://github.com/AIOvernight/rh-implies-lindelof at commit c83edd72c9c2; see lean/README.md in this repository"
 tags: [zeta-function, growth-bounds]
 added: 2026-11-21

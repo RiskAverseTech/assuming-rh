@@ -13,6 +13,19 @@ status: unlocked
 status_note: >
   Ankeny proved O((log p)^2). Bach gave the constant 2. Lamzouri, Li and
   Soundararajan later improved it to (log q)^2 for prime q at least 5.
+  The bound for quadratic non-residues is formalized in Lean 4. The
+  repository cited below proves Bach's theorem in character form: if a
+  non-trivial Dirichlet character mod m takes the value 1 at every positive
+  integer below x, then x is below 2 (ln m)^2. The statement for the least
+  quadratic non-residue is deduced from it in the file
+  lean/LeastNonresidue.lean of this repository, written for this project.
+  Both were compiled on 25 November 2026 and depend only on Lean's three
+  standard axioms. The subgroup form in this entry is the character form
+  restated; that restatement with the constant 2 is not a separate formal
+  theorem (the cited repository proves it with the constant 270).
+  What is checked is the implication from the hypothesis to this result. It
+  is not a check of the announced proof, and the build was run by an AI
+  system, not reviewed by a person.
 sources:
   - authors: N. C. Ankeny
     title: The least quadratic non residue
@@ -34,17 +47,24 @@ sources:
     doi: 10.1090/S0025-5718-2015-02925-1
     hypothesis_location: Corollary 1.1
     role: refinement
+  - authors: amrehan (GitHub)
+    title: "grh-miller: Lean 4 formalization of Bach's bound and the deterministic Miller test under GRH for Dirichlet L-functions"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/amrehan/grh-miller
+    hypothesis_location: "Theorem Bach.bach_char, with hypothesis GRHMiller.DirichletLZerosOnLine"
+    role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions:
     - >-
       Bach's Theorem 2 and Corollary 1.1 of Lamzouri, Li and Soundararajan were read. Ankeny's 1952 paper was not.
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "AssumingRH.least_quadratic_nonresidue_lt in lean/LeastNonresidue.lean, resting on Bach.bach_char in https://github.com/amrehan/grh-miller at commit e3e573a104d3; see lean/README.md in this repository"
 related: [miller-deterministic-primality, deterministic-square-roots-mod-p]
 tags: [quadratic-residues, explicit-bounds]
 added: 2026-11-21
