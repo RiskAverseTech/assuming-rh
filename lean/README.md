@@ -50,6 +50,28 @@ That repository also contains a theorem that the hypothesis implies the Riemann 
 | `lindelof_atBot_of_riemannHypothesis` | the same as t tends to minus infinity |
 | `exists_norm_riemannZeta_le_exp_log_div_log_log_of_riemannHypothesis` | Littlewood's sharper bound exp(C log t / log log t) |
 
+## Do these hypotheses match the proof's statement?
+
+Each formalization above assumes "RH" or "GRH" in its own words. A conditional theorem only plugs into the announced proof if those words are the statement the proof establishes. This was checked in Lean on 25 November 2026.
+
+The reference is `src/Challenge.lean` in https://github.com/leanprover-community/riemann-hypothesis at commit d91ae2678eea, the file the proof was certified against. Its certified theorems include `riemannHypothesis : RiemannHypothesis` (Mathlib's definition) and `LFunction_eq_zero_re : DirichletLZerosOnLine` (every Dirichlet character, zeros in the critical strip). The files `match-robin.lean`, `match-miller.lean` and `match-lindelof.lean` copy those definitions character for character into a namespace `Certified` and prove:
+
+| Formalization | Its hypothesis | Result |
+|---|---|---|
+| Robin1984 | `RiemannHypothesis` | Lean reports it is Mathlib's definition, and it equals `Certified.RiemannZetaZerosOnLine` by `Iff.rfl` |
+| Robin1984 | `Robin1984.GRH.DirichletGRH` | equals `Certified.DirichletLZerosOnLine` by `Iff.rfl` |
+| grh-miller, and `LeastNonresidue.lean` | `GRHMiller.DirichletLZerosOnLine` | equals `Certified.DirichletLZerosOnLine` by `Iff.rfl` |
+| rh-implies-lindelof | `RiemannHypothesis` | Lean reports it is Mathlib's definition |
+
+`Iff.rfl` means the two statements are the same by definition, with nothing to prove. Each file also restates one theorem with the certified statement as its hypothesis (Robin's criterion, Lagarias's criterion, Miller's test, the Lindelöf bound), and each compiles with the three standard axioms only.
+
+What this does not show:
+
+- The announced proof was not built here. The match is with its certified statement file, not with the 110 GB archive. Joining a conditional theorem to the proof in one build still needs that archive.
+- The definitions were copied by hand from the commit named above. Anyone can compare them with that file.
+- The proof repository uses a newer Mathlib (commit 31ce06ea) than these builds (commits 0df444a3 and 51e6992e). The five Mathlib files that define zeta, the Dirichlet L-function, Dirichlet characters and `RiemannHypothesis` were compared across those commits: the differences are in proofs, imports and added lemmas, and no definition changed. Files they depend on in turn were not compared.
+- The match files were compiled by an AI system, once, and not passed through an independent checker.
+
 ## Limits
 
 - The builds were run by an AI system for this project, in a temporary cloud machine. No person has repeated them.
