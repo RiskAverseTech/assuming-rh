@@ -14,6 +14,16 @@ status_note: >
   explicit. Primality testing in polynomial time is known unconditionally by
   a different algorithm (see the AKS entry), so what is unlocked here is the
   correctness of this specific, much faster test.
+  The implication is formalized in Lean 4 in the repository cited below:
+  assuming that every zero of every Dirichlet L-function in the critical
+  strip lies on the critical line, an odd n above 1 is prime if and only if
+  no base below both n and 2 (ln n)^2 is a Miller witness. This project
+  built that repository from source on 25 November 2026 and confirmed that
+  the theorem depends only on Lean's three standard axioms. The statement
+  that the test runs in polynomial time is not part of the formal theorem.
+  What is checked is the implication from the hypothesis to this result. It
+  is not a check of the announced proof, and the build was run by an AI
+  system, not reviewed by a person.
 sources:
   - authors: G. L. Miller
     title: Riemann's hypothesis and tests for primality
@@ -29,15 +39,22 @@ sources:
     doi: 10.1090/S0025-5718-1990-1023756-8
     hypothesis_location: "Theorem 2 and the remarks after Theorem 3"
     role: refinement
+  - authors: amrehan (GitHub)
+    title: "grh-miller: Lean 4 formalization of Bach's bound and the deterministic Miller test under GRH for Dirichlet L-functions"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/amrehan/grh-miller
+    hypothesis_location: "Theorem Bach.prime_iff_no_miller_witness_lt, with hypothesis GRHMiller.DirichletLZerosOnLine"
+    role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "Bach.prime_iff_no_miller_witness_lt in https://github.com/amrehan/grh-miller at commit e3e573a104d3; see lean/README.md in this repository"
 rests_on: [least-quadratic-nonresidue]
 related: [primality-in-polynomial-time]
 tags: [primality, algorithms, derandomization]

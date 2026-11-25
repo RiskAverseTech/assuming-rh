@@ -4,52 +4,80 @@ What this project has checked in Lean so far, and how to repeat it.
 
 Nothing here imports the announced proof of the Riemann Hypothesis. Each check is of an implication: if the hypothesis holds, then the result holds. The released proof archive still carries no license, so it is not used.
 
-## Checked on 25 November 2026
+Five entries are marked `lean-verified` on the basis of these checks: `robin-inequality`, `lagarias-harmonic-inequality`, `miller-deterministic-primality`, `least-quadratic-nonresidue` and `lindelof-hypothesis`.
 
-The repository [kimihiro64/Robin1984](https://github.com/kimihiro64/Robin1984) (Apache 2.0) was built from source at commit `5ce18bf3487c68d9353276ef5811057f60d17808` with Lean `4.33.1` and the Mathlib commit pinned in its manifest. All 4,899 build jobs completed without error. The file `axioms-check.lean` in this folder was then run against the build.
+## What was built, on 25 November 2026
 
-| Theorem | Statement | Axioms reported |
-|---|---|---|
-| `Robin1984.robin_inequality_iff_riemannHypothesis` | Robin's inequality for every n above 5040 holds if and only if Mathlib's `RiemannHypothesis` | `propext`, `Classical.choice`, `Quot.sound` |
-| `Robin1984.riemannHypothesis_iff_colossallyAbundant_robin` | the same, restricted to colossally abundant integers | the same three |
-| `Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion` | Lagarias's inequality for every positive n holds if and only if `RiemannHypothesis` | the same three |
-| `Robin1984.GRH.dirichletGRH_iff_cyclotomicDedekindRH` | the zeros of every Dirichlet L-function in the critical strip lie on the critical line if and only if the same holds for the Dedekind zeta function of every cyclotomic field | the same three |
+Each repository was built from source at the commit shown, with the Lean version and the Mathlib commit its own files pin. Every build completed without error. The `axioms-check-*.lean` file in this folder was then run against the build; every theorem listed reports exactly Lean's three standard axioms, `propext`, `Classical.choice` and `Quot.sound`.
 
-Entries marked `lean-verified` on this basis: `robin-inequality` and `lagarias-harmonic-inequality`.
+### Robin's and Lagarias's inequalities
 
-The fourth theorem is not an entry. It is the formal version of a step this dataset uses when a paper assumes the hypothesis for the zeta function of a cyclotomic field and the entry is coded as needing Dirichlet L-functions only. It covers cyclotomic fields. It does not cover other fields that are abelian over the rationals, where the dataset uses the same reasoning without a formal check.
+[kimihiro64/Robin1984](https://github.com/kimihiro64/Robin1984) (Apache 2.0), commit `5ce18bf3487c68d9353276ef5811057f60d17808`, Lean 4.33.1, 4,899 build jobs.
+
+| Theorem | Statement |
+|---|---|
+| `Robin1984.robin_inequality_iff_riemannHypothesis` | Robin's inequality for every n above 5040 holds if and only if Mathlib's `RiemannHypothesis` |
+| `Robin1984.riemannHypothesis_iff_colossallyAbundant_robin` | the same, restricted to colossally abundant integers |
+| `Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion` | Lagarias's inequality for every positive n holds if and only if `RiemannHypothesis` |
+| `Robin1984.GRH.dirichletGRH_iff_cyclotomicDedekindRH` | the zeros of every Dirichlet L-function in the critical strip lie on the critical line if and only if the same holds for the Dedekind zeta function of every cyclotomic field |
+
+The last theorem is not an entry. It is the formal version of a step this dataset uses when a paper assumes the hypothesis for the zeta function of a cyclotomic field and the entry is coded as needing Dirichlet L-functions only. It covers cyclotomic fields. It does not cover other fields that are abelian over the rationals.
+
+### Miller's test and Bach's bound
+
+[amrehan/grh-miller](https://github.com/amrehan/grh-miller) (Apache 2.0), commit `e3e573a104d39b2f211a68dd5f1b64829942fa6b`, its `GRHMiller` library only, built on [anthropics/zeta-23-lean](https://github.com/anthropics/zeta-23-lean) at commit `16a5ce41304fcdaea4e0be7c132e1c361dc26da5` with Lean 4.33.0-rc2, 8,831 build jobs. The hypothesis is `GRHMiller.DirichletLZerosOnLine`: every zero of every Dirichlet L-function with real part strictly between 0 and 1 has real part 1/2.
+
+| Theorem | Statement |
+|---|---|
+| `Bach.bach_char` | if a non-trivial Dirichlet character mod m is 1 at every positive integer below x, then x < 2 (log m)^2 |
+| `Bach.exists_miller_witness_lt` | an odd composite n has a Miller witness below both n and 2 (log n)^2 |
+| `Bach.prime_iff_no_miller_witness_lt` | an odd n above 1 is prime if and only if it has no such witness |
+| `GRHMiller.millerPrime_iff` | an executable test returns true exactly on the primes |
+
+That repository also contains a theorem that the hypothesis implies the Riemann Hypothesis for the Dedekind zeta function of every abelian number field, and a file that removes the hypothesis by importing the announced proof. Both need the full proof archive and were not built or checked here.
+
+### The least quadratic non-residue
+
+`LeastNonresidue.lean` in this folder, written for this project: under the same hypothesis, every odd prime p has a positive integer below 2 (log p)^2 that is not a square modulo p. It is deduced from `Bach.bach_char` and compiles against the build above. To check it, copy it next to the `GRHMiller` library and run `lake env lean LeastNonresidue.lean`.
+
+### The Lindelöf hypothesis
+
+[AIOvernight/rh-implies-lindelof](https://github.com/AIOvernight/rh-implies-lindelof) (Apache 2.0), commit `c83edd72c9c297febd2adab886a8911cce27f6a5`, Lean 4.33.1, 3,620 build jobs.
+
+| Theorem | Statement |
+|---|---|
+| `lindelof_of_riemannHypothesis` | `RiemannHypothesis` implies zeta(1/2 + it) = O(t^epsilon) as t tends to plus infinity, for every positive epsilon |
+| `lindelof_atBot_of_riemannHypothesis` | the same as t tends to minus infinity |
+| `exists_norm_riemannZeta_le_exp_log_div_log_log_of_riemannHypothesis` | Littlewood's sharper bound exp(C log t / log log t) |
 
 ## Limits
 
-- Only Lean's own kernel was used. The second, independent checker and the Comparator run that the Robin1984 repository describes were not run here.
-- The build was run by an AI system for this project, in a temporary cloud machine. No person has repeated it.
-- The build log shows `sorry` warnings inside two dependencies (PrimeNumberTheoremAnd and LeanCert). The axiom report above shows that none of the four theorems depends on them: a theorem that used a `sorry` would list `sorryAx`.
-- That a formal statement says what its plain sentence says is a human judgment. The Robin and Lagarias statements are short and were read against the entries; the remark in the Lagarias entry that equality holds only for n = 1 is not part of the formal statement.
+- The builds were run by an AI system for this project, in a temporary cloud machine. No person has repeated them.
+- These are other people's formalizations, most of them published within days of the announcement and themselves written with AI help. Lean checks that each proof is valid. It does not check that a formal statement says what its plain sentence says. The statements above are short and were read against the entries; the entries note where a clause is not part of the formal statement.
+- The Robin1984 build log shows `sorry` warnings inside two of its dependencies (PrimeNumberTheoremAnd and LeanCert). The axiom report shows that none of the checked theorems depends on them: a theorem that used a `sorry` would list `sorryAx`.
+- An independent checker was run on the Robin1984 build only, not on the Miller or Lindelöf builds. The five Robin1984 theorems were exported with lean4export (commit 15f6055) and checked by nanoda (commit 68d5ca9), a separate checker written in Rust. It reported "Checked 105128 declarations with no typechecker errors" and exited with success, set to fail on any axiom outside the three standard ones. It also printed one display error, "Unable to print axioms", which concerns its printing step and not its checking. nanoda was run directly on the exported file, outside the Comparator sandbox, on two threads, and took 91 minutes.
+- The full Comparator run (commit 68a0641), which also compares the proved statements with the trusted statement file and replays the proofs in Lean's own kernel, did not finish. It was started twice and stopped both times by the two-hour limit of the machine, with no error reported. In the first run it had reached the nanoda stage, which in its source code comes after the statement and axiom comparison; the tool did not get to print a verdict. Treat the Comparator check as not completed here. The repository's authors report their own Comparator run.
+- lean4export and Comparator were built with Lean 4.33.1 in place of the versions they pin.
 
-## To repeat it
+## To repeat a build
 
-Needs [elan](https://github.com/leanprover/elan) and about 12 GB of disk. The build took about four hours on four cores; most of that is the finite certificates for Lagarias's criterion.
-
-```bash
-git clone https://github.com/kimihiro64/Robin1984.git
-```
-
-```bash
-cd Robin1984 && git checkout 5ce18bf3487c68d9353276ef5811057f60d17808
-```
+Needs [elan](https://github.com/leanprover/elan) and about 12 GB of disk for each repository. Clone the repository, check out the commit above, then:
 
 ```bash
 lake exe cache get
 ```
 
 ```bash
-lake build Solution
+lake build
 ```
 
 ```bash
-lake env lean /path/to/assuming-rh/lean/axioms-check.lean
+lake env lean /path/to/assuming-rh/lean/axioms-check-robin.lean
 ```
+
+For the Miller build, copy the `GRHMiller` folder and `GRHMiller.lean` into the `zeta23` folder of the pinned zeta-23-lean checkout, add a `GRHMiller` library to its `lakefile.toml`, and build that library; the repository's own `reproduce.sh` does the same. The Robin build took about four hours on four cores, the other two under half an hour each.
 
 ## Next targets
 
-Entries whose implication is short enough to formalize directly against Mathlib: `miller-deterministic-primality`, `least-quadratic-nonresidue`, `deterministic-square-roots-mod-p`. Each needs analytic number theory that Mathlib does not yet have, so these are real projects, not quick additions.
+- The step from Dirichlet L-functions to every abelian number field, which exists in the grh-miller repository but needs the full proof archive to build.
+- Other entries of the form "equivalent to RH", and explicit prime gap bounds under RH, for which the PrimeNumberTheoremAnd project already has formal statements without proofs.

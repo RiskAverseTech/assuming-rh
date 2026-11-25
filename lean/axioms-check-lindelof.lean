@@ -1,0 +1,8 @@
+import RHImpliesLindelof
+open Complex in
+#check @lindelof_of_riemannHypothesis
+#print axioms lindelof_of_riemannHypothesis
+#check @lindelof_atBot_of_riemannHypothesis
+#print axioms lindelof_atBot_of_riemannHypothesis
+#check @exists_norm_riemannZeta_le_exp_log_div_log_log_of_riemannHypothesis
+#print axioms exists_norm_riemannZeta_le_exp_log_div_log_log_of_riemannHypothesis
