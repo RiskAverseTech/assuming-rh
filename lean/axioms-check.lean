@@ -1,0 +1,10 @@
+import Solution
+#check @Robin1984.robin_inequality_iff_riemannHypothesis
+#print axioms Robin1984.robin_inequality_iff_riemannHypothesis
+#check @Robin1984.riemannHypothesis_iff_colossallyAbundant_robin
+#print axioms Robin1984.riemannHypothesis_iff_colossallyAbundant_robin
+#check @Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion
+#print axioms Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion
+#print axioms Robin1984.GRH.dirichletGRH_iff_cyclotomicCorrectedIdealRobin
+#print axioms Robin1984.GRH.dedekindERH_iff_correctedIdealRobin
+#print axioms Robin1984.GRH.dirichletGRH_iff_cyclotomicDedekindRH

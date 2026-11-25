@@ -1,6 +1,6 @@
 # Roadmap: what would make this more valuable
 
-A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 23 November 2026.
+A running list. Items move up as they get done. New ideas are added at the bottom of "Ideas" and promoted when they look worth doing. Last updated 25 November 2026.
 
 ## Done
 
@@ -12,12 +12,13 @@ A running list. Items move up as they get done. New ideas are added at the botto
 - **Help check page.** A ranked list of the entries most worth a human check (where a second, independent AI reading of the paper disagreed with ours), a report form for people who check an entry, and the second reading published as data.
 - **Software caveats page.** Where PARI/GP, SageMath and Magma assume GRH, and why the announced proof does not remove that for class groups.
 - **Reference list sweep.** Papers cited by the papers already read, scanned in full text.
+- **First Lean-verified entries.** Robin's and Lagarias's inequalities: an existing formalization of each equivalence with RH was built from source and checked here. The same build confirmed that GRH for Dirichlet L-functions is equivalent to RH for cyclotomic fields. Details in `lean/README.md`.
 - **Journal references.** Published references and DOIs in place of "Preprint" where they could be confirmed.
 
 ## Next
 
 1. **First human-checked entries.** Even a handful signed off by a named number theorist changes how the whole dataset is read. Nothing else on this list matters as much.
-2. **Lean proofs of the implications.** Proving "RH implies X" needs only Mathlib's statement of RH, not the proof archive, so the missing license is not a blocker. Start with Robin's inequality (a formalization already exists to link to), Miller's test and the least non-residue bound.
+2. **More Lean proofs of the implications.** The first two entries are Lean-verified from an existing formalization. New ones (Miller's test, the least non-residue bound) need analytic number theory that Mathlib does not have yet, so each is a real project. Follow the Challenge / Solution layout used by the Robin1984 repository and the Palomar registry. Also run the independent checker, which has not been done here.
 3. **More dependencies between entries.** The first links are in. Most real dependencies (which results rest on effective Chebotarev, on Hooley's method, on the least non-residue bound) are still unrecorded and need reading the proofs.
 4. **Make it citable.** Tagged releases, a changelog, a citation file and a DOI through Zenodo, so a paper can cite a fixed version.
 5. **Wider coverage through citations.** Sweep the papers that cite the key sources (Bach, Lagarias and Odlyzko, Hooley) in place of keyword searches, which missed the classics.

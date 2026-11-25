@@ -11,10 +11,15 @@ hypotheses_required: [RH]
 status: unlocked
 status_note: >
   This inequality is equivalent to RH. The proof builds on Robin's inequality.
-  A Lean 4 formalization of the equivalence between RH and Lagarias's inequality for every positive n exists
-  in the repository cited below. Its description says the statement uses
-  Mathlib's own definitions. This project has not checked it, so the entry's
-  review state is unchanged.
+  The equivalence between RH and Lagarias's inequality for every positive n
+  is formalized in Lean 4 in the repository cited below, stated with
+  Mathlib's own definition of the Riemann Hypothesis. This project built
+  that repository from source on 25 November 2026 and confirmed that the
+  theorem compiles and depends only on Lean's three standard axioms. The
+  formal statement is the inequality itself; the remark that equality holds
+  only for n = 1 is not part of it. What is checked is the implication
+  between RH and this inequality. It is not a check of the announced proof
+  of RH, and it was run by an AI system, not reviewed by a person.
 sources:
   - authors: J. C. Lagarias
     title: An elementary problem equivalent to the Riemann hypothesis
@@ -30,14 +35,14 @@ sources:
     hypothesis_location: "Theorem Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion, stated against Mathlib's RiemannHypothesis"
     role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4.33.1 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion in https://github.com/kimihiro64/Robin1984 at commit 5ce18bf3487c; see lean/README.md in this repository"
 related: [robin-inequality]
 tags: [sum-of-divisors, harmonic-numbers, equivalent-to-rh]
 added: 2026-11-21
