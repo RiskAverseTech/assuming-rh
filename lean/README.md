@@ -4,7 +4,7 @@ What this project has checked in Lean so far, and how to repeat it.
 
 Nothing here imports the announced proof of the Riemann Hypothesis. Each check is of an implication: if the hypothesis holds, then the result holds. The released proof archive still carries no license, so it is not used.
 
-Five entries are marked `lean-verified` on the basis of these checks: `robin-inequality`, `lagarias-harmonic-inequality`, `miller-deterministic-primality`, `least-quadratic-nonresidue` and `lindelof-hypothesis`.
+Seven entries are marked `lean-verified` on the basis of these checks: `robin-inequality`, `lagarias-harmonic-inequality`, `miller-deterministic-primality`, `least-quadratic-nonresidue`, `lindelof-hypothesis`, `cramer-prime-gap-bound` and `dudek-primes-short-intervals`.
 
 ## What was built, on 25 November 2026
 
@@ -51,6 +51,38 @@ That repository also contains a theorem that the hypothesis implies the Riemann 
 | `lindelof_of_riemannHypothesis` | `RiemannHypothesis` implies zeta(1/2 + it) = O(t^epsilon) as t tends to plus infinity, for every positive epsilon |
 | `lindelof_atBot_of_riemannHypothesis` | the same as t tends to minus infinity |
 | `exists_norm_riemannZeta_le_exp_log_div_log_log_of_riemannHypothesis` | Littlewood's sharper bound exp(C log t / log log t) |
+
+## Builds from the ChatAndBuild/conjectures collection, 25 November 2026
+
+https://github.com/ChatAndBuild/conjectures (commit 66be1a79da5f) collects 17 Lean projects, written by AI agents between 22 and 25 November 2026, each proving a known consequence of RH or GRH. Each keeps the implication in a library that needs only Mathlib. Those libraries were built here from source with Lean 4.36.0 and Mathlib commit fc4f59e5, and the axioms of the main theorems were read from Lean's own report. The parts that plug in the announced proof were not built.
+
+| Project and commit | Theorem | Statement | Axioms |
+|---|---|---|---|
+| cramer-rh c465db4c64dc (20,593 jobs) | `Cramer.cramer_of_RH` | RH implies the gap after the prime p_n is O(sqrt(p_n) log p_n) | three standard |
+| same | `Cramer.cmsPrimeInterval_of_RH` | RH implies a prime in [x, x + (22/25) sqrt(x) log x] for x at least 4 | three standard |
+| same | `Cramer.primeInShortInterval_107_of_RH` | RH implies a prime in (x, x + (107/100) sqrt(x) log x] for x at least 2 | three standard |
+| schoenfeld-rh 0d24a0c5eac1 (18,955 jobs) | `Schoenfeld.schoenfeldPi_of_RH` | RH implies Schoenfeld's bound for pi(x) - li(x) with constant 1/(8 pi), x at least 2657 | three standard plus 23 `native_decide` |
+| same | `Schoenfeld.piBound_of_RH` | the same with constant 9/20 | three standard |
+| li-criterion-rh 1eb07dd4d3d4 | `RiemannHypothesis.li_criterion_rhs_of_RH` | RH implies lambda_n > 0, with lambda_n defined as a sum over zeros | three standard |
+| erdos-233 0fd567d9d9fd | `Erdos233.erdos_233_upper_bound_of_RH`, `selberg_almost_all_of_RH`, `selberg_asymptotic_of_RH` | RH implies the sum of the first N squared prime gaps is O(N log^4 N), and Selberg's theorems on primes in almost all short intervals | three standard |
+| density-rh 91ffb87856da | `DensityHypothesis.densityHypothesis_of_RH` | RH implies the density hypothesis for zeta | three standard |
+
+In every case Lean reports that the hypothesis `RiemannHypothesis` is the one defined in Mathlib. This Mathlib commit is different again from those in the comparison described in the next section, and was not included in it.
+
+`Dudek.lean` in this folder, written for this project: under RH, for every x at least 2 there is a prime p with x - (4/pi) sqrt(x) log x < p and p at most x. It is deduced from `Cramer.primeInShortInterval_107_of_RH` and compiles against the cramer-rh build with the three standard axioms only.
+
+How these are recorded:
+
+- Cramér's bound and Dudek's theorem are marked Lean-verified.
+- Schoenfeld's bound is not. `native_decide` has Lean run a computation as compiled code and accept the answer without re-checking it in the kernel. This project keeps the Lean-verified label for theorems that rest on the three standard axioms only. The entry carries a note.
+- Li's criterion is not, because the Lean statement defines lambda_n differently from the entry. The entry carries a note.
+- The Erdős 233, Selberg and density results have no matching entry.
+
+Not built: mertens-rh, whose dependency https://github.com/senamakel/littlewood-rh could not be fetched without credentials on 25 November 2026. The other ten projects were not attempted; a text scan shows most of them use `native_decide`.
+
+Dependencies were shared between the projects through one packages folder, at the commits each project pins (erdos-985 9538edb73dc7, and for cramer-rh also schoenfeld-rh b2c31374576f and erdos-233 1ff9f39b4b3d). No independent checker was run on these builds. The collection is licensed GPL-3.0; nothing from it is copied into this repository.
+
+To repeat one: clone the project at the commit above, run `lake exe cache get`, then `lake build`, then `lake env lean` on `axioms-check-cramer.lean` or `axioms-check-schoenfeld.lean` from this folder.
 
 ## Do these hypotheses match the proof's statement?
 
