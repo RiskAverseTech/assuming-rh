@@ -85,7 +85,7 @@ const REVIEW = {
   },
   'lean-verified': {
     label: 'Lean-verified',
-    long: 'The implication from the covered hypotheses to this result has been formalized in Lean and checked by the Lean kernel.',
+    long: 'The implication from the covered hypotheses to this result has been formalized in Lean and checked by the Lean kernel. This checks the logic of the implication. It is not a check of the announced proof, and not a review by a person.',
   },
 };
 const COVERED = { yes: 'Covered by the claim', partial: 'Covered in a special case only', no: 'Not covered by the claim' };
@@ -382,7 +382,7 @@ function buildEntry(e) {
       <dt>Review state</dt><dd>${reviewBadge(e)} ${REVIEW[r.state].long}</dd>
       <dt>Confidence</dt><dd>${r.confidence}</dd>
       ${r.checked_by ? `<dt>Checked by</dt><dd>${esc(r.checked_by)} on ${fmtDate(r.checked_on)}</dd>` : ''}
-      <dt>Lean</dt><dd>${e.lean.proved ? `Formalized: <code>${esc(e.lean.path)}</code>` : 'Not formalized yet.'}</dd>
+      <dt>Lean</dt><dd>${e.lean.proved ? `Formalized: <span class="wrap-any">${rich(e.lean.path)}</span>` : 'Not formalized yet.'}</dd>
       <dt>Added</dt><dd>${fmtDate(e.added)}</dd>
     </dl>
     ${r.open_questions.length ? `<h3>Open questions</h3><ul>${r.open_questions.map((q) => `<li>${rich(q)}</li>`).join('')}</ul>` : ''}
@@ -460,6 +460,11 @@ function buildAbout() {
 </dl>
 <p>The rule is mechanical: an entry is "unlocked" only if every hypothesis it lists is fully covered. One uncovered hypothesis makes it "still conditional", or "partly unlocked" when a named special case goes through. The validator in the repository enforces this, so a file cannot claim "unlocked" while listing an uncovered hypothesis.</p>
 <p>The special case that matters most: the zeta function of an abelian extension of the rationals (a quadratic or cyclotomic field, for example) is a product of Dirichlet L-functions, so a hypothesis about that zeta function alone is covered. This does not extend to characters of the class group of such a field. Those are Hecke characters, and their L-functions are not covered.</p>
+
+<h2 id="lean-checks">What has been checked in Lean</h2>
+<p>Two entries, <a href="theorems/robin-inequality.html">Robin's inequality</a> and <a href="theorems/lagarias-harmonic-inequality.html">Lagarias's inequality</a>, are marked Lean-verified. An existing public formalization of each equivalence with the Riemann Hypothesis was built from source for this project, and each theorem was confirmed to depend only on Lean's three standard axioms.</p>
+<p>The same build confirmed a theorem that this dataset leans on elsewhere: the Riemann Hypothesis for every Dirichlet L-function is equivalent to the Riemann Hypothesis for the zeta function of every cyclotomic field. That is the step used when a paper assumes the hypothesis for a cyclotomic field and the entry is coded as needing Dirichlet L-functions only. The formal theorem covers cyclotomic fields. For other fields that are abelian over the rationals the dataset uses the same reasoning without a formal check.</p>
+<p>These checks were run by an AI system, with Lean's own kernel only. The exact versions, the commands and the limits are in <code>lean/README.md</code> in the repository.</p>
 
 <h2 id="review-states">Review states</h2>
 <dl class="defs">
@@ -623,7 +628,8 @@ function buildCheck() {
   const lists = groups.map(([key, title, why, score, label]) => ({ key, title, why, label, items: entries.filter((e) => checkReason(e) === key).map((e) => ({ e, s: score(second.readings[e.id]) })).sort((x, y) => y.s - x.s || x.e.title.localeCompare(y.e.title)) }));
   const total = lists.reduce((n, l) => n + l.items.length, 0);
   const read = entries.filter((e) => second.readings[e.id]).length;
-  const checked = entries.filter((e) => e.review.state !== 'ai-classified').length;
+  const checked = entries.filter((e) => e.review.state === 'human-checked').length;
+  const leanChecked = entries.filter((e) => e.review.state === 'lean-verified').length;
   page({
     file: 'check.html',
     title: 'Help check',
@@ -631,7 +637,7 @@ function buildCheck() {
     body: `
 <h1>Help check these first</h1>
 <p class="lede">${checked === 0 ? 'No entry on this site has been checked by a person yet.' : 'Most entries on this site have not been checked by a person.'} If you know some number theory and have ten minutes, this page says where they are best spent.</p>
-<p>${checked} of ${entries.length} entries are human-checked so far.</p>
+<p>${checked} of ${entries.length} entries are human-checked so far.${leanChecked ? ` ${leanChecked} have had their implication checked in Lean, which is a check of the logic by a machine and not a review by a person.` : ''}</p>
 
 <h2 id="how">How to check an entry</h2>
 <ol>

@@ -151,3 +151,5 @@ table.waiting .num, th.num { text-align: right; font-variant-numeric: tabular-nu
 .statement-box .formal { border: 0; padding: 0.25rem 0; background: transparent; }
 .statement-box p { margin: 0.4rem 0; }
 dl.tried dt { font-family: var(--serif); font-size: 1.05rem; }
+
+.wrap-any { overflow-wrap: anywhere; }

@@ -10,10 +10,14 @@ hypotheses_required: [RH]
 status: unlocked
 status_note: >
   This inequality is equivalent to RH.
-  A Lean 4 formalization of the equivalence between RH and Robin's inequality for every n above 5040 exists
-  in the repository cited below. Its description says the statement uses
-  Mathlib's own definitions. This project has not checked it, so the entry's
-  review state is unchanged.
+  The equivalence between RH and Robin's inequality for every n above 5040
+  is formalized in Lean 4 in the repository cited below, stated with
+  Mathlib's own definition of the Riemann Hypothesis. This project built
+  that repository from source on 25 November 2026 and confirmed that the
+  theorem compiles and depends only on Lean's three standard axioms. What
+  is checked is the implication between RH and this inequality. It is not a
+  check of the announced proof of RH, and it was run by an AI system, not
+  reviewed by a person.
 sources:
   - authors: G. Robin
     title: Grandes valeurs de la fonction somme des diviseurs et hypothèse de Riemann
@@ -28,14 +32,14 @@ sources:
     hypothesis_location: "Theorem Robin1984.robin_inequality_iff_riemannHypothesis, stated against Mathlib's RiemannHypothesis"
     role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4.33.1 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "Robin1984.robin_inequality_iff_riemannHypothesis in https://github.com/kimihiro64/Robin1984 at commit 5ce18bf3487c; see lean/README.md in this repository"
 related: [lagarias-harmonic-inequality]
 tags: [sum-of-divisors, equivalent-to-rh]
 added: 2026-11-21
