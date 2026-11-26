@@ -724,7 +724,7 @@ function buildData() {
 // ---------- run ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets', 'katex'), { recursive: true });
-for (const f of ['style.css', 'app.js', 'preview-card-2.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
+for (const f of ['style.css', 'app.js', 'preview-card-2.png', 'preview-card.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
 const kdist = path.join(ROOT, 'node_modules', 'katex', 'dist');
 fs.copyFileSync(path.join(kdist, 'katex.min.css'), path.join(OUT, 'assets', 'katex', 'katex.min.css'));
 fs.cpSync(path.join(kdist, 'fonts'), path.join(OUT, 'assets', 'katex', 'fonts'), { recursive: true, filter: (src) => !/\.(ttf|woff)$/.test(src) });
