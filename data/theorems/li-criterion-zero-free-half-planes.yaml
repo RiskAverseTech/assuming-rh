@@ -17,6 +17,14 @@ status_note: >
   n, where alpha_n(tau) is defined like lambda_n with the derivative taken at
   s = tau. For tau > 1 that general statement is equivalent to a zero-free
   half-plane weaker than RH, not to RH.
+  One direction of Li's criterion is formalized in Lean 4 in the repository
+  cited below: from Mathlib's RiemannHypothesis, lambda_n > 0 for every
+  positive n (RiemannHypothesis.li_criterion_rhs_of_RH), built for this
+  project on 25 November 2026 with Lean's three standard axioms only. There
+  lambda_n is defined as a sum over the zeros of zeta, following the
+  formal-conjectures project, and not through the derivative of log xi as in
+  this entry. The two definitions agree by a classical identity that is not
+  part of what Lean checked, so this entry is not marked Lean-verified.
 sources:
   - authors: P. Freitas
     title: A Li-type criterion for zero-free half-planes of Riemann's zeta function
@@ -26,6 +34,13 @@ sources:
     url: https://arxiv.org/abs/math/0507368
     hypothesis_location: Theorem 1
     role: conditional-proof
+  - authors: S. Enamakel (GitHub senamakel), with AI agents
+    title: "li-criterion-rh: Li's criterion from RH in Lean"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/senamakel/li-criterion-rh
+    hypothesis_location: "Theorem RiemannHypothesis.li_criterion_rhs_of_RH, with hypothesis RiemannHypothesis"
+    role: formalization
 review:
   state: ai-classified
   checked_by: null

@@ -11,21 +11,36 @@ status: unlocked
 status_note: >
   Explicit versions of this bound are recorded in the entry on primes in
   short intervals.
+  The implication from RH is formalized in Lean 4 in the repository cited
+  below, as the theorem Cramer.cramer_of_RH, whose statement is the bound in
+  this entry and whose hypothesis is Mathlib's RiemannHypothesis. It was
+  built from source for this project on 25 November 2026 and depends only on
+  Lean's three standard axioms. The formalization was written by AI agents
+  and is three days old. What is checked is the implication from the
+  hypothesis to this result. It is not a check of the announced proof, and
+  the build was run by an AI system, not reviewed by a person.
 sources:
   - authors: H. Cramér
     title: Some theorems concerning prime numbers
     year: 1920
     venue: Ark. Mat. Astr. Fys. 15, no. 5
     role: conditional-proof
+  - authors: S. Enamakel (GitHub senamakel), with AI agents
+    title: "cramer-rh: Cramér's prime-gap and mean-square theorems under RH in Lean"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/senamakel/cramer-rh
+    hypothesis_location: "Theorem Cramer.cramer_of_RH, with hypothesis RiemannHypothesis"
+    role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "Cramer.cramer_of_RH in https://github.com/senamakel/cramer-rh at commit c465db4c64dc; see lean/README.md in this repository"
 related: [dudek-primes-short-intervals]
 tags: [primes, prime-gaps]
 added: 2026-11-21

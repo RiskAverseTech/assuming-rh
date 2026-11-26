@@ -8,7 +8,16 @@ statement_formal: |
   \left|\pi(x) - \operatorname{li}(x)\right| < \frac{\sqrt{x}\,\ln x}{8\pi} \qquad (x \ge 2657)
 hypotheses_required: [RH]
 status: unlocked
-status_note: null
+status_note: >
+  A Lean 4 formalization of this exact statement exists, in the repository
+  cited below (Schoenfeld.schoenfeldPi_of_RH), and was built from source for
+  this project on 25 November 2026. It is not marked Lean-verified here,
+  because that proof settles its finite ranges with 23 computations that
+  Lean runs as compiled code and does not re-check in its kernel, so it
+  rests on more than Lean's three standard axioms. The same repository
+  proves the bound with the weaker constant 9/20 in place of 1/(8 pi), for
+  the same range of x, and that version depends only on the three standard
+  axioms (Schoenfeld.piBound_of_RH).
 sources:
   - authors: L. Schoenfeld
     title: Sharper bounds for the Chebyshev functions theta(x) and psi(x). II
@@ -17,6 +26,13 @@ sources:
     doi: 10.1090/S0025-5718-1976-0457374-X
     hypothesis_location: "Corollary 1, inequality (6.18)"
     role: conditional-proof
+  - authors: S. Enamakel (GitHub senamakel), with AI agents
+    title: "schoenfeld-rh: Schoenfeld's bounds from RH in Lean"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/senamakel/schoenfeld-rh
+    hypothesis_location: "Theorems Schoenfeld.schoenfeldPi_of_RH and Schoenfeld.piBound_of_RH, with hypothesis RiemannHypothesis"
+    role: formalization
 review:
   state: ai-classified
   checked_by: null

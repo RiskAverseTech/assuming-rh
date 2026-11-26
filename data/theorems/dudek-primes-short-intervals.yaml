@@ -12,6 +12,18 @@ status_note: >
   Carneiro, Milinovich and Soundararajan later improved the constant: under
   RH there is a prime in [x, x + (22/25) sqrt(x) log x] for every x at
   least 4.
+  Both statements are checked in Lean 4. The repository cited below proves,
+  from Mathlib's RiemannHypothesis, the bound of Carneiro, Milinovich and
+  Soundararajan as stated above (Cramer.cmsPrimeInterval_of_RH) and a prime
+  in (x, x + (107/100) sqrt(x) log x] for every x at least 2. Dudek's
+  statement, which is the one in this entry, is deduced from the second of
+  these in the file lean/Dudek.lean of this repository, written for this
+  project; the deduction is short because 107/100 is below 4/pi. All were
+  compiled on 25 November 2026 and depend only on Lean's three standard
+  axioms. The cited formalization was written by AI agents and is three days
+  old. What is checked is the implication from the hypothesis to this
+  result. It is not a check of the announced proof, and the build was run by
+  an AI system, not reviewed by a person.
 sources:
   - authors: A. W. Dudek
     title: On the Riemann hypothesis and the difference between primes
@@ -28,15 +40,22 @@ sources:
     doi: 10.4171/CMH/467
     hypothesis_location: Theorem 5
     role: refinement
+  - authors: S. Enamakel (GitHub senamakel), with AI agents
+    title: "cramer-rh: Cramér's prime-gap and mean-square theorems under RH in Lean"
+    year: 2026
+    venue: GitHub repository
+    url: https://github.com/senamakel/cramer-rh
+    hypothesis_location: "Theorems Cramer.primeInShortInterval_107_of_RH and Cramer.cmsPrimeInterval_of_RH, with hypothesis RiemannHypothesis"
+    role: formalization
 review:
-  state: ai-classified
-  checked_by: null
-  checked_on: null
+  state: lean-verified
+  checked_by: "Lean 4 kernel, in a build run for this project by an AI system (Claude)"
+  checked_on: 2026-11-25
   confidence: high
   open_questions: []
 lean:
-  proved: false
-  path: null
+  proved: true
+  path: "AssumingRH.dudek_of_RH in lean/Dudek.lean, resting on Cramer.primeInShortInterval_107_of_RH in https://github.com/senamakel/cramer-rh at commit c465db4c64dc; see lean/README.md in this repository"
 related: [cramer-prime-gap-bound]
 tags: [primes, prime-gaps, explicit-bounds]
 added: 2026-11-21
