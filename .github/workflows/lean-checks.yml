@@ -1,0 +1,63 @@
+name: Lean checks
+
+# Rebuilds the Lean formalizations behind the entries marked lean-verified and
+# reads Lean's own axiom report for each theorem. The recipes are in
+# lean/checks.json. This is slow, so it runs on a schedule and on request, and
+# on pull requests that touch the Lean files or the recipes. It is not a
+# required check.
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'lean/**'
+      - 'scripts/lean-check.sh'
+      - 'scripts/check-axioms.mjs'
+      - '.github/workflows/lean-checks.yml'
+
+# The builds compile code from other people's repositories. They get no write
+# access and no secrets.
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [robin, miller, lindelof, cramer]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
+      - name: Install elan, pinned and checksummed
+        run: |
+          curl -sSfL -o elan.tar.gz https://github.com/leanprover/elan/releases/download/v4.1.2/elan-x86_64-unknown-linux-gnu.tar.gz
+          echo "f81c2e48c1588d4612cd2c8851947898a45ac8d72748a07dff3a5694f1cf589b  elan.tar.gz" | sha256sum -c -
+          tar -xzf elan.tar.gz
+          ./elan-init -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build and check axioms
+        run: scripts/lean-check.sh ${{ matrix.project }} "$RUNNER_TEMP/lean-work"
+      - name: Keep the axiom report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axioms-${{ matrix.project }}
+          path: ${{ runner.temp }}/lean-work/${{ matrix.project }}-axioms.txt
+          if-no-files-found: ignore

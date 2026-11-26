@@ -115,6 +115,18 @@ What this does not show:
 - The full Comparator run (commit 68a0641), which also compares the proved statements with the trusted statement file and replays the proofs in Lean's own kernel, did not finish. It was started twice and stopped both times by the two-hour limit of the machine, with no error reported. In the first run it had reached the nanoda stage, which in its source code comes after the statement and axiom comparison; the tool did not get to print a verdict. Treat the Comparator check as not completed here. The repository's authors report their own Comparator run.
 - lean4export and Comparator were built with Lean 4.33.1 in place of the versions they pin.
 
+## Automated checks
+
+The workflow `.github/workflows/lean-checks.yml` repeats the builds on GitHub's machines every Monday, on request, and on any pull request that changes this folder. For each project in `checks.json` it clones the pinned commit, builds it, runs the check files from this folder in it, and fails unless every theorem listed under `expect` depends only on `propext`, `Classical.choice` and `Quot.sound`. It also fails on any Lean error and on any appearance of `sorryAx`. The builds run with read-only access and no secrets, since they compile other people's code.
+
+To run one project the same way on your own machine, with elan and Node installed:
+
+```bash
+scripts/lean-check.sh lindelof
+```
+
+The projects are `robin`, `miller`, `lindelof` and `cramer`. The Schoenfeld check file is not part of the automated run, because that result is not marked Lean-verified.
+
 ## To repeat a build
 
 Needs [elan](https://github.com/leanprover/elan) and about 12 GB of disk for each repository. Clone the repository, check out the commit above, then:
