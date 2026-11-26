@@ -1,0 +1,75 @@
+{
+  "about": "Recipes for the scheduled Lean checks. Each project is cloned at the pinned commit, built, and then the listed files from this folder are run in it. Every theorem named under expect must be reported by Lean as depending on no axioms beyond propext, Classical.choice and Quot.sound.",
+  "projects": {
+    "robin": {
+      "repo": "https://github.com/kimihiro64/Robin1984",
+      "commit": "5ce18bf3487c68d9353276ef5811057f60d17808",
+      "workdir": ".",
+      "build": ["Solution", "Robin1984.Equivalence.Theorem", "Robin1984.GRH.CyclotomicFactorization"],
+      "files": ["axioms-check-robin.lean", "match-robin.lean"],
+      "expect": [
+        "Robin1984.robin_inequality_iff_riemannHypothesis",
+        "Robin1984.riemannHypothesis_iff_colossallyAbundant_robin",
+        "Robin1984.riemann_hypothesis_iff_lagarias_elementary_criterion",
+        "Robin1984.GRH.dirichletGRH_iff_cyclotomicDedekindRH",
+        "Certified.robin_dirichlet_iff",
+        "Certified.robin_iff",
+        "Certified.lagarias_iff"
+      ],
+      "entries": ["robin-inequality", "lagarias-harmonic-inequality"]
+    },
+    "miller": {
+      "repo": "https://github.com/anthropics/zeta-23-lean",
+      "commit": "16a5ce41304fcdaea4e0be7c132e1c361dc26da5",
+      "workdir": "zeta23",
+      "overlay": {
+        "repo": "https://github.com/amrehan/grh-miller",
+        "commit": "e3e573a104d39b2f211a68dd5f1b64829942fa6b",
+        "copy": ["GRHMiller", "GRHMiller.lean"],
+        "append_lakefile": "\n[[lean_lib]]\nname = \"GRHMiller\"\nroots = [\"GRHMiller\"]\n"
+      },
+      "build": ["GRHMiller"],
+      "files": ["axioms-check-miller.lean", "match-miller.lean", "LeastNonresidue.lean", "SmallGenerators.lean"],
+      "expect": [
+        "Bach.bach_char",
+        "Bach.exists_miller_witness_lt",
+        "Bach.prime_iff_no_miller_witness_lt",
+        "Certified.miller_hypothesis_iff",
+        "Certified.prime_iff_no_miller_witness_lt",
+        "AssumingRH.least_quadratic_nonresidue_lt",
+        "AssumingRH.exists_small_not_mem_subgroup",
+        "AssumingRH.closure_small_eq_top",
+        "AssumingRH.least_kth_power_nonresidue_lt"
+      ],
+      "entries": ["miller-deterministic-primality", "least-quadratic-nonresidue"]
+    },
+    "lindelof": {
+      "repo": "https://github.com/AIOvernight/rh-implies-lindelof",
+      "commit": "c83edd72c9c297febd2adab886a8911cce27f6a5",
+      "workdir": ".",
+      "build": ["RHImpliesLindelof"],
+      "files": ["axioms-check-lindelof.lean", "match-lindelof.lean"],
+      "expect": [
+        "lindelof_of_riemannHypothesis",
+        "lindelof_atBot_of_riemannHypothesis",
+        "Certified.riemannHypothesis_iff",
+        "Certified.lindelof"
+      ],
+      "entries": ["lindelof-hypothesis"]
+    },
+    "cramer": {
+      "repo": "https://github.com/senamakel/cramer-rh",
+      "commit": "c465db4c64dcfd914075a76ac0ed66d1a05151d8",
+      "workdir": ".",
+      "build": ["Cramer"],
+      "files": ["axioms-check-cramer.lean", "Dudek.lean"],
+      "expect": [
+        "Cramer.cramer_of_RH",
+        "Cramer.primeInShortInterval_107_of_RH",
+        "Cramer.cmsPrimeInterval_of_RH",
+        "AssumingRH.dudek_of_RH"
+      ],
+      "entries": ["cramer-prime-gap-bound", "dudek-primes-short-intervals"]
+    }
+  }
+}
