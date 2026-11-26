@@ -150,10 +150,10 @@ function page({ file, title, description, body, math = false }) {
 <meta property="og:title" content="${esc(title === cfg.name ? cfg.name + ': ' + cfg.tagline : title + ' | ' + cfg.name)}">
 <meta property="og:description" content="${esc(file === 'index.html' ? cfg.share_description : description)}">
 <meta property="og:url" content="${esc(cfg.site_url + (file === 'index.html' ? '' : file))}">
-<meta property="og:image" content="${esc(cfg.site_url)}assets/preview-card.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Assuming RH: what would a proof of the Riemann Hypothesis settle? A map of the theorems that depend on it, and the ones that need more.">
+<meta property="og:image" content="${esc(cfg.site_url)}assets/preview-card-2.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Assuming RH: what would a proof of the Riemann Hypothesis settle? An open map of the theorems that depend on it, and the ones that need more. A bar shows the share of entries that are unlocked, partly unlocked, still conditional and proved otherwise. Provisional: AI-drafted, not yet expert-reviewed.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -724,7 +724,7 @@ function buildData() {
 // ---------- run ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets', 'katex'), { recursive: true });
-for (const f of ['style.css', 'app.js', 'preview-card.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
+for (const f of ['style.css', 'app.js', 'preview-card-2.png']) fs.copyFileSync(path.join(SITE, 'assets', f), path.join(OUT, 'assets', f));
 const kdist = path.join(ROOT, 'node_modules', 'katex', 'dist');
 fs.copyFileSync(path.join(kdist, 'katex.min.css'), path.join(OUT, 'assets', 'katex', 'katex.min.css'));
 fs.cpSync(path.join(kdist, 'fonts'), path.join(OUT, 'assets', 'katex', 'fonts'), { recursive: true, filter: (src) => !/\.(ttf|woff)$/.test(src) });
